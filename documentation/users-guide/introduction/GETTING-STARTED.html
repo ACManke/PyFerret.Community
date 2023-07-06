@@ -1,0 +1,37 @@
+ 
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML+RDFa 1.1//EN">
+<html lang="en" dir="ltr" version="HTML+RDFa 1.1"
+xmlns:content="http://purl.org/rss/1.0/modules/content/"
+xmlns:dc="http://purl.org/dc/terms/"
+xmlns:foaf="http://xmlns.com/foaf/0.1/"
+xmlns:og="http://ogp.me/ns#"
+xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+xmlns:sioc="http://rdfs.org/sioc/ns#"
+xmlns:sioct="http://rdfs.org/sioc/types#"
+xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+xmlns:schema="http://schema.org/">
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+<title>1.2 GETTING STARTED - Ferret/PyFerret Support</title>
+<h1 class="title" id="page-title">1.2 GETTING STARTED</h1>
+<p class="secHeader">1.2.1<a name="_VPID_6" id="_VPID_6"></a><b> Concepts</b></p>
+<div class="plain">
+<p align="left">Words in bold below are defined in the glossary of this manual.</p>
+<p><a name="_VPINDEXENTRY_00" id="_VPINDEXENTRY_00"></a></p>
+<p align="left">For every Ferret session, a log file stores the commands given. This is called the Ferret <b>journal file</b>. By default it is named <b>ferret.jnl</b>.</p>
+<p align="left">In Ferret all <b>variables</b> are regarded as defined on <b>grids</b>. The grids tell Ferret how to locate the data in space and time (or whatever the underlying units of the grid <b>axes</b> are). A collection of variables stored together on disk is a <b>data set</b>.</p>
+<p align="left">To access a variable Ferret must know its name, data set and the <b>region</b> of its grid that is desired. Regions may be specified as <b>subscripts</b> (indices) or in <b>world </b><b>coordinates</b>. Data sets, after they have been pointed to with the SET DATA command (alias "USE"), may be referred to by data set number or name.</p>
+<p align="left">Using the LET command new variables may be created "from thin air" as <b>abstract expressions</b> or created from combinations of known variables as arbitrary <b>expressions</b>. If component variables in an expression are on different grids, then <b>regridding</b> may be applied simply by naming the desired grid.</p>
+<p align="left">The user need never explicitly tell Ferret to read data. From start to finish the sequence of operations needed to obtain results from Ferret is simply:</p>
+<p align="left">1) specify the data set</p>
+<p align="left">2) specify the region</p>
+<p align="left">3) define the desired variable or expression (optional)</p>
+<p align="left">4) request the output</p>
+<p align="left">For example (Figure 1_1),</p>
+<pre>
+yes? USE coads_climatology !global sea surface data
+yes? SET REGION/Z=0/L=5/X=160E:160W/Y=20S:20N
+yes? VECTOR uwnd,vwnd !wind velocity vector plot</pre><p>
+</body>
+</html>
+ 

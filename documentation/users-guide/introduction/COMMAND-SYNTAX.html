@@ -1,0 +1,105 @@
+ 
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML+RDFa 1.1//EN">
+<html lang="en" dir="ltr" version="HTML+RDFa 1.1"
+xmlns:content="http://purl.org/rss/1.0/modules/content/"
+xmlns:dc="http://purl.org/dc/terms/"
+xmlns:foaf="http://xmlns.com/foaf/0.1/"
+xmlns:og="http://ogp.me/ns#"
+xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+xmlns:sioc="http://rdfs.org/sioc/ns#"
+xmlns:sioct="http://rdfs.org/sioc/types#"
+xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+xmlns:schema="http://schema.org/">
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+<title>1.4 COMMAND SYNTAX - Ferret/PyFerret Support</title>
+<h1 class="title" id="page-title">1.4 COMMAND SYNTAX</h1>
+<p><a name="_VPID_18" id="_VPID_18"></a><a name="_VPINDEXENTRY_32" id="_VPINDEXENTRY_32"></a><a name="_VPINDEXENTRY_33" id="_VPINDEXENTRY_33"></a> <a name="_VPINDEXENTRY_34" id="_VPINDEXENTRY_34"></a></p>
+<p align="left">Commands in program Ferret conform to the following template:</p>
+<p align="left"><b>COMM [/Q1/Q2...] [SUBCOM[/S1/S2...]] [ARG1 ARG2 ...] [!comment] </b></p>
+<p align="left">where</p>
+<table><tbody><tr><td>
+<p align="left">COMM</p>
+</td>
+<td>
+<p align="left">is a command name <i><b>yes? </b></i><b>LIST</b></p>
+</td>
+</tr><tr><td>
+<p align="left">Q1...</p>
+</td>
+<td>
+<p align="left">are qualifiers of the command <i><b>yes? CONTOUR/</b></i><b>SET_UP</b></p>
+</td>
+</tr><tr><td>
+<p align="left">SUBCOM</p>
+</td>
+<td>
+<p align="left">is a subcommand name <i><b>yes? SHOW </b></i><b>MODE</b></p>
+</td>
+</tr><tr><td>
+<p align="left">S1...</p>
+</td>
+<td>
+<p align="left">are qualifiers of the subcommand <i><b>yes? SET LIST/</b></i><b>APPEND</b></p>
+</td>
+</tr><tr><td>
+<p align="left">ARG1...</p>
+</td>
+<td>
+<p align="left">are arguments of commands <i><b>yes? CANCEL MODE </b></i><b>INTERPOLATE</b></p>
+</td>
+</tr></tbody></table><p align="left">notes...</p>
+<p><a name="Chapter1-command line" id="Chapter1-command line"></a></p>
+<ul><li>The length of the command line is limited to a maximum of 2048 characters.<br />
+	 </li>
+<li><a name="_VPINDEXENTRY_35" id="_VPINDEXENTRY_35"></a><a name="_VPINDEXENTRY_36" id="_VPINDEXENTRY_36"></a>Command lines ending with back slash are regarded as incomplete -- a special prompt is given to indicate that the next line is a continuation.<br />
+	 </li>
+<li>In the documentation, items in square brackets are optional.  In commands themselves, square brackets modify a variable with information about the context (e.g the region, data set or transformation.)<br />
+	 </li>
+<li>One or more spaces or tabs must separate the command from the subcommand and from each of the arguments. Spaces and tabs are optional preceding qualifiers.<br />
+	 </li>
+<li><a name="_SYNTAX_SEMICOLON" id="_SYNTAX_SEMICOLON"></a>Multiple commands, separated by semicolons, can be given on the same line (e.g. <strong>yes? CANCEL DATA/ALL; CANCEL VAR/ALL</strong>).<br />
+	 </li>
+<li><a name="_VPINDEXENTRY_37" id="_VPINDEXENTRY_37"></a>Command names, subcommand names, and qualifiers require at most 4 characters.<br />
+	(e.g., <i><b>yes? CANCEL LIST/PRECISION</b></i> is equivalent to <i><b>yes? CANC LIST/PREC</b></i>)<br />
+	 </li>
+<li>Some qualifiers take an argument following "=" (e.g., <i><b>yes? LIST/Y=10S:10N</b></i>).<br />
+	 </li>
+<li><a name="_VPINDEXENTRY_38" id="_VPINDEXENTRY_38"></a>An exclamation mark normally signifies the end of a command and the start of (optional) comment text.<br />
+	 </li>
+<li><a name="_VPINDEXENTRY_39" id="_VPINDEXENTRY_39"></a><a name="_VPINDEXENTRY_40" id="_VPINDEXENTRY_40"></a><a name="_VPINDEXENTRY_41" id="_VPINDEXENTRY_41"></a>The backslash character (\), when placed directly before an exclamation point (!), apostrophe ('), semicolon (;), or forward slash (/), will hide it ("escape it") from Ferret.<br />
+	 </li>
+<li>See the <a href="../variables-xpressions/XPRESSIONS">Expressions</a> section for information on algebraic expressions as arguments to commands.<br />
+	 </li>
+<li>See the <a href="../handing-string-data-symbols/SYMBOL-COMMANDS" title="Chapter 7. Handing String Data Symbols">Symbols sections</a> for information on symbol substitution in commands.</li>
+</ul><p align="left"><a name="_VPINDEXENTRY_42" id="_VPINDEXENTRY_42"></a>Examples:</p>
+<ul><li>A simple command and argument<br /><i><b>yes? LIST sst</b></i>
+<p>	 </p></li>
+<li>A comment on the command line<br />
+	yes<i><b>? SET REGION/L=1/X=130:290/Y=-23:23 ! January in the Tropical Pacific</b></i>
+<p>	 </p></li>
+<li>Commands with qualifiers and arguments<br /><i><b>yes? VECTOR/L=30/COLOR=RED u,v<br />
+	yes? LET/UNITS=M ht = z[GZ=temp] - z0</b></i>
+<p>	 </p></li>
+<li>Subcommands<br /><i><b>yes? SET MODE METAFILE<br />
+	yes? SET REGION/X=130E:120W/J=20:40/Z=0/T=1-jan-1982:31-jan-1992</b></i>
+<p>	 </p></li>
+<li><a href="../handing-string-data-symbols/SYMBOL-COMMANDS " title="symbols used in a command">Symbols used in a command</a>. Note multiple commands on a line<br /><i><b>yes? DEFINE SYMBOL lower = -2; DEFINE SYMBOL upper = 6<br />
+	yes? SHADE/I=($lower):($upper) temp</b></i>
+<p>	 </p></li>
+<li>Use Square brackets to specify a variable's dataset or grid, range and optionally a delta- for the variable, or a <a href="../introduction/GETTING-STARTED#_VPID_14">transformation</a> )<br /><i><b>yes? PLOT temp[X=180,L=1:50]</b></i><br />
+	or<br /><i><b>yes? LIST temp[X=130:<a href="mailto:200@AVE">200@AVE</a>,L=1:50:5]</b></i><br />
+	or<br /><i><b>yes? LET/UNITS=M ht = z[GX=temp] - z0</b></i>
+<p>	 </p></li>
+<li>Immediate mode expression: enclosed in grave accents. (The expression must evaluate to a scalar, and is evaluated before the command is parsed or executed.)<br /><i><b>yes? CONTOUR/Z=`temp[X=180,Y=0,Z=@LOC:15]` salt </b></i>
+<p>	 </p></li>
+<li>A list of values (constant array) may be formed by enclosing values in curly brackets. For example in a function call:<br /><i><b>yes? LET aday = DAYS1900(1989,{3,6,9},1)</b></i>
+<p>	 </p></li>
+<li>Text for labels is enclosed in double quotes<br /><i><b>yes? VECTOR/TITLE="title_string" x_expr, y_expr</b></i>
+<p>	If the string is to contain a quote, the backslash preserves it:<br /><i><b>yes? GO my_go_script "\"(-10,10,2)"\"</b></i><br />
+	sends the string <i><b>"(-10,10,2)"</b></i> to the script for more on <a href="GO-FILES" title="1.5 GO FILES">go scripts</a></p></li>
+<p>
+	 
+</body>
+</html>
+ 

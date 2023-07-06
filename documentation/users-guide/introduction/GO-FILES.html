@@ -1,0 +1,158 @@
+ 
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML+RDFa 1.1//EN">
+<html lang="en" dir="ltr" version="HTML+RDFa 1.1"
+xmlns:content="http://purl.org/rss/1.0/modules/content/"
+xmlns:dc="http://purl.org/dc/terms/"
+xmlns:foaf="http://xmlns.com/foaf/0.1/"
+xmlns:og="http://ogp.me/ns#"
+xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+xmlns:sioc="http://rdfs.org/sioc/ns#"
+xmlns:sioct="http://rdfs.org/sioc/types#"
+xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+xmlns:schema="http://schema.org/">
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+<title>1.5 GO FILES - Ferret/PyFerret Support</title>
+<h1 class="title" id="page-title">1.5 GO FILES</h1>
+<p><a name="_VPID_19" id="_VPID_19"></a> <a name="_VPINDEXENTRY_44" id="_VPINDEXENTRY_44"></a><a name="_VPINDEXENTRY_45" id="_VPINDEXENTRY_45"></a></p>
+<p align="left">GO files are files containing Ferret commands. They can be executed with the command "GO filename". Throughout this manual, these files are referred to as<i> GO scripts</i> or<i> <a name="_VPINDEXENTRY_46" id="_VPINDEXENTRY_46"></a>journal files</i> (the file names end in *.jnl). There are two kinds of GO files provided with the distribution (differing in function, not form)—demos and tools. A list of the demonstrations and scripts can be found in Ferret's on-line documentation in "<a href                                                          
+<p> </p>
+<p align="left" class="secHeader"><a name="Chapter1-Demonstration_files" id="Chapter1-Demonstration_files"></a><a name="_VPID_20" id="_VPID_20"></a><b><a name="_VPINDEXENTRY_47" id="_VPINDEXENTRY_47"></a><a name="_VPINDEXENTRY_48" id="_VPINDEXENTRY_48"></a>1.5.1 Demonstration files </b></p>
+<p> </p>
+<p align="left">Demonstration GO files provide examples of various Ferret capabilities (the tutorial is such a script) . The demonstration GO files may be executed simply by typing the Ferret command "go script_name"</p>
+<p align="left"><b>Example:</b></p>
+<pre>
+yes? GO vector_demo</pre><p align="left">Below is a list of the demo files provided as of 4/99 (located in directory $FER_DIR/examples). The Unix command "Fgo demo" will list all GO scripts containing the string "demo". Use Fgo '*' to see all the scripts that are currently available on your system.</p>
+<table><tbody><tr><td> </td>
+<td> </td>
+</tr><tr><td>
+<p align="left"><b>Name</b></p>
+</td>
+<td>
+<p align="left"><b>Description</b></p>
+</td>
+</tr><tr><td>
+<p align="left">tutorial</p>
+</td>
+<td>
+<p align="left">brief tour through Ferret capabilities</p>
+</td>
+</tr><tr><td>
+<p align="left">annotate_demo</p>
+</td>
+<td>
+<p align="left">Using the ANNOTATE command to add labels to plots</p>
+</td>
+</tr><tr><td>
+<p align="left"><a name="_VPINDEXENTRY_bar_chart" id="_VPINDEXENTRY_bar_chart"></a>bar_chart_demo</p>
+</td>
+<td>
+<p align="left">plotting bar charts</p>
+</td>
+</tr><tr><td>
+<p align="left">binary_read_demo</p>
+</td>
+<td>
+<p align="left">binary file reading (version 5.0 and after)</p>
+</td>
+</tr><tr><td>
+<p align="left">ccbar_demo</p>
+</td>
+<td>
+<p align="left">demonstrates a method for drawing a continuous colorbar</p>
+</td>
+</tr><tr><td>
+<p align="left">color_vector_demo</p>
+</td>
+<td>
+<p align="left">demonstrates the use of the color_vector script (see also poly_vec_demo)</p>
+</td>
+</tr><tr><td>
+<p align="left">coads_demo</p>
+</td>
+<td>
+<p align="left">view of global climate using the Comprehensive Ocean-Atmosphere Data Set</p>
+</td>
+</tr><tr><td>
+<p align="left">constant_array_demo</p>
+</td>
+<td>
+<p align="left">shows {3,5,6} constant-array syntax</p>
+</td>
+</tr><tr><td>
+<p align="left"><a name="_VPINDEXENTRY_49" id="_VPINDEXENTRY_49"></a>custom_contour_demo</p>
+</td>
+<td>
+<p align="left">customized contour plots</p>
+</td>
+</tr><tr><td>
+<p align="left">depth_to_density_demo</p>
+</td>
+<td>
+<p align="left">contour with a user-defined variable as an axis</p>
+</td>
+</tr><tr><td>
+<p align="left">depth_to_density_weq_demo</p>
+</td>
+<td>
+<p align="left">variation on the contour with a user-defined variable as an axis</p>
+</td>
+</tr><tr><td>
+<p align="left">dods_demo</p>
+</td>
+<td>
+<p align="left">using DODS to access remote datasets</p>
+</td>
+</tr><tr><td>
+<p align="left">edit_data_file_demo</p>
+</td>
+<td>
+<p align="left">"hand-editing" variables using netCDFdatasets and SAVE</p>
+</td>
+</tr><tr><td>
+<p align="left">ef_eof_demo</p>
+</td>
+<td>
+<p align="left">EOF functions</p>
+</td>
+</tr><tr><td>
+<p align="left">ef_eofsvd_demo</p>
+</td>
+<td>
+<p align="left">EOF SVD functions</p>
+</td>
+</tr><tr><td>
+<p align="left">ef_fft_demo</p>
+</td>
+<td>
+<p align="left">FFT functions</p>
+</td>
+</tr><tr><td>
+<p align="left">ef_sort_demo</p>
+</td>
+<td>
+<p align="left">using the SORT and SAMPLE functions</p>
+</td>
+</tr><tr><td>
+<p align="left">ef_wv5d_demo</p>
+</td>
+<td>
+<p align="left">writing Vis5D-formatted files</p>
+</td>
+</tr><tr><td>
+<p align="left"><a name="_VPINDEXENTRY_50" id="_VPINDEXENTRY_50"></a><a name="_VPINDEXENTRY_51" id="_VPINDEXENTRY_51"></a>error_bars_demo</p>
+</td>
+<td>
+<p align="left">making error bars on plots</p>
+</td>
+</tr><tr><td>
+<p align="left"><a name="_VPINDEXENTRY_52" id="_VPINDEXENTRY_52"></a>file_reading_demo</p>
+</td>
+<td>
+<p align="left">reading an ASCII file</p>
+</td>
+</tr><tr><td>
+<p align="left">graticules_demo</p>
+</body>
+</html>
+ 

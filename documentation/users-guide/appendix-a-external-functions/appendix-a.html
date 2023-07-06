@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML+RDFa 1.1//EN">
+<html lang="en" dir="ltr" version="HTML+RDFa 1.1"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+  xmlns:schema="http://schema.org/">
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+    <a id="main-content"></a>
+                <h1 class="title" id="page-title">Appendix A: Functions</h1>
+<p>This appendix lists functions, in addition to the functions listed in <a href="../variables-xpressions/XPRESSIONS.html#_VPID_91">Chapter 3</a> and the String functions in <a href="../handing-string-data-symbols/STRING-FUNCTIONS.html">Chapter 7</a>.  PyFerret includes further functions which are currently <a href="../../pyferret/ferret-functionality/index.html#PYFERRET_NEW_FUNCTIONS">documented separately</a>.</p>
+<p>Use these commands to list functions available in your Ferret version:</p>
+<pre>
+! List all available functions: a long list!
+yes? SHOW FUNCTION/BRIEF *
+
+! List functions matching the given text
+yes? SHOW FUNCTION *fft*
+
+! List the function and argument descriptions with information about
+! how the arguments determine the result grid, and the data types of
+! the arguments
+
+yes? SHOW FUNCTION/DETAILS pt_in_poly
+
+</pre>
+
+<ul><li><a href="BIN_INDEX_WT/index.html">BIN_INDEX_WT</a></li>
+<li><a href="COMPRESSI/index.html">COMPRESSI</a> (and J,K,L,M,N)</li>
+<li><a href="COMPRESSI-BY/index.html">COMPRESSI_BY</a> (and J,K,L,M,N)</li>
+<li><a href="CONVOLVEI/index.html">CONVOLVEI</a> (and J,K,L,M,N)</li>
+<li><a href="CURV-TO-RECT/index.html">CURV_TO_RECT</a></li>
+<li><a href="CURV-TO-RECT-MAP/index.html">CURV_TO_RECT_MAP</a></li>
+<li><a href="DATE1900/index.html">DATE1900</a></li>
+<li><a href="dates/index.html">DATES</a></li>
+<li><a href="DAYS1900TOYMDHMS/index.html">DAYS1900TOYMDHMS</a></li>
+<li><a href="DOT/index.html">DOT</a></li>
+<li><a href="ecat/index.html">ECAT and ECAT_STR</a> </li>
+<li><a href="ELEMENT-INDEX/index.html">ELEMENT_INDEX</a> </li>
+<li><a href="ELEMENT-INDEX-STRING/index.html">ELEMENT_INDEX_STR</a>  </li>
+<li><a href="EOF-SPACE/index.html">EOF_SPACE and EOFSVD_SPACE</a> - EOF_SPACE  </li>
+<li><a href="EOF-STAT/index.html">EOF_STAT and EOFSVD_STAT</a>  </li>
+<li><a href="EOF-TFUNC/index.html">EOF_TFUNC and EOFSVD_TFUNC</a> </li>
+<li><a href="expnd_by_len/index.html">EXPND_BY_LEN and EXPND_BY_LEN_STR</a>  </li>
+<li><a href="expndi_by/index.html">EXPNDI_BY</a>  - Expand a variable by inserting gaps</li>
+<li><a href="expndi_by_m_counts/index.html">EXPNDI_BY_M_COUNTS</a>  </li>
+<li><a href="expndi_by_t/index.html">EXPNDI_BY_T</a>  </li>
+<li><a href="expndi_by_z/index.html">EXPNDI_BY_Z</a>  - Expand a 1-D variable in X, to an X-Z variable, splitting Z profiles</li>
+<li><a href="expndi_by_z_counts-and-expndi_id_by_z_counts/index.html">EXPNDI_BY_Z_COUNTS</a>  </li>
+<li><a href="expndi_id_by_z_counts/index.html">EXPNDI_ID_BY_Z_COUNTS</a>  </li>
+<li><a href="fcat/index.html">FCAT</a>  </li>
+<li><a href="fc_isubset/index.html">FC_ISUBSET</a>  </li>
+<li><a href="FFT-IM/index.html">FFT_IM</a>  </li>
+<li><a href="FFT-INVERSE/index.html">FFT_INVERSE</a>  </li>
+<li><a href="fill_xy/index.html">FILL_XY</a>  </li>
+<li><a href="FFT-RE/index.html">FFT_RE</a> </li>
+<li><a href="FINDHI/index.html">FINDHI</a>  </li>
+<li><a href="FINDLO/index.html">FINDLO</a>  </li>
+<li><a href="IS-ELEMENT-OF/index.html">IS_ELEMENT_OF</a>  and IS_ELEMENT_OF_STR</li>
+<li><a href="LANCZOS/index.html">LANCZOS</a>  </li>
+<li><a href="LSL-LOWPASS/index.html">LSL_LOWPASS</a>  </li>
+<li><a href="MINUTES24/index.html">MINUTES24</a> </li>
+<li><a href="NCO/index.html">NCO</a>   - Call an NCO utility</li>
+<li><a href="NCO_ATTR/index.html">NCO_ATTR </a> - Call the NCO attribute editing utility</li>
+<li><a href="pt_in_poly/index.html">PT_IN_POLY</a>  </li>
+<li><a href="RECT-TO-CURV/index.html">RECT_TO_CURV</a></li>
+<li><a href="sampleimulti-and-j-k-l-m-n/index.html">SAMPLEI_MULTI, and SAMPLEI_MULTI, SAMPLEK_MULTI, SAMPLEL_MULTI, SAMPLEM_MULTI, SAMPLEN_MULTI</a></li>
+<li><a href="samplexy_curv_avg/index.html">SAMPLEXY_CURV_AVG</a> </li>
+<li><a href="samplexy_curv_nrst/index.html">SAMPLEXY_CURV_NRST</a>  </li>
+<li><a href="samplexyt/index.html">SAMPLEXYT and SAMPLEXYT_NRST</a>  </li>
+<li><a href="samplexyz/index.html">SAMPLEXYZ</a>  </li>
+<li><a href="samplexyzt/index.html">SAMPLEXYZT</a></li>
+<li><a href="samplexz/index.html">SAMPLEXZ</a>  </li>
+<li><a href="scat2grid_nobs_xy/index.html">SCAT2GRID_NOBS_XY</a> </li>
+<li><a href="scat2grid_bin_xy/index.html">SCAT2GRID_BIN_XY, SCAT2GRID_BIN_XYZ, SCAT2GRID_BIN_XYZ, SCAT2GRID_BIN_XYZT</a></li>
+<li><a href="scatgrid_nbin_xyt/index.html">SCAT2GRID_NBIN_XY and SCAT2GRID_NBIN_XYT</a> </li>
+<li><a href="sampleyz/index.html">SAMPLEYZ</a> </li>
+<li><a href="studenttcutoff/index.html">STUDENT_T_CUTOFF</a></li>
+<li><a href="separate/index.html">SEPARATE</a> </li>
+<li><a href="tax_datestring/index.html">TAX_DATESTRING</a>  </li>
+<li><a href="test_opendap/index.html">TEST_OPENDAP</a>  </li>
+<li><a href="TCAT/index.html">TCAT</a>  </li>
+<li><a href="TRANSPOSE/index.html">TRANSPOSE</a></li>
+<li><a href="XCAT/index.html">XCAT </a> </li>
+<li><a href="YCAT/index.html">YCAT</a>  </li>
+<li><a href="ZAXREPLACE-AVG/index.html">ZAXREPLACE_AVG</a> </li>
+<li><a href="ZAXREPLACE-BIN/index.html">ZAXREPLACE_BIN</a>  </li>
+<li><a href="ZCAT/index.html">ZCAT</a> </li>
+</ul><
+</body>
+</html>

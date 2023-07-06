@@ -1,0 +1,43 @@
+ 
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML+RDFa 1.1//EN">
+<html lang="en" dir="ltr" version="HTML+RDFa 1.1"
+xmlns:content="http://purl.org/rss/1.0/modules/content/"
+xmlns:dc="http://purl.org/dc/terms/"
+xmlns:foaf="http://xmlns.com/foaf/0.1/"
+xmlns:og="http://ogp.me/ns#"
+xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+xmlns:sioc="http://rdfs.org/sioc/ns#"
+xmlns:sioct="http://rdfs.org/sioc/types#"
+xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+xmlns:schema="http://schema.org/">
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+<title>1.8 HELP - Ferret/PyFerret Support</title>
+<h1 class="title" id="page-title">1.8 HELP</h1>
+<div class="field-item even" property="content:encoded"><div class="plain"><a name="_VPID_32" id="_VPID_32"></a><br /><p align="left" class="secHeader"><a name="_VPID_33" id="_VPID_33"></a><b>1.8.1 Examples and demonstrations </b></p>
+<p align="left">As discussed earlier in this chapter (Getting Started, GO files), the demonstrations that come with the Ferret distribution are a source of help. See the introductory chapter, section "<a title="1.5 GO FILES" href="GO-FILES">Demonstration files</a>," for a list of demonstrations, or look in $FER_DIR/examples; you may find something that addresses your problem.</p>
+<p><a name="_VPID_34" id="_VPID_34"></a><a name="_VPINDEXENTRY_155" id="_VPINDEXENTRY_155"></a><br /></p><p align="left" class="secHeader"><b>1.8.2 Help from within Ferret </b></p>
+<p align="left">Typing "help" while running Ferret will show a list of commands that are useful for getting information from within Ferret.</p>
+<p align="left">The Ferret <a href="../commands-reference/SHOW">SHOW </a>command is useful for getting information about Ferret's commands, and Ferret's current state.</p>
+<ul><li>The Ferret command SHOW COMMANDS will list all Ferret commands; SHOW COMMAND "command" will display all qualifiers for the specified command.</li>
+<li>The Ferret command SHOW FUNCTIONS lists all Ferret functions and their arguemnts. SHOW FUNCTION *string* will show all functions containing the string "string". SHOW FUNCTIONS EXTERNAL shows the names and arguments of external functions (see <a title="Chapter 11. Writing External Functions" href="../writing-external-functions/chapter-11-writing-external-functions">External Functions Chapter</a>).</li>
+<li>The Ferret command SHOW TRANSFORMS lists all Ferret transforms, including variable transforms and regridding transforms.</li>
+<li>The Ferret command SHOW DATA lists information about datasets that are currently open, or specify a single dataset.</li>
+<li>The Ferret command SHOW VARIABLES lists information about user-defined variables that are in effect. SHOW VARIABLE varname lists information about a single variable.</li>
+</ul><p align="left"></p>
+<p align="left">If you want to get details on a script, type "GO/HELP scriptname" at the Ferret command line to see the documentation at the start of the script. For example:</p>
+<p align="left"><i><b>GO/HELP land</b></i></p>
+<p align="left">When writing scripts, include documentation listing the purpose of the script and its arguments in the first few lines of the script. Then this feature will let you and others who may use the script get instant information about it.</p>
+<p align="left"></p>
+<p align="left" class="secHeader"><b>1.8.3 Unix-based commands </b></p>
+<p align="left">The Ferret environment includes several Unix commands including <b>Fdata </b>for finding names and locations of datasets; <b>Fgo </b>for finding the names and location of scripts; <b>Fpalette </b>for names and locations of color palettes; and <b>Fenv </b>for listing the names and values of environment variables used by Ferret. These are described in <a href="UNIX-TOOLS">the previous section</a>. <br /><a name="_VPID_35" id="_VPID_35"></a><a name="_VPINDEXENTRY_156" id="_VPINDEXENTRY_156"></a     
+<p align="left" class="secHeader"><b>1.8.4 Web-based information </b></p>
+<p align="left">From the Ferret web page, at <a title="Data Visualization and Analysis" href="../../../front-page">http://ferret.pmel.noaa.gov/Ferret/</a> see these sections:</p>
+<p align="left">1. <a title="Ferret Support" href="../../../support/ferret-support">Ferret support policy </a>outlines the support available to users and sources of information.</p>
+<p align="left">2. <a title="Ferret FAQs" href="../../../faq/ferret-faqs">FAQ </a>section discusses many topics where questions often arise.</p>
+<p align="left">3. <a title="Ferret eMail Users Group" href="../../../email-users-group/ferret-email-users-group">Email archives</a>, which are search-able and contain questions and solutions from the Ferret users group.</p>
+<p align="left">4. <a title="Ferret Documentation" href="../../ferret-documentation">Documentation </a>section, including release notes, this manual which is updated regularly on the web, and on-line information on demonstration scripts, data formats, and the Plot Plus graphics used by Ferret.</p>
+<p align="left"></p>
+</body>
+</html>
+ 

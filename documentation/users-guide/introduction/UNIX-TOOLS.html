@@ -1,0 +1,71 @@
+ 
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML+RDFa 1.1//EN">
+<html lang="en" dir="ltr" version="HTML+RDFa 1.1"
+xmlns:content="http://purl.org/rss/1.0/modules/content/"
+xmlns:dc="http://purl.org/dc/terms/"
+xmlns:foaf="http://xmlns.com/foaf/0.1/"
+xmlns:og="http://ogp.me/ns#"
+xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+xmlns:sioc="http://rdfs.org/sioc/ns#"
+xmlns:sioct="http://rdfs.org/sioc/types#"
+xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+xmlns:schema="http://schema.org/">
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+<title>1.7 UNIX TOOLS - Ferret/PyFerret Support</title>
+<h1 class="title" id="page-title">1.7 UNIX TOOLS</h1>
+<div class="field-item even" property="content:encoded"><div class="plain"><a name="Chapter1-UNIX_tools" id="Chapter1-UNIX_tools"></a><a name="_VPID_31" id="_VPID_31"></a><a name="_VPINDEXENTRY_136" id="_VPINDEXENTRY_136"></a><a name="_VPINDEXENTRY_137" id="_VPINDEXENTRY_137"></a><a name="_VPINDEXENTRY_138" id="_VPINDEXENTRY_138"></a><br /><p align="left">A number of tools are provided with Ferret to assist with Unix-level activities: on-line help, converting data to Ferret's formats, locating files, etc. T                                                                                                                                                                                                                                                                                                                                     
+<p align="left"></p>
+<p class="indented"><a name="_VPINDEXENTRY_139" id="_VPINDEXENTRY_139"></a><b>Faddpath</b> Usage: Faddpath new_path<br />Faddpath will add a new path name to the default lists of directories that Ferret searches a) in response to the SET DATA command; b) when looking for GO scripts; c) when looking for data files; d) when looking for grid definition files.</p>
+ 
+<p align="left"></p>
+<p class="indented"><a name="_VPINDEXENTRY_140" id="_VPINDEXENTRY_140"></a><a name="_VPINDEXENTRY_141" id="_VPINDEXENTRY_141"></a></p>
+ 
+<p align="left"></p>
+<p class="indented"><a name="_VPINDEXENTRY_142" id="_VPINDEXENTRY_142"></a><a name="_VPINDEXENTRY_143" id="_VPINDEXENTRY_143"></a><b>Fdata</b> Usage: Fdata data_file_substring<br />Searches the list of directories contained in the environment variable FER_DATA to find the data files whose names contain the indicated substring. For example, <b><br /></b></p>
+<p class="indented"><b>
+ 
+<p align="left"></p>
+<p class="indented">locates the data files containing "coads" in their names. (Use this command to locate netCDFdata sets by giving the string "cdf".) To list all data files, give an asterisk in single quotes, '*', as the argument.</p>
+ 
+<p align="left"></p>
+<p class="indented"><a name="_VPINDEXENTRY_144" id="_VPINDEXENTRY_144"></a><b>Fdescr</b> Usage: Fdescr des_name_substring<br />Searches the list of directories contained in the environment variable FER_DESCR to find the descriptor files whose names contain the indicated substring. For example,<b> </b></p>
+<p>
+ 
+<p align="left"></p>
+<p class="indented">locates the descriptor files containing "coads" in their names. ("Fdescr .des" will list all accessible descriptors.) To list all descriptor files, give an asterisk in single quotes, '*', as the argument</p>
+ 
+<p align="left"></p>
+<p class="indented"><a name="_VPINDEXENTRY_145" id="_VPINDEXENTRY_145"></a><a name="_VPINDEXENTRY_146" id="_VPINDEXENTRY_146"></a><a name="_VPINDEXENTRY_147" id="_VPINDEXENTRY_147"></a><b>Fenv</b> Usage: Fenv<br />Prints the values of environment variables used by Ferret</p>
+ 
+<p align="left"></p>
+<p class="indented"><a name="_VPINDEXENTRY_148" id="_VPINDEXENTRY_148"></a><b>Fgo</b> Usage: Fgo name_substring<br />Searches the list of directories contained in the environment variable FER_GO to find the GO command files whose names contain the indicated substring. For example, </p>
+<p><b>
+ 
+<p align="left"></p>
+<p class="indented">locates the Ferret tools that contain "grid". To list all script files, give an asterisk in single quotes, '*', as the argument.</p>
+ 
+<p align="left"></p>
+<p class="indented"><a name="_VPINDEXENTRY_149" id="_VPINDEXENTRY_149"></a><b>Fgrids</b> Usage: Fgrids gridfile_substring<br />Searches the list of directories contained in the environment variable FER_GRIDS to find the grid definition files whose names contain the indicated substring. For example, <b></b></p>
+<p>
+ 
+<p align="left"></p>
+<p class="indented">locates the grid definition files containing "fnoc" in their names. ("<i><b>Fgrids .grd"</b></i> will list all accessible grid files.)</p>
+ 
+<p align="left"></p>
+<p class="indented"><a name="_VPINDEXENTRY_150" id="_VPINDEXENTRY_150"></a><a name="_VPINDEXENTRY_151" id="_VPINDEXENTRY_151"></a><b>Fpalette</b> Usage: Fpalette name_substring<br />Searches the list of directories contained in the environment variable FER_PALETTE to find the palette files whose names contain the indicated substring. For example, <b><br /></b></p>
+<p class="indented"><b>
+ 
+<p align="left"></p>
+<p class="indented">locates the palette files containing "blue" in their names. To list all palette files, give an asterisk in single quotes, '*', as the argument.</p>
+ 
+<p align="left"></p>
+<p class="indented"><a name="_VPINDEXENTRY_152" id="_VPINDEXENTRY_152"></a><a name="_VPINDEXENTRY_153" id="_VPINDEXENTRY_153"></a><b>Fpurge</b> Usage: Fpurge filename_template<br />Fpurge is a support routine to manage multiple versions of files created by Ferret‚Äîparticularly journal files and graphic metafiles. Fpurge will remove all versions of a file except the current version. For example, "Fpurge ferret.jnl" will eliminate all past versions of ferret.jnl in the current directory.</p>
+<p class="indented"></p>
+<p class="indented"><a name="_FshowGO" id="_FshowGO"></a><b>FshowGO </b>Usage: FshowGO ferret_log_file       <b><i>Available only with Ferret v6.9 and higher</i><br /></b>FshowGO will reformat a file containing output from a Ferret session.  In the Ferret session, activate the command <a title="SET REDIRECT" href="../commands-reference/SET#_VPINDEXENTRY_SET_REDIRECT">SET REDIRECT</a>, to turn on the writing of lines to the journal file or other output specified in the SET REDIRECT command. Then</p>
+<p class="indented"><b>
+<p class="indented">will write lines with the GO script names and arguments as they were executed in the session, indented to show the level of nesting of script calls.</p>
+<p class="indented"><b>Example:</b></p>
+</body>
+</html>
+ 

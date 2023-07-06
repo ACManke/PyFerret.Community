@@ -1,0 +1,8 @@
+ ! NOAA/PMEL TMAP
+ ! PyFerret v7.65 (debug)
+ ! Linux 4.4.0-22621-Microsoft - 06/26/23
+ !  5-Jul-23 17:50     
+
+set mode verify
+go edit_html.jnl index/ index.html
+q
