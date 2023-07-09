@@ -53,7 +53,7 @@ say `strout`
 ! pause
 ! Add the edited css and js for the header of all files
 
-sp cat ../html_editing/users_guide_edited_header_contents.html >> ($outfile)
+sp cat ../../html_editing/users_guide_edited_header_contents.html >> ($outfile)
 
 say  added css hand js for header
 ! pause
@@ -88,7 +88,7 @@ let n2 = `nn`
 
 
 
-sp cat ../html_editing/users_guide_edited_menu_contents.html >> ($outfile)
+sp cat ../../html_editing/users_guide_edited_menu_contents.html >> ($outfile)
 
 
 ! Now skip lines in the input file until we get to "main-content"
@@ -114,4 +114,4 @@ let n2 = `nn`
 
 
 
-sp cat ../html_editing/users_guide_edited_ending_contents.html >> ($outfile)
+sp cat ../../html_editing/users_guide_edited_ending_contents.html >> ($outfile)
