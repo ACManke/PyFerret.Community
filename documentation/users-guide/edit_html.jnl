@@ -43,20 +43,22 @@ let n2 = `nn`
 ! edit the line taking out Science Data Integration Group
 
 let w1 = strindex(v1[i=`n2`], "| Science Data Integration Group") - 1
-let strout1 = substring(v1[i=`n2`], 1, `w1`)
+
+let strout1 = v1[i=`n2`]
+if `w1 gt 0` then let strout1 = substring(v1[i=`n2`], 1, `w1`)
 let strout = strcat ("`strout1`", "- Ferret/PyFerret Documentation</title>")
 list/append/norow/nohead/format=(a)/file="($outfile)" strout
 
 say `n2` <title>
 say `strout`
 
-! pause
+pause
 ! Add the edited css and js for the header of all files
 
 sp cat ../../html_editing/users_guide_edited_header_contents.html >> ($outfile)
 
 say  added css hand js for header
-! pause
+pause
 
 ! Now skip a whole lot of stuff until the end of the header. 
 
@@ -72,7 +74,7 @@ if `nn ge nlines` then
 endif
 let n2 = `nn + 1`
 
-
+pause
 ! Now looking for the line with breadcrumb in it.  Keep these lines, up through the breadcrumb one.
 
 
@@ -101,9 +103,12 @@ let n2 = `nn`
 
 ! Keep lines containing the documentation (except for the last-modified date)
 
+say `n2`  `nlines`; pause
 
 repeat/i=`n2`:`nlines` (\
 let nn = `i`;\
+list/norow/nohead `nn`;\
+list/norow/nohead/format=(a) v1;\
 if `strindex(v1, "modified-date") eq 0` then list/append/norow/nohead/format=(a)/file="($outfile)" v1;\
 if `strindex(v1, "footer")  gt 0` then exit/loop;\
 )
