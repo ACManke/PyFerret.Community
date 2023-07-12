@@ -75,14 +75,14 @@ endif
 let n2 = `nn + 1`
 
 pause
-! Now looking for the line with breadcrumb in it.  Keep these lines, up through the breadcrumb one.
+! Now looking for the line with breadcrumb in it.  Do not keep the breadcrumb line.
 
 
 
 repeat/i=`n2`:`nlines` (\
 let nn = `i`;\
-list/append/norow/nohead/format=(a)/file="($outfile)" v1;\
 if `strindex(v1, "breadcrumb")  gt 0` then exit/loop;\
+list/append/norow/nohead/format=(a)/file="($outfile)" v1;\
 )
 let n2 = `nn`
 
