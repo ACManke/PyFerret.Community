@@ -53,11 +53,11 @@ say `n2` <title>
 say `strout`
 
 ! pause
-! Add the edited css and js for the header of all files
+! Add the edited css for the header of all files
 
 sp cat ../../html_editing/users_guide_edited_header_contents.html >> ($outfile)
 
-say  added css hand js for header
+say  added css for header
 ! pause
 
 ! Now skip a whole lot of stuff until the end of the header. 
