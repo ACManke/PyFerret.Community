@@ -251,7 +251,12 @@ xmlns:schema="http://schema.org/">
 <div class="field field-name-body field-type-text-with-summary field-label-hidden">
 <div class="field-items">
 <div class="field-item even" property="content:encoded"><p><a name="_VPID_19" id="_VPID_19"></a> <a name="_VPINDEXENTRY_44" id="_VPINDEXENTRY_44"></a><a name="_VPINDEXENTRY_45" id="_VPINDEXENTRY_45"></a></p>
-<p align="left">GO files are files containing Ferret commands. They can be executed with the command "GO filename". Throughout this manual, these files are referred to as<i> GO scripts</i> or<i> <a name="_VPINDEXENTRY_46" id="_VPINDEXENTRY_46"></a>journal files</i> (the file names end in *.jnl). There are two kinds of GO files provided with the distribution (differing in function, not form)—demos and tools. A list of the demonstrations and scripts can be found in Ferret's on-line documentation in "<a href                                                               
+
+<p align="left">GO files are files containing Ferret commands. They can be executed with the command "GO filename". Throughout 
+this manual, these files are referred to as<i> GO scripts</i> or<i> <a name="_VPINDEXENTRY_46" id="_VPINDEXENTRY_46"></a>journal files</i> 
+(the file names end in *.jnl). There are two kinds of GO files provided with the distribution (differing in function, not form)—demos 
+and tools. A list of the demonstrations and scripts can be found in Ferret's on-line documentation in "<a href="../../ferret-tutorials.html">on-line demonstrations</a>".</p>
+
 <p> </p>
 <p align="left" class="secHeader"><a name="Chapter1-Demonstration_files" id="Chapter1-Demonstration_files"></a><a name="_VPID_20" id="_VPID_20"></a><b><a name="_VPINDEXENTRY_47" id="_VPINDEXENTRY_47"></a><a name="_VPINDEXENTRY_48" id="_VPINDEXENTRY_48"></a>1.5.1 Demonstration files </b></p>
 <p> </p>
@@ -1469,7 +1474,10 @@ QUERY/IGNORE $1"1|red|green|blue|&lt;must be red, green, or blue"</pre><p align=
 <p align="left"><b>GO (subroutines)</b></p>
 <p align="left">The GO command may be used inside of a GO script (tool) to execute another (nested) GO script. If an error occurs inside of a nested GO script and SET MODE IGNORE_ERROR has not been issued then the GO script will be interrupted and control returns to the command line. Note that anytime an error is issued, whether MODE IGNORE_ERROR is set or not, a symbol FER_LAST_ERROR is set, which contains the string that was written to standard error.</p>
 <p align="left"><b>REPEAT </b><b>(looping)</b></p>
-<p align="left">The REPEAT command may be used to execute loops within Ferret. The loop "counter" may be an index (I,J,K, or L) or a world coordinate (longitude, latitude, depth, or time). The increment between loop iterations need not correspond to the spacing of points on a grid. When used in conjunction with the "d" options of SET REGION, such as SET REGION/DI="-5:-5" the loops may be used to zoom in or out of a region or to pan a limited-width window of view across a larger region. See the <a href="../a                                                                                                                                                            
+
+<p align="left">The REPEAT command may be used to execute loops within Ferret. The loop "counter" may be an index (I,J,K, or L) or a world coordinate (longitude, latitude, depth, or time). The increment between loop iterations need not correspond to the spacing of points on a grid. When used in conjunction with the "d" options of SET REGION, such as SET REGION/DI="-5:-5" the loops may be used to zoom in or out of a region or to pan a limited-width window of view across a larger region. See the <a href="../animations-gif-images/ADVANCED-MOVIE-MAKING.html" title="5.4 ADVANCED MOVIE-MAKING">Advanced Movie-Making section</a> of this manual for further details.</p>
+
+
 <p align="left"><a name="_VPINDEXENTRY_132" id="_VPINDEXENTRY_132"></a><b>IF-THEN-ELSE (conditional execution)</b></p>
 <p align="left">An IF-THEN-ELSE syntax can be used to conditionally execute Ferret commands. It may be used in two styles—single line and multi-line. See the <a href="../commands-reference/IF.html" title="IF">IF command</a> in the Commands Reference section of this manual for further details.</p>
 <p> </p>

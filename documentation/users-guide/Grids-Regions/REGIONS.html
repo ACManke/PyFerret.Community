@@ -256,7 +256,7 @@ xmlns:schema="http://schema.org/">
 <p align="left">Regions may be manipulated using DEFINE REGION, SET REGION, @ notation, and CANCEL REGION. The Commands Reference section of this manual covers all of these topics.</p>
 <p align="left"><a name="_VPINDEXENTRY_707" id="_VPINDEXENTRY_707"></a>Region information is normally specified in the following form:</p>
 <p align="left"><i><b>QUAL=val </b></i>or<br /><i><b>QUAL=lo_val:hi_val</b></i> or<br /><i><b>QUAL=val@transform</b></i> (as a variable qualifier only) or<br /><i><b>QUAL=lo_val:hi_val@transform</b></i> (as a variable qualifier only)</p>
-<p align="left">When the region for an axis is specified as a single value (instead of a range) Ferret, by default, selects the grid point of the grid box containing this value. The Ferret mode "interpolate" can control this behavior. See command <a href="../commands-reference/SET#PartII-Set_Mode_Interpolate" title="SET">SET MODE INTERPOLATE</a> in Commands Reference.</p>
+<p align="left">When the region for an axis is specified as a single value (instead of a range) Ferret, by default, selects the grid point of the grid box containing this value. The Ferret mode "interpolate" can control this behavior. See command <a href="../commands-reference/SET.html#PartII-Set_Mode_Interpolate" title="SET">SET MODE INTERPOLATE</a> in Commands Reference.</p>
 <p align="left"><b>Examples: Regions</b></p>
 <p align="left">Examples of valid region specifications.</p>
 <p align="left">1) Fully specify the region in an XY plane with the first vertical (Z) level and time 27739.</p>
@@ -272,7 +272,7 @@ yes? SET REGION/DY=-1:+1 !modify current region to 7S:7N</pre><p align="left">4)
 <pre>
 yes? LIST v[Z=0:50@AVE]</pre><p align="left"><a name="_VPINDEXENTRY_708" id="_VPINDEXENTRY_708"></a>5) Equivalent to <i><b>v[Z=10] - v[Z=0:100@AVE]</b></i>, the anomaly at z=10 between v and the 0 to 100 meter depth average of v.</p>
 <pre>
-yes? LIST/Z=10 v - v[Z=0:100@AVE]</pre><p>For more about creating and using anomaly fields, see the FAQ, <b><a href="../../../faq/how-do-i-calculate-climatologies-and-climatological-anomalies" title="How do I calculate climatologies and climatological anomalies?">How do I calculate climatologies and climatological anomalies?</a></b></p>
+yes? LIST/Z=10 v - v[Z=0:100@AVE]</pre><p>For more about creating and using anomaly fields, see the FAQ, <b><a href="../../../faq/how-do-i-calculate-climatologies-and-climatological-anomalieshtml" title="How do I calculate climatologies and climatological anomalies?">How do I calculate climatologies and climatological anomalies?</a></b></p>
 <p><a name="_VPID_202" id="_VPID_202"></a><a name="_VPINDEXENTRY_709" id="_VPINDEXENTRY_709"></a></p>
 <p align="left" class="secHeader"><b>4.3.1 Latitude </b></p>
 <p align="left">Specify latitude or a latitude range with the qualifier Y or J. Specifications using J are integers between 1 and the number of points on the Y axis. Specifications using Y are in the units of the Y axis.</p>
@@ -290,7 +290,7 @@ yes? LIST/J=50 u</pre><p> </p>
 <pre>
 yes? CONTOUR temp[Y=160E:140W]
 yes? LIST/I=100 u
-yes? SHADE/X=100:460 temp !360 degrees centered at 100W</pre><p align="left">See the chapter "Grids and Regins", section "<a href="REGIONS#Chapter4-Modulo_axes" title="4.3 REGIONS">Modulo Axes</a>" , for help with globe-encircling axes.</p>
+yes? SHADE/X=100:460 temp !360 degrees centered at 100W</pre><p align="left">See the chapter "Grids and Regins", section "<a href="#Chapter4-Modulo_axes" title="4.3 REGIONS">Modulo Axes</a>" , for help with globe-encircling axes.</p>
 <p>
 <a name="_VPID_204" id="_VPID_204"></a><a name="_VPINDEXENTRY_711" id="_VPINDEXENTRY_711"></a></p>
 <p align="left" class="secHeader"><b>4.3.3 Depth </b></p>
@@ -309,7 +309,7 @@ yes? LIST/K=3 u</pre><p> </p>
 <pre>
 yes? LIST/T="1-JAN-1982:13:50":"15-FEB-1982" density
 yes? CONTOUR temp[T=27740:30000]
-yes? LIST/L=90 u</pre><p align="left">See the section in this chapter on "<a href="REGIONS#Chapter4-Modulo_axes" title="4.3 REGIONS">Modulo Axes</a>" for help with climatological axes.</p>
+yes? LIST/L=90 u</pre><p align="left">See the section in this chapter on "<a href="#Chapter4-Modulo_axes" title="4.3 REGIONS">Modulo Axes</a>" for help with climatological axes.</p>
 <p>
 <a name="_VPID_206" id="_VPID_206"></a><a name="_VPINDEXENTRY_716" id="_VPINDEXENTRY_716"></a></p>
 <p align="left" class="secHeader"><b>4.3.5 Delta </b></p>
@@ -321,7 +321,7 @@ yes? LIST temp[l=40:90:5]</pre><p align="left">(but this is NOT allowed: <i><b>L
 <p>
 <a name="_VPID_207" id="_VPID_207"></a><a name="_VPINDEXENTRY_717" id="_VPINDEXENTRY_717"></a><a name="_VPINDEXENTRY_718" id="_VPINDEXENTRY_718"></a><a name="_VPINDEXENTRY_719" id="_VPINDEXENTRY_719"></a><a name="_VPINDEXENTRY_720" id="_VPINDEXENTRY_720"></a></p>
 <p align="left" class="secHeader"><b>4.3.6 @ notation </b></p>
-<p align="left">Regions may be named and referred to using the syntax "@name". Some commonly used regions are predefined. See commands <a href="../commands-reference/SET#PartII-Set_Region" title="SET">SET REGION</a> and <a href="../commands-reference/DEFINE#PartII-Define_Region" title="DEFINE">DEFINE REGION</a> in the Commands Reference section for further information.</p>
+<p align="left">Regions may be named and referred to using the syntax "@name". Some commonly used regions are predefined. See commands <a href="../commands-reference/SET.html#PartII-Set_Region" title="SET">SET REGION</a> and <a href="../commands-reference/DEFINE.html#PartII-Define_Region" title="DEFINE">DEFINE REGION</a> in the Commands Reference section for further information.</p>
 <p align="left">If a region is specified using a combination of "@" notation and explicit axis limits the explicit axis limits will be evaluated after the "@" specification, possibly superseding the "@" limits.</p>
 <p align="left"><b>Note:</b> It is not advised to use the @notation inside of variable definitions, as redefinitions of the named region can cause code errors that lead to wrong results.</p>
 <p align="left"><a name="_VPINDEXENTRY_721" id="_VPINDEXENTRY_721"></a>Using the @ notation only sets/alters the axis limits specified in the named region. For example, suppose that region "XY" is defined for the X and Y axes, but not for the Z and T axes. Then</p>

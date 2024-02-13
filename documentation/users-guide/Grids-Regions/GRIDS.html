@@ -249,12 +249,12 @@ xmlns:schema="http://schema.org/">
 <div class="field-items">
 <div class="field-item even" property="content:encoded"><p><a name="Chapter4-Grids" id="Chapter4-Grids"></a><a name="_VPID_190" id="_VPID_190"></a> <a name="_VPINDEXENTRY_625" id="_VPINDEXENTRY_625"></a><a name="_VPINDEXENTRY_626" id="_VPINDEXENTRY_626"></a><a name="_VPINDEXENTRY_627" id="_VPINDEXENTRY_627"></a><a name="_VPINDEXENTRY_628" id="_VPINDEXENTRY_628"></a></p>
 <p align="left">Every variable has an underlying grid which defines a coordinate space. All grids are in a sense 4 dimensional (X, Y, Z, and T) but axes normal to the data are represented as "normal" (such as the Z axis of the surface wind stress).</p>
-<p align="left">Grids can be viewed, specified and created using SHOW GRID, SET GRID, DEFINE AXIS, and DEFINE GRID. These commands are all in the Commands Reference section of this manual. Data can be regridded by the G= modifier. (See this chapter, section "<a href="GRIDS#Chapter4-Regridding" title="4.2 GRIDS">Regridding</a>")</p>
+<p align="left">Grids can be viewed, specified and created using SHOW GRID, SET GRID, DEFINE AXIS, and DEFINE GRID. These commands are all in the Commands Reference section of this manual. Data can be regridded by the G= modifier. (See this chapter, section "<a href="#Chapter4-Regridding" title="4.2 GRIDS">Regridding</a>")</p>
 <p> </p>
 <p align="left" class="secHeader"><a name="_VPID_191" id="_VPID_191"></a><b>4.2.1 Defining grids </b></p>
 <p> </p>
 <p align="left">Axes and grids can be explicitly created by DEFINE AXIS and DEFINE GRID. NetCDF and TMAP-formatted data set variables have all of the necessary grid and axis definitions embedded in the data set files, but if you are reading data from an ASCII or binary file, you must tell Ferret about the underlying grid of your data.</p>
-<p align="left">If you are creating abstract expressions entirely from pseudo-variables, you may want to define a grid in order to define the coordinate space of your calculation. This will also help produce a nicely labeled plot. (See the chapter "Variables and Expressions", "Grids and axes of <a href="../variables-xpressions/VARIABLES#_VPID_71" title="3.1 VARIABLES">pseudo-variables</a>" and the example in the section on "<a href="../variables-xpressions/VARIABLES#Chapter3-Abstract_variables" title="3.1 VARIABLES">Abstract Variables</a>")</p>                                      
+<p align="left">If you are creating abstract expressions entirely from pseudo-variables, you may want to define a grid in order to define the coordinate space of your calculation. This will also help produce a nicely labeled plot. (See the chapter "Variables and Expressions", "Grids and axes of <a href="../variables-xpressions/VARIABLES.html#_VPID_71" title="3.1 VARIABLES">pseudo-variables</a>" and the example in the section on "<a href="../variables-xpressions/VARIABLES.html#Chapter3-Abstract_variables" title="3.1 VARIABLES">Abstract Variables</a>")</p>                                      
 <p align="left"><b>Example</b><b> </b></p>
 <p align="left">This example is taken from the demonstration script "file_reading_demo.jnl". An ASCII file contains a grid of numbers, 50 rows by 6 columns. Suppose the data are on a 2D grid of 6 longitudes by 50 latitudes (Figure 4_1).</p>
 <p><a href="../../../sites/default/files/images/documentation/users-guide/user_guide_images/Ch4_fig01.gif"><img alt="Ch4_fig01" class="image-inline" src="../../../sites/default/files/images/documentation/users-guide/user_guide_images/Ch4_fig01.gif" style="height: 172px; width: 200px;" /></a></p>
@@ -283,7 +283,7 @@ yes? CONTOUR my_2D_var</pre><p align="left"> </p>
 <p align="left">Conversion to units of time (year month day hour minute second) is also needed when processing data to calculate means over months or other calendar-related intervals and climatological statistics. For computation, comparisons, plotting and regridding, Ferret makes the choice to adopt a common length of year for all calendars.</p>
 <p align="left"><a name="_VPINDEXENTRY_634" id="_VPINDEXENTRY_634"></a>The default calendar in Ferret is the Gregorian calendar. This is implemented as a "proleptic" calendar, where the definition of a year is consistent throughout time and does not have an offset in the 1500's as the historical calendars did. However, files written using the NOAA/CDC standard for the "blended" Julian/Gregorian calendar are read correctly by Ferret: If a time axis has a time origin of 1-1-1 00:00:00, and uses the default ca                                                                                                                        
 <p align="left"> </p>
-<p align="left"><a name="_VPINDEXENTRY_635" id="_VPINDEXENTRY_635"></a>Other calendars may be defined using DEFINE AXIS/<b>CALENDAR= </b>or by reading a variable with a calendar attribute from a <a href="../data-set-basics/NETCDF-DATA#Chapter2
+<p align="left"><a name="_VPINDEXENTRY_635" id="_VPINDEXENTRY_635"></a>Other calendars may be defined using DEFINE AXIS/<b>CALENDAR= </b>or by reading a variable with a calendar attribute from a <a href="../data-set-basics/NETCDF-DATA.html#Chapter2
 <p align="left"><b>Example: </b></p>
 <pre>
 $BACKGROUND_RECORD
@@ -427,7 +427,7 @@ DEFINE GRID/LIKE=sst[D=coads_climatology]/X=temp/Y=temp</pre><p class="indented"
 <p align="left">The syntax "GX=lo:hi:delta" can be used in square brackets modifying a variable name to indicate the dynamic creation of an axis with the indicated range and spacing and the immediate regridding of the variable to a grid containing that axis. For example, SST[GX=175W:75W:10] will create a dynamic axis of 10-degree regular point spacing, will create a dynamic grid incorporating this axis (see previous section), and will regrid the variable SST to this grid.</p>
 <p align="left">Similarly, by referring to the grid indices rather than their world coordinates, the expression SST[GX=1:100:5] will create a dynamic axis that subsamples every 5th longitude point from SST. In this case the points of the resulting axis may be irregularly spaced if the points of the original axis were also irregular.</p>
 <p align="left">As with the dynamic regridding described above, transformations can be specified to indicate the regridding technique. Thus SST[GX=1:100:5@AVE] will use averaging instead of the default linear interpolation to perform the regridding.</p>
-<p align="left">As a notational convenience the "G" may be dropped when referring to dynamic axes. Thus SST[X=175W:75W:10] is equivalent to SST[GX=175W:75W:10] and SST[I=1:100:5@AVE] is equivalent to SST[GX=1:100:5@AVE]. When using this notational convenience keep in mind that a regridding is taking place, so the transformation applied (if any) must be a regridding transformation (see <a href="../commands-reference/SHOW#_VPINDEXENTRY_1863">SHOW TRANSFORMS</a> in the command reference).</p>
+<p align="left">As a notational convenience the "G" may be dropped when referring to dynamic axes. Thus SST[X=175W:75W:10] is equivalent to SST[GX=175W:75W:10] and SST[I=1:100:5@AVE] is equivalent to SST[GX=1:100:5@AVE]. When using this notational convenience keep in mind that a regridding is taking place, so the transformation applied (if any) must be a regridding transformation (see <a href="../commands-reference/SHOW.html#_VPINDEXENTRY_1863">SHOW TRANSFORMS</a> in the command reference).</p>
 <p align="left">The lower plot of Figure 4_2 illustrates the effect of dynamic axes in the command</p>
 <pre>
 SHADE SST[GX=175W:75W:10]</pre><p>
@@ -439,7 +439,7 @@ SHADE SST[GX=175W:75W:10]</pre><p>
 <p><a href="../../../sites/default/files/images/documentation/users-guide/user_guide_images/Ch4_fig03.gif"><img alt="Ch4_fig03" class="image-inline" src="../../../sites/default/files/images/documentation/users-guide/user_guide_images/Ch4_fig03.gif" style="height: 172px; width: 200px;" /></a></p>
 <p align="left">Note that when the lo:high:delta notation is applied to T or L expressed as calendar dates the units of the delta value will be <b>hours.</b> For example, L[GT=1-jan-1980:1-feb-1980:24] is the integers 1 to 32 defined on an axis of 32 days, 24 hours apart.</p>
 <p align="left">As a notational convenience the "G" may be dropped when referring to dynamic pseudo-variables. Thus X[X=0.2:1:0.2] is equivalent to X[GX=0.2:1:0.2].</p>
-<p align="left">See also the discussion of <a href="../variables-xpressions/VARIABLES#_VPINDEXENTRY_255">pseudo-variables</a>. and <a href="../variables-xpressions/VARIABLES#_VPINDEXENTRY_grids_pseudo">grids for pseudo-variables</a></p>
+<p align="left">See also the discussion of <a href="../variables-xpressions/VARIABLES.html#_VPINDEXENTRY_255">pseudo-variables</a>. and <a href="../variables-xpressions/VARIABLES.html#_VPINDEXENTRY_grids_pseudo">grids for pseudo-variables</a></p>
 <p>
 <a name="Chapter4-Regridding" id="Chapter4-Regridding"></a><a name="_VPID_197" id="_VPID_197"></a><a name="_VPINDEXENTRY_650" id="_VPINDEXENTRY_650"></a><a name="_VPINDEXENTRY_651" id="_VPINDEXENTRY_651"></a><a name="_VPINDEXENTRY_652" id="_VPINDEXENTRY_652"></a><a name="_VPINDEXENTRY_653" id="_VPINDEXENTRY_653"></a></p>
 <p align="left" class="secHeader"><b>4.2.4 Regridding </b></p>
@@ -509,7 +509,7 @@ yes? use reference_salinity_grid.nc
 yes? use dsg_profile_subset.nc
 yes? let salinity_on_profiles = salt[d=1, g=sal2[d=2]]</pre><p> </p>
 <p>To regrid data from a discrete collection to a grid, use one of the SCAT2GRID functions.  For details see the FAQ,</p>
-<div><strong><a href="../../..//faq/calling-scat2grid-functions-dsg-data" title="Calling SCAT2GRID functions on DSG data">How can I call SCAT2GRID functions for my DSG data?</a></strong></div>
+<div><strong><a href="../../..//faq/calling-scat2grid-functions-dsg-data.html" title="Calling SCAT2GRID functions on DSG data">How can I call SCAT2GRID functions for my DSG data?</a></strong></div>
 <p> </p>
 <p>
 <a name="_VPID_198" id="_VPID_198"></a><a name="_VPINDEXENTRY_654" id="_VPINDEXENTRY_654"></a><b><a name="_VPINDEXENTRY_655" id="_VPINDEXENTRY_655"></a></b></p>
@@ -518,7 +518,7 @@ yes? let salinity_on_profiles = salt[d=1, g=sal2[d=2]]</pre><p> </p>
 <p align="left">Regridding transformations provide a means to perform a given calculation over a limited span of coordinates and repeat that calculation for a series of contiguous spans. For example, if we wish to compute the variance of the variable SST over 10-degree longitude range from 180 to 170W we could use the syntax <i><b>sst[X=180:170w@VAR]</b></i>. Now, if we wish to perform the same operation 10 times in 10-degree wide bands from 180 to 80W we could instead use <i><                                                                                                                                                              
 <p align="left"><i><b>DEFINE AXIS/X=175w:85w:10/UNITS=degrees ×10deg<br />
 LET sst10 = sst[GX=x10deg@VAR]</b></i></p>
-<p align="left">In addition to the regridding transformations here, see also <a href="GRIDS#_4.2.6">Section 4.2.6</a>, Auxiliary coordinate regridding, and particularly the <a href="GRIDS#_4.2.6.3">Piecewise Linear averaging</a> transformation, @PLAVE.</p>
+<p align="left">In addition to the regridding transformations here, see also <a href="#_4.2.6">Section 4.2.6</a>, Auxiliary coordinate regridding, and particularly the <a href="#_4.2.6.3">Piecewise Linear averaging</a> transformation, @PLAVE.</p>
 <p align="left">The regridding transformations are:</p>
 <p align="left"><a name="_VPINDEXENTRY_656" id="_VPINDEXENTRY_656"></a>@LIN—linear interpolation (the default if no transform is specified)</p>
 <p align="left">Performs regridding by multi-axis linear interpolation between coordinate locations.</p>
@@ -533,7 +533,7 @@ LET sst10 = sst[GX=x10deg@VAR]</b></i></p>
 <p>Computes the unweighted average of all valid data whose coordinate locations lie within each destination grid cell.</p>
 <p> </p>
 <p align="left"><a name="_VPINDEXENTRY_NBIN" id="_VPINDEXENTRY_NBIN"></a>@NBIN</p>
-<p>The number of valid data whose coordinate locations lie within each destination grid cell. This is an unweighted count. See <a href="GRIDS#_VPINDEXENTRY_BIN" title="4.2 GRIDS">@BIN.</a></p>
+<p>The number of valid data whose coordinate locations lie within each destination grid cell. This is an unweighted count. See <a href="#_VPINDEXENTRY_BIN" title="4.2 GRIDS">@BIN.</a></p>
 <p align="left"><a name="_VPINDEXENTRY_665" id="_VPINDEXENTRY_665"></a>@VAR</p>
 <p align="left">Computes the variance of the points from the source grid that fall within each destination grid cell. This is a length-weighted computation like the @AVE transformation.</p>
 <p align="left"> </p>
@@ -632,7 +632,7 @@ regrid: 5 delta on X@XACT
 15 / 4: .... 
 20 / 5: 0.9129</pre><p align="left"><a name="_VPINDEXENTRY_682" id="_VPINDEXENTRY_682"></a><a name="_VPINDEXENTRY_683" id="_VPINDEXENTRY_683"></a><a name="_VPINDEXENTRY_681" id="_VPINDEXENTRY_681"></a></p>
 <p align="left">@MOD</p>
-<p align="left">Creates climatologies from time series by regridding to a time series axis with a modulo regridding transformation. See the section on<a href="GRIDS#Chapter4-Modulo_regridding" title="4.2 GRIDS"> Modulo Regridding</a> for details.</p>
+<p align="left">Creates climatologies from time series by regridding to a time series axis with a modulo regridding transformation. See the section on<a href="#Chapter4-Modulo_regridding" title="4.2 GRIDS"> Modulo Regridding</a> for details.</p>
 <p align="left"><b>Examples</b></p>
 <p align="left">1) Let variable temp be defined on a grid with points spaced regularly at 1-degree intervals in both longitude and latitude (X and Y). Let grid "g10" possess points spaced regularly at 10-degree intervals in both X and Y.</p>
 <pre>
@@ -672,7 +672,13 @@ MONTH_GREGORIAN TIME          12mi   16-JAN 12:00         15-DEC 17:49
 MONTH_NOLEAP TIME             12mi   16-JAN 12:00         16-DEC 12:00
 MONTH_360_DAY TIME            12mr   16-JAN 00:00         16-DEC 00:00
 MONTH_ALL_LEAP TIME           12mi   16-JAN 12:00         16-DEC 12:00
-MONTH_JULIAN TIME             12mi   16-JAN 12:00         15-DEC 18:00</pre><p align="left">Datasets are available which define climatological axes for other calendars, Julian and noleap, and all possible seasonal calendars. To define these calendars, USE and CANCEL the axis-definition dataset. Datasets <strong>clim_axes_gregorian.nc, clim_axes_julian.nc, clim_axes_noleap.nc</strong> are distributed with Ferret beginning with the v7.4 release. They can be found at the <a href="https://github.com/NOAA-PMEL/F                                                     
+MONTH_JULIAN TIME             12mi   16-JAN 12:00         15-DEC 18:00</pre>
+       
+<p align="left">Datasets are available which define climatological axes for other calendars, 
+Julian and noleap, and all possible seasonal calendars. To define these calendars, USE and 
+CANCEL the axis-definition dataset. Datasets <strong>clim_axes_gregorian.nc, clim_axes_julian.nc, 
+clim_axes_noleap.nc</strong> are distributed with Ferret beginning with the v7.4 release. 
+They can be found at the <a href="https://github.com/NOAA-PMEL/FerretDatasets/releases">GitHub Datasets page</a>.</p>
 <p align="left">Note that MON_IRREG_GRG is the same as the pre-defined MONTH_IRREG and MON_REG_GRG is the same as MON_REG, included for naming consistency.</p>
 <pre>
 ...
@@ -708,7 +714,7 @@ MON_REG_NLP TIME              12mr   16-JAN 05:00         16-DEC 19:00
  
 </pre><p> </p>
 <p align="left"> </p>
-<p align="left">In addition, there is an FAQ that describes how to create a daily climatological series, <a href="../../../faq/creating-a-daily-climatology">How do I compute a daily climatology for a time series?</a> The analysis of multi-year daily data is often awkward, because the length of the year changes for leap years. The analysis can often be made simpler by regridding the data to a NOLEAP calendar.</p>
+<p align="left">In addition, there is an FAQ that describes how to create a daily climatological series, <a href="../../../faq/creating-a-daily-climatology.html">How do I compute a daily climatology for a time series?</a> The analysis of multi-year daily data is often awkward, because the length of the year changes for leap years. The analysis can often be made simpler by regridding the data to a NOLEAP calendar.</p>
 <pre>
 !!!!! Prior to v6.9, need to USE and CANCEL this dataset. The next two
 !!!!! commands not nedded in v6.9 and higher
@@ -760,7 +766,7 @@ PLOT uwnd_clim
 ! Ferret can also plot it on the calendar axis with the raw data
 PLOT/T=16-jan-1982:17-dec-1992 uwnd,uwnd_clim</pre><p align="left">In many cases the volume of input data needed to perform climatological calculations is very large. In the example above the command</p>
 <p align="left"><b>CONTOUR/X=0:360/Y=90s:90n sst_climatology[L=1] </b></p>
-<p align="left">to plot January from the climatology would require Nx*Ny*Nt=72*72*576=3 Megawords of data. Such calculations may be too large to fit into memory. However, if the region is fully specified (as shown for the X and Y limits in the example) Ferret's internal memory manager will break up the calculation as needed to produce the result. (See <a href="../computing-environment/MEMORY-USE" title="9.3 MEMORY USE">Memory Use</a> in the chapter "Computing Environment", for further details.)</p>
+<p align="left">to plot January from the climatology would require Nx*Ny*Nt=72*72*576=3 Megawords of data. Such calculations may be too large to fit into memory. However, if the region is fully specified (as shown for the X and Y limits in the example) Ferret's internal memory manager will break up the calculation as needed to produce the result. (See <a href="../computing-environment/MEMORY-USE.html" title="9.3 MEMORY USE">Memory Use</a> in the chapter "Computing Environment", for further details.)</p>
 <p> </p>
 <p align="left">Unlike other transformations and regridding, modulo regridding is performed as an <i>unweighted</i> average: each non-missing source point contributes 100
 <p align="left">Here is an example that illustrates the situation and the use of linear interpolation to repair it. (Figure 4_6).</p>
@@ -797,7 +803,7 @@ PLOT/OVER/T=1-jan-1970:1-jan-1974 test_var_centered
 PLOT/OVER/T=1-jan-1970:1-jan-1974 test_var_centered[GT=month_reg@MOD]</pre><p> </p>
 <p>More notes:</p>
 <p>In addition, modulo regridding can introduce biases if, say 2015 has 2 points lying in March and 2016 has 5 points in that same month. This is something to be aware of if the source data has many gaps.</p>
-<p>Finally, please read the FAQ about <a href="../../../faq/how-do-i-calculate-climatologies-and-climatological-anomalies">computing climatologies and anomalies</a> computing climatologies and anomalies. At the end are two notes about computing these with the best accuracy and lack of bias.</p>
+<p>Finally, please read the FAQ about <a href="../../../faq/how-do-i-calculate-climatologies-and-climatological-anomalies.html">computing climatologies and anomalies</a> computing climatologies and anomalies. At the end are two notes about computing these with the best accuracy and lack of bias.</p>
 <p> </p>
 <p><a name="_VPID_200" id="_VPID_200"></a><a name="_VPINDEXENTRY_689" id="_VPINDEXENTRY_689"></a><a name="_VPINDEXENTRY_690" id="_VPINDEXENTRY_690"></a><a name="_VPINDEXENTRY_691" id="_VPINDEXENTRY_691"></a></p>
 <p align="left" class="secHeader"><b>4.2.5.1 Modulo regridding statistics </b></p>
@@ -843,13 +849,13 @@ var[gW=axis@trans]</pre><p> </p>
 </li>
 </ul><p>Auxcoord will typically be a variable that has been named as an auxiliary coordinate via a coordinates attribute in a netCDF dataset that follows the CF conventions. All of the axes that exist in the grid of auxcoord must also be found on the grid of the var. However, var may have axes not found on auxcoord (e.g. a time axis). The grid of auxcoord and the grid of var must share the Ferret axis in the W orientation.</p>
 <p> </p>
-<p>For all single axes, regrid operations @trans may be @LIN (linear interpolation); or @PLAVE (average under the piecewise linear function implied by variable auxcoord over the bounds of each target grid cell -- see the <a href="GRIDS#_4.2.6.3">Piecewise Linear averaging</a> section of this document). The @LIN is the default when no transform is specified (see exception for <a href="GRIDS#_4.2.7">FMRC time-forecast grids</a> discussed below). If the target axis is a single numerical value, the @LINtransfor                                                                                                                                                                                                                                                                
+<p>For all single axes, regrid operations @trans may be @LIN (linear interpolation); or @PLAVE (average under the piecewise linear function implied by variable auxcoord over the bounds of each target grid cell -- see the <a href="#_4.2.6.3">Piecewise Linear averaging</a> section of this document). The @LIN is the default when no transform is specified (see exception for <a href="#_4.2.7">FMRC time-forecast grids</a> discussed below). If the target axis is a single numerical value, the @LINtransfor                                                                                                                                                                                                                                                                
 <p> </p>
 <p>Regions: Auxiliary coordinate regridding treats region specifications in the same manner as traditional Ferret, namely region information always refers to the *target* grid. For example, in the command</p>
 <pre>
 SHADE/K=5:10  temp[gz(density)=myDensityAxis]</pre><p> </p>
 <p>The K limits will be interpreted as indices of the axis myDensityAxis (versus the native Z axis of temp). (This behavior has serious implications for implementation, as discussed below.)</p>
-<p>An example is shown in the <a href="../../../faq/depth-axis-to-density-axis" title="Ferret FAQs">FAQ, Density axis &lt;--&gt; depth axis</a>.</p>
+<p>An example is shown in the <a href="../../../faq/depth-axis-to-density-axis.html" title="Ferret FAQs">FAQ, Density axis &lt;--&gt; depth axis</a>.</p>
 <p> </p>
 <h3><a name="_4.2.6.2" id="_4.2.6.2"></a>4.2.6.2 Regridding from curvilinear horizontal coordinate systems</h3>
 <p> </p>
@@ -888,11 +894,11 @@ depth        density        temp
 <p>When a forecast model is run on an operational cycle, with a new model run commencing on a regular cycle, the resulting collection of multiple model outputs is called a Forecast model Run Collection (FMRC). An FMRC can be handled by Ferret as a single dataset, vastly reducing the effort needed to explore the data. The variables of each individual model run may include mixed 2D (surface) and 3D (volume) variables, mixed time-dependent and time-independent variables, and optionally an ensemble (E) 5th dime                                                                                                                                                                                                                                                                     
 <p>FMRCs are challenging to understand in detail, but quite easy to work with. A slide presentation providing both tutorial background and a sample session is available at</p>
 <p><a href="http://ferret.pmel.noaa.gov/tutorials/Using_Forecast_Model_Run_Collections_in_Ferret.pdf">Using_Forecast_Model_Run_Collections_in_Ferret.pdf</a></p>
-<p>The creation of the consolidated single dataset may be achieved using the Ferret <a href="../commands-reference/DEFINE#_define_data_agg" title="DEFINE">DEFINE DATA/AGGREGATE/F</a> command or using the <a href="https://www.unidata.ucar.edu/software/thredds/current/tds/">THREDDS DATA SERVER (TDS)</a> from Unidata. In either case, when the individual model runs are viewed in the context of the FMRC, the original time axes of the original model (which each differ) are replaced by a single uniform time axis i                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+<p>The creation of the consolidated single dataset may be achieved using the Ferret <a href="../commands-reference/DEFINE.html#_define_data_agg" title="DEFINE">DEFINE DATA/AGGREGATE/F</a> command or using the <a href="https://www.unidata.ucar.edu/software/thredds/current/tds/">THREDDS DATA SERVER (TDS)</a> from Unidata. In either case, when the individual model runs are viewed in the context of the FMRC, the original time axes of the original model (which each differ) are replaced by a single uniform time axis i                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
 <p> </p>
 <p>The native form of the FMRC, as created by DEFINE AGGREGATION/F or TDS is the “compact” form of the FMRC. This form of the FMRC is efficient for storage and I/O, but is poorly suited (confusing) for analysis and visualization. There are two alternative representations of the variables in the FMRC that are better suited to these tasks. The most useful form is the ‘skill’ form, in which the T axis is a single long calendar axis that represents the date/time being modeled, and the F axis is the offs                                                                                                                                                                                                
 <p> </p>
-<p>Ferret’s auxiliary coordinate regridding syntax (<a href="GRIDS#_4.2.6.1">Section 4.2.6.1</a>) is used to transform the T and F axes of the compact form of an FMRC into the axes of the ‘skill’ and ‘diagonal’ forms. The 2-dimensional time coordinate variable, TF_TIMES (or other name if using TDS), must be provided as the auxcoord that guides the regridding. The ‘skill’ form of the FMRC is achieved by regridding both T and F</p>
+<p>Ferret’s auxiliary coordinate regridding syntax (<a href="#_4.2.6.1">Section 4.2.6.1</a>) is used to transform the T and F axes of the compact form of an FMRC into the axes of the ‘skill’ and ‘diagonal’ forms. The 2-dimensional time coordinate variable, TF_TIMES (or other name if using TDS), must be provided as the auxcoord that guides the regridding. The ‘skill’ form of the FMRC is achieved by regridding both T and F</p>
 <p> </p>
 <pre>
 var[gt(tf_times)=TF_CAL_T,gf(tf_times)=TF_LAG_F]</pre><p>The diagonal form of the FMRC may be achieved by regridding only the T axis</p>
@@ -936,7 +942,7 @@ span.s1 {font-variant-ligatures: no-common-ligatures}
 <span class="s1">SHADE /PALETTE=red_blue_gray_centered /LEVEL=30CV /I=10 /J=10 error</span></pre><p><img alt="plot of errors in forecasted value on common time/forecast axis" src="/sites/default/files/u271/error_sparse.png" style="width: 400px; height: 345px;" /></p>
 <p>This last plot assumes that the zero-lag forecasted values are actual conditions.  Note that on months that a forecast was not made, actual conditions are not available.  Again, one could produce plots without the gaps by estimating the actual conditions (and the missing forecasts) by interpolation.</p>
 <p> </p>
-<p>See example plots in the section about defining FMRC datasets: <a href="../commands-reference/DEFINE#_define_data_agg" title="DEFINE">DEFINE DATA/F </a></p>
+<p>See example plots in the section about defining FMRC datasets: <a href="../commands-reference/DEFINE.html#_define_data_agg" title="DEFINE">DEFINE DATA/F </a></p>
 <p> </p>
 </div>
 </div>
