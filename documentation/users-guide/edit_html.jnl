@@ -7,7 +7,7 @@ cancel mode verify
 
 define symbol directory = ($1)
 define symbol filename = ($2)
-define symbol outfile = ($directory)/($filename)_out.html
+define symbol outfile = ($directory)/($filename).out.html
 
 
 ! open the file and create the output file
@@ -103,12 +103,11 @@ let n2 = `nn`
 
 ! Keep lines containing the documentation (except for the last-modified date)
 
+
 say `n2`  `nlines`; ! pause
 
 repeat/i=`n2`:`nlines` (\
 let nn = `i`;\
-list/norow/nohead `nn`;\
-list/norow/nohead/format=(a) v1;\
 if `strindex(v1, "modified-date") eq 0` then list/append/norow/nohead/format=(a)/file="($outfile)" v1;\
 if `strindex(v1, "footer")  gt 0` then exit/loop;\
 )
@@ -116,7 +115,6 @@ let n2 = `nn`
 
 
 ! Now add the common lines that end all files.
-
 
 
 sp cat ../../html_editing/users_guide_edited_ending_contents.html >> ($outfile)
