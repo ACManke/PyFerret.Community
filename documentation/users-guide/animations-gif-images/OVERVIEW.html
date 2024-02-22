@@ -11,6 +11,9 @@ xmlns:sioct="http://rdfs.org/sioc/types#"
 xmlns:skos="http://www.w3.org/2004/02/skos/core#"
 xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
 xmlns:schema="http://schema.org/">
+
+<!-- Mirrored from ferret.pmel.noaa.gov/Ferret/documentation/users-guide/animations-gif-images/OVERVIEW by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Jun 2023 18:11:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head profile="http://www.w3.org/1999/xhtml/vocab">
 <title>5.1 OVERVIEW - Ferret/PyFerret Documentation</title>
 
@@ -176,14 +179,11 @@ xmlns:schema="http://schema.org/">
 <ul>
 <li id="menu-1338-1" class="first odd sf-item-1 sf-depth-3 sf-no-children"><a href="../../demos/ferret-tutorial-script.html" class="sf-depth-3">Ferret Tour</a></li>
 <li id="menu-1618-1" class="middle even sf-item-2 sf-depth-3 sf-no-children"><a href="../../demos/dsg-files-discrete-sampling-geometries-demo.html" class="sf-depth-3">DSG files: Discrete Sampling Geometries Demo</a></li>
-<li id="menu-1337-1" class="middle odd sf-item-3 sf-depth-3 sf-total-children-5 sf-parent-children-0 sf-single-children-5 menuparent"><a href="../../ferret-tutorials.html" class="sf-depth-3 menuparent">External Function Examples</a>
-<ul>
-<li id="menu-1343-1" class="first odd sf-item-1 sf-depth-4 sf-no-children"><a href="../../demos/sorting-demo.html" class="sf-depth-4">Ferret sorting demo (1)</a></li>
-<li id="menu-1591-1" class="middle even sf-item-2 sf-depth-4 sf-no-children"><a href="../../demos/ferret-sorting-demo.html" class="sf-depth-4">Ferret sorting demo (2)</a></li>
+<li id="menu-1591-1" class="middle even sf-item-2 sf-depth-4 sf-no-children"><a href="../../demos/ferret-sorting-demo.html" class="sf-depth-4">Ferret sorting demo</a></li>
 <li id="menu-1344-1" class="middle odd sf-item-3 sf-depth-4 sf-no-children"><a href="../../demos/how-to-use-ferret-external-functions-for-computing-ffts.html" class="sf-depth-4">Fast Fourier Transforms demo</a></li>
 <li id="menu-1345-1" class="middle even sf-item-4 sf-depth-4 sf-no-children"><a href="../../demos/ferret-eof-demo.html" class="sf-depth-4">Empirical Orthogonal Functions demo</a></li>
 <li id="menu-1346-1" class="last odd sf-item-5 sf-depth-4 sf-no-children"><a href="../../demos/ferret-objective-analysis.html" class="sf-depth-4">Ferret objective analysis demo</a></li>
-</ul></li>
+
 <li id="menu-1353-1" class="middle even sf-item-4 sf-depth-3 sf-no-children"><a href="../../demos/ferret-palette-demo.html" class="sf-depth-3">Ferret Palette Demo</a></li>
 <li id="menu-1350-1" class="middle odd sf-item-5 sf-depth-3 sf-no-children"><a href="../../demos/ferret-map-projections-demo.html" class="sf-depth-3">Map projections</a></li>
 <li id="menu-1354-1" class="middle even sf-item-6 sf-depth-3 sf-no-children"><a href="../../demos/ferret-polygon-vector-demo.html" class="sf-depth-3">Ferret polygon vector demo</a></li>
@@ -250,7 +250,7 @@ xmlns:schema="http://schema.org/">
 <div class="field-item even" property="content:encoded"><p><a name="Chapter5" id="Chapter5"></a><a name="_VPID_212" id="_VPID_212"></a></p>
 <p align="center"><b><a name="_VPINDEXENTRY_733" id="_VPINDEXENTRY_733"></a><a name="_VPINDEXENTRY_734" id="_VPINDEXENTRY_734"></a><a name="_VPINDEXENTRY_735" id="_VPINDEXENTRY_735"></a><a name="_VPINDEXENTRY_736" id="_VPINDEXENTRY_736"></a><a name="_VPINDEXENTRY_737" id="_VPINDEXENTRY_737"></a><a name="_VPINDEXENTRY_738" id="_VPINDEXENTRY_738"></a></b></p>
 <p><a name="_VPID_213" id="_VPID_213"></a><br /></p><p align="left">There are two modes for animating in Ferret. One can animate "on the fly" in an interactive sesion, or a sequence of Ferret plots can be stored and then animated. A series of gif images can also be animated, see Ch5 Sec1.2 below.</p>
-<p align="left">Formerly we had a method using an HDF file type.  <b>NOTE that starting with Ferret v6.6 HDF movies are no longer available. </b><a href="../data-set-basics/NETCDF-DATA#_NC4"><br /></a></p>
+<p align="left">Formerly we had a method using an HDF file type.  <b>NOTE that starting with Ferret v6.6 HDF movies are no longer available. </b><a href="../data-set-basics/NETCDF-DATA.html#_NC4"><br /></a></p>
 <p><a name="_VPID_214" id="_VPID_214"></a><a name="_VPINDEXENTRY_739" id="_VPINDEXENTRY_739"></a><br /></p><p align="left" class="secHeader"><b>5.1.1 Animating on the fly </b></p>
 <p align="left">In a Ferret session, display an animation with the command,</p>
 <pre>yes? REPEAT/ANIMATE[/LOOP=n]</pre><p align="left">to start an animation sequence. Given LOOP=n, the entire animation sequence will repeat n times.</p>
@@ -263,7 +263,7 @@ xmlns:schema="http://schema.org/">
 <p>
 </p><p align="left">gfsicle is extremely easy to use:</p>
 <p align="left">1. Make your gif files with a Ferret command like:</p>
-<pre>yes? REPEAT/J=1:36 (GO scriptfile `j`; FRAME/FILE=sst-`j`.gif)</pre><p align="left">where the scriptfile uses the argument <i><b>j </b></i>to determine the plot characteristics. See sections later in this chapter for more on the <a title="5.4 ADVANCED MOVIE-MAKING" href="ADVANCED-MOVIE-MAKING">REPEAT</a> command and <a title="5.5 CREATING GIF IMAGES" href="CREATING-GIF-IMAGES">creating GIF files</a>.</p>
+<pre>yes? REPEAT/J=1:36 (GO scriptfile `j`; FRAME/FILE=sst-`j`.gif)</pre><p align="left">where the scriptfile uses the argument <i><b>j </b></i>to determine the plot characteristics. See sections later in this chapter for more on the <a title="5.4 ADVANCED MOVIE-MAKING" href="ADVANCED-MOVIE-MAKING.html">REPEAT</a> command and <a title="5.5 CREATING GIF IMAGES" href="CREATING-GIF-IMAGES.html">creating GIF files</a>.</p>
 <p align="left">2. To create an animated gif (using just one example from the gifsicle website), from the Unix command line:</p>
 <pre> &gt; gifsicle --delay=10 --loop sst*.gif &gt; anim.gif</pre><p align="left"></p>
 <p class="indented">This file can be as long as you want and may specify files more than once to repeat any of the images if you wish.</p>

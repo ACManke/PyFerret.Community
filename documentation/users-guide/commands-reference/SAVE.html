@@ -11,6 +11,9 @@ xmlns:sioct="http://rdfs.org/sioc/types#"
 xmlns:skos="http://www.w3.org/2004/02/skos/core#"
 xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
 xmlns:schema="http://schema.org/">
+
+<!-- Mirrored from ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/SAVE by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Jun 2023 18:11:26 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head profile="http://www.w3.org/1999/xhtml/vocab">
 <title>SAVE - Ferret/PyFerret Documentation</title>
 
@@ -151,7 +154,7 @@ xmlns:schema="http://schema.org/">
 </li>
 <li id="menu-1394-1" class="middle odd sf-item-7 sf-depth-3 sf-total-children-5 sf-parent-children-0 sf-single-children-5 menuparent"><a href="../animations-gif-images/animations-gif-images.html" class="sf-depth-3 menuparent">5. Animations &amp; Gif Images</a>
 </li>
-<li id="menu-1395-1" class="middle even sf-item-8 sf-depth-3 sf-total-children-12 sf-parent-children-0 sf-single-children-12 menuparent"><a href="../customizing-plots/customizing_plots.html/customizing-plots.html" class="sf-depth-3 menuparent">6. Customizing Plots</a>
+<li id="menu-1395-1" class="middle even sf-item-8 sf-depth-3 sf-total-children-12 sf-parent-children-0 sf-single-children-12 menuparent"><a href="../customizing-plots/customizing-plots.html" class="sf-depth-3 menuparent">6. Customizing Plots</a>
 </li>
 <li id="menu-1396-1" class="middle odd sf-item-9 sf-depth-3 sf-total-children-11 sf-parent-children-0 sf-single-children-11 menuparent"><a href="../handling-string-data-symbols.html" class="sf-depth-3 menuparent">7. Handing String Data Symbols</a>
 </li>
@@ -176,14 +179,11 @@ xmlns:schema="http://schema.org/">
 <ul>
 <li id="menu-1338-1" class="first odd sf-item-1 sf-depth-3 sf-no-children"><a href="../../demos/ferret-tutorial-script.html" class="sf-depth-3">Ferret Tour</a></li>
 <li id="menu-1618-1" class="middle even sf-item-2 sf-depth-3 sf-no-children"><a href="../../demos/dsg-files-discrete-sampling-geometries-demo.html" class="sf-depth-3">DSG files: Discrete Sampling Geometries Demo</a></li>
-<li id="menu-1337-1" class="middle odd sf-item-3 sf-depth-3 sf-total-children-5 sf-parent-children-0 sf-single-children-5 menuparent"><a href="../../ferret-tutorials.html" class="sf-depth-3 menuparent">External Function Examples</a>
-<ul>
-<li id="menu-1343-1" class="first odd sf-item-1 sf-depth-4 sf-no-children"><a href="../../demos/sorting-demo.html" class="sf-depth-4">Ferret sorting demo (1)</a></li>
-<li id="menu-1591-1" class="middle even sf-item-2 sf-depth-4 sf-no-children"><a href="../../demos/ferret-sorting-demo.html" class="sf-depth-4">Ferret sorting demo (2)</a></li>
+<li id="menu-1591-1" class="middle even sf-item-2 sf-depth-4 sf-no-children"><a href="../../demos/ferret-sorting-demo.html" class="sf-depth-4">Ferret sorting demo</a></li>
 <li id="menu-1344-1" class="middle odd sf-item-3 sf-depth-4 sf-no-children"><a href="../../demos/how-to-use-ferret-external-functions-for-computing-ffts.html" class="sf-depth-4">Fast Fourier Transforms demo</a></li>
 <li id="menu-1345-1" class="middle even sf-item-4 sf-depth-4 sf-no-children"><a href="../../demos/ferret-eof-demo.html" class="sf-depth-4">Empirical Orthogonal Functions demo</a></li>
 <li id="menu-1346-1" class="last odd sf-item-5 sf-depth-4 sf-no-children"><a href="../../demos/ferret-objective-analysis.html" class="sf-depth-4">Ferret objective analysis demo</a></li>
-</ul></li>
+
 <li id="menu-1353-1" class="middle even sf-item-4 sf-depth-3 sf-no-children"><a href="../../demos/ferret-palette-demo.html" class="sf-depth-3">Ferret Palette Demo</a></li>
 <li id="menu-1350-1" class="middle odd sf-item-5 sf-depth-3 sf-no-children"><a href="../../demos/ferret-map-projections-demo.html" class="sf-depth-3">Map projections</a></li>
 <li id="menu-1354-1" class="middle even sf-item-6 sf-depth-3 sf-no-children"><a href="../../demos/ferret-polygon-vector-demo.html" class="sf-depth-3">Ferret polygon vector demo</a></li>
@@ -276,7 +276,7 @@ yes? LET sst_ave = sst[L=1:12@AVE] + timestamp
 yes? SAVE/FILE=annual.cdf sst_ave[L=1]
 yes? LET sst_ave = sst[L=13:24@AVE] + timestamp
 yes? SAVE/FILE=annual.cdf/APPEND sst_ave[L=2]</pre><p align="left"> </p>
-<p class="indented">3) <a name="_VPINDEXENTRY_1560" id="_VPINDEXENTRY_1560"></a>Background documentation about the definition and data set of origin for a variable are saved in the "history" attribute of a variable when it is first saved in the netCDF file. If the definition of the variable is then changed, and more values are inserted into the file using SAVE/APPEND, the modified definition will NOT be documented in the output file. If the new definition changes the defining grid for the variable the resul                             
+<p class="indented">3) <a name="_VPINDEXENTRY_1560" id="_VPINDEXENTRY_1560"></a>Background documentation about the definition and data set of origin for a variable are saved in the "history" attribute of a variable when it is first saved in the netCDF file. If the definition of the variable is then changed, and more values are inserted into the file using SAVE/APPEND, the modified definition will NOT be documented in the output file. If the new definition changes the defining grid for the variable the results will be unpredictable.</p>
 <p> </p>
 <p align="left"> </p>
 <p class="indented">4) If you have created a data file with variables that you DEFINE, you will need to cancel those previous definitions of the variables before you USE the new data set. If you USE the data file while the DEFINE VARIABLE definition still exists in Ferret then the one that you defined is the one that you will see with LIST and other commands. Either CANCEL VARIABLE, or QUIT and start a new Ferret session where you access your new data set.</p>
@@ -288,18 +288,18 @@ yes? SAVE/FILE=annual.cdf/APPEND sst_ave[L=2]
 yes? CANCEL VAR sst_ave 
 yes? USE annual.cdf</pre><p align="left">yes? SHOW DATA</p>
 <p align="left">5) <a name="_VPINDEXENTRY_1561" id="_VPINDEXENTRY_1561"></a><a name="_VPINDEXENTRY_1562" id="_VPINDEXENTRY_1562"></a>To write packed data to a netCDF file, make sure the variable has add_offset and scale_factor attributes and that these attributes have the /OUTPUT flag set. Then the data and its missing value flag will have this scaling applied on output. See <a href="../variables-xpressions/VARIABLES.html#_VPINDEXENTRY_290">NetCDF attributes for packing data</a>.</p>
-<p align="left"><a name="SAVE_OUTPUT_TYPE" id="SAVE_OUTPUT_TYPE"></a>6) The data type of the variables written to netCDF files are determined as follows: Coordinate data is always written in double precision. For file variables read in from a netCDF file, their output type will be the same as the type in the input file. For user-defined variables and variables from non-NetCDF files, the data type is double precision (prior to Ferret v6.8 it was single-precision float). For any variable you can set the preci                                                                                                                                                                                                                                                                                                                                     
+<p align="left"><a name="SAVE_OUTPUT_TYPE" id="SAVE_OUTPUT_TYPE"></a>6) The data type of the variables written to netCDF files are determined as follows: Coordinate data is always written in double precision. For file variables read in from a netCDF file, their output type will be the same as the type in the input file. For user-defined variables and variables from non-NetCDF files, the data type is double precision (prior to Ferret v6.8 it was single-precision float). For any variable you can set the precision using SET VARIABLE/OUTTYPE=. When writing data to netCDF files note that the output type of the missing_value and _FillValue attributes must match the type of the data being written. For instance if the data is being written as INT, then the missing value flag must also be a value that can be represented as an INT.</p>
 <p align="left">Beginning with Ferret v6.83, these additional command qualifiers are available:</p>
-<p><a href="../commands-reference/SE.html#_VPINDEXENTRY_setlist_outtype">/SET LIST/OUTTYPE=</a></p>
+<p><a href="SET.html#_VPINDEXENTRY_setlist_outtype">/SET LIST/OUTTYPE=</a></p>
 <p>will cause all subsequent SAVE statements to use that type. This allows a single setting for the entire Ferret session. The command could be placed in a .ferret startup file or a settings script run at startup.</p>
-<p><a href="../commands-reference/CANCEL.html#_VPINDEXENTRY_1230a">CANCEL/LIST/OUTTYPE</a> will restore the default behavior.</p>
-<p><a href="../commands-reference/LIST.html#_VPINDEXENTRY_LIST_OUTTYPE">SAVE/OUTTYPE=</a> overrides all other settings, for this SAVE command only. The specified type is applied to all the variables given in the SAVE command.</p>
+<p><a href="CANCEL.html#_VPINDEXENTRY_1230a">CANCEL/LIST/OUTTYPE</a> will restore the default behavior.</p>
+<p><a href="LIST.html#_VPINDEXENTRY_LIST_OUTTYPE">SAVE/OUTTYPE=</a> overrides all other settings, for this SAVE command only. The specified type is applied to all the variables given in the SAVE command.</p>
 <p>The output types are the netCDF types DOUBLE, FLOAT, INT, SHORT, BYTE. INT is INT4 and SHORT is INT2.</p>
-<p align="left"><a name="SAVE_OUTPUT_TYPE" id="SAVE_OUTPUT_TYPE">7)</a><a name="_VPINDEXENTRY_1563" id="_VPINDEXENTRY_1563"></a> Note that when writing netCDF files Ferret, by default, does NOT include the point_spacing attribute. This is because Ferret's default file characteristic is to be append-able, with no guarantees that the appended time steps will be regularly spaced. For output files of fixed length with regular time steps it is advisable to use the SAVE/RIGID qualifier. This allows Ferret to incl                                                                                                                                                                                                                                                                                                                                                                                      
+<p align="left"><a name="SAVE_OUTPUT_TYPE" id="SAVE_OUTPUT_TYPE">7)</a><a name="_VPINDEXENTRY_1563" id="_VPINDEXENTRY_1563"></a> Note that when writing netCDF files Ferret, by default, does NOT include the point_spacing attribute. This is because Ferret's default file characteristic is to be append-able, with no guarantees that the appended time steps will be regularly spaced. For output files of fixed length with regular time steps it is advisable to use the SAVE/RIGID qualifier. This allows Ferret to include the point_spacing="even" attribute. If the files will be very large (too large for the full time range to be in memory), then use the /RIGID/TLIMITS= qualifiers to specify the full, ultimate fixed size and use SAVE/APPEND to insert data into the file piecemeal. When /RIGID is specifed, the time axis is NOT appendable, and so is not marked as being the record axis.</p>
 <p><a name="PartII-save-bounds" id="PartII-save-bounds"></a></p>
 <p align="left"><a name="_VPINDEXENTRY_1564" id="_VPINDEXENTRY_1564"></a>If a coordinate is irregular it is output to the netCDF file with a bounds attribute (beginning with Ferret v5.70). To require that all axes be written with bounds attributes, use the /BOUNDS qualifier:</p>
 <p align="left">yes? SAVE/BOUNDS v1,v2</p>
-<p align="left">If the file has the bounds attribute for the record axis (files written with Ferret version 5.70 and after include the bounds attribute for all irregular axes), then we can append further timesteps to the file and keep the correct point spacing. If there is a gap between the last time in the existing file and the first time being appended, Ferret adds a void point, consisting of missing data, centered on the interval between the upper cell bound of the time axis in the file and the lower cel                                          
+<p align="left">If the file has the bounds attribute for the record axis (files written with Ferret version 5.70 and after include the bounds attribute for all irregular axes), then we can append further timesteps to the file and keep the correct point spacing. If there is a gap between the last time in the existing file and the first time being appended, Ferret adds a void point, consisting of missing data, centered on the interval between the upper cell bound of the time axis in the file and the lower cell bound of the new data being written.</p>
 <p align="left"><b>Examples: </b></p>
 <pre>
 yes? USE climatological_axes
@@ -337,7 +337,7 @@ yes? save/append/L=6:9/file=b.nc sst[x=180,y=0]
 *** NOTE: Appending to NetCDF record axis which has no bounds attribute.
 *** NOTE: This will result in incorrect box sizes on record axis: TIME
 *** NOTE: Write the data initially with the /BOUNDS qualifier</pre><p align="left"><a name="_VPINDEXENTRY_1565" id="_VPINDEXENTRY_1565"></a>Further Notes:</p>
-<p align="left">In version 6.0 of Ferret, a number of features were added to allow control over attributes written to NetCDF files. In particular you can SET ATTRIBUTE/OUTPUT to force attributes to be written to files. See "<a href="../variables-xpressions/VARIABLES.html#_VPINDEXENTRY_289">Output attributes to NetCDF fies</a>" for a complete description. Also see "<a href="SET#_VPINDEXENTRY_1734">MODE UPCASE_OUTPUT</a>" for control over whether variable and attribute names are converted to uppercase.</p>
+<p align="left">In version 6.0 of Ferret, a number of features were added to allow control over attributes written to NetCDF files. In particular you can SET ATTRIBUTE/OUTPUT to force attributes to be written to files. See "<a href="../variables-xpressions/VARIABLES.html#_VPINDEXENTRY_289">Output attributes to NetCDF fies</a>" for a complete description. Also see "<a href="SET.html#_VPINDEXENTRY_1734">MODE UPCASE_OUTPUT</a>" for control over whether variable and attribute names are converted to uppercase.</p>
 <p> </p>
 <p>Starting with version 6.6, Ferret is linked with NetCDF-4 libraries. See the section on <a href="../data-set-basics/NETCDF-DATA.html#_NC4">NetCDF-4</a> for details of the command syntax to control writing NetCDF-4 formatted files.</p>
 </div>

@@ -11,6 +11,9 @@ xmlns:sioct="http://rdfs.org/sioc/types#"
 xmlns:skos="http://www.w3.org/2004/02/skos/core#"
 xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
 xmlns:schema="http://schema.org/">
+
+<!-- Mirrored from ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/DEFINE by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Jun 2023 18:11:26 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head profile="http://www.w3.org/1999/xhtml/vocab">
 <title>DEFINE - Ferret/PyFerret Documentation</title>
 
@@ -176,14 +179,11 @@ xmlns:schema="http://schema.org/">
 <ul>
 <li id="menu-1338-1" class="first odd sf-item-1 sf-depth-3 sf-no-children"><a href="../../demos/ferret-tutorial-script.html" class="sf-depth-3">Ferret Tour</a></li>
 <li id="menu-1618-1" class="middle even sf-item-2 sf-depth-3 sf-no-children"><a href="../../demos/dsg-files-discrete-sampling-geometries-demo.html" class="sf-depth-3">DSG files: Discrete Sampling Geometries Demo</a></li>
-<li id="menu-1337-1" class="middle odd sf-item-3 sf-depth-3 sf-total-children-5 sf-parent-children-0 sf-single-children-5 menuparent"><a href="../../ferret-tutorials.html" class="sf-depth-3 menuparent">External Function Examples</a>
-<ul>
-<li id="menu-1343-1" class="first odd sf-item-1 sf-depth-4 sf-no-children"><a href="../../demos/sorting-demo.html" class="sf-depth-4">Ferret sorting demo (1)</a></li>
-<li id="menu-1591-1" class="middle even sf-item-2 sf-depth-4 sf-no-children"><a href="../../demos/ferret-sorting-demo.html" class="sf-depth-4">Ferret sorting demo (2)</a></li>
+<li id="menu-1591-1" class="middle even sf-item-2 sf-depth-4 sf-no-children"><a href="../../demos/ferret-sorting-demo.html" class="sf-depth-4">Ferret sorting demo</a></li>
 <li id="menu-1344-1" class="middle odd sf-item-3 sf-depth-4 sf-no-children"><a href="../../demos/how-to-use-ferret-external-functions-for-computing-ffts.html" class="sf-depth-4">Fast Fourier Transforms demo</a></li>
 <li id="menu-1345-1" class="middle even sf-item-4 sf-depth-4 sf-no-children"><a href="../../demos/ferret-eof-demo.html" class="sf-depth-4">Empirical Orthogonal Functions demo</a></li>
 <li id="menu-1346-1" class="last odd sf-item-5 sf-depth-4 sf-no-children"><a href="../../demos/ferret-objective-analysis.html" class="sf-depth-4">Ferret objective analysis demo</a></li>
-</ul></li>
+
 <li id="menu-1353-1" class="middle even sf-item-4 sf-depth-3 sf-no-children"><a href="../../demos/ferret-palette-demo.html" class="sf-depth-3">Ferret Palette Demo</a></li>
 <li id="menu-1350-1" class="middle odd sf-item-5 sf-depth-3 sf-no-children"><a href="../../demos/ferret-map-projections-demo.html" class="sf-depth-3">Map projections</a></li>
 <li id="menu-1354-1" class="middle even sf-item-6 sf-depth-3 sf-no-children"><a href="../../demos/ferret-polygon-vector-demo.html" class="sf-depth-3">Ferret polygon vector demo</a></li>
@@ -273,7 +273,7 @@ yes? DEFINE ATT/TYPE=string/OUTPUT rose.str_att = 1234.5
 yes? DEFINE ATT/TYPE=int/OUTPUT rose.ipp = {1, 273, 20, 70}</pre><p align="left">/DATASET=n applies the attribute to the variable in the specified dataset.</p>
 <p align="left">/TYPE is any of the the NetCDF types STRING, DOUBLE, FLOAT, INT, SHORT, and BYTE. If it is not specified, it is inferred from the expression. (Previous to Ferret v7, only FLOAT and STRING were allowed). If /TYPE=string is given with a numeric value to the right of the equals sign, the output will be converted to to a string type attribute. Lists of strings are not allowed. The default type for numeric attributes is float.</p>
 <p align="left">/OUTPUT sets the flag for output so that this attribute will be written when the variable is written to a netCDF file. By default, when an attribute is defined this flag is marked for output. Use CANCEL ATTRIBUTE/OUTPUT to mark an attribute as not-written.</p>
-<p><strong>NOTE: </strong>A restriction on defining attributes, is that the special attributes scale_factor and add_offset may be defined in Ferret only for user-defined variables not variables from files.  These attributes affect the reading of data from netCDF files and so are special. If these attributes already exist in a netCDF file, they will automatically be written, if writing, say a subset to a new file. To add these attributes to a variable for writing or to change the values of these attributes,                          
+<p><strong>NOTE: </strong>A restriction on defining attributes, is that the special attributes scale_factor and add_offset may be defined in Ferret only for user-defined variables not variables from files.  These attributes affect the reading of data from netCDF files and so are special. If these attributes already exist in a netCDF file, they will automatically be written, if writing, say a subset to a new file. To add these attributes to a variable for writing or to change the values of these attributes, define a new variable</p>
 <pre>
 yes? use coads_climatology
 yes? set var/name=sst_in sst
@@ -374,7 +374,7 @@ yes? DEFINE AXIS/T=25:125:5/UNITS=minutes axt5min</pre><p align="left"><a name="
 <td>
 <p align="left">each month is 30 days</p>
 </td>
-</tr></tbody></table><p align="left">The calendar definitions conform to the netCDF conventions document for calendars. See the section about calendars in Chapter 4 of the CF document at <a href="http://cfconventions.org/">http://cfconventions.org</a>/. These calendar definitions are compatible with the Udunits standard (see <a href="http://www.unidata.ucar.edu/software/udunits/udunits-1/udunits.txt">http://www.unidata.ucar.edu/software/udunits/udunits-1/udunits.txt</a> ) which has slightly different naming                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+</tr></tbody></table><p align="left">The calendar definitions conform to the netCDF conventions document for calendars. See the section about calendars in Chapter 4 of the CF document at <a href="http://cfconventions.org/">http://cfconventions.org</a>/. These calendar definitions are compatible with the Udunits standard (see <a href="http://www.unidata.ucar.edu/software/udunits/udunits-1/udunits.txt">http://www.unidata.ucar.edu/software/udunits/udunits-1/udunits.txt</a> ) which has slightly different naming conventions. Also note that the default calendar in Ferret is the proleptic Gregorian calendar, i.e. the definition of a year is consistent throughout time and does not have an offset in the 1500's as the historical calendars did. However, files written using the NOAA/CDC standard for the "blended" Julian/Gregorian calendar are read correctly by Ferret: If a time axis has a time origin of 1-1-1 00:00:00, and uses the default calendar, and if the coordinates of axis lie entirely after the year 1582, then the historical 2-day shift is applied.</p>
 <p align="left">The netCDF conventions recommend that the calendar be specified by the attribute time:calendar when there is a non-Gregorian calendar associated with a data set, i.e.</p>
 <p align="left">time:calendar=noleap</p>
 <p align="left">Ferret reads this attribute from a netCDF file, or gets it from a definition made with DEFINE ATTRIBUTE and assigns the designated calendar to the time axis.</p>
@@ -388,9 +388,9 @@ yes? DEFINE AXIS/CALENDAR=JULIAN/T="15-JAN-1982":"15-DEC-1985":30\
 <p align="left"><b>Example:</b><b> </b></p>
 <pre>
 yes? DEFINE AXIS/Z=0:5000:20/DEPTH/UNITS=CM AXZDCM</pre><p align="left"><a name="_VPINDEXENTRY_1310" id="_VPINDEXENTRY_1310"></a>DEFINE AXIS/<b>EDGES</b></p>
-<p align="left">The /EDGES qualifier indicates that the coordinates provided refer to the edges or boundaries between grid cells. When /EDGES is used, the coordinates of the grid points will be computed at the midpoints between the indicated edges. When /EDGES is used in conjunction with /FROM_DATA the number of grid points created will be equal to the number of coordinates minus one, since the list of edges includes both the upper and lower edge of the axis. An example of defining an axis by its edges is</  
+<p align="left">The /EDGES qualifier indicates that the coordinates provided refer to the edges or boundaries between grid cells. When /EDGES is used, the coordinates of the grid points will be computed at the midpoints between the indicated edges. When /EDGES is used in conjunction with /FROM_DATA the number of grid points created will be equal to the number of coordinates minus one, since the list of edges includes both the upper and lower edge of the axis. An example of defining an axis by its edges is</p>
 <pre>
-yes? DEFINE AXIS/Z=0:5010:20/EDGES/DEPTH/UNITS=CM AXZDCM</pre><p align="left"><a name="PartII-DefineTrueMonthly" id="PartII-DefineTrueMonthly"></a><a name="_VPINDEXENTRY_1311" id="_VPINDEXENTRY_1311"></a><a name="_VPINDEXENTRY_1312" id="_VPINDEXENTRY_1312"></a><a name="_VPINDEXENTRY_1313" id="_VPINDEXENTRY_1313"></a><a name="_VPINDEXENTRY_1314" id="_VPINDEXENTRY_1314"></a>A class of especially important uses for the /EDGES qualifier is to create custom calendar axes. This example creates a true monthly axis                                                                                                         
+yes? DEFINE AXIS/Z=0:5010:20/EDGES/DEPTH/UNITS=CM AXZDCM</pre><p align="left"><a name="PartII-DefineTrueMonthly" id="PartII-DefineTrueMonthly"></a><a name="_VPINDEXENTRY_1311" id="_VPINDEXENTRY_1311"></a><a name="_VPINDEXENTRY_1312" id="_VPINDEXENTRY_1312"></a><a name="_VPINDEXENTRY_1313" id="_VPINDEXENTRY_1313"></a><a name="_VPINDEXENTRY_1314" id="_VPINDEXENTRY_1314"></a>A class of especially important uses for the /EDGES qualifier is to create custom calendar axes. This example creates a true monthly axis, with axis cells beginning on the first of each month (on a Gregorian calendar; see the note below):</p>
 <pre>
 yes? ! Define a 20 year monthly axis starting in Jan 1950
 yes? LET start_year = 1950
@@ -440,7 +440,7 @@ yes? LET year = start_year + INT((indices-1)/4)
 yes? DEFINE AXIS/UNITS=days/T0=1-jan-1900/EDGES three_month_axis = DAYS1900(year,month,1)
  
 ! Now try it with LET month = MOD(INDICES*3-3,12)+2  for 3-month intervals FMA, etc</pre><p> </p>
-<p align="left">The following example shows the computation of a custom climatological average. Given, for example, a multi-year time series of a daily measured variable, the climatological average of the variable for two unequal time periods could be computed by creating an axis with two points, using the FROM_DATA qualifier. The grid cells for these two points would extend from 15-Mar to 27-May (about 73 days), and from 27-May to 15-Mar (about 292 days). The actual dates on which the 2 points are located                                                                         
+<p align="left">The following example shows the computation of a custom climatological average. Given, for example, a multi-year time series of a daily measured variable, the climatological average of the variable for two unequal time periods could be computed by creating an axis with two points, using the FROM_DATA qualifier. The grid cells for these two points would extend from 15-Mar to 27-May (about 73 days), and from 27-May to 15-Mar (about 292 days). The actual dates on which the 2 points are located would be the midpoints of these two intervals, on 20-Apr and 20-Oct.</p>
 <pre>
 yes? DEFINE AXIS/t=1-jan-0001:1-jan-0002:1/unit=days/t0=1-jan-0000 tencoding
 yes? LET tstep = t[gt=tencoding]
@@ -461,7 +461,7 @@ L T BOX_SIZE TIME_STEP (DAYS)
 1&gt; 20-APR 12:00:00 73 475.5
 2&gt; 20-OCT 02:54:35 292.2425 658.1212</pre><p align="left"> </p>
 <p align="left"><a name="_VPINDEXENTRY_1315" id="_VPINDEXENTRY_1315"></a>DEFINE AXIS<strong>/BOUNDS</strong></p>
-<p align="left">Define an axis from lists of coordinates and bounds. (See the discussion of <a href="../data-set-basics/NETCDF-DATA.html#_netcdf_bounds">netCDF bounds</a>.) The specificaion may be either in terms of 2*N bounds or N+1 edges. For 2*N bounds the upper bound of each cell must be the same as the lower bound of the next cell.The coordinates must be inside (or may coincide with) the cell bounds. (Spaces are used here to clarify the pairs of bounds, but are not necessary and do not affect the way the da                
+<p align="left">Define an axis from lists of coordinates and bounds. (See the discussion of <a href="../data-set-basics/NETCDF-DATA.html#_netcdf_bounds">netCDF bounds</a>.) The specificaion may be either in terms of 2*N bounds or N+1 edges. For 2*N bounds the upper bound of each cell must be the same as the lower bound of the next cell.The coordinates must be inside (or may coincide with) the cell bounds. (Spaces are used here to clarify the pairs of bounds, but are not necessary and do not affect the way the data is read.)</p>
 <p align="left"><b>DEFINE AXIS/X/BOUNDS axisname = coordinates, bounds </b></p>
 <p align="left"><b>Examples: </b></p>
 <p align="left">First, a 2*N bounds definition and then an N+1 one. Note that the second definition has the coordinate z=0 at the same location as the edge of the first grid cell.</p>
@@ -489,7 +489,7 @@ yes? DEFINE AXIS/Z/DEPTH/UNITS=meters  zdepth={0,10,20,50,100,270}
 </pre><p align="left">The first defines each coordinate of the axis "my_xaxis" as the square root of variable "pos" from data set 2. The second defines the axis from a list of numbers. See also <a href="#_VPINDEXENTRY_1315"> DEFINE AXIS/BOUNDS</a> for syntax to define the cell edges as well as coordinate values.</p>
 <p align="left">In Ferret v6.8 and higher, variables and coordinate data are both represented within Ferret as double precision numbers. The next section applies only to versions of Ferret previous to Ferret v6.8:</p>
 <p align="left"><a name="PartII_define_from_data" id="PartII_define_from_data"></a><a name="_VPINDEXENTRY_1318" id="_VPINDEXENTRY_1318"></a><a name="_VPINDEXENTRY_1319" id="_VPINDEXENTRY_1319"></a><i><b>Previous to Ferret v6.8:</b></i></p>
-<p align="left"><i>Variables in Ferret are always represented as single precision floating-point numbers. Coordinates are represented as double precision values. This presents a quandary when we wish to define an axis, and have double precision data representing the coordinates available as a variable (but not a coordinate variable) in a netCDF file. Once that variable is read by Ferret, it becomes single precision and we lose the precision needed to define the axis. Starting with V6 of Ferret, a means is p                                                                                                                                                                                                                                                                                                                                                                                             
+<p align="left"><i>Variables in Ferret are always represented as single precision floating-point numbers. Coordinates are represented as double precision values. This presents a quandary when we wish to define an axis, and have double precision data representing the coordinates available as a variable (but not a coordinate variable) in a netCDF file. Once that variable is read by Ferret, it becomes single precision and we lose the precision needed to define the axis. Starting with V6 of Ferret, a means is provided to work around this, in particular for making graphics. We read the data, specifying an offset which is applied when the data is read, and which gives the numbers fewer significant figures, so the variations are represented in single precision. This may be "undone" via a PPLUS command which applies the reverse offset to the coordinates at the time we make a plot.</i></p>
 <p align="left"><i>For example, say a variable called XVALS is in a netCDF file, which has data values {144.002, 144.0034, 144.005}. We want to create an axis from these values, and put the variable data_var onto that axis. Once XVALS is converted to single precision we would lose the variation. We can read the locations with the SET VAR/OFFSET command. It is convenient to define a variable to keep the constant offset, as it will be used again.</i></p>
 <p align="left"><i><b>Example: </b></i></p>
 <pre>
@@ -516,12 +516,7 @@ yes? PPL PLOT</i></pre><p align="left"><a id="_DEF_AXIS_LIKE" name="_DEF_AXIS_LI
 <p align="left">The DEFINE AXIS/LIKE= command must include a direction, /X= /Y= etc. The direction must match the direction of the axis whose attributes we are inheriting.  The coordinates are not inherited; only the attributes, such as units. For time axes the units and time-origin are inherited, as well as the calendar definition (e.g. non-Gregorian calendars such as noleap).  For vertical axes, the positive=up or down attribute is inherited.</p>
 <p>If qualifiers such as /UNITS or /CALENDAR are given on the command line those settings supersede the inherited attribute.</p>
 <p align="left"><a name="_VPINDEXENTRY_1320" id="_VPINDEXENTRY_1320"></a><a name="_VPINDEXENTRY_1321" id="_VPINDEXENTRY_1321"></a>DEFINE AXIS/<b>MODULO[=len]</b></p>
-<p align="left">Specifies that the axis being defined be treated as modulo; that is, the first point will wrap around and follow the last point (e.g., a longitude axis).The optional modulo length is 
-the length in axis units of the modulo repeat. If a length is specified, it may be longer than the axis span, so that the axis is treated as a subspan modulo axis, and if no length is specified then 
-the default modulo length for the type of axis is used. See the sections on <a href="../Grids-Regions/REGIONS.html#Chapter4-Modulo_axes" title="4.3 REGIONS">modulo axes</a> and subspan 
-modulo axes for more information</p>
-
-
+<p align="left">Specifies that the axis being defined be treated as modulo; that is, the first point will wrap around and follow the last point (e.g., a longitude axis).The optional modulo length is the length in axis units of the modulo repeat. If a length is specified, it may be longer than the axis span, so that the axis is treated as a subspan modulo axis, and if no length is specified then the default modulo length for the type of axis is used. See the sections on <a href="../Grids-Regions/REGIONS.html#Chapter4-Modulo_axes" title="4.3 REGIONS">modulo axes</a> and subspan modulo axes for more information</p>
 <p align="left"><a name="_VPINDEXENTRY_1322" id="_VPINDEXENTRY_1322"></a>DEFINE AXIS/<b>NAME=</b></p>
 <p align="left">Used only in conjunction with /FROM_DATA to specify the name of the axis to be defined.</p>
 <pre>
@@ -625,7 +620,7 @@ yes? DEFINE AXIS/T0=1-JAN-0000/T=0:12:1/EDGES/units=months/MODULO month_reg</pre
 yes? SHOW AXIS /l=1:12001:1200 month_reg</pre><p align="left">which will show every 100th January over 1000 years. To create a monthly Gregorian calendar axis - with axis cells beginning on the first of each month, see the example under <a href="DEFINE.html#PartII-DefineTrueMonthly" title="DEFINE">DEFINE AXIS/EDGES</a> .</p>
 <p align="left">2) The units dbar and mbar are recognized by Ferret, however, no automatic conversion is attempted between these and any other units.</p>
 <p align="left"><b><a name="_VPINDEXENTRY_1332" id="_VPINDEXENTRY_1332"></a></b><b>TIP:</b><b> </b></p>
-<p align="left">Ferret will convert recognized units of length to meters and recognized units of time to seconds during transformations such as integration (@IIN and @DIN) and differentiation (@DDB, @DDC, @DDF) (see "<a href="../variables-xpressions/XPRESSIONS.html#_VPINDEXENTRY_421">General Information about transformations</a>"). Using this characteristic it is always possible to query Ferret about the conversion factors from meters or seconds by integrating a grid cell of width one on an axis of the units in                           
+<p align="left">Ferret will convert recognized units of length to meters and recognized units of time to seconds during transformations such as integration (@IIN and @DIN) and differentiation (@DDB, @DDC, @DDF) (see "<a href="../variables-xpressions/XPRESSIONS.html#_VPINDEXENTRY_421">General Information about transformations</a>"). Using this characteristic it is always possible to query Ferret about the conversion factors from meters or seconds by integrating a grid cell of width one on an axis of the units in question. For example:</p>
 <pre>
 yes? ! query conversion factor to meters
 yes? define axis/x=0:1:1/edges/units=feet xtest ! 1 point, cell width=1 unit
@@ -728,17 +723,8 @@ yes? DEFINE VARIABLE[/qualifiers] name=expression</pre><p align="left"><b>Exampl
 yes? LET SPEED = U^2 + V^2</pre><p align="left"><b>Parameters</b><b> </b></p>
 <p align="left">The expression may be any valid expression. See the chapter "Variables and Expressions", section "<a href="../variables-xpressions/XPRESSIONS.html">Expressions</a>" for a definition of valid expressions.</p>
 <p align="left"><b><a name="_VPINDEXENTRY_1350" id="_VPINDEXENTRY_1350"></a><a name="_VPINDEXENTRY_1351" id="_VPINDEXENTRY_1351"></a><a name="_VPINDEXENTRY_1352" id="_VPINDEXENTRY_1352"></a><a name="_VPINDEXENTRY_1353" id="_VPINDEXENTRY_1353"></a>Variable names </b></p>
-<p align="left">The name specified with DEFINE VARIABLE can be 1 to 128 characters in length—letters, digits, $ and _, beginning with a letter.</p>                                                   
-<p align="left">Pseudo-variable names (I, J, K, L, _M, _N, X, Y, Z, T, _E, _F, XBOX, YBOX, ZBOX, TBOX, etc) and operators 
-(AND, OR, GT, GE, LT, LE, EQ, NE) are reserved and cannot be used. See the <a href="../../../faq/reserved-keywords.html">FAQ about 
-Reserved Keywords</a> for tips on handling datasets which use reserved words as variable names. It is not recommended to use 
-function names such as SIN, EXP, LN or Ferret operators and keywords like PLOT or AXIS as variable names. See the chapter 
-"<a href="../variables-xpressions/variables-xpressions.html">Variables and Expressions</a>" for recognized operators and functions, or use the 
-commands SHOW COMMAND and SHOW FUNCTION for a list of all commands and functions. The name that you give to the variable 
-is in general not treated in a case-sensitive way. If you define for instance, variables named TEMP and Temp, both in the 
-ame Ferret session, the second definition will supersede any previous definitions. The only detail of case-sensitivity 
-that is implemented is that on saving variables to a NetCDF file, the original upper- or lower-case spelling of the variable name will be retained.</p>
-
+<p align="left">The name specified with DEFINE VARIABLE can be 1 to 128 characters in length—letters, digits, $ and _, beginning with a letter.</p>
+<p align="left">Pseudo-variable names (I, J, K, L, _M, _N, X, Y, Z, T, _E, _F, XBOX, YBOX, ZBOX, TBOX, etc) and operators (AND, OR, GT, GE, LT, LE, EQ, NE) are reserved and cannot be used. See the <a href="../../../faq/reserved-keywords.html">FAQ about Reserved Keywords</a> for tips on handling datasets which use reserved words as variable names. It is not recommended to use function names such as SIN, EXP, LN or Ferret operators and keywords like PLOT or AXIS as variable names. See the chapter "<a href="../variables-xpressions/variables-xpressions.html">Variables and Expressions</a>" for recognized operators and functions, or use the commands SHOW COMMAND and SHOW FUNCTION for a list of all commands and functions. The name that you give to the variable is in general not treated in a case-sensitive way. If you define for instance, variables named TEMP and Temp, both in the same Ferret session, the second definition will supersede any previous definitions. The only detail of case-sensitivity that is implemented is that on saving variables to a NetCDF file, the original upper- or lower-case spelling of the variable name will be retained.</p>
 <p align="left">If the name defined is the same as a variable name in a data set, the user-defined variable is used instead of the file variable.</p>
 <p align="left"><b>Examples:</b><b> </b></p>
 <pre>
@@ -803,7 +789,7 @@ VARIABLE : Surface Temperature (deg C)
 <p align="left">The qualifier "DATASET=" (LET/DATASET=...) allows you detailed control over the multiple use of the same name.</p>
 <p align="left"><b>If the name or number of a data set is supplied </b>then the /dataset qualifier indicates that this variable name is to be defined only in the specified data set. For example</p>
 <pre>
-yes? LET/dataset=coads_climatology V_geostrophic = SLP[X=@DDC]/(F*RHO)</pre><p align="left">Defines V_geostrophic only in data set coads_climatology. In other data sets the name V_geostrophic may refer to file variables or it may be given different definitions or it may be undefined. The data set may be specified either by name as in this example or by number as shown by SHOW DATA. Note that variables defined using LET/dataset=[name_or_number] will be shown in the SHOW DATA output for that data set as well                          
+yes? LET/dataset=coads_climatology V_geostrophic = SLP[X=@DDC]/(F*RHO)</pre><p align="left">Defines V_geostrophic only in data set coads_climatology. In other data sets the name V_geostrophic may refer to file variables or it may be given different definitions or it may be undefined. The data set may be specified either by name as in this example or by number as shown by SHOW DATA. Note that variables defined using LET/dataset=[name_or_number] will be shown in the SHOW DATA output for that data set as well as in SHOW VARIABLES.</p>
 <p align="left"><b>If the /dataset qualifier is applied without specifying a data set name</b> then the interpretation is different. In this case the named variable becomes a default definition -- one which applies only if a data-set specific variable of the same name does not exist. For example, if the command</p>
 <pre>
 yes? LET/DATASET sst = temp[Z=0]</pre><p align="left">is issued then sst[D=levitus_climatology] will evaluate to temp[D=levitus_climatology,Z=0] because the variable sst does not exist in levitus_climatology, but sst[D=coads_climatology] will refer to the file variable name sst within the coads_climatology data set.</p>
@@ -844,7 +830,7 @@ yes? PLOT/X=160e:160w/Y=1n rose[D=etopo60], depth[D=new_etopo]</pre><p align="le
 <p align="left">/CLIP /ORIGIN /SIZE /TEXT /XLIMITS /YLIMITS/AXES</p>
 <p align="left">Defines a new viewport (a sub-rectangle of the graphics window).</p>
 <pre>
-yes? DEFINE VIEWPORT[/qualifiers] view_name</pre><p align="left">Issuing the command SET VIEWPORT is best thought of as entering "viewport mode." While in viewport mode all previously drawn viewports remain on the screen until explicitly cleared with either SET WINDOW/CLEAR or CANCEL VIEWPORT. If multiple plots are drawn in a single viewport without the use of /OVERLAY the current plot will erase and replace the previous one; the graphics in other viewports will be affected only if the viewports overlap. If                                                                                                                                                                            
+yes? DEFINE VIEWPORT[/qualifiers] view_name</pre><p align="left">Issuing the command SET VIEWPORT is best thought of as entering "viewport mode." While in viewport mode all previously drawn viewports remain on the screen until explicitly cleared with either SET WINDOW/CLEAR or CANCEL VIEWPORT. If multiple plots are drawn in a single viewport without the use of /OVERLAY the current plot will erase and replace the previous one; the graphics in other viewports will be affected only if the viewports overlap. If viewports overlap the most recently drawn graphics will always lie on top, possibly obscuring what is underneath. By default, the state of "viewport mode" is canceled.</p>
 <p align="left">Either a comma or a colon separates the upper and lower limits.</p>
 <p align="left"><b>Example:</b><b> </b></p>
 <pre>
@@ -873,7 +859,7 @@ yes? shade/nokey/i=1:5/y=1:5 i+j
  
 yes? set view urax
 yes? shade/nokey/i=1:5/y=1:5 i+j</pre><div class="dnd-atom-wrapper type-image context-sdl_editor_representation" contenteditable="false">
-<div class="dnd-drop-wrapper"><!-- scald=179:sdl_editor_representation --><div class='image'><img typeof="foaf:Image" src="https://ferret.pmel.noaa.gov/Ferret/sites/default/files/thumbnails/image/view_axes_1_0.png" width="438" height="378" alt="two viewports filling the upper quadrants of the screen" title="DEFINE VIEWPORTS/AXES example 1" /></div><!-- END scald=179 --></div>
+<div class="dnd-drop-wrapper"><!-- scald=179:sdl_editor_representation --><div class='image'><img typeof="foaf:Image" src="../../../sites/default/files/thumbnails/image/view_axes_1_0.png" width="438" height="378" alt="two viewports filling the upper quadrants of the screen" title="DEFINE VIEWPORTS/AXES example 1" /></div><!-- END scald=179 --></div>
 <div class="dnd-legend-wrapper" contenteditable="true">
 <div class="meta">
 <!--copyright=179--><p></p>
@@ -910,7 +896,7 @@ yes? LABEL 0.76,0.95,-1,0,.2 @P3@AC&lt;-At 0.75
  
 yes? DEFINE VIEW /XLIM=0.25:0.75/YLIM=0.25:0.75/TEXT=1/AXES mid
 yes? SET VIEW mid
-yes? PLOT/VS/HLIM=-1:1/VLIM=-1:1/LINE/I=1:200 cos(i/15),sin(i/15)</pre><p><a href="../../../sites/default/files/images/documentation/users-guide/user_guide_imagesRef_viewaxes_b.gif"><img alt="Ref_viewaxes_b.gif" class="image-inline" src="../../../sites/default/files/images/documentation/users-guide/user_guide_images/Ref_viewaxes_b.gif" style="width: 200px; height: 172px;" /></a></p>
+yes? PLOT/VS/HLIM=-1:1/VLIM=-1:1/LINE/I=1:200 cos(i/15),sin(i/15)</pre><p><a href="../../../sites/default/files/images/documentation/users-guide/user_guide_images/Ref_viewaxes_b.gif"><img alt="Ref_viewaxes_b.gif" class="image-inline" src="../../../sites/default/files/images/documentation/users-guide/user_guide_images//Ref_viewaxes_b.gif" style="width: 200px; height: 172px;" /></a></p>
 <p> </p>
 <p align="left">DEFINE VIEWPORT/<b>CLIP=</b></p>
 <p> </p>
@@ -924,7 +910,7 @@ yes? PLOT/VS/HLIM=-1:1/VLIM=-1:1/LINE/I=1:200 cos(i/15),sin(i/15)</pre><p><a hre
 <p align="left"><b>DEFINE DATA/AGGREGATE /T /E /F /U /TITLE /QUIET /HIDE /TAXIS /FAXIS /TOVERLAP</b> name = [list of datsets]</p>
 <p align="left">Defines a virtual dataset, aggregating a set of datsets. This command is implemented only in the T, E, and F directions.  In addition DEFINE DATA/U defines a Union aggregation.</p>
 <p align="left"><a name="_tseries_alias" id="_tseries_alias"></a><b>TSERIES </b>is an alias for DEFINE DATA/AGGREGATE/T</p>
-<p align="left">Define an time series dataset from a set of datasets that represent timesteps or sets of timesteps, containing those variables from the datasets that have identical variable names and grids. This command is in many ways the equivalent of using a <a href="../converting-to-netcdf/CREATING-A-MULTI-FILE-NETCDF-DATA-SET.html" title="10.4 CREATING A MULTI-FILE NETCDF DATA SET">descriptor file</a> or multi-CDF dataset. Each method for creating a virtual dataset has advantages. Multi-file datasets will i                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+<p align="left">Define an time series dataset from a set of datasets that represent timesteps or sets of timesteps, containing those variables from the datasets that have identical variable names and grids. This command is in many ways the equivalent of using a <a href="../converting-to-netcdf/CREATING-A-MULTI-FILE-NETCDF-DATA-SET.html" title="10.4 CREATING A MULTI-FILE NETCDF DATA SET">descriptor file</a> or multi-CDF dataset. Each method for creating a virtual dataset has advantages. Multi-file datasets will initialize more quickly than making an aggregation definition, as the "DEFINE DATA" step needs to initialize all of the member datasets to determine the time axis, but in a multi-CDF dataset, that information is read from the descriptor file. With a TSERIES aggregation, however, the correct axis bounds are applied, and missing time steps are handled by filling the data for those time steps with missing-value flags. Also a TSERIES aggregation is more flexible, making a time series of the time-step datasets which are currently available.</p>
 <p align="left"><a name="_ensemble_alias" id="_ensemble_alias"></a><b>ENSEMBLE </b>is an alias for DEFINE DATA/AGGREGATE/E</p>
 <p align="left">Define an ensemble dataset from a set of datasets, containing those variables from the datasets that have identical variable names and grids.</p>
 <p align="left"><b>FMRC </b>is an alias for DEFINE DATA/AGGREGATE/F</p>
@@ -936,7 +922,7 @@ yes? PLOT/VS/HLIM=-1:1/VLIM=-1:1/LINE/I=1:200 cos(i/15),sin(i/15)</pre><p><a hre
 <p align="left">The extension .agg may be left off; it is added to the file extensions for datasets that are handled automatically, and the dataset directories will be searched for the .agg file.</p>
 <p align="left"> </p>
 <p align="left"><a name="_define_data_agg_t" id="_define_data_agg_t"></a>DEFINE DATA<b>/T</b></p>
-<p align="left">Define the aggregate in the T direction. The variables in the member datsets must have a T axis with the same time units. The time origins do not need to match. Ferret computes correct common time steps for the aggregated time axis. The DEFINE DATA command will define a time axis, and the variables which are common to all of the member datasets will be listed on this time axis. Any variables without a time axis in member datasets will be included in the aggregated dataset.  The list of data                                                                              
+<p align="left">Define the aggregate in the T direction. The variables in the member datsets must have a T axis with the same time units. The time origins do not need to match. Ferret computes correct common time steps for the aggregated time axis. The DEFINE DATA command will define a time axis, and the variables which are common to all of the member datasets will be listed on this time axis. Any variables without a time axis in member datasets will be included in the aggregated dataset.  The list of datasets need not be ordered in time; Ferret will reorder the members in time.</p>
 <p align="left">If the list of files comes from a string variable, or from a spawn command, the list does not need to be ordered by time. Ferret will order the members of the files in time.</p>
 <p align="left"><i><b>NOTE:</b></i> For time aggregations, we are aggregating netCDF files or URL's, not Ferret datasets. The list of datasets must be the file names with path, or the url's, not Ferret dataset numbers.</p>
 <p align="left"> </p>
@@ -1142,7 +1128,7 @@ yes? use levitus_climatology
 yes? define data/agg/e/title="two climatologies" clim_e = 1,2
 *** NOTE: Exclude variable from aggregate. Does not appear in all member datasets: SST
 **ERROR: error defining aggregate dataset: No valid datasets or datasets share no variables.</pre><p>
-<a name="_define_data_agg_letd" id="_define_data_agg_letd"></a>To define an ensemble where the variable names or grids do not match, define variables in one or more of the datasets, putting them onto the same grid and ensuring that they have the same name. Use the "DEFINE VARIABLE/DATASET" syntax to define a new variable associated with a particular dataset. Then this variable will be included in the search for matching variables in the member datasets.  NOTE: At least one file must contain each of the var                                                                                                            
+<a name="_define_data_agg_letd" id="_define_data_agg_letd"></a>To define an ensemble where the variable names or grids do not match, define variables in one or more of the datasets, putting them onto the same grid and ensuring that they have the same name. Use the "DEFINE VARIABLE/DATASET" syntax to define a new variable associated with a particular dataset. Then this variable will be included in the search for matching variables in the member datasets.  NOTE: At least one file must contain each of the variables being aggregated in the ensemble, as a file variable not a LET/D variable.  See example 4 below.</p>
 <p><b>Example 3: </b>Create an ensemble dataset with UWND and VWND from coads_climatology and monthly_navy_winds datasets. In the original files these variables have different grids in X, Y, and T.</p>
 <pre>
 yes? use coads_climatology
@@ -1416,7 +1402,7 @@ TF_CAL_F  FORECAST            11 i   01-JAN-1950 00:00    01-JUL-1952 00:00   fu
  
 yes? shade/i=10/j=10 fcst
 </pre><div class="dnd-atom-wrapper type-image context-sdl_editor_representation" contenteditable="false">
-<div class="dnd-drop-wrapper"><!-- scald=55:sdl_editor_representation --><div class='image'><img typeof="foaf:Image" src="https://ferret.pmel.noaa.gov/Ferret/sites/default/files/thumbnails/image/agg_f_1.png" width="692" height="597" alt="agg_f_1.png" title="forecast variable on the native, compact T-F grid" /></div><!-- END scald=55 --></div>
+<div class="dnd-drop-wrapper"><!-- scald=55:sdl_editor_representation --><div class='image'><img typeof="foaf:Image" src="../../../sites/default/files/thumbnails/image/agg_f_1.png" width="692" height="597" alt="agg_f_1.png" title="forecast variable on the native, compact T-F grid" /></div><!-- END scald=55 --></div>
 <div class="dnd-legend-wrapper" contenteditable="true">
 <div class="meta">
 <!--END copyright=55--></div>
@@ -1426,7 +1412,7 @@ yes? shade/i=10/j=10 fcst
 <pre>
 yes? shade/i=10/j=10 fcst[gt(tf_times)=TF_CAL_T@FMRC]
 </pre><div class="dnd-atom-wrapper type-image context-sdl_editor_representation" contenteditable="false">
-<div class="dnd-drop-wrapper"><!-- scald=56:sdl_editor_representation --><div class='image'><img typeof="foaf:Image" src="https://ferret.pmel.noaa.gov/Ferret/sites/default/files/thumbnails/image/agg_f_2.png" width="692" height="597" alt="agg_f_2.png" title="Diagonal form, using Auxiliary-variable regridding to apply the information in the TF_TIMES coordinate matrix. " /></div><!-- END scald=56 --></div>
+<div class="dnd-drop-wrapper"><!-- scald=56:sdl_editor_representation --><div class='image'><img typeof="foaf:Image" src="../../../sites/default/files/thumbnails/image/agg_f_2.png" width="692" height="597" alt="agg_f_2.png" title="Diagonal form, using Auxiliary-variable regridding to apply the information in the TF_TIMES coordinate matrix. " /></div><!-- END scald=56 --></div>
 <div class="dnd-legend-wrapper" contenteditable="true">
 <div class="meta">
 <!--copyright=56--><!--END copyright=56--></div>
@@ -1435,9 +1421,6 @@ yes? shade/i=10/j=10 fcst[gt(tf_times)=TF_CAL_T@FMRC]
 <p>For further examples using FMRC datasets, see these documents:</p>
 <p><a href="../../../sites/default/files/atoms/files/Using_Forecast_Model_Run_Collections_in_Ferret.pdf">Using_Forecast_Model_Run_Collections_in_Ferret.pdf</a></p>
 <p><a href="../../../sites/default/files/atoms/files/PyFerret_ensembles_of_FMRCs.pdf">PyFerret_ensembles_of_FMRCs.pdf</a></p>
-
-
-
 <p align="left" class="secHeader"><a name="pyfunc" id="pyfunc"></a><b>DEFINE PYFUNC </b></p>
 <p class="pnormal"><b>Pyferret only</b></p>
 <p class="pnormal"><b>DEFINE PYFUNC [ /NAME=<i>alias</i> ] <i>module.name</i></b><br />

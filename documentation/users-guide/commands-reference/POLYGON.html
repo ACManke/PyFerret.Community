@@ -11,6 +11,9 @@ xmlns:sioct="http://rdfs.org/sioc/types#"
 xmlns:skos="http://www.w3.org/2004/02/skos/core#"
 xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
 xmlns:schema="http://schema.org/">
+
+<!-- Mirrored from ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/POLYGON by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Jun 2023 18:11:26 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head profile="http://www.w3.org/1999/xhtml/vocab">
 <title>POLYGON - Ferret/PyFerret Documentation</title>
 
@@ -176,14 +179,11 @@ xmlns:schema="http://schema.org/">
 <ul>
 <li id="menu-1338-1" class="first odd sf-item-1 sf-depth-3 sf-no-children"><a href="../../demos/ferret-tutorial-script.html" class="sf-depth-3">Ferret Tour</a></li>
 <li id="menu-1618-1" class="middle even sf-item-2 sf-depth-3 sf-no-children"><a href="../../demos/dsg-files-discrete-sampling-geometries-demo.html" class="sf-depth-3">DSG files: Discrete Sampling Geometries Demo</a></li>
-<li id="menu-1337-1" class="middle odd sf-item-3 sf-depth-3 sf-total-children-5 sf-parent-children-0 sf-single-children-5 menuparent"><a href="../../ferret-tutorials.html" class="sf-depth-3 menuparent">External Function Examples</a>
-<ul>
-<li id="menu-1343-1" class="first odd sf-item-1 sf-depth-4 sf-no-children"><a href="../../demos/sorting-demo.html" class="sf-depth-4">Ferret sorting demo (1)</a></li>
-<li id="menu-1591-1" class="middle even sf-item-2 sf-depth-4 sf-no-children"><a href="../../demos/ferret-sorting-demo.html" class="sf-depth-4">Ferret sorting demo (2)</a></li>
+<li id="menu-1591-1" class="middle even sf-item-2 sf-depth-4 sf-no-children"><a href="../../demos/ferret-sorting-demo.html" class="sf-depth-4">Ferret sorting demo</a></li>
 <li id="menu-1344-1" class="middle odd sf-item-3 sf-depth-4 sf-no-children"><a href="../../demos/how-to-use-ferret-external-functions-for-computing-ffts.html" class="sf-depth-4">Fast Fourier Transforms demo</a></li>
 <li id="menu-1345-1" class="middle even sf-item-4 sf-depth-4 sf-no-children"><a href="../../demos/ferret-eof-demo.html" class="sf-depth-4">Empirical Orthogonal Functions demo</a></li>
 <li id="menu-1346-1" class="last odd sf-item-5 sf-depth-4 sf-no-children"><a href="../../demos/ferret-objective-analysis.html" class="sf-depth-4">Ferret objective analysis demo</a></li>
-</ul></li>
+
 <li id="menu-1353-1" class="middle even sf-item-4 sf-depth-3 sf-no-children"><a href="../../demos/ferret-palette-demo.html" class="sf-depth-3">Ferret Palette Demo</a></li>
 <li id="menu-1350-1" class="middle odd sf-item-5 sf-depth-3 sf-no-children"><a href="../../demos/ferret-map-projections-demo.html" class="sf-depth-3">Map projections</a></li>
 <li id="menu-1354-1" class="middle even sf-item-6 sf-depth-3 sf-no-children"><a href="../../demos/ferret-polygon-vector-demo.html" class="sf-depth-3">Ferret polygon vector demo</a></li>
@@ -261,7 +261,7 @@ yes? go/help polymark</pre><p align="left">The script requires an underlying 2D 
 yes? ! dfine a set of locations for a cruise track, and plot on a map:yes? LET xpts = 180 + 50*COS(2*3.14*I[I=1:50]/60)yes? LET ypts = 15  + 20*SIN(2*3.14*I[I=1:50]/60)yes? LET sst = 25 - ypts + RANDN(ypts)yes? GO basemap x=120:250 Y=25s:65n 20yes? GO polymark polygon/over/key/title="SST"  xpts,ypts,sst,ex, 0.5</pre><p align="left"><strong>Example: </strong></p>
 <p align="left">This example is taken from the script poly_vec_demo.jnl The scripts poly_vector.jnl and mp_poly_vector.jnl make definitions to set up a polygon command to draw a vector field using arrow-shaped polygons, optionally filled with a color representing another quantity. Here is a wind field, colored according to Sea Level Pressure.</p>
 <div class="dnd-atom-wrapper type-image context-sdl_editor_representation" contenteditable="false">
-<div class="dnd-drop-wrapper"><!-- scald=60:sdl_editor_representation --><div class='image'><img typeof="foaf:Image" src="https://ferret.pmel.noaa.gov/Ferret/sites/default/files/thumbnails/image/poly_vectors.png" width="692" height="597" alt="poly_vectors example plot" title="poly_vectors example plot" /></div><!-- END scald=60 --></div>
+<div class="dnd-drop-wrapper"><!-- scald=60:sdl_editor_representation --><div class='image'><img typeof="foaf:Image" src=", and run the demonstration script ef_eofsvd_demo.jnl for examples of this function./default/files/thumbnails/image/poly_vectors.png" width="692" height="597" alt="poly_vectors example plot" title="poly_vectors example plot" /></div><!-- END scald=60 --></div>
 <div class="dnd-legend-wrapper" contenteditable="true"> </div>
 </div>
 <p> </p>
@@ -274,7 +274,7 @@ yes? ! dfine a set of locations for a cruise track, and plot on a map:yes? LET x
 </ul><pre>
 yes? POLYGON xpoly1D, ypoly1D, values</pre><p class="indented">where if <i><b>xpoly1D</b></i> or <i><b>ypoly1D </b></i>contain missing values, those represent the end of one polygon and the start of the next. The length of the values array must equal the number of polygons in which case the X coordinate might ve visualized as</p>
 <p class="indented">x1,x1,x1,x1,BAD,x2,x2,x2,BAD,x3,x3,x3,x3,x3,x3,x3,x3,BAD,...</p>
-<p class="indented">where the "1","2","3" refer to the successive polygons <a name="_VPINDEXENTRY_1511" id="_VPINDEXENTRY_1511"></a>The script polymark.jnl makes a polygon plot by generating the correct 1-D arrays from a set of x and y coordinates and a polygon-shape specification. See the <a href="../../demos/ferret-polymark-demo.html"><strong>polymark_demo</strong></a> foror examples.  Polymark.jnl calls polyshape.jnl to define various shapes . <a href="../../demos/ferret-polytube-demo.html"><strong>polytube.jnl</strong></a>                                                                                                                                                       
+<p class="indented">where the "1","2","3" refer to the successive polygons <a name="_VPINDEXENTRY_1511" id="_VPINDEXENTRY_1511"></a>The script polymark.jnl makes a polygon plot by generating the correct 1-D arrays from a set of x and y coordinates and a polygon-shape specification. See the <a href="../../ferret-polymark-demo.html"><strong>polymark_demo</strong></a> foror examples.  Polymark.jnl calls polyshape.jnl to define various shapes . <a href="../../ferret-polytube-demo.html"><strong>polytube.jnl</strong></a> also makes use of the polymark command to draw "Lagrangian" plots along a track using color fill. These scripts are also distributed with Ferret :</p>
 <pre>
 yes? go/help polyshape.jnl    ! lists the pre-defined shapes available to polymark.
 yes? go polymark.jnl
@@ -311,10 +311,10 @@ yes? POLYGON XTRIANGLE+XPTS, YTRIANGLE+YPTS, I[I=1:10]</pre><p><a name="_VPINDEX
 <p align="left">Fills the polygons with colors according to the third argument, values. If the values argument is omitted the /FILL option is not valid‚Äîonly /LINE plots may be made.</p>
 <p align="left"> </p>
 <p align="left"><a name="_VPINDEXENTRY_1515" id="_VPINDEXENTRY_1515"></a>POLYGON/<b>FRAME </b></p>
-<p align="left">Causes the graphic image produced by the command to be captured as an animation frame in the file specified by SET MOVIE. In general the <a href="../commands-reference/FRAME.html">FRAME command</a> is more flexible and we recommend its use rather than this qualifier.</p>
+<p align="left">Causes the graphic image produced by the command to be captured as an animation frame in the file specified by SET MOVIE. In general the <a href="FRAME.html">FRAME command</a> is more flexible and we recommend its use rather than this qualifier.</p>
 <p align="left"> </p>
 <p align="left"><a name="_VPINDEXENTRY_1516" id="_VPINDEXENTRY_1516"></a><a name="_VPINDEXENTRY_1517" id="_VPINDEXENTRY_1517"></a>POLYGON/<b>KEY </b></p>
-<p align="left">Displays a color key for the palette and color levels used in the color-filled polygon plot. By default a key is drawn unless the /LINE or /NOKEY qualifier is specified. To control the color key position and labeling, see the command <a name="_VPINDEXENTRY_1787" id="_VPINDEXENTRY_1787"></a>SHAKEY in the appendix, <a href="../appendix-c-ferret-specific-pplus-enhancements/ENHANCED-COMMANDS-DESCRIPTION.html#_VPID_767">Ferret Enhancements to PPLUS</a>). Note in particular that the Ferret Alias comman                                                                                                                                                                             
+<p align="left">Displays a color key for the palette and color levels used in the color-filled polygon plot. By default a key is drawn unless the /LINE or /NOKEY qualifier is specified. To control the color key position and labeling, see the command <a name="_VPINDEXENTRY_1787" id="_VPINDEXENTRY_1787"></a>SHAKEY in the appendix, <a href="../appendix-c-ferret-specific-pplus-enhancements/ENHANCED-COMMANDS-DESCRIPTION.html#_VPID_767">Ferret Enhancements to PPLUS</a>). Note in particular that the Ferret Alias command, KEYMARK,1 turns on the annotation of the ends of the key with the minimum and maximum data values from the data that was plotted. KEYMARK,0 turns this capability off.</p>
 <p align="left">/KEY options further customize the key. Multiple options may be given, stringing them together with commas, e.g. /KEY=CONT,HORIZ</p>
 <p align="left"><a name="_VPINDEXENTRY_1516" id="_VPINDEXENTRY_1516"></a><a name="_VPINDEXENTRY_1517" id="_VPINDEXENTRY_1517"></a>POLYGON/<b>KEY=CONTINUOUS</b></p>
 <p align="left">Chooses a continous color key for the palette used in a color-filled contour plot, without lines separating the colors. This option is particularly good for fill plots having many levels.</p>
@@ -334,7 +334,7 @@ yes? POLYGON XTRIANGLE+XPTS, YTRIANGLE+YPTS, I[I=1:10]</pre><p><a name="_VPINDEX
 <pre>
 yes? POLYGON/LINE/COLOR=blue/THICK=2 {1,2,1}, {3,2,1}</pre><p align="left">This is equivalent to the (still supported) use of the /LINE qualifiers in</p>
 <pre>
-yes? POLYGON/LINE=10 {1,2,1}, {3,2,1} ! 4(blue) + 6*(2-1)</pre><p align="left">The available color names are Black, Red, Green, Blue, LightBlue, Purple, and White (not case sensitive), corresponding to the /LINE values 1-6, respectively. (/COLOR also accepts numerical values.) The line thickness may be 1, 2, or 3 corresponding to pixel thickness on the screen or corresponding to multiples of the default line thickness on hard copy, however the color White is only available in the default THICKNESS=1. The /D                                                                                            
+yes? POLYGON/LINE=10 {1,2,1}, {3,2,1} ! 4(blue) + 6*(2-1)</pre><p align="left">The available color names are Black, Red, Green, Blue, LightBlue, Purple, and White (not case sensitive), corresponding to the /LINE values 1-6, respectively. (/COLOR also accepts numerical values.) The line thickness may be 1, 2, or 3 corresponding to pixel thickness on the screen or corresponding to multiples of the default line thickness on hard copy, however the color White is only available in the default THICKNESS=1. The /DASH qualifier is not available for the outlines of POLYGON but dashes can be drawn using</p>
 <pre>
 POLYGON x-vertices, y-vertices
 PLOT/OVER/VS/DASH x-vertices, y-vertices</pre><p><a name="_polygon_pyferret" id="_polygon_pyferret"></a></p>
@@ -361,7 +361,7 @@ Specifies a color palette (otherwise, a default rainbow palette is used). Try th
 <p align="left"><a name="_VPINDEXENTRY_1529" id="_VPINDEXENTRY_1529"></a>POLYGON/<b>PATTERN=</b><br />
 Specifies a pattern file (otherwise, a default SOLID pattern is used). Try the Unix command <i><b>
 <p align="left"><a name="_VPINDEXENTRY_1530" id="_VPINDEXENTRY_1530"></a>POLYGON/<b>SET_UP </b><br />
-Performs all the internal preparations required by program Ferret for a POLYGON plot but does not actually render output. Then PPL commands can then be used to make changes to the plot prior to producing output, to make customizations that are not possible with Ferret command qualifiers. For this command, the syntax for producing the plot is different from the other plot commands. Output is made with the <a name="_VPINDEXENTRY_1531" id="_VPINDEXENTRY_1531"></a>PPL FILLPOL or PPL POLYGON command. See the cha                                                                                   
+Performs all the internal preparations required by program Ferret for a POLYGON plot but does not actually render output. Then PPL commands can then be used to make changes to the plot prior to producing output, to make customizations that are not possible with Ferret command qualifiers. For this command, the syntax for producing the plot is different from the other plot commands. Output is made with the <a name="_VPINDEXENTRY_1531" id="_VPINDEXENTRY_1531"></a>PPL FILLPOL or PPL POLYGON command. See the chapter "<a href="../customizing-plots/OVERVIEW.html#_VPID_225">Customizing Plots</a>".</p>
 <p align="left"><b>Example: </b></p>
 <pre>
 yes? ! use the SHAKEY command with the second argument = 0,

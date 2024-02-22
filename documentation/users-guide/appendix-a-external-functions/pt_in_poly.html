@@ -179,14 +179,11 @@ xmlns:schema="http://schema.org/">
 <ul>
 <li id="menu-1338-1" class="first odd sf-item-1 sf-depth-3 sf-no-children"><a href="../../demos/ferret-tutorial-script.html" class="sf-depth-3">Ferret Tour</a></li>
 <li id="menu-1618-1" class="middle even sf-item-2 sf-depth-3 sf-no-children"><a href="../../demos/dsg-files-discrete-sampling-geometries-demo.html" class="sf-depth-3">DSG files: Discrete Sampling Geometries Demo</a></li>
-<li id="menu-1337-1" class="middle odd sf-item-3 sf-depth-3 sf-total-children-5 sf-parent-children-0 sf-single-children-5 menuparent"><a href="../../ferret-tutorials.html" class="sf-depth-3 menuparent">External Function Examples</a>
-<ul>
-<li id="menu-1343-1" class="first odd sf-item-1 sf-depth-4 sf-no-children"><a href="../../demos/sorting-demo.html" class="sf-depth-4">Ferret sorting demo (1)</a></li>
-<li id="menu-1591-1" class="middle even sf-item-2 sf-depth-4 sf-no-children"><a href="../../demos/ferret-sorting-demo.html" class="sf-depth-4">Ferret sorting demo (2)</a></li>
+<li id="menu-1591-1" class="middle even sf-item-2 sf-depth-4 sf-no-children"><a href="../../demos/ferret-sorting-demo.html" class="sf-depth-4">Ferret sorting demo</a></li>
 <li id="menu-1344-1" class="middle odd sf-item-3 sf-depth-4 sf-no-children"><a href="../../demos/how-to-use-ferret-external-functions-for-computing-ffts.html" class="sf-depth-4">Fast Fourier Transforms demo</a></li>
 <li id="menu-1345-1" class="middle even sf-item-4 sf-depth-4 sf-no-children"><a href="../../demos/ferret-eof-demo.html" class="sf-depth-4">Empirical Orthogonal Functions demo</a></li>
 <li id="menu-1346-1" class="last odd sf-item-5 sf-depth-4 sf-no-children"><a href="../../demos/ferret-objective-analysis.html" class="sf-depth-4">Ferret objective analysis demo</a></li>
-</ul></li>
+
 <li id="menu-1353-1" class="middle even sf-item-4 sf-depth-3 sf-no-children"><a href="../../demos/ferret-palette-demo.html" class="sf-depth-3">Ferret Palette Demo</a></li>
 <li id="menu-1350-1" class="middle odd sf-item-5 sf-depth-3 sf-no-children"><a href="../../demos/ferret-map-projections-demo.html" class="sf-depth-3">Map projections</a></li>
 <li id="menu-1354-1" class="middle even sf-item-6 sf-depth-3 sf-no-children"><a href="../../demos/ferret-polygon-vector-demo.html" class="sf-depth-3">Ferret polygon vector demo</a></li>
@@ -241,7 +238,7 @@ xmlns:schema="http://schema.org/">
 <div class="block-inner clearfix">
  
 <div class="content clearfix">
-<article about="documentation/users-guide/appendix-a-external-functions/pt_in_poly" typeof="sioc:Item foaf:Document" class="node node-documentation-page node-promoted node-published node-not-sticky author-ansley odd clearfix" id="node-documentation-page-583">
+<article about="/Ferret/documentation/users-guide/appendix-a-external-functions/pt_in_poly" typeof="sioc:Item foaf:Document" class="node node-documentation-page node-promoted node-published node-not-sticky author-ansley odd clearfix" id="node-documentation-page-583">
 
 <!-- add the following line to print out updated date -->
 <!-- add the following line to print out the page description -->
@@ -299,7 +296,7 @@ xmlns:schema="http://schema.org/">
 <p align="left">Inherited from A</p>
 </td>
 </tr></tbody></table><p align="left"><b>Note:</b> The algorithm will return a value of 1 for points that lie "inside" the polygon even if it is not a closed curve. Carefully check the shape that you define with XVERT,YVERT and the results of the function.</p>
-<p align="left"><b>Note:</b> <i>Prior to Ferret v6.94, if the longitudes given in the second argument XVERT lie on a different modulo longitude branch than the longitudes in the grid of the variable A, the function did NOT translate the longitudes in XVERT. So, in the example below, if we had specified "let xp = {-60, -40, -25, -45, -60}", then the function would return no points within the polygon. Check the grid of the variable and use longitudes in its native range. </i>In Ferret v6.94 and later, if the                                                                                                                         
+<p align="left"><b>Note:</b> <i>Prior to Ferret v6.94, if the longitudes given in the second argument XVERT lie on a different modulo longitude branch than the longitudes in the grid of the variable A, the function did NOT translate the longitudes in XVERT. So, in the example below, if we had specified "let xp = {-60, -40, -25, -45, -60}", then the function would return no points within the polygon. Check the grid of the variable and use longitudes in its native range. </i>In Ferret v6.94 and later, if the XY grid of argument 1 is a modulo axis, then modulo operations are applied and the function returns correct results.</p>
 <p>
 This function is based on the code by W. Randolph Franklin, found in his web pages at<br /><a href="http://www.ecse.rpi.edu/Homepages/wrf/Research/Short_Notes/pnpoly.html" rel="nofollow">http://www.ecse.rpi.edu/Homepages/wrf/Research/Short_Notes/pnpoly.html</a></p>
 <p align="left"> </p>

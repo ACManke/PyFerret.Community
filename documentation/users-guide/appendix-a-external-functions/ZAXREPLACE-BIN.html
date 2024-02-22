@@ -12,7 +12,7 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#"
 xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
 xmlns:schema="http://schema.org/">
 
-
+<!-- Mirrored from ferret.pmel.noaa.gov/Ferret/documentation/users-guide/appendix-a-external-functions/ZAXREPLACE-BIN by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Jun 2023 18:11:55 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head profile="http://www.w3.org/1999/xhtml/vocab">
 <title>ZAXREPLACE_BIN - Ferret/PyFerret Documentation</title>
@@ -179,14 +179,11 @@ xmlns:schema="http://schema.org/">
 <ul>
 <li id="menu-1338-1" class="first odd sf-item-1 sf-depth-3 sf-no-children"><a href="../../demos/ferret-tutorial-script.html" class="sf-depth-3">Ferret Tour</a></li>
 <li id="menu-1618-1" class="middle even sf-item-2 sf-depth-3 sf-no-children"><a href="../../demos/dsg-files-discrete-sampling-geometries-demo.html" class="sf-depth-3">DSG files: Discrete Sampling Geometries Demo</a></li>
-<li id="menu-1337-1" class="middle odd sf-item-3 sf-depth-3 sf-total-children-5 sf-parent-children-0 sf-single-children-5 menuparent"><a href="../../ferret-tutorials.html" class="sf-depth-3 menuparent">External Function Examples</a>
-<ul>
-<li id="menu-1343-1" class="first odd sf-item-1 sf-depth-4 sf-no-children"><a href="../../demos/sorting-demo.html" class="sf-depth-4">Ferret sorting demo (1)</a></li>
-<li id="menu-1591-1" class="middle even sf-item-2 sf-depth-4 sf-no-children"><a href="../../demos/ferret-sorting-demo.html" class="sf-depth-4">Ferret sorting demo (2)</a></li>
+<li id="menu-1591-1" class="middle even sf-item-2 sf-depth-4 sf-no-children"><a href="../../demos/ferret-sorting-demo.html" class="sf-depth-4">Ferret sorting demo</a></li>
 <li id="menu-1344-1" class="middle odd sf-item-3 sf-depth-4 sf-no-children"><a href="../../demos/how-to-use-ferret-external-functions-for-computing-ffts.html" class="sf-depth-4">Fast Fourier Transforms demo</a></li>
 <li id="menu-1345-1" class="middle even sf-item-4 sf-depth-4 sf-no-children"><a href="../../demos/ferret-eof-demo.html" class="sf-depth-4">Empirical Orthogonal Functions demo</a></li>
 <li id="menu-1346-1" class="last odd sf-item-5 sf-depth-4 sf-no-children"><a href="../../demos/ferret-objective-analysis.html" class="sf-depth-4">Ferret objective analysis demo</a></li>
-</ul></li>
+
 <li id="menu-1353-1" class="middle even sf-item-4 sf-depth-3 sf-no-children"><a href="../../demos/ferret-palette-demo.html" class="sf-depth-3">Ferret Palette Demo</a></li>
 <li id="menu-1350-1" class="middle odd sf-item-5 sf-depth-3 sf-no-children"><a href="../../demos/ferret-map-projections-demo.html" class="sf-depth-3">Map projections</a></li>
 <li id="menu-1354-1" class="middle even sf-item-6 sf-depth-3 sf-no-children"><a href="../../demos/ferret-polygon-vector-demo.html" class="sf-depth-3">Ferret polygon vector demo</a></li>
@@ -241,7 +238,7 @@ xmlns:schema="http://schema.org/">
 <div class="block-inner clearfix">
  
 <div class="content clearfix">
-<article about="documentation/users-guide/appendix-a-external-functions/ZAXREPLACE-BIN" typeof="sioc:Item foaf:Document" class="node node-documentation-page node-promoted node-published node-not-sticky author-burger odd clearfix" id="node-documentation-page-618">
+<article about="/Ferret/documentation/users-guide/appendix-a-external-functions/ZAXREPLACE-BIN" typeof="sioc:Item foaf:Document" class="node node-documentation-page node-promoted node-published node-not-sticky author-burger odd clearfix" id="node-documentation-page-618">
 
 <!-- add the following line to print out updated date -->
 <!-- add the following line to print out the page description -->
@@ -256,10 +253,10 @@ xmlns:schema="http://schema.org/">
 ZAXREPLACE_BIN(V,ZVALS,ZAX)</pre><p align="left">Use unweighted averaging to convert between alternative monotonic Zaxes. The function finds the source points within each destination box and averages them.</p>
 <p align="left">The mapping between the source and destination Z axes is a function of X,Y, and or T. Typical applications in the field of oceanography include converting from a Z axis of layer number to a Z axis in units of depth (e.g., for sigma coordinate fields) and converting from a Z axes of depth to one of density (for a stably stratified fluid).</p>
 <p> </p>
-<p align="left">Argument 1, V, is the field of data values, say temperature on the "source" Z-axis, say, layer number. The second argument, ZVALS, contains values in units of the desired destination Z axis (ZAX) on the same Z axis as V‚ for example, depth values associated with each vertical layer. The third argument, ZAX, is any variable defined on the destination Z axis, often "Z[gz=zaxis_name]" is used. For an example of the ZAXREPLACE family of functions see <a href="../variables-xpressions/XPRESSIONS#_VPID_115">ZAXREPLACE</a>.</p>
+<p align="left">Argument 1, V, is the field of data values, say temperature on the "source" Z-axis, say, layer number. The second argument, ZVALS, contains values in units of the desired destination Z axis (ZAX) on the same Z axis as V‚ for example, depth values associated with each vertical layer. The third argument, ZAX, is any variable defined on the destination Z axis, often "Z[gz=zaxis_name]" is used. For an example of the ZAXREPLACE family of functions see ZAXREPLACE (p. <a>85</a>)</p>
 <p> </p>
 <p align="left"><b>Note: </b></p>
-<p align="left">ZAXREPLACE_BIN is a "grid-changing" function; its output grid is different from the input arguments. Therefore it is best to use explicit limits on the arguments rather than a SET REGION command. See the discussion of <a href="../variables-xpressions/XPRESSIONS#_VPINDEXENTRY_306">grid-changing functions</a>.  In addition, because it is implemented as an external function, the arguments are loaded in their entirety when the funct                                                                                                                                                                                                                 
+<p align="left">ZAXREPLACE_BIN is a "grid-changing" function; its output grid is different from the input arguments. Therefore it is best to use explicit limits on the arguments rather than a SET REGION command. See the discussion of <a href="XPRESSIONS.html#_VPINDEXENTRY_306">grid-changing functions</a>.  In addition, because it is implemented as an external function, the arguments are loaded in their entirety when the function is called, even when the result is requested only on a portion of the grid in directions other than Z.  The subset in all directions should be specified within square brackets in the expression, e.g.,</p>
 <pre>
 let var_den = zaxreplace_bin(<b>salt[x=140:190,y=-10:10,L=5], sigma[x=140:190,y=-10:10,L=5], z[gz=axden]) </b>
 </pre><p align="left"> </p>

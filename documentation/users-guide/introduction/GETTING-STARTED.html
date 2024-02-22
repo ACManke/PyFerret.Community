@@ -144,7 +144,7 @@ xmlns:schema="http://schema.org/">
 <li id="menu-1154-1" class="middle even sf-item-2 sf-depth-3 sf-total-children-41 sf-parent-children-0 sf-single-children-41 menuparent"><a href="../commands-reference/commands-reference.html" class="sf-depth-3 menuparent">Commands Reference</a>
 	  
 </li>
-<li id="menu-1390-1" class="middle odd sf-item-3 sf-depth-3 sf-total-children-8 sf-parent-children-0 sf-single-children-8 menuparent"><a href="introduction.html" class="sf-depth-3 menuparent">1. Introduction</a>
+<li id="menu-1390-1" class="middle odd sf-item-3 sf-depth-3 sf-total-children-8 sf-parent-children-0 sf-single-children-8 menuparent"><a href="../introduction/introduction.html" class="sf-depth-3 menuparent">1. Introduction</a>
 </li>
 <li id="menu-1391-1" class="middle even sf-item-4 sf-depth-3 sf-total-children-9 sf-parent-children-1 sf-single-children-8 menuparent"><a href="../data-set-basics/data-set-basics.html" class="sf-depth-3 menuparent">2. Data Set Basics</a>
 </li>
@@ -179,14 +179,11 @@ xmlns:schema="http://schema.org/">
 <ul>
 <li id="menu-1338-1" class="first odd sf-item-1 sf-depth-3 sf-no-children"><a href="../../demos/ferret-tutorial-script.html" class="sf-depth-3">Ferret Tour</a></li>
 <li id="menu-1618-1" class="middle even sf-item-2 sf-depth-3 sf-no-children"><a href="../../demos/dsg-files-discrete-sampling-geometries-demo.html" class="sf-depth-3">DSG files: Discrete Sampling Geometries Demo</a></li>
-<li id="menu-1337-1" class="middle odd sf-item-3 sf-depth-3 sf-total-children-5 sf-parent-children-0 sf-single-children-5 menuparent"><a href="../../ferret-tutorials.html" class="sf-depth-3 menuparent">External Function Examples</a>
-<ul>
-<li id="menu-1343-1" class="first odd sf-item-1 sf-depth-4 sf-no-children"><a href="../../demos/sorting-demo.html" class="sf-depth-4">Ferret sorting demo (1)</a></li>
-<li id="menu-1591-1" class="middle even sf-item-2 sf-depth-4 sf-no-children"><a href="../../demos/ferret-sorting-demo.html" class="sf-depth-4">Ferret sorting demo (2)</a></li>
+<li id="menu-1591-1" class="middle even sf-item-2 sf-depth-4 sf-no-children"><a href="../../demos/ferret-sorting-demo.html" class="sf-depth-4">Ferret sorting demo</a></li>
 <li id="menu-1344-1" class="middle odd sf-item-3 sf-depth-4 sf-no-children"><a href="../../demos/how-to-use-ferret-external-functions-for-computing-ffts.html" class="sf-depth-4">Fast Fourier Transforms demo</a></li>
 <li id="menu-1345-1" class="middle even sf-item-4 sf-depth-4 sf-no-children"><a href="../../demos/ferret-eof-demo.html" class="sf-depth-4">Empirical Orthogonal Functions demo</a></li>
 <li id="menu-1346-1" class="last odd sf-item-5 sf-depth-4 sf-no-children"><a href="../../demos/ferret-objective-analysis.html" class="sf-depth-4">Ferret objective analysis demo</a></li>
-</ul></li>
+
 <li id="menu-1353-1" class="middle even sf-item-4 sf-depth-3 sf-no-children"><a href="../../demos/ferret-palette-demo.html" class="sf-depth-3">Ferret Palette Demo</a></li>
 <li id="menu-1350-1" class="middle odd sf-item-5 sf-depth-3 sf-no-children"><a href="../../demos/ferret-map-projections-demo.html" class="sf-depth-3">Map projections</a></li>
 <li id="menu-1354-1" class="middle even sf-item-6 sf-depth-3 sf-no-children"><a href="../../demos/ferret-polygon-vector-demo.html" class="sf-depth-3">Ferret polygon vector demo</a></li>
@@ -255,7 +252,7 @@ xmlns:schema="http://schema.org/">
 <div class="plain">
 <pre>
  
-yes? GO tutorial</pre><p align="left">If Ferret is not yet installed consult the chapter "<a href="../computing-environment/chapter-9-computing-environment.html" title="Chapter 9. Computing Environment">Computing Environment</a>" (The tutorial is also available on-line through Ferret's <a href="../../ferret-tutorials.html" title="Ferret Tutorials">on-line demonstrations page.</a>) The tutorial demonstrates many of Ferret's features, showing the user both the commands given and Ferret's textual and graphical                                                                                                                              
+yes? GO tutorial</pre><p align="left">If Ferret is not yet installed consult the chapter "<a href="../computing-environment/chapter-9-computing-environment.html" title="Chapter 9. Computing Environment">Computing Environment</a>" (The tutorial is also available on-line through Ferret's <a href="../../ferret-tutorials.html" title="Ferret Tutorials">on-line demonstrations page.</a>) The tutorial demonstrates many of Ferret's features, showing the user both the commands given and Ferret's textual and graphical output. You may find the explanations, terms and examples in this manual easier to understand after running the tutorial.</p>
 </div>
 <p class="secHeader">1.2.1<a name="_VPID_6" id="_VPID_6"></a><b> Concepts</b></p>
 <div class="plain">
@@ -275,7 +272,7 @@ yes? GO tutorial</pre><p align="left">If Ferret is not yet installed consult the
 yes? USE coads_climatology !global sea surface data
 yes? SET REGION/Z=0/L=5/X=160E:160W/Y=20S:20N
 yes? VECTOR uwnd,vwnd !wind velocity vector plot</pre><p>
-<img class="image-inline" src="https://ferret.pmel.noaa.gov/Ferret/sites/default/files/images/documentation/users-guide/user_guide_images/Ch1_fig01.png" /></p></div>
+<img class="image-inline" src="../../../sites/default/files/images/documentation/users-guide/user_guide_images/Ch1_fig01.png" /></p></div>
 <p><a name="_VPID_7" id="_VPID_7"></a></p>
 <p> </p>
 <p class="secHeader">1.2.1.1<b> Thinking like a Ferret: </b></p>
@@ -286,7 +283,7 @@ yes? VECTOR uwnd,vwnd !wind velocity vector plot</pre><p>
 <ul><li>file variables‚ read from disk files</li>
 <li>user-defined variables‚ defined by the LET command</li>
 <li>pseudo-variables‚ regions (I,J,K,L,X,Y,...) used as variables</li>
-</ul><p align="left">As much as possible Ferret tries to make all types of variables indistinguishable. All plottable variables are defined on <b>grids</b>. No plottable variables exists in a vacuum for Ferret. The grid on which a plottable variable exists tells how to locate the variable in space and time. In cases where the variables are abstract in nature‚ disconnected from space and time‚ erret will associate those variables with grids that are abstract, too. Where a geographical grid will associate                                                                                                                                                                                                                                                                             
+</ul><p align="left">As much as possible Ferret tries to make all types of variables indistinguishable. All plottable variables are defined on <b>grids</b>. No plottable variables exists in a vacuum for Ferret. The grid on which a plottable variable exists tells how to locate the variable in space and time. In cases where the variables are abstract in nature‚ disconnected from space and time‚ erret will associate those variables with grids that are abstract, too. Where a geographical grid will associate the Nth position along an axis with a location (like 20 degrees north latitude) an abstract grid will simply associate the Nth position with the number N. Plottable variables may be regridded to other grids than the one on which they are defined. (Done with "G=".)</p>
 <p align="left">All references to plottable variables must have a complete <b>context</b>. A complete context will be described in detail later. Briefly it means a region in space, an interval in time and the data set(s) in which the variables will be found.</p>
 <p align="left"><b>Grids</b></p>
 <p align="left">All Ferret grids are 6-dimensional (Prior to Ferret v6.8, grids were 4-dimensional). In most cases the axes have the obvious interpretation of 3 space coordinates and time, plus two more to allow for e.g. an Ensemble dimension and Forecast-time dimension but sometimes the axes are abstract.</p>
@@ -295,14 +292,14 @@ yes? VECTOR uwnd,vwnd !wind velocity vector plot</pre><p>
 <p align="left">Axes and grids may be defined by "grid files" (which normally have .GRD filename extensions). Axes may also be defined by the DEFINE AXIS command; grids by the DEFINE GRID command.</p>
 <p align="left"><b><a name="_VPINDEXENTRY_4" id="_VPINDEXENTRY_4"></a>Contexts</b></p>
 <p align="left">A <b>context</b> is a region or point in space and time and a data set(s). This is the information needed by Ferret to make sense of a reference to a plottable variable. Suppose that "U" is a variable in a data set (file) called U_DATA. A command like "PLOT U" is meaningful only when Ferret knows that it is supposed to be looking for U in data set U_DATA and knows where in 6-dimensional space it is supposed to plot.</p>
-<p align="left">The context <b>space-time region</b> may be described by a mix of subscript and world coordinate positions. <b>Subscripts</b> are specified by I=,J=,K=,L=, M=, N= for axes 1 through 6, respectively. <b>World coordinates</b> are specified by X=,Y=,Z=,T=, E=, F=. On the right of the equal sign a single point may be given or a range specified by low:high may be given. Special formats are allowed for X= (longitude, e.g. 160W), Y=(latitude, e.g. 23.5S) and time (calendar dates like "7-NOV-1989:12                                
+<p align="left">The context <b>space-time region</b> may be described by a mix of subscript and world coordinate positions. <b>Subscripts</b> are specified by I=,J=,K=,L=, M=, N= for axes 1 through 6, respectively. <b>World coordinates</b> are specified by X=,Y=,Z=,T=, E=, F=. On the right of the equal sign a single point may be given or a range specified by low:high may be given. Special formats are allowed for X= (longitude, e.g. 160W), Y=(latitude, e.g. 23.5S) and time (calendar dates like "7-NOV-1989:12:35:00" in quotation marks).</p>
 <p align="left">The data set may be given by name or number. The commands SET DATA and CANCEL DATA and the D= context descriptor all accept the name of the data set or its number. The data sets are numbered by the order in which they are pointed to with SET DATA. This order may be seen with SHOW DATA.</p>
 <p align="left">You can tell Ferret the context in 3 places:</p>
 <p align="left">1. The program context: Using the commands SET REGION and SET DATA you can describe a context in which all commands and expressions will be interpreted. You can look at the program context with SHOW REGION and SHOW DATA. (The command SET DATA is used both to initialize new data sets and to make previously initialized sets the current program context. When SET DATA initializes a new data set that set automatically becomes the data set for the program context.) Example: SET REGION/Z=50</p>
 <p align="left">2. The command context: Using the command qualifiers I,J,K,L,X,Y,Z,T and D commands like PLOT,CONTOUR,SHADE,LIST and VECTOR can specify additional context information. Command context information on any axis or on the data set will replace any program context information on the same axis or the data set.</p>
 <p align="left">3. The variable context: Using the same qualifiers as the command context any plottable variable name can be modified with additional context information in square brackets (e.g. LET U200 = U[Z=200,D=U_DATA], or LIST U[I=1:100:5]). Variable context information on any axis or the data set will replace any program or command context information on the same axis or the data set.</p>
 <p align="left"><b>Transformations</b></p>
-<p align="left">Ferret can <b>transform</b> plottable variables along their axes. Transformations may be specified only in the variable context. Ferret understands a number of transformations that may be specified with the space-time region qualifiers. Some examples: PLOT U[Z=0:<100@AVE] ‚ the variable U averaged between Z=0 and Z=100 LIST/L=1:200 U[L=@SBX:5]‚ U with a boxcar smoother of width 5 points along L.</p>
+<p align="left">Ferret can <b>transform</b> plottable variables along their axes. Transformations may be specified only in the variable context. Ferret understands a number of transformations that may be specified with the space-time region qualifiers. Some examples: PLOT U[Z=0:100@AVE] ‚ the variable U averaged between Z=0 and Z=100 LIST/L=1:200 U[L=@SBX:5]‚ U with a boxcar smoother of width 5 points along L.</p>
 <p align="left">Also,</p>
 <ul><li>@FAV (fill data holes with averages)</li>
 <li>@DIN (definite integral) @IIN (indefinite integral)</li>
@@ -404,7 +401,7 @@ Run in secure mode -- don't allow SPAWN commands.</p>
 <p class="indented"><b><a name="_VPINDEXENTRY_23" id="_VPINDEXENTRY_23"></a><a name="_VPINDEXENTRY_24" id="_VPINDEXENTRY_24"></a>-server</b><br />
 Run in server mode -- don't stop on message commands. This mode uses primitive (but faster) command line reading, so it is generally preferred when setting up Ferret from a pipe or batch process. See the notes above under<b> -gif </b>regarding window sizing commands.</p>
 <p class="indented"><b><a name="_VPINDEXENTRY_25" id="_VPINDEXENTRY_25"></a><a name="_VPINDEXENTRY_26" id="_VPINDEXENTRY_26"></a><a name="_VPINDEXENTRY_27" id="_VPINDEXENTRY_27"></a>-script journalfile.jnl</b><br />
-Run a script, with optional arguments, and exit. Ferret starts, the script runs, and Ferret exits. If Ferret encounters an error, it will issue any error messages and exit to the Unix command line. The switch also sets the -server, -nojnl, and -noverify switches (MODE VERIFY and MODE JOURNAL may be turned back on within the script). It suppresses the banner lines. So that the command line reader can read and process any arguments to the script, -script must be specified last, after any other command-line sw                                                                                                                                      
+Run a script, with optional arguments, and exit. Ferret starts, the script runs, and Ferret exits. If Ferret encounters an error, it will issue any error messages and exit to the Unix command line. The switch also sets the -server, -nojnl, and -noverify switches (MODE VERIFY and MODE JOURNAL may be turned back on within the script). It suppresses the banner lines. So that the command line reader can read and process any arguments to the script, -script must be specified last, after any other command-line switches (e.g. -gif or -memsize). Everything listed after the <b>-script journalfile.jnl </b>is taken to be arguments to the script.</p>
 <pre>
 &gt; ferret -script file.jnl [arg1] [arg2] [arg3] ...
  
@@ -418,7 +415,7 @@ or
 &gt; pyferret -script file.jnl 7 "The\ Title" "(my\ units)"
 </pre></div>
 <p class="pnormal"><a name="_pyferret_switches" id="_pyferret_switches"></a><br /><b>PyFerret only</b><br />
-When starting PyFerret, the command switches <strong>-memsize</strong>, <b>-nojnl</b>, <strong>-noverify</strong>, <strong>-secure</strong>, <strong>-server</strong>, <strong>-version</strong>, <strong>-script</strong>, and <strong>-help</strong> are identical to their behavior in classic Ferret. The <strong>-batch</strong> switch remains an option but is not recommended. If you use -batch, new windows should not be created and the FRAME command should not be used. In addition the <strong>-transparent</stro                                                                                                                                                                
+When starting PyFerret, the command switches <strong>-memsize</strong>, <b>-nojnl</b>, <strong>-noverify</strong>, <strong>-secure</strong>, <strong>-server</strong>, <strong>-version</strong>, <strong>-script</strong>, and <strong>-help</strong> are identical to their behavior in classic Ferret. The <strong>-batch</strong> switch remains an option but is not recommended. If you use -batch, new windows should not be created and the FRAME command should not be used. In addition the <strong>-transparent</strong> command line option is not recommended. Instead use the <strong>-nodisplay</strong> option and the FRAME/FILE=&lt;filename&gt; [ /TRANSPARENT ] command.</p>
 <p><b>-gif</b> and <b>-unmapped</b> are recognized by PyFerret; they are aliases for the -nodisplay switch, listed below.  The switch used does not determine the type of plot files that may be saved as is the case for Ferret. We can write any type of plot file when running in -nodisplay mode, or multiple plot types in the same script.</p>
 <p>  <a name="_pyferret_nodisplay" id="_pyferret_nodisplay"></a><b>-nodisplay</b><br />
 Do not display to the console; a drawing can be saved using the FRAME command in any of the supported file formats. The /QUALITY option of SET WINDOW will be ignored when this is specified. The deprecated command-line options -unmapped and -gif are aliases of this option.</p>
@@ -465,7 +462,7 @@ yes? QUIT</pre></div>
 <p align="left">The command SET VIEWPORT allows the user to divide the output graphics "page" into smaller display viewports.</p>
 <p align="left">In this sample session, we create two plots in two halves of a window (Figure 1_2):</p>
 <p>
-<img class="image-inline" src="https://ferret.pmel.noaa.gov/Ferret/sites/default/files/images/documentation/users-guide/user_guide_images/Ch1_fig02.png" /></p>
+<img class="image-inline" src="../../../sites/default/files/images/documentation/users-guide/user_guide_images/Ch1_fig02.png" /></p>
 <p align="left"> </p>
 <pre>
  
@@ -481,7 +478,7 @@ yes? QUIT</pre><p><a name="_VPID_13" id="_VPID_13"></a></p>
 <p class="secHeader"><a name="_VPID_13" id="_VPID_13"></a><b>1.2.3.4 Using abstract variables<a name="_VPINDEXENTRY_29" id="_VPINDEXENTRY_29"></a> </b></p>
 <p align="left">Abstract variables (expressions that contain no dependencies on disk-resident data) can be easily displayed with Ferret. See the chapter "Variables and Expressions", section <a href="../variables-xpressions/VARIABLES.html#_VPID_74" title="3.1 VARIABLES">Abstract variables</a>, for several examples and detailed information.</p>
 <p align="left">For example, a user wishing to examine the function SIN(X) on the interval <a href="#ref0,3.14">[0,3.14]</a> might use (Figure 1_3):</p>
-<p><img class="image-inline" src="https://ferret.pmel.noaa.gov/Ferret/sites/default/files/images/documentation/users-guide/user_guide_images/Ch1_fig03.png" /></p>
+<p><img class="image-inline" src="../../../sites/default/files/images/documentation/users-guide/user_guide_images/Ch1_fig03.png" /></p>
 <p> </p>
 <pre>
  
@@ -491,7 +488,7 @@ yes? QUIT</pre><p>
 <p class="secHeader"><a name="_VPID_14" id="_VPID_14"></a><b>1.2.3.5 Using transformations </b></p>
 <p align="left">A transformation is an operation performed on a variable along a particular axis and is specified with the syntax "@trn" where "trn" is the name of a transformation. See the chapter "Variables and Expressions", section <a href="../variables-xpressions/XPRESSIONS.html#_VPID_148" title="3.2 EXPRESSIONS">Transformations</a>, for detailed information.</p>
 <p align="left">A user may wish to look at ocean temperatures averaged over a range of depths. In this sample session, we look at temperatures averaged from 0 to 100 meters of depth using a data set which has detailed resolution in depth (Figure 1_4). We plot the data along longitude 160 west from latitude 30 south to 30 north.</p>
-<p><img class="image-inline" src="https://ferret.pmel.noaa.gov/Ferret/sites/default/files/images/documentation/users-guide/user_guide_images/Ch1_fig04.png" /></p>
+<p><img class="image-inline" src="../../../sites/default/files/images/documentation/users-guide/user_guide_images/Ch1_fig04.png" /></p>
 <pre>
  
 yes? USE levitus_climatology
@@ -503,7 +500,7 @@ yes? QUIT</pre><p>
 <p class="secHeader"><a name="_VPID_15" id="_VPID_15"></a><b>1.2.3.6 Using algebraic expressions </b></p>
 <p align="left">See the chapter "Variables and Expressions", section <a href="../variables-xpressions/XPRESSIONS.html" title="3.2 EXPRESSIONS">Expressions</a> for a description of valid expressions.</p>
 <p align="left">In this example, the data set contains raw sea surface temperatures, air temperatures, and wind speed measurements.<a name="_VPINDEXENTRY_30" id="_VPINDEXENTRY_30"></a> We wish to look at a shaded plot of sensible heat at its first timestep (L=1) (Figure 1_5). We specify a latitude range and contour levels.</p>
-<p><img class="image-inline" src="https://ferret.pmel.noaa.gov/Ferret/sites/default/files/images/documentation/users-guide/user_guide_images/Ch1_fig05.png" /></p>
+<p><img class="image-inline" src="../../../sites/default/files/images/documentation/users-guide/user_guide_images/Ch1_fig05.png" /></p>
 <p> </p>
 <pre>
  
@@ -518,7 +515,7 @@ yes? QUIT</pre><p> </p>
 <p align="left">Isotherms can be located with the "@LOC" transform, which returns the axis location where the value of the argument of @LOC first occurs. Thus, "TEMP[Z=0:200@LOC:20]" locates the first occurrence of the temperature value 20 along the Z axis, scanning all the data between 0 and 200 meters.</p>
 <p> </p>
 <p align="left">A session examining the 20-degree isotherm in mid-Pacific ocean data (Figure 1_6):</p>
-<p><img class="image-inline" src="https://ferret.pmel.noaa.gov/Ferret/sites/default/files/images/documentation/users-guide/user_guide_images/Ch1_fig06.png" /></p>
+<p><img class="image-inline" src="../../../sites/default/files/images/documentation/users-guide/user_guide_images/Ch1_fig06.png" /></p>
 <pre>
  
 yes? USE levitus_climatology

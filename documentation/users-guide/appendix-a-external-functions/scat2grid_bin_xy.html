@@ -179,14 +179,11 @@ xmlns:schema="http://schema.org/">
 <ul>
 <li id="menu-1338-1" class="first odd sf-item-1 sf-depth-3 sf-no-children"><a href="../../demos/ferret-tutorial-script.html" class="sf-depth-3">Ferret Tour</a></li>
 <li id="menu-1618-1" class="middle even sf-item-2 sf-depth-3 sf-no-children"><a href="../../demos/dsg-files-discrete-sampling-geometries-demo.html" class="sf-depth-3">DSG files: Discrete Sampling Geometries Demo</a></li>
-<li id="menu-1337-1" class="middle odd sf-item-3 sf-depth-3 sf-total-children-5 sf-parent-children-0 sf-single-children-5 menuparent"><a href="../../ferret-tutorials.html" class="sf-depth-3 menuparent">External Function Examples</a>
-<ul>
-<li id="menu-1343-1" class="first odd sf-item-1 sf-depth-4 sf-no-children"><a href="../../demos/sorting-demo.html" class="sf-depth-4">Ferret sorting demo (1)</a></li>
-<li id="menu-1591-1" class="middle even sf-item-2 sf-depth-4 sf-no-children"><a href="../../demos/ferret-sorting-demo.html" class="sf-depth-4">Ferret sorting demo (2)</a></li>
+<li id="menu-1591-1" class="middle even sf-item-2 sf-depth-4 sf-no-children"><a href="../../demos/ferret-sorting-demo.html" class="sf-depth-4">Ferret sorting demo</a></li>
 <li id="menu-1344-1" class="middle odd sf-item-3 sf-depth-4 sf-no-children"><a href="../../demos/how-to-use-ferret-external-functions-for-computing-ffts.html" class="sf-depth-4">Fast Fourier Transforms demo</a></li>
 <li id="menu-1345-1" class="middle even sf-item-4 sf-depth-4 sf-no-children"><a href="../../demos/ferret-eof-demo.html" class="sf-depth-4">Empirical Orthogonal Functions demo</a></li>
 <li id="menu-1346-1" class="last odd sf-item-5 sf-depth-4 sf-no-children"><a href="../../demos/ferret-objective-analysis.html" class="sf-depth-4">Ferret objective analysis demo</a></li>
-</ul></li>
+
 <li id="menu-1353-1" class="middle even sf-item-4 sf-depth-3 sf-no-children"><a href="../../demos/ferret-palette-demo.html" class="sf-depth-3">Ferret Palette Demo</a></li>
 <li id="menu-1350-1" class="middle odd sf-item-5 sf-depth-3 sf-no-children"><a href="../../demos/ferret-map-projections-demo.html" class="sf-depth-3">Map projections</a></li>
 <li id="menu-1354-1" class="middle even sf-item-6 sf-depth-3 sf-no-children"><a href="../../demos/ferret-polygon-vector-demo.html" class="sf-depth-3">Ferret polygon vector demo</a></li>
@@ -241,7 +238,7 @@ xmlns:schema="http://schema.org/">
 <div class="block-inner clearfix">
  
 <div class="content clearfix">
-<article about="documentation/users-guide/appendix-a-external-functions/scat2grid_bin_xy" typeof="sioc:Item foaf:Document" class="node node-documentation-page node-promoted node-published node-not-sticky author-ansley odd clearfix" id="node-documentation-page-596">
+<article about="/Ferret/documentation/users-guide/appendix-a-external-functions/scat2grid_bin_xy" typeof="sioc:Item foaf:Document" class="node node-documentation-page node-promoted node-published node-not-sticky author-ansley odd clearfix" id="node-documentation-page-596">
 
 <!-- add the following line to print out updated date -->
 <!-- add the following line to print out the page description -->
@@ -578,8 +575,8 @@ yes? LET my_out = SCAT2GRID_BIN_XY(lons, lats, var, x[gx=xax], y[gy=yax])</pre><
 <p align="left">The SCAT2GRID_BIN* functions are "grid-changing"functions; the output grid is different from the input arguments.Therefore it is best to use explicit limits on any of the arguments rather than a SET REGION command. (See this note on <a href="../variables-xpressions/XPRESSIONS.html#_VPINDEXENTRY_306">the context of variables</a> passed to functions.)</p>
 <p align="left"> </p>
 <p align="left"><a href="../working-with-special-data-sets/DSG_datasets.html">Discrete Sampling Geometries</a> (DSG) data:</p>
-<p align="left">Observational data from DSG datasets contain collections of data which has lists of coordinate information that can feed into these functions for gridding into a multi-dimensional grid.  However, with the exception of trajectory data the coordinates do not all have the same dimensionality.  Timeseries data for instance has a station location for each station, and multiple observations in time.  Profile data has station location and time, and multiple heights/depths in each profile. For th                                                                                                                                                                                                                                                 
-<p>The FAQ, <a href="http://ferret.lark.pmel.noaa.gov/faq/calling-scat2grid-functions-dsg-data">Calling SCAT2GRID functions for DSG data</a> explains how to work with these datasets.</p>
+<p align="left">Observational data from DSG datasets contain collections of data which has lists of coordinate information that can feed into these functions for gridding into a multi-dimensional grid.  However, with the exception of trajectory data the coordinates do not all have the same dimensionality.  Timeseries data for instance has a station location for each station, and multiple observations in time.  Profile data has station location and time, and multiple heights/depths in each profile. For the SCAT2GRID functions we need all of the first arguments, the "scattered" locations and observation, to be of the same size.  We need to expand the station data to repeat the station location for each time in that station's time series.</p>
+<p>The FAQ, <a href="../../../faq/calling-scat2grid-functions-dsg-data.html">Calling SCAT2GRID functions for DSG data</a> explains how to work with these datasets.</p>
 </div>
 </div>
 </div>

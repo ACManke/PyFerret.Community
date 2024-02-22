@@ -11,6 +11,9 @@ xmlns:sioct="http://rdfs.org/sioc/types#"
 xmlns:skos="http://www.w3.org/2004/02/skos/core#"
 xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
 xmlns:schema="http://schema.org/">
+
+<!-- Mirrored from ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/LIST by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Jun 2023 18:11:26 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head profile="http://www.w3.org/1999/xhtml/vocab">
 <title>LIST - Ferret/PyFerret Documentation</title>
 
@@ -176,14 +179,11 @@ xmlns:schema="http://schema.org/">
 <ul>
 <li id="menu-1338-1" class="first odd sf-item-1 sf-depth-3 sf-no-children"><a href="../../demos/ferret-tutorial-script.html" class="sf-depth-3">Ferret Tour</a></li>
 <li id="menu-1618-1" class="middle even sf-item-2 sf-depth-3 sf-no-children"><a href="../../demos/dsg-files-discrete-sampling-geometries-demo.html" class="sf-depth-3">DSG files: Discrete Sampling Geometries Demo</a></li>
-<li id="menu-1337-1" class="middle odd sf-item-3 sf-depth-3 sf-total-children-5 sf-parent-children-0 sf-single-children-5 menuparent"><a href="../../ferret-tutorials.html" class="sf-depth-3 menuparent">External Function Examples</a>
-<ul>
-<li id="menu-1343-1" class="first odd sf-item-1 sf-depth-4 sf-no-children"><a href="../../demos/sorting-demo.html" class="sf-depth-4">Ferret sorting demo (1)</a></li>
-<li id="menu-1591-1" class="middle even sf-item-2 sf-depth-4 sf-no-children"><a href="../../demos/ferret-sorting-demo.html" class="sf-depth-4">Ferret sorting demo (2)</a></li>
+<li id="menu-1591-1" class="middle even sf-item-2 sf-depth-4 sf-no-children"><a href="../../demos/ferret-sorting-demo.html" class="sf-depth-4">Ferret sorting demo</a></li>
 <li id="menu-1344-1" class="middle odd sf-item-3 sf-depth-4 sf-no-children"><a href="../../demos/how-to-use-ferret-external-functions-for-computing-ffts.html" class="sf-depth-4">Fast Fourier Transforms demo</a></li>
 <li id="menu-1345-1" class="middle even sf-item-4 sf-depth-4 sf-no-children"><a href="../../demos/ferret-eof-demo.html" class="sf-depth-4">Empirical Orthogonal Functions demo</a></li>
 <li id="menu-1346-1" class="last odd sf-item-5 sf-depth-4 sf-no-children"><a href="../../demos/ferret-objective-analysis.html" class="sf-depth-4">Ferret objective analysis demo</a></li>
-</ul></li>
+
 <li id="menu-1353-1" class="middle even sf-item-4 sf-depth-3 sf-no-children"><a href="../../demos/ferret-palette-demo.html" class="sf-depth-3">Ferret Palette Demo</a></li>
 <li id="menu-1350-1" class="middle odd sf-item-5 sf-depth-3 sf-no-children"><a href="../../demos/ferret-map-projections-demo.html" class="sf-depth-3">Map projections</a></li>
 <li id="menu-1354-1" class="middle even sf-item-6 sf-depth-3 sf-no-children"><a href="../../demos/ferret-polygon-vector-demo.html" class="sf-depth-3">Ferret polygon vector demo</a></li>
@@ -287,14 +287,14 @@ yes? LIST/I=1:3/J=1:2 i+j, i</pre><p align="left"><b>Command qualifiers for LIST
 <p align="left">Specifies the default data set to be used when evaluating the expression(s) being listed.</p>
 <p align="left"> </p>
 <p align="left"><a name="_VPINDEXENTRY_1412" id="_VPINDEXENTRY_1412"></a>LIST/<b>APPEND</b></p>
-<p align="left">Use this qualifier together with the /FILE qualifier to indicate that the listed data should be appended to a pre-existing file. If no file exists by the name indicated a new file is created. This qualifier is not applicable to /FORMAT=GT. When used with /FORMAT=CDF it permits any data in the file to be overwritten, new variables to be added to the file, and appending of new indices along the T axis of the variables in the file. To append slabs of data in other dimensions, see the example in                                                                                                                                                                                                     
+<p align="left">Use this qualifier together with the /FILE qualifier to indicate that the listed data should be appended to a pre-existing file. If no file exists by the name indicated a new file is created. This qualifier is not applicable to /FORMAT=GT. When used with /FORMAT=CDF it permits any data in the file to be overwritten, new variables to be added to the file, and appending of new indices along the T axis of the variables in the file. To append slabs of data in other dimensions, see the example in the netCDF chapter, <a href="../converting-to-netcdf/SIMPLE-CONVERSIONS-USING-FERRET.html#_VPINDEXENTRY_1071">Appending Multiple Slabs</a>). This qualifier overrides the command CANCEL LIST/APPEND.</p>
 <p align="left"><a id="_VPINDEXENTRY_save_dsg" name="_VPINDEXENTRY_save_dsg"></a>If writing to a DSG file, e.g. a subset of data from an existing DSG file, new variables may be appended if they are of the same size and shape as the existing data in the file being written.</p>
 <p align="left"> </p>
 <p align="left"><a name="_VPINDEXENTRY_1413" id="_VPINDEXENTRY_1413"></a>LIST/<b>FILE</b> [=file_name]</p>
 <p align="left">Names a file to receive the listed data. If /FILE is specified with no name then the default name is used from the SET LIST/FILE command.</p>
 <p align="left"><b>Example:</b><b> </b></p>
 <pre>
-yes? LIST/FILE=my_file.dat sst[D=coads_climatology]</pre><p align="left">See <a href="../commands-reference/SET.html#Set_List_Auto">SET LIST/FILE=AUTO</a> for further information on automatic filename generation.</p>
+yes? LIST/FILE=my_file.dat sst[D=coads_climatology]</pre><p align="left">See <a href="SET.html#Set_List_Auto">SET LIST/FILE=AUTO</a> for further information on automatic filename generation.</p>
 <p align="left"><a name="_VPINDEXENTRY_1414" id="_VPINDEXENTRY_1414"></a>LIST/<b>CLOBBER </b></p>
 <p align="left">Used with LIST/FILE. Indicates that any existing file with the name used is to be deleted, before writing. If CLOBBER is not specified and the file exists, and error message is given.</p>
 <p align="left"><b>Example:</b><b> </b></p>
@@ -387,7 +387,7 @@ AbAb AAb</pre><p> </p>
 <p class="indented">2) For FORTRAN-formatted and UNFORMATTED (binary) output, the contents of a single output "record" are determined by the /ORDER qualifier. For example, each record will be a line of Y values for LIST/ORDER=YX. If /ORDER is omitted, the records will be the first output axis of greater than unity length taken in the order X, Y, Z, then T. FORTRAN-formatted output records may be further split by the usual rules of FORTRAN output formatting.</p>
 <p> </p>
 <p align="left"> </p>
-<p class="indented">3) FORTRAN formats must be enclosed in parentheses. If blanks are included in the format it must be enclosed in quotation marks. Output strings are permitted in the format. For writing string data, if a single variable is being written, the format LIST/FORMAT=(A) may be used. Listing multiple string variables or string and numeric variables cannot be done with a Fortran format. (But try /FORMAT=comma or /FORMAT=tab). See <a href="../handing-string-data-symbols/STRING-VARIABLES.html#_VPINDEXEN                                                
+<p class="indented">3) FORTRAN formats must be enclosed in parentheses. If blanks are included in the format it must be enclosed in quotation marks. Output strings are permitted in the format. For writing string data, if a single variable is being written, the format LIST/FORMAT=(A) may be used. Listing multiple string variables or string and numeric variables cannot be done with a Fortran format. (But try /FORMAT=comma or /FORMAT=tab). See <a href="../handing-string-data-symbols/STRING-VARIABLES.html#_VPINDEXENTRY_stringwrite">Chapter 7</a> for examples.</p>
 <p> </p>
 <p align="left"><b>Example:</b><b> </b></p>
 <pre>
@@ -406,7 +406,7 @@ yes? LIST/FORMAT=(8F6.3)/ORDER=T sst[X=180, Y=0]</pre><p align="left"> </p>
 <p class="indented">7) The command alias SAVE is provided for the commonly used LIST/FORMAT=CDF. netCDF outputs are self-documenting, including grid definitions. The output files can be used as input with the command USE‚Äîalias for SET DATA/FORMAT=CDF. See command <a href="SAVE.html#_VPINDEXENTRY_1556">SAVE</a> for further notes about netCDF files.</p>
 <p> </p>
 <p align="left"> </p>
-<p class="indented">8) For tab and comma formatted output, the coordinates are checked to see if the default format gives enough precision to distinguish all of the coordinates. For fine grids, the coordinates are output with enough digits to distinguish them. This may result in the coordinates not lining up with the columns of the variable values. The missing-value flags are written in the header lines and if there is missing data, the missing value for each variable is written. This makes the data work wh                                        
+<p class="indented">8) For tab and comma formatted output, the coordinates are checked to see if the default format gives enough precision to distinguish all of the coordinates. For fine grids, the coordinates are output with enough digits to distinguish them. This may result in the coordinates not lining up with the columns of the variable values. The missing-value flags are written in the header lines and if there is missing data, the missing value for each variable is written. This makes the data work when imported into other applications.</p>
 <p> </p>
 <p align="left"> </p>
 <p><a name="_VPINDEXENTRY_1421" id="_VPINDEXENTRY_1421"></a>LIST/<strong>BOUNDS</strong></p>
@@ -414,7 +414,7 @@ yes? LIST/FORMAT=(8F6.3)/ORDER=T sst[X=180, Y=0]</pre><p align="left"> </p>
 <p align="left">Only valid for netCDF output (LIST/FORMAT=cdf). Outputs the data, including the bounds attribute on all of its axes. The bounds attribute is used by default on all irregular axes, for Ferret ersion 5.70 and later. See the comments under <a href="SAVE.html#_VPINDEXENTRY_1556">SAVE</a>.</p>
 <p align="left"><a name="_VPINDEXENTRY_list_deflate" id="_VPINDEXENTRY_list_deflate"></a></p>
 <p align="left">LIST/<strong>DEFLATE</strong>[=deflate_level]<br />
-For writing NetCDF-4 formatted files, sets the level of HDF5 compression. (Ferret version 6.6 and higher). Only valid with LIST/FORMAT=CDF (alias SAVE), and for NetCDF-4 formatted files. DEFLATE=0 turns off compression, DEFLATE=1 sets a deflate level of 1. The setting may be between 0 and 9; however levels greater than 1 are not recommended by the HDF5 documentation. Specifying SET LIST/DEFLATE with no value turns on the compression and sets the level to 1. See the NetCDF and HDF5 documentation for details                                                                                                     
+For writing NetCDF-4 formatted files, sets the level of HDF5 compression. (Ferret version 6.6 and higher). Only valid with LIST/FORMAT=CDF (alias SAVE), and for NetCDF-4 formatted files. DEFLATE=0 turns off compression, DEFLATE=1 sets a deflate level of 1. The setting may be between 0 and 9; however levels greater than 1 are not recommended by the HDF5 documentation. Specifying SET LIST/DEFLATE with no value turns on the compression and sets the level to 1. See the NetCDF and HDF5 documentation for details of HDF5 compression. LIST/DEFLATE with no argument turns on compression and sets the level to 1.</p>
 <pre>
 yes? SAVE/FILE=new.nc/CLOBBER/NCFORMAT=4/DEFLATE  temp</pre><p align="left">NetCDF-4 topics are furher discussed in <a href="../data-set-basics/NETCDF-DATA.html#_VPINDEXENTRY_netcdf4" title="2.2 NETCDF DATA">Chapter 2, section netCDF4. </a></p>
 <p align="left">Please see the full NetCDF documentation and descriptions of the use of HDF5 with netcdf-4 at the Unidata NetCDF pages,</p>
@@ -439,7 +439,7 @@ yes? SAVE/NCFORMAT=4/ENDIAN=big/FILE=newfile.nc  my_var</pre><p align="left"><a 
 <p><a name="PartII-LIST/HEADING=ENHANCED" id="PartII-LIST/HEADING=ENHANCED"></a></p>
 <p align="left"><a name="_VPINDEXENTRY_1425" id="_VPINDEXENTRY_1425"></a>LIST/<b>HEADING[=ENHANCED]</b></p>
 <p align="left">For ASCII data listings this qualifier determines whether to precede the listing with a heading that describes the data set, variable, and region. This qualifier overrides the CANCEL LIST/HEAD command. When the argument /HEADING=ENHANCED is used a self-documenting heading is provided that includes the axis coordinates.</p>
-<p align="left">For netCDF output files (alias SAVE) the /HEADING=ENHANCED option causes the netCDF file structure to include extra coordinate information that describes how the particular data subset being written fits within the broader coordinate system of the grid from which it is extracted. When a netCDF file with an enhanced heading is accessed by Ferret (using SET DATA or USE) the index values will appear to be consistent with the parent data set. If /HEADING=ENHANCED is set for a netCDF output file,                                     
+<p align="left">For netCDF output files (alias SAVE) the /HEADING=ENHANCED option causes the netCDF file structure to include extra coordinate information that describes how the particular data subset being written fits within the broader coordinate system of the grid from which it is extracted. When a netCDF file with an enhanced heading is accessed by Ferret (using SET DATA or USE) the index values will appear to be consistent with the parent data set. If /HEADING=ENHANCED is set for a netCDF output file, then /KEEP_AXISNAMES is ignored.</p>
 <p align="left"> </p>
 <p align="left"><a name="_VPINDEXENTRY_list_ncformat" id="_VPINDEXENTRY_list_ncformat"></a></p>
 <p align="left"> </p>
@@ -465,7 +465,7 @@ yes? USE coads_climatology
 yes? SAVE/file=my_subset.nc/X=180:200/Y=-10:20 sst</pre><p align="left">writes the axis names with the subset indicated by adding the indices that the subset represents; here the X and Y axes in the output file would be named COADSX81_90 and COADSY41_55. To keep the original axis names, COADSX and COADSY, use LIST/KEEP_AXISNAMES.</p>
 <pre>
 yes? USE coads_climatology
-yes? SAVE/<b>KEEP_AXISNAMES</b>/file=my_subset.nc/X=180:200/Y=-10:20 sst</pre><p align="left">Additionally, if an axis in a dataset has the same name as another axis already defined in the Ferret session, the axis is given a new internal name. For instance if there is an axis called TIME in some grid, and we open a file with a name TIME but different coordinates, this second axis is given the name TIME1. In this case, saving data with /KEEP_AXISNAMES will attempt to use the original name, if that can be don                    
+yes? SAVE/<b>KEEP_AXISNAMES</b>/file=my_subset.nc/X=180:200/Y=-10:20 sst</pre><p align="left">Additionally, if an axis in a dataset has the same name as another axis already defined in the Ferret session, the axis is given a new internal name. For instance if there is an axis called TIME in some grid, and we open a file with a name TIME but different coordinates, this second axis is given the name TIME1. In this case, saving data with /KEEP_AXISNAMES will attempt to use the original name, if that can be done unambiguously.</p>
 <p align="left"><a id="_SAVE_ASGLOBAL" name="_SAVE_ASGLOBAL"></a>LIST/FORMAT=cdf<strong>/ASGLOBAL</strong></p>
 <p align="left">Only for netCDF files.  Saves the variable to the file as a global attribute.  This command is arbitrarily limited to writing 1-D variables of length 100 elements or less.  The variable may be of type char or a numeric variable.</p>
 <pre align="left">
@@ -475,7 +475,7 @@ yes? let instrument_type = "General Widgets Company model 3.b"
 yes? save/append/asglobal/file=my_2017_data.nc instrument_type
  
 yes? let instrument_number = 133
-yes? save/append/asglobal/file=my_2017_data.nc instrument_number</pre><p align="left">To define and attributes on variables, use <a href="../commands-reference/DEFINE.html#_VPINDEXENTRY_1298">DEFINE ATTRIBUTE</a>.</p>
+yes? save/append/asglobal/file=my_2017_data.nc instrument_number</pre><p align="left">To define and attributes on variables, use <a href="DEFINE.html#_VPINDEXENTRY_1298">DEFINE ATTRIBUTE</a>.</p>
 <p align="left"><a name="_VPINDEXENTRY_1427" id="_VPINDEXENTRY_1427"></a>LIST/<b>ORDER=</b></p>
 <p align="left">Specifies the order (ORDER=permutation) in which axes are to be laid out in the listing.</p>
 <p align="left"><b>Examples:</b><b> </b></p>
@@ -547,7 +547,7 @@ TIME : 16-JAN 06:00
 3N / 47: .... 28.15 27.54 29.09 26.90 25.34 .... 27.58
 1N / 46: .... 28.18 .... 29.24 26.49 24.90 .... 27.05v</pre><p align="left"><a name="_VPINDEXENTRY_list_xchunk" id="_VPINDEXENTRY_list_xchunk"></a></p>
 <p>LIST<strong>/XCHUNK=/YCHUNK=/ZCHUNK=</strong><strong>/TCHUNK=</strong><strong>/ECHUNK=</strong><strong>/FCHUNK=</strong><br />
-For writing NetCDF-4 formatted files (Ferret version 6.6 and higher), sets chunk sizes in each coordinate direction. Only valid with LIST/FORMAT=CDF (alias SAVE), and with NetCDF-4 formatted files. The values are given as integers and must be less than or equal to the size of the dimension. If these are not specified, the compression will use the defaultchunk-size scheme of the NetCDF-4 library. If you specify a chunk sizefor any dimension, you must specify it for all of the dimensions present in the grid.<   
+For writing NetCDF-4 formatted files (Ferret version 6.6 and higher), sets chunk sizes in each coordinate direction. Only valid with LIST/FORMAT=CDF (alias SAVE), and with NetCDF-4 formatted files. The values are given as integers and must be less than or equal to the size of the dimension. If these are not specified, the compression will use the defaultchunk-size scheme of the NetCDF-4 library. If you specify a chunk sizefor any dimension, you must specify it for all of the dimensions present in the grid.</p>
 <pre>
 yes? SAVE/FILE=deflate.nc/CLOBBER/NCFORMAT=4/DEFLATE=1/SHUFFLE=1\
 /XCHUNK=30/YCHUNK=30/ZCHUNK=1/TCHUNK=1 temp</pre><p align="left">This document discusses improving performance with Chunking: <a href="http://www.unidata.ucar.edu/software/netcdf/docs/netcdf_perf_chunking.html">http://www.unidata.ucar.edu/software/netcdf/docs/netcdf_perf_chunking.html</a></p>

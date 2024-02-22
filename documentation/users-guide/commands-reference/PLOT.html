@@ -11,6 +11,9 @@ xmlns:sioct="http://rdfs.org/sioc/types#"
 xmlns:skos="http://www.w3.org/2004/02/skos/core#"
 xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
 xmlns:schema="http://schema.org/">
+
+<!-- Mirrored from ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/PLOT by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Jun 2023 18:11:26 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head profile="http://www.w3.org/1999/xhtml/vocab">
 <title>PLOT - Ferret/PyFerret Documentation</title>
 
@@ -176,14 +179,11 @@ xmlns:schema="http://schema.org/">
 <ul>
 <li id="menu-1338-1" class="first odd sf-item-1 sf-depth-3 sf-no-children"><a href="../../demos/ferret-tutorial-script.html" class="sf-depth-3">Ferret Tour</a></li>
 <li id="menu-1618-1" class="middle even sf-item-2 sf-depth-3 sf-no-children"><a href="../../demos/dsg-files-discrete-sampling-geometries-demo.html" class="sf-depth-3">DSG files: Discrete Sampling Geometries Demo</a></li>
-<li id="menu-1337-1" class="middle odd sf-item-3 sf-depth-3 sf-total-children-5 sf-parent-children-0 sf-single-children-5 menuparent"><a href="../../ferret-tutorials.html" class="sf-depth-3 menuparent">External Function Examples</a>
-<ul>
-<li id="menu-1343-1" class="first odd sf-item-1 sf-depth-4 sf-no-children"><a href="../../demos/sorting-demo.html" class="sf-depth-4">Ferret sorting demo (1)</a></li>
-<li id="menu-1591-1" class="middle even sf-item-2 sf-depth-4 sf-no-children"><a href="../../demos/ferret-sorting-demo.html" class="sf-depth-4">Ferret sorting demo (2)</a></li>
+<li id="menu-1591-1" class="middle even sf-item-2 sf-depth-4 sf-no-children"><a href="../../demos/ferret-sorting-demo.html" class="sf-depth-4">Ferret sorting demo</a></li>
 <li id="menu-1344-1" class="middle odd sf-item-3 sf-depth-4 sf-no-children"><a href="../../demos/how-to-use-ferret-external-functions-for-computing-ffts.html" class="sf-depth-4">Fast Fourier Transforms demo</a></li>
 <li id="menu-1345-1" class="middle even sf-item-4 sf-depth-4 sf-no-children"><a href="../../demos/ferret-eof-demo.html" class="sf-depth-4">Empirical Orthogonal Functions demo</a></li>
 <li id="menu-1346-1" class="last odd sf-item-5 sf-depth-4 sf-no-children"><a href="../../demos/ferret-objective-analysis.html" class="sf-depth-4">Ferret objective analysis demo</a></li>
-</ul></li>
+
 <li id="menu-1353-1" class="middle even sf-item-4 sf-depth-3 sf-no-children"><a href="../../demos/ferret-palette-demo.html" class="sf-depth-3">Ferret Palette Demo</a></li>
 <li id="menu-1350-1" class="middle odd sf-item-5 sf-depth-3 sf-no-children"><a href="../../demos/ferret-map-projections-demo.html" class="sf-depth-3">Map projections</a></li>
 <li id="menu-1354-1" class="middle even sf-item-6 sf-depth-3 sf-no-children"><a href="../../demos/ferret-polygon-vector-demo.html" class="sf-depth-3">Ferret polygon vector demo</a></li>
@@ -262,7 +262,7 @@ yes? PLOT/l=1:100 sst</pre><p align="left">produces a time series plot of the fi
 <p align="left">When the /VS qualifier is used the indicated expressions may have any geometry in 4D space but they must match in the total number of points in each expression. The points are associated in the order of their underlying axes. When the /VS qualifier is not used, the indicated expression(s) must describe a line (not a plane) of data.</p>
 <p align="left">The expression(s) are inferred from the current context if omitted from the command line—i.e., if no expression is given then the argument most recently given is used, or the default expression may be explicitly set with SET EXPRESSION.</p>
 <p align="left">When Ferret plots multiple data lines simultaneously, PPLUS automatically cycles through pen colors and symbols, creating up to 26 distinct line types. Try GO line_samples to see samples of these styles:</p>
-<p><a href="../../../sites/default/files/images/documentation/users-guide/user_guide_images/line_samples.gif"><img alt="line_samples" class="image-inline" src="../../../sites/default/files/images/documentation/users-guide/user_guide_images/line_samples.gif" style="height: 167px; width: 200px;" /></a></p>
+<p><a href=", and run the demonstration script ef_eofsvd_demo.jnl for examples of this function./default/files/images/documentation/users-guide/user_guide_images/line_samples.gif"><img alt="line_samples" class="image-inline" src=", and run the demonstration script ef_eofsvd_demo.jnl for examples of this function./default/files/images/documentation/users-guide/user_guide_images/line_samples.gif" style="height: 167px; width: 200px;" /></a></p>
 <p> </p>
 <p align="left"><b>Command qualifiers for PLOT:</b><b> </b></p>
 <p> </p>
@@ -287,7 +287,7 @@ yes? PLOT/ALONG=t/x=330 sst
 </pre><p>Some useful commands in combination with PLOT/ALONG:</p>
 <ul><li>The <b><a href="PLOT.html#_VPINDEXENTRY_1476" title="PLOT">/LINE qualifier</a>:</b> PLOT/ALONG=/LINE draws lines only, no symbols. the set of lines is drawn first with all of the colors and a thin line, then switching to thicker lines/.</li>
 <li><b>MODE LINECOLOR: </b>Use<a href="../customizing-plots/COLOR.html#linecolors" title="6.5 COLOR"> MODE LINECOLOR</a> to define a larger number of colors than the initial set. Then PLOT/ALONG will use all of the colors before starting to repeat with other line styles and the same increased set of colors.</li>
-<li>The<b> <a href="PLO.html#_SKIPSYM" title="PLOT">/SKIPSYM qualifier</a>:</b> PLOT/ALONG= /SKIPSYM= decimates the symbols along the lines to clean up the image.</li>
+<li>The<b> <a href="PLOT.html#_SKIPSYM" title="PLOT">/SKIPSYM qualifier</a>:</b> PLOT/ALONG= /SKIPSYM= decimates the symbols along the lines to clean up the image.</li>
 <li>The <b><a href="PLOT.html#_VPINDEXENTRY_1509" title="PLOT">/NOKEY qualifier</a>:</b> PLOT/ALONG= /NOKEY removes the key and labels below the plot. When there are many lines, the individual labels and line examples may not be as useful as a general descriptive title, e.g. PLOT/ALONG=t/NOKEY/TITLE="Annual cycle in the range -40:40 longitude" my_var</li>
 </ul><p> </p>
 <p align="left"><a name="_VPINDEXENTRY_1466" id="_VPINDEXENTRY_1466"></a><a name="_VPINDEXENTRY_1467" id="_VPINDEXENTRY_1467"></a>PLOT/<b>FRAME</b></p>
@@ -317,11 +317,11 @@ In PyFerret, the /OPACITY option can be used to specify the opacity (alpha chann
 <p> </p>
 <p align="left">Prior to Ferret v5.80, /THICK with no accompanying /COLOR plotted all lines in black. Starting with v5.80 PLOT/THICK for plot lines overlaid on the same plot cycles through the colors Black, Red, Green, Blue, LightBlue and Purple. PLOT/THICK alone produces six in thickness 2 and six in thickness 3.</p>
 <p align="left">When plotting a number of lines together with PLOT/OVER/COLOR=/THICKNESS= the default behavior is for symbols to be plotted starting with the seventh line plotted. To plot lines only, add the /LINE qualifier.</p>
-<p align="left">After you have created your plot, if you need the lines even thicker to show up properly when printed, see the FAQ, <a href="../../../faq/changing-line-thickness-in-postscript-files.html">How can I control line thickness when I translate a metafile to a postscript file?</a></p>
+<p align="left">After you have created your plot, if you need the lines even thicker to show up properly when printed, see the FAQ, <a href="../../../faq/changing-line-thickness-in-postscript-files">How can I control line thickness when I translate a metafile to a postscript file?</a></p>
 <p align="left"><a name="_VPINDEXENTRY_1472" id="_VPINDEXENTRY_1472"></a><a name="_VPINDEXENTRY_1473" id="_VPINDEXENTRY_1473"></a>PLOT/COLOR=/THICKNESS=<b>/SYMBOL=/SIZE=</b><br />
 Simple syntax for plots using symbols. For symbol (scatter) plots (PLOT/VS or PLOT/SYMBOL), control the color, size, and line thickness of the symbols with commands such as:</p>
 <pre>
-yes? PLOT/COLOR=red/THICKNESS=2/SYMBOL=4/SIZE=0.2 I[i=1:5]</pre><p align="left">The available color names are Black, Red, Green, Blue, LightBlue, Purple, and White (not case sensitive), corresponding to the /LINE values 1-6, respectively. (/COLOR also accepts numerical values.) The line thickness may be 1, 2, or 3 corresponding to pixel thickness on the screen or corresponding to multiples of the default line thickness on hard copy; note that White is only available in the default THICKNESS=1. The /SIZE is                                                                                                                                                                                                                                    
+yes? PLOT/COLOR=red/THICKNESS=2/SYMBOL=4/SIZE=0.2 I[i=1:5]</pre><p align="left">The available color names are Black, Red, Green, Blue, LightBlue, Purple, and White (not case sensitive), corresponding to the /LINE values 1-6, respectively. (/COLOR also accepts numerical values.) The line thickness may be 1, 2, or 3 corresponding to pixel thickness on the screen or corresponding to multiples of the default line thickness on hard copy; note that White is only available in the default THICKNESS=1. The /SIZE is given in units of "inches", consistent with the PLOT+ usage of "inches". (These are the same units as in, say, "ppl axlen 8,6", to specify plot axes of lengths 8 and 6 inches for horizontal and vertical axes, respectively.)</p>
 <p align="left"><a name="_VPINDEXENTRY_1474" id="_VPINDEXENTRY_1474"></a><a name="_VPINDEXENTRY_1475" id="_VPINDEXENTRY_1475"></a>PLOT/<b>DASH[=]</b></p>
 <p align="left">(New qalifier with version 5.4) Simple syntax control over the dash characteristics using the same arguments as in the PPLUS "LINE" command: DOWN1, UP1, DOWN2, UP2, where these are in inches. For simple dashes let DOWN1=DOWN2 and UP1=UP2. For alternating long and short dashes, make DOWN2 longer or shorter. The parentheses are optional.</p>
 <p align="left"><b>Example: </b></p>
@@ -334,7 +334,7 @@ yes? PLOT/OVER/DASH=(0.6,0.2,0.1,0.2)/COLOR=RED/THICK/I=1:100 sin(i/9)</pre><p a
 <p align="left">The /LINE qualifier without =n causes the PLOT command to connect the plotted points with a line regardless of the state of the /SYMBOLS qualifier.</p>
 <p align="left">For simpler specification of line characteristics see <a href="#_VPINDEXENTRY_1471">PLOT/COLOR=/THICKNESS=/DASH=</a>, above. /LINE=n specifies a pre-defined <a name="_VPINDEXENTRY_1478" id="_VPINDEXENTRY_1478"></a><a name="_VPINDEXENTRY_1479" id="_VPINDEXENTRY_1479"></a>line style. "n" is an integer between 1 and 18. <i><b>GO line_thickness</b></i> draw samples of the line colors and thickness:</p>
 <p align="left"> </p>
-<p><a href="../../../sites/default/files/images/documentation/users-guide/user_guide_images/line_thickness.gif"><img alt="line_thickness" class="image-inline" src="../../../sites/default/files/images/documentation/users-guide/user_guide_images/line_thickness.gif" style="height: 168px; width: 200px;" /></a></p>
+<p><a href=", and run the demonstration script ef_eofsvd_demo.jnl for examples of this function./default/files/images/documentation/users-guide/user_guide_images/line_thickness.gif"><img alt="line_thickness" class="image-inline" src=", and run the demonstration script ef_eofsvd_demo.jnl for examples of this function./default/files/images/documentation/users-guide/user_guide_images/line_thickness.gif" style="height: 168px; width: 200px;" /></a></p>
 <p> </p>
 <p align="left">
 Line style "1" is always a solid line in the foreground color (black or white). Other line styles are device dependent (colors or dash patterns). For color devices, n=1–6 draws single-thickness lines each a different color. n=7–12 draws double-thick lines in the same color order, and n=13–18 draws triple-thick lines. See the chapter "Customizing Plots", section "<a href="../customizing-plots/COLOR.html#_VPID_246">Text and line colors</a>" for a chart of the default colors.</p>
@@ -347,14 +347,14 @@ Line style "1" is always a solid line in the foreground color (black or white). 
 <p align="left">Causes the indicated field(s) to be <a name="_VPINDEXENTRY_1482" id="_VPINDEXENTRY_1482"></a>overlaid on the existing plot. This qualifier can also be used to overlay lines or symbols on 2D plots (SHADE, CONTOUR, or VECTOR) provided the axis scalings are appropriate.</p>
 <p align="left"> </p>
 <p align="left"><a name="_VPINDEXENTRY_1483" id="_VPINDEXENTRY_1483"></a>PLOT/<b>SET_UP</b></p>
-<p align="left">Performs all the internal preparations required by program Ferret for plotting but does not actually render the plot. The command PPL can then be used to make changes to the plot prior to producing output with the PPL PLOT command. This makes possible certain customizations that are not possible with Ferret command qualifiers. See the chapter "<a href="../customizing_plots/customizing-plots.html">Customizing Plots</a>".</p>
+<p align="left">Performs all the internal preparations required by program Ferret for plotting but does not actually render the plot. The command PPL can then be used to make changes to the plot prior to producing output with the PPL PLOT command. This makes possible certain customizations that are not possible with Ferret command qualifiers. See the chapter "<a href="../customizing-plots.html">Customizing Plots</a>".</p>
 <p align="left"><a name="_VPINDEXENTRY_1484" id="_VPINDEXENTRY_1484"></a></p>
 <p align="left"><a name="_VPINDEXENTRY_1485" id="_VPINDEXENTRY_1485"></a>PLOT/<b>SYMBOL[=]</b></p>
 <p align="left">The /SYMBOL qualifier causes the PLOT command to mark each plotted point with a symbol. If the /LINE qualifier is given too the symbols are also connected with a line; if /LINE is omitted no connecting line is drawn.  For standard (non-ribbon) plots symbols may be colored using the color given with the /COLOR qualifier. For Ribbon plots, colors are controlled by the /PALETTE qualifier.</p>
 <p align="left">Optionally, the symbol number may be explicitly specified as an integer value between 1 and 88. In Pyferret additional symbols are specified with a symbol name. </p>
 <p align="left">The integer refers to the PPLUS plot marker numbers (e.g., 1 for x, 3 for +, etc.). Type "GO show_symbols" and "GO show_88_syms" at the Ferret prompt to see the available symbols and their reference numbers. Here are those symbols:</p>
 <div class="dnd-atom-wrapper type-image context-sdl_editor_representation" contenteditable="false">
-<div class="dnd-drop-wrapper"><div class='image'><img typeof="foaf:Image" src="https://ferret.pmel.noaa.gov../../../sites/default/files/thumbnails/image/ferret_88_syms.png" width="819" height="707" alt="Ferret symbols, 1 through 88" title="ferret_88_syms.png" /></div></div>
+<div class="dnd-drop-wrapper"><!-- scald=69:sdl_editor_representation --><div class='image'><img typeof="foaf:Image" src=", and run the demonstration script ef_eofsvd_demo.jnl for examples of this function./default/files/thumbnails/image/ferret_88_syms.png" width="819" height="707" alt="Ferret symbols, 1 through 88" title="ferret_88_syms.png" /></div><!-- END scald=69 --></div>
 <div class="dnd-legend-wrapper" contenteditable="true">
 <div class="meta">
 <!--END copyright=69--></div>
@@ -366,7 +366,7 @@ In Ferret, this command uses the smallest dot that can be represented on the dis
 <p class="pnormal">PLOT/<b>SYMBOL=</b><b>symname </b>In PyFerret, (v7.4) additional symbols are defined, and are referenced using PLOT/SYMBOL=name.  The filled symbols may also be outlined with a second color using /HIGHLIGHT. A set of pre-defined symbols is included with PyFerret. Additionally custom symbols may be defined by the user, as discussed below.</p>
 <p class="pnormal">To see the included symbols, run the script "GO show_py_syms" at the PyFerret prompt to see the pre-defined symbols and their names. Here are the pre-defined symbols and  their names:</p>
 <div class="dnd-atom-wrapper type-image context-sdl_editor_representation" contenteditable="false">
-<div class="dnd-drop-wrapper"><div class='image'><img typeof="foaf:Image" src="https://ferret.pmel.noaa.gov../../../sites/default/files/thumbnails/image/pyferret_named_syms.png" width="819" height="707" alt="PyFerret symbols and names" title="pyferret_named_syms.png" /></div></div>
+<div class="dnd-drop-wrapper"><!-- scald=70:sdl_editor_representation --><div class='image'><img typeof="foaf:Image" src=", and run the demonstration script ef_eofsvd_demo.jnl for examples of this function./default/files/thumbnails/image/pyferret_named_syms.png" width="819" height="707" alt="PyFerret symbols and names" title="pyferret_named_syms.png" /></div><!-- END scald=70 --></div>
 <div class="dnd-legend-wrapper" contenteditable="true">
 <div class="meta">
 <!--copyright=70--><!--END copyright=70--></div>
@@ -390,7 +390,7 @@ yes? ribbon/vs/nolab/sym=diamfill/highlight/size=.3 \
 /palette=blue_green_gold/levels=10/key=center \
 /hlim=0:11/vlim=0:11 xpts, ypts, xpts
 </pre><div class="dnd-atom-wrapper type-image context-sdl_editor_representation" contenteditable="false">
-<div class="dnd-drop-wrapper"><div class='image'><img typeof="foaf:Image" src="https://ferret.pmel.noaa.gov../../../sites/default/files/thumbnails/image/pyferret_syms_examples.png" width="830" height="498" alt="pyferret symbols examples" title="pyferret_syms_examples.png" /></div></div>
+<div class="dnd-drop-wrapper"><!-- scald=75:sdl_editor_representation --><div class='image'><img typeof="foaf:Image" src=", and run the demonstration script ef_eofsvd_demo.jnl for examples of this function./default/files/thumbnails/image/pyferret_syms_examples.png" width="830" height="498" alt="pyferret symbols examples" title="pyferret_syms_examples.png" /></div><!-- END scald=75 --></div>
 <div class="dnd-legend-wrapper" contenteditable="true">
 <div class="meta">
 <!--copyright=75--><!--END copyright=75--></div>
@@ -415,7 +415,7 @@ yes? ribbon/vs/nolab/sym=diamfill/highlight/size=.3 \
 -35.36 -35.36
 -35.36  35.36
 35.36  35.36
-FILL</pre><p class="pnormal"><a id="_pysym_define_symbol" name="_pysym_define_symbol"></a>To define a custom symbol shape, create a similar file. For closed shapes, the last coordinate pair must duplicate the first coordinate pair. Give the file a distinct name. The name without its extension will become the symbol name referenced in scripts. The  symbols that are included in the PyFerret distribution are unique to the first four characters.  Put the file in a directory that is included in the path list o                                           
+FILL</pre><p class="pnormal"><a id="_pysym_define_symbol" name="_pysym_define_symbol"></a>To define a custom symbol shape, create a similar file. For closed shapes, the last coordinate pair must duplicate the first coordinate pair. Give the file a distinct name. The name without its extension will become the symbol name referenced in scripts. The  symbols that are included in the PyFerret distribution are unique to the first four characters.  Put the file in a directory that is included in the path list of the environment variable FER_PALETTE.</p>
 <p class="pnormal">FILL is included in many of the symbol files that are not polygons enclosing the shape.  For instance, look at the contents of vline.sym, which describes a rectangle of zero width.</p>
 <pre class="pliteral">
 &gt; cat /usr/local/ferret_dir/palettes/vline.sym
@@ -429,14 +429,14 @@ FILL</pre><p class="pnormal">When /HLIGHLIGHT is used with these symbols, the sy
 <pre class="pliteral">
 yes? plot/over/vs/nolab/sym=asterisk/highlight=red/color=lightblue/siz=0.6 xpts, ypts
 </pre><div class="dnd-atom-wrapper type-image context-sdl_editor_representation" contenteditable="false">
-<div class="dnd-drop-wrapper"><div class='image'><img typeof="foaf:Image" src="https://ferret.pmel.noaa.gov../../../sites/default/files/thumbnails/image/symbols_stars.png" width="692" height="597" alt="asterisk plot using Pyferret symbols" title="symbols_stars.png" /></div></div>
+<div class="dnd-drop-wrapper"><!-- scald=73:sdl_editor_representation --><div class='image'><img typeof="foaf:Image" src=", and run the demonstration script ef_eofsvd_demo.jnl for examples of this function./default/files/thumbnails/image/symbols_stars.png" width="692" height="597" alt="asterisk plot using Pyferret symbols" title="symbols_stars.png" /></div><!-- END scald=73 --></div>
 <div class="dnd-legend-wrapper" contenteditable="true">
 <div class="meta">
 <!--copyright=73--><!--END copyright=73--></div>
 </div>
 </div>
 <p><a id="_VPINDEXENTRY_1486" name="_VPINDEXENTRY_1486"></a>PLOT<b>/SKIPSYM=n</b></p>
-<p>On a line plot that has symbols, draw a symbol at every nth point only. A line plot with symbols has one symbol at each data location. Some such lines (such as the plots generated with PLOT/ALONG), may have symbols that are so dense it is hard to see the individual symbols. When the intent of the symbols is simply to distinguish one line from another, use /SKIPSYM= to plot only every nth symbol along the line. The full density of points is used to draw the line itself; only the symbol drawing is decimate      
+<p>On a line plot that has symbols, draw a symbol at every nth point only. A line plot with symbols has one symbol at each data location. Some such lines (such as the plots generated with PLOT/ALONG), may have symbols that are so dense it is hard to see the individual symbols. When the intent of the symbols is simply to distinguish one line from another, use /SKIPSYM= to plot only every nth symbol along the line. The full density of points is used to draw the line itself; only the symbol drawing is decimated.</p>
 <p align="left"><a id="_VPINDEXENTRY_1487" name="_VPINDEXENTRY_1487"></a>PLOT/<b>TITLE=</b></p>
 <p align="left">Allows user to specify a plot title (enclosed in quotation marks). Without this qualifier Ferret uses the variables's defined title (e.g. the long_name attribute from a netCDR file or the title defined with a LET/TITLE= definition), or a title based on information about the expression(s).</p>
 <p align="left"> </p>
@@ -492,7 +492,7 @@ yes? PLOT/AXES[=top,bottom,left,right] var</pre><p align="left">where the argume
 yes? PLOT/AXES=0,1,1,0 sst ! Draws the bottom and left axes only</pre><p align="left"> </p>
 <p align="left"><a id="_VPINDEXENTRY_1501" name="_VPINDEXENTRY_1501"></a><a id="PartII-plot/hlog/vlog" name="PartII-plot/hlog/vlog"></a></p>
 <p align="left">PLOT/<b>NOYADJUST</b></p>
-<p align="left">Avoid resetting the Y origin -- relevant during PLOT commands that require extra room for a large key block under the axes or for viewports that lie close to the bottom of the window where there may not be much room below the Y origin. See the examples for <a href="DEFINE.html#_VPINDEXENTRY_1366">DEFINE VIEWPORT/AXES</a><a id="_VPINDEXENTRY_1502" name="_VPINDEXENTRY_1502"></a><a id="_VPINDEXENTRY_1503" name="_VPINDEXENTRY_15                                                                                                                               
+<p align="left">Avoid resetting the Y origin -- relevant during PLOT commands that require extra room for a large key block under the axes or for viewports that lie close to the bottom of the window where there may not be much room below the Y origin. See the examples for <a href="DEFINE.html#_VPINDEXENTRY_1366">DEFINE VIEWPORT/AXES</a><a id="_VPINDEXENTRY_1502" name="_VPINDEXENTRY_1502"></a><a id="_VPINDEXENTRY_1503" name="_VPINDEXENTRY_1503"></a><a id="_VPINDEXENTRY_1504" name="_VPINDEXENTRY_1504"></a><a id="_VPINDEXENTRY_1505" name="_VPINDEXENTRY_1505"></a>.</p>
 <p align="left"> </p>
 <p align="left">PLOT/<b>HLOG /VLOG </b></p>
 <p align="left"> </p>
@@ -549,11 +549,11 @@ yes? ppl ribbon
 <p align="left">PLOT<b>/NOKEY</b></p>
 <p align="left">Turns off the automatically-generated key showing line types on plots with multiple lines. There are several scripts which will let you position your own keys in the plot window</p>
 <p align="left"><a id="_PLOT_KEY_TITLE" name="_PLOT_KEY_TITLE"></a>PLOT<b>/KEY=</b>TITLE</p>
-<p align="left">For a multi-line plot, PLOT/KEY=TITLE tells Ferret to use the variable titles in the legend below the plot. This uses the full title with units, exactly as it would appear on a single-line plot. The FAQ, <a href="../../../faq/working-with-the-legend-on-a-line-plot.html" title="Working with the legend on a line plot">modifying the legend (key) for a multi line plot</a> gives an example and shows how to call the legend.jnl script for further control over the plot legend.</p>
+<p align="left">For a multi-line plot, PLOT/KEY=TITLE tells Ferret to use the variable titles in the legend below the plot. This uses the full title with units, exactly as it would appear on a single-line plot. The FAQ, <a href="../../../faq/working-with-the-legend-on-a-line-plot" title="Working with the legend on a line plot">modifying the legend (key) for a multi line plot</a> gives an example and shows how to call the legend.jnl script for further control over the plot legend.</p>
 <p align="left"> </p>
 <h4 align="left"><a id="_PLOT_RIBBON" name="_PLOT_RIBBON"></a>RIBBON PLOTS</h4>
 <p align="left">Ribbon plots are color-by-value 1-dimensional plots. The line is colored according to the value of a variable along the line.</p>
-<p align="left"><img alt="Ribbon plot example" class="image-left" src="http://ferret.pmel.noaa.gov../../../sites/default/files/images/documentation/release-notes//ribbon.gif" /></p>
+<p align="left"><img alt="Ribbon plot example" class="image-left" src="../../../sites/default/files/images/documentation/release-notes/ribbon.gif" /></p>
 <p align="left">PLOT<b>/RIBBON</b></p>
 <p align="left">Color line plots are drawn with the PLOT/RIBBON qualifier, and qualifiers for controlling color palettes and levels are added just as for any 2-dimensional color plot. The alias RIBBON is defined, RIBBON is an alias for PLOT/RIBBON. Add an extra argument to any plot command to specify the color-by variable. The above plot was drawn with the commands:</p>
 <pre>
@@ -562,12 +562,12 @@ yes? RIBBON/THICK/Y=0/L=6 sst, speh</pre><p align="left">The title automatically
 <p align="left">If PLOT/SYMBOL is used, the symbols are drawn in the color corresponding to the value of the color-by variable at the coordinate location. If the color-by variable contains missing values, the line is drawn using a light gray color.</p>
 <p align="left"> </p>
 <p align="left">For PLOT/VS commands where there are two arguments listing the horizontal- and vertical- locations of the points to be plotted, a third argument specifies the color-by variable:</p>
-<p align="left"><img alt="Ribbon-style VS plot" class="image-left" src="http://ferret.pmel.noaa.gov/Ferret//sites/default/files/images/documentation/release-notes/ribbonvs.gif" /></p>
+<p align="left"><img alt="Ribbon-style VS plot" class="image-left" src="../../../sites/default/files/images/documentation/release-notes/ribbonvs.gif" /></p>
 <p align="left"> </p>
 <p align="left">The above is drawn with:</p>
 <pre>
 yes? GO basemap x=260:360 y=0:90 20
-yes? PLOT/VS/OVER/NOLAB/RIBBON/THICK/SIZE=0.08/SYMBOL=17/KEY/LEV=v  lon, lat, fco2_rec</pre><p align="left">If you use PLOT/SET_UP/RIBBON, in order to make changes to the plot prior to producing output (See the chapter "<a href="../customizing-plots/customizing_plots.html">Customizing Plots</a>"), then to produce the output, issue a PPL RIBBON command. For example to remove the time and latitude labels from the upper left, change the title, and remove the label "Longitude"                              
+yes? PLOT/VS/OVER/NOLAB/RIBBON/THICK/SIZE=0.08/SYMBOL=17/KEY/LEV=v  lon, lat, fco2_rec</pre><p align="left">If you use PLOT/SET_UP/RIBBON, in order to make changes to the plot prior to producing output (See the chapter "<a href="../customizing-plots.html">Customizing Plots</a>"), then to produce the output, issue a PPL RIBBON command. For example to remove the time and latitude labels from the upper left, change the title, and remove the label "Longitude" from the horizontal axis,</p>
 <p align="left"> </p>
 <p align="left">RIBBON<b> /KEY /NOKEY</b></p>
 <p align="left">Turns on the color key. By default it is turned on for a first (underlay) plot; /NOKEY will turn it off.  On an overlay plot the color key is not turned on, but may be invoked with /KEY. <em>(This is a dual use of /NOKEY. For non-ribbon plots, /KEY and /NOKEY control the legend below the plot when multiple plot lines are drawn on a plot. <strong><a href="#_VPINDEXENTRY_1509">See above</a></strong>. )</em></p>
@@ -585,7 +585,7 @@ All of the <a href="../customizing-plots/CONTOURING.html#_VPINDEXENTRY_852" titl
 Specifies a color palette. Any color palette may be used. Only valid in conjunction with /PLOT/RIBBON.</p>
 <p align="left"><a name="_PLOT_FAST" id="_PLOT_FAST"></a>RIBBON<b>/FAST</b><br />
 By default the colors are interpolated along the path between one point and the next, for a smooth blending of colors from one location to the next. The /FAST qualifier turns off this capability so that each grid cell along the line is colored by the single color corresponding to the value of the function at the coordinate location. Compare:</p>
-<p align="left"><img alt="ribbon_fast.gif" class="image-left" src="../../../sites/default/files/images/documentation/users-guide/commands-reference/ribbon_fast.gif" /></p>
+<p align="left"><img alt="ribbon_fast.gif" class="image-left" src=", and run the demonstration script ef_eofsvd_demo.jnl for examples of this function./default/files/images/documentation/users-guide/commands-reference/ribbon_fast.gif" /></p>
 <p>This was drawn as follows, with the /FAST qualifier on the lower curve but with the same color levels.</p>
 <pre>
 yes? RIBBON/VS/LINE/SYMBOL/SIZE=0.2/THICK2 xpts,ypts,var
@@ -617,7 +617,7 @@ For any plot axes that are labeled with longitude or latitude units, add a half-
 <p> </p>
 <h4><a id="_DSG_plotting" name="_DSG_plotting"></a></h4>
 <h4>DSG Plots</h4>
-<p>Beginning with PyFerret/Ferret v7.6,  customizations for data in Discrete Sampling Geometries datasets is implemented. The command "PLOT" draws a plot customized to the feature type.  See the <strong><a href="../../demos/dsg-files-discrete-sampling-geometries-dem.html">Tutorial script</a></strong> dsg_tutorial.jnl, and run the demo scripts:</p>
+<p>Beginning with PyFerret/Ferret v7.6,  customizations for data in Discrete Sampling Geometries datasets is implemented. The command "PLOT" draws a plot customized to the feature type.  See the <strong><a href="../../dsg-files-discrete-sampling-geometries-demo.html">Tutorial script</a></strong> dsg_tutorial.jnl, and run the demo scripts:</p>
 <p>dsg_point_plot.jnl<br />
 dsg_prof_plot.jnl<br />
 dsg_timeseries_plot.jnl<br />

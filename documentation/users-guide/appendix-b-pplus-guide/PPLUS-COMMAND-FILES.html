@@ -11,6 +11,9 @@ xmlns:sioct="http://rdfs.org/sioc/types#"
 xmlns:skos="http://www.w3.org/2004/02/skos/core#"
 xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
 xmlns:schema="http://schema.org/">
+
+<!-- Mirrored from ferret.pmel.noaa.gov/Ferret/documentation/users-guide/appendix-b-pplus-guide/PPLUS-COMMAND-FILES by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Jun 2023 18:11:56 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head profile="http://www.w3.org/1999/xhtml/vocab">
 <title>PPLUS COMMAND FILES - Ferret/PyFerret Documentation</title>
 
@@ -176,14 +179,11 @@ xmlns:schema="http://schema.org/">
 <ul>
 <li id="menu-1338-1" class="first odd sf-item-1 sf-depth-3 sf-no-children"><a href="../../demos/ferret-tutorial-script.html" class="sf-depth-3">Ferret Tour</a></li>
 <li id="menu-1618-1" class="middle even sf-item-2 sf-depth-3 sf-no-children"><a href="../../demos/dsg-files-discrete-sampling-geometries-demo.html" class="sf-depth-3">DSG files: Discrete Sampling Geometries Demo</a></li>
-<li id="menu-1337-1" class="middle odd sf-item-3 sf-depth-3 sf-total-children-5 sf-parent-children-0 sf-single-children-5 menuparent"><a href="../../ferret-tutorials.html" class="sf-depth-3 menuparent">External Function Examples</a>
-<ul>
-<li id="menu-1343-1" class="first odd sf-item-1 sf-depth-4 sf-no-children"><a href="../../demos/sorting-demo.html" class="sf-depth-4">Ferret sorting demo (1)</a></li>
-<li id="menu-1591-1" class="middle even sf-item-2 sf-depth-4 sf-no-children"><a href="../../demos/ferret-sorting-demo.html" class="sf-depth-4">Ferret sorting demo (2)</a></li>
+<li id="menu-1591-1" class="middle even sf-item-2 sf-depth-4 sf-no-children"><a href="../../demos/ferret-sorting-demo.html" class="sf-depth-4">Ferret sorting demo</a></li>
 <li id="menu-1344-1" class="middle odd sf-item-3 sf-depth-4 sf-no-children"><a href="../../demos/how-to-use-ferret-external-functions-for-computing-ffts.html" class="sf-depth-4">Fast Fourier Transforms demo</a></li>
 <li id="menu-1345-1" class="middle even sf-item-4 sf-depth-4 sf-no-children"><a href="../../demos/ferret-eof-demo.html" class="sf-depth-4">Empirical Orthogonal Functions demo</a></li>
 <li id="menu-1346-1" class="last odd sf-item-5 sf-depth-4 sf-no-children"><a href="../../demos/ferret-objective-analysis.html" class="sf-depth-4">Ferret objective analysis demo</a></li>
-</ul></li>
+
 <li id="menu-1353-1" class="middle even sf-item-4 sf-depth-3 sf-no-children"><a href="../../demos/ferret-palette-demo.html" class="sf-depth-3">Ferret Palette Demo</a></li>
 <li id="menu-1350-1" class="middle odd sf-item-5 sf-depth-3 sf-no-children"><a href="../../demos/ferret-map-projections-demo.html" class="sf-depth-3">Map projections</a></li>
 <li id="menu-1354-1" class="middle even sf-item-6 sf-depth-3 sf-no-children"><a href="../../demos/ferret-polygon-vector-demo.html" class="sf-depth-3">Ferret polygon vector demo</a></li>
@@ -238,6 +238,7 @@ xmlns:schema="http://schema.org/">
 <div class="block-inner clearfix">
  
 <div class="content clearfix">
+<article about="/Ferret/documentation/users-guide/appendix-b-pplus-guide/PPLUS-COMMAND-FILES" typeof="sioc:Item foaf:Document" class="node node-documentation-page node-promoted node-published node-not-sticky author-burger odd clearfix" id="node-documentation-page-730">
 
 <!-- add the following line to print out updated date -->
 <!-- add the following line to print out the page description -->
@@ -258,7 +259,7 @@ xmlns:schema="http://schema.org/">
 <h3 align="left">Appendix B Sec7.2 <a name="_VPID_623" id="_VPID_623"></a></h3>
 <p> </p>
 <p align="left" class="callout"><b>SYMBOL SUBSTITUTION </b></p>
-<p align="left">PPLUS allows symbol substitution in a manner similar to VAX/VMS symbols. Global and local symbols are supported in conjunction with nested command files and parameter passing. The SET and SHOW commands create, modify and list the symbols. When initially entering PPLUS (i.e., at the first command level) the symbols are global and available to all command levels. At each subsequent command level, local symbols are created and used by default. Global symbols are used when no local symbol exists                                                                                                               
+<p align="left">PPLUS allows symbol substitution in a manner similar to VAX/VMS symbols. Global and local symbols are supported in conjunction with nested command files and parameter passing. The SET and SHOW commands create, modify and list the symbols. When initially entering PPLUS (i.e., at the first command level) the symbols are global and available to all command levels. At each subsequent command level, local symbols are created and used by default. Global symbols are used when no local symbol exists. If the symbol name is preceded by a star (*), the global symbol will be created, modified or substituted.</p>
 <p align="left">Parameters passed via the @ command line are named P1, P2, P3, etc... just as they are in VAX/VMS. Symbols are recognized by PPLUS by being enclosed by single quotes. Character strings can be enclosed in double quotes. For example:</p>
 <p align="left"><b>SET TEMP "This is a test label"<br />
 XLAB 'temp' </b></p>
@@ -1032,7 +1033,7 @@ ENDW</p>
 <p> </p>
 <p align="left" class="callout"><b>EMBEDDED STRING COMMANDS </b></p>
 <p align="left"><b><a name="_VPINDEXENTRY_2062" id="_VPINDEXENTRY_2062"></a>Fonts </b></p>
-<p class="pnormal">In PyFerret, make font and text-style settings with the <a href="../commands-reference/SET#_SETTEXT" title="SET TEXT">SET TEXT </a>command. Change to any of the true fonts available to the python libraries, change to custom colors, and use bold or italic styles. Define a global text style, or customize text groupings, to control the style of, for instance the colorbar labels, the labels on axis tic marks, or the main plot title.</p>
+<p class="pnormal">In PyFerret, make font and text-style settings with the <a href="../commands-reference/SET.html#_SETTEXT" title="SET TEXT">SET TEXT </a>command. Change to any of the true fonts available to the python libraries, change to custom colors, and use bold or italic styles. Define a global text style, or customize text groupings, to control the style of, for instance the colorbar labels, the labels on axis tic marks, or the main plot title.</p>
 <p class="pnormal">PyFerret can use the PPLUS fonts described below, if the font is set to the HERSHEY font.</p>
 <pre class="pliteral">
 yes? set text/font=hershey
@@ -1041,7 +1042,7 @@ yes? plot/title="$CITemperature" sst
 <p align="left">Symbol fonts are called by using the symbol number, i.e., @MA01 plots the first symbol in MATH and @MA12 will plot the twelfth symbol. Font changes (of the form @XX) can be imbedded in any label string (e.g., XLAB, YLAB, PLOT commands).</p>
 <p align="left">@font selects "font" as the character or symbol font to be used, where the font abbreviations are listed below.</p>
 <p align="left"><b>Character Fonts </b></p>
-<p align="left"><a href="../ferret-fonts/list-of-ferret-character-fonts" title="List of Ferret Character fonts">Tables showing the character fonts</a></p>
+<p align="left"><a href="../ferret-fonts/list-of-ferret-character-fonts.html" title="List of Ferret Character fonts">Tables showing the character fonts</a></p>
 <p align="left"> </p>
 <table><tbody><tr><td>
 <p align="left">SR</p>
@@ -1231,7 +1232,7 @@ yes? plot/title="$CITemperature" sst
 <p align="left">IM</p>
 </td>
 <td>
-<p align="left">Indexical Math</p>
+<p align="left">Indexical Math</p>ll 
 </td>
 </tr><tr><td>
 <p align="left">CA</p>
@@ -1241,8 +1242,7 @@ yes? plot/title="$CITemperature" sst
 </td>
 </tr></tbody></table><p align="left"> </p>
 <p align="left">A clear font command @CL is available to change the default font. The next font called after a @CL becomes the new default font. The font is reset to the default at the start of each label. The command DFLTFNT can also be used to change the default font to one of your choice.</p>
-<p align="left">Tables showing the symbol fonts are at</p>
-<p align="left"><a href="PPLUS-COMMAND-FILES.html#_VPINDEXENTRY_2063">PPLUS Symbol Fonts</a></p>
+<p align="left"><a href="../ferret-fonts/ppl_symbol_fonts.html">Tables showing the symbol fonts</a></p>
 <p align="left">Control characters for the two ASCII fonts AS and AC must be preceded by an &lt;ESC&gt; (ascii code=27). For example, to superscript while using the ASCII fonts you must have &lt;ESC&gt; in the label preceed the character to superscript.</p>
 <p> </p>
 <h3 align="left">Appendix B Sec7.9.3 <a name="_VPID_639" id="_VPID_639"></a></h3>
@@ -1290,7 +1290,7 @@ yes? plot/title="$CITemperature" sst
 <h3 align="left">Appendix B Sec7.10.3 <a name="_VPID_645" id="_VPID_645"></a></h3>
 <p> </p>
 <p align="left" class="callout"><b>EPIC FORMAT </b></p>
-<p align="left">This is the standard format for data from the EPIC data base. The data files are binary sequential files with at least one header of 8 80-character lines followed by data records with 1 data scan per record. When the FORMAT,EPIC command is used, the file name specified with the RD, SKP and RWD commands refers to the EPIC or pointer file. Variables to be read are specified with the EVAR command. Both time series EPIC data files and CTD EPIC data files are recognized by PPLUS. The /CTD qualifi                                                                               
+<p align="left">This is the standard format for data from the EPIC data base. The data files are binary sequential files with at least one header of 8 80-character lines followed by data records with 1 data scan per record. When the FORMAT,EPIC command is used, the file name specified with the RD, SKP and RWD commands refers to the EPIC or pointer file. Variables to be read are specified with the EVAR command. Both time series EPIC data files and CTD EPIC data files are recognized by PPLUS. The /CTD qualifier on the FORMAT command tells PPLUS which type of EPIC data is being read.</p>
 <p> </p>
 <h3 align="left">Appendix B Sec7.10.4 <a name="_VPID_646" id="_VPID_646"></a></h3>
 <p> </p>

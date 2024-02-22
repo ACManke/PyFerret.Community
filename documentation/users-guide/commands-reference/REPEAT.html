@@ -11,6 +11,9 @@ xmlns:sioct="http://rdfs.org/sioc/types#"
 xmlns:skos="http://www.w3.org/2004/02/skos/core#"
 xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
 xmlns:schema="http://schema.org/">
+
+<!-- Mirrored from ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/REPEAT by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Jun 2023 18:11:26 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head profile="http://www.w3.org/1999/xhtml/vocab">
 <title>REPEAT - Ferret/PyFerret Documentation</title>
 
@@ -151,7 +154,7 @@ xmlns:schema="http://schema.org/">
 </li>
 <li id="menu-1394-1" class="middle odd sf-item-7 sf-depth-3 sf-total-children-5 sf-parent-children-0 sf-single-children-5 menuparent"><a href="../animations-gif-images/animations-gif-images.html" class="sf-depth-3 menuparent">5. Animations &amp; Gif Images</a>
 </li>
-<li id="menu-1395-1" class="middle even sf-item-8 sf-depth-3 sf-total-children-12 sf-parent-children-0 sf-single-children-12 menuparent"><a href="../customizing-plots/customizing_plots.html/customizing-plots.html" class="sf-depth-3 menuparent">6. Customizing Plots</a>
+<li id="menu-1395-1" class="middle even sf-item-8 sf-depth-3 sf-total-children-12 sf-parent-children-0 sf-single-children-12 menuparent"><a href="../customizing-plots/customizing-plots.html" class="sf-depth-3 menuparent">6. Customizing Plots</a>
 </li>
 <li id="menu-1396-1" class="middle odd sf-item-9 sf-depth-3 sf-total-children-11 sf-parent-children-0 sf-single-children-11 menuparent"><a href="../handling-string-data-symbols.html" class="sf-depth-3 menuparent">7. Handing String Data Symbols</a>
 </li>
@@ -176,14 +179,11 @@ xmlns:schema="http://schema.org/">
 <ul>
 <li id="menu-1338-1" class="first odd sf-item-1 sf-depth-3 sf-no-children"><a href="../../demos/ferret-tutorial-script.html" class="sf-depth-3">Ferret Tour</a></li>
 <li id="menu-1618-1" class="middle even sf-item-2 sf-depth-3 sf-no-children"><a href="../../demos/dsg-files-discrete-sampling-geometries-demo.html" class="sf-depth-3">DSG files: Discrete Sampling Geometries Demo</a></li>
-<li id="menu-1337-1" class="middle odd sf-item-3 sf-depth-3 sf-total-children-5 sf-parent-children-0 sf-single-children-5 menuparent"><a href="../../ferret-tutorials.html" class="sf-depth-3 menuparent">External Function Examples</a>
-<ul>
-<li id="menu-1343-1" class="first odd sf-item-1 sf-depth-4 sf-no-children"><a href="../../demos/sorting-demo.html" class="sf-depth-4">Ferret sorting demo (1)</a></li>
-<li id="menu-1591-1" class="middle even sf-item-2 sf-depth-4 sf-no-children"><a href="../../demos/ferret-sorting-demo.html" class="sf-depth-4">Ferret sorting demo (2)</a></li>
+<li id="menu-1591-1" class="middle even sf-item-2 sf-depth-4 sf-no-children"><a href="../../demos/ferret-sorting-demo.html" class="sf-depth-4">Ferret sorting demo</a></li>
 <li id="menu-1344-1" class="middle odd sf-item-3 sf-depth-4 sf-no-children"><a href="../../demos/how-to-use-ferret-external-functions-for-computing-ffts.html" class="sf-depth-4">Fast Fourier Transforms demo</a></li>
 <li id="menu-1345-1" class="middle even sf-item-4 sf-depth-4 sf-no-children"><a href="../../demos/ferret-eof-demo.html" class="sf-depth-4">Empirical Orthogonal Functions demo</a></li>
 <li id="menu-1346-1" class="last odd sf-item-5 sf-depth-4 sf-no-children"><a href="../../demos/ferret-objective-analysis.html" class="sf-depth-4">Ferret objective analysis demo</a></li>
-</ul></li>
+
 <li id="menu-1353-1" class="middle even sf-item-4 sf-depth-3 sf-no-children"><a href="../../demos/ferret-palette-demo.html" class="sf-depth-3">Ferret Palette Demo</a></li>
 <li id="menu-1350-1" class="middle odd sf-item-5 sf-depth-3 sf-no-children"><a href="../../demos/ferret-map-projections-demo.html" class="sf-depth-3">Map projections</a></li>
 <li id="menu-1354-1" class="middle even sf-item-6 sf-depth-3 sf-no-children"><a href="../../demos/ferret-polygon-vector-demo.html" class="sf-depth-3">Ferret polygon vector demo</a></li>
@@ -253,8 +253,8 @@ xmlns:schema="http://schema.org/">
 <p align="left">Repeats a command or group of commands over a range of values along an axis.</p>
 <pre>
 yes? REPEAT/q=lo:hi[:increment] COMMAND
-yes? REPEAT/RANGE=lo:hi[:increment][/NAME=] COMMAND</pre><p align="left">A word of caution about REPEAT/RANGE. If you find yourself trying to use REPEAT to do regridding, or compute integrals or averages, or if you are doing some operation to every element of a variable along an axis, you might want to rethink whether you are unnecessarily complicating your scripts by duplicating Ferret's capability to operate on entire grids or axes in a single command. Please read the introductory sections including <a hr                                                                                                                                                                                                       
-<p align="left">The units of lo, hi, and increment are the units of the underlying grid axis if the qualifier is X, Y, Z, or T. The qualifiers I, J, K, or L advance the repeat loop by incrementing the indicated index (the default index increment is 1). Use SHOW GRID to examine the axis units (if the units are not displayed try CANCEL MODE LATITUDE, LONGITUDE, or CALENDAR as appropriate). To use an arbitrary loop counter use /RANGE=lo:hi:inc and optionally /NAME=string to name the loop counter. To run the lo                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+yes? REPEAT/RANGE=lo:hi[:increment][/NAME=] COMMAND</pre><p align="left">A word of caution about REPEAT/RANGE. If you find yourself trying to use REPEAT to do regridding, or compute integrals or averages, or if you are doing some operation to every element of a variable along an axis, you might want to rethink whether you are unnecessarily complicating your scripts by duplicating Ferret's capability to operate on entire grids or axes in a single command. Please read the introductory sections including <a href="../introduction/GETTING-STARTED.html#_VPID_7">Thinking Like a Ferret</a>, to review the way Ferret commands operate on entire variables over all or a portion of the grid on which they are defined.</p>
+<p align="left">The units of lo, hi, and increment are the units of the underlying grid axis if the qualifier is X, Y, Z, or T. The qualifiers I, J, K, or L advance the repeat loop by incrementing the indicated index (the default index increment is 1). Use SHOW GRID to examine the axis units (if the units are not displayed try CANCEL MODE LATITUDE, LONGITUDE, or CALENDAR as appropriate). To use an arbitrary loop counter use /RANGE=lo:hi:inc and optionally /NAME=string to name the loop counter. To run the loop from a higher value decreasing towards the lowest value, specify increment to be less than zero. Any command or group of commands that can be specified at the command line can also be given as an argument to REPEAT. If MODE VERIFY is SET, the current loop index is displayed at the console as REPEAT executes. The value of any symbols e.g. "($symbol)") that are used inside of REPEAT loops are re-translated at each repetition of the loop.</p>
 <p align="left">NOTE that we can't include comments within a REPEAT loop.  When a set of commands separated by semicolons are encountered, they're first processed as one long command and only a bit later broken up into the individual commands.  The ! that would start a comment interrupts this, with everything after it being ignored.  If your REPEAT loop starts to get long, consider putting the commands into a separate script and call the script from the loop.</p>
 <p align="left"> </p>
 <p align="left"><a name="_VPINDEXENTRY_1548" id="_VPINDEXENTRY_1548"></a>We can exit early from a REPEAT loop with the command EXIT/LOOP, stop execution of that loop and return to the level in Ferret which executed the loop. We can skip the remaining commands in a loop and return to the next iteration with the command EXIT/CYCLE. See the documentation on <a href="EXIT.html">EXIT</a>.</p>
@@ -313,7 +313,7 @@ yes? REPEAT/L=1:12/ANIMATE/LOOP=5 (SHADE sst; GO fland)</pre><p align="left"> <
 <pre>
 yes? REPEAT/RANGE=LO:HI[:INC] ! for an unnamed loop counter
 yes? REPEAT/RANGE=LO:HI[:INC]/NAME=string ! for a named loop counter</pre><p align="left"> </p>
-<p align="left">If INC is not specified the increment is 1. If LO is larger than HI and INC is negative, then the loop is executed on decreasing values of the counter. If LO is larger than HI and INC is positive, the loop is not executed (or if LO is less than HI and INC is negative, the loop is not executed; if LO is larger than HI and INC is not given, the loop executes from the smaller to the higher limit). The syntax can be used to create nested loops, including nesting with REPEAT /I/J/K/L/M/N or /X/Y/                     
+<p align="left">If INC is not specified the increment is 1. If LO is larger than HI and INC is negative, then the loop is executed on decreasing values of the counter. If LO is larger than HI and INC is positive, the loop is not executed (or if LO is less than HI and INC is negative, the loop is not executed; if LO is larger than HI and INC is not given, the loop executes from the smaller to the higher limit). The syntax can be used to create nested loops, including nesting with REPEAT /I/J/K/L/M/N or /X/Y/Z/T/E/F commands.</p>
 <p> </p>
 <p align="left">REPEAT/RANGE=LO:HI[:INC]<b>/NAME=var</b> assigns the name "var" to the repeat counter so it may be used within the commands to be executed. when /NAME is used, the values of LO:HI:[INC] must be integers (analogous to REPEAT/I= or /J= etc). After the REPEAT terminates, this variable is undefined. If LO is larger than HI and no INC is given the loop is not executed.</p>
 <p> </p>

@@ -11,6 +11,9 @@ xmlns:sioct="http://rdfs.org/sioc/types#"
 xmlns:skos="http://www.w3.org/2004/02/skos/core#"
 xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
 xmlns:schema="http://schema.org/">
+
+<!-- Mirrored from ferret.pmel.noaa.gov/Ferret/documentation/users-guide/appendix-b-pplus-guide/BEGINNERS-GUIDE by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Jun 2023 18:11:56 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head profile="http://www.w3.org/1999/xhtml/vocab">
 <title>BEGINNERS GUIDE - Ferret/PyFerret Documentation</title>
 
@@ -176,14 +179,11 @@ xmlns:schema="http://schema.org/">
 <ul>
 <li id="menu-1338-1" class="first odd sf-item-1 sf-depth-3 sf-no-children"><a href="../../demos/ferret-tutorial-script.html" class="sf-depth-3">Ferret Tour</a></li>
 <li id="menu-1618-1" class="middle even sf-item-2 sf-depth-3 sf-no-children"><a href="../../demos/dsg-files-discrete-sampling-geometries-demo.html" class="sf-depth-3">DSG files: Discrete Sampling Geometries Demo</a></li>
-<li id="menu-1337-1" class="middle odd sf-item-3 sf-depth-3 sf-total-children-5 sf-parent-children-0 sf-single-children-5 menuparent"><a href="../../ferret-tutorials.html" class="sf-depth-3 menuparent">External Function Examples</a>
-<ul>
-<li id="menu-1343-1" class="first odd sf-item-1 sf-depth-4 sf-no-children"><a href="../../demos/sorting-demo.html" class="sf-depth-4">Ferret sorting demo (1)</a></li>
-<li id="menu-1591-1" class="middle even sf-item-2 sf-depth-4 sf-no-children"><a href="../../demos/ferret-sorting-demo.html" class="sf-depth-4">Ferret sorting demo (2)</a></li>
+<li id="menu-1591-1" class="middle even sf-item-2 sf-depth-4 sf-no-children"><a href="../../demos/ferret-sorting-demo.html" class="sf-depth-4">Ferret sorting demo</a></li>
 <li id="menu-1344-1" class="middle odd sf-item-3 sf-depth-4 sf-no-children"><a href="../../demos/how-to-use-ferret-external-functions-for-computing-ffts.html" class="sf-depth-4">Fast Fourier Transforms demo</a></li>
 <li id="menu-1345-1" class="middle even sf-item-4 sf-depth-4 sf-no-children"><a href="../../demos/ferret-eof-demo.html" class="sf-depth-4">Empirical Orthogonal Functions demo</a></li>
 <li id="menu-1346-1" class="last odd sf-item-5 sf-depth-4 sf-no-children"><a href="../../demos/ferret-objective-analysis.html" class="sf-depth-4">Ferret objective analysis demo</a></li>
-</ul></li>
+
 <li id="menu-1353-1" class="middle even sf-item-4 sf-depth-3 sf-no-children"><a href="../../demos/ferret-palette-demo.html" class="sf-depth-3">Ferret Palette Demo</a></li>
 <li id="menu-1350-1" class="middle odd sf-item-5 sf-depth-3 sf-no-children"><a href="../../demos/ferret-map-projections-demo.html" class="sf-depth-3">Map projections</a></li>
 <li id="menu-1354-1" class="middle even sf-item-6 sf-depth-3 sf-no-children"><a href="../../demos/ferret-polygon-vector-demo.html" class="sf-depth-3">Ferret polygon vector demo</a></li>
@@ -238,6 +238,7 @@ xmlns:schema="http://schema.org/">
 <div class="block-inner clearfix">
  
 <div class="content clearfix">
+<article about="/Ferret/documentation/users-guide/appendix-b-pplus-guide/BEGINNERS-GUIDE" typeof="sioc:Item foaf:Document" class="node node-documentation-page node-promoted node-published node-not-sticky author-burger odd clearfix" id="node-documentation-page-496">
 
 <!-- add the following line to print out updated date -->
 <!-- add the following line to print out the page description -->
@@ -249,7 +250,7 @@ xmlns:schema="http://schema.org/">
 <div class="field-item even" property="content:encoded"><h3 align="left">Appendix B Sec5 <a name="_VPID_606" id="_VPID_606"></a></h3>
 <p align="left" class="callout"><b>BEGINNERS GUIDE </b></p>
 <p align="left">To use PPLUS a minimum of preparation is required. See the chapter on Getting Started for the symbol definitions that are required. Once this has been done PPLUS can be entered by typing PPLUS (or just PPL) in response to the VAX/VMS prompt.</p>
-<p align="left">The minimum number of commands needed to read in data and then plot the data are: FORMAT (sets the input format), SKP (a command to position the file to a given record). VARS (tells PPLUS how the data is arranged in each data record), RD (reads the data) and PLOT (create the plot) or CONTOUR (create a contour plot). The name of the file containing the data can be specified with the RD or SKP commands. Following are discussions of these commands and some examples of how these commands are use                                                                
+<p align="left">The minimum number of commands needed to read in data and then plot the data are: FORMAT (sets the input format), SKP (a command to position the file to a given record). VARS (tells PPLUS how the data is arranged in each data record), RD (reads the data) and PLOT (create the plot) or CONTOUR (create a contour plot). The name of the file containing the data can be specified with the RD or SKP commands. Following are discussions of these commands and some examples of how these commands are used. For more information see the Command Description chapter.</p>
 <p> </p>
 <h3 align="left">Appendix B Sec5.1 <a name="_VPID_607" id="_VPID_607"></a></h3>
 <p> </p>
@@ -284,10 +285,10 @@ xmlns:schema="http://schema.org/">
 <h3 align="left">Appendix B Sec5.3 <a name="_VPID_609" id="_VPID_609"></a></h3>
 <p> </p>
 <p align="left" class="callout"><b>SKP AND RD </b></p>
-<p align="left">The name of the file containing the data to be plotted can be specified with either the SKP or the RD command. The SKP command tells PPLUS to skip records in the data file (e.g., header records or data which should not be plotted). Its format is SKP,N,FILE_NAME where N is the number or records to skip, and FILE_NAME is the name of the data file and is an optional parameter. If the name of the data file is included, the data file will be rewound before skipping. If the data file name is omitt                                                     
+<p align="left">The name of the file containing the data to be plotted can be specified with either the SKP or the RD command. The SKP command tells PPLUS to skip records in the data file (e.g., header records or data which should not be plotted). Its format is SKP,N,FILE_NAME where N is the number or records to skip, and FILE_NAME is the name of the data file and is an optional parameter. If the name of the data file is included, the data file will be rewound before skipping. If the data file name is omitted, the file will not be rewound before skipping.</p>
 <p align="left">The RD command informs PPLUS how many records to read and what file to read them from. If you are not making a contour plot, the format of the command is RD,NX,FILE_NAME where NX is the number of points to read from the data file and FILE_NAME is the name of the data file and is an optional parameter. If the data file name is included, the data file will be rewound before the data is read. If the data file name is omitted, the file will not be rewound before reading.</p>
 <p align="left">If you are making a contour plot, the RD command format is somewhat different. If Z is being read (a 3 in the VARS command), RD defines the size of the plotting grid and prompts the user for the minimum and maximum values of X and Y to be used for the plotting grid. The format for RD is</p>
-<p align="left">RD,NX,NY,TYPE,FILE_NAME where NX and NY set the size of the grid for contour data read. Specifically, when X,Y,Z triplets are being read for contouring, the grid on which the data is plotted can be either coarser or finer or the same as the input data. If NX=50 and NY=21, then the data will be plotted on a grid which is 50 x 21 points (regardless of input data limits or gridding). TYPE tells PPLUS whether the data is stored by rows (X varies fastest) or columns (Y varies fastest) if the data                                                                                                                                                                                                                                                        
+<p align="left">RD,NX,NY,TYPE,FILE_NAME where NX and NY set the size of the grid for contour data read. Specifically, when X,Y,Z triplets are being read for contouring, the grid on which the data is plotted can be either coarser or finer or the same as the input data. If NX=50 and NY=21, then the data will be plotted on a grid which is 50 x 21 points (regardless of input data limits or gridding). TYPE tells PPLUS whether the data is stored by rows (X varies fastest) or columns (Y varies fastest) if the data is already-gridded contour data. Finally, FILE_NAME is the data file name. If the data file name is included, the data file will be rewound before the data is read. If the data file name is omitted, the file will not be rewound before reading.</p>
 <p> </p>
 <h3 align="left">Appendix B Sec5.4 <a name="_VPID_610" id="_VPID_610"></a></h3>
 <p> </p>
@@ -316,7 +317,7 @@ xmlns:schema="http://schema.org/">
 <p> </p>
 <p> </p>
 <p align="left" class="callout"><b>Pre-gridded Data, Contour Plot </b></p>
-<p align="left">The next example illustrates reading in data to be contoured. The data file is unformatted and does not have any header. The data is already gridded with 1 value of Z per record. Since only Z is read from the data file, the input grid and the plotting grid must be identical, and are specified by the RD command. The grid is 34 points in the x-direction and 5 points in the y-direction. The PPLUS RD command prompts for the minimum and maximum for the X-Y contouring grid. In this example, the gr                                                                                                                                                                                                                                                                                  
+<p align="left">The next example illustrates reading in data to be contoured. The data file is unformatted and does not have any header. The data is already gridded with 1 value of Z per record. Since only Z is read from the data file, the input grid and the plotting grid must be identical, and are specified by the RD command. The grid is 34 points in the x-direction and 5 points in the y-direction. The PPLUS RD command prompts for the minimum and maximum for the X-Y contouring grid. In this example, the grid is 34 points in the x-direction from 10 to -6.5 units and is 51 points in the y-direction from 0 to -500 units. PPLUS will read Z values from the data file assuming x varies fastest. This means that the Z values on the data file correspond to the following x,y pairs:</p>
 <p align="left"><strong>x y</strong><br />
 10.0 0<br />
 9.5 0<br />
@@ -359,7 +360,7 @@ xmlns:schema="http://schema.org/">
 <p> </p>
 <p> </p>
 <p align="left" class="callout"><a name="_VPID_615" id="_VPID_615"></a><b>Time Series Plot </b></p>
-<p align="left">This example demonstrates the reading in of time series data and setting up the x axis to be a time axis. The data file contains a sequence number, which is the day of the year or Julian Day and temperature. Since the sequence number increments by 1 for 1 day, and delta-time is 1 day by default in PPLUS, there is no need to include the delta-time in the TAXIS command. The TAXIS command tells PPLUS that the time series has a delta-time of 1440 minutes (the default) and that the time axis is t                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+<p align="left">This example demonstrates the reading in of time series data and setting up the x axis to be a time axis. The data file contains a sequence number, which is the day of the year or Julian Day and temperature. Since the sequence number increments by 1 for 1 day, and delta-time is 1 day by default in PPLUS, there is no need to include the delta-time in the TAXIS command. The TAXIS command tells PPLUS that the time series has a delta-time of 1440 minutes (the default) and that the time axis is to be turned on. (The alternate form of the TAXIS command would be "taxis,1440,on".) The TIME command tells PPLUS that the time axis will start at 0000 1 Jul 85, end at 0000 1 Dec 85, and that a sequence number of 1 corresponds to a time of 1200 1 Jan 85. The YLAB command sets the y-axis label. The LIMITS command tells PPLUS to omit data where Y = 0. The VARS command is not needed since the data is formatted with one group of data per record, with the X variable first and the Y variable second, which is the VARS command default. The CROSS command suppresses the drawing of a solid line through x=0, y=0 on the plot. The BOX command suppresses the drawing of a box around the entire plotting region. The SKP command names the data file and skips past the 5 header records at the beginning of the data file. The RD command reads the data. The PLTYPE command sets the plotting medium to be both Tektronix compatible and binary suitable for routing to hardcopy devices. The PLTNME sets the name of the output plot file. The PLOT command generates the plot. See the Command Description chapter for a full description of all PPLUS commands.</p>
 <p align="left"><b>ppl&gt;format (17x,f3.0,7x,f5.0) </b></p>
 <p align="left"><b>ppl&gt;taxis,on </b></p>
 <p align="left"><b>ppl&gt;time,W8507010000,W8512010000,W8501011200 </b></p>
@@ -372,7 +373,7 @@ xmlns:schema="http://schema.org/">
 <p align="left"><b>ppl&gt;pltype,2 </b></p>
 <p align="left"><b>ppl&gt;pltnme,atlas.plt </b></p>
 <p align="left"><b>ppl&gt;plot,ATLAS Air Temperature at 2N 165E </b></p>
-<p align="left">Additional examples are in the directory PPL$EXAMPLES in the form of PPLUS command files, which are the files with extension .PPC. Use the VAX/VMS command "DIR PPL$EXAMPLES:*.PPC" to see what the file names are. You can run these command files with the VAX/VMS command "PPLUS PPL$EXAMPLES:xxx.PPC", where xxx is the name of the PPLUS command file. The file will generate a plot on your terminal. Enter a &lt;CR&gt; to exit from graphics mode and return to the VAX/VMS prompt. (Be sure that you ha                                                                                                                                                                                           
+<p align="left">Additional examples are in the directory PPL$EXAMPLES in the form of PPLUS command files, which are the files with extension .PPC. Use the VAX/VMS command "DIR PPL$EXAMPLES:*.PPC" to see what the file names are. You can run these command files with the VAX/VMS command "PPLUS PPL$EXAMPLES:xxx.PPC", where xxx is the name of the PPLUS command file. The file will generate a plot on your terminal. Enter a &lt;CR&gt; to exit from graphics mode and return to the VAX/VMS prompt. (Be sure that you have first defined the PPLUS symbols according to the Getting Started chapter before you do this.) See the chapter on Command Files for more information about using PPLUS command files.</p>
 <p align="left">You can copy these PPLUS command files to your own directory with the VAX/VMS command "COPY PPL$EXAMPLES:*.PPC []". Then you can run them with the VAX/VMS command "PPLUS xxx.PPC", where xxx is the name of the PPLUS command file. You can experiment with PPLUS commands by editing the PPLUS command file to change the appearance of the plot, and then run PPLUS again with your new command file.</p>
 <p> </p>
 </div>

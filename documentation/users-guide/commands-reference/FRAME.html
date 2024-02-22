@@ -11,6 +11,9 @@ xmlns:sioct="http://rdfs.org/sioc/types#"
 xmlns:skos="http://www.w3.org/2004/02/skos/core#"
 xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
 xmlns:schema="http://schema.org/">
+
+<!-- Mirrored from ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/FRAME by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Jun 2023 18:11:26 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head profile="http://www.w3.org/1999/xhtml/vocab">
 <title>FRAME - Ferret/PyFerret Documentation</title>
 
@@ -176,14 +179,11 @@ xmlns:schema="http://schema.org/">
 <ul>
 <li id="menu-1338-1" class="first odd sf-item-1 sf-depth-3 sf-no-children"><a href="../../demos/ferret-tutorial-script.html" class="sf-depth-3">Ferret Tour</a></li>
 <li id="menu-1618-1" class="middle even sf-item-2 sf-depth-3 sf-no-children"><a href="../../demos/dsg-files-discrete-sampling-geometries-demo.html" class="sf-depth-3">DSG files: Discrete Sampling Geometries Demo</a></li>
-<li id="menu-1337-1" class="middle odd sf-item-3 sf-depth-3 sf-total-children-5 sf-parent-children-0 sf-single-children-5 menuparent"><a href="../../ferret-tutorials.html" class="sf-depth-3 menuparent">External Function Examples</a>
-<ul>
-<li id="menu-1343-1" class="first odd sf-item-1 sf-depth-4 sf-no-children"><a href="../../demos/sorting-demo.html" class="sf-depth-4">Ferret sorting demo (1)</a></li>
-<li id="menu-1591-1" class="middle even sf-item-2 sf-depth-4 sf-no-children"><a href="../../demos/ferret-sorting-demo.html" class="sf-depth-4">Ferret sorting demo (2)</a></li>
+<li id="menu-1591-1" class="middle even sf-item-2 sf-depth-4 sf-no-children"><a href="../../demos/ferret-sorting-demo.html" class="sf-depth-4">Ferret sorting demo</a></li>
 <li id="menu-1344-1" class="middle odd sf-item-3 sf-depth-4 sf-no-children"><a href="../../demos/how-to-use-ferret-external-functions-for-computing-ffts.html" class="sf-depth-4">Fast Fourier Transforms demo</a></li>
 <li id="menu-1345-1" class="middle even sf-item-4 sf-depth-4 sf-no-children"><a href="../../demos/ferret-eof-demo.html" class="sf-depth-4">Empirical Orthogonal Functions demo</a></li>
 <li id="menu-1346-1" class="last odd sf-item-5 sf-depth-4 sf-no-children"><a href="../../demos/ferret-objective-analysis.html" class="sf-depth-4">Ferret objective analysis demo</a></li>
-</ul></li>
+
 <li id="menu-1353-1" class="middle even sf-item-4 sf-depth-3 sf-no-children"><a href="../../demos/ferret-palette-demo.html" class="sf-depth-3">Ferret Palette Demo</a></li>
 <li id="menu-1350-1" class="middle odd sf-item-5 sf-depth-3 sf-no-children"><a href="../../demos/ferret-map-projections-demo.html" class="sf-depth-3">Map projections</a></li>
 <li id="menu-1354-1" class="middle even sf-item-6 sf-depth-3 sf-no-children"><a href="../../demos/ferret-polygon-vector-demo.html" class="sf-depth-3">Ferret polygon vector demo</a></li>
@@ -263,7 +263,7 @@ yes? FRAME/FILE=myvar.gif
 <p align="left"><a name="_VPINDEXENTRY_1387" id="_VPINDEXENTRY_1387"></a><a name="_VPINDEXENTRY_1389" id="_VPINDEXENTRY_1389"></a>F<a name="_VPINDEXENTRY_1388" id="_VPINDEXENTRY_1388"></a>RAME/<b>FORMAT=format</b> controls the format of the file produced.</p>
 <p align="left">[ in older versions of Ferret, FRAME/<b>FORMAT=HDF</b> appends an HDF raster 8 drawn to the specified or implied input file. This is not currently supported. ]</p>
 <p> </p>
-<p align="left"><a name="PartII-frame_format_gif" id="PartII-frame_format_gif"></a><a name="_VPINDEXENTRY_1390" id="_VPINDEXENTRY_1390"></a><a name="_VPINDEXENTRY_1391" id="_VPINDEXENTRY_1391"></a>FRAME/<b>FORMAT=GIF</b> creates a new GIF file, renaming any existing GIF file with the specified or implied name using a relative version number. Note that if Ferret is running with an x-server, Ferret creates a GIF image by requesting the image back from your screen (your X server). This means that the X server                                                                                                                                                                                                                                                  
+<p align="left"><a name="PartII-frame_format_gif" id="PartII-frame_format_gif"></a><a name="_VPINDEXENTRY_1390" id="_VPINDEXENTRY_1390"></a><a name="_VPINDEXENTRY_1391" id="_VPINDEXENTRY_1391"></a>FRAME/<b>FORMAT=GIF</b> creates a new GIF file, renaming any existing GIF file with the specified or implied name using a relative version number. Note that if Ferret is running with an x-server, Ferret creates a GIF image by requesting the image back from your screen (your X server). This means that the X server normally has to be configured as pseudo-color. An alternative approach which does not share this restriction is to start Ferret with "<a href="../introduction/GETTING-STARTED.html#_VPINDEXENTRY_12" title="1.2 GETTING STARTED">ferret -gif</a>"</p>
 <p align="left" class="pnormal">In PyFerret, the formats include PNG, PDF, PS, and SVG, see below.</p>
 <p><a name="_frame_transparent" id="_frame_transparent"></a></p>
 <p align="left">FRAME/<b>TRANSPARENT</b></p>
@@ -294,7 +294,7 @@ Specifies the name of the output file. If /FORMAT is not specified the output fo
 The /XPIXELS and /YPIXELS options to the FRAME command in PyFerret allows one to specify the pixel size of raster-type (PNG, JPEG) saved images.The current image is scaled to the desired size when saving it.Only one of these options may be given as the aspect ratio of the plot is always preserved.</p>
 <p class="pnormal"><a name="frame_pyferret_xinches" id="frame_pyferret_xinches"></a><b>FRAME /XINCHES= /YINCHES=</b><br />
 The /XINCHES and /YINCHES options to the FRAME command in PyFerret allows one to specify the inches size of vector-type (PostScript, PDF, SVG) saved images.The current image is scaled to the desired size when saving it.Only one of these options may be given as the aspect ratio of the plot is always preserved.</p>
-<p class="pnormal"><a name="frame_pyferret_annotate" id="frame_pyferret_annotate"></a><b>FRAME /ANNOTATE=</b><br /><em>Note: </em><em>experimental</em> The /ANNOTATE option to the FRAME command in PyFerret can be used to add lines of annotations to the top of the saved plot. The height of the saved image will be increased so as to contain the annotations without changing the size of the plot underneath. The value given to the /ANNOTATE option should be a Ferret string variable. Each string in this variable                                                                                                                                                                                                                                                                                              
+<p class="pnormal"><a name="frame_pyferret_annotate" id="frame_pyferret_annotate"></a><b>FRAME /ANNOTATE=</b><br /><em>Note: </em><em>experimental</em> The /ANNOTATE option to the FRAME command in PyFerret can be used to add lines of annotations to the top of the saved plot. The height of the saved image will be increased so as to contain the annotations without changing the size of the plot underneath. The value given to the /ANNOTATE option should be a Ferret string variable. Each string in this variable will be start on a new line. Each string will be treated as text formatted using the <a href="https://developer.gnome.org/pygtk/stable/pango-markup-language.html" target="_blank">Pango Markup Language</a>(<em>Note: this link goes to an external site</em>) which is similar to HTML.</p>
 <p> </p>
 </div>
 </div>

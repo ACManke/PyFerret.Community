@@ -11,6 +11,9 @@ xmlns:sioct="http://rdfs.org/sioc/types#"
 xmlns:skos="http://www.w3.org/2004/02/skos/core#"
 xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
 xmlns:schema="http://schema.org/">
+
+<!-- Mirrored from ferret.pmel.noaa.gov/Ferret/documentation/users-guide/appendix-c-ferret-specific-pplus-enhancements/HARD-COPY by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Jun 2023 18:11:58 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head profile="http://www.w3.org/1999/xhtml/vocab">
 <title>HARD COPY - Ferret/PyFerret Documentation</title>
 
@@ -176,14 +179,11 @@ xmlns:schema="http://schema.org/">
 <ul>
 <li id="menu-1338-1" class="first odd sf-item-1 sf-depth-3 sf-no-children"><a href="../../demos/ferret-tutorial-script.html" class="sf-depth-3">Ferret Tour</a></li>
 <li id="menu-1618-1" class="middle even sf-item-2 sf-depth-3 sf-no-children"><a href="../../demos/dsg-files-discrete-sampling-geometries-demo.html" class="sf-depth-3">DSG files: Discrete Sampling Geometries Demo</a></li>
-<li id="menu-1337-1" class="middle odd sf-item-3 sf-depth-3 sf-total-children-5 sf-parent-children-0 sf-single-children-5 menuparent"><a href="../../ferret-tutorials.html" class="sf-depth-3 menuparent">External Function Examples</a>
-<ul>
-<li id="menu-1343-1" class="first odd sf-item-1 sf-depth-4 sf-no-children"><a href="../../demos/sorting-demo.html" class="sf-depth-4">Ferret sorting demo (1)</a></li>
-<li id="menu-1591-1" class="middle even sf-item-2 sf-depth-4 sf-no-children"><a href="../../demos/ferret-sorting-demo.html" class="sf-depth-4">Ferret sorting demo (2)</a></li>
+<li id="menu-1591-1" class="middle even sf-item-2 sf-depth-4 sf-no-children"><a href="../../demos/ferret-sorting-demo.html" class="sf-depth-4">Ferret sorting demo</a></li>
 <li id="menu-1344-1" class="middle odd sf-item-3 sf-depth-4 sf-no-children"><a href="../../demos/how-to-use-ferret-external-functions-for-computing-ffts.html" class="sf-depth-4">Fast Fourier Transforms demo</a></li>
 <li id="menu-1345-1" class="middle even sf-item-4 sf-depth-4 sf-no-children"><a href="../../demos/ferret-eof-demo.html" class="sf-depth-4">Empirical Orthogonal Functions demo</a></li>
 <li id="menu-1346-1" class="last odd sf-item-5 sf-depth-4 sf-no-children"><a href="../../demos/ferret-objective-analysis.html" class="sf-depth-4">Ferret objective analysis demo</a></li>
-</ul></li>
+
 <li id="menu-1353-1" class="middle even sf-item-4 sf-depth-3 sf-no-children"><a href="../../demos/ferret-palette-demo.html" class="sf-depth-3">Ferret Palette Demo</a></li>
 <li id="menu-1350-1" class="middle odd sf-item-5 sf-depth-3 sf-no-children"><a href="../../demos/ferret-map-projections-demo.html" class="sf-depth-3">Map projections</a></li>
 <li id="menu-1354-1" class="middle even sf-item-6 sf-depth-3 sf-no-children"><a href="../../demos/ferret-polygon-vector-demo.html" class="sf-depth-3">Ferret polygon vector demo</a></li>
@@ -238,6 +238,7 @@ xmlns:schema="http://schema.org/">
 <div class="block-inner clearfix">
  
 <div class="content clearfix">
+<article about="/Ferret/documentation/users-guide/appendix-c-ferret-specific-pplus-enhancements/HARD-COPY" typeof="sioc:Item foaf:Document" class="node node-documentation-page node-promoted node-published node-not-sticky author-burger odd clearfix" id="node-documentation-page-558">
 
 <!-- add the following line to print out updated date -->
 <!-- add the following line to print out the page description -->
@@ -251,7 +252,7 @@ xmlns:schema="http://schema.org/">
 <p align="left">PostScript formatted files suitable for printing can be generated from PPL+ metafiles using the gksm2ps command. Several command line arguments permit the tailoring of the output. The command and its arguments are:</p>
 <p align="left"> gksm2ps:Send PostScript translation of GKS metafiles to a file</p>
 <p align="left"> usage: gksm2ps [-h] [-p landscape||portrait] [-l ps||cps] [-d cps||phaser] \<br /> [-X || -o &lt;ps_output_file&gt;] [-R] [-a] [-g WxH+X+Y] [-v] file(s)</p>
-<p align="left"> <b> -h </b> print this help message<br /><b> -p</b> page orientation, landscape or portrait (default fits to page)<br /><b> -l</b> line styles, ps == monochrome (default), cps == color<br /><b>-d</b> device type, cps == Postscript (default), phaser == TEK phaser PS<br /><b> -X </b> Send output to your Xwindow for preview instead of a file<br /><b> -o</b> output file name (default name is 'gksm2ps_output.ps')<br /><b> -R </b> do not rename files with a date stamp appended (default is to stam                                                                                                                                                                                                                                                                                                           
+<p align="left"> <b> -h </b> print this help message<br /><b> -p</b> page orientation, landscape or portrait (default fits to page)<br /><b> -l</b> line styles, ps == monochrome (default), cps == color<br /><b>-d</b> device type, cps == Postscript (default), phaser == TEK phaser PS<br /><b> -X </b> Send output to your Xwindow for preview instead of a file<br /><b> -o</b> output file name (default name is 'gksm2ps_output.ps')<br /><b> -R </b> do not rename files with a date stamp appended (default is to stamp)<br /><b> -a </b> make hard copy the size of the original plot (default fits to page)<br /><b> -g </b> WxH+X+Y WIDTH, HEIGHT, XOFFSET, &amp; YOFFSET in points<br /><b>-v</b> list version number of gksm2ps and do nothing else <br /><b>file(s) </b> The specific metafile(s) to be translated.<b> </b></p>
 <p align="left"> More about the arguments and their effects:</p>
 <p align="left"><b> -h </b>Simply print the above help message.</p>
 <p align="left"><b> -p </b>Specifies the orientation of the plot on the page to be landscape (with the long side of the page horizontal), or portrait (the short side horizontal). The default fits the plot on the page in the orientaion that best fits.</p>

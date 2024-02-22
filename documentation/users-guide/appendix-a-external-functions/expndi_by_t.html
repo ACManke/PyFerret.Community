@@ -179,14 +179,11 @@ xmlns:schema="http://schema.org/">
 <ul>
 <li id="menu-1338-1" class="first odd sf-item-1 sf-depth-3 sf-no-children"><a href="../../demos/ferret-tutorial-script.html" class="sf-depth-3">Ferret Tour</a></li>
 <li id="menu-1618-1" class="middle even sf-item-2 sf-depth-3 sf-no-children"><a href="../../demos/dsg-files-discrete-sampling-geometries-demo.html" class="sf-depth-3">DSG files: Discrete Sampling Geometries Demo</a></li>
-<li id="menu-1337-1" class="middle odd sf-item-3 sf-depth-3 sf-total-children-5 sf-parent-children-0 sf-single-children-5 menuparent"><a href="../../ferret-tutorials.html" class="sf-depth-3 menuparent">External Function Examples</a>
-<ul>
-<li id="menu-1343-1" class="first odd sf-item-1 sf-depth-4 sf-no-children"><a href="../../demos/sorting-demo.html" class="sf-depth-4">Ferret sorting demo (1)</a></li>
-<li id="menu-1591-1" class="middle even sf-item-2 sf-depth-4 sf-no-children"><a href="../../demos/ferret-sorting-demo.html" class="sf-depth-4">Ferret sorting demo (2)</a></li>
+<li id="menu-1591-1" class="middle even sf-item-2 sf-depth-4 sf-no-children"><a href="../../demos/ferret-sorting-demo.html" class="sf-depth-4">Ferret sorting demo</a></li>
 <li id="menu-1344-1" class="middle odd sf-item-3 sf-depth-4 sf-no-children"><a href="../../demos/how-to-use-ferret-external-functions-for-computing-ffts.html" class="sf-depth-4">Fast Fourier Transforms demo</a></li>
 <li id="menu-1345-1" class="middle even sf-item-4 sf-depth-4 sf-no-children"><a href="../../demos/ferret-eof-demo.html" class="sf-depth-4">Empirical Orthogonal Functions demo</a></li>
 <li id="menu-1346-1" class="last odd sf-item-5 sf-depth-4 sf-no-children"><a href="../../demos/ferret-objective-analysis.html" class="sf-depth-4">Ferret objective analysis demo</a></li>
-</ul></li>
+
 <li id="menu-1353-1" class="middle even sf-item-4 sf-depth-3 sf-no-children"><a href="../../demos/ferret-palette-demo.html" class="sf-depth-3">Ferret Palette Demo</a></li>
 <li id="menu-1350-1" class="middle odd sf-item-5 sf-depth-3 sf-no-children"><a href="../../demos/ferret-map-projections-demo.html" class="sf-depth-3">Map projections</a></li>
 <li id="menu-1354-1" class="middle even sf-item-6 sf-depth-3 sf-no-children"><a href="../../demos/ferret-polygon-vector-demo.html" class="sf-depth-3">Ferret polygon vector demo</a></li>
@@ -241,7 +238,7 @@ xmlns:schema="http://schema.org/">
 <div class="block-inner clearfix">
  
 <div class="content clearfix">
-<article about="documentation/users-guide/appendix-a-external-functions/expndi_by_t" typeof="sioc:Item foaf:Document" class="node node-documentation-page node-promoted node-published node-not-sticky author-ansley odd clearfix" id="node-documentation-page-534">
+<article about="/Ferret/documentation/users-guide/appendix-a-external-functions/expndi_by_t" typeof="sioc:Item foaf:Document" class="node node-documentation-page node-promoted node-published node-not-sticky author-ansley odd clearfix" id="node-documentation-page-534">
 
 <!-- add the following line to print out updated date -->
 <!-- add the following line to print out the page description -->
@@ -357,17 +354,104 @@ STATION   DAY     LON      LAT     TEMP    SALINITY
 3          13    17.11    41.3     25.1     36.27
 3          14    17.11    41.3     24.56    36.24
 3          15    17.11    41.3     24.81    36.3
-3          16    17.11    41.3     24.8     36.31</pre><p align="left">Open this dataset. Read the data as single 1-D lists, then define a XT variable.</p>
+3          16    17.11    41.3     24.8     36.31</pre>
+<p align="left">Open this dataset. Read the data as single 1-D lists, then define a XT variable.</p>
+
+<p align="left">Open this dataset. Read the data as single 1-D lists, then define a XT variable.</p>
 <pre>
-yes? define axis/x=1:22:1 xinyes? define grid/x=xin input_gridyes? file/skip=1/var="sta, day, lat, lon, temp, salt"/grid=input_grid tprofiles.datyes? list day, temp, salt DATA SET: ./tprofiles.dat X: 0.5 to 22.5 Column 1: DAY Column 2: TEMP Column 3: SALT DAY TEMP SALT1 / 1: 5.00 24.25 36.422 / 2: 6.00 24.46 36.423 / 3: 7.00 24.23 36.434 / 4: 5.00 24.74 36.065 / 5: 6.00 24.65 36.056 / 6: 7.00 24.74 36.007 / 7: 8.00 24.75 35.988 / 8: 9.00 24.75 35.959 / 9: 10.00 24.75 35.9510 / 10: 11.00 24.75 35.9611 / 11:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
- 
- 
-</pre><p>Now we could define a time axis in units of days, from the data in variable DEPTH, and regrid variable sal_xt to that axis using the @ASN transformation. We could also go on to use the information in the file to locate the profiles in X and Y.</p>
+
+yes? define axis/x=1:22:1 xin
+yes? define grid/x=xin input_grid
+yes? file/skip=1/var="sta, day, lat, lon, temp, salt"/grid=input_grid tprofiles.dat
+yes? list day, temp, salt 
+             DATA SET: ./tprofiles.dat
+             X: 0.5 to 22.5
+ Column  1: DAY is day
+ Column  2: TEMP is temp
+ Column  3: SALT is salt
+             DAY   TEMP   SALT
+1    /  1:   5.00  24.25  36.42
+2    /  2:   6.00  24.46  36.42
+3    /  3:   7.00  24.23  36.43
+4    /  4:   5.00  24.74  36.06
+5    /  5:   6.00  24.65  36.05
+6    /  6:   7.00  24.74  36.00
+7    /  7:   8.00  24.75  35.98
+8    /  8:   9.00  24.75  35.95
+9    /  9:  10.00  24.75  35.95
+10   / 10:  11.00  24.75  35.96
+11   / 11:   5.00  24.79  36.34
+12   / 12:   6.00  24.80  36.34
+13   / 13:   7.00  24.79  36.35
+14   / 14:   8.00  24.78  36.34
+15   / 15:   9.00  24.78  36.31
+16   / 16:  10.00  24.78  36.34
+17   / 17:  11.00  24.77  36.31
+18   / 18:  12.00  24.78  36.32
+19   / 19:  13.00  25.10  36.27
+20   / 20:  14.00  24.56  36.24
+21   / 21:  15.00  24.81  36.30
+22   / 22:  16.00  24.80  36.31
+
+yes? let mask = if day[i=@ddb] LT 0 then 1
+yes? list day, mask 
+             DATA SET: ./tprofiles.dat
+             X: 0.5 to 22.5
+ Column  1: DAY is day
+ Column  2: MASK is IF DAY[I=@DDB] LT 0 THEN 1
+             DAY   MASK
+1    /  1:   5.00   ....
+2    /  2:   6.00   ....
+3    /  3:   7.00   ....
+4    /  4:   5.00  1.000
+5    /  5:   6.00   ....
+6    /  6:   7.00   ....
+7    /  7:   8.00   ....
+8    /  8:   9.00   ....
+9    /  9:  10.00   ....
+10   / 10:  11.00   ....
+11   / 11:   5.00  1.000
+12   / 12:   6.00   ....
+13   / 13:   7.00   ....
+14   / 14:   8.00   ....
+15   / 15:   9.00   ....
+16   / 16:  10.00   ....
+17   / 17:  11.00   ....
+18   / 18:  12.00   ....
+19   / 19:  13.00   ....
+20   / 20:  14.00   ....
+21   / 21:  15.00   ....
+22   / 22:  16.00   ....
+
+yes? let n_profiles = `1 + mask[i=@ngd]`
+ ! We may be able to define the size of the profile using the data, 
+ ! Depending on the information available we might just give some upper bound.
+
+yes? let max_profile_len = day[i=@max] - day[i=@min] + 1
+yes? let sal_xt = expndi_by_t(salt, mask, n_profiles, max_profile_len)
+yes? list sal_xt 
+             VARIABLE : EXPNDI_BY_T(SALT, MASK, N_PROFILES, MAX_PROFILE_LEN)
+             FILENAME : tprofiles.dat
+             SUBSET   : 3 by 12 points (X-T)
+               1      2      3    
+               1      2      3
+ 1    /  1:  36.42  36.06  36.34
+ 2    /  2:  36.42  36.05  36.34
+ 3    /  3:  36.43  36.00  36.35
+ 4    /  4:   ....  35.98  36.34
+ 5    /  5:   ....  35.95  36.31
+ 6    /  6:   ....  35.95  36.34
+ 7    /  7:   ....  35.96  36.31
+ 8    /  8:   ....   ....  36.32
+ 9    /  9:   ....   ....  36.27
+ 10   / 10:   ....   ....  36.24
+ 11   / 11:   ....   ....  36.30
+ 12   / 12:   ....   ....  36.31
+</pre>
+<p>Now we could define a time axis in units of days, from the data in variable DEPTH, and regrid variable sal_xt to that axis using the @ASN transformation. We could also go on to use the information in the file to locate the profiles in X and Y.</p>
 <p> </p>
 <p> </p>
-<pre>
- 
- </pre></div>
+</div>
 </div>
 </div>
 

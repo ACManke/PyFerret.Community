@@ -179,14 +179,11 @@ xmlns:schema="http://schema.org/">
 <ul>
 <li id="menu-1338-1" class="first odd sf-item-1 sf-depth-3 sf-no-children"><a href="../../demos/ferret-tutorial-script.html" class="sf-depth-3">Ferret Tour</a></li>
 <li id="menu-1618-1" class="middle even sf-item-2 sf-depth-3 sf-no-children"><a href="../../demos/dsg-files-discrete-sampling-geometries-demo.html" class="sf-depth-3">DSG files: Discrete Sampling Geometries Demo</a></li>
-<li id="menu-1337-1" class="middle odd sf-item-3 sf-depth-3 sf-total-children-5 sf-parent-children-0 sf-single-children-5 menuparent"><a href="../../ferret-tutorials.html" class="sf-depth-3 menuparent">External Function Examples</a>
-<ul>
-<li id="menu-1343-1" class="first odd sf-item-1 sf-depth-4 sf-no-children"><a href="../../demos/sorting-demo.html" class="sf-depth-4">Ferret sorting demo (1)</a></li>
-<li id="menu-1591-1" class="middle even sf-item-2 sf-depth-4 sf-no-children"><a href="../../demos/ferret-sorting-demo.html" class="sf-depth-4">Ferret sorting demo (2)</a></li>
+<li id="menu-1591-1" class="middle even sf-item-2 sf-depth-4 sf-no-children"><a href="../../demos/ferret-sorting-demo.html" class="sf-depth-4">Ferret sorting demo</a></li>
 <li id="menu-1344-1" class="middle odd sf-item-3 sf-depth-4 sf-no-children"><a href="../../demos/how-to-use-ferret-external-functions-for-computing-ffts.html" class="sf-depth-4">Fast Fourier Transforms demo</a></li>
 <li id="menu-1345-1" class="middle even sf-item-4 sf-depth-4 sf-no-children"><a href="../../demos/ferret-eof-demo.html" class="sf-depth-4">Empirical Orthogonal Functions demo</a></li>
 <li id="menu-1346-1" class="last odd sf-item-5 sf-depth-4 sf-no-children"><a href="../../demos/ferret-objective-analysis.html" class="sf-depth-4">Ferret objective analysis demo</a></li>
-</ul></li>
+
 <li id="menu-1353-1" class="middle even sf-item-4 sf-depth-3 sf-no-children"><a href="../../demos/ferret-palette-demo.html" class="sf-depth-3">Ferret Palette Demo</a></li>
 <li id="menu-1350-1" class="middle odd sf-item-5 sf-depth-3 sf-no-children"><a href="../../demos/ferret-map-projections-demo.html" class="sf-depth-3">Map projections</a></li>
 <li id="menu-1354-1" class="middle even sf-item-6 sf-depth-3 sf-no-children"><a href="../../demos/ferret-polygon-vector-demo.html" class="sf-depth-3">Ferret polygon vector demo</a></li>
@@ -241,7 +238,7 @@ xmlns:schema="http://schema.org/">
 <div class="block-inner clearfix">
  
 <div class="content clearfix">
-<article about="documentation/users-guide/appendix-a-external-functions/tax_datestring" typeof="sioc:Item foaf:Document" class="node node-documentation-page node-promoted node-published node-not-sticky author-ansley odd clearfix" id="node-documentation-page-603">
+<article about="/Ferret/documentation/users-guide/appendix-a-external-functions/tax_datestring" typeof="sioc:Item foaf:Document" class="node node-documentation-page node-promoted node-published node-not-sticky author-ansley odd clearfix" id="node-documentation-page-603">
 
 <!-- add the following line to print out updated date -->
 <!-- add the following line to print out the page description -->
@@ -310,7 +307,7 @@ Returns date string for time axis coordinate values.</b></p>
 <p> </p>
 <p>Note that the variables you specify for the first two arguments will be loaded into memory. So, rather than giving a simple variable name, it's best to specify just a variable based on its time axis, say t[gt=b]. See example 1 below.</p>
 <p><a name="_TAX_single_precision" id="_TAX_single_precision"></a></p>
-<p><b>Caution: Previous to Ferret v6.8 only: </b><i>Although Ferret stores and computes with coordinate values in double-precision, argument 1 of this function is a single-precision expression. There is plenty of precision in double-precision data to handle 1-second time axes since year 0000 with accuracy, but if an axis has units of seconds and its time origin is too long before the coordinates you are looking at, the truncation to single precision in an expression such as t[gt=var] may result in duplicate                                                                                                                                                                                                                                                                                                                                                                                    
+<p><b>Caution: Previous to Ferret v6.8 only: </b><i>Although Ferret stores and computes with coordinate values in double-precision, argument 1 of this function is a single-precision expression. There is plenty of precision in double-precision data to handle 1-second time axes since year 0000 with accuracy, but if an axis has units of seconds and its time origin is too long before the coordinates you are looking at, the truncation to single precision in an expression such as t[gt=var] may result in duplicate values in the expression in argument 1. The function converts the single-precision time steps to their double precision coordinate counterparts, and if duplicate values are encountered, it will return an error message. (Previous to Ferret v6.73 the function did not get the coordinate values and returned inaccurate results.) See example 2 below for more details.</i></p>
 <p><b>Example 1:</b></p>
 <pre>
 yes? define axis/t=1-jan-1980:1-jan-1990:4/unit=days tax
@@ -333,29 +330,44 @@ SUBSET   : 10 points (T)
 </pre><p>In this example, one COULD specify just "sst" for the second argument, but in fact the whole variable for all time steps would then be loaded into memory as the variable is passed to the function. So, just give a variable representing the time axis.</p>
 <pre>
 yes? use "http://ferret.pmel.noaa.gov/thredds/dodsC/data/PMEL/COADS/coads_sst.cdf"
-yes? let tsteps = t[gt=sst,L=1200:1220:12]
-yes? list tax_datestring(tsteps, t[gt=sst], "year") VARIABLE : TAX_DATESTRING(TSTEPS, T[GT=SST], "year") DATA SET : COADS Surface Marine Observations (1854-1993) FILENAME : coads_sst.cdf FILEPATH : http://ferret.pmel.noaa.gov/thredds/dodsC/data/PMEL/COADS/ SUBSET : 9 points (TIME)
-DEC-1953 / 1:"1953" DEC-1954 / 2:"1954" DEC-1955 / 3:"1955" DEC-1956 / 4:"1956"
-DEC-1957 / 5:"1957" DEC-1958 / 6:"1958"
-DEC-1959 / 7:"1959" DEC-1960 / 8:"1960"
-DEC-1961 / 9:"1961"
+yes? let tsteps = t[gt=sst,L=1200:1320:12]
+yes? list tax_datestring(tsteps, t[gt=sst], "year")
+             VARIABLE : TAX_DATESTRING(TSTEPS, T[GT=SST], "year")
+             DATA SET : COADS Surface Marine Observations (1854-1993)
+             FILENAME : coads_sst.cdf
+             FILEPATH : http://ferret.pmel.noaa.gov/thredds/dodsC/data/PMEL/COADS/
+             SUBSET   : 11 points (TIME)
+ DEC-1953 /  1:"1953"
+ DEC-1954 /  2:"1954"
+ DEC-1955 /  3:"1955"
+ DEC-1956 /  4:"1956"
+ DEC-1957 /  5:"1957"
+ DEC-1958 /  6:"1958"
+ DEC-1959 /  7:"1959"
+ DEC-1960 /  8:"1960"
+ DEC-1961 /  9:"1961"
+ DEC-1962 / 10:"1962"
+ DEC-1963 / 11:"1963"
+
 </pre><p><b>Example 2:</b></p>
 <p><b>The precision issue described here is only a problem prior to Ferret v6.8:</b></p>
 <p>This time axis, defined with timesteps of days, but underlying units of seconds, can be converted to strings with the TAX_DATESTRING function. The function gets the coordinate values corresponding to t[gt=ssh].</p>
 <pre>
 yes? define axis/t=1-jan-2010:31-dec-2010:86400/unit=seconds taxis
-yes? let var = sin(t[gt=taxis])yes?  list/l=1:7 TAX_DATESTRING(t[gt=var], var, "seconds")
-VARIABLE : TAX_DATESTRING(T[GT=VAR], VAR, "seconds")
-SUBSET   : 7 points (TIME)
-01-JAN-2010 00 / 1:"31-DEC-2010 00:00:00"
-02-JAN-2010 00 / 2:"31-DEC-2010 00:00:00"
-03-JAN-2010 00 / 3:"31-DEC-2010 00:00:00"
-04-JAN-2010 00 / 4:"31-DEC-2010 00:00:00"
-05-JAN-2010 00 / 5:"31-DEC-2010 00:00:00"
-06-JAN-2010 00 / 6:"31-DEC-2010 00:00:00"
-07-JAN-2010 00 / 7:"31-DEC-2010 00:00:00"
+yes? let var = sin(t[gt=taxis])
+yes? list/l=1:7 TAX_DATESTRING(t[gt=var], var, "seconds")
+             VARIABLE : TAX_DATESTRING(T[GT=VAR], VAR, "seconds")
+             SUBSET   : 7 points (TIME)
+ 01-JAN-2010 00 / 1:"01-JAN-2010 00:00:00.0"
+ 02-JAN-2010 00 / 2:"02-JAN-2010 00:00:00.0"
+ 03-JAN-2010 00 / 3:"03-JAN-2010 00:00:00.0"
+ 04-JAN-2010 00 / 4:"04-JAN-2010 00:00:00.0"
+ 05-JAN-2010 00 / 5:"05-JAN-2010 00:00:00.0"
+ 06-JAN-2010 00 / 6:"06-JAN-2010 00:00:00.0"
+ 07-JAN-2010 00 / 7:"07-JAN-2010 00:00:00.0"
+
  
-</pre><p>The coordinates on the following time axis, with timesteps of 5 seconds and the default time origin in 1901 cannot be converted accurately to single precision values. Ferret uses it correctly but the tax_datestring function can't be used. (Previous to Ferret v6.73 the function did not check for this case and returned inaccurate results.)</p>
+</pre><p>The coordinates on the following time axis, with timesteps of 5 seconds and the default time origin in 1901 cannot be converted accurately to single precision values. Ferret uses the dataset correctly but the tax_datestring function can't be used. (Previous to Ferret v6.73 the function did not check for this case and returned inaccurate results.)</p>
 <pre>
 yes? define axis/t="1-jan-2010:00:00":"1-jan-2010:00:10":5/unit=seconds taxis
 yes? let var = sin(t[gt=taxis])

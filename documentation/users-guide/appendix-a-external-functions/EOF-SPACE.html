@@ -179,14 +179,11 @@ xmlns:schema="http://schema.org/">
 <ul>
 <li id="menu-1338-1" class="first odd sf-item-1 sf-depth-3 sf-no-children"><a href="../../demos/ferret-tutorial-script.html" class="sf-depth-3">Ferret Tour</a></li>
 <li id="menu-1618-1" class="middle even sf-item-2 sf-depth-3 sf-no-children"><a href="../../demos/dsg-files-discrete-sampling-geometries-demo.html" class="sf-depth-3">DSG files: Discrete Sampling Geometries Demo</a></li>
-<li id="menu-1337-1" class="middle odd sf-item-3 sf-depth-3 sf-total-children-5 sf-parent-children-0 sf-single-children-5 menuparent"><a href="../../ferret-tutorials.html" class="sf-depth-3 menuparent">External Function Examples</a>
-<ul>
-<li id="menu-1343-1" class="first odd sf-item-1 sf-depth-4 sf-no-children"><a href="../../demos/sorting-demo.html" class="sf-depth-4">Ferret sorting demo (1)</a></li>
-<li id="menu-1591-1" class="middle even sf-item-2 sf-depth-4 sf-no-children"><a href="../../demos/ferret-sorting-demo.html" class="sf-depth-4">Ferret sorting demo (2)</a></li>
+<li id="menu-1591-1" class="middle even sf-item-2 sf-depth-4 sf-no-children"><a href="../../demos/ferret-sorting-demo.html" class="sf-depth-4">Ferret sorting demo</a></li>
 <li id="menu-1344-1" class="middle odd sf-item-3 sf-depth-4 sf-no-children"><a href="../../demos/how-to-use-ferret-external-functions-for-computing-ffts.html" class="sf-depth-4">Fast Fourier Transforms demo</a></li>
 <li id="menu-1345-1" class="middle even sf-item-4 sf-depth-4 sf-no-children"><a href="../../demos/ferret-eof-demo.html" class="sf-depth-4">Empirical Orthogonal Functions demo</a></li>
 <li id="menu-1346-1" class="last odd sf-item-5 sf-depth-4 sf-no-children"><a href="../../demos/ferret-objective-analysis.html" class="sf-depth-4">Ferret objective analysis demo</a></li>
-</ul></li>
+
 <li id="menu-1353-1" class="middle even sf-item-4 sf-depth-3 sf-no-children"><a href="../../demos/ferret-palette-demo.html" class="sf-depth-3">Ferret Palette Demo</a></li>
 <li id="menu-1350-1" class="middle odd sf-item-5 sf-depth-3 sf-no-children"><a href="../../demos/ferret-map-projections-demo.html" class="sf-depth-3">Map projections</a></li>
 <li id="menu-1354-1" class="middle even sf-item-6 sf-depth-3 sf-no-children"><a href="../../demos/ferret-polygon-vector-demo.html" class="sf-depth-3">Ferret polygon vector demo</a></li>
@@ -241,7 +238,7 @@ xmlns:schema="http://schema.org/">
 <div class="block-inner clearfix">
  
 <div class="content clearfix">
-<article about="documentation/users-guide/appendix-a-external-functions/EOF-SPACE" typeof="sioc:Item foaf:Document" class="node node-documentation-page node-promoted node-published node-not-sticky author-burger odd clearfix" id="node-documentation-page-356">
+<article about="/Ferret/documentation/users-guide/appendix-a-external-functions/EOF-SPACE" typeof="sioc:Item foaf:Document" class="node node-documentation-page node-promoted node-published node-not-sticky author-burger odd clearfix" id="node-documentation-page-356">
 
 <!-- add the following line to print out updated date -->
 <!-- add the following line to print out the page description -->
@@ -258,7 +255,7 @@ xmlns:schema="http://schema.org/">
 <div class="field-items">
 <div class="field-item even" property="content:encoded"><p><a name="_VPID_562" id="_VPID_562"></a><a name="_VPINDEXENTRY_2010" id="_VPINDEXENTRY_2010"></a><a name="_VPINDEXENTRY_2011" id="_VPINDEXENTRY_2011"></a><a name="_VPINDEXENTRY_2012" id="_VPINDEXENTRY_2012"></a></p>
 <p align="left"><b>EOF_SPACE(A, FRAC_TIMESER)</b> Returns EOF (Empirical Orthogonal Function) spacial fields(eigenfunctions) from x-y-z-time field.</p>
-<p align="left">If running Ferret V6.8 and higher, see <strong><a href="#_eofsvd_space">EOFSVD_SPACE</a></strong>, below. If there are gaps in your data, you may choose to use one of Ferret's filling transformations to fill the gaps and then compute the EOF results using EOFSVD functions. Or, see the instructions in the the <strong><a href="../../release-notes/version-6-93-release-notes.html">Version 6.93 Release Notes </a></strong>to install the non-SVD functions.  They run much slower, and return a resul                                             
+<p align="left">If running Ferret V6.8 and higher, see <strong><a href="#_eofsvd_space">EOFSVD_SPACE</a></strong>, below. If there are gaps in your data, you may choose to use one of Ferret's filling transformations to fill the gaps and then compute the EOF results using EOFSVD functions. Or, see the instructions in the the <strong><a href="../../release-notes/version-6-93-release-notes.html">Version 6.93 Release Notes </a></strong>to install the non-SVD functions.  They run much slower, and return a result when there are gaps in the time series.</p>
 <p align="left">The computation is made in the X-Y and T directions.  If the grid of the argument has further dimensions such as Z, then the XYT computation is made independently at each Z level.</p>
 <p align="left"> </p>
 <table><tbody><tr><td>
@@ -313,7 +310,7 @@ xmlns:schema="http://schema.org/">
 EOF_SPACE(A[x=20:40,y=2s:40n,l=1:58],FRAC_TIMESER)</pre><p align="left">will prevent any confusion about the region. See the note in chapter 3 on the <a href="../variables-xpressions/XPRESSIONS.html#_VPINDEXENTRY_306">context of variables passed to functions</a>.</p>
 <p align="left">The method is an implementation of Chelton's '82 method for finding EOFs of gappy time series. If there are no gaps, it reduces to ordinary EOFs.</p>
 <p align="left">The EOF analysis solves a matrix problem where the matrix is dimensioned (NX*NY*NZ) by NT, which can quickly become quite large. The EOF functions use other workspace as well which demands even more memory, and often memory must be increased with the SET MEMORY command. Regridding to a coarser grid or restricting the region may be necessary.</p>
-<p align="left">See the example under EOF_STAT for more on the input parameters, and see the demonstration <a href="http://ferret.pmel.noaa.gov/static/Demos/ef_eof_demo/ef_eof_demo.html">ef_eof_demo.jnl </a>for examples of this function.</p>
+<p align="left">See the example under EOF_STAT for more on the input parameters, and run the demonstration script ef_eofsvd_demo.jnl for examples of this function.</p>
 <p align="left"><b>Note</b>: Earlier versions of the EOF functions had one more parameter. Check the version you have by saying</p>
 <pre>
 yes? SHOW FUNCTION eof*</pre><p> </p>
@@ -362,7 +359,7 @@ yes? SHOW FUNCTION eof*</pre><p> </p>
 <p align="left">ABSTRACT 1 to NEOF</p>
 </td>
 </tr></tbody></table><p align="left"> </p>
-<p align="left">The code runs a program contributed by Billy Kessler. It finds "traditionally-scaled" EOFs using a Singular Value Decomposition routine. "Traditionally-scaled" means that the units of the EOFs are the units of the variable, while the TAFs are dimensionless. The routine is based on Numerical Recipes routine svdcmp.f. The result of EOF decomposition is that a function f(x,t) of space and time is decomposed into a sum of products: f(x,t) = SUM[v(x)*a(t)]. The v(x) are referred to as the EOFs, o                                                                                                                                                                            
+<p align="left">The code runs a program contributed by Billy Kessler. It finds "traditionally-scaled" EOFs using a Singular Value Decomposition routine. "Traditionally-scaled" means that the units of the EOFs are the units of the variable, while the TAFs are dimensionless. The routine is based on Numerical Recipes routine svdcmp.f. The result of EOF decomposition is that a function f(x,t) of space and time is decomposed into a sum of products: f(x,t) = SUM[v(x)*a(t)]. The v(x) are referred to as the EOFs, or eigenvectors, while the a(t) are the "Time Amplitude Functions" (TAFs) (Also called "Principal Components") The number of terms in the sum (number of non-zero EOFs)<br />
 is the minimum of (# of locations,# of times). Based on Numerical Recipes subroutine svdcmp.</p>
 <p align="left"> </p>
 <p align="left">The EOFSVD functions all make the same computations, returning different portions of the results. EOFSVD_SPACE returns the eigenfunctions, normalized so that they have the units of data, while time amplitude functions (TAF's) are dimensionless. Thus the sum of the values of a given EOF = sqrt(eigenvalue), and the mean of a given TAF = 1. EOFSVD_STAT returns some useful statistics: the number of EOF's which were computed and normalized for the parameters given; the
@@ -370,7 +367,7 @@ is the minimum of (# of locations,# of times). Based on Numerical Recipes subrou
 <pre>
 EOFSVD_SPACE(A[x=20:40,y=2s:40n,l=1:58])</pre><p align="left">will prevent any confusion about the region. See the note in chapter 3 on the <a href="../variables-xpressions/XPRESSIONS.html#_VPINDEXENTRY_306">context of variables passed to functions</a>.</p>
 <p align="left">The EOFSVD analysis solves a matrix problem where the matrix is dimensioned (NX*NY*NZ) by NT, which can quickly become quite large. The EOFSVD functions use other workspace as well which demands even more memory, and often memory must be increased with the SET MEMORY command. Regridding to a coarser grid or restricting the region may be necessary.</p>
-<p align="left">See the example under EOF_STAT for more information on calling these functions, and see the demonstration <a href="http://ferret.pmel.noaa.gov/static/Demos/ef_eof_demo/ef_eof_demo.html">ef_eof_demo.jnl </a>for examples of this function.</p>
+<p align="left">See the example under EOF_STAT for more information on calling these functions, and run the demonstration script ef_eofsvd_demo.jnl for examples of this function.</p>
 <p> </p>
 </div>
 </div>

@@ -179,14 +179,11 @@ xmlns:schema="http://schema.org/">
 <ul>
 <li id="menu-1338-1" class="first odd sf-item-1 sf-depth-3 sf-no-children"><a href="../../demos/ferret-tutorial-script.html" class="sf-depth-3">Ferret Tour</a></li>
 <li id="menu-1618-1" class="middle even sf-item-2 sf-depth-3 sf-no-children"><a href="../../demos/dsg-files-discrete-sampling-geometries-demo.html" class="sf-depth-3">DSG files: Discrete Sampling Geometries Demo</a></li>
-<li id="menu-1337-1" class="middle odd sf-item-3 sf-depth-3 sf-total-children-5 sf-parent-children-0 sf-single-children-5 menuparent"><a href="../../ferret-tutorials.html" class="sf-depth-3 menuparent">External Function Examples</a>
-<ul>
-<li id="menu-1343-1" class="first odd sf-item-1 sf-depth-4 sf-no-children"><a href="../../demos/sorting-demo.html" class="sf-depth-4">Ferret sorting demo (1)</a></li>
-<li id="menu-1591-1" class="middle even sf-item-2 sf-depth-4 sf-no-children"><a href="../../demos/ferret-sorting-demo.html" class="sf-depth-4">Ferret sorting demo (2)</a></li>
+<li id="menu-1591-1" class="middle even sf-item-2 sf-depth-4 sf-no-children"><a href="../../demos/ferret-sorting-demo.html" class="sf-depth-4">Ferret sorting demo</a></li>
 <li id="menu-1344-1" class="middle odd sf-item-3 sf-depth-4 sf-no-children"><a href="../../demos/how-to-use-ferret-external-functions-for-computing-ffts.html" class="sf-depth-4">Fast Fourier Transforms demo</a></li>
 <li id="menu-1345-1" class="middle even sf-item-4 sf-depth-4 sf-no-children"><a href="../../demos/ferret-eof-demo.html" class="sf-depth-4">Empirical Orthogonal Functions demo</a></li>
 <li id="menu-1346-1" class="last odd sf-item-5 sf-depth-4 sf-no-children"><a href="../../demos/ferret-objective-analysis.html" class="sf-depth-4">Ferret objective analysis demo</a></li>
-</ul></li>
+
 <li id="menu-1353-1" class="middle even sf-item-4 sf-depth-3 sf-no-children"><a href="../../demos/ferret-palette-demo.html" class="sf-depth-3">Ferret Palette Demo</a></li>
 <li id="menu-1350-1" class="middle odd sf-item-5 sf-depth-3 sf-no-children"><a href="../../demos/ferret-map-projections-demo.html" class="sf-depth-3">Map projections</a></li>
 <li id="menu-1354-1" class="middle even sf-item-6 sf-depth-3 sf-no-children"><a href="../../demos/ferret-polygon-vector-demo.html" class="sf-depth-3">Ferret polygon vector demo</a></li>
@@ -241,7 +238,7 @@ xmlns:schema="http://schema.org/">
 <div class="block-inner clearfix">
  
 <div class="content clearfix">
-<article about="documentation/users-guide/appendix-a-external-functions/LSL-LOWPASS" typeof="sioc:Item foaf:Document" class="node node-documentation-page node-promoted node-published node-not-sticky author-burger odd clearfix" id="node-documentation-page-573">
+<article about="/Ferret/documentation/users-guide/appendix-a-external-functions/LSL-LOWPASS" typeof="sioc:Item foaf:Document" class="node node-documentation-page node-promoted node-published node-not-sticky author-burger odd clearfix" id="node-documentation-page-573">
 
 <!-- add the following line to print out updated date -->
 <!-- add the following line to print out the page description -->
@@ -310,7 +307,7 @@ xmlns:schema="http://schema.org/">
 </tr></tbody></table><p align="left">This function low-pass filters an equally spaced time series using least-squares approximation to the ideal low-pass filter of Bloomfield with Lanczos convergence factors. It is very similar to subroutine LOPASS in Chapter 6, p. 149, of Bloomfield, P., 1976, Fourier Analysis of Time Series: An Introduction, John Wiley &amp; Sons, New York, 258 pp.</p>
 <p align="left">The main difference is that the present routine takes account of missing values in the input time series Values near the ends and near gaps are filled with the missing value flag.</p>
 <p align="left">The cutoff period (measured in units of delta t) is the period at which the filter attains 1/2 amplitude or 1/4 "energy". The cutoff_period must be less than or equal to N, the length of the time axis.</p>
-<p align="left">The filter span is the number of input data points used in each filtered output point. A wide filter gives a narrow frequency response transition band, but leads to ringing near data discontinuities and loss of filtered values at the end points and surrounding missing values. A narrow filter reduces ringing and output data loss, but gives a wider frequency transition width, i.e. it falls off less rapidly at frequencies higher than the cutoff. The filter transition region lies in the period r                                                                                                                                                                                                    
+<p align="left">The filter span is the number of input data points used in each filtered output point. A wide filter gives a narrow frequency response transition band, but leads to ringing near data discontinuities and loss of filtered values at the end points and surrounding missing values. A narrow filter reduces ringing and output data loss, but gives a wider frequency transition width, i.e. it falls off less rapidly at frequencies higher than the cutoff. The filter transition region lies in the period range between N*cutoff_period/(N + cutoff_period) and N*cutoff_period/(N - cutoff_period). The filter span should be an odd integer. It is set to the next lower odd number if the input is even.</p>
 <p align="left">Note on tidal filtering: For hourly time series containing tidal signals, some investigators use this filter with a 35-hour cutoff period and a filter span of xxx hours to remove at least 99.5
 <p align="left">Adapted from Bloomfield by E. D. Cokelet, NOAA/PMEL, 3 Dec 1999</p>
 <p> </p>

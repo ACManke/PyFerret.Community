@@ -179,14 +179,11 @@ xmlns:schema="http://schema.org/">
 <ul>
 <li id="menu-1338-1" class="first odd sf-item-1 sf-depth-3 sf-no-children"><a href="../../demos/ferret-tutorial-script.html" class="sf-depth-3">Ferret Tour</a></li>
 <li id="menu-1618-1" class="middle even sf-item-2 sf-depth-3 sf-no-children"><a href="../../demos/dsg-files-discrete-sampling-geometries-demo.html" class="sf-depth-3">DSG files: Discrete Sampling Geometries Demo</a></li>
-<li id="menu-1337-1" class="middle odd sf-item-3 sf-depth-3 sf-total-children-5 sf-parent-children-0 sf-single-children-5 menuparent"><a href="../../ferret-tutorials.html" class="sf-depth-3 menuparent">External Function Examples</a>
-<ul>
-<li id="menu-1343-1" class="first odd sf-item-1 sf-depth-4 sf-no-children"><a href="../../demos/sorting-demo.html" class="sf-depth-4">Ferret sorting demo (1)</a></li>
-<li id="menu-1591-1" class="middle even sf-item-2 sf-depth-4 sf-no-children"><a href="../../demos/ferret-sorting-demo.html" class="sf-depth-4">Ferret sorting demo (2)</a></li>
+<li id="menu-1591-1" class="middle even sf-item-2 sf-depth-4 sf-no-children"><a href="../../demos/ferret-sorting-demo.html" class="sf-depth-4">Ferret sorting demo</a></li>
 <li id="menu-1344-1" class="middle odd sf-item-3 sf-depth-4 sf-no-children"><a href="../../demos/how-to-use-ferret-external-functions-for-computing-ffts.html" class="sf-depth-4">Fast Fourier Transforms demo</a></li>
 <li id="menu-1345-1" class="middle even sf-item-4 sf-depth-4 sf-no-children"><a href="../../demos/ferret-eof-demo.html" class="sf-depth-4">Empirical Orthogonal Functions demo</a></li>
 <li id="menu-1346-1" class="last odd sf-item-5 sf-depth-4 sf-no-children"><a href="../../demos/ferret-objective-analysis.html" class="sf-depth-4">Ferret objective analysis demo</a></li>
-</ul></li>
+
 <li id="menu-1353-1" class="middle even sf-item-4 sf-depth-3 sf-no-children"><a href="../../demos/ferret-palette-demo.html" class="sf-depth-3">Ferret Palette Demo</a></li>
 <li id="menu-1350-1" class="middle odd sf-item-5 sf-depth-3 sf-no-children"><a href="../../demos/ferret-map-projections-demo.html" class="sf-depth-3">Map projections</a></li>
 <li id="menu-1354-1" class="middle even sf-item-6 sf-depth-3 sf-no-children"><a href="../../demos/ferret-polygon-vector-demo.html" class="sf-depth-3">Ferret polygon vector demo</a></li>
@@ -241,7 +238,7 @@ xmlns:schema="http://schema.org/">
 <div class="block-inner clearfix">
  
 <div class="content clearfix">
-<article about="documentation/users-guide/appendix-a-external-functions/CURV-TO-RECT-MAP" typeof="sioc:Item foaf:Document" class="node node-documentation-page node-promoted node-published node-not-sticky author-burger odd clearfix" id="node-documentation-page-518">
+<article about="/Ferret/documentation/users-guide/appendix-a-external-functions/CURV-TO-RECT-MAP" typeof="sioc:Item foaf:Document" class="node node-documentation-page node-promoted node-published node-not-sticky author-burger odd clearfix" id="node-documentation-page-518">
 
 <!-- add the following line to print out updated date -->
 <!-- add the following line to print out the page description -->
@@ -320,7 +317,7 @@ xmlns:schema="http://schema.org/">
 <p align="left"> </p>
 <p align="left">This function does large amounts of calculation, and so runs slowly. It is recommended that you compute mappings from the curvilinear grid to desired rectilinear grid(s) and save them for use with your data fields.</p>
 <p align="left">The following figure illustrates a destination grid location (*) with a radius of influence R. Valid source curvilinear grid locations (o) which fall within the radius of influence of the destination point are used in the mapping. Missing source points (x) do not contribute to the mapping. In this case, 3 valid source grid points fall within the radius of influence.</p>
-<p><a href="https://ferret.pmel.noaa.gov/Ferret/sites/default/files/images/documentation/users-guide/user_guide_images/AppA_schematic.gif"><img alt="AppA_schematics/images/documentation/users-guide/user_guide_images/AppA_schematic.gif/image_mini" class="image-inline" src="https://ferret.pmel.noaa.gov/Ferret/sites/default/files/images/documentation/users-guide/user_guide_images/AppA_schematic.gif" style="height: 213px; width: 200px;" /></a></p>
+<p><a href="../../../sites/default/files/images/documentation/users-guide/user_guide_images/AppA_schematic.gif"><img alt="AppA_schematics/images/documentation/users-guide/user_guide_images/AppA_schematic.gif/image_mini" class="image-inline" src="../../../sites/default/files/images/documentation/users-guide/user_guide_images/AppA_schematic.gif" style="height: 213px; width: 200px;" /></a></p>
 <p align="left">The radius parameter should be chosen to be somewhat larger than the size of the input curvilinear grid cells so that any output grid location will have some input data contributing to its value.</p>
 <p align="left">The variable MAP, the result of a call to function CURV_TO_RECT_MAP, contains weights and the indices of the longitudes and latitudes of the curvilinear grid that correspond to the coordinates of the output grid. Below, in_curv_lon and in_curv_lat are the index value from the input curvilinear grid that correspond to the longitude and latitude of the rectangular output grid. The parameter num_neighbors is 4; the code looks around at four neighboring grid cells.</p>
 <p align="left">The weights are based on the distance from the source to the result grid points. The output variable map, then contains:</p>
@@ -330,7 +327,7 @@ for each k=1, num_neighbors<br />
 MAP(m,n,k,1) = weight(m,n,k)<br />
 MAP(m,n,k,2) = in_curv_lon(m,n,k)<br />
 MAP(m,n,k,3) = in_curv_lat(m,n,k)</b></p>
-<p align="left">This may be used to determine the range of indices required in order to specify a subset of data on a curvilinear grid. See the FAQ, <a href="http://ferret.pmel.noaa.gov/static/FAQ/custom_plots/subsetting_curvi_data.html">Plotting subsets of data on a curvilinear grid</a>, for an outline of the procedure.</p>
+<p align="left">This may be used to determine the range of indices required in order to specify a subset of data on a curvilinear grid. See the FAQ, <a href="../../../faq/faq/plotting-subsets-of-data-on-a-curvilinear-grid.html">Plotting subsets of data on a curvilinear grid</a>, for an outline of the procedure.</p>
 <p> </p>
 <p> </p>
 </div>

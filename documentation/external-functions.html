@@ -178,14 +178,10 @@ xmlns:schema="http://schema.org/">
 <ul>
 <li id="menu-1338-1" class="first odd sf-item-1 sf-depth-3 sf-no-children"><a href="demos/ferret-tutorial-script.html" class="sf-depth-3">Ferret Tour</a></li>
 <li id="menu-1618-1" class="middle even sf-item-2 sf-depth-3 sf-no-children"><a href="demos/dsg-files-discrete-sampling-geometries-demo.html" class="sf-depth-3">DSG files: Discrete Sampling Geometries Demo</a></li>
-<li id="menu-1337-1" class="middle odd sf-item-3 sf-depth-3 sf-total-children-5 sf-parent-children-0 sf-single-children-5 menuparent"><a href="ferret-tutorials.html" class="sf-depth-3 menuparent">External Function Examples</a>
-<ul>
-<li id="menu-1343-1" class="first odd sf-item-1 sf-depth-4 sf-no-children"><a href="demos/sorting-demo.html" class="sf-depth-4">Ferret sorting demo (1)</a></li>
-<li id="menu-1591-1" class="middle even sf-item-2 sf-depth-4 sf-no-children"><a href="demos/ferret-sorting-demo.html" class="sf-depth-4">Ferret sorting demo (2)</a></li>
+<li id="menu-1591-1" class="middle even sf-item-2 sf-depth-4 sf-no-children"><a href="demos/ferret-sorting-demo.html" class="sf-depth-4">Ferret sorting demo</a></li>
 <li id="menu-1344-1" class="middle odd sf-item-3 sf-depth-4 sf-no-children"><a href="demos/how-to-use-ferret-external-functions-for-computing-ffts.html" class="sf-depth-4">Fast Fourier Transforms demo</a></li>
 <li id="menu-1345-1" class="middle even sf-item-4 sf-depth-4 sf-no-children"><a href="demos/ferret-eof-demo.html" class="sf-depth-4">Empirical Orthogonal Functions demo</a></li>
 <li id="menu-1346-1" class="last odd sf-item-5 sf-depth-4 sf-no-children"><a href="demos/ferret-objective-analysis.html" class="sf-depth-4">Ferret objective analysis demo</a></li>
-</ul></li>
 <li id="menu-1353-1" class="middle even sf-item-4 sf-depth-3 sf-no-children"><a href="demos/ferret-palette-demo.html" class="sf-depth-3">Ferret Palette Demo</a></li>
 <li id="menu-1350-1" class="middle odd sf-item-5 sf-depth-3 sf-no-children"><a href="demos/ferret-map-projections-demo.html" class="sf-depth-3">Map projections</a></li>
 <li id="menu-1354-1" class="middle even sf-item-6 sf-depth-3 sf-no-children"><a href="demos/ferret-polygon-vector-demo.html" class="sf-depth-3">Ferret polygon vector demo</a></li>
@@ -286,11 +282,14 @@ setenv FER_EXTERNAL_FUNCTIONS "$MY_LOCAL_EXTFCNS $FER_EXTERNAL_FUNCTIONS"</p>
 <p><a href="ftp://ftp.pmel.noaa.gov/ferret/pub/ExternalFunctions/EF_double_precision.tar.gz">EF_double_precision.tar.gz</a> contains the examples directory and the platform flags and Makefiles for compiling external functions in double precision. Ferret v6.8 and higher is compiled in double precision. Your functions do not need any changes to run with Ferret v6.8+ which in addition to being double precision, implements a 6-dimensioned grid. See the V6.8 Release Notes.</p>
 <p><strong>More Examples:</strong></p>
 <p>Externally linked: The functions that we distribute as externally linked functions are included in the Ferret Environment tar file from the PyFerret or Ferret gitHub release page (see Downloads). When you untar that file the code is in the ext_func/src directories.</p>
-<p>Internally linked: Many functions that were originally written as external functions are now statically linked into the Ferret executable, to make them available to users on platforms where shared object files cannot be used. These also make useful examples. They are also in the Ferret Environment tar fileand will be unpacked into the ext_func/src directories when you install Ferret,. Or browse the code from thegithub.com/NOAA-PMEL/Ferret.git <a href="https://github.com/NOAA-PMEL/Ferret.git">Ferret GitHu                                                                                                                                                                                                                                                               
+
+<p>Internally linked: Many functions that were originally written as external functions are now statically linked into the Ferret executable, to make them available to users on platforms where shared object files cannot be used. These also make useful examples. They are also in the Ferret Environment tar fileand will be unpacked into the ext_func/src directories when you install Ferret,. Or browse the code from thegithub.com/NOAA-PMEL/Ferret.git <a href="https://github.com/NOAA-PMEL/Ferret.git">Ferret GitHub source repository</a>, in the directories under the <a href="https://github.com/NOAA-PMEL/Ferret/tree/master/external_functions">external_functions/ directory</a>. You will need to modify the Makefiles as you did under the examples/ directory above.</p>
+
+
 <p>Note that functions other than the ones in <b>examples/</b> and <b>contributed/</b> directories are statically linked into Ferret, along with the subroutines that they call. As internally-linked functions they take precedence over shared-object file external functions. If you wish to make your own version of any of these functions, <b>you must change its name</b> in order to run your own version. Change the name in all of the subroutines within the function, e.g. if you make a new function based on sampl                                                                                                                                                                                                                            
 <p>We look forward to your contributions to our external functions library. Please pass along your favorite External Functions so that we can run them through some consistency scripts and then post them here for others to use.</p>
 <h3>EF Contributions</h3>
-<p>As with all Ferret software, these functions are provided as-is, with no implied warranty. Please read the <a href="http://ferret.pmel.noaa.gov/Ferret/ferret-legal">License and disclaimer for Ferret software</a>.</p>
+
 <ul><li>sqrt.F returns the square root of one argument</li>
 <li>chdir.F calls the chdir function to change directories</li>
 <li>neutral.F Computes neutral density from salinity and temperature. It requires that you download a library of routines from the web.</li>

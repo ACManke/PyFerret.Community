@@ -11,6 +11,9 @@ xmlns:sioct="http://rdfs.org/sioc/types#"
 xmlns:skos="http://www.w3.org/2004/02/skos/core#"
 xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
 xmlns:schema="http://schema.org/">
+
+<!-- Mirrored from ferret.pmel.noaa.gov/Ferret/documentation/users-guide/Grids-Regions/REGIONS by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Jun 2023 18:11:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head profile="http://www.w3.org/1999/xhtml/vocab">
 <title>4.3 REGIONS - Ferret/PyFerret Documentation</title>
 
@@ -176,14 +179,11 @@ xmlns:schema="http://schema.org/">
 <ul>
 <li id="menu-1338-1" class="first odd sf-item-1 sf-depth-3 sf-no-children"><a href="../../demos/ferret-tutorial-script.html" class="sf-depth-3">Ferret Tour</a></li>
 <li id="menu-1618-1" class="middle even sf-item-2 sf-depth-3 sf-no-children"><a href="../../demos/dsg-files-discrete-sampling-geometries-demo.html" class="sf-depth-3">DSG files: Discrete Sampling Geometries Demo</a></li>
-<li id="menu-1337-1" class="middle odd sf-item-3 sf-depth-3 sf-total-children-5 sf-parent-children-0 sf-single-children-5 menuparent"><a href="../../ferret-tutorials.html" class="sf-depth-3 menuparent">External Function Examples</a>
-<ul>
-<li id="menu-1343-1" class="first odd sf-item-1 sf-depth-4 sf-no-children"><a href="../../demos/sorting-demo.html" class="sf-depth-4">Ferret sorting demo (1)</a></li>
-<li id="menu-1591-1" class="middle even sf-item-2 sf-depth-4 sf-no-children"><a href="../../demos/ferret-sorting-demo.html" class="sf-depth-4">Ferret sorting demo (2)</a></li>
+<li id="menu-1591-1" class="middle even sf-item-2 sf-depth-4 sf-no-children"><a href="../../demos/ferret-sorting-demo.html" class="sf-depth-4">Ferret sorting demo</a></li>
 <li id="menu-1344-1" class="middle odd sf-item-3 sf-depth-4 sf-no-children"><a href="../../demos/how-to-use-ferret-external-functions-for-computing-ffts.html" class="sf-depth-4">Fast Fourier Transforms demo</a></li>
 <li id="menu-1345-1" class="middle even sf-item-4 sf-depth-4 sf-no-children"><a href="../../demos/ferret-eof-demo.html" class="sf-depth-4">Empirical Orthogonal Functions demo</a></li>
 <li id="menu-1346-1" class="last odd sf-item-5 sf-depth-4 sf-no-children"><a href="../../demos/ferret-objective-analysis.html" class="sf-depth-4">Ferret objective analysis demo</a></li>
-</ul></li>
+
 <li id="menu-1353-1" class="middle even sf-item-4 sf-depth-3 sf-no-children"><a href="../../demos/ferret-palette-demo.html" class="sf-depth-3">Ferret Palette Demo</a></li>
 <li id="menu-1350-1" class="middle odd sf-item-5 sf-depth-3 sf-no-children"><a href="../../demos/ferret-map-projections-demo.html" class="sf-depth-3">Map projections</a></li>
 <li id="menu-1354-1" class="middle even sf-item-6 sf-depth-3 sf-no-children"><a href="../../demos/ferret-polygon-vector-demo.html" class="sf-depth-3">Ferret polygon vector demo</a></li>
@@ -272,7 +272,7 @@ yes? SET REGION/DY=-1:+1 !modify current region to 7S:7N</pre><p align="left">4)
 <pre>
 yes? LIST v[Z=0:50@AVE]</pre><p align="left"><a name="_VPINDEXENTRY_708" id="_VPINDEXENTRY_708"></a>5) Equivalent to <i><b>v[Z=10] - v[Z=0:100@AVE]</b></i>, the anomaly at z=10 between v and the 0 to 100 meter depth average of v.</p>
 <pre>
-yes? LIST/Z=10 v - v[Z=0:100@AVE]</pre><p>For more about creating and using anomaly fields, see the FAQ, <b><a href="../../../faq/how-do-i-calculate-climatologies-and-climatological-anomalieshtml" title="How do I calculate climatologies and climatological anomalies?">How do I calculate climatologies and climatological anomalies?</a></b></p>
+yes? LIST/Z=10 v - v[Z=0:100@AVE]</pre><p>For more about creating and using anomaly fields, see the FAQ, <b><a href="../../../faq/how-do-i-calculate-climatologies-and-climatological-anomalies" title="How do I calculate climatologies and climatological anomalies?">How do I calculate climatologies and climatological anomalies?</a></b></p>
 <p><a name="_VPID_202" id="_VPID_202"></a><a name="_VPINDEXENTRY_709" id="_VPINDEXENTRY_709"></a></p>
 <p align="left" class="secHeader"><b>4.3.1 Latitude </b></p>
 <p align="left">Specify latitude or a latitude range with the qualifier Y or J. Specifications using J are integers between 1 and the number of points on the Y axis. Specifications using Y are in the units of the Y axis.</p>
@@ -290,7 +290,7 @@ yes? LIST/J=50 u</pre><p> </p>
 <pre>
 yes? CONTOUR temp[Y=160E:140W]
 yes? LIST/I=100 u
-yes? SHADE/X=100:460 temp !360 degrees centered at 100W</pre><p align="left">See the chapter "Grids and Regins", section "<a href="#Chapter4-Modulo_axes" title="4.3 REGIONS">Modulo Axes</a>" , for help with globe-encircling axes.</p>
+yes? SHADE/X=100:460 temp !360 degrees centered at 100W</pre><p align="left">See the chapter "Grids and Regins", section "<a href="REGIONS.html#Chapter4-Modulo_axes" title="4.3 REGIONS">Modulo Axes</a>" , for help with globe-encircling axes.</p>
 <p>
 <a name="_VPID_204" id="_VPID_204"></a><a name="_VPINDEXENTRY_711" id="_VPINDEXENTRY_711"></a></p>
 <p align="left" class="secHeader"><b>4.3.3 Depth </b></p>
@@ -303,13 +303,13 @@ yes? LIST/K=3 u</pre><p> </p>
 <p align="left" class="secHeader"><a name="Chapter4-Time" id="Chapter4-Time"></a><a name="_VPID_205" id="_VPID_205"></a><b><a name="_VPINDEXENTRY_712" id="_VPINDEXENTRY_712"></a><a name="_VPINDEXENTRY_713" id="_VPINDEXENTRY_713"></a>4.3.4 Time </b></p>
 <p> </p>
 <p align="left">Specify time or a time range with the qualifier T or L. Specifications using L are integers between 1 and the number of points on the T axis. Specifications using T may refer to calendar dates or to the time step units in which the time axis of the data set is defined.</p>
-<p align="left"><a name="_VPINDEXENTRY_714" id="_VPINDEXENTRY_714"></a><a name="_VPINDEXENTRY_715" id="_VPINDEXENTRY_715"></a>Calendar date/time values are entered in the format dd-mmm-yyyy:hh:mm:ss, for example 14-FEB-1988:12:30:00. At a minimum the string must contain day, month, and year. If the string contains any colons it must be enclosed in quotation marks to differentiate from colons used to designate a range. If a time increment is specified with the repeat command given in calendar format (e.g., R                                                                                                                                                                                                                                                                                                  
+<p align="left"><a name="_VPINDEXENTRY_714" id="_VPINDEXENTRY_714"></a><a name="_VPINDEXENTRY_715" id="_VPINDEXENTRY_715"></a>Calendar date/time values are entered in the format dd-mmm-yyyy:hh:mm:ss, for example 14-FEB-1988:12:30:00. At a minimum the string must contain day, month, and year. If the string contains any colons it must be enclosed in quotation marks to differentiate from colons used to designate a range. If a time increment is specified with the repeat command given in calendar format (e.g., REPEAT/T="1-JAN-1982":"15-JAN-1982":6) it is interpreted as hours always. <i>Calendar dates in the years 0000 and 0001 are regarded as year-independent dates</i> <i>(suitable for climatological data)</i>. Ferret cannot work with negative values for years, or years larger than year 9999.</p>
 <p align="left">SHOW GRID/T can be used to display time step values. (Units may vary between data sets.) The commands SET MODE CALENDAR and CANCEL MODE CALENDAR can be used to view date strings or time steps, respectively.</p>
 <p align="left"><b>Examples</b></p>
 <pre>
 yes? LIST/T="1-JAN-1982:13:50":"15-FEB-1982" density
 yes? CONTOUR temp[T=27740:30000]
-yes? LIST/L=90 u</pre><p align="left">See the section in this chapter on "<a href="#Chapter4-Modulo_axes" title="4.3 REGIONS">Modulo Axes</a>" for help with climatological axes.</p>
+yes? LIST/L=90 u</pre><p align="left">See the section in this chapter on "<a href="REGIONS.html#Chapter4-Modulo_axes" title="4.3 REGIONS">Modulo Axes</a>" for help with climatological axes.</p>
 <p>
 <a name="_VPID_206" id="_VPID_206"></a><a name="_VPINDEXENTRY_716" id="_VPINDEXENTRY_716"></a></p>
 <p align="left" class="secHeader"><b>4.3.5 Delta </b></p>
@@ -346,7 +346,7 @@ yes? SET REGION/@BOX1/Z=15 !replace Z</pre><p align="left"><a name="_VPINDEXENTR
 <a name="Chapter4-Modulo_axes" id="Chapter4-Modulo_axes"></a><a name="_VPID_208" id="_VPID_208"></a><a name="_VPINDEXENTRY_723" id="_VPINDEXENTRY_723"></a><a name="_VPINDEXENTRY_724" id="_VPINDEXENTRY_724"></a><a name="_VPINDEXENTRY_725" id="_VPINDEXENTRY_725"></a></p>
 <p align="left" class="secHeader"><b>4.3.7 Modulo axes </b></p>
 <p align="left">Some axes are inherently "modulo," indicating that the axis wraps around‚ the first point immediately following the last.</p>
-<p align="left">To determine if an axis is modulo use SHOW AXIS or SHOW GRID. A letter "m" following the number of points in the axis indicates a modulo axis. The command SHOW GRID qualified by the appropriate axis limits can be used to examine any part of the axis‚ including points beyond the nominal length of the axis. The commands SET AXIS/MODULO and CANCEL AXIS/MODULO can be used to control this feature on an axis-by-axis basis. Starting with Ferret version5.5, longitude axes which span 360 degrees or                                                                                                                                                                                
+<p align="left">To determine if an axis is modulo use SHOW AXIS or SHOW GRID. A letter "m" following the number of points in the axis indicates a modulo axis. The command SHOW GRID qualified by the appropriate axis limits can be used to examine any part of the axis‚ including points beyond the nominal length of the axis. The commands SET AXIS/MODULO and CANCEL AXIS/MODULO can be used to control this feature on an axis-by-axis basis. Starting with Ferret version5.5, longitude axes which span 360 degrees or less, and climatological time axes are always detected as modulo, unless Ferret is specifically directed that the axis is NOT modulo, e.g. by a CANCEL AXIS/MODULO command.</p>
 <p align="left"><b>Example</b></p>
 <pre>
 yes? SET DATA coads_climatology
@@ -365,8 +365,8 @@ I X BOX_SIZ
 <p>
 <a name="Chapter4_subspan_modulo" id="Chapter4_subspan_modulo"></a><a name="_VPID_209" id="_VPID_209"></a><a name="_VPINDEXENTRY_726" id="_VPINDEXENTRY_726"></a><a name="_VPINDEXENTRY_727" id="_VPINDEXENTRY_727"></a></p>
 <p align="left" class="secHeader"><b>4.3.7.1 Subspan Modulo Axes </b></p>
-<p align="left">Ferret V5.5 introduces the concept of a "sub-span modulo axis" -- an axis where the range is a sub-range of a fullmodulo cycle. As of V5.5, longitude axes and climatological time axes are always detected as modulo, or as sub-span modulo when appropriate, unless Ferret is specifically directed that the axis is NOT modulo, e.g. by a CANCEL AXIS/MODULO command. If the user does not specify the modulo length, it is set to 360 degrees for a longitude axis, or a year for a time axis. Time axes of                                                                                                                  
-<p align="left"><a name="_VPINDEXENTRY_728" id="_VPINDEXENTRY_728"></a><a name="_VPINDEXENTRY_729" id="_VPINDEXENTRY_729"></a>The modulo length of an axis defined on the Ferret command line is set with an argument to the MODULO qualifier, or with an argument to the netCDF modulo attribute. The value specified is in world units, e.g. degrees, or hours, and must match the units of the coordinates on the axis. Here is an example showing an axis defined explicitly as a modulo axis, and another which is modulo b              
+<p align="left">Ferret V5.5 introduces the concept of a "sub-span modulo axis" -- an axis where the range is a sub-range of a fullmodulo cycle. As of V5.5, longitude axes and climatological time axes are always detected as modulo, or as sub-span modulo when appropriate, unless Ferret is specifically directed that the axis is NOT modulo, e.g. by a CANCEL AXIS/MODULO command. If the user does not specify the modulo length, it is set to 360 degrees for a longitude axis, or a year for a time axis. Time axes of length less than or equal to one year, and starting in year 0000 or 0001 are taken to be climatological axes.</p>
+<p align="left"><a name="_VPINDEXENTRY_728" id="_VPINDEXENTRY_728"></a><a name="_VPINDEXENTRY_729" id="_VPINDEXENTRY_729"></a>The modulo length of an axis defined on the Ferret command line is set with an argument to the MODULO qualifier, or with an argument to the netCDF modulo attribute. The value specified is in world units, e.g. degrees, or hours, and must match the units of the coordinates on the axis. Here is an example showing an axis defined explicitly as a modulo axis, and another which is modulo by default.</p>
 <pre>
 yes? DEFINE AXIS/MODULO=100/x=41:55:1 xax_subspan
 yes? DEFINE AXIS/X=100:300:10/UNITS=degrees_longitude xax_lonspan</pre><p align="left">The output of SHOW AXIS includes the modulo length and span of the axis:</p>
@@ -413,13 +413,13 @@ XAX_SUBSPAN = 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55 ;
  
 XAX_LONSPAN = 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200, 210, 
 220, 230, 240, 250, 260, 270, 280, 290, 300 ;
-}</pre><p align="left"><a name="_VPINDEXENTRY_730" id="_VPINDEXENTRY_730"></a>The importance of the sub-span modulo axes is to take the first of two steps that will make it possible for users largely to ignore differences in encodings of longitude and climatological time -- e.g. the blending of data in plots and analyses where the data come from data sets that are encoded variously as -180:180, 0:360, etc. Thus, for example, in V5.5 you can refer to my_subspan_var[g=another_var] and get a meaningful answer                                                                                                                                                                                                
+}</pre><p align="left"><a name="_VPINDEXENTRY_730" id="_VPINDEXENTRY_730"></a>The importance of the sub-span modulo axes is to take the first of two steps that will make it possible for users largely to ignore differences in encodings of longitude and climatological time -- e.g. the blending of data in plots and analyses where the data come from data sets that are encoded variously as -180:180, 0:360, etc. Thus, for example, in V5.5 you can refer to my_subspan_var[g=another_var] and get a meaningful answer as long as the grids occupy the same region on the globe, regardless of longitude encoding. (The second step, for a future release, will address the longitude encoding of scattered data.)</p>
 <p align="left"><b>Example: </b></p>
 <p align="left">Suppose we have data on an axis that was defined as follows</p>
 <pre>
 yes? DEFINE AXIS/X=520:550:1/UNITS=degrees xax</pre><p align="left">and suppose we want to overlay it on a map showing the regional topography.</p>
 <div class="dnd-atom-wrapper type-image context-sdl_editor_representation" contenteditable="false">
-<div class="dnd-drop-wrapper"><!-- scald=59:sdl_editor_representation --><div class='image'><img typeof="foaf:Image" src="https://ferret.pmel.noaa.gov/Ferret/sites/default/files/thumbnails/image/figure4_07.png" width="619" height="534" alt="Image with overlaid subspan-modulo data" title="figure4_07.png" /></div><!-- END scald=59 --></div>
+<div class="dnd-drop-wrapper"><!-- scald=59:sdl_editor_representation --><div class='image'><img typeof="foaf:Image" src="../../../sites/default/files/thumbnails/image/figure4_07.png" width="619" height="534" alt="Image with overlaid subspan-modulo data" title="figure4_07.png" /></div><!-- END scald=59 --></div>
 <div class="dnd-legend-wrapper" contenteditable="true">
 <div class="meta">
 <!--copyright=59--><!--END copyright=59--></div>
