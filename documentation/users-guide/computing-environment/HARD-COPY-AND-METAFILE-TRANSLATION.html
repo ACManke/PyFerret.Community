@@ -325,12 +325,18 @@ Fprint [-h] [-P printer || -o file_name || -X]
 </td>
 </tr></tbody></table><p align="left"> </p>
 <p align="left"><b>Examples </b></p>
+<p align="left"><b>Examples </b></p>
 <pre>
- 
+% Fprint metafile.plt</pre>
+<p>renders "metafile.plt" on the default printer identified by the environment variable PRINTER.</p>
 <pre>
- 
+% Fprint -P myprinter -R metafile.plt*
+</pre>
+<p align="left"><b>renders all versions of "metafile.plt" on printer myprinter. Does not date stamp them. </b></p>
 <pre>
- 
+% Fprint -o my_plot.ps metafile.plt.
+</pre>
+<p>
 <p>
 <a name="Chapter9_metafile_translation" id="Chapter9_metafile_translation"></a><a name="_VPID_341" id="_VPID_341"></a><a name="_VPINDEXENTRY_1048" id="_VPINDEXENTRY_1048"></a><a name="_VPINDEXENTRY_1049" id="_VPINDEXENTRY_1049"></a></p>
 <p align="left" class="secHeader">9.4.2 <b><b>Metafile translation </b></b></p>
@@ -421,13 +427,16 @@ Fprint [-h] [-P printer || -o file_name || -X]
 <p align="left">In classic Ferret use the command FRAME/FILE=filename.gif to write a gif-formatted file.</p>
 <p align="left">Or, start Ferret in gif mode,with the -gif command-line switch, to run Ferret without X server software. Execute the FRAME command to save the plot as a gif image.</p>
 <pre>
- 
+% ferret -gif
 yes? (commands that generate a plot...)
-yes? FRAME/FILE=picture.gif</pre><p>or</p>
+yes? FRAME/FILE=picture.gif
+</pre><p>or</p>
 <pre class="pliteral">
- 
+% pyferret -unmapped
 yes? (commands that generate a plot...)
-yes? FRAME/FILE=picture.png</pre><p>For a complete description of the startup modes, refer to the Unix <a href="../introduction/GETTING-STARTED.html#_VPID_8">command line switches</a>.</p>
+yes? FRAME/FILE=picture.png
+</pre>
+<p>For a complete description of the startup modes, refer to the Unix <a href="../introduction/GETTING-STARTED.html#_VPID_8">command line switches</a>.</p>
 <p> </p>
 </div>
 </div>

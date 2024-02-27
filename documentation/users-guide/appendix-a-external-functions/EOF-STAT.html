@@ -266,7 +266,8 @@ xmlns:schema="http://schema.org/">
 <p align="left">FRAC_TIMESER</p>
 </td>
 <td>
-<p align="left">Use only those time series with this fraction valid data, e.g. 0.8 to require that 80
+<p align="left">Use only those time series with this fraction valid data, e.g. 0.8 to require that 80% of the data be present to use the data at a location.</p>
+
 </td>
 </tr><tr><td>
 <p align="left"><b>Result Axes:</b></p>
@@ -300,7 +301,7 @@ xmlns:schema="http://schema.org/">
 </td>
 </tr></tbody></table><p align="left">Please see the discussion under EOF_SPACE, and run the demonstration script ef_eofsvd_demo.jnl for examples of this function.</p>
 <p align="left"><b>Example results: </b></p>
-<p align="left">For a simple sample function, eof_stat called to decompose it into eigenfunctions. We allow data to be used if the time series at the point has at least 80
+<p align="left">For a simple sample function, eof_stat called to decompose it into eigenfunctions. We allow data to be used if the time series at the point has at least 80% valid data.</p>
 <p align="left">Request the number of eigenvalues computed for this choice of parameters.</p>
 <pre>
 yes? list/i=1/j=1 eofstat
@@ -352,7 +353,7 @@ Y : 3
 9 / 9: 0.4
 10 / 10: 0.3</pre><p><a name="_eofsvd_stat" id="_eofsvd_stat"></a></p>
 <p> </p>
-<p align="left"><b>EOFSVD_STAT(A)</b> Used with EOFSVD_SPACE and EOFSVD_TFUNC. Return statistics related to an EOFSVD solution for a given set of parameters. Results are on the x-axis j = 1: # EOFs computed and scaled, j = 2:
+<p align="left"><b>EOFSVD_STAT(A)</b> Used with EOFSVD_SPACE and EOFSVD_TFUNC. Return statistics related to an EOFSVD solution for a given set of parameters. Results are on the x-axis j = 1: # EOFs computed and scaled, j = 2: % percentage of total variance accounted for by each eigenvector, j = 3: the eigenvalues.</p>
 <table><tbody><tr><td>
 <p align="left"><b>Arguments: </b></p>
 </td>
@@ -394,7 +395,7 @@ Y : 3
 </td>
 </tr></tbody></table><p align="left">The code runs a program contributed by Billy Kessler. It finds "traditionally-scaled" EOFs using a Singular Value Decomposition routine. "Traditionally-scaled" means that the units of the EOFs are the units of the variable, while the TAFs are dimensionless. The routine is based on Numerical Recipes routine svdcmp.f. The result of EOF decomposition is that a function f(x,t) of space and time is decomposed into a sum of products: f(x,t) = SUM[v(x)*a(t)]. The v(x) are referred to as the EOFs, or eigenvectors, while the a(t) are the "Time Amplitude Functions" (TAFs) (Also called "Principal Components") The number of terms in the sum (number of non-zero EOFs)<br />
 is the minimum of (# of locations,# of times). Based on Numerical Recipes subroutine svdcmp.</p>
-<p align="left">The EOFSVD functions all make the same computations, returning different portions of the results. EOFSVD_ ESPACE returns the eigenfunctions, normalized so that they have the units of data, while time amplitude functions (TAF's) are dimensionless. Thus the sum of the values of a given EOF = sqrt(eigenvalue), and the mean of a given TAF = 1.OFSVD_STAT returns some useful statistics: the number of EOF's which were computed and normalized for the parameters given; the
+<p align="left">The EOFSVD functions all make the same computations, returning different portions of the results. EOFSVD_ ESPACE returns the eigenfunctions, normalized so that they have the units of data, while time amplitude functions (TAF's) are dimensionless. Thus the sum of the values of a given EOF = sqrt(eigenvalue), and the mean of a given TAF = 1.OFSVD_STAT returns some useful statistics: the number of EOF's which were computed and normalized for the parameters given; the %variation explained for each eigenfunction, and the eigenvalues.</p>
 <p align="left">Specifying the context of the input variable explicitly e.g.</p>
 <pre>
 EOFSVD_STAT(A[x=20:40,y=2s:40n,l=1:58])</pre><p align="left">will prevent any confusion about the region. See the note in chapter 3 on the <a href="../variables-xpressions/XPRESSIONS.html#_VPINDEXENTRY_306">context of variables passed to functions</a>.</p>

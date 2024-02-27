@@ -262,7 +262,8 @@ yes? PLOT/l=1:100 sst</pre><p align="left">produces a time series plot of the fi
 <p align="left">When the /VS qualifier is used the indicated expressions may have any geometry in 4D space but they must match in the total number of points in each expression. The points are associated in the order of their underlying axes. When the /VS qualifier is not used, the indicated expression(s) must describe a line (not a plane) of data.</p>
 <p align="left">The expression(s) are inferred from the current context if omitted from the command line—i.e., if no expression is given then the argument most recently given is used, or the default expression may be explicitly set with SET EXPRESSION.</p>
 <p align="left">When Ferret plots multiple data lines simultaneously, PPLUS automatically cycles through pen colors and symbols, creating up to 26 distinct line types. Try GO line_samples to see samples of these styles:</p>
-<p><a href=", and run the demonstration script ef_eofsvd_demo.jnl for examples of this function./default/files/images/documentation/users-guide/user_guide_images/line_samples.gif"><img alt="line_samples" class="image-inline" src=", and run the demonstration script ef_eofsvd_demo.jnl for examples of this function./default/files/images/documentation/users-guide/user_guide_images/line_samples.gif" style="height: 167px; width: 200px;" /></a></p>
+<p><a href="../../../sites/default/files/images/documentation/users-guide/user_guide_images/line_samples.gif"><img alt="line_samples" class="image-inline" src="../../../sites/default/files/images/documentation/users-guide/user_guide_images/line_samples.gif" style="height: 167px; width: 200px;" /></a></p>
+
 <p> </p>
 <p align="left"><b>Command qualifiers for PLOT:</b><b> </b></p>
 <p> </p>
@@ -463,7 +464,7 @@ yes? file/var="temp, timeday" mydata.dat
 yes? set var/units="degrees C" temp
 yes? set var/units="days since 01-jan-2012" timeday
 yes? plot/vs/line timeday, temp
-</pre><p align="left">For PLOT/VS, the range of the plot axes is set according to the range of the data in the two variables. Prior to V7.63, this meant that some plot points would lie exactly on the axis lines. Beginning with V7.63, when drawing a PLOT/VS plot, the axes are drawn with an approximately 1
+</pre><p align="left">For PLOT/VS, the range of the plot axes is set according to the range of the data in the two variables. Prior to V7.63, this meant that some plot points would lie exactly on the axis lines. Beginning with V7.63, when drawing a PLOT/VS plot, the axes are drawn with an approximately 1% "buffer" so that points do not lie on the axes. Note that the range of the axes of any plot can always be controlled with PLOT/HLIM= /VLIM=<br />
  </p>
 <p align="left"><a id="_VPINDEXENTRY_1492" name="_VPINDEXENTRY_1492"></a><b>PLOT/STEP</b>[=CONNECTED]</p>
 <p align="left">PLOT/STEP give a plot style that is consistent with grid cell interpretation of data.This is especially useful for time series to show the span of each time bin. /STEP=CONNECTED draws a line segment between the steps.<br />

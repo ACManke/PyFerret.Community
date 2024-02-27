@@ -306,12 +306,13 @@ yes? go custom_contour_demo </pre><p align="left"><b>Parameters</b><b> </b></p>
 <p>To overlay a time series on a 2-D time plot, see <a href="../../../faq/overlaying-a-time-series-on-a-2d-plot" title="Overlaying a time series on a 2D plot">this FAQ.</a></p>
 <p align="left"> </p>
 <p align="left"><a name="_VPINDEXENTRY_1276" id="_VPINDEXENTRY_1276"></a>CONTOUR/<b>PALETTE=</b></p>
-<p align="left">Specifies a color palette (otherwise, the current default palette is used). Valid only with CONTOUR/FILL (or as a qualifier to the alias FILL). The file suffix *.spk is not necessary when specifying a palette. Try the Unix command <i><b>
+<p align="left">Specifies a color palette (otherwise, the current default palette is used). Valid only with CONTOUR/FILL (or as a qualifier to the alias FILL). The file suffix *.spk is not necessary when specifying a palette. Try the Unix command <i><b>% Fpalette '*'</b></i> to see available palettes. See command <a href="PALETTE.html" title="PALETTE">PALETTE</a> for more information.</p>
+
 <p align="left"><b>Example:</b><b> </b></p>
 <pre>
 yes? CONTOUR/FILL/PALETTE=land_sea world_relief</pre><p align="left">The /PALETTE qualifier changes the current palette for the duration of the plotting command and then restores the previous palette. This behavior is not immediately compatible with the /SET_UP qualifier. See the <a href="PALETTE.html" title="PALETTE">PALETTE</a> command for further discussion.</p>
 <p align="left"><a name="_VPINDEXENTRY_1277" id="_VPINDEXENTRY_1277"></a><a name="_VPINDEXENTRY_1278" id="_VPINDEXENTRY_1278"></a>CONTOUR/<b>PATTERN=</b></p>
-<p align="left">Specifies a pattern file (otherwise, the current default pattern specification is used). Valid only with CONTOUR/FILL (or as a qualifier to the alias FILL). The file suffix *.pat is not necessary when specifying a pattern. Try the Unix command
+<p align="left">Specifies a pattern file (otherwise, the current default pattern specification is used). Valid only with CONTOUR/FILL (or as a qualifier to the alias FILL). The file suffix *.pat is not necessary when specifying a pattern. Try the Unix command % Fpattern '*' to see available patterns. See the <a href="PATTERN.html" title="PATTERN">PATTERN</a> command for more information.</p>
 <p align="left">The Pattern plot style is not available in PyFerret.  However pattern-style plots may be drawn using PLOT/VS/OVER and a well-chosen symbol.  For instance, in PyFerret, the named symbols such as chevleft, chevright, plustall, and so forth are worth experimenting with.</p>
 <p align="left">Example:</p>
 <pre>

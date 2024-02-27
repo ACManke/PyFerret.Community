@@ -1,20 +1,20 @@
  
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML+RDFa 1.1//EN">
 <html lang="en" dir="ltr" version="HTML+RDFa 1.1"
-xmlns:content="http://purl.org/rss/1.0/modules/content/"
-xmlns:dc="http://purl.org/dc/terms/"
-xmlns:foaf="http://xmlns.com/foaf/0.1/"
-xmlns:og="http://ogp.me/ns#"
-xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-xmlns:sioc="http://rdfs.org/sioc/ns#"
-xmlns:sioct="http://rdfs.org/sioc/types#"
-xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-xmlns:schema="http://schema.org/">
+xmlns:content="https://purl.org/rss/1.0/modules/content/"
+xmlns:dc="https://purl.org/dc/terms/"
+xmlns:foaf="https://xmlns.com/foaf/0.1/"
+xmlns:og="https://ogp.me/ns#"
+xmlns:rdfs="https://www.w3.org/2000/01/rdf-schema#"
+xmlns:sioc="https://rdfs.org/sioc/ns#"
+xmlns:sioct="https://rdfs.org/sioc/types#"
+xmlns:skos="https://www.w3.org/2004/02/skos/core#"
+xmlns:xsd="https://www.w3.org/2001/XMLSchema#"
+xmlns:schema="https://schema.org/">
 
 <!-- Mirrored from ferret.pmel.noaa.gov/Ferret/documentation/users-guide/converting-to-netcdf/SIMPLE-CONVERSIONS-USING-FERRET by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Jun 2023 18:11:34 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
-<head profile="http://www.w3.org/1999/xhtml/vocab">
+<head profile="https://www.w3.org/1999/xhtml/vocab">
 <title>10.2 SIMPLE CONVERSIONS USING FERRET - Ferret/PyFerret Documentation</title>
 
 <link rel="stylesheet" href="../../../modules/system/system.base.css">
@@ -515,9 +515,13 @@ LET mtmp = mtmp1[GX=temp@ave];\
 SAVE/APPEND/FILE=mout.nc/i=`inx` mtmp)
  
 </b></pre><p align="left"> </p>
-<p align="left"><a name="_VPINDEXENTRY_1072" id="_VPINDEXENTRY_1072"></a><a name="_VPINDEXENTRY_1073" id="_VPINDEXENTRY_1073"></a><a name="_VPINDEXENTRY_1074" id="_VPINDEXENTRY_1074"></a>The netCDF utilities "ncdump" and "ncgen" can also be combined with a text editor to make final refinements to the netCDF files created by SAVE. (These utilities can be obtained from <a href="http://www.unidata.ucar.edu/">http://www.unidata.ucar.edu/</a> . See <a href="http://www.unidata.ucar.edu/downloads/netcdf">http://www.unidata.ucar.edu/downloads/netcdf</a> ). Here is a simple example that removes all "history" attributes from a netCDF file using pipes and the Unix "grep" utility:</p>
+<p align="left"><a name="_VPINDEXENTRY_1072" id="_VPINDEXENTRY_1072"></a><a name="_VPINDEXENTRY_1073" id="_VPINDEXENTRY_1073"></a><a name="_VPINDEXENTRY_1074" id="_VPINDEXENTRY_1074"></a>The netCDF utilities "ncdump" and "ncgen" can also be combined with a text editor to make final refinements to the netCDF files created by SAVE. (These utilities can be obtained from <a href="https://www.unidata.ucar.edu/">https://www.unidata.ucar.edu/</a>. Here is a simple example that removes all "history" attributes from a netCDF file using pipes and the Unix "grep" utility:</p>
 <pre>
- 
+% ncdump old_file.cdf | grep -v history | ncgen -o new_file.cdf
+</pre>
+<p>In addition, the toolset "NetCDF Operator", or NCO, contains a number of operators for manipulating netCDF files. This software can be found at <a href="https://nco.sourceforge.net/">https://nco.sourceforge.net/</a></p>
+
+
 <p> </p>
 </div>
 </div>

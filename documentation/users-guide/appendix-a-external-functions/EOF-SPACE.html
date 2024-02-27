@@ -272,7 +272,8 @@ xmlns:schema="http://schema.org/">
 <p align="left">FRAC_TIMESER</p>
 </td>
 <td>
-<p align="left">Use only those time series with this fraction valid data, e.g. 0.8 to require that 80
+<p align="left">Use only those time series with this fraction valid data, e.g. 0.8 to require that 80% of the data be present to use the data at a location.</p>
+
 </td>
 </tr><tr><td>
 <p align="left"><b>Result Axes:</b></p>
@@ -304,7 +305,7 @@ xmlns:schema="http://schema.org/">
 <td>
 <p align="left">ABSTRACT 1 to NEOF</p>
 </td>
-</tr></tbody></table><p align="left">The EOF functions all make the same computations, returning different portions of the results. EOF_SPACE returns the eigenfunctions, normalized so that they have the units of data, while time amplitude functions (TAF's) are dimensionless. Thus the sum of the values of a given EOF = sqrt(eigenvalue), and the mean of a given TAF = 1. EOF_STAT returns some useful statistics: the number of EOF's which were computed and normalized for the parameters given; the
+</tr></tbody></table><p align="left">The EOF functions all make the same computations, returning different portions of the results. EOF_SPACE returns the eigenfunctions, normalized so that they have the units of data, while time amplitude functions (TAF's) are dimensionless. Thus the sum of the values of a given EOF = sqrt(eigenvalue), and the mean of a given TAF = 1. EOF_STAT returns some useful statistics: the number of EOF's which were computed and normalized for the parameters given; the %variation explained for each eigenfunction, and the eigenvalues.</p>
 <p align="left">Specifying the context of the input variable explicitly e.g.</p>
 <pre>
 EOF_SPACE(A[x=20:40,y=2s:40n,l=1:58],FRAC_TIMESER)</pre><p align="left">will prevent any confusion about the region. See the note in chapter 3 on the <a href="../variables-xpressions/XPRESSIONS.html#_VPINDEXENTRY_306">context of variables passed to functions</a>.</p>
@@ -362,7 +363,7 @@ yes? SHOW FUNCTION eof*</pre><p> </p>
 <p align="left">The code runs a program contributed by Billy Kessler. It finds "traditionally-scaled" EOFs using a Singular Value Decomposition routine. "Traditionally-scaled" means that the units of the EOFs are the units of the variable, while the TAFs are dimensionless. The routine is based on Numerical Recipes routine svdcmp.f. The result of EOF decomposition is that a function f(x,t) of space and time is decomposed into a sum of products: f(x,t) = SUM[v(x)*a(t)]. The v(x) are referred to as the EOFs, or eigenvectors, while the a(t) are the "Time Amplitude Functions" (TAFs) (Also called "Principal Components") The number of terms in the sum (number of non-zero EOFs)<br />
 is the minimum of (# of locations,# of times). Based on Numerical Recipes subroutine svdcmp.</p>
 <p align="left"> </p>
-<p align="left">The EOFSVD functions all make the same computations, returning different portions of the results. EOFSVD_SPACE returns the eigenfunctions, normalized so that they have the units of data, while time amplitude functions (TAF's) are dimensionless. Thus the sum of the values of a given EOF = sqrt(eigenvalue), and the mean of a given TAF = 1. EOFSVD_STAT returns some useful statistics: the number of EOF's which were computed and normalized for the parameters given; the
+<p align="left">The EOFSVD functions all make the same computations, returning different portions of the results. EOFSVD_SPACE returns the eigenfunctions, normalized so that they have the units of data, while time amplitude functions (TAF's) are dimensionless. Thus the sum of the values of a given EOF = sqrt(eigenvalue), and the mean of a given TAF = 1. EOFSVD_STAT returns some useful statistics: the number of EOF's which were computed and normalized for the parameters given; the %variation explained for each eigenfunction, and the eigenvalues.</p>
 <p align="left">Specifying the context of the input variable explicitly e.g.</p>
 <pre>
 EOFSVD_SPACE(A[x=20:40,y=2s:40n,l=1:58])</pre><p align="left">will prevent any confusion about the region. See the note in chapter 3 on the <a href="../variables-xpressions/XPRESSIONS.html#_VPINDEXENTRY_306">context of variables passed to functions</a>.</p>

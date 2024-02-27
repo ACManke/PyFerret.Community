@@ -364,7 +364,7 @@ SAY `CAST[Z=100:200],RETURN=KEND`</pre><p align="left">will result in</p>
 <pre>
 LET my_expr = $1
 DEFINE SYMBOL SHAPE `my_expr,RESULT=SHAPE`
-QUERY/IGNORE ($SHAPE
+QUERY/IGNORE ($SHAPE%|X|Y|Z|T|&lt;Expression must be 1-dimensional%)</pre><p align="left"><a name="_VPINDEXENTRY_585" id="_VPINDEXENTRY_585"></a><b><a name="_VPINDEXENTRY_586" id="_VPINDEXENTRY_586"></a><a name="_VPINDEXENTRY_587" id="_VPINDEXENTRY_587"></a>RETURN=XSTART</b> (and similarly YSTART, ZSTART, TSTART, ESTART, FSTART)</p>
 <p align="left">Returns the first grid point in the current region, in world coordinates. Note that the format of the result can be controlled by setting or canceling MODE LONG_LABEL for the X axis, MODE LAT_LABEL for the Y axis, or MODE CALENDAR for a time axis.</p>
 <p align="left"><b><a name="_VPINDEXENTRY_588" id="_VPINDEXENTRY_588"></a>RETURN=XEND</b> (and similarly YEND, ZEND, TEND, EEND, FEND)</p>
 <p align="left">Returns the last grid point of specified world coordinate region, in world units.</p>

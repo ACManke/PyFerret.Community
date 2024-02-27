@@ -251,7 +251,7 @@ xmlns:schema="http://schema.org/">
 <p align="left" class="callout">Run either "ferret" or "pyferret".</p>
 <div class="plain">
 <pre>
- 
+> ferret
 yes? GO tutorial</pre><p align="left">If Ferret is not yet installed consult the chapter "<a href="../computing-environment/chapter-9-computing-environment.html" title="Chapter 9. Computing Environment">Computing Environment</a>" (The tutorial is also available on-line through Ferret's <a href="../../ferret-tutorials.html" title="Ferret Tutorials">on-line demonstrations page.</a>) The tutorial demonstrates many of Ferret's features, showing the user both the commands given and Ferret's textual and graphical output. You may find the explanations, terms and examples in this manual easier to understand after running the tutorial.</p>
 </div>
 <p class="secHeader">1.2.1<a name="_VPID_6" id="_VPID_6"></a><b> Concepts</b></p>
@@ -414,6 +414,10 @@ or
 or
 &gt; pyferret -script file.jnl 7 "The\ Title" "(my\ units)"
 </pre></div>
+
+<p class="indented"><b><a name="_version_switch" id="_version_switch"></a>-version</b><br />
+Outputs the Ferret/ PyFerret "logo", the lines showing the program version, build date, and current date/time, then returns to the Unix command line.</p>
+
 <p class="pnormal"><a name="_pyferret_switches" id="_pyferret_switches"></a><br /><b>PyFerret only</b><br />
 When starting PyFerret, the command switches <strong>-memsize</strong>, <b>-nojnl</b>, <strong>-noverify</strong>, <strong>-secure</strong>, <strong>-server</strong>, <strong>-version</strong>, <strong>-script</strong>, and <strong>-help</strong> are identical to their behavior in classic Ferret. The <strong>-batch</strong> switch remains an option but is not recommended. If you use -batch, new windows should not be created and the FRAME command should not be used. In addition the <strong>-transparent</strong> command line option is not recommended. Instead use the <strong>-nodisplay</strong> option and the FRAME/FILE=&lt;filename&gt; [ /TRANSPARENT ] command.</p>
 <p><b>-gif</b> and <b>-unmapped</b> are recognized by PyFerret; they are aliases for the -nodisplay switch, listed below.  The switch used does not determine the type of plot files that may be saved as is the case for Ferret. We can write any type of plot file when running in -nodisplay mode, or multiple plot types in the same script.</p>
@@ -453,7 +457,7 @@ time range: 16-JAN-1982 20:00 to 17-DEC-1992 03:30</pre></div>
 <div class="plain">
 <p align="left">Many examples of accessing ASCII data are available later in this manual. See the chapter, "<a href="../data-set-basics/OVERVIEW.html" title="2.1 OVERVIEW">Data Sets</a>" The simplest access, one variable with one value per record, looks like this:</p>
 <pre>
- 
+> ferret
 yes? FILE/VARIABLE=v1 snoopy.dat
 yes? PLOT v1
 yes? QUIT</pre></div>
@@ -465,7 +469,7 @@ yes? QUIT</pre></div>
 <img class="image-inline" src="../../../sites/default/files/images/documentation/users-guide/user_guide_images/Ch1_fig02.png" /></p>
 <p align="left"> </p>
 <pre>
- 
+> ferret
 yes? USE coads_climatology
 yes? SET REGION/X=160E:130W
 yes? SET REGION/Y=-10:10/L=5
@@ -490,7 +494,7 @@ yes? QUIT</pre><p>
 <p align="left">A user may wish to look at ocean temperatures averaged over a range of depths. In this sample session, we look at temperatures averaged from 0 to 100 meters of depth using a data set which has detailed resolution in depth (Figure 1_4). We plot the data along longitude 160 west from latitude 30 south to 30 north.</p>
 <p><img class="image-inline" src="../../../sites/default/files/images/documentation/users-guide/user_guide_images/Ch1_fig04.png" /></p>
 <pre>
- 
+> ferret
 yes? USE levitus_climatology
 yes? SET REGION/Y=30s:30n/X=160W
 yes? PLOT temp[Z=0:100@AVE]

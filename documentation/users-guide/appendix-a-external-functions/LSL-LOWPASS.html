@@ -308,7 +308,7 @@ xmlns:schema="http://schema.org/">
 <p align="left">The main difference is that the present routine takes account of missing values in the input time series Values near the ends and near gaps are filled with the missing value flag.</p>
 <p align="left">The cutoff period (measured in units of delta t) is the period at which the filter attains 1/2 amplitude or 1/4 "energy". The cutoff_period must be less than or equal to N, the length of the time axis.</p>
 <p align="left">The filter span is the number of input data points used in each filtered output point. A wide filter gives a narrow frequency response transition band, but leads to ringing near data discontinuities and loss of filtered values at the end points and surrounding missing values. A narrow filter reduces ringing and output data loss, but gives a wider frequency transition width, i.e. it falls off less rapidly at frequencies higher than the cutoff. The filter transition region lies in the period range between N*cutoff_period/(N + cutoff_period) and N*cutoff_period/(N - cutoff_period). The filter span should be an odd integer. It is set to the next lower odd number if the input is even.</p>
-<p align="left">Note on tidal filtering: For hourly time series containing tidal signals, some investigators use this filter with a 35-hour cutoff period and a filter span of xxx hours to remove at least 99.5
+<p align="left">Note on tidal filtering: For hourly time series containing tidal signals, some investigators use this filter with a 35-hour cutoff period and a filter span of xxx hours to remove at least 99.5 % of the energy for periods less than 25 hours.</p>
 <p align="left">Adapted from Bloomfield by E. D. Cokelet, NOAA/PMEL, 3 Dec 1999</p>
 <p> </p>
 </div>

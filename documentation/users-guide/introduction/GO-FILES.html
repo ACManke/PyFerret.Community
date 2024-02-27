@@ -640,7 +640,7 @@ yes? GO vector_demo</pre><p align="left">Below is a list of the demo files provi
 <p align="left"><a name="_VPINDEXENTRY_67" id="_VPINDEXENTRY_67"></a>Or double quotes with a space to indicate the missing item.</p>
 <p align="left"><i><b>yes? GO script arg1 " " arg3</b></i></p>
 <p align="left">The Unix command Fgo has been provided to assist with locating tools within the Unix directory hierarchy. For example,</p>
-<p align="left"><i><b>
+<p align="left"><i><b>% Fgo grid</b></i> displays all tools with the substring "grid" in their names<br /><i><b>% Fgo '*'</b></i> displays all GO tools and demonstrations</p>
 <p align="left"><a name="_VPINDEXENTRY_68" id="_VPINDEXENTRY_68"></a>W<a name="_VPINDEXENTRY_69" id="_VPINDEXENTRY_69"></a>hen<a name="_VPINDEXENTRY_70" id="_VPINDEXENTRY_70"></a> passing arguments to GO commands sometimes it is necessary to pass enclosing quotation marks. An common example is the passing of the argument to the CONTOUR/LEVELS qualifier in cases such as</p>
 <p align="left"> </p>
 <p class="indented"><i><b>CONTOUR/LEVELS="(-100) (-10,10,2) (100)" my_var</b></i></p>
@@ -1423,9 +1423,14 @@ yes? GO land red</pre><p align="left">passes the string "red" into the GO file n
 <p align="left">If there are more than 9 arguments, the syntax $nn (nn may be 1 through 99) is equivalent to to ($nn), however the parentheses enclosed form is generally preferred as it avoids ambiguities. Specifying $12.dat is equivalent to ($12).dat but is less clear.</p>
 <p align="left">As Ferret performs the substitution of $1 (or other) arguments it offers a number of string processing and error processing options. For example, <i>without</i> these options, if a user failed to supply an argument to "GO land" then Ferret would not know what to substitute for $1 and it would have to issue an error message. A default value can be supplied by the GO tool writer using the syntax</p>
 <pre>
-$1
+$1%string%
+</pre>
+<p align="left">for example,</p>
 <pre>
-$1
+$1%black%
+</pre>
+<p align="left">inside land.jnl would default to "black" if no color were specified. Note that in the example percent signs were used to delimit the default string but any of the characters ! # $ % or &amp; also work as delimiters.</p>
+<p align="left">If the argument is a 2-digit number, and we are making a substitution, the replacement text goes inside the parentheses. For example, plot the variable passed as argument 1 with the color given by argument 12, or green if no argument 12 is given:</p>
 <p align="left">If the argument is a 2-digit number, and we are making a substitution, the replacement text goes inside the parentheses. For example, plot the variable passed as argument 1 with the color given by argument 12, or green if no argument 12 is given:</p>
 <pre>
 PLOT/COLOR=($12#green#) $1</pre><p align="left"><a name="_VPINDEXENTRY_128" id="_VPINDEXENTRY_128"></a>In another case it might not be appropriate to supply a default string but instead it would be desirable to issue an instructional error message. The "&lt;" character indicates an error message text:</p>
@@ -1445,6 +1450,9 @@ PLOT/LINE=$1"1|red&gt;2|green&gt;3|blue&gt;4|*&gt;7"</pre><p align="left">would 
 <p align="left">An asterisk (*) can also be used on the right-hand side of a substitution, in which case it stands for the entire original argument string. For example</p>
 <pre>
 SET VARIABLE/TITLE=$1
+SET VARIABLE/TITLE=$1%*&gt;"*"%</pre>
+<p align="left">will place double quotation marks around the string in argument 1.</p>
+
 <p> </p>
 <p align="left" class="secHeader"><a name="Chapter1_QUERY" id="Chapter1_QUERY"></a><a name="_VPID_27" id="_VPID_27"></a><b><a name="_VPINDEXENTRY_129" id="_VPINDEXENTRY_129"></a>1.5.3.5 Documentation and checking arguments to GO tools </b></p>
 <p> </p>
@@ -1454,10 +1462,13 @@ SET VARIABLE/TITLE=$1
 QUERY/IGNORE $1"1|red|green|blue|&lt;must be red, green, or blue"</pre><p align="left">Once argument errors have been trapped and reported, the lengthy error text would not be needed again in the GO tool.</p>
 <p align="left">GO tools that use arguments should also be carefully documented. There are numerous examples provided with Ferret; try, for example, the Unix commands</p>
 <pre>
- 
- 
+% Fgo -more fland.jnl
+% Fgo -more stick_vectors
+</pre><p align="left">or</p>
 <pre>
- 
+% Fgo -more squeeze_colors
+</pre><p> </p>
+
 <p>
 <a name="_VPID_28" id="_VPID_28"></a><a name="_VPINDEXENTRY_130" id="_VPINDEXENTRY_130"></a><a name="_VPINDEXENTRY_131" id="_VPINDEXENTRY_131"></a></p>
 <p> </p>

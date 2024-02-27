@@ -263,8 +263,8 @@ yes? LABEL/NOUSER xpos,ypos,...</pre><p align="left">Note, however, that the lay
 <p align="left"><a name="_VPINDEXENTRY_790" id="_VPINDEXENTRY_790"></a>Very long labels may be specified, up to 2048 characters long. This applies to all kinds of labels: titles, axis labels, and moveable labels. To create multiple-line labels, use the separator &lt;NL&gt; to locate the line-breaks. If centered labels are requested, each line is centered separately. See <a href="#Chapter6 long axis labels">example 1</a> and <a href="#Chapter6-A_long_label">example 2</a>. Also try the demo script multi_line_                                        
 <p align="left"><b>Notes: </b></p>
 <p align="left">1) If you use the command PPL LABS instead of LABEL, be aware that when defining a new movable label, all lower-numbered labels must already be defined.</p>
-<p align="left">2) The Ferret command LABEL is an alias for PPL
-<p align="left">3)
+<p align="left">2) The Ferret command LABEL is an alias for PPL %LABEL. PPLUS does NOT consider a label created with %LABEL to be a movable label. Consequently, no label number is assigned and the label cannot be manipulated as a movable label.</p>
+<p align="left">3) %LABEL is an unusual command in that the label appears on the plot immediately after the command is given, rather than being deferred. This has ramifications for the user who has multiple plot windows open and is in MODE METAFILE, since a metafile is not closed until a new plot is begun. If the user produces a plot in window B, and then returns to a previous window A and adds a label with LABEL, that label will appear on the screen correctly, but will be in the metafile corresponding to window B.</p>
 <pre>
 4) The LABWID function (Ferret version 5.81 and higher) returns the width in plot inches of a label in a 
 given font and size. This can be used to position other plot elements relative to a label.
@@ -487,17 +487,17 @@ yes? PPL PLOT
  
 ! Put a label in the lower right, use user units 
 yes? label/user `($xaxis_max)`, `($yaxis_min)`, 1, 0, .2, "@P2lower right"
-!-&gt; PPL
+!-&gt; PPL %LABEL/user 100, -50, 1, 0, .2, "@P2lower right"
  
 ! Use plot inches. Put a label just inside the plot area
 yes? label/nouser `($ppl$xlen)/2`, `($ppl$ylen) - 0.4`, 0, 0, 0.2, "@P2center top"
-!-&gt; PPL
+!-&gt; PPL %LABEL/nouser 4, 5.6, 0, 0, 0.2, "@P2center top"
  
 ! Put a label in the lower left, making sure it's not off the page.
 yes? let xpl = -1*MIN(1,`($ppl$xorg)`)
 yes? let ypl = -1*MIN(1,`($ppl$yorg)`)
 yes? label/nouser `xpl`, `ypl`, -1, 0, 0.2, "@P2lower left"
-!-&gt; PPL
+!-&gt; PPL %LABEL/nouser -1, -1, -1, 0, 0.2, "@P2lower left"
 </b></pre><p><b><a name="Chapter6 long label" id="Chapter6 long label"></a></b><a name="Chapter6-A_long_label" id="Chapter6-A_long_label"></a></p>
 <p align="left">Very long labels may be specified, up to 2048 characters long. To create multiple-line labels, use the separator &lt;NL&gt; to locate the line-breaks. If centered labels are requested, each line is centered separately. See the demo script multi_line_demo.jnl for examples of this usage.</p>
 <p align="left"><b>Example </b></p>

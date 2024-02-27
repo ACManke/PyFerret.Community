@@ -27,7 +27,7 @@ xmlns:schema="http://schema.org/">
 <link rel="stylesheet" href="../../../sites/all/modules/calendar/css/calendar_multiday.css">
 <link rel="stylesheet" href="../../../modules/field/theme/field.css">
 <link rel="stylesheet" href="../../../sites/all/modules/scald/modules/fields/mee/css/editor-global.css">
-<link rel="stylesheet" href="../../../modules/node/node.css">
+	<link rel="stylesheet" href="../../../modules/node/node.css">
 <link rel="stylesheet" href="../../../sites/all/modules/scald_file/scald_file.css">
 <link rel="stylesheet" href="../../../modules/search/search.css">
 <link rel="stylesheet" href="../../../modules/user/user.css">
@@ -475,8 +475,9 @@ yes? go palette_demo</pre><p align="left">There is also an FAQ about choosing pa
 <p align="left"><a name="_VPINDEXENTRY_820" id="_VPINDEXENTRY_820"></a>The Percent method defines points along an abstract path in RGB color space that runs from 0 to 100 percent. The palette file bluescale.spk, for example, contains these lines.</p>
 <pre>
 0 0 0 95
-100 95 95 95</pre><p align="left">The first number on each line is the percentage distance along the path in color space, and the following numbers are the percents of red, green, and blue, respectively. In this simple two-line file, the percentage runs from 0 to 100
-<p align="left">For compatibility with older palette files, the Percent RGB mapping method is the default, and pre-5.0 palette files will be interpreted correctly. Palette files using Percent RGB mapping written out with Ferret 5.0 will have a slightly different format. A starting line is optional, specifying "RGB_Mapping_Percent". Any line starting with a ! will be ignored as a comment line. Blank lines are ignored. for example the bluescale palette saved with Ferret 5.0 will look like this:<a name="_VPIND                                            
+100 95 95 95</pre>
+<p align="left">The first number on each line is the percentage distance along the path in color space, and the following numbers are the percents of red, green, and blue, respectively. In this simple two-line file, the percentage runs from 0 to 100 % and the colors represent a range of blues from dark to light. The percents in the first column must be in ascending order. The actual colors used by SHADE or FILL are determined by dividing this abstract color scale into N equal increments, where N is the number of colors, and linearly interpolating between the red, green, and blue values from the neighboring SHASET percentage points.</p>
+<p align="left">For compatibility with older palette files, the Percent RGB mapping method is the default, and pre-5.0 palette files will be interpreted correctly. Palette files using Percent RGB mapping written out with Ferret 5.0 will have a slightly different format. A starting line is optional, specifying "RGB_Mapping_Percent". Any line starting with a ! will be ignored as a comment line. Blank lines are ignored. for example the bluescale palette saved with Ferret 5.0 will look like this:<a name="_VPINDEXENTRY_821" id="_VPINDEXENTRY_821"></a></p>
 <table><tbody><tr><td colspan="4">
 <p align="left"><b>RGB_mapping Percent </b></p>
 </td>

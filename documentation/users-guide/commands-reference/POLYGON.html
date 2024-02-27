@@ -356,10 +356,10 @@ Suppresses all plot labels.</p>
 <p align="left"><a name="_VPINDEXENTRY_1526" id="_VPINDEXENTRY_1526"></a><a name="_VPINDEXENTRY_1527" id="_VPINDEXENTRY_1527"></a>POLYGON/<b>OVERLAY </b><br />
 Causes the indicated POLYGON plot to be overlaid on the existing plot.</p>
 <p align="left"><a name="_VPINDEXENTRY_1528" id="_VPINDEXENTRY_1528"></a>POLYGON/<b>PALETTE=</b><br />
-Specifies a color palette (otherwise, a default rainbow palette is used). Try the Unix command <i><b>
+Specifies a color palette (otherwise, the default palette is used). Try the Unix command <i><b>% Fpalette '*'</b></i> to see available palettes. The file suffix *.spk is not necessary when specifying a palette.</p>
 <p align="left">The /PALETTE qualifier changes the current palette for the duration of the plotting command and then restores the previous palette. This behavior is not immediately compatible with the /SET_UP qualifier. See the <a href="PALETTE.html" title="PALETTE">PALETTE</a> command for further discussion.</p>
 <p align="left"><a name="_VPINDEXENTRY_1529" id="_VPINDEXENTRY_1529"></a>POLYGON/<b>PATTERN=</b><br />
-Specifies a pattern file (otherwise, a default SOLID pattern is used). Try the Unix command <i><b>
+Specifies a pattern file (otherwise, a default SOLID pattern is used). Try the Unix command <i><b>% Fpattern '*'</b></i> to see available pattern files. The file suffix *.pat is not necessary when specifying a pattern file. Pattern is available only in classic-ferret interactive or metafile batch modes. It is not available in PyFerret. See the <a href="PATTERN.html" title="PATTERN">PATTERN</a> command for more information.</p>
 <p align="left"><a name="_VPINDEXENTRY_1530" id="_VPINDEXENTRY_1530"></a>POLYGON/<b>SET_UP </b><br />
 Performs all the internal preparations required by program Ferret for a POLYGON plot but does not actually render output. Then PPL commands can then be used to make changes to the plot prior to producing output, to make customizations that are not possible with Ferret command qualifiers. For this command, the syntax for producing the plot is different from the other plot commands. Output is made with the <a name="_VPINDEXENTRY_1531" id="_VPINDEXENTRY_1531"></a>PPL FILLPOL or PPL POLYGON command. See the chapter "<a href="../customizing-plots/OVERVIEW.html#_VPID_225">Customizing Plots</a>".</p>
 <p align="left"><b>Example: </b></p>

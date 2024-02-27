@@ -247,64 +247,82 @@ xmlns:schema="http://schema.org/">
  
 <div class="field field-name-body field-type-text-with-summary field-label-hidden">
 <div class="field-items">
-<div class="field-item even" property="content:encoded"><div class="plain"><a name="Chapter1-UNIX_tools" id="Chapter1-UNIX_tools"></a><a name="_VPID_31" id="_VPID_31"></a><a name="_VPINDEXENTRY_136" id="_VPINDEXENTRY_136"></a><a name="_VPINDEXENTRY_137" id="_VPINDEXENTRY_137"></a><a name="_VPINDEXENTRY_138" id="_VPINDEXENTRY_138"></a><br /><p align="left">A number of tools are provided with Ferret to assist with Unix-level activities: on-line help, converting data to Ferret's formats, locating files, etc. They are located in the Ferret installation area‚Äîtypically $FER_DIR/bin. See the chapter "Copmuting Environment", section "<a title="9.1 SETTING UP TO RUN FERRET" href="../computing-environment/SETTING-UP-TO-RUN-FERRET.html">Setting up to run Ferret</a>", if the tools are not available on-line. They are described below.</p>
-<p align="left"></p>
-<p class="indented"><a name="_VPINDEXENTRY_139" id="_VPINDEXENTRY_139"></a><b>Faddpath</b> Usage: Faddpath new_path<br />Faddpath will add a new path name to the default lists of directories that Ferret searches a) in response to the SET DATA command; b) when looking for GO scripts; c) when looking for data files; d) when looking for grid definition files.</p>
+<div class="field-item even" property="content:encoded"><div class="plain"><a name="Chapter1-UNIX_tools" id="Chapter1-UNIX_tools"></a><a name="_VPID_31" id="_VPID_31"></a><a name="_VPINDEXENTRY_136" id="_VPINDEXENTRY_136"></a><a name="_VPINDEXENTRY_137" id="_VPINDEXENTRY_137"></a><a name="_VPINDEXENTRY_138" id="_VPINDEXENTRY_138"></a>
+<br /><p>A number of tools are provided with Ferret to assist with Unix-level activities: on-line help, converting data to Ferret's formats, locating files, etc. They are located in the Ferret installation area‚Äîtypically $FER_DIR/bin. See the chapter "Copmuting Environment", section "<a title="9.1 SETTING UP TO RUN FERRET" href="../computing-environment/SETTING-UP-TO-RUN-FERRET.html">Setting up to run Ferret</a>", if the tools are not available on-line. They are described below.</p>
+<p></p>
+<p><a name="_VPINDEXENTRY_139" id="_VPINDEXENTRY_139"></a><b>Faddpath</b> Usage: Faddpath new_path</p>
+<p class="indented">Faddpath will add a new path name to the default lists of directories that Ferret searches a) in response to the SET DATA command; b) when looking for GO scripts; c) when looking for data files; d) when looking for grid definition files.</p>
  
-<p align="left"></p>
-<p class="indented"><a name="_VPINDEXENTRY_140" id="_VPINDEXENTRY_140"></a><a name="_VPINDEXENTRY_141" id="_VPINDEXENTRY_141"></a></p>
+<p></p>
+<p><a name="_VPINDEXENTRY_140" id="_VPINDEXENTRY_140"></a><a name="_VPINDEXENTRY_141" id="_VPINDEXENTRY_141"></a></p>
  
-<p align="left"></p>
-<p class="indented"><a name="_VPINDEXENTRY_142" id="_VPINDEXENTRY_142"></a><a name="_VPINDEXENTRY_143" id="_VPINDEXENTRY_143"></a><b>Fdata</b> Usage: Fdata data_file_substring<br />Searches the list of directories contained in the environment variable FER_DATA to find the data files whose names contain the indicated substring. For example, <b><br /></b></p>
-<p class="indented"><b>
- 
-<p align="left"></p>
+<p></p>
+<p <a name="_VPINDEXENTRY_142" id="_VPINDEXENTRY_142"></a><a name="_VPINDEXENTRY_143" id="_VPINDEXENTRY_143"></a><b>Fdata</b> Usage: Fdata data_file_substring</p>
+<p class="indented">Searches the list of directories contained in the environment variable FER_DATA to find the data files whose names contain the indicated substring. For example, <p>
+<pre><b>% Fdata coads </b></pre>
 <p class="indented">locates the data files containing "coads" in their names. (Use this command to locate netCDFdata sets by giving the string "cdf".) To list all data files, give an asterisk in single quotes, '*', as the argument.</p>
  
-<p align="left"></p>
-<p class="indented"><a name="_VPINDEXENTRY_144" id="_VPINDEXENTRY_144"></a><b>Fdescr</b> Usage: Fdescr des_name_substring<br />Searches the list of directories contained in the environment variable FER_DESCR to find the descriptor files whose names contain the indicated substring. For example,<b> </b></p>
-<p>
- 
-<p align="left"></p>
+<p></p>
+<p><a name="_VPINDEXENTRY_144" id="_VPINDEXENTRY_144"></a><b>Fdescr</b> Usage: Fdescr des_name_substring</p>
+<p class="indented">Searches the list of directories contained in the environment variable FER_DESCR to find the descriptor files whose names contain the indicated substring. For example,</p>
+<pre>% Fdescr coads </pre>
+
 <p class="indented">locates the descriptor files containing "coads" in their names. ("Fdescr .des" will list all accessible descriptors.) To list all descriptor files, give an asterisk in single quotes, '*', as the argument</p>
  
-<p align="left"></p>
-<p class="indented"><a name="_VPINDEXENTRY_145" id="_VPINDEXENTRY_145"></a><a name="_VPINDEXENTRY_146" id="_VPINDEXENTRY_146"></a><a name="_VPINDEXENTRY_147" id="_VPINDEXENTRY_147"></a><b>Fenv</b> Usage: Fenv<br />Prints the values of environment variables used by Ferret</p>
+<p></p>
+<p><a name="_VPINDEXENTRY_145" id="_VPINDEXENTRY_145"></a><a name="_VPINDEXENTRY_146" id="_VPINDEXENTRY_146"></a><a name="_VPINDEXENTRY_147" id="_VPINDEXENTRY_147"></a><b>Fenv</b> Usage: Fenv</p>
+<p class="indented">Prints the values of environment variables used by Ferret</p>
  
-<p align="left"></p>
-<p class="indented"><a name="_VPINDEXENTRY_148" id="_VPINDEXENTRY_148"></a><b>Fgo</b> Usage: Fgo name_substring<br />Searches the list of directories contained in the environment variable FER_GO to find the GO command files whose names contain the indicated substring. For example, </p>
-<p><b>
+<p></p>
+<p><a name="_VPINDEXENTRY_148" id="_VPINDEXENTRY_148"></a><b>Fgo </b>Usage: Fgo name_substring</p>
+<p class="indented">
+Searches the list of directories contained in the environment variable FER_GO to find the GO command files whose names contain the indicated substring. For example, </p>
+<pre>% Fgo grid </pre>
  
-<p align="left"></p>
 <p class="indented">locates the Ferret tools that contain "grid". To list all script files, give an asterisk in single quotes, '*', as the argument.</p>
  
-<p align="left"></p>
-<p class="indented"><a name="_VPINDEXENTRY_149" id="_VPINDEXENTRY_149"></a><b>Fgrids</b> Usage: Fgrids gridfile_substring<br />Searches the list of directories contained in the environment variable FER_GRIDS to find the grid definition files whose names contain the indicated substring. For example, <b></b></p>
-<p>
+<p></p>
+<p><a name="_VPINDEXENTRY_149" id="_VPINDEXENTRY_149"></a><b>Fgrids</b> Usage: Fgrids gridfile_substring  <i>NOTE: Gridfiles became obsolete with the availability of NetCDF and OPeNDAP data formats.</i></p>
+<p class="indented">
+Searches the list of directories contained in the environment variable FER_GRIDS to find the grid definition files whose names contain the indicated substring. For example, </p>
+<pre>% Fgrids fnoc </pre>
+<p class="indented">locates the grid definition files containing "fnoc" in their names. ("<i><b>Fgrids .grd"</b></i> will list all accessible grid files.) 
  
-<p align="left"></p>
-<p class="indented">locates the grid definition files containing "fnoc" in their names. ("<i><b>Fgrids .grd"</b></i> will list all accessible grid files.)</p>
+<p></p>
+<p><a name="_VPINDEXENTRY_150" id="_VPINDEXENTRY_150"></a><a name="_VPINDEXENTRY_151" id="_VPINDEXENTRY_151"></a><b>Fpalette</b> Usage: Fpalette name_substring</p>
+<p class="indented">Searches the list of directories contained in the environment variable FER_PALETTE to find the palette files whose names contain the indicated substring. For example, <b>
+<br /></b></p>
+<pre>% Fpalette blue </pre>
+<p class="indented">
+<p>locates the palette files containing "blue" in their names. To list all palette files, give an asterisk in single quotes, '*', as the argument.</p>
  
-<p align="left"></p>
-<p class="indented"><a name="_VPINDEXENTRY_150" id="_VPINDEXENTRY_150"></a><a name="_VPINDEXENTRY_151" id="_VPINDEXENTRY_151"></a><b>Fpalette</b> Usage: Fpalette name_substring<br />Searches the list of directories contained in the environment variable FER_PALETTE to find the palette files whose names contain the indicated substring. For example, <b><br /></b></p>
-<p class="indented"><b>
- 
-<p align="left"></p>
-<p class="indented">locates the palette files containing "blue" in their names. To list all palette files, give an asterisk in single quotes, '*', as the argument.</p>
- 
-<p align="left"></p>
-<p class="indented"><a name="_VPINDEXENTRY_152" id="_VPINDEXENTRY_152"></a><a name="_VPINDEXENTRY_153" id="_VPINDEXENTRY_153"></a><b>Fpurge</b> Usage: Fpurge filename_template<br />Fpurge is a support routine to manage multiple versions of files created by Ferret‚Äîparticularly journal files and graphic metafiles. Fpurge will remove all versions of a file except the current version. For example, "Fpurge ferret.jnl" will eliminate all past versions of ferret.jnl in the current directory.</p>
-<p class="indented"></p>
-<p class="indented"><a name="_FshowGO" id="_FshowGO"></a><b>FshowGO </b>Usage: FshowGO ferret_log_file       <b><i>Available only with Ferret v6.9 and higher</i><br /></b>FshowGO will reformat a file containing output from a Ferret session.  In the Ferret session, activate the command <a title="SET REDIRECT" href="../commands-reference/SET.html#_VPINDEXENTRY_SET_REDIRECT">SET REDIRECT</a>, to turn on the writing of lines to the journal file or other output specified in the SET REDIRECT command. Then</p>
-<p class="indented"><b>
+<p></p>
+<p><a name="_VPINDEXENTRY_152" id="_VPINDEXENTRY_152"></a><a name="_VPINDEXENTRY_153" id="_VPINDEXENTRY_153"></a><b>Fpurge</b> Usage: Fpurge filename_template</p>
+<p class="indented">Fpurge is a support routine to manage multiple versions of files created by Ferret‚ particularly journal files and graphic metafiles. Fpurge will remove all versions of a file except the current version. For example, 
+<pre>% Fpurge ferret.jnl</pre> 
+<p class="indented">
+will eliminate all past versions of ferret.jnl in the current directory.</p>
+<p></p>
+<p><a name="_FshowGO" id="_FshowGO"></a><b>FshowGO </b>Usage: FshowGO ferret_log_file       <b><i>Available only with Ferret v6.9 and higher</i></p>
+<p class="indented"></b>FshowGO will reformat a file containing output from a Ferret session.  In the Ferret session, activate the command <a title="SET REDIRECT" href="../commands-reference/SET.html#_VPINDEXENTRY_SET_REDIRECT">SET REDIRECT</a>, to turn on the writing of lines to the journal file or other output specified in the SET REDIRECT command. Then</p>
+<pre>% FshowGO ferret.jnl</pre>
 <p class="indented">will write lines with the GO script names and arguments as they were executed in the session, indented to show the level of nesting of script calls.</p>
-<p class="indented"><b>Example:</b></p>
+<p><b>Example:</b></p>
 </div>
-<pre>yes? set redirect/journal<br />yes? let landpen = 2<br />yes? go land `landpen` basemap<br />yes? quit<br /><br />
-<p class="indented"></p>
- 
-<p align="left"></p>
-<p class="indented"><a name="_VPINDEXENTRY_154" id="_VPINDEXENTRY_154"></a><b>Fsort</b> Usage: Fsort filename_template<br />Fsort is a support routine for sorting file versions. Fsort reorders the incorrect ordering of emacs-style version numbers assigned by the Unix "ls" utility. For example, when sorting, ls will place filename.~19~ before filename.~2~. "Fsort filename*" will take care of this problem. Fsort may be used in Unix pipes.</p>
+<pre>yes? set redirect/journal
+yes? let landpen = 2
+yes? go land `landpen` basemap
+yes? quit
+
+% FshowGO ferret.jnl
+  GO land 2 basemap 
+  GO basemap " " " " " " white 
+</pre><div class="plain">
+<p></p>
+<p><a name="_VPINDEXENTRY_154" id="_VPINDEXENTRY_154"></a><b>Fsort</b> Usage: Fsort filename_template</p>
+<p class="indented">Fsort is a support routine for sorting file versions. Fsort reorders the incorrect ordering of emacs-style version numbers assigned by the Unix "ls" utility. For example, when sorting, ls will place filename.~19~ before filename.~2~. 
+<pre>% Fsort filename*</pre>
+will take care of this problem. Fsort may be used in Unix pipes.</p>
  
 </div>
 </div>

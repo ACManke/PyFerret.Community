@@ -282,7 +282,7 @@ IF `a` THEN SAY "A is nonzero" ENDIF</pre><p align="left">writes message if the 
 <pre>
 IF ($yes_or_no) THEN GO yes_script ELSE GO no_script</pre><p align="left">executes yes_script or no_script according to the value of the symbol yes_or_no</p>
 <pre>
-IF ($dset
+IF ($dset%|coads&gt;TRUE|%) THEN GO my_plot</pre><p align="left">executes the script my_plot.jnl only if the symbol dset contains the exact string "coads"</p>
 <pre>
 IF `i LT 3` THEN
 GO option_1
@@ -292,7 +292,7 @@ ELSE
 GO option_3
 ENDIF</pre><p align="left">uses the multi-line IF syntax to select among GO scripts.</p>
 <p align="left">Embedded (grave accent) expressions can be used in conjunction with the IF syntax. For example, `3 GT 2` (Is three greater than 2?) evaluates to "1" (TRUE) and `3 LT 2` (Is three less than 2?) evaluates to "0" (FALSE). If the result of a grave accent expression is invalid, for example division by zero as in `1/0`, the string "bad" is, by default, generated. Thus invalid expressions are regarded as FALSE.</p>
-<p align="left">Symbol substitution permits IF decisions to be based on text-based conditions. Suppose, for example, the symbol ($DSET) contains a string: either <b>coads</b> or<b> levitus</b>. Then an IF condition could test for <b>coads</b> using ($DSET
+<p align="left">Symbol substitution permits IF decisions to be based on text-based conditions. Suppose, for example, the symbol ($DSET) contains a string: either <b>coads</b> or<b> levitus</b>. Then an IF condition could test for <b>coads</b> using ($DSET%|coads&gt;TRUE|*&gt;FALSE%).</p>
 <pre>
 IF ($DSET
 GO cscript
