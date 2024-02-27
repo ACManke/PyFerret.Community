@@ -11,7 +11,7 @@ define symbol outfile = ($directory)/($filename).out.html
 
 
 ! open the file and create the output file
-columns/type=text/delim="%" ($directory)/($filename)
+columns/type=text/delim="~" ($directory)/($filename)
 
 let strout = " "
 list/clobber/norow/nohead/format=(a)/file="($outfile)" strout
@@ -32,6 +32,7 @@ let n1 = `nn`
 repeat/i=`n1`:`nlines` (\
 let nn = `i`;\
 if `strindex(v1, "<title>")  gt 0` then exit/loop)
+
 
 if `nn ge nlines` then
    say ($directory)  ($filename)
@@ -63,6 +64,7 @@ say  added css for header
 ! Now skip a whole lot of stuff until the end of the header. 
 
 
+
 repeat/i=`n2`:`nlines` (\
 let nn = `i`;\
 if `strindex(v1, "</div></header>")  gt 0` then exit/loop)
@@ -86,6 +88,7 @@ list/append/norow/nohead/format=(a)/file="($outfile)" v1;\
 )
 let n2 = `nn`
 
+
 ! Now add the big bunch of content with the menus that will be over on the left.
 
 
@@ -100,6 +103,16 @@ let nn = `i`;\
 if `strindex(v1, "main-content")  gt 0` then exit/loop;\
 )
 let n2 = `nn`
+
+
+
+! look for % and report  -- previously used % instead of ~ as a line break
+! sp rm ($outfile).percent.dat
+! 
+! repeat/i=`n2`:`nlines` (\
+! let nn = `i`;\
+! if `strindex(v1, "%")  gt 0` then list/append/norow/nohead/format=(a)/file="($outfile).percent.dat" v1)
+
 
 ! Keep lines containing the documentation (except for the last-modified date)
 
