@@ -1,18 +1,16 @@
 cancel mode verify
 
 ! Edit Ferret documentation html files, removing the pmel-specific stuff 
-! Run this script from the documentation/ directory where ferret_documentation.html
-! is located. Resulting files will need some editing depending on the directory structure
+! Run this script from the faq directory 
 
-! Edits an html file in a directory under the location of this script.
+! Edits an html file for Ferret FAQ's 
 
-define symbol directory = ($1)
-define symbol filename = ($2)
-define symbol outfile = ($directory)/($filename).out.html
+define symbol filename = ($1)
+define symbol outfile = ($filename).out.html
 
 
 ! open the file and create the output file
-columns/type=text/delim="~" ($directory)/($filename)
+columns/type=text/delim="~" ($filename)
 
 let strout = " "
 list/clobber/norow/nohead/format=(a)/file="($outfile)" strout
@@ -34,6 +32,7 @@ repeat/i=`n1`:`nlines` (\
 let nn = `i`;\
 if `strindex(v1, "<title>")  gt 0` then exit/loop)
 
+
 if `nn ge nlines` then
    say ($directory)  ($filename)
    say <title> not found
@@ -47,7 +46,7 @@ let w1 = strindex(v1[i=`n2`], "| Science Data Integration Group") - 1
 
 let strout1 = v1[i=`n2`]
 if `w1 gt 0` then let strout1 = substring(v1[i=`n2`], 1, `w1`)
-let strout = strcat ("`strout1`", "- Ferret/PyFerret Documentation</title>")
+let strout = strcat ("`strout1`", "- Ferret/PyFerret FAQs</title>")
 list/append/norow/nohead/format=(a)/file="($outfile)" strout
 
 say `n2` <title>
@@ -56,13 +55,12 @@ say `strout`
 ! pause
 ! Add the edited css for the header of all files
 
-sp cat ../html_editing/header_non_users-guide.html >> ($outfile)
+sp cat faq_edited_header_contents.html >> ($outfile)
 
 say  added css for header
 ! pause
 
 ! Now skip a whole lot of stuff until the end of the header. 
-
 
 repeat/i=`n2`:`nlines` (\
 let nn = `i`;\
@@ -73,27 +71,24 @@ if `nn ge nlines` then
    say </div></header> not found
    exit/program
 endif
+
 let n2 = `nn + 1`
 
 ! pause
 ! Now looking for the line with breadcrumb in it.  Do not keep the breadcrumb line.
 
-
-
 repeat/i=`n2`:`nlines` (\
 let nn = `i`;\
 if `strindex(v1, "breadcrumb")  gt 0` then exit/loop;\
-list/append/norow/nohead/format=(a)/file="($outfile)" v1;\
 )
+
 let n2 = `nn`
 
-! Now add the big bunch of content with the menus that will be over on the left.
+        
+say/append/outfile=($outfile) <h2 class="block-title"><a href="ferret-faqs.html" class="active-trail">FAQ</a></h2>
 
 
-
-sp cat ../html_editing/menu_non_users-guide.html >> ($outfile)
-
-
+! sp cat ../html_editing/users_guide_edited_menu_contents.html >> ($outfile)
 ! Now skip lines in the input file until we get to "main-content"
 
 repeat/i=`n2`:`nlines` (\
@@ -104,12 +99,9 @@ let n2 = `nn`
 
 ! Keep lines containing the documentation (except for the last-modified date)
 
-say `n2`  `nlines`; ! pause
 
 repeat/i=`n2`:`nlines` (\
 let nn = `i`;\
-list/norow/nohead `nn`;\
-list/norow/nohead/format=(a) v1;\
 if `strindex(v1, "modified-date") eq 0` then list/append/norow/nohead/format=(a)/file="($outfile)" v1;\
 if `strindex(v1, "footer")  gt 0` then exit/loop;\
 )
@@ -117,7 +109,6 @@ let n2 = `nn`
 
 
 ! Now add the common lines that end all files.
-
 
 
 sp cat ../html_editing/users_guide_edited_ending_contents.html >> ($outfile)

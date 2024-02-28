@@ -12,7 +12,7 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#"
 xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
 xmlns:schema="http://schema.org/">
 <head profile="http://www.w3.org/1999/xhtml/vocab">
-<title>Reserved keywords - Ferret/PyFerret FAQs</title>
+<title>Vector Size - Ferret/PyFerret FAQs</title>
 
 <link rel="stylesheet" href="../modules/system/system.base.css">
 <link rel="stylesheet" href="../modules/system/system.menus.css">
@@ -142,68 +142,51 @@ xmlns:schema="http://schema.org/">
 
 
 <!--   ... from main index.html, -->
+
 <h2 class="block-title"><a href="ferret-faqs.html" class="active-trail">FAQ</a></h2>
 <a id="main-content"></a>
-<div class="element-invisible">    <h1 class="title" id="page-title">Reserved keywords</h1>
-</div>                    <div class="block block-system block-main block-system-main odd block-without-title" id="block-system-main">
+<div class="element-invisible">    <h1 class="title" id="page-title">Vector Size</h1>
+</div><div class="block block-system block-main block-system-main odd block-without-title" id="block-system-main"> 
 <div class="block-inner clearfix">
  
 <div class="content clearfix">
-<article about="/Ferret/faq/reserved-keywords" typeof="foaf:Document" class="node node-page node-published node-not-promoted node-not-sticky author-ansley odd clearfix" id="node-page-693">
-
-<h1 id="page title"  class="node-title">Reserved keywords</h1>  <div class="content clearfix">
- 
+<article about="/Ferret/faq/vector-size" typeof="foaf:Document" class="node node-page node-published node-not-promoted node-not-sticky author-ansley odd clearfix" id="node-page-713">
+ 
 <div class="field field-name-body field-type-text-with-summary field-label-hidden">
 <div class="field-items">
 <div class="field-item even" property="content:encoded"><h2>Question:</h2>
-<p>What variable names conflict with Ferret's reserved keywords?</p>
+<blockquote><p>Can I put an upper limit on vector sizes in Ferret?</p>
+</blockquote>
 <h2>Example:</h2>
+<p>In order to see what is going on in the regions of low wind speed I have to have vector lengths that are fairly small. This causes me to get very large vectors elsewhere.</p>
+<p></p><center><img alt="vector_bad" src="../sites/default/files/images/faq/vector_bad.gif" /></center>
+<p> </p>
+<p> </p>
+<h2>Solution:</h2>
+<p>There are lots of ways to skin that particular cat.</p>
+<p> </p>
+<p> </p>
+<p>Here's one examplewhich generates the figure above and then fixes it by plotting largewind speeds as smaller vectors in bold.</p>
 <pre>
-yes? use my_data.nc
-yes? show data
-currently SET data sets:
-1&gt; ./my_data.nc (default)
-name title I J K L
-T SEA SURFACE TEMPERATURE 1:180 1:90 ... 1:1
+SET DATA monthly_navy_winds
+SET REGION/X=100w:20w/Y=80s:20s
+VECTOR/ASPECT/L=1/LEN=5/COLOR=BLACK uwnd,vwnd
+GO fland 5
+VECTOR/ASPECT/L=1/LEN=5/COLOR=BLACK/OVER/NOLAB uwnd,vwnd
  
-yes? shade T
-**ERROR: dimensions improperly specified: 9999999 words were requested.
-*** NOTE: Check for unspecified limits on an ABSTRACT axis
-*** NOTE: Use the SHOW GRID command to see the axes</pre><h2>Explanation:</h2>
-<p>Ferret has a small set of absolutely reserved keywords. If Ferret encounters a variable who's name is an absolutely reserved keyword an error will result. The only absolutely reserved names are the pseudovariables I, J, K, L, X, Y, Z, T, _I, _J, _K, _L, _M, _N, _X, _Y, _Z, _T, _E, _F, XBOX, YBOX, ZBOX, TBOX, EBOX, FBOX, XBOXLO, XBOXHI, XBOXLO, YBOXHI, YBOXLO, ZBOXHI, ZBOXLO, ZBOXHI, EBOXLO, EBOXHI, TBOXLO, TBOXHI; and operators AND, OR, GT, GE, LT, LE, EQ, NE. Ferret does not distinguish between upper and lower case.</p>
-<p>It turns out that you CAN legally define variables using function names and keywords, like this (a good way to confuse the innocent!)</p>
-<pre>
-yes? LET plot = sin(x[gx=sst])
-yes? PLOT plot</pre><h2>Solution:</h2>
-<p>Three basic possibilities exist for addressing this problem.</p>
-<ol><li>In your Ferret expression, use single quotes around the variable name. (Note that variable names become case sensitive when surrounded by single quotes.)</li>
-<li>
-<p>For variables which come from a NetCDF dataset or OPeNDAP URL, rename the variable in Ferret after opening the dataset. This renames the variables within the Ferret session.</p>
-<pre>
-yes? use indata.nc
-yes? show data
-currently SET data sets:
-1&gt; ./indata.nc (default)
-name title I J K L
-T TEMPERATURE 1:180 1:90 ... 1:12
-TBOX TEMPERATURE IN BOX 1:180 1:90 ... 1:12
-Z BOTTOM DEPTH 1:180 1:90 ... 1:12
- 
-! Rename the variables so they are not keywords.
-yes? set var/name=temp 'T'
-yes? set var/name=tempbox 'TBOX'
-yes? set var/name=depth 'Z'
- 
-yes? show data
-currently SET data sets:
-1&gt; ./indata.nc (default)
-name title I J K L
-TEMP TEMPERATURE 1:180 1:90 ... 1:12
-TEMPBOX TEMPERATURE IN BOX 1:180 1:90 ... 1:12
-DEPTH BOTTOM DEPTH 1:180 1:90 ... 1:12
-</pre></li>
-<li>Outside of Ferret, rename the variable using the <a href="http://nco.sourceforge.net/">netCDF operator</a> named ncrename. (e.g. "ncrename -v T,TEMP my_file.nc")</li>
-</ol><p> </p>
+!
+! Now the fix
+!
+LET wspd = (uwnd^2+vwnd^2)^0.5
+LET hi_threshold = if wspd gt 5 then 1
+LET lo_threshold = if wspd le 5 then 1
+VECTOR/ASPECT/L=1/LEN=5/title="Zonal Wind, Meridional Wind (m/s)" lo_threshold*uwnd,vwnd
+VECTOR/ASPECT/L=1/LEN=20/OVER/COLOR=black/THICK hi_threshold*uwnd,vwnd
+GO fland 5
+VECTOR/ASPECT/L=1/LEN=5/OVER/COLOR=black/NOLAB lo_threshold*uwnd,vwnd
+VECTOR/ASPECT/L=1/LEN=20/OVER/COLOR=black/THICK/NOLAB hi_threshold*uwnd,vwnd
+</pre><p>
+</p><center><img alt="vetctor_with_bold" src="../sites/default/files/images/faq/vector_bold.gif" /></center>
 </div>
 </div>
 </div>

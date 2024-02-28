@@ -1,0 +1,8 @@
+ ! NOAA/PMEL TMAP
+ ! PyFerret v7.65 (debug)
+ ! Linux 4.4.0-22621-Microsoft - 02/20/24
+ ! 26-Feb-24 19:34     
+
+set mode verify
+go edit_faq_html.jnl ascii-characters-in-labels.html
+q
