@@ -12,10 +12,10 @@ xmlns:skos="http://www.w3.org/2004/02/skos/core#"
 xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
 xmlns:schema="http://schema.org/">
 
-<!-- Mirrored from ferret.pmel.noaa.gov/Ferret/documentation/release-notes/version-6-9-release-notes by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Jun 2023 18:12:42 GMT -->
+<!-- Mirrored from ferret.pmel.noaa.gov/Ferret/documentation/release_notes/version-7-2-release-notes by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Jun 2023 18:12:40 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head profile="http://www.w3.org/1999/xhtml/vocab">
-<title>Version 6.9 Release Notes - Ferret/PyFerret Documentation</title>
+<title>Version 7.2 Release Notes - Ferret/PyFerret Documentation</title>
 
 <link rel="stylesheet" href="../../modules/system/system.base.css">
 <link rel="stylesheet" href="../../modules/system/system.menus.css">
@@ -234,126 +234,81 @@ xmlns:schema="http://schema.org/">
 </aside><div class="grid-9 region region-content equal-height-element" id="region-content">
   <div class="region-inner region-content-inner">
 <a id="main-content"></a>
-<h1 class="title" id="page-title">Version 6.9 Release Notes</h1>
+<h1 class="title" id="page-title">Version 7.2 Release Notes</h1>
 <div class="block block-system block-main block-system-main odd block-without-title" id="block-system-main">
 <div class="block-inner clearfix">
  
 <div class="content clearfix">
-<article about="/Ferret/documentation/release-notes/version-6-9-release-notes" typeof="sioc:Item foaf:Document" class="node node-documentation-page node-promoted node-published node-not-sticky author-ansley odd clearfix" id="node-documentation-page-415">
+<article about="/Ferret/documentation/release_notes/version-7-2-release-notes" typeof="sioc:Item foaf:Document" class="node node-documentation-page node-published node-not-promoted node-not-sticky author-ansley odd clearfix" id="node-documentation-page-866">
 
 <!-- add the following line to print out updated date -->
 <!-- add the following line to print out the page description -->
- 
-<div class="field field-name-field-page-description field-type-text field-label-hidden">
-<div class="field-items">
-<div class="field-item even" property="schema:description">What&#039;s new in Ferret v6.9</div>
-</div>
-</div>
 
 <div class="content clearfix">
  
 <div class="field field-name-body field-type-text-with-summary field-label-hidden">
 <div class="field-items">
-<div class="field-item even" property="content:encoded"><p><b>Ferret V6.9 is required for LAS version 8.1</b></p>
-<h3>New Features/Enhancements:</h3>
-<p> </p>
-<p>1) <a href="#new_xml">Enhancements are made to the xml</a> that Ferret writes describing datasets when it is running within LAS.</p>
-<p>2) <a href="#GO_tree">There is a new method to visualize the tree of GO-script calls</a>.</p>
-<p>3) <a href="#std_trans">A new transformation @STD</a> computes the standard deviation.</p>
-<p>4) <a href="#axis_rename">An axis may be renamed</a> with the SET AXIS/NAME qualifier.</p>
-<p>5) <a href="#horiz_colorbar">Horizontal color bars</a> are now drawn by default right above the plot, with its labels above the color bar.</p>
-<p>6) <a href="#missing_coords">Missing data is now allowed in the coordinate data</a> for 3-argument plot calls</p>
-<p> </p>
-<h3>Bug fixes, minor changes:</h3>
-<p>1) Coordinate axes in datasets are renamed by Ferret because another axis is already defined with the same name but different coordinates. In recent versions we have attempted to write the original axis name when writing data. This cannot be done in a consistent way. We revert to the older behavior of using the internal (renamed) name for coordinate axes when writing data. If the user gives the /SAVE/KEEP_AXISNAMES qualifier, then Ferret will write the axis names from the source dataset, unless there is already a conflicting axis in the file being written.</p>
-<p>2) If a SET AXIS/UNITS= command is issued, the units string is saved in the same upper/lower-case spelling as is given in the command. Previously, Ferret changed the units string to uppercase. So, SET AXIS/UNITS="Meters" will show "Meters" and not "METERS" on plots and when saving data.</p>
-<p>3) If data in a NetCDF or OPeNDAP dataset is packed, with scale_factor and add_offset attributes, and is stored as short integers, then a request to write that variable gave incorrect results. Now, it is re-packed with the scale_factor and add_offset, and written using the data type of the data in the original file.</p>
-<p>4) If a dataset has an axis with axis bounds that define the upper and lower edges of the grid cells, and if those bounds do not enclose the grid points, the invalid bounds variable is made a dependent variable so that the values can be viewed.</p>
-<p>5) A bug in which some combinations of multidimensional transformations returned incorrect values is fixed.</p>
-<p>6) SHOW GRID/E and SHOW GRID/F returned an error. They now return the correct output when there is an E or F axis.</p>
-<p>7) SET AXIS commands, for instance to add units or a time origin to an axis from a dataset, behaved inconsistently when the axis name in the file was lowercase. This is fixed.</p>
-<p>8) The color key was mislabeled when a single color was specified by giving a low and high limit. For instance, in the single-color plot of <b>"yes? shade/lev=(0,1000,1000) rose"</b>, the upper and lower limits of the key are labeled with 0 and 1000. If a level is set with individual value, <b>"yes? shade/lev=(17) indicator"</b> the label is repeated at the upper and lower edge of the color key.</p>
-<p>9) The PPL PALETTE or PPL PATTERN command (or their aliases PALETTE and PATTERN) failed if there was extra space before the palette or pattern file name. This is fixed. It did not occur when the palette is given by a plot command qualifier.</p>
-<p>10) In Ferret v6.84, we made NetCDF the default file type for opening datasets (previously it had been descriptor files). With this change, Ferret stopped looking for datasets with the extension .des if no extension was given. This bug is fixed as follows: If no file extension is given on a "USE" or "SET DATA/FORMAT=CDF" command, Ferret now looks in the data directories for a file of type .nc, then .cdf, then .des.</p>
-<p>11) The name given to a Ferret symbol <b>"DEFINE SYMBOL symbolname = ..."</b> may now be 120 characters long. Previously these were limited to 30 characters.</p>
-<p>12) For extra-large regions in x, a "GO LAND" command to overlay the land outlines drew stray lines drawn across the plot. This is fixed.</p>
-<p>13) When writing string variables which come from a netCDF file, the string-dimension name and size from the source file are retained. Previously Ferret created a name STRINGn_nn for the string dimension, with nn being the maximum string length written out.</p>
-<h3>New Features/Enhancements:</h3>
-<p><a name="new_xml" id="new_xml"></a>1)<b> Enhancements were made to the xml that Ferret writes describing datasets when it is running within LAS.</b> This version of Ferret is required for LAS v8.1.</p>
-<p>2) <b>Method to visualize the tree of GO-script calls.</b></p>
-<p>If a set of scripts is run, with scripts calling multiple other scripts, it is useful to be able to see how the flow of the session went. To enable this, we add some new lines written to standard output. When the setting <a href="../../users-guide/commands-reference/SET.html#_VPINDEXENTRY_SET_REDIRECT" title="SET REDIRECT">SET REDIRECT</a> has been made, then on entering or exiting any GO script, Ferret will write a line to the log file that SET REDIRECT is sending output to.</p>
-<p>On entering a script, the name of the script is listed together with the arguments exactly as executed, after any symbols or grave-accent expressions are evaluated</p>
+<div class="field-item even" property="content:encoded"><p class="secHeader">New features in Ferret and PyFerret v7.2</p>
+<p><strong>1. Updated Memory Management </strong></p>
+<p>For version 7.2, significant enhancements were made to how Ferret manages memory. Instead of allocating a chunk of memory on startup, memory is allocated only as needed. SET MEMORY now simply specifies an upper limit on memory which will be allocated. See the new section in the Users Guide entitled <strong><a href="../../users-guide/computing-environment/MEMORY-USE.html">Understanding Ferret Memory Management Concepts and Tools</a></strong>. Here are the new tools that enable users to interact with memory management</p>
+<ul><li><a href="../../users-guide/commands-reference/SET.html#_mode_frugal">MODE FRUGAL</a> is added.</li>
+<li>SHOW MEMORY now reveals the current cache size and the peak "essential" memory that has been in use.</li>
+<li><a href="../../users-guide/commands-reference/SHOW.html#_show_mem_diag">SHOW MEMORY/DIAGNOSTIC</a> reveals the memory management choices that were taken during the previous command that read or computed data.</li>
+<li>The current cache is no longer cleared when SET MEMORY/SIZE=&lt;size&gt; is issued.</li>
+<li>MODE DESPERATE is deprecated.  Use of the command no longer has any effect.</li>
+<li>The new symbol ($PEAK_MEMORY) is always set; it contains the peak amount of “essential” memory that has been required since the last time this symbol was zeroed by SET MEMORY/SIZE=&lt;size&gt; or CANCEL MEMORY</li>
+</ul><p><strong>2. More computations are broken into pieces.</strong></p>
+<p>Ferret has always done calculations in chunks where  possible for improved performance. For instance, to compute an area average from data on an XYT grid to return a time series, it may read in subsets in the time direction and computes the area average for each set of timesteps before reading and computing the next set of timesteps.  <strong>Now</strong>, transformations such as AVERAGE or MAXIMUM, which compress the result along an axis, can flexibly do the computation in chunks along the transformed axis if that is most efficient. For instance, if our operation is an average in time of our XYT grid, the entire time series need not be loaded at once.</p>
+<p><strong>3. Scaleability enhancements</strong></p>
+<p><strong><a href="../../users-guide/commands-reference/DEFINE.html#_define_data_agg">Defining aggregations</a></strong> on the fly means we may need to open many, many datasets, which define many grids.  Data structures for handling internal information about datasets and grids are streamlined in v7.2, and these limits are raised:</p>
+<ul><li>The number of datasets that can be open at a time is increased from 400 to 5000</li>
+<li>The number of different grids defined at one time from 500 to 5000</li>
+</ul><p><strong>4. New symbol ($SPAWN_STATUS) is always defined. </strong></p>
+<p>It records the return flag of the last SPAWN command. 0 = Success = 0; nonzero = Failure. It is particularly useful in scripting, for example, to test for the existence of a file.  On startup, its value is 0.</p>
 <pre>
-!! Enter_GO scriptname  &lt;arguments&gt;</pre><p>on exiting a script, the name of the script is written:</p>
+SPAWN ls myFile.dat 
+IF `($SPAWN_STATUS) EQ 0` THEN 
+! stuff to do if myFile.dat exists 
+ELSE 
+! stuff to do if the file does not exist
+ENDIFn
+</pre><p><strong>3. New function <a href="../../users-guide/appendix-a-external-functions/DOT.html">DOT</a> performs a dot product (matrix multiplication).</strong></p>
 <pre>
-!! Exit_GO scriptname</pre><p>In addition, a new Unix tool FshowGO will process a log file with such lines, picking out the start of each script, and listing the GO lines, indented to show the nesting of calls. For instance,</p>
+yes? show function dot 
+DOT(VAR1,VAR2,IDIM)
+Compute the inner product of two variables along given dimension
+VAR1: Variable 1 
+VAR2: Variable 2 
+IDIM: Dimension (e.g.1,2,...)
+</pre><p><b>DOT</b> is one of a new class of functions: <em>direction-dependent functions</em>. One or more arguments are designated to determine the direction of the function's operation. In fact, there are functions DOT_X, DOT_Y, ..., and DOT calls one of those based on the value of argument 3.</p>
+<p><strong>4. New function <a href="../../users-guide/appendix-a-external-functions/TRANSPOSE.html">TRANSPOSE</a> transposes data in specified directions</strong></p>
 <pre>
-yes? SET REDIRECT/journal
-yes? go vector_demo
-yes? quit
- 
-</pre><p>Lines containing !! Enter_GO and !! Exit_GO are in the ferret.jnl file</p>
+yes? show function transpose
+TRANSPOSE(VAR,DIM1,DIM2)
+Compute the transpose along two given dimensions
+VAR: Variable to transpose
+DIM1: Dimension 1 for transpose (1,2,...)
+DIM2: Dimension 2 for transpose (1,2,...)</pre><p>This direction-changing function calls one of the many functions TRANSPOSE_XY, TRANSPOSE_ZT, etc.  It is written mainly as a demonstration of the concept of direction-dependent functions. Further development will give us shorthand methods for calling many of the sets of functions, e.g. in the future we will be able to to call XCAT, YCAT, ... using a single CONCATENATE function call.</p>
+<p><strong>5. PLOT/vs  now draws time-formatted axis labels.</strong></p>
+<p>For a command such as "<span style="font-family:courier new,courier,monospace;">PLOT/VS xvar,yvar</span>", if xvar and/or yvar have units of longitude or latitude, the plot axes are drawn with formatted Longitude or Latitude labeling.  Now, if one of them has units of time, a formatted time axis is drawn:</p>
 <pre>
-&gt; FshowGO ferret.jnl
-GO vector_demo 
-GO white 
-GO land red 
-GO fland 60 red basemap 
-GO fland 60 black basemap 
-GO magnify 1.5 
-GO fland 60 red basemap 
-GO magnify 1.5 
-GO fland 60 red basemap 
-GO magnify 1.5 
-GO fland 60 red basemap 
-GO centered_vectors vector/overlay/title="wind speed" uwnd,vwnd 10 
-GO scattered_vectors custom_vectors.dat 10 centered head 
-GO vector_commands.jnl 
-GO magnify 1 
-GO stick_vectors plot/COLOR=red/title=FNOC_winds uwnd vwnd 
- 
- 
-</pre><p>
-<a name="std_trans" id="std_trans"></a>3) <b>A new transformation @STD computes the standard deviation. </b>The computation is made by dividing by N (as is done in Ferret's @VAR variance transformation).</p>
-<p>
-<a name="axis_rename" id="axis_rename"></a>4) <b>An axis may be renamed with the SET AXIS/NAME qualifier.</b> Note that coordinate axes are used in a global way in any Ferret session, so renaming an axis that appears in multiple grids or datasets will change its name for all.</p>
-<p>
-<a name="horiz_colorbar" id="horiz_colorbar"></a>5) <b>A horizontal color bar is now drawn by default right above the plot</b>, with its labels above the color bar. This minimizes interference with the labels in the upper margin. For instance,</p>
-<pre>
-yes? use coads_climatology
-yes? shade/l=1/lev=v/SET slp
-yes? ppl shakey,1,0
-yes? ppl shade
- 
-</pre><p>Previously the colorbar was drawn well above the plot, on top of other labels, so careful setting of arguments to shakey was needed to make a good-looking plot. In addition, when the labels on the colorbar have many characters, they sometimes overlapped with each other, or ran together. Now the size and/or spacing of the labels is automatically adjusted to avoid this.</p>
-<p>Wherever SHAKEY is used in existing scripts, the resulting plot will be unchanged. Here is the image from the above commands:</p>
-<p><img alt="Horizontal Colorbar example" class="image-left" src="../../sites/default/files/images/documentation/release-notes/horiz_colorbar.gif" /></p>
-<p> </p>
-<p><a name="missing_coords" id="missing_coords"></a>6) <b>Missing data is allowed in the coordinate variables when using the <a href="../../users-guide/customizing-plots/MAP-PROJECTIONS-AND-CURVILINEAR-COORDINATES.html" title="6.10 MAP PROJECTIONS AND CURVILINEAR COORDINATES">3-argument plot commands</a>.</b> Previously Ferret returned an error message and did not draw a plot. Computations with curvilienar coordinates, such as sampling or a regridding function, will still generally require that there be no missing coordinate values.</p>
-<p>For instance we may want a longitude - height plot where some of the height values are missing:</p>
-<pre>
-yes? shade ua, longitude, geopotential_height
-! When missing data in geopotential_height, this previously returned:
-! **ERROR: value out of legal range: Y coordinates
-!          missing value where val is needed</pre><p>but now Ferret will draw the plot.</p>
-<p>Or there may be data as seen from space with location data given for locations on the earth but missing-values filling the rest of the longitude and latitude arrays:</p>
-<p>Here is location data in the I-J arrays:</p>
-<pre>
-yes? set view left; shade longitude
-yes? set view right; shade latitude</pre><p><img alt="satellite-style locations" class="image-left" src="../../sites/default/files/images/documentation/release-notes/satellite_loc.gif" /></p>
-<p>Here is the 3-argument plot using longitude and latitude:</p>
-<pre>
-yes? shade water_vapor, longitude, latitude</pre><p><img alt="satellite-data plot" class="image-left" src="../../sites/default/files/images/documentation/release-notes/satellite_data.gif" /></p>
-<p>We also find datasets that represent data in an estuary or river, having missing data in the location arrays. The location data plotted in its I-J grid looks like this:</p>
-<p>The data has missing values except sy the river locations:</p>
-<pre>
-yes? set view left; shade longitude
-yes? set view right; shade latitude</pre><p> </p>
-<p><img alt="River location data" class="image-left" src="../../sites/default/files/images/documentation/release-notes/river_loc.gif" /></p>
-<p> </p>
-<p>Here is the 3-argument plot :</p>
-<pre>
-yes? fill temperature, longitude, latitude</pre><p><img alt="River temperature plot" class="image-left" src="../../sites/default/files/images/documentation/release-notes/river.gif" /></p>
+yes? set var/units="DAYS since 1-JAN-1970" ttvar
+yes? plot/vs ttvar, myvar</pre><p class="secHeader">
+Bug fixes in Ferret and PyFerret</p>
+<p>1. For PLOT/VS, if the units are degrees but we do not want a labeled longitude or latitude axis, for instance if the degrees are a ship heading, then MODE LONG_LABEL or MODE LATIT_LABEL should be used to turn off the longitude/latitude formatting. PLOT/VS previously did not apply these modes; inV7.2 these do apply.</p>
+<p>2. A bug fixed on the command "<span style="font-family:courier new,courier,monospace;">show attributes myvar</span>", showing all attributes of a user-defined variable.</p>
+<p>3. When accessing information using `var,RETURN=`, previously the whole variable was evaluated to access the information. For many RETURN keywords, the data need not be loaded. Now, commands such as `var,RETURN=title` no longer do this.</p>
+<p>4. Adjustments are made when drawing a line plot whose value is constant, making the vertical range more reasonable.</p>
+<p>5. A bug is fixed in the formatting of numbers returned with list/precision=   <a href="https://www.pmel.noaa.gov/maillists/tmap/ferret_users/fu_2017/msg00116.html">reported on the Ferret Users List</a>.</p>
+<p>6. A bug is fixed when doing "striding" on a user-defined variable, also <a href="https://www.pmel.noaa.gov/maillists/tmap/ferret_users/fu_2017/msg00131.html">reported on the Ferret Users List.</a></p>
+<p>7. A bug using the SAVE/RIGID command was fixed, where the attributes on the time axis were incorrect.</p>
+<p>8. SET REDIRECT is used to send messages and output to a file. This failed if the file specified had a directory name that includes a dash.  This is legal and is now fixed.</p>
+<p>9. A bug is fixed with `var,RETURN=isready` which in some instances reported that an undefined variable was available to evaluate.</p>
+<p>10. "Delimited" reading had a bug when some variables are requested to be skipped. This is fixed.</p>
+<p>11. The command "ppl show" caused Ferret to stop. This is in fact erroneous PPLUS syntax. It is now handled as an error.</p>
+<p>12. A bug is fixed when listing results of operations on string variables. This was <a href="https://www.pmel.noaa.gov/maillists/tmap/ferret_users/fu_2017/msg00464.html">reported on the Ferret Users List.</a></p>
+<p>13. A bug caused the set of color levels computed by Ferret for FILL or SHADE plots leave uncolored some data at one end of the range of values.  In adition the automatically-set symbols LEV_MIN, LEV_MAX, and LEV_DEL were not set correctly when the data magnitudes are very small.  This is fixed. This bug was also <a href="https://www.pmel.noaa.gov/maillists/tmap/ferret_users/fu_2017/msg00468.html">reported on the Ferret Users List</a>.</p>
+<p>14. A parsing error is fixed for REPEAT loops. An extra parentheses appearing after a MESSAGE or PAUSE statement was not reported as an error, which resulted in overall incorrect parsing of the command and wrong results. Now this would be processed as an error. This bug was also <a href="https://www.pmel.noaa.gov/maillists/tmap/ferret_users/fu_2017/msg00469.html">reported on the Ferret Users List</a>.</p>
 <p> </p>
 </div>
 </div>
