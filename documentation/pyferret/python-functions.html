@@ -189,19 +189,19 @@ xmlns:schema="http://schema.org/">
 </dl><p> </p>
 <h3>Data exchange between Ferret and Python</h3>
 <p> </p>
-<p><b>For working with Ferret variables and data in Python, see the FerVar and FerPyVar <a href="pyferret-python-objects">PyFerret Python objects</a>. /pyferret/pyferret-python-objects These objects handle interacting with the getdata and putdata methods mentioned here and provide a simpler interface to the data and metadata.</b></p>
+<p><b>For working with Ferret variables and data in Python, see the FerVar and FerPyVar <a href="pyferret-python-objects.html">PyFerret Python objects</a>. /pyferret/pyferret-python-objects These objects handle interacting with the getdata and putdata methods mentioned here and provide a simpler interface to the data and metadata.</b></p>
 <dl><dt>get(name, create_mask=True)</dt>
 <dd>returns Ferret data as a cdms2.TransientVariable object. If create_mask is True, the mask attribute will be assigned.</dd>
 <dt>getdata(name, create_mask=True)</dt>
-<dd>returns Ferret numeric data as a Python dictionary containing the variable's metadata and data array. If create_mask is True, the data array associated with the <i>"data"</i> key will be a MaskedArray NumPy array instead an ordinary NumPy array. See the section <a href="data-dictionaries/">PyFerret metadata-and-data dictionaries</a> for more details about the dictionary returned and examples of using this function.</dd>
+<dd>returns Ferret numeric data as a Python dictionary containing the variable's metadata and data array. If create_mask is True, the data array associated with the <i>"data"</i> key will be a MaskedArray NumPy array instead an ordinary NumPy array. See the section <a href="data-dictionaries.html">PyFerret metadata-and-data dictionaries</a> for more details about the dictionary returned and examples of using this function.</dd>
 <dt>getstrdata(name)</dt>
-<dd>returns Ferret string data as a Python dictionary containing the variable's metadata and data array. The data array associated with the <i>"data"</i> key will be a NumPy array of strings whose maximum length is one more that the longest string given. See the section <a href="data-dictionaries/">PyFerret metadata-and-data dictionaries</a> for more details about the dictionary returned.</dd>
+<dd>returns Ferret string data as a Python dictionary containing the variable's metadata and data array. The data array associated with the <i>"data"</i> key will be a NumPy array of strings whose maximum length is one more that the longest string given. See the section <a href="data-dictionaries.html">PyFerret metadata-and-data dictionaries</a> for more details about the dictionary returned.</dd>
 <dt>metastr(datadict)</dt>
-<dd>returns a string describing the metadata contained in the Python dictionary of metadata and data. Usually you will want to print this string to the console (<i>print pyferret.metastr(datadict)</i>) See the section <a href="data-dictionaries/">PyFerret metadata-and-data dictionaries</a> for more details about the dictionary used and examples of using this function.</dd>
+<dd>returns a string describing the metadata contained in the Python dictionary of metadata and data. Usually you will want to print this string to the console (<i>print pyferret.metastr(datadict)</i>) See the section <a href="data-dictionaries.html">PyFerret metadata-and-data dictionaries</a> for more details about the dictionary used and examples of using this function.</dd>
 <dt>put(datavar, axis_pos=None)</dt>
 <dd>create a Python data variable in Ferret using the metadata and data in the provided the cdms2.TransientVariable object <i>datavar</i>. The order of the axes in Ferret can be explicitly specified in <i>axis_pos</i>; otherwise a reasonable guess for the order will be made from examining the axis types.</dd>
 <dt>putdata(datavar_dict, axis_pos=None)</dt>
-<dd>create a Python data variable in Ferret using the metadata and data in the provided Python dictionary <i>datavar_dict</i>. The order of the axes in Ferret can be explicitly specified in <i>axis_pos</i>; otherwise a reasonable guess for the order will be made from examining the axis types. See the section <a href="data-dictionaries/">PyFerret metadata-and-data dictionaries</a> for more details about the dictionary used and examples of using this function.</dd>
+<dd>create a Python data variable in Ferret using the metadata and data in the provided Python dictionary <i>datavar_dict</i>. The order of the axes in Ferret can be explicitly specified in <i>axis_pos</i>; otherwise a reasonable guess for the order will be made from examining the axis types. See the section <a href="data-dictionaries.html">PyFerret metadata-and-data dictionaries</a> for more details about the dictionary used and examples of using this function.</dd>
 </dl><p> </p>
 <h3>Support for Ferret external functions written in Python (PyEFs)</h3>
 <p> </p>
@@ -239,7 +239,7 @@ xmlns:schema="http://schema.org/">
 </dl><p>
 <a name="PYFERRET_DICTIONARY_CONSTANTS" id="PYFERRET_DICTIONARY_CONSTANTS"></a></p>
 <h3>Metadata and data dictionary constants</h3>
-<p>The following constants are useful when analyzing or assigning metadata, or even the data, in the metadata and data dictionaries used by the getdata and putdata functions in the pyferret module. See the section <a href="data-dictionaries/">PyFerret metadata-and-data dictionaries</a> for more information about using these constants in the dictionaries, as well as examples using some of these values.</p>
+<p>The following constants are useful when analyzing or assigning metadata, or even the data, in the metadata and data dictionaries used by the getdata and putdata functions in the pyferret module. See the section <a href="data-dictionaries.html">PyFerret metadata-and-data dictionaries</a> for more information about using these constants in the dictionaries, as well as examples using some of these values.</p>
 <dl><dt>X_AXIS, Y_AXIS, Z_AXIS, T_AXIS, E_AXIS, F_AXIS</dt>
 <dd>indices for the axes of metadata and data arrays.</dd>
 <dt>AXISTYPE_LONGITUDE, AXISTYPE_LATITUDE, AXISTYPE_LEVEL, AXISTYPE_TIME, AXISTYPE_CUSTOM, AXISTYPE_ABSTRACT, AXISTYPE_NORMAL</dt>

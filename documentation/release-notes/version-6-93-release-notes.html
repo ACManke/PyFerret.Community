@@ -153,7 +153,7 @@ xmlns:schema="http://schema.org/">
 </li>
 <li id="menu-1395-1" class="middle even sf-item-8 sf-depth-3 sf-total-children-12 sf-parent-children-0 sf-single-children-12 menuparent"><a href="../users-guide/customizing-plots/customizing-plots.html" class="sf-depth-3 menuparent">6. Customizing Plots</a>
 </li>
-<li id="menu-1396-1" class="middle odd sf-item-9 sf-depth-3 sf-total-children-11 sf-parent-children-0 sf-single-children-11 menuparent"><a href="../users-guide/handling-string-data-symbols//handling-string-data-symbols.html" class="sf-depth-3 menuparent">7. Handling String Data Symbols</a>
+<li id="menu-1396-1" class="middle odd sf-item-9 sf-depth-3 sf-total-children-11 sf-parent-children-0 sf-single-children-11 menuparent"><a href="../users-guide/handling-string-data-symbols/handling-string-data-symbols.html" class="sf-depth-3 menuparent">7. Handling String Data Symbols</a>
 </li>
 <li id="menu-1397-1" class="middle even sf-item-10 sf-depth-3 sf-total-children-10 sf-parent-children-0 sf-single-children-10 menuparent"><a href="../users-guide/working-with-special-data-sets/working-with-special-data-sets.html" class="sf-depth-3 menuparent">8. Working with Special Data Sets</a>
 </li>
@@ -262,7 +262,7 @@ xmlns:schema="http://schema.org/">
 </ul><pre>yes? shade/lev=v/key=horiz var<br /><br />yes? shade/lev=(1,5,1)/palette=ten_by_levels/key=centerlab  index_variable<br /></pre><p></p>
 <p>2) New transform @WGT returns the weights that would be used when doing an averaging or integral on the grid. The results are expressed in the same standard units as integrals: Meters on the surface of the earth and seconds in time.</p>
 <p></p>
-<p>3) New functions are included for working with collections of trajectories and collections of profiles.  A new documentation section introduces these functions and shows examples of <a title="2.8 Discrete Geometries Datasets" href="../../users-guide/working-with-special-data-sets/DSG_datasets.html">working with CF Discrete Geometries datasets</a>.</p>
+<p>3) New functions are included for working with collections of trajectories and collections of profiles.  A new documentation section introduces these functions and shows examples of <a title="2.8 Discrete Geometries Datasets" href="../users-guide/working-with-special-data-sets/DSG_datasets.html">working with CF Discrete Geometries datasets</a>.</p>
 <p></p>
 <p>4) Previously when reading ascii or unformatted files (EZ datasets), if a grid is not defined with the FILE/GRID qualifier, Ferret used the "ABSTRACT" axis, with 20480 index values. This resulted in incorrect interpretation of the file if it has more records than that. In addition, commands such as "show grid" were not useful to see the true size of the dataset.  Now, if there is no grid given by the Ferret commands, Ferret determines the size of the file and defines an axis and grid on which to read the variables. It takes any /skip and /columns qualifiers into account.  If a grid is specified there is no change to the behavior.</p>
 <pre>yes? file/skip=3/var="nn,freq" frequency_h.dat <br /><br />yes?  say `freq,return=isize`<br /> !-&gt; MESSAGE/CONTINUE 426<br />426<br /><br />yes? show grid freq<br />    GRID (G001)<br /> name       axis              # pts   start                end<br /> (AX002)   X                  426 r   1                    426<br /> normal    Y<br />...</pre><p></p>

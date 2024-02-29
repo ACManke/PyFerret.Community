@@ -189,7 +189,7 @@ xmlns:schema="http://schema.org/">
 <li id="menu-1351-1" class="middle odd sf-item-9 sf-depth-3 sf-no-children"><a href="../../demos/ferret-polymark-demo.html" class="sf-depth-3">Ferret Polymark Demo</a></li>
 <li id="menu-1349-1" class="middle even sf-item-10 sf-depth-3 sf-no-children"><a href="../../demos/ferret-constant-array-demo.html" class="sf-depth-3">Ferret Constant-Array demo</a></li>
 <li id="menu-1356-1" class="middle odd sf-item-11 sf-depth-3 sf-no-children"><a href="../../demos/ferret-land_detail-demo.html" class="sf-depth-3">Ferret land_detail demo</a></li>
-<li id="menu-1340-1" class="middle even sf-item-12 sf-depth-3 sf-no-children"><a href=".../../demos/coads-tour.html" class="sf-depth-3">COADS Tour</a></li>
+<li id="menu-1340-1" class="middle even sf-item-12 sf-depth-3 sf-no-children"><a href="../../demos/coads-tour.html" class="sf-depth-3">COADS Tour</a></li>
 <li id="menu-1341-1" class="middle odd sf-item-13 sf-depth-3 sf-no-children"><a href="../../demos/levitus-tour.html" class="sf-depth-3">Levitus Tour</a></li>
 <li id="menu-1342-1" class="middle even sf-item-14 sf-depth-3 sf-no-children"><a href="../../demos/how-to-use-ferret-and-opendap-to-access-and-analyze-remote-data-1.html" class="sf-depth-3">Use OPeNDAP</a></li>
 <li id="menu-1348-1" class="last odd sf-item-15 sf-depth-3 sf-no-children"><a href="../../demos/ferret-binary-read-demo.html" class="sf-depth-3">Ferret binary read demo</a></li>
@@ -245,15 +245,114 @@ xmlns:schema="http://schema.org/">
 <div class="field field-name-body field-type-text-with-summary field-label-hidden">
 <div class="field-items">
 <div class="field-item even" property="content:encoded"><p><a name="_VPID_276" id="_VPID_276"></a><br /></p><p align="left"><a name="_VPINDEXENTRY_896" id="_VPINDEXENTRY_896"></a>String variables are defined using DEFINE VARIABLE (or its alias LET). They can be read from and written to netCDF files. Arrays of strings may be defined and a limited number of algebraic operations are defined for string variables. They can be passed to go scripts and functions. Grave accents around a scalar string return the string.</p>
-<pre>yes? LET astring = "hello everyone"<br />yes? LIST/NOHEAD astring<br /> "hello everyone"<br />yes? message `astring`<br />!-&gt; message hello everyone<br />hello everyone<br /> Hit Carriage Return to continue</pre><p>
-<a name="_VPID_277" id="_VPID_277"></a><a name="_VPINDEXENTRY_897" id="_VPINDEXENTRY_897"></a><br /></p><p align="left" class="secHeader"><b>7.1.1 String arrays </b></p>
+<pre>
+yes? LET astring = "hello everyone"
+yes? LIST/NOHEAD astring
+ "hello everyone"
+yes? message `astring`
+!-&gt; message hello everyone
+hello everyone
+ Hit Carriage Return to continue</pre><p>
+<a name="_VPID_277" id="_VPID_277"></a><a name="_VPINDEXENTRY_897" id="_VPINDEXENTRY_897"></a>
+</p><p align="left" class="secHeader"><b>7.1.1 String arrays </b></p>
 <p align="left">Strings in arrays may be of variable length. The syntax {"a","b","c"} denotes an array of strings. Two commas in a row denotes a null (missing value) string. Single and double quoted strings are both allowed, but must match for an individual string, e.g. 'P" is not valid.</p>
 <p align="left"><b>Examples: the following define and list valid string arrays: </b></p>
-<pre>yes? LET a = {"s1","s2", ,"s3"}<br /><br />yes? LIST a<br /> {"s1","s2", ,"s3"}<br />1 / 1:"s1"<br />2 / 2:"s2"<br />3 / 3:"" <br />4 / 4:"s3"<br /><br />yes? LET b = {, 'string1','s2',,'cccc'}<br />yes? LIST/i=3:5 b<br /> {, 'string1','s2',,'cccc'} <br />3 / 3:"s2"<br />4 / 4:"" <br />5 / 5:"cccc" <br /><br />yes? LET c = {'p', 'q', 'a longer string'}<br />yes? LIST/NOHEAD/ORDER=x c<br /> "p" "q" "a longer string"<br /></pre><p>String arrays may also be defined which contain information about the contents of netCDF files. The keywords varnames, attnames,  and dimnames may be used to define variables with lists of these names. See <a href="../variables-xpressions/VARIABLES.html#_VPINDEXENTRY_attrib_keywords">Chapter 3 Section 1.8.2</a> for more on Attribute Keywords</p>
-<pre>yes? USE coads_climatology<br />yes? LET allvars = ..varnames<br />yes? LIST allvars<br /> VARIABLE : ..VARNAMES<br /> FILENAME : coads_climatology.cdf<br /> FILEPATH : /home/porter/tmap/ferret/linux/fer_dsets/data/<br /> SUBSET : 7 points (X)<br /> 1 / 1:"SST" <br /> 2 / 2:"AIRT"<br /> 3 / 3:"SPEH"<br /> 4 / 4:"WSPD"<br /> 5 / 5:"UWND"<br /> 6 / 6:"VWND"<br /> 7 / 7:"SLP" <br /><br />yes? LET alldims = ..dimnames<br />yes? LIST alldims<br /> VARIABLE : ..DIMNAMES<br /> FILENAME : coads_climatology.cdf<br /> FILEPATH : /home/porter/tmap/ferret/linux/fer_dsets/data/<br /> SUBSET : 3 points (X)<br /> 1 / 1:"COADSX"<br /> 2 / 2:"COADSY"<br /> 3 / 3:"TIME" <br /><br />yes? LET sst_at = sst.attnames <br />yes? LIST sst_at<br /> VARIABLE : SST.ATTNAMES<br /> FILENAME : coads_climatology.cdf<br /> FILEPATH : /home/porter/tmap/ferret/linux/fer_dsets/data/<br /> SUBSET : 5 points (X)<br /> 1 / 1:"missing_value"<br /> 2 / 2:"_FillValue" <br /> 3 / 3:"long_name" <br /> 4 / 4:"history" <br /> 5 / 5:"units" <br /><br />! The string function IS_ELEMENT_OF_STR can check for an element in the list<br />! The function is case sensitive.<br />yes? LET has_sst = IS_ELEMENT_OF_STR(allvars,{"SST","sst"})<br /><br /></pre><p><a name="_VPINDEXENTRY_stringwrite" id="_VPINDEXENTRY_stringwrite"></a><br /></p><p class="secHeader">7.1.2 Writing strings to file<b>s </b></p>
+<pre>yes? LET a = {"s1","s2", ,"s3"}
+
+yes? LIST a
+ {"s1","s2", ,"s3"}
+1 / 1:"s1"
+2 / 2:"s2"
+3 / 3:"" 
+4 / 4:"s3"
+
+yes? LET b = {, 'string1','s2',,'cccc'}
+yes? LIST/i=3:5 b
+ {, 'string1','s2',,'cccc'} 
+3 / 3:"s2"
+4 / 4:"" 
+5 / 5:"cccc" 
+
+yes? LET c = {'p', 'q', 'a longer string'}
+yes? LIST/NOHEAD/ORDER=x c
+ "p" "q" "a longer string"
+</pre><p>String arrays may also be defined which contain information about the contents of netCDF files. The keywords varnames, attnames,  and dimnames may be used to define variables with lists of these names. See <a href="../variables-xpressions/VARIABLES.html#_VPINDEXENTRY_attrib_keywords">Chapter 3 Section 1.8.2</a> for more on Attribute Keywords</p>
+<pre>yes? USE coads_climatology
+yes? LET allvars = ..varnames
+yes? LIST allvars
+ VARIABLE : ..VARNAMES
+ FILENAME : coads_climatology.cdf
+ FILEPATH : /home/porter/tmap/ferret/linux/fer_dsets/data/
+ SUBSET : 7 points (X)
+ 1 / 1:"SST" 
+ 2 / 2:"AIRT"
+ 3 / 3:"SPEH"
+ 4 / 4:"WSPD"
+ 5 / 5:"UWND"
+ 6 / 6:"VWND"
+ 7 / 7:"SLP" 
+
+yes? LET alldims = ..dimnames
+yes? LIST alldims
+ VARIABLE : ..DIMNAMES
+ FILENAME : coads_climatology.cdf
+ FILEPATH : /home/porter/tmap/ferret/linux/fer_dsets/data/
+ SUBSET : 3 points (X)
+ 1 / 1:"COADSX"
+ 2 / 2:"COADSY"
+ 3 / 3:"TIME" 
+
+yes? LET sst_at = sst.attnames 
+yes? LIST sst_at
+ VARIABLE : SST.ATTNAMES
+ FILENAME : coads_climatology.cdf
+ FILEPATH : /home/porter/tmap/ferret/linux/fer_dsets/data/
+ SUBSET : 5 points (X)
+ 1 / 1:"missing_value"
+ 2 / 2:"_FillValue" 
+ 3 / 3:"long_name" 
+ 4 / 4:"history" 
+ 5 / 5:"units" 
+
+! The string function IS_ELEMENT_OF_STR can check for an element in the list
+! The function is case sensitive.
+yes? LET has_sst = IS_ELEMENT_OF_STR(allvars,{"SST","sst"})
+
+</pre><p><a name="_VPINDEXENTRY_stringwrite" id="_VPINDEXENTRY_stringwrite"></a>
+</p><p class="secHeader">7.1.2 Writing strings to file<b>s </b></p>
 <p align="left">To write strings to ascii files, formats specified with /FORMAT=tab or /FORMAT=comma are often useful.</p>
-<pre>yes? LET a = {"s1","s2", ,"s3"}<br />yes? LET b = {, 'string1','s2',,'cccc'}<br />yes? LIST/format=tab/norowhead a,b<br />yes? LIST/format=tab/norowhead a,b<br /> X: 0.5 to 5.5<br /> Column 1: A is {"s1","s2", ,"s3","s4"} BAD FLAG : -1.E+34<br /> Column 2: B is {, 'string1','s2',,'cccc'} BAD FLAG : -1.E+34<br />A B<br />"s1" "" <br />"s2" "string1" <br />"" "s2" <br />"s3" "" <br />"s4" "cccc" <br /><br /></pre><p align="left">When a single string variable is being listed, the Fortran format (A) may be used, but not in combination with other variables.  This is useful for writing a header line to an ASCII file.</p>
-<pre style="text-align: left;">yes? let header = "Station 51 data"<br />yes? list/clobber/format=(A)/noheader/file=my_output_file.dat header<br /><br />yes? let header = "Date T1 S1"<br />yes? list/append/format=(A)/noheader/file=my_output_file.dat header<br /><br />yes? list/append/nohead/norowhead/format=tab/file=my_output_file.dat datestrings, t1, s1<br /><br />yes? sp cat my_output_file.dat<br /><br />Station 51 data<br />Date T1 S1<br />"1-jan-2010" 15.55 1.342 <br />"2-jan-2010" 14.12 1.33 <br />"5-jan-2010" 15.12 1.36 <br /><br /></pre><p align="left"></p>
+<pre>yes? LET a = {"s1","s2", ,"s3"}
+yes? LET b = {, 'string1','s2',,'cccc'}
+yes? LIST/format=tab/norowhead a,b
+yes? LIST/format=tab/norowhead a,b
+ X: 0.5 to 5.5
+ Column 1: A is {"s1","s2", ,"s3","s4"} BAD FLAG : -1.E+34
+ Column 2: B is {, 'string1','s2',,'cccc'} BAD FLAG : -1.E+34
+A B
+"s1" "" 
+"s2" "string1" 
+"" "s2" 
+"s3" "" 
+"s4" "cccc" 
+
+</pre><p align="left">When a single string variable is being listed, the Fortran format (A) may be used, but not in combination with other variables.  This is useful for writing a header line to an ASCII file.</p>
+<pre style="text-align: left;">yes? let header = "Station 51 data"
+yes? list/clobber/format=(A)/noheader/file=my_output_file.dat header
+
+yes? let header = "Date T1 S1"
+yes? list/append/format=(A)/noheader/file=my_output_file.dat header
+
+yes? list/append/nohead/norowhead/format=tab/file=my_output_file.dat datestrings, t1, s1
+
+yes? sp cat my_output_file.dat
+
+Station 51 data
+Date T1 S1
+"1-jan-2010" 15.55 1.342 
+"2-jan-2010" 14.12 1.33 
+"5-jan-2010" 15.12 1.36 
+
+</pre><p align="left"></p>
 <p align="left"></p>
 <p align="left"></p>
 <p align="left"></p>

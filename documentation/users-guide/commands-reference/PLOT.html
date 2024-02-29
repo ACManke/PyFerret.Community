@@ -189,7 +189,7 @@ xmlns:schema="http://schema.org/">
 <li id="menu-1351-1" class="middle odd sf-item-9 sf-depth-3 sf-no-children"><a href="../../demos/ferret-polymark-demo.html" class="sf-depth-3">Ferret Polymark Demo</a></li>
 <li id="menu-1349-1" class="middle even sf-item-10 sf-depth-3 sf-no-children"><a href="../../demos/ferret-constant-array-demo.html" class="sf-depth-3">Ferret Constant-Array demo</a></li>
 <li id="menu-1356-1" class="middle odd sf-item-11 sf-depth-3 sf-no-children"><a href="../../demos/ferret-land_detail-demo.html" class="sf-depth-3">Ferret land_detail demo</a></li>
-<li id="menu-1340-1" class="middle even sf-item-12 sf-depth-3 sf-no-children"><a href=".../../demos/coads-tour.html" class="sf-depth-3">COADS Tour</a></li>
+<li id="menu-1340-1" class="middle even sf-item-12 sf-depth-3 sf-no-children"><a href="../../demos/coads-tour.html" class="sf-depth-3">COADS Tour</a></li>
 <li id="menu-1341-1" class="middle odd sf-item-13 sf-depth-3 sf-no-children"><a href="../../demos/levitus-tour.html" class="sf-depth-3">Levitus Tour</a></li>
 <li id="menu-1342-1" class="middle even sf-item-14 sf-depth-3 sf-no-children"><a href="../../demos/how-to-use-ferret-and-opendap-to-access-and-analyze-remote-data-1.html" class="sf-depth-3">Use OPeNDAP</a></li>
 <li id="menu-1348-1" class="last odd sf-item-15 sf-depth-3 sf-no-children"><a href="../../demos/ferret-binary-read-demo.html" class="sf-depth-3">Ferret binary read demo</a></li>
@@ -332,8 +332,11 @@ yes? PLOT/OVER/DASH=(0.6,0.2,0.1,0.2)/COLOR=RED/THICK/I=1:100 sin(i/9)</pre><p a
 <p align="left">The /LINE qualifier without =n causes the PLOT command to connect the plotted points with a line regardless of the state of the /SYMBOLS qualifier.</p>
 <p align="left">For simpler specification of line characteristics see <a href="#_VPINDEXENTRY_1471">PLOT/COLOR=/THICKNESS=/DASH=</a>, above. /LINE=n specifies a pre-defined <a name="_VPINDEXENTRY_1478" id="_VPINDEXENTRY_1478"></a><a name="_VPINDEXENTRY_1479" id="_VPINDEXENTRY_1479"></a>line style. "n" is an integer between 1 and 18. <i><b>GO line_thickness</b></i> draw samples of the line colors and thickness:</p>
 <p align="left"> </p>
-<p><a href=", and run the demonstration script ef_eofsvd_demo.jnl for examples of this function./default/files/images/documentation/users-guide/user_guide_images/line_thickness.gif"><img alt="line_thickness" class="image-inline" src=", and run the demonstration script ef_eofsvd_demo.jnl for examples of this function./default/files/images/documentation/users-guide/user_guide_images/line_thickness.gif" style="height: 168px; width: 200px;" /></a></p>
+
+
+<p><a href="../../../sites/default/files/images/documentation/users-guide/user_guide_images/line_thickness.gif"><img alt="line_thickness" class="image-inline" src="../../../sites/default/files/images/documentation/users-guide/user_guide_images/line_thickness.gif" style="height: 168px; width: 200px;" /></a></p>
 <p> </p>
+
 <p align="left">
 Line style "1" is always a solid line in the foreground color (black or white). Other line styles are device dependent (colors or dash patterns). For color devices, n=1–6 draws single-thickness lines each a different color. n=7–12 draws double-thick lines in the same color order, and n=13–18 draws triple-thick lines. See the chapter "Customizing Plots", section "<a href="../customizing-plots/COLOR.html#_VPID_246">Text and line colors</a>" for a chart of the default colors.</p>
 <p> </p>
@@ -345,14 +348,14 @@ Line style "1" is always a solid line in the foreground color (black or white). 
 <p align="left">Causes the indicated field(s) to be <a name="_VPINDEXENTRY_1482" id="_VPINDEXENTRY_1482"></a>overlaid on the existing plot. This qualifier can also be used to overlay lines or symbols on 2D plots (SHADE, CONTOUR, or VECTOR) provided the axis scalings are appropriate.</p>
 <p align="left"> </p>
 <p align="left"><a name="_VPINDEXENTRY_1483" id="_VPINDEXENTRY_1483"></a>PLOT/<b>SET_UP</b></p>
-<p align="left">Performs all the internal preparations required by program Ferret for plotting but does not actually render the plot. The command PPL can then be used to make changes to the plot prior to producing output with the PPL PLOT command. This makes possible certain customizations that are not possible with Ferret command qualifiers. See the chapter "<a href="../customizing-plots.html">Customizing Plots</a>".</p>
+<p align="left">Performs all the internal preparations required by program Ferret for plotting but does not actually render the plot. The command PPL can then be used to make changes to the plot prior to producing output with the PPL PLOT command. This makes possible certain customizations that are not possible with Ferret command qualifiers. See the chapter "<a href="../customizing-plots/customizing-plots.html">Customizing Plots</a>".</p>
 <p align="left"><a name="_VPINDEXENTRY_1484" id="_VPINDEXENTRY_1484"></a></p>
 <p align="left"><a name="_VPINDEXENTRY_1485" id="_VPINDEXENTRY_1485"></a>PLOT/<b>SYMBOL[=]</b></p>
 <p align="left">The /SYMBOL qualifier causes the PLOT command to mark each plotted point with a symbol. If the /LINE qualifier is given too the symbols are also connected with a line; if /LINE is omitted no connecting line is drawn.  For standard (non-ribbon) plots symbols may be colored using the color given with the /COLOR qualifier. For Ribbon plots, colors are controlled by the /PALETTE qualifier.</p>
 <p align="left">Optionally, the symbol number may be explicitly specified as an integer value between 1 and 88. In Pyferret additional symbols are specified with a symbol name. </p>
 <p align="left">The integer refers to the PPLUS plot marker numbers (e.g., 1 for x, 3 for +, etc.). Type "GO show_symbols" and "GO show_88_syms" at the Ferret prompt to see the available symbols and their reference numbers. Here are those symbols:</p>
 <div class="dnd-atom-wrapper type-image context-sdl_editor_representation" contenteditable="false">
-<div class="dnd-drop-wrapper"><!-- scald=69:sdl_editor_representation --><div class='image'><img typeof="foaf:Image" src=", and run the demonstration script ef_eofsvd_demo.jnl for examples of this function./default/files/thumbnails/image/ferret_88_syms.png" width="819" height="707" alt="Ferret symbols, 1 through 88" title="ferret_88_syms.png" /></div><!-- END scald=69 --></div>
+<div class="dnd-drop-wrapper"><!-- scald=69:sdl_editor_representation --><div class='image'><img typeof="foaf:Image" src="../../../sites/default/files/thumbnails/image/ferret_88_syms.png" width="819" height="707" alt="Ferret symbols, 1 through 88" title="ferret_88_syms.png" /></div><!-- END scald=69 --></div>
 <div class="dnd-legend-wrapper" contenteditable="true">
 <div class="meta">
 <!--END copyright=69--></div>
@@ -364,7 +367,7 @@ In Ferret, this command uses the smallest dot that can be represented on the dis
 <p class="pnormal">PLOT/<b>SYMBOL=</b><b>symname </b>In PyFerret, (v7.4) additional symbols are defined, and are referenced using PLOT/SYMBOL=name.  The filled symbols may also be outlined with a second color using /HIGHLIGHT. A set of pre-defined symbols is included with PyFerret. Additionally custom symbols may be defined by the user, as discussed below.</p>
 <p class="pnormal">To see the included symbols, run the script "GO show_py_syms" at the PyFerret prompt to see the pre-defined symbols and their names. Here are the pre-defined symbols and  their names:</p>
 <div class="dnd-atom-wrapper type-image context-sdl_editor_representation" contenteditable="false">
-<div class="dnd-drop-wrapper"><!-- scald=70:sdl_editor_representation --><div class='image'><img typeof="foaf:Image" src=", and run the demonstration script ef_eofsvd_demo.jnl for examples of this function./default/files/thumbnails/image/pyferret_named_syms.png" width="819" height="707" alt="PyFerret symbols and names" title="pyferret_named_syms.png" /></div><!-- END scald=70 --></div>
+<div class="dnd-drop-wrapper"><!-- scald=70:sdl_editor_representation --><div class='image'><img typeof="foaf:Image" src="../../../sites/default/files/thumbnails/image/pyferret_named_syms.png" width="819" height="707" alt="PyFerret symbols and names" title="pyferret_named_syms.png" /></div><!-- END scald=70 --></div>
 <div class="dnd-legend-wrapper" contenteditable="true">
 <div class="meta">
 <!--copyright=70--><!--END copyright=70--></div>
@@ -388,7 +391,7 @@ yes? ribbon/vs/nolab/sym=diamfill/highlight/size=.3 \
 /palette=blue_green_gold/levels=10/key=center \
 /hlim=0:11/vlim=0:11 xpts, ypts, xpts
 </pre><div class="dnd-atom-wrapper type-image context-sdl_editor_representation" contenteditable="false">
-<div class="dnd-drop-wrapper"><!-- scald=75:sdl_editor_representation --><div class='image'><img typeof="foaf:Image" src=", and run the demonstration script ef_eofsvd_demo.jnl for examples of this function./default/files/thumbnails/image/pyferret_syms_examples.png" width="830" height="498" alt="pyferret symbols examples" title="pyferret_syms_examples.png" /></div><!-- END scald=75 --></div>
+<div class="dnd-drop-wrapper"><!-- scald=75:sdl_editor_representation --><div class='image'><img typeof="foaf:Image" src="../../../sites/default/files/thumbnails/image/pyferret_syms_examples.png" width="830" height="498" alt="pyferret symbols examples" title="pyferret_syms_examples.png" /></div><!-- END scald=75 --></div>
 <div class="dnd-legend-wrapper" contenteditable="true">
 <div class="meta">
 <!--copyright=75--><!--END copyright=75--></div>
@@ -583,7 +586,7 @@ All of the <a href="../customizing-plots/CONTOURING.html#_VPINDEXENTRY_852" titl
 Specifies a color palette. Any color palette may be used. Only valid in conjunction with /PLOT/RIBBON.</p>
 <p align="left"><a name="_PLOT_FAST" id="_PLOT_FAST"></a>RIBBON<b>/FAST</b><br />
 By default the colors are interpolated along the path between one point and the next, for a smooth blending of colors from one location to the next. The /FAST qualifier turns off this capability so that each grid cell along the line is colored by the single color corresponding to the value of the function at the coordinate location. Compare:</p>
-<p align="left"><img alt="ribbon_fast.gif" class="image-left" src=", and run the demonstration script ef_eofsvd_demo.jnl for examples of this function./default/files/images/documentation/users-guide/commands-reference/ribbon_fast.gif" /></p>
+<p align="left"><img alt="ribbon_fast.gif" class="image-left" src="../../../sites/default/files/images/documentation/users-guide/commands-reference/ribbon_fast.gif" /></p>
 <p>This was drawn as follows, with the /FAST qualifier on the lower curve but with the same color levels.</p>
 <pre>
 yes? RIBBON/VS/LINE/SYMBOL/SIZE=0.2/THICK2 xpts,ypts,var

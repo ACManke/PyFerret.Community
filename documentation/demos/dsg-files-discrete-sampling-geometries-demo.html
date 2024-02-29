@@ -295,12 +295,13 @@ Each feature type has a native plot type “PLOT VAR” will plot the variable i
 <p>First lets make a map showing the locations of the stations. This is nothing new, we draw a map and overlay the locations with PLOT/VS</p>
 <pre>
 yes? go basemap x=140:360 y=-40:40 20
-yes? plot/vs/over/nolabel/color=blue/symbol=19/siz=0.2/thick longitude, latitude</pre><div class="image"><img alt="DSG example: location of timeseries stations" height="597" src="http://ferret.lark.pmel.noaa.gov/sites/default/files/thumbnails/image/dsg_timeseries_map_locations.png" title="DSG example: location of timeseries stations" typeof="foaf:Image" width="692" /></div>
+yes? plot/vs/over/nolabel/color=blue/symbol=19/siz=0.2/thick longitude, latitude</pre>
+<div class="image"><img alt="DSG example: location of timeseries stations" height="597" src="../../sites/default/files/thumbnails/image/dsg_timeseries_map_locations.png" title="DSG example: location of timeseries stations" typeof="foaf:Image" width="692" /></div>
 <p>Now plot the temperature variable for all of the time series in the collection at once. They are all plotted together, with a line key limited automatically to 40 of the lines (as is also done for many lines in any other plot). Ferret understands DSG coordinates internally, much as it would understand gridded coordinates. So the plot is properly formatted and self-describing.</p>
 <pre>
 yes? plot t_25
 *** NOTE: Too many lines to label. Labeling initial 40</pre><div class="dnd-atom-wrapper type-image context-sdl_editor_representation" contenteditable="false">
-<div class="dnd-drop-wrapper"><!-- scald=189:sdl_editor_representation --><div class='image'><img typeof="foaf:Image" src="https://ferret.pmel.noaa.gov../../sites/default/files/thumbnails/image/dsg_tutorial_70_timeseries.png" width="830" height="498" alt="Plot the 70 timeseries in the dsg timeseries example dataset" title="Plot the 70 timeseries in the dsg timeseries example dataset" /></div><!-- END scald=189 --></div>
+<div class="dnd-drop-wrapper"><!-- scald=189:sdl_editor_representation --><div class='image'><img typeof="foaf:Image" src="../../sites/default/files/thumbnails/image/dsg_tutorial_70_timeseries.png" width="830" height="498" alt="Plot the 70 timeseries in the dsg timeseries example dataset" title="Plot the 70 timeseries in the dsg timeseries example dataset" /></div><!-- END scald=189 --></div>
 <div class="dnd-legend-wrapper" contenteditable="true">
 <div class="meta">
 <!--copyright=189--><!--END copyright=189--></div>
@@ -313,7 +314,7 @@ yes? plot t_25
 Ordinary PyFerret qualifiers for coordinate limits, /X=, /Y=, /Z=, /T=, /E= operate as they do with a gridded dataset -- i.e. they control the region displayed by the graphics and the data that gets plotted or listed.</p>
 <pre>
 yes? plot/thick/x=130e:170e/y=8s:5n/T=1-FEB-2017:15-APR-2017 T_25</pre><div class="dnd-atom-wrapper type-image context-sdl_editor_representation" contenteditable="false">
-<div class="dnd-drop-wrapper"><!-- scald=182:sdl_editor_representation --><div class='image'><img typeof="foaf:Image" src="https://ferret.pmel.noaa.gov../../sites/default/files/thumbnails/image/dsg_tutorial_timeseries_world_constraints.png" width="830" height="498" alt="DSG Demo Timeseries data constrained by world coordinate limits" title="DSG Demo Timeseries data constrained by world coordinate limits" /></div><!-- END scald=182 --></div>
+<div class="dnd-drop-wrapper"><!-- scald=182:sdl_editor_representation --><div class='image'><img typeof="foaf:Image" src="../../sites/default/files/thumbnails/image/dsg_tutorial_timeseries_world_constraints.png" width="830" height="498" alt="DSG Demo Timeseries data constrained by world coordinate limits" title="DSG Demo Timeseries data constrained by world coordinate limits" /></div><!-- END scald=182 --></div>
 <div class="dnd-legend-wrapper" contenteditable="true">
 <div class="meta">
 <!--copyright=182--><!--END copyright=182--></div>
@@ -362,10 +363,10 @@ FEATURE  STATION     LONGITUDE  LATITUDE   DEPTH            TIME        T_25
 yes? plot/thick t_25
  
 </pre><div class="dnd-atom-wrapper type-image context-sdl_editor_representation" contenteditable="false">
-<div class="dnd-drop-wrapper"><!-- scald=183:sdl_editor_representation --><div class='image'><img typeof="foaf:Image" src="https://ferret.pmel.noaa.gov../../sites/default/files/thumbnails/image/dsg_tutorial_masked_timeseries.png" width="830" height="498" alt="DSG Demo Timeseries plot, a mask is applied to the dataset" title="DSG Demo Timeseries plot, a mask is applied to the dataset" /></div><!-- END scald=183 --></div>
+<div class="dnd-drop-wrapper"><div class='image'><img typeof="foaf:Image" src="../../sites/default/files/thumbnails/image/dsg_tutorial_masked_timeseries.png" width="830" height="498" alt="DSG Demo Timeseries plot, a mask is applied to the dataset" title="DSG Demo Timeseries plot, a mask is applied to the dataset" /></div></div>
 <div class="dnd-legend-wrapper" contenteditable="true">
 <div class="meta">
-<!--END copyright=183--></div>
+</div>
 </div>
 </div>
 <p>
@@ -397,13 +398,13 @@ TEMP     Temperature                      ...       ...     tot 1268    ...     
 SAL      Salinity                         ...       ...     tot 1268    ...       1:30      ...
 SIGMA_T  Sigma-T                          ...       ...     tot 1268    ...       1:30      ...
  
-yes? plot/thick sigma_t</pre><div class="image"><img alt="DSG tutorial, Set of Profile lines" height="575" src="http://ferret.lark.pmel.noaa.gov/sites/default/files/thumbnails/image/dsg_tutorial_profile_lines.png" title="DSG tutorial, Set of Profile lines" typeof="foaf:Image" width="719" /></div>
+yes? plot/thick sigma_t</pre><div class="image"><img alt="DSG tutorial, Set of Profile lines" height="575" src="../../sites/default/files/thumbnails/image/dsg_tutorial_profile_lines.png" title="DSG tutorial, Set of Profile lines" typeof="foaf:Image" width="719" /></div>
 <p>
 Another plot style uses the RIBBON/VS plot command, with 3 arguments: the locations in two directions, and the variable to use for color. Time on the horizontal axis will result in a formatted time axis. Or specify longitude or latitude on the horizontal axis.<br />
  </p>
 <pre>
 yes? ribbon/thick/vs latitude, depth, temp</pre><div class="dnd-atom-wrapper type-image context-sdl_editor_representation" contenteditable="false">
-<div class="dnd-drop-wrapper"><!-- scald=185:sdl_editor_representation --><div class='image'><img typeof="foaf:Image" src="https://ferret.pmel.noaa.gov../../sites/default/files/thumbnails/image/dsg_tutorial_profile_vs_lat_depth_0.png" width="719" height="575" alt="DSG Demo Profile data as a Depth/Longitude plot" title="DSG Demo Profile data as a Depth/Longitude plot" /></div><!-- END scald=185 --></div>
+<div class="dnd-drop-wrapper"><!-- scald=185:sdl_editor_representation --><div class='image'><img typeof="foaf:Image" src="../../sites/default/files/thumbnails/image/dsg_tutorial_profile_vs_lat_depth_0.png" width="719" height="575" alt="DSG Demo Profile data as a Depth/Longitude plot" title="DSG Demo Profile data as a Depth/Longitude plot" /></div><!-- END scald=185 --></div>
 <div class="dnd-legend-wrapper" contenteditable="true">
 <div class="meta">
 <!--END copyright=185--></div>
@@ -419,7 +420,7 @@ yes? ribbon/thick/vs latitude, depth, temp</pre><div class="dnd-atom-wrapper typ
 yes? use dsg_trajectory_example.nc
 yes? plot/thick/palette=plasma fco2_recommended
 yes? go fland 5 black</pre><div class="dnd-atom-wrapper type-image context-sdl_editor_representation" contenteditable="false">
-<div class="dnd-drop-wrapper"><!-- scald=186:sdl_editor_representation --><div class='image'><img typeof="foaf:Image" src="https://ferret.pmel.noaa.gov../../sites/default/files/thumbnails/image/dsg_tutorial_trajectory_map.png" width="769" height="538" alt="DSG Demo Trajectory data on a map" title="DSG Demo Trajectory data on a map" /></div><!-- END scald=186 --></div>
+<div class="dnd-drop-wrapper"><!-- scald=186:sdl_editor_representation --><div class='image'><img typeof="foaf:Image" src="../../sites/default/files/thumbnails/image/dsg_tutorial_trajectory_map.png" width="769" height="538" alt="DSG Demo Trajectory data on a map" title="DSG Demo Trajectory data on a map" /></div><!-- END scald=186 --></div>
 <div class="dnd-legend-wrapper" contenteditable="true">
 <div class="meta">
 <!--copyright=186--><!--END copyright=186--></div>
@@ -430,7 +431,7 @@ Or, color by the trajectory ID, so that each one has a color. If there are few e
 <pre>
 yes? go basemap x=130:240 y=25:80 5 black
 yes? plot/over/nolabel/thick/palette=ten_by_levels/key=horiz expocode</pre><div class="dnd-atom-wrapper type-image context-sdl_editor_representation" contenteditable="false">
-<div class="dnd-drop-wrapper"><!-- scald=190:sdl_editor_representation --><div class='image'><img typeof="foaf:Image" src="https://ferret.pmel.noaa.gov../../sites/default/files/thumbnails/image/dsg_tutorial_trajectory_map_by_id.png" width="769" height="538" alt="DSG Demo Trajectory, map colored by ID" title="DSG Demo Trajectory, map colored by ID" /></div><!-- END scald=190 --></div>
+<div class="dnd-drop-wrapper"><!-- scald=190:sdl_editor_representation --><div class='image'><img typeof="foaf:Image" src="../../sites/default/files/thumbnails/image/dsg_tutorial_trajectory_map_by_id.png" width="769" height="538" alt="DSG Demo Trajectory, map colored by ID" title="DSG Demo Trajectory, map colored by ID" /></div><!-- END scald=190 --></div>
 <div class="dnd-legend-wrapper" contenteditable="true">
 <div class="meta">
 <!--copyright=190--><!--END copyright=190--></div>
@@ -444,7 +445,7 @@ yes? plot/over/nolabel/thick/palette=ten_by_levels/key=horiz expocode</pre><div 
 <pre>
 yes? use/featuretype=timeseries dsg_trajectory_example.nc
 yes? plot fco2_recommended</pre><div class="dnd-atom-wrapper type-image context-sdl_editor_representation" contenteditable="false">
-<div class="dnd-drop-wrapper"><!-- scald=191:sdl_editor_representation --><div class='image'><img typeof="foaf:Image" src="https://ferret.pmel.noaa.gov../../sites/default/files/thumbnails/image/dsg_tutorial_traj_as_time.png" width="830" height="498" alt="DSG tutorial, treat trajectory data as timeseries" title="DSG tutorial, treat trajectory data as timeseries" /></div><!-- END scald=191 --></div>
+<div class="dnd-drop-wrapper"><!-- scald=191:sdl_editor_representation --><div class='image'><img typeof="foaf:Image" src="../../sites/default/files/thumbnails/image/dsg_tutorial_traj_as_time.png" width="830" height="498" alt="DSG tutorial, treat trajectory data as timeseries" title="DSG tutorial, treat trajectory data as timeseries" /></div><!-- END scald=191 --></div>
 <div class="dnd-legend-wrapper" contenteditable="true">
 <div class="meta">
 <!--copyright=191--><!--END copyright=191--></div>
@@ -471,7 +472,7 @@ equilibrator chamber temperatur  1:1326    ...       ...       ...       ...    
  
  
 yes? plot temperature_equi</pre><div class="dnd-atom-wrapper type-image context-sdl_editor_representation" contenteditable="false">
-<div class="dnd-drop-wrapper"><!-- scald=192:sdl_editor_representation --><div class='image'><img typeof="foaf:Image" src="https://ferret.pmel.noaa.gov../../sites/default/files/thumbnails/image/dsg_tutorial_traj_as_none.png" width="830" height="498" alt="DSG tutorial, treat trajectory data as not-feature-data" title="DSG tutorial, treat trajectory data as not-feature-data" /></div><!-- END scald=192 --></div>
+<div class="dnd-drop-wrapper"><!-- scald=192:sdl_editor_representation --><div class='image'><img typeof="foaf:Image" src="../../sites/default/files/thumbnails/image/dsg_tutorial_traj_as_none.png" width="830" height="498" alt="DSG tutorial, treat trajectory data as not-feature-data" title="DSG tutorial, treat trajectory data as not-feature-data" /></div><!-- END scald=192 --></div>
 <div class="dnd-legend-wrapper" contenteditable="true">
 <div class="meta">
 <!--END copyright=192--></div>
@@ -506,7 +507,7 @@ Raw count of larvae              ...       ...       ...       ...     tot 1158 
  
 yes? plot/thick/lev=v larvae_size
 yes? go land_detail</pre><div class="dnd-atom-wrapper type-image context-sdl_editor_representation" contenteditable="false">
-<div class="dnd-drop-wrapper"><!-- scald=193:sdl_editor_representation --><div class='image'><img typeof="foaf:Image" src="https://ferret.pmel.noaa.gov../../sites/default/files/thumbnails/image/dsg_tutorial_point_data.png" width="643" height="643" alt="DSG Demo Point data on a map" title="DSG Demo Point data on a map" /></div><!-- END scald=193 --></div>
+<div class="dnd-drop-wrapper"><!-- scald=193:sdl_editor_representation --><div class='image'><img typeof="foaf:Image" src="../../sites/default/files/thumbnails/image/dsg_tutorial_point_data.png" width="643" height="643" alt="DSG Demo Point data on a map" title="DSG Demo Point data on a map" /></div><!-- END scald=193 --></div>
 <div class="dnd-legend-wrapper" contenteditable="true">
 <div class="meta">
 <!--copyright=193--><!--END copyright=193--></div>
@@ -646,7 +647,7 @@ yes? use dsg_timeseries_example
 yes? define axis/t="15-jan-2017:12:00":"21-apr-2017:12:00":10/unit=days tuniform
 yes? let/like=t_25 t_25_station_vs_time = t_25[gt=tuniform]
 yes? shade t_25_station_vs_time</pre><div class="dnd-atom-wrapper type-image context-sdl_editor_representation" contenteditable="false">
-<div class="dnd-drop-wrapper"><!-- scald=196:sdl_editor_representation --><div class='image'><img typeof="foaf:Image" src="https://ferret.pmel.noaa.gov../../sites/default/files/thumbnails/image/dsg_tutorial_common_taxis.png" width="643" height="643" alt="DSG Demo Timeseries data regridded to a common time axis" title="DSG Demo Timeseries data regridded to a common time axis" /></div><!-- END scald=196 --></div>
+<div class="dnd-drop-wrapper"><!-- scald=196:sdl_editor_representation --><div class='image'><img typeof="foaf:Image" src="../../sites/default/files/thumbnails/image/dsg_tutorial_common_taxis.png" width="643" height="643" alt="DSG Demo Timeseries data regridded to a common time axis" title="DSG Demo Timeseries data regridded to a common time axis" /></div><!-- END scald=196 --></div>
 <div class="dnd-legend-wrapper" contenteditable="true">
 <div class="meta">
 <!--copyright=196--><!--END copyright=196--></div>
@@ -729,7 +730,7 @@ Now define a variable with the difference between the timeseries observations an
 yes? let/title="Timeseries - Gridded"/units="Deg C" diff = t_25[d=1] - sampled_t </pre><p> And finally plot the difference for the timeseries stations that are located in the Atlantic Ocean.</p>
 <pre>
 yes? plot/x=300:360/y=-15:15 diff</pre><div class="dnd-atom-wrapper type-image context-sdl_editor_representation" contenteditable="false">
-<div class="dnd-drop-wrapper"><!-- scald=194:sdl_editor_representation --><div class='image'><img typeof="foaf:Image" src="https://ferret.pmel.noaa.gov../../sites/default/files/thumbnails/image/dsg_tutorial_tser_gridded_diff.png" width="830" height="498" alt="DSG tutorial, sample gridded data and take the difference" title="DSG tutorial, sample gridded data and take the difference" /></div><!-- END scald=194 --></div>
+<div class="dnd-drop-wrapper"><!-- scald=194:sdl_editor_representation --><div class='image'><img typeof="foaf:Image" src="../../sites/default/files/thumbnails/image/dsg_tutorial_tser_gridded_diff.png" width="830" height="498" alt="DSG tutorial, sample gridded data and take the difference" title="DSG tutorial, sample gridded data and take the difference" /></div><!-- END scald=194 --></div>
 <div class="dnd-legend-wrapper" contenteditable="true">
 <div class="meta">
 <!--copyright=194--><!--END copyright=194--></div>

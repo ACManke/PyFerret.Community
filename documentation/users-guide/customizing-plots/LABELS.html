@@ -186,7 +186,7 @@ xmlns:schema="http://schema.org/">
 <li id="menu-1351-1" class="middle odd sf-item-9 sf-depth-3 sf-no-children"><a href="../../demos/ferret-polymark-demo.html" class="sf-depth-3">Ferret Polymark Demo</a></li>
 <li id="menu-1349-1" class="middle even sf-item-10 sf-depth-3 sf-no-children"><a href="../../demos/ferret-constant-array-demo.html" class="sf-depth-3">Ferret Constant-Array demo</a></li>
 <li id="menu-1356-1" class="middle odd sf-item-11 sf-depth-3 sf-no-children"><a href="../../demos/ferret-land_detail-demo.html" class="sf-depth-3">Ferret land_detail demo</a></li>
-<li id="menu-1340-1" class="middle even sf-item-12 sf-depth-3 sf-no-children"><a href=".../../demos/coads-tour.html" class="sf-depth-3">COADS Tour</a></li>
+<li id="menu-1340-1" class="middle even sf-item-12 sf-depth-3 sf-no-children"><a href="../../demos/coads-tour.html" class="sf-depth-3">COADS Tour</a></li>
 <li id="menu-1341-1" class="middle odd sf-item-13 sf-depth-3 sf-no-children"><a href="../../demos/levitus-tour.html" class="sf-depth-3">Levitus Tour</a></li>
 <li id="menu-1342-1" class="middle even sf-item-14 sf-depth-3 sf-no-children"><a href="../../demos/how-to-use-ferret-and-opendap-to-access-and-analyze-remote-data-1.html" class="sf-depth-3">Use OPeNDAP</a></li>
 <li id="menu-1348-1" class="last odd sf-item-15 sf-depth-3 sf-no-children"><a href="../../demos/ferret-binary-read-demo.html" class="sf-depth-3">Ferret binary read demo</a></li>
@@ -256,7 +256,7 @@ yes? go annotate_demo</pre><p align="left">DEFINE ANNOTATION takes the same qual
 yes? LABEL xpos,ypos,center,angle,size text</pre><p align="left">where xpos and ypos are in user (axis) units, size is in inches, angle is in degrees (0 at 3 o'clock) and center is -1, 0, or +1 for left, center, or right justification. There is an example in the section below on <a href="#Chapter6_PPLUS_labels" title="6.4 LABELS">PPLUS label commands</a>. The label position will adjust itself automatically when the plot aspect ratio or the viewport is changed.</p>
 <p align="left">If you prefer to locate labels using inches rather than using data units issue the command</p>
 <pre>
-yes? LABEL/NOUSER xpos,ypos,...</pre><p align="left">Note, however, that the layout of a plot in inches‚ lengths of axes, label positions, etc.‚ shifts with changes in window aspect ratio (SET WINDOW/ASPECT) and with the use of viewports. Labels specified using LABEL/NOUSER will need to be adjusted if the aspect ratio or viewport is changed.</p>
+yes? LABEL/NOUSER xpos,ypos,..</pre><p align="left">Note, however, that the layout of a plot in inches‚ lengths of axes, label positions, etc.‚ shifts with changes in window aspect ratio (SET WINDOW/ASPECT) and with the use of viewports. Labels specified using LABEL/NOUSER will need to be adjusted if the aspect ratio or viewport is changed.</p>
 <p align="left"><a name="_VPINDEXENTRY_790" id="_VPINDEXENTRY_790"></a>Very long labels may be specified, up to 2048 characters long. This applies to all kinds of labels: titles, axis labels, and moveable labels. To create multiple-line labels, use the separator &lt;NL&gt; to locate the line-breaks. If centered labels are requested, each line is centered separately. See <a href="#Chapter6 long axis labels">example 1</a> and <a href="#Chapter6-A_long_label">example 2</a>. Also try the demo script multi_line_                                        
 <p align="left"><b>Notes: </b></p>
 <p align="left">1) If you use the command PPL LABS instead of LABEL, be aware that when defining a new movable label, all lower-numbered labels must already be defined.</p>
@@ -327,11 +327,11 @@ yes? PPL BOX on
 yes? SET VIEW upper
 yes? PLOT/I=1:100 sin(i/6)
 yes? SHOW SYM
-...
+..
 LAB1 = "FERRET Ver. 5.70"
 LAB2 = "NOAA/PMEL TMAP"
 LAB3 = "Jan 5 2005 08:54:22 "
-...
+..
  
 !in the lower viewport
 !the signature is removed as follows

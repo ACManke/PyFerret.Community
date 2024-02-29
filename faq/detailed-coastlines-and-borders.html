@@ -167,9 +167,13 @@ xmlns:schema="http://schema.org/">
 </tr></tbody></table><p> </p>
 <h2>Solution:</h2>
 <p> </p>
-<p>(First, try Ferret's land_detail script, which uses data from the GMT (Generic Mapping Tools) site at <a href="http://gmt.soest.hawaii.edu/">http://gmt.soest.hawaii.edu</a> (the GMT intermediate level of resolution). A demo of land_detail.jnl is at <a href="http://ferret.pmel.noaa.gov/static/Demos/land_detail/land_detail_demo.html">http://ferret.pmel.noaa.gov/static/Demos/land_detail/land_detail_demo.html</a>)<br />
+<p>(First, try Ferret's land_detail script, which uses data from the GMT (Generic Mapping Tools) site at 
+<a href="https://www.soest.hawaii.edu/soestwp/research/data/generic-mapping-tool-gmt/">https://www.soest.hawaii.edu/soestwp/research/data/generic-mapping-tool-gmt/</a> (the GMT intermediate level of resolution). A demo of land_detail.jnl is at 
+<a href="../demos/land_detail_demo.html">land_detail_demo.html</a>)<br />
  </p>
-<p>The USGS has a <b>Coastline Extractor</b> server:<a href="http://www.ngdc.noaa.gov/mgg/shorelines/shorelines.html">http://www.ngdc.noaa.gov/mgg/shorelines/shorelines.html</a> which makes availablefor download coastline, boundary, and river segments with a choice of resolutions. Thanks to Patrick Brockmann and Carla Moore for alerting us to this resource!</p>
+<p>The USGS has a <b>Coastline Explorer</b> server:<a href="https://rmgsc.cr.usgs.gov/gce/">https://rmgsc.cr.usgs.gov/gce/</a> 
+which appears to be a successor to the previous Coastline Extractor tool The Coastline Extractor made availablefor download coastline, boundary, and river segments with a choice of resolutions. 
+We have not used this tool, but hope that the ideas here will be useful in converting updated coastline data for use by the "go land" scripts.</p>
 <p>We have recently discovered a resource for up-to-date political boundaries, see the section below.</p>
 <p>For<b> Coastline Extractor </b>data, Proceed as follows:</p>
 <ul><li>Get coastline/border data from the Coastline Extractor
@@ -209,7 +213,7 @@ xmlns:schema="http://schema.org/">
 &lt;coordinates&gt;</b></p>
 <p>with</p>
 <p><b>-1E+34 -1E+34</b></p>
-<p>Now, proceed as above - read the ascii file with a FILE command, and plot it, or once you have read it in, save it as a netCDF file for future use. If you find that a national boundary in Ferret's "go land" datasets is out of date, write to us and let us know, using the contact information for the developers from the <a href="../support/ferret-support" title="Ferret Support">Ferret Support</a> page.</p>
+<p>Now, proceed as above - read the ascii file with a FILE command, and plot it, or once you have read it in, save it as a netCDF file for future use. Please share any work along these lines with the PyFerret community.</p>
 <p> </p>
 <p> </p>
 <p> </p>

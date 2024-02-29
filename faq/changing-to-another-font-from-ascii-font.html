@@ -159,13 +159,13 @@ xmlns:schema="http://schema.org/">
 <blockquote><p>How can I use the character font AS and also characters from a symbol font together? Can I change to another font within a label once I'm in ASCII font?</p>
 </blockquote>
 <h2>Example:</h2>
-<p>The ASCII font is useful to let special characters like the underscore appear in the label and prevent their use by PPLUS as special formatting characters (@ to change fonts, ^ for superscripts, _ for subscripts and so on). In this example we will use the ASCII font so we can include the underscore character as part of the label. But then, if we want to use a special character in its PPLUS sense, for instance the@ character to change to another color or font, it is not recognized as the special character that changes fonts. Here we want to use character 09 from the map font CA. If we try:</p>
+<p>The Classic-Ferret ASCII font is useful to let special characters like the underscore appear in the label and prevent their use by PPLUS as special formatting characters (@ to change fonts, ^ for superscripts, _ for subscripts and so on). In this example we will use the ASCII font so we can include the underscore character as part of the label. But then, if we want to use a special character in its PPLUS sense, for instance the@ character to change to another color or font, it is not recognized as the special character that changes fonts. Here we want to use character 09 from the map font CA. If we try:</p>
 <pre>
  
  yes? label/nouser 3 2 0 0 0.15 "@AStemp_01@CA09(Centigrade_scale)"</pre><p>The command produces a label that reads:</p>
 <pre>
 temp_01@CA09Centigrade_scale</pre><h2>Solution:</h2>
-<p class="pnormal">In PyFerret the<a href="documentation/users-guide/commands-reference/SET#_SETTEXT" title="SET"> SET TEXT</a> command makes settings for the text in labels on the plot page. This includes a choice of font, chosen from those available to the Python packages. In Python library fonts, special characters are embedded in text using an html-style coding. The label discussed below is drawn as follows:</p>
+<p class="pnormal">In PyFerret the<a href="documentation/users-guide/commands-reference/SET.html#_SETTEXT" title="SET"> SET TEXT</a> command makes settings for the text in labels on the plot page. This includes a choice of font, chosen from those available to the Python packages. In Python library fonts, special characters are embedded in text using an html-style coding. The label discussed below is drawn as follows:</p>
 <pre class="pliteral">
 &gt; pyferret
  
@@ -196,7 +196,10 @@ yes? label/nouser 4 5 0 0 0.15 `mylabel`
 </pre><p>
 <img alt="ascii example" class="image-inline" src="../sites/default/files/images/faq/ascii_example.gif" /></p>
 <p> </p>
-<p>For convenience, the escape character is in a file escapeit.dat, in the tar file escape_character.tar, which you may download here.<a href="http://ferret.pmel.noaa.gov/static/Downloads/escape_character.tar">escape_character.tar</a></p>
+<p>For convenience, the escape character is in a file escapeit.dat, in the tar file escape_character.tar, which you may download here: 
+<!-- Is there a good way to do this? The file escape_character.tar is here:
+../sites/default/files/atoms/files/escape_character.tar
+-->
 </div>
 </div>
 </div>

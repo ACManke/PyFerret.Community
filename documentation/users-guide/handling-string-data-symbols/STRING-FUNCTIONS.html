@@ -189,7 +189,7 @@ xmlns:schema="http://schema.org/">
 <li id="menu-1351-1" class="middle odd sf-item-9 sf-depth-3 sf-no-children"><a href="../../demos/ferret-polymark-demo.html" class="sf-depth-3">Ferret Polymark Demo</a></li>
 <li id="menu-1349-1" class="middle even sf-item-10 sf-depth-3 sf-no-children"><a href="../../demos/ferret-constant-array-demo.html" class="sf-depth-3">Ferret Constant-Array demo</a></li>
 <li id="menu-1356-1" class="middle odd sf-item-11 sf-depth-3 sf-no-children"><a href="../../demos/ferret-land_detail-demo.html" class="sf-depth-3">Ferret land_detail demo</a></li>
-<li id="menu-1340-1" class="middle even sf-item-12 sf-depth-3 sf-no-children"><a href=".../../demos/coads-tour.html" class="sf-depth-3">COADS Tour</a></li>
+<li id="menu-1340-1" class="middle even sf-item-12 sf-depth-3 sf-no-children"><a href="../../demos/coads-tour.html" class="sf-depth-3">COADS Tour</a></li>
 <li id="menu-1341-1" class="middle odd sf-item-13 sf-depth-3 sf-no-children"><a href="../../demos/levitus-tour.html" class="sf-depth-3">Levitus Tour</a></li>
 <li id="menu-1342-1" class="middle even sf-item-14 sf-depth-3 sf-no-children"><a href="../../demos/how-to-use-ferret-and-opendap-to-access-and-analyze-remote-data-1.html" class="sf-depth-3">Use OPeNDAP</a></li>
 <li id="menu-1348-1" class="last odd sf-item-15 sf-depth-3 sf-no-children"><a href="../../demos/ferret-binary-read-demo.html" class="sf-depth-3">Ferret binary read demo</a></li>
@@ -548,7 +548,7 @@ LET a = {"first.nc", SPAWN:"ls *.nc","last.nc"}</pre><p align="left">Say we want
 <pre>
 yes? LET a = {"dummy", SPAWN:"ls myfile.nc"}
 yes? LET nfiles = `a[i=@ngd]`
-yes? IF `nfiles EQ 2` THEN ...</pre><p>
+yes? IF `nfiles EQ 2` THEN ..</pre><p>
 <a name="_SPAWN_function" id="_SPAWN_function"></a></p>
 <p class="secHeader">7.2.12.1 SPAWN Function</p>
 <p>The SPAWN function executes a Unix system command or set of commands, and returns the result in a string array. Each element of the result is a line of the output.<br />
@@ -574,7 +574,7 @@ yes? LET who_where_when = SPAWN("whoami; pwd; date")
 <p> </p>
 <p align="left" class="secHeader">7.2.13.1 <a name="_VPID_291" id="_VPID_291"></a><b><a name="_VPINDEXENTRY_924" id="_VPINDEXENTRY_924"></a><a name="_VPINDEXENTRY_925" id="_VPINDEXENTRY_925"></a>Logical operators with strings </b></p>
 <p> </p>
-<p align="left">The operators EQ, LT, LE, ... can be applied to string variables and arrays. These operators are case-insensitive (functions will be provided later that are case-sensitive and include UPCASE, DNCASE)</p>
+<p align="left">The operators EQ, LT, LE, .. can be applied to string variables and arrays. These operators are case-insensitive (functions will be provided later that are case-sensitive and include UPCASE, DNCASE)</p>
 <p align="left"><b>Examples: </b></p>
 <pre>
 yes? LIST/NOHEAD {"a","b","c"} EQ {"A","B","C"} ! case insensitive

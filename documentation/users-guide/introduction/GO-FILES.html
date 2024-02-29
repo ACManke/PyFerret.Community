@@ -189,7 +189,7 @@ xmlns:schema="http://schema.org/">
 <li id="menu-1351-1" class="middle odd sf-item-9 sf-depth-3 sf-no-children"><a href="../../demos/ferret-polymark-demo.html" class="sf-depth-3">Ferret Polymark Demo</a></li>
 <li id="menu-1349-1" class="middle even sf-item-10 sf-depth-3 sf-no-children"><a href="../../demos/ferret-constant-array-demo.html" class="sf-depth-3">Ferret Constant-Array demo</a></li>
 <li id="menu-1356-1" class="middle odd sf-item-11 sf-depth-3 sf-no-children"><a href="../../demos/ferret-land_detail-demo.html" class="sf-depth-3">Ferret land_detail demo</a></li>
-<li id="menu-1340-1" class="middle even sf-item-12 sf-depth-3 sf-no-children"><a href=".../../demos/coads-tour.html" class="sf-depth-3">COADS Tour</a></li>
+<li id="menu-1340-1" class="middle even sf-item-12 sf-depth-3 sf-no-children"><a href="../../demos/coads-tour.html" class="sf-depth-3">COADS Tour</a></li>
 <li id="menu-1341-1" class="middle odd sf-item-13 sf-depth-3 sf-no-children"><a href="../../demos/levitus-tour.html" class="sf-depth-3">Levitus Tour</a></li>
 <li id="menu-1342-1" class="middle even sf-item-14 sf-depth-3 sf-no-children"><a href="../../demos/how-to-use-ferret-and-opendap-to-access-and-analyze-remote-data-1.html" class="sf-depth-3">Use OPeNDAP</a></li>
 <li id="menu-1348-1" class="last odd sf-item-15 sf-depth-3 sf-no-children"><a href="../../demos/ferret-binary-read-demo.html" class="sf-depth-3">Ferret binary read demo</a></li>
@@ -1360,7 +1360,7 @@ yes? CONTOUR/LEVELS=($my_quoted_string) my_var</b></i></p>
 <p>
 <a name="Chapter1-Writing_GO_tools" id="Chapter1-Writing_GO_tools"></a><a name="_VPID_22" id="_VPID_22"></a><a name="_VPINDEXENTRY_119" id="_VPINDEXENTRY_119"></a><a name="_VPINDEXENTRY_120" id="_VPINDEXENTRY_120"></a></p>
 <p align="left" class="secHeader">1.5.3 <b>Writing GO tools </b></p>
-<p align="left">A <a name="_VPINDEXENTRY_121" id="_VPINDEXENTRY_121"></a>GO tool ("GO script," "journal file," ...) is simply a sequence of Ferret commands stored in a file and executed with the GO command. Writing a simple GO tool requires nothing more than typing normal commands into a file.</p>
+<p align="left">A <a name="_VPINDEXENTRY_121" id="_VPINDEXENTRY_121"></a>GO tool ("GO script," "journal file," ..) is simply a sequence of Ferret commands stored in a file and executed with the GO command. Writing a simple GO tool requires nothing more than typing normal commands into a file.</p>
 <p align="left">To write a robust GO tool that may be shared, however, certain guidelines should be followed:</p>
 <p align="left">1) the GO tool should be well documented</p>
 <p align="left">2) the GO tool should leave the Ferret context unmodified</p>
@@ -1416,7 +1416,7 @@ yes? CONTOUR/LEVELS=($my_quoted_string) my_var</b></i></p>
 <p align="left" class="secHeader">1.5.3.4 <b>Arguments to GO tools </b></p>
 <p align="left">Arguments (parameters) may be passed to GO tools on the command line. There is an upper limit of 99 arguments allowed. For example,</p>
 <pre>
-yes? GO land red</pre><p align="left">passes the string "red" into the GO file named land.jnl. Inside the GO tool the argument string "red" is substituted for the string "$1" wherever it occurs. The "1" signifies that this is the first argument—similar logic can be applied to $1,... $99 or $0 where $0 is replaced by the name of the GO tool itself. "$*" is replaced by all the arguments as a single string, separated by spaces.</p>
+yes? GO land red</pre><p align="left">passes the string "red" into the GO file named land.jnl. Inside the GO tool the argument string "red" is substituted for the string "$1" wherever it occurs. The "1" signifies that this is the first argument—similar logic can be applied to $1,.. $99 or $0 where $0 is replaced by the name of the GO tool itself. "$*" is replaced by all the arguments as a single string, separated by spaces.</p>
 <p align="left">If there are more than 9 arguments, the syntax $nn (nn may be 1 through 99) is equivalent to to ($nn), however the parentheses enclosed form is generally preferred as it avoids ambiguities. Specifying $12.dat is equivalent to ($12).dat but is less clear.</p>
 <p align="left">As Ferret performs the substitution of $1 (or other) arguments it offers a number of string processing and error processing options. For example, <i>without</i> these options, if a user failed to supply an argument to "GO land" then Ferret would not know what to substitute for $1 and it would have to issue an error message. A default value can be supplied by the GO tool writer using the syntax</p>
 <pre>

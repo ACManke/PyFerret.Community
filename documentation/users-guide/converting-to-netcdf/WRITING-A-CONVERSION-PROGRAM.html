@@ -189,7 +189,7 @@ xmlns:schema="http://schema.org/">
 <li id="menu-1351-1" class="middle odd sf-item-9 sf-depth-3 sf-no-children"><a href="../../demos/ferret-polymark-demo.html" class="sf-depth-3">Ferret Polymark Demo</a></li>
 <li id="menu-1349-1" class="middle even sf-item-10 sf-depth-3 sf-no-children"><a href="../../demos/ferret-constant-array-demo.html" class="sf-depth-3">Ferret Constant-Array demo</a></li>
 <li id="menu-1356-1" class="middle odd sf-item-11 sf-depth-3 sf-no-children"><a href="../../demos/ferret-land_detail-demo.html" class="sf-depth-3">Ferret land_detail demo</a></li>
-<li id="menu-1340-1" class="middle even sf-item-12 sf-depth-3 sf-no-children"><a href=".../../demos/coads-tour.html" class="sf-depth-3">COADS Tour</a></li>
+<li id="menu-1340-1" class="middle even sf-item-12 sf-depth-3 sf-no-children"><a href="../../demos/coads-tour.html" class="sf-depth-3">COADS Tour</a></li>
 <li id="menu-1341-1" class="middle odd sf-item-13 sf-depth-3 sf-no-children"><a href="../../demos/levitus-tour.html" class="sf-depth-3">Levitus Tour</a></li>
 <li id="menu-1342-1" class="middle even sf-item-14 sf-depth-3 sf-no-children"><a href="../../demos/how-to-use-ferret-and-opendap-to-access-and-analyze-remote-data-1.html" class="sf-depth-3">Use OPeNDAP</a></li>
 <li id="menu-1348-1" class="last odd sf-item-15 sf-depth-3 sf-no-children"><a href="../../demos/ferret-binary-read-demo.html" class="sf-depth-3">Ferret binary read demo</a></li>
@@ -310,7 +310,7 @@ salt: _FillValue = -999. ;</pre><p align="left"><i><a name="_VPINDEXENTRY_1092" 
 <p align="left">Variable names in netCDF files should follow the same guidelines as Ferret variable names:</p>
 <ul><li>case insensitive (avoid names that are identical apart from case)</li>
 <li>1 to 24 characters (letters, digits, $ and _) beginning with a letter</li>
-<li>avoid reserved names (I, J, K, L, X, Y, Z, T, XBOX, ...)</li>
+<li>avoid reserved names (I, J, K, L, X, Y, Z, T, XBOX, ..)</li>
 </ul><p align="left"><a href="../variables-xpressions/VARIABLES.html#Chapter3_invalid_netcdf_varnames" title="3.1 VARIABLES">See reference</a> for how to handle invalid variable names that are already in a netCDF file.</p>
 <p align="left"><a name="_VPINDEXENTRY_1093" id="_VPINDEXENTRY_1093"></a>The _FillValue attribute informs Ferret that any data value matching this value is a missing (invalid) data point. For example, an ocean data set may label land locations with a value such as 1E34. By identifying 1E34 as a fill value, Ferret knows to ignore points matching this value. The attribute "missing_value" is similar to "_FillValue" when reading data; but "_FillValue" also specifies a value to be inserted into unspecified regions during file creation. You may specify two distinct flags for invalid data in the same variable by using "_FillValue" and "missing_value" together.</p>
 <p align="left">Scale and offset values may be specified by the scale_factor and add_offset attributes.</p>
@@ -350,7 +350,7 @@ lon: axis="X";</pre><p align="left">Date/time axes are inferred by units of "yea
 <p> </p>
 <p align="left">Once the direction is determined, other conflicting information is ignored. Thus if an axis has the attribute AXIS="Y" it is a Y axis, even though its units might be "days" or its name might be "longitude".</p>
 <p><a name="Chapter10-axis_defs" id="Chapter10-axis_defs"></a></p>
-<p align="left">Axes are either netCDF coordinate variables or are synthesized (as simple indices 1, 2, 3, ...) if coordinate definitions are missing for a variable. The axes of a variable are available as "pseudo-variables" using the syntax X[g=var], where "var" is the name of the netCDF variable, and similarly for the Y,Z, and T axes. When the data set is canceled the associated axes are canceled, too. The exception is that axes will be retained if they are in use in a DEFINE GRID definition -- and they will be erased from memory at the time all grids using them are canceled.</p>
+<p align="left">Axes are either netCDF coordinate variables or are synthesized (as simple indices 1, 2, 3, ..) if coordinate definitions are missing for a variable. The axes of a variable are available as "pseudo-variables" using the syntax X[g=var], where "var" is the name of the netCDF variable, and similarly for the Y,Z, and T axes. When the data set is canceled the associated axes are canceled, too. The exception is that axes will be retained if they are in use in a DEFINE GRID definition -- and they will be erased from memory at the time all grids using them are canceled.</p>
 <p align="left">Some files contain axis definitions (coordinate variables) without associated variables. Like all axes they are visible with the SHOW AXIS command. To obtain the values of those coordinate variables as Ferret pseudo-variables use the syntax X[gx=axname], where axname is the name of the coordinate variable (also the netCDF dimension name) and likewise for Y,Z, and T axes. Note that when the data set is cancelled, axis definitions of this variety are retained -- unlike axes that are used in variables.</p>
 <p align="left">Global <a name="_VPINDEXENTRY_1098" id="_VPINDEXENTRY_1098"></a><a name="_VPINDEXENTRY_1099" id="_VPINDEXENTRY_1099"></a>attributes, or attributes that apply to the entire data set, can be specified as well.</p>
 <pre>
@@ -678,7 +678,7 @@ sdepth: edges = "sdepth_edges" ;</pre><p align="left">To define bounds</p>
 <pre>
 sdepth_bnds = 54;</pre><p align="left"> </p>
 <p align="left">2. Define an axis called sdepth_bnds.</p>
-<p align="left">3. Initialize this axis with the desired boundaries (in Data). The ordering is box_lo_1, box_hi_1, box_lo_2, box_hi_2, ...</p>
+<p align="left">3. Initialize this axis with the desired boundaries (in Data). The ordering is box_lo_1, box_hi_1, box_lo_2, box_hi_2, ..</p>
 <p align="left">4. For a valid Ferret axis, the low bound of each cell must equal the high bound of the previous cell.</p>
 <p align="left">5. As an attribute of the main axis, point to bounds list:</p>
 <p align="left"> </p>

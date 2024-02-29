@@ -167,13 +167,13 @@ xmlns:schema="http://schema.org/">
 <p> </p>
 <p>Ferret provides both graphical methods and analytical methods for dealing with sigma (and curvilinear) coordinates. The analytical methods involve regridding the sigma coordinates to a grid based on a true depth axis.The results of this method can then be combined in calculations with other depth-gridded fields (The same procedures apply to pressure-gridded fields.)The graphical methods are "faithful" in the sense that they do not involve regridding the data to another grid.</p>
 <p>In this FAQ we will show two examples:</p>
-<p>I)<a href="using-sigma-and-curvilinear-model-coordinates#open_data"> Open a dataset containing model data that uses a sigma-coordinate "stretching variable"</a>. From the dataset define variables to use for two techniques, a purely graphical one, and a second which regrids the data to a fixed Z axis.</p>
+<p>I)<a href="using-sigma-and-curvilinear-model-coordinates.html#open_data"> Open a dataset containing model data that uses a sigma-coordinate "stretching variable"</a>. From the dataset define variables to use for two techniques, a purely graphical one, and a second which regrids the data to a fixed Z axis.</p>
 <p>Start by defining the "depth" function as the product of a bathymetry variable and the sigma-z stretching variable.</p>
 <p> </p>
 <p>We will then demonstrate two methods for working with the data:</p>
-<ol><li><a href="using-sigma-and-curvilinear-model-coordinates#dset_purely_graphical">purely graphical method</a> using 3-argument SHADE and FILL commands</li>
-<li><a href="using-sigma-and-curvilinear-model-coordinates#dset_zaxreplace">Z axis replacement technique</a> using ZAXREPLACE</li>
-</ol><p>II) begin by:<a href="using-sigma-and-curvilinear-model-coordinates#create_data">creating an artificial sigma coordinate dataset</a>.</p>
+<ol><li><a href="using-sigma-and-curvilinear-model-coordinates.html#dset_purely_graphical">purely graphical method</a> using 3-argument SHADE and FILL commands</li>
+<li><a href="using-sigma-and-curvilinear-model-coordinates.html#dset_zaxreplace">Z axis replacement technique</a> using ZAXREPLACE</li>
+</ol><p>II) begin by:<a href="using-sigma-and-curvilinear-model-coordinates.html#create_data">creating an artificial sigma coordinate dataset</a>.</p>
 <p>
 <a href="#define_depth">define the "depth" </a><a href="#define_depth">function </a>as the vertical integral of layer thickness and produce some reference plots from it. (In your application you may already have a depth variable.)</p>
 <p>We will then demonstrate three methods for working with the data:</p>
@@ -275,7 +275,7 @@ set variable/title="Y"/unit=kilometers ygg
  
 ! use the three argument 'shade' command
 shade flow[x=0,l=1], ygg, depth[x=0,i=1]
-</pre><p>(See the <a href="../documentation/release-notes/version-4-9-release-notes#gridded_curvilinear_data"> v4.9 release notes</a> for more information on the three-argument SHADE command.)</p>
+</pre><p>(See the <a href="../documentation/release-notes/version-4-9-release-notes.html#gridded_curvilinear_data"> v4.9 release notes</a> for more information on the three-argument SHADE command.)</p>
 <p>See <b>sigma_coordinate_demo.jnl</b>for details of the variable definitions.</p>
 <p>Note: this demo is graphical but the procedure is valid for analysis, as well</p>
 <p>Define flow field on a surface of constant 50 m depth</p>
@@ -284,7 +284,7 @@ DEFINE AXIS/Z=0:180:2/UNIT=meters/DEPTH zdepth
 LET flow_on_depth = ZAXREPLACE(flow,depth, z[gz=zdepth])
 LET flow_at_50 = flow_on_depth[Z=50]
 </pre><p><strong>Plan views of flow. Right hand frame: SHADE/L=1 flow_at_50:</strong></p>
-<div class="image"><img alt="plan_view.png" height="498" src="http://ferret.lark.pmel.noaa.gov/Ferret/sites/default/files/thumbnails/image/plan_view.png" title="plan_view.png" typeof="foaf:Image" width="996" /></div>
+<div class="image"><img alt="plan_view.png" height="498" src="../sites/default/files/thumbnails/image/plan_view.png" title="plan_view.png" typeof="foaf:Image" width="996" /></div>
 <p> </p>
 <p>Note: the missing points between the flow and the black mask occur because the deepest layer of flow is considered to be 1/2 grid box above the bottom</p>
 <p> </p>

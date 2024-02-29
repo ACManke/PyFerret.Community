@@ -159,7 +159,7 @@ xmlns:schema="http://schema.org/">
 <blockquote><p>How do I specify the color of text labels?</p>
 </blockquote>
 <h2>Example:</h2>
-<p class="pnormal">In PyFerret, use the <a href="../documentation/users-guide/commands-reference/SET#_SETTEXT" title="SET">SET TEXT command</a>, and name a color or give an RGB description of a color. All subsequent text placed on the page will use that text color and style, until another SET TEXT command is issued or the plot is saved with FRAME. In addition, SET TEXT can customize the color and text style for specific text groupings, such as moveable labels, titles, and so forth.</p>
+<p class="pnormal">In PyFerret, use the <a href="../documentation/users-guide/commands-reference/SET.html#_SETTEXT" title="SET">SET TEXT command</a>, and name a color or give an RGB description of a color. All subsequent text placed on the page will use that text color and style, until another SET TEXT command is issued or the plot is saved with FRAME. In addition, SET TEXT can customize the color and text style for specific text groupings, such as moveable labels, titles, and so forth.</p>
 <p class="pnormal">The remainder of the FAQ discusses classic Ferret techniques.  These will work in PyFerret if you have set the font to the Hershey Font "SET TEXT/FONT=hershey</p>
 <p>Try this:</p>
 <pre>
@@ -179,9 +179,10 @@ label 50 -80 -1 0 .2 @P6Here is a label in white
 <p>Use "<code>@Pn</code>" in your label string to select among the 6 predefined line/textcolors as in the examples above. Try</p>
 <pre>
 yes? GO line_samples</pre><p>to see the choices.</p>
-<p>If the color you need is not among the default choices you can redefine any of them using the "<code>PPL COLOR</code>" command (see PPL COLOR in the Ferret documentation, chapter <a href="../documentation/users-guide/appendix-c-ferret-specific-pplus-enhancements/ENHANCED-COMMANDS-DESCRIPTION #_VPID_758">PLOT+ Enhancements Guide</a>). The colors settings will be applied on the hard copy, too.</p>
+<p>If the color you need is not among the default choices you can redefine any of them using the "<code>PPL COLOR</code>" command (see PPL COLOR in the Ferret documentation, chapter <b><a href="../documentation/users-guide/appendix-c-ferret-specific-pplus-enhancements/ENHANCED-COMMANDS-DESCRIPTION.html#_VPID_758">PLOT+ Enhancements Guide</a></b>). The colors settings will be applied on the hard copy, too.</p>
 <p> </p>
-<p>Or, use @Cnnn in the label string, where nnn is the color/linenumber specifier; see the table marked "<em>The following PPLUS commands use the color_thickness index</em>" in <a href="../documentation/users-guide/customizing-plots/COLOR#_VPID_246">this section in Chapter 6</a>.</p>
+<p>Or, use @Cnnn in the label string, where nnn is the color/linenumber specifier; see the table marked "<em>The following PPLUS commands use the color_thickness index</em>" in <b>
+<a href="../documentation/users-guide/customizing-plots/COLOR.html#_VPID_246">this section in Chapter 6</a></b>.</p>
 <p>Here, the title must be drawn with a non-ascii font such as @CR so that the @Cnnn color-change codes will be interpreted.</p>
 <pre>
 yes? plot/title="@CR@C002Red@c003Green@C004Blue @C001Title"/i=1:10 1./i

@@ -189,7 +189,7 @@ xmlns:schema="http://schema.org/">
 <li id="menu-1351-1" class="middle odd sf-item-9 sf-depth-3 sf-no-children"><a href="../../demos/ferret-polymark-demo.html" class="sf-depth-3">Ferret Polymark Demo</a></li>
 <li id="menu-1349-1" class="middle even sf-item-10 sf-depth-3 sf-no-children"><a href="../../demos/ferret-constant-array-demo.html" class="sf-depth-3">Ferret Constant-Array demo</a></li>
 <li id="menu-1356-1" class="middle odd sf-item-11 sf-depth-3 sf-no-children"><a href="../../demos/ferret-land_detail-demo.html" class="sf-depth-3">Ferret land_detail demo</a></li>
-<li id="menu-1340-1" class="middle even sf-item-12 sf-depth-3 sf-no-children"><a href=".../../demos/coads-tour.html" class="sf-depth-3">COADS Tour</a></li>
+<li id="menu-1340-1" class="middle even sf-item-12 sf-depth-3 sf-no-children"><a href="../../demos/coads-tour.html" class="sf-depth-3">COADS Tour</a></li>
 <li id="menu-1341-1" class="middle odd sf-item-13 sf-depth-3 sf-no-children"><a href="../../demos/levitus-tour.html" class="sf-depth-3">Levitus Tour</a></li>
 <li id="menu-1342-1" class="middle even sf-item-14 sf-depth-3 sf-no-children"><a href="../../demos/how-to-use-ferret-and-opendap-to-access-and-analyze-remote-data-1.html" class="sf-depth-3">Use OPeNDAP</a></li>
 <li id="menu-1348-1" class="last odd sf-item-15 sf-depth-3 sf-no-children"><a href="../../demos/ferret-binary-read-demo.html" class="sf-depth-3">Ferret binary read demo</a></li>
@@ -249,7 +249,7 @@ xmlns:schema="http://schema.org/">
 <div class="plain">
 <pre>
 > ferret
-yes? GO tutorial</pre><p align="left">If Ferret is not yet installed consult the chapter "<a href="../computing-environment/chapter-9-computing-environment.html" title="Chapter 9. Computing Environment">Computing Environment</a>" (The tutorial is also available on-line through Ferret's <a href="../../ferret-tutorials.html" title="Ferret Tutorials">on-line demonstrations page.</a>) The tutorial demonstrates many of Ferret's features, showing the user both the commands given and Ferret's textual and graphical output. You may find the explanations, terms and examples in this manual easier to understand after running the tutorial.</p>
+yes? GO tutorial</pre><p align="left">If Ferret is not yet installed consult the chapter "<a href="../computing-environment/computing-environment.html" title="Chapter 9. Computing Environment">Computing Environment</a>" (The tutorial is also available on-line through Ferret's <a href="../../ferret-tutorials.html" title="Ferret Tutorials">on-line demonstrations page.</a>) The tutorial demonstrates many of Ferret's features, showing the user both the commands given and Ferret's textual and graphical output. You may find the explanations, terms and examples in this manual easier to understand after running the tutorial.</p>
 </div>
 <p class="secHeader">1.2.1<a name="_VPID_6" id="_VPID_6"></a><b> Concepts</b></p>
 <div class="plain">
@@ -279,7 +279,7 @@ yes? VECTOR uwnd,vwnd !wind velocity vector plot</pre><p>
 <p align="left">For this discussion we will coin the term "plottable variables." There are no non-plottable variables that will come up in this discussion but "variables" is a bit too generic. Plottable variables are of 3 types:</p>
 <ul><li>file variables‚ read from disk files</li>
 <li>user-defined variables‚ defined by the LET command</li>
-<li>pseudo-variables‚ regions (I,J,K,L,X,Y,...) used as variables</li>
+<li>pseudo-variables‚ regions (I,J,K,L,X,Y,..) used as variables</li>
 </ul><p align="left">As much as possible Ferret tries to make all types of variables indistinguishable. All plottable variables are defined on <b>grids</b>. No plottable variables exists in a vacuum for Ferret. The grid on which a plottable variable exists tells how to locate the variable in space and time. In cases where the variables are abstract in nature‚ disconnected from space and time‚ erret will associate those variables with grids that are abstract, too. Where a geographical grid will associate the Nth position along an axis with a location (like 20 degrees north latitude) an abstract grid will simply associate the Nth position with the number N. Plottable variables may be regridded to other grids than the one on which they are defined. (Done with "G=".)</p>
 <p align="left">All references to plottable variables must have a complete <b>context</b>. A complete context will be described in detail later. Briefly it means a region in space, an interval in time and the data set(s) in which the variables will be found.</p>
 <p align="left"><b>Grids</b></p>
@@ -303,17 +303,17 @@ yes? VECTOR uwnd,vwnd !wind velocity vector plot</pre><p>
 <li>@DDC (centered derivative)</li>
 <li>@SHF (shift data a number of points along an axis)</li>
 <li>@MIN (minimum value along an axis)</li>
-</ul><p align="left">... and others (see HELP TRANSFORMATIONS inside Ferret)</p>
+</ul><p align="left">.. and others (see HELP TRANSFORMATIONS inside Ferret)</p>
 </div>
 <p><a name="_VPID_8" id="_VPID_8"></a></p>
 <p class="secHeader"><b>1.2.2 Unix<a name="_VPINDEXENTRY_6" id="_VPINDEXENTRY_6"></a><a name="_VPINDEXENTRY_7" id="_VPINDEXENTRY_7"></a> command line switches </b></p>
 <div class="plain">
 <pre>
-ferret [-batch &lt;file&gt;.ps][-memsize Mwords] [-unmapped] [-help] [-gif] [-server] [-script journalfile.jnl [arg1] [arg2]...]
+ferret [-batch &lt;file&gt;.ps][-memsize Mwords] [-unmapped] [-help] [-gif] [-server] [-script journalfile.jnl [arg1] [arg2]..]
  
 or
  
-pyferret [-memsize Mwords] [-nodisplay] [-server] [-quiet] [-script journalfile.jnl [arg1] [arg2]...]</pre><p><a name="Chapter1-memsize" id="Chapter1-memsize"></a></p></div>
+pyferret [-memsize Mwords] [-nodisplay] [-server] [-quiet] [-script journalfile.jnl [arg1] [arg2]..]</pre><p><a name="Chapter1-memsize" id="Chapter1-memsize"></a></p></div>
 <p class="callout"><a name="_VPINDEXENTRY_8" id="_VPINDEXENTRY_8"></a></p>
 <p class="pnormal"><b>PyFerret has a few options that are different from Ferret switches, <a href="GETTING-STARTED.html#_pyferret_switches" title="1.2 GETTING STARTED">see below</a>.</b></p>
 <div class="plain">
@@ -336,7 +336,7 @@ Ferret can run in batch mode for gif output‚ without an X server (see also <b>
 <p> </p>
 <pre>
 &gt; ferret -gif 
-yes? (commands that generate a plot...) 
+yes? (commands that generate a plot..) 
 yes? FRAME/FILE=picture.gif</pre><p align="left"> </p>
 <p class="indented">sends the stored graphical output from Ferret to the GIF file picture.gif. Note that the -gif startup mode does NOT take an argument. You can however start Ferret in<b> -batch</b> mode (see below) and specify a gif file name for the output.</p>
 <p class="indented">Please note the following when using gif mode:</p>
@@ -400,7 +400,7 @@ Run in server mode -- don't stop on message commands. This mode uses primitive (
 <p class="indented"><b><a name="_VPINDEXENTRY_25" id="_VPINDEXENTRY_25"></a><a name="_VPINDEXENTRY_26" id="_VPINDEXENTRY_26"></a><a name="_VPINDEXENTRY_27" id="_VPINDEXENTRY_27"></a>-script journalfile.jnl</b><br />
 Run a script, with optional arguments, and exit. Ferret starts, the script runs, and Ferret exits. If Ferret encounters an error, it will issue any error messages and exit to the Unix command line. The switch also sets the -server, -nojnl, and -noverify switches (MODE VERIFY and MODE JOURNAL may be turned back on within the script). It suppresses the banner lines. So that the command line reader can read and process any arguments to the script, -script must be specified last, after any other command-line switches (e.g. -gif or -memsize). Everything listed after the <b>-script journalfile.jnl </b>is taken to be arguments to the script.</p>
 <pre>
-&gt; ferret -script file.jnl [arg1] [arg2] [arg3] ...
+&gt; ferret -script file.jnl [arg1] [arg2] [arg3] ..
  
 or
  
@@ -440,10 +440,10 @@ currently SET data sets:
 1&gt; /home/porter/tmap/ferret/linux/fer_dsets/data/monthly_navy_winds.cdf (default)
  
 name title I J K L
-UWND ZONAL WIND 1:144 1:73 ... 1:132
+UWND ZONAL WIND 1:144 1:73 .. 1:132
 M/S on grid GDN1 with -99.9 for missing data
 X=18.8E:18.8E(378.8) Y=91.2S:91.2N 
-VWND MERIDIONAL WIND 1:144 1:73 ... 1:132
+VWND MERIDIONAL WIND 1:144 1:73 .. 1:132
 M/S on grid GDN1 with -99.9 for missing data
 X=18.8E:18.8E(378.8) Y=91.2S:91.2N 
  

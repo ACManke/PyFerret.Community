@@ -189,7 +189,7 @@ xmlns:schema="https://schema.org/">
 <li id="menu-1351-1" class="middle odd sf-item-9 sf-depth-3 sf-no-children"><a href="../../demos/ferret-polymark-demo.html" class="sf-depth-3">Ferret Polymark Demo</a></li>
 <li id="menu-1349-1" class="middle even sf-item-10 sf-depth-3 sf-no-children"><a href="../../demos/ferret-constant-array-demo.html" class="sf-depth-3">Ferret Constant-Array demo</a></li>
 <li id="menu-1356-1" class="middle odd sf-item-11 sf-depth-3 sf-no-children"><a href="../../demos/ferret-land_detail-demo.html" class="sf-depth-3">Ferret land_detail demo</a></li>
-<li id="menu-1340-1" class="middle even sf-item-12 sf-depth-3 sf-no-children"><a href=".../../demos/coads-tour.html" class="sf-depth-3">COADS Tour</a></li>
+<li id="menu-1340-1" class="middle even sf-item-12 sf-depth-3 sf-no-children"><a href="../../demos/coads-tour.html" class="sf-depth-3">COADS Tour</a></li>
 <li id="menu-1341-1" class="middle odd sf-item-13 sf-depth-3 sf-no-children"><a href="../../demos/levitus-tour.html" class="sf-depth-3">Levitus Tour</a></li>
 <li id="menu-1342-1" class="middle even sf-item-14 sf-depth-3 sf-no-children"><a href="../../demos/how-to-use-ferret-and-opendap-to-access-and-analyze-remote-data-1.html" class="sf-depth-3">Use OPeNDAP</a></li>
 <li id="menu-1348-1" class="last odd sf-item-15 sf-depth-3 sf-no-children"><a href="../../demos/ferret-binary-read-demo.html" class="sf-depth-3">Ferret binary read demo</a></li>
@@ -278,7 +278,7 @@ yes? CANCEL DATA uv.data1
 yes? DEF AXIS/t=2:2:1 taxis1
 yes? FILE/GRID=uv_grid1/BAD=-999/VAR="u,v" uv.data2
 yes? SAVE/APPEND/FILE=uv1_12t.cdf u,v
-. . .</pre><p align="left">and so on, redefining the time axis to be 3:3:1, 4:4:1, ... each time a new file is set.</p>
+. . .</pre><p align="left">and so on, redefining the time axis to be 3:3:1, 4:4:1, .. each time a new file is set.</p>
 <p align="left">When the input data is in netCDF files, please see the following FAQ on using data from a set of input files. Note particularly the example showing how to add time information to the variable when the grid of the input data has no time axis.</p>
 <p align="left">FAQ: <a href="../../../faq/using-data-that-spans-multiple-files.html" title="Ferret FAQs">How can I use data as a time series when it exists in multiple files?</a></p>
 <p><a name="Chapter10-NetCDF append" id="Chapter10-NetCDF append"></a></p>
@@ -293,11 +293,11 @@ yes? show data
 currently SET data sets:
 1&gt; ./a1.nc
 name     title                             I         J         K         L
-SST      SEA SURFACE TEMPERATURE          1:90      1:55      ...       1:1
+SST      SEA SURFACE TEMPERATURE          1:90      1:55      ..       1:1
  
 2&gt; ./b1.nc  (default)
 name     title                             I         J         K         L
-TEMP     sea surface temperature          1:90      1:46      ...       1:1
+TEMP     sea surface temperature          1:90      1:46      ..       1:1
  
 yes? show grid sst[d=1]
 GRID GMH1
@@ -377,7 +377,7 @@ TIME     : 01-JAN-2017 00:00
 171W   / 95:  27.94</pre><p> </p>
 <p align="left"><b>Example 5‚ multiple slabs</b></p>
 <p align="left">The procedure used in example 3 above, is possible because netCDF files can be extended along the time axis. In order to append multiple <i>levels</i> (Z axis), the netCDF file must first be created including all of its vertical levels (the levels initially are filled with a missing data flag).</p>
-<p align="left">Consider 5 ASCII files, uv.data1 to uv.data5, each defined on the same grid as above but each representing a successive vertical level. Note that the output grid has an axis containing all the Z levels that the file will contain (and that the other Z axes, zaxis1, zaxis2, ... are defined only for the purpose of reading the data in). The following set of commands illustrates how to save these data into a single netCDF data set.</p>
+<p align="left">Consider 5 ASCII files, uv.data1 to uv.data5, each defined on the same grid as above but each representing a successive vertical level. Note that the output grid has an axis containing all the Z levels that the file will contain (and that the other Z axes, zaxis1, zaxis2, .. are defined only for the purpose of reading the data in). The following set of commands illustrates how to save these data into a single netCDF data set.</p>
 <p align="left">NOTE: <em>It is best to define a fixed-length axis in the "append" direction, as in the example below.  If the axis in that direction is an abstract axis, for instance from a function such as XSEQUENCE or ESEQUENCE, the results will not be appended in Ferret v7.4 and previous versions.</em></p>
 <pre>
 yes? DEF AXIS/x=1:360:1 xaxis
@@ -407,8 +407,8 @@ yes? show data
 currently SET data sets:
 1&gt; ./ocean_lev0m.nc  (default)
 name     title                    I         J         K         L
-U        Zonal Current           1:180     1:90      ...       1:12
-V        Meridional Current      1:180     1:90      ...       1:12</pre><p>Define the appropriate output Z axis with all of the depths.  Define variables ucur and vcur which are simply the data from the file repeated at each depth.  This uses the concept of "<a href="../variables-xpressions/XPRESSIONS.html#_VPINDEXENTRY_300">conformability</a>", how variables with unlike grids may be combined. Define the new variable that has a Z axis from that newly named file variable, and set the attributes for the new variable  to be inherited from the file variable.</p>
+U        Zonal Current           1:180     1:90      ..       1:12
+V        Meridional Current      1:180     1:90      ..       1:12</pre><p>Define the appropriate output Z axis with all of the depths.  Define variables ucur and vcur which are simply the data from the file repeated at each depth.  This uses the concept of "<a href="../variables-xpressions/XPRESSIONS.html#_VPINDEXENTRY_300">conformability</a>", how variables with unlike grids may be combined. Define the new variable that has a Z axis from that newly named file variable, and set the attributes for the new variable  to be inherited from the file variable.</p>
 <pre align="left">
 yes? define axis/z/depth/units=meters zdepth = {0,5,20}
  

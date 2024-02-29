@@ -189,7 +189,7 @@ xmlns:schema="http://schema.org/">
 <li id="menu-1351-1" class="middle odd sf-item-9 sf-depth-3 sf-no-children"><a href="../../demos/ferret-polymark-demo.html" class="sf-depth-3">Ferret Polymark Demo</a></li>
 <li id="menu-1349-1" class="middle even sf-item-10 sf-depth-3 sf-no-children"><a href="../../demos/ferret-constant-array-demo.html" class="sf-depth-3">Ferret Constant-Array demo</a></li>
 <li id="menu-1356-1" class="middle odd sf-item-11 sf-depth-3 sf-no-children"><a href="../../demos/ferret-land_detail-demo.html" class="sf-depth-3">Ferret land_detail demo</a></li>
-<li id="menu-1340-1" class="middle even sf-item-12 sf-depth-3 sf-no-children"><a href=".../../demos/coads-tour.html" class="sf-depth-3">COADS Tour</a></li>
+<li id="menu-1340-1" class="middle even sf-item-12 sf-depth-3 sf-no-children"><a href="../../demos/coads-tour.html" class="sf-depth-3">COADS Tour</a></li>
 <li id="menu-1341-1" class="middle odd sf-item-13 sf-depth-3 sf-no-children"><a href="../../demos/levitus-tour.html" class="sf-depth-3">Levitus Tour</a></li>
 <li id="menu-1342-1" class="middle even sf-item-14 sf-depth-3 sf-no-children"><a href="../../demos/how-to-use-ferret-and-opendap-to-access-and-analyze-remote-data-1.html" class="sf-depth-3">Use OPeNDAP</a></li>
 <li id="menu-1348-1" class="last odd sf-item-15 sf-depth-3 sf-no-children"><a href="../../demos/ferret-binary-read-demo.html" class="sf-depth-3">Ferret binary read demo</a></li>
@@ -251,8 +251,8 @@ xmlns:schema="http://schema.org/">
 <p>
 <a name="_VPID_317" id="_VPID_317"></a><a name="_VPINDEXENTRY_979" id="_VPINDEXENTRY_979"></a></p>
 <p align="left" class="secHeader">8.3.1 <b>How collections of profiles are structured in Ferret </b></p>
-<p align="left">If the collection of profiles is sufficiently small (say 4 or fewer) then it is straightforward to handle them simply as 4 separate data sets. The D= qualifier may be used to designate which profile is being referred to. The IF ... THEN ... ELSE syntax may be used to combine the profiles into expressions.</p>
-<p align="left">As the number of profiles in the collection grows larger, however, it becomes necessary to merge them into a single structure. Typically, the sequence number of the profile, 1, 2, ...,N, becomes the X axis of the collection. The longitude, latitude, and time of each profile become dependent variables indexed by the sequence number. The Z structures of the profiles are blended into a single Z axis by a choice of techniques. The steps to creating a blended data set then become:</p>
+<p align="left">If the collection of profiles is sufficiently small (say 4 or fewer) then it is straightforward to handle them simply as 4 separate data sets. The D= qualifier may be used to designate which profile is being referred to. The IF .. THEN .. ELSE syntax may be used to combine the profiles into expressions.</p>
+<p align="left">As the number of profiles in the collection grows larger, however, it becomes necessary to merge them into a single structure. Typically, the sequence number of the profile, 1, 2, ..,N, becomes the X axis of the collection. The longitude, latitude, and time of each profile become dependent variables indexed by the sequence number. The Z structures of the profiles are blended into a single Z axis by a choice of techniques. The steps to creating a blended data set then become:</p>
 <p align="left">1. Determine the nature of the Z axis to be used and the collection of variables to be defined on the grid</p>
 <p align="left">2. Create an empty grid with the desired structure in a file</p>
 <p align="left">3. Populate the file with the profiles, each profile in turn.</p>
@@ -269,11 +269,11 @@ xmlns:schema="http://schema.org/">
 <p align="left">As of 4/99 the approaches to merging collections of profiles into a single structure are still "manual." (Data which are stored as global attributes in the input files, as is done in EPIC files, are lost in this process.) This text describes an example of the manual process used, where the target Z axis is created arbitrarily and data are interpolated to it. In this example the profiles are read from ASCII files, so the Z axis of each profile has to be created. This example does not save the longitude, latitude, and time positions of the casts.</p>
 <pre>
 ! for this example we begin by manufacturing some data
-! ... pretend this is one of your casts - unequal vertical spacing
+! .. pretend this is one of your casts - unequal vertical spacing
 LIST/FILE=test_cast.dat/NOHEAD/FORM=(2F)/I=1:10 10*i+randu(i), sin(i/6)
  
 ! create a grid suitable for ALL casts together
-! make the points regular in X and Z ... they need not be, however
+! make the points regular in X and Z .. they need not be, however
 DEFINE AXIS/DEPTH/Z=0:1000:20/UNIT=meters zall ! Arbitrarty z axis
 DEFINE AXIS/X=0:9:1/UNIT="sequence" xall
 DEFINE GRID/X=xall/Z=zall gall
@@ -318,7 +318,7 @@ FILE/VAR="-,invar"/grid=g1cast test_cast2.dat
 SAVE/APPEND/FILE=all_casts.cdf outvar[I=2]
 CANC DATA 1
  
-! etc for next 8 casts ...
+! etc for next 8 casts ..
 ! This may be automated with: REPEAT/I=1:10 GO output_one_profile
 ! where the script output_one_profile.jnl reads profile file names
 ! from a list.
@@ -331,8 +331,8 @@ yes? SHOW DATA
 currently SET data sets:
 1&gt; ./all_casts.cdf (default)
 name title I J K L
-OUTVAR My merged var 1:10 ... 1:51 ...
-LAT Latitude 1:10 ... ... ...</pre><p> </p>
+OUTVAR My merged var 1:10 .. 1:51 ..
+LAT Latitude 1:10 .. .. ..</pre><p> </p>
 <p> </p>
 <p align="left" class="secHeader">8.3.3 <a name="_VPID_319" id="_VPID_319"></a><b><a name="_VPINDEXENTRY_981" id="_VPINDEXENTRY_981"></a>Defining vertical sections from profiles </b></p>
 <p> </p>
@@ -342,7 +342,7 @@ LAT Latitude 1:10 ... ... ...</pre><p> </p>
 <pre>
 yes? let order = SORTI(lat)
 yes? let section = SAMPLEI(outvar, order)</pre><p align="left">Other definitions of the variable order may be created by straightforward means to apply other ordering principles.</p>
-<p align="left">As defined above, "section" has an X axis which is the values 1, 2, 3,...N from the Ferret ABSTRACT axis. To cast this on a proper latitude axis, use these two steps:</p>
+<p align="left">As defined above, "section" has an X axis which is the values 1, 2, 3,..N from the Ferret ABSTRACT axis. To cast this on a proper latitude axis, use these two steps:</p>
 <pre>
 yes? DEFINE AXIS/Y/UNITS=degrees yax_sect=SAMPLEI(lat, order)
 yes? LET ysection = RESHAPE(section,Y[gy=yax_sect]+Z[gz=all])</pre><p> </p>
@@ -352,7 +352,7 @@ yes? LET ysection = RESHAPE(section,Y[gy=yax_sect]+Z[gz=all])</pre><p> </p>
 <p> </p>
 <p align="left">The variables "section" and "ysection" defined above may be plotted and analyzed with the normal gridded plot commands. For examples,</p>
 <pre>
-yes? CONTOUR section ! contour plot ordered on X=1,2,3,...
+yes? CONTOUR section ! contour plot ordered on X=1,2,3,..
 yes? FILL ysection ! color contour plot on formatted latitude axis
 yes? PLOT/Y=20S/Z=100:500 ysection ! profile at 20 south
 yes? PLOT ysection[Z=@loc:20] ! depth of 20 degree isotherm</pre><p> </p>

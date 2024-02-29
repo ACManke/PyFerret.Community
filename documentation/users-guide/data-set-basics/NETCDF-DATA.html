@@ -578,8 +578,11 @@ yes? use reversed_axes.cdf
 <p align="left">Julian calendar; leap years with no adjustment at the turn of the century.</p>
 </td>
 </tr></tbody></table><p align="left"><a name="_VPINDEXENTRY_184" id="_VPINDEXENTRY_184"></a>These calendars are compatible with the Udunits standard which has slightly different naming conventions, except that the gregorian or standard calendar is a proleptic Gregorian calendar in Ferret. If the mixed Julian/Gregorian calendar is desired, use a time origin of 1-jan-0001:00:00 and Ferret will apply the 2-day shift that was made historically when the Gregorian calendar was introduced. The Udunits standard can be found at:</p>
-<p align="left"><a href="http://www.unidata.ucar.edu/software/udunits/udunits-1/udunits.txt">http://www.unidata.ucar.edu/software/udunits/udunits-1/udunits.txt</a></p>
-<p align="left"><a href="../../udunits.html" title="udunits.dat">udunits.dat </a>(A local copy of the above link).</p>
+<p align="left">
+
+<a href="https://www.unidata.ucar.edu/software/udunits/">https://www.unidata.ucar.edu/software/udunits</a>. 
+</p>An earlier version, udunits-1 is implemented in Ferret. Here is a local copy of the udunits-1 specification:<br>
+<p align="left"><a href="../../udunits.dat" title="udunits.dat">udunits.dat </a></p>
 <p align="left">The netCDF conventions recommend that the calendar be specified by the attribute time:calendar which is assigned to the time coordinate variable when there is a non-Gregorian calendar associated with a data set, i.e.</p>
 <p align="left">time:calendar=noleap</p>
 <p align="left">Ferret reads this attribute when it is present in a netCDF file and assigns the appropriate calendar identifer to the variable. When a variable has a non-Gregorian calendar, the attribute is written to a netCDF file when the variable is output to a netCDF file.</p>

@@ -189,7 +189,7 @@ xmlns:schema="http://schema.org/">
 <li id="menu-1351-1" class="middle odd sf-item-9 sf-depth-3 sf-no-children"><a href="../../demos/ferret-polymark-demo.html" class="sf-depth-3">Ferret Polymark Demo</a></li>
 <li id="menu-1349-1" class="middle even sf-item-10 sf-depth-3 sf-no-children"><a href="../../demos/ferret-constant-array-demo.html" class="sf-depth-3">Ferret Constant-Array demo</a></li>
 <li id="menu-1356-1" class="middle odd sf-item-11 sf-depth-3 sf-no-children"><a href="../../demos/ferret-land_detail-demo.html" class="sf-depth-3">Ferret land_detail demo</a></li>
-<li id="menu-1340-1" class="middle even sf-item-12 sf-depth-3 sf-no-children"><a href=".../../demos/coads-tour.html" class="sf-depth-3">COADS Tour</a></li>
+<li id="menu-1340-1" class="middle even sf-item-12 sf-depth-3 sf-no-children"><a href="../../demos/coads-tour.html" class="sf-depth-3">COADS Tour</a></li>
 <li id="menu-1341-1" class="middle odd sf-item-13 sf-depth-3 sf-no-children"><a href="../../demos/levitus-tour.html" class="sf-depth-3">Levitus Tour</a></li>
 <li id="menu-1342-1" class="middle even sf-item-14 sf-depth-3 sf-no-children"><a href="../../demos/how-to-use-ferret-and-opendap-to-access-and-analyze-remote-data-1.html" class="sf-depth-3">Use OPeNDAP</a></li>
 <li id="menu-1348-1" class="last odd sf-item-15 sf-depth-3 sf-no-children"><a href="../../demos/ferret-binary-read-demo.html" class="sf-depth-3">Ferret binary read demo</a></li>
@@ -246,7 +246,7 @@ xmlns:schema="http://schema.org/">
 <div class="field-items">
 <div class="field-item even" property="content:encoded"><p><a name="_VPID_309" id="_VPID_309"></a><a name="_VPINDEXENTRY_967" id="_VPINDEXENTRY_967"></a></p>
 <p><em>NOTE: Sections 8.1 through 8.6 refer to dataset organization and techniques previous to the Discrete Sampling Geometries Standard in CF.  Skip to Section 8.10 for discussion of Discrete Sampling Geometries data.  Support for Discrete Sampling Geometries datasets begins with PyFerret/Ferret v7.6.</em></p>
-<p align="left">In a gridded context point data is best viewed as a collection of 1-dimensional variables, where the axis of each variable is the index value, 1, 2, 3, ... of the individual point in the scatter. Thus, continuing our example of an oceanic NO3 data set, we would want to view this as four variables, longitude, latitude, date, and burden, where each variable was defined on a one-dimensional axis of earthquake number. Typically, this sort of data is organized in a table of the form</p>
+<p align="left">In a gridded context point data is best viewed as a collection of 1-dimensional variables, where the axis of each variable is the index value, 1, 2, 3, .. of the individual point in the scatter. Thus, continuing our example of an oceanic NO3 data set, we would want to view this as four variables, longitude, latitude, date, and burden, where each variable was defined on a one-dimensional axis of earthquake number. Typically, this sort of data is organized in a table of the form</p>
 <table><tbody><tr><td>
 <p align="left"> </p>
 </td>
@@ -316,7 +316,7 @@ xmlns:schema="http://schema.org/">
 <p align="left">5.5</p>
 </td>
 </tr><tr><td>
-<p align="left">...</p>
+<p align="left">..</p>
 </td>
 <td> </td>
 <td> </td>
@@ -337,12 +337,12 @@ yes? SHOW DATA my_data_file.dat
 currently SET data sets:
 1&gt; ./my_data_file.dat (default)
 name title I J K L
-LON LON 1:20480 ... ... ...
-LAT LAT 1:20480 ... ... ...
-YR YR 1:20480 ... ... ...
-MN MN 1:20480 ... ... ...
-DAY DAY 1:20480 ... ... ...
-NO3 NO3 1:20480 ... ... ...</pre><p align="left">Note that the SET VARIABLE command would normally be used as well to assign titles, units, and missing value flags to the variables.</p>
+LON LON 1:20480 .. .. ..
+LAT LAT 1:20480 .. .. ..
+YR YR 1:20480 .. .. ..
+MN MN 1:20480 .. .. ..
+DAY DAY 1:20480 .. .. ..
+NO3 NO3 1:20480 .. .. ..</pre><p align="left">Note that the SET VARIABLE command would normally be used as well to assign titles, units, and missing value flags to the variables.</p>
 <p> </p>
 <p align="left">Beginning with Ferret v6.93, if the FILE command is given without a grid, Ferret determines the size of the file and defines an axis and grid on which to read the variables. It takes any /skip and /columns qualifiers into account. For v6.93 and higher, the number of I indices listed above will be the size of the data in the file.</p>
 <p> </p>

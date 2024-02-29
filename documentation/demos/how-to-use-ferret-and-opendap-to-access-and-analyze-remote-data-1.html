@@ -236,15 +236,14 @@ xmlns:schema="http://schema.org/">
  
 <div class="field field-name-body field-type-text-with-summary field-label-hidden">
 <div class="field-items">
-<div class="field-item even" property="content:encoded"><p>NOTES:</p>
-<ul><li>For the current state of OPeNDAP capabilities in Ferret please check<br /><a href="http://ferret.pmel.noaa.gov/Ferret/opendap">http://ferret.pmel.noaa.gov/Ferret/opendap</a><br />
-	 </li>
-<li>To find out more about OPeNDAP consult:<br /><a href="http://www.opendap.org/">http://www.opendap.org/</a></li>
-</ul><p>! *********************************************************<br />
+<div class="field-item even" property="content:encoded"><p></p>
+
+<p>To find out more about OPeNDAP consult:<br /><a href="https://www.opendap.org/">https://www.opendap.org/</a></p>
+<p>! *********************************************************<br />
 ! DEMO: Using Ferret and OPENDAP to access remote data sets<br />
 ! *********************************************************</p>
 <p>! First we will examine the COADS climatology dataset from the Pacific<br />
-! Marine Environmental Laboratory (PMEL) in Seattle, Washington.</p>
+! Marine Environmental Laboratory in Seattle, Washington.</p>
 <p>
 ! Note: Once the dataset has been initialized from the remote site,<br />
 ! using the dataset is exactly the same as if it were local<br />
@@ -331,7 +330,7 @@ yes? shade/levels=v dsp_band_1[i=1:1024:4, j=1:1024:4]</pre><p><img class="image
 <pre>
 yes? cancel data f99001082417.hdf
 yes? use/ORDER=x-y "http://satdat1.gso.uri.edu:80/opendap/AVHRR/Old_Pathfinder/Northwest_Atlantic/6km/raw/1999/1/f99001082417.hdf"</pre><p>! Note the odd axis labeling in the above plot. For these files, the coordinate axes are<br />
-! just index values, but the longitude/latitude ranges are defined in <a href="users-guide/variables-xpressions/VARIABLES#_VPINDEXENTRY_281" title="3.1 VARIABLES">global attributes</a>.<br />
+! just index values, but the longitude/latitude ranges are defined in <a href="../users-guide/variables-xpressions/VARIABLES.html#_VPINDEXENTRY_281" title="3.1 VARIABLES">global attributes</a>.<br />
 ! We can redefine the x and y axes to represent the correct longitude and latitude axes.<br />
  </p>
 <pre>

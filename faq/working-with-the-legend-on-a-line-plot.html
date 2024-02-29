@@ -165,7 +165,7 @@ yes? use levitus_climatology
 yes? plot/y=30/x=280:320 temp[z=0], temp[z=200]</pre><p><img alt="legend drawn by default" class="image-inline" src="../sites/default/files/images/faq/legend_default.png" /></p>
 <p>Often we want to define more elegant names to use in this legend, or make a legend somewhere else on the page.</p>
 <h2>Solution:</h2>
-<p>See also the FAQ, <a href="/Ferret/faq/custom-legends-line-plots">Custom Legends for line plots</a>.</p>
+<p>See also the FAQ, <a href="custom-legends-line-plots.html">Custom Legends for line plots</a>.</p>
 <p>Beginning with Ferret v6.95, the plot qualifier<a href="../documentation/users-guide/commands-reference/PLOT#_PLOT_KEY_TITLE" title="PLOT"> PLOT/KEY=TITLE</a>, when used with a multi-line plot, labels the legend with the variable titles:</p>
 <pre>
 yes? let/units="Deg C"/title="Surface Temp" temp_at_surface = temp[z=0]
@@ -197,7 +197,7 @@ yes? go legend 2 "`temp_at_200,RETURN=title`" ur
  
 yes? ppl plot
  
-</pre><p><img alt="legend.jnl script for customizing line plot legends" class="image-inline" src="../sites/default/files/images/faq/legend_custom.gif" /></p>
+</pre><p><img alt="legend.jnl script for customizing line plot legends" class="image-inline" src="../sites/default/files/images/faq/custom_legend.png" /></p>
 <p> </p>
 <p> </p>
 <p> </p>

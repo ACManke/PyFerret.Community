@@ -189,7 +189,7 @@ xmlns:schema="http://schema.org/">
 <li id="menu-1351-1" class="middle odd sf-item-9 sf-depth-3 sf-no-children"><a href="../../demos/ferret-polymark-demo.html" class="sf-depth-3">Ferret Polymark Demo</a></li>
 <li id="menu-1349-1" class="middle even sf-item-10 sf-depth-3 sf-no-children"><a href="../../demos/ferret-constant-array-demo.html" class="sf-depth-3">Ferret Constant-Array demo</a></li>
 <li id="menu-1356-1" class="middle odd sf-item-11 sf-depth-3 sf-no-children"><a href="../../demos/ferret-land_detail-demo.html" class="sf-depth-3">Ferret land_detail demo</a></li>
-<li id="menu-1340-1" class="middle even sf-item-12 sf-depth-3 sf-no-children"><a href=".../../demos/coads-tour.html" class="sf-depth-3">COADS Tour</a></li>
+<li id="menu-1340-1" class="middle even sf-item-12 sf-depth-3 sf-no-children"><a href="../../demos/coads-tour.html" class="sf-depth-3">COADS Tour</a></li>
 <li id="menu-1341-1" class="middle odd sf-item-13 sf-depth-3 sf-no-children"><a href="../../demos/levitus-tour.html" class="sf-depth-3">Levitus Tour</a></li>
 <li id="menu-1342-1" class="middle even sf-item-14 sf-depth-3 sf-no-children"><a href="../../demos/how-to-use-ferret-and-opendap-to-access-and-analyze-remote-data-1.html" class="sf-depth-3">Use OPeNDAP</a></li>
 <li id="menu-1348-1" class="last odd sf-item-15 sf-depth-3 sf-no-children"><a href="../../demos/ferret-binary-read-demo.html" class="sf-depth-3">Ferret binary read demo</a></li>
@@ -259,7 +259,7 @@ xmlns:schema="http://schema.org/">
 <p><a name="Chapter9-Relative_version_numbers" id="Chapter9-Relative_version_numbers"></a><a name="_VPID_345" id="_VPID_345"></a><a name="_VPINDEXENTRY_1062" id="_VPINDEXENTRY_1062"></a><a name="_VPINDEXENTRY_1063" id="_VPINDEXENTRY_1063"></a><a name="_VPINDEXENTRY_1064" id="_VPINDEXENTRY_1064"></a><br /></p><p align="left" class="secHeader">9.6.1 <b><b>Relative version numbers </b></b></p>
 <p align="left">Under some circumstances (see the <a title="GO" href="../commands-reference/GO.html">GO command</a> ) a special syntax called "relative version numbers" will apply. If a filename has a version value of zero or less its value is interpreted relative to the current highest version number.</p>
 <p align="left">For example, if the current directory contains the files</p>
-<pre>ferret.jnl ferret.jnl.~1~ ferret.jnl.~2~ ... ferret.jnl.~99~</pre><p align="left">then the filename <i>ferret.jnl.~0~</i> refers to <i>ferret.jnl</i> and the filename <i>ferret.jnl.~-1~</i> refers to <i>ferret.jnl.~99~</i>.</p>
+<pre>ferret.jnl ferret.jnl.~1~ ferret.jnl.~2~ .. ferret.jnl.~99~</pre><p align="left">then the filename <i>ferret.jnl.~0~</i> refers to <i>ferret.jnl</i> and the filename <i>ferret.jnl.~-1~</i> refers to <i>ferret.jnl.~99~</i>.</p>
 <p align="left">The syntax for relative version numbers is quite flexible. For example, if the desired file is <i>ferret.jnl.~99~</i>, both of the following are valid:</p>
 <p align="left"><i>yes? GO ferret.jnl.~-1~</i> or </p>
 <p align="left"><i>yes? GO ferret.jnl~-1 </i></p>

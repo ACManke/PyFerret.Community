@@ -189,7 +189,7 @@ xmlns:schema="http://schema.org/">
 <li id="menu-1351-1" class="middle odd sf-item-9 sf-depth-3 sf-no-children"><a href="../../demos/ferret-polymark-demo.html" class="sf-depth-3">Ferret Polymark Demo</a></li>
 <li id="menu-1349-1" class="middle even sf-item-10 sf-depth-3 sf-no-children"><a href="../../demos/ferret-constant-array-demo.html" class="sf-depth-3">Ferret Constant-Array demo</a></li>
 <li id="menu-1356-1" class="middle odd sf-item-11 sf-depth-3 sf-no-children"><a href="../../demos/ferret-land_detail-demo.html" class="sf-depth-3">Ferret land_detail demo</a></li>
-<li id="menu-1340-1" class="middle even sf-item-12 sf-depth-3 sf-no-children"><a href=".../../demos/coads-tour.html" class="sf-depth-3">COADS Tour</a></li>
+<li id="menu-1340-1" class="middle even sf-item-12 sf-depth-3 sf-no-children"><a href="../../demos/coads-tour.html" class="sf-depth-3">COADS Tour</a></li>
 <li id="menu-1341-1" class="middle odd sf-item-13 sf-depth-3 sf-no-children"><a href="../../demos/levitus-tour.html" class="sf-depth-3">Levitus Tour</a></li>
 <li id="menu-1342-1" class="middle even sf-item-14 sf-depth-3 sf-no-children"><a href="../../demos/how-to-use-ferret-and-opendap-to-access-and-analyze-remote-data-1.html" class="sf-depth-3">Use OPeNDAP</a></li>
 <li id="menu-1348-1" class="last odd sf-item-15 sf-depth-3 sf-no-children"><a href="../../demos/ferret-binary-read-demo.html" class="sf-depth-3">Ferret binary read demo</a></li>
@@ -277,16 +277,16 @@ float tmp(yc,xc) ;
 tmp:long_name = "temperature" ;
 tmp:units = "K" ;
 tmp:coordinates = "lon lat" ;
-...
+..
 </pre><p align="left">When such a dataset is opened in Ferret, the output of a SHOW DATA command will look like:</p>
 <pre>
 yes? show data
 currently SET data sets:
 1&gt; ./tmp.nc (default)
 name     title                I      J      K    L
-LON longitude                1:180  1:173  ...  ...
-LAT longitude                1:180  1:173  ...  ...
-TMP temperature              1:180  1:173  ...  ...
+LON longitude                1:180  1:173  ..  ..
+LAT longitude                1:180  1:173  ..  ..
+TMP temperature              1:180  1:173  ..  ..
 </pre><p align="left"> </p>
 <p align="left">This data can be plotted with the 3-argument SHADE, FILL or CONTOUR commands</p>
 <pre>

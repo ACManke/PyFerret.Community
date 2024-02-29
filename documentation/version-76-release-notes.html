@@ -77,7 +77,7 @@ xmlns:schema="http://schema.org/">
   <div class="region-inner region-branding-inner">
         <div class="branding-data clearfix">
             <div class="logo-img">
-        <a href="index.html" rel="home" title=""><img src="sites/all/themes/pacific_marine/images/ferret-banner.png" alt="" id="logo" /></a>
+        <a href="../index.html" rel="home" title=""><img src="sites/all/themes/pacific_marine/images/ferret-banner.png" alt="" id="logo" /></a>
 		</div>
                 </div>
           </div>
@@ -163,7 +163,7 @@ xmlns:schema="http://schema.org/">
 </li>
 <li id="menu-1400-1" class="middle odd sf-item-13 sf-depth-3 sf-total-children-6 sf-parent-children-0 sf-single-children-6 menuparent"><a href="users-guide/writing-external-functions/writing-external-functions.html" class="sf-depth-3 menuparent">11. Writing External Functions</a>
 </li>
-<li id="menu-1166-1" class="active-trail middle even sf-item-14 sf-depth-3 sf-no-children"><a href="glossary/glossary.html" class="sf-depth-3 active">Glossary</a></li>
+<li id="menu-1166-1" class="active-trail middle even sf-item-14 sf-depth-3 sf-no-children"><a href="users-guide/glossary/glossary.html" class="sf-depth-3 active">Glossary</a></li>
 <li id="menu-1427-1" class="middle odd sf-item-15 sf-depth-3 sf-total-children-58 sf-parent-children-0 sf-single-children-58 menuparent"><a href="users-guide/appendix-a-external-functions/appendix-a-external-functions.html" class="sf-depth-3 menuparent">Appendix A: Functions</a>
 </li>
 <li id="menu-1168-1" class="middle even sf-item-16 sf-depth-3 sf-total-children-9 sf-parent-children-1 sf-single-children-8 menuparent"><a href="users-guide/appendix-b-pplus-guide/appendix-b-pplus-guide.html" class="sf-depth-3 menuparent">Appendix B: PPLUS Guide</a>
@@ -198,7 +198,7 @@ xmlns:schema="http://schema.org/">
 <li id="menu-1426-1" class="first odd sf-item-1 sf-depth-3 sf-total-children-4 sf-parent-children-0 sf-single-children-4 menuparent"><a href="pyferret/downloads.html" class="sf-depth-3 menuparent">PyFerret Downloads and Install</a>
 <ul>
 <li id="menu-1374-1" class="first odd sf-item-1 sf-depth-4 sf-no-children"><a href="pyferret/requirements.html" class="sf-depth-4">PyFerret requirements</a></li>
-<li id="menu-1375-1" class="middle even sf-item-2 sf-depth-4 sf-no-children"><a href="downloads/pyferret.html" class="sf-depth-4">PyFerret Downloads</a></li>
+<li id="menu-1375-1" class="middle even sf-item-2 sf-depth-4 sf-no-children"><a href="pyferret/downloads.html" class="sf-depth-4">PyFerret Downloads</a></li>
 <li id="menu-1377-1" class="middle odd sf-item-3 sf-depth-4 sf-no-children"><a href="pyferret/build-install.html" class="sf-depth-4">Installing or Building PyFerret</a></li>
 <li id="menu-1376-1" class="last even sf-item-4 sf-depth-4 sf-no-children"><a href="pyferret/known-issues.html" class="sf-depth-4">PyFerret Known Issues and Release Notes</a></li>
 </ul></li>
@@ -254,8 +254,8 @@ xmlns:schema="http://schema.org/">
 <div class="field-item even" property="content:encoded"><h1 class="documentFirstHeading">What's new in Ferret and PyFerret v7.6</h1>
 <p class="secHeader">New Features and enhancements</p>
 <p><font color="#000000">I.  Version 7.6 includes support for Discrete Sampling Geometries datasets, containing collections of Timeseries, Profiles, Trajectories, and Points.  The CF standard describes these file types, and data written using </font>Contiguous ragged array representation<font color="#000000"> of Discrete Sampling Geometries is supported for graphics, netCDF output, many analysis operations such as transformations, and comparison with gridded datasets. The file standard is described in <st                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
-<p>The newDocumentation for DSG-specific commands is <strong><a href="../documentation/users-guide/working-with-special-data-sets/DSG_datasets">here</a></strong>.  Also see discussion in the <strong><a href="../documentation/users-guide/commands-reference/PLOT">PLOT</a></strong> chapter.</p>
-<p>The demo script <a href="dsg-files-discrete-sampling-geometries-demo"><strong>dsg_tutorial.jnl</strong></a> illustrates the new capabilities, and dsg_point_plot.jnl, dsg_prof_plot.jnl, dsg_timeseries_plot.jnl, and dsg_traj_plot.jnl explore each of the currently-available feature-types in more depth.  New example datasets for these data types are included in the <strong><a href="https://github.com/NOAA-PMEL/FerretDatasets">FerretDatasets download</a></strong>.</p>
+<p>The newDocumentation for DSG-specific commands is <strong><a href="users-guide/working-with-special-data-sets/DSG_datasets.html">here</a></strong>.  Also see discussion in the <strong><a href="users-guide/commands-reference/PLOT.html">PLOT</a></strong> chapter.</p>
+<p>The demo script <a href="demos/dsg-files-discrete-sampling-geometries-demo.html"><strong>dsg_tutorial.jnl</strong></a> illustrates the new capabilities, and dsg_point_plot.jnl, dsg_prof_plot.jnl, dsg_timeseries_plot.jnl, and dsg_traj_plot.jnl explore each of the currently-available feature-types in more depth.  New example datasets for these data types are included in the FerretDatasets download.</p>
 <p>Support for timeSeriesProfile and trajectoryProfile data types is not yet implemented, but we are planning to offer support for those types in an upcoming release.</p>
 <p> </p>
 <p>II. Variables in netCDF files of type string are now supported.  Previously only char type and numeric types were supported.</p>
@@ -263,7 +263,7 @@ xmlns:schema="http://schema.org/">
 <p class="secHeader">Bug fixes</p>
 <ul><li>PPL PLOT now works consistently after a RIBBON/SET  or PLOT/RIBBON/SET command.<br />
 	 </li>
-<li>Formatting of values with grave-accent syntax when <a href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/variables-xpressions/EMBEDDED-XPRESSIONS#_VPID_184">setting the precision</a> gives consistent results.<br />
+<li>Formatting of values with grave-accent syntax when <a href="users-guide/variables-xpressions/EMBEDDED-XPRESSIONS.html#_VPID_184">setting the precision</a> gives consistent results.<br />
 	 </li>
 <li>Calendar types specified in the time attributes netCDF files Gregorian and Proleptic Gregorian are handled identically.<br />
 	 </li>
@@ -418,7 +418,7 @@ xmlns:schema="http://schema.org/">
 <li id="menu-1426-1" class="first odd sf-item-1 sf-depth-3 sf-total-children-4 sf-parent-children-0 sf-single-children-4 menuparent"><a href="pyferret/downloads.html" class="sf-depth-3 menuparent">PyFerret Downloads and Install</a>
 <ul>
 <li id="menu-1374-1" class="first odd sf-item-1 sf-depth-4 sf-no-children"><a href="pyferret/requirements.html" class="sf-depth-4">PyFerret requirements</a></li>
-<li id="menu-1375-1" class="middle even sf-item-2 sf-depth-4 sf-no-children"><a href="downloads/pyferret.html" class="sf-depth-4">PyFerret Downloads</a></li>
+<li id="menu-1375-1" class="middle even sf-item-2 sf-depth-4 sf-no-children"><a href="pyferret/downloads.html" class="sf-depth-4">PyFerret Downloads</a></li>
 <li id="menu-1377-1" class="middle odd sf-item-3 sf-depth-4 sf-no-children"><a href="pyferret/build-install.html" class="sf-depth-4">Installing or Building PyFerret</a></li>
 <li id="menu-1376-1" class="last even sf-item-4 sf-depth-4 sf-no-children"><a href="pyferret/known-issues.html" class="sf-depth-4">PyFerret Known Issues and Release Notes</a></li>
 </ul></li>
