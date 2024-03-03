@@ -403,9 +403,9 @@ yes? LET my_out = SCAT2GRID_NBIN_XY(lons, lats, var, x[gx=xax], y[gy=yax])</pre>
 <p align="left"><b><b>Notes: </b></b></p>
 <p align="left">The SCAT2GRID_NBIN_XY and SCAT2GRID_NBIN_XYT functions are "grid-changing"functions; the output grid is different from the input arguments.Therefore it is best to use explicit limits on any of the argumentsrather than a SET REGION command. (See this note on <a href="../variables-xpressions/XPRESSIONS.html#_VPINDEXENTRY_306">the context of variables</a> passed to functions.)</p>
 <p align="left"> </p>
-<p align="left"><a href="../data-set-basics/2-8-discrete-geometries-datasets-1.html">Discrete Sampling Geometries</a> (DSG) data:</p>
+<p align="left"><a href="../working-with-special-data-sets/DSG_datasets.html">Discrete Sampling Geometries</a> (DSG) data:</p>
 <p align="left">Observational data from DSG datasets contain collections of data which while not truly scattered, has lists of coordinate information that can feed into these functions for gridding into a multi-dimensional grid.  However, with the exception of trajectory data the coordinates do not all have the same dimensionality.  Timeseries data for instance has a station location for each station, and multiple observations in time.  Profile data has station location and time, and multiple heights/depths in each profile. For the SCAT2GRID functions we need all of the first arguments, the "scattered" locations and observation, to be of the same size.  We need to expand the station data to repeat the station location for each time in that station's time series.</p>
-<p>The FAQ, <a href="http://ferret.lark.pmel.noaa.gov/faq/calling-scat2grid-functions-dsg-data">Calling SCAT2GRID functions for DSG data</a> explains how to work with these datasets.</p>
+<p>The FAQ, <a href="../../../faq/calling-scat2grid-functions-dsg-data">Calling SCAT2GRID functions for DSG data</a> explains how to work with these datasets.</p>
 <p> </p>
 </div>
 </div>

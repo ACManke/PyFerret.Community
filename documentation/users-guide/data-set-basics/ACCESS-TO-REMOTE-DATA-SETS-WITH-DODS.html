@@ -271,7 +271,8 @@ TIME : 15-FEB 16:29
 26.39
  
 </pre><p align="left"> </p>
-<p align="left"><a name="_VPINDEXENTRY_227" id="_VPINDEXENTRY_227"></a>To locate OPeNDAP data, you can search the <a href="http://gcmd.gsfc.nasa.gov/">Global Change Master Directory</a> at <a href="http://gcmd.gsfc.nasa.gov/">http://gcmd.gsfc.nasa.gov/</a></p>
+<p align="left"><a name="_VPINDEXENTRY_227" id="_VPINDEXENTRY_227"></a>
+To locate OPeNDAP data, you can search the <a href="https://www.earthdata.nasa.gov/technology/global-change-master-directory-gcmd">Global Change Master Directory</a></p>
 <p align="left"><a name="_DODS_HDF" id="_DODS_HDF"></a>Beginning with Ferret v6.6, Ferret can read HDF-5 formatted files, and can write files with HDF compression and chunking. Fpr details, see the section on <a href="NETCDF-DATA.html#_NC4"> Ferret and NetCDF version 4</a>.</p>
 <p align="left"><a name="_VPINDEXENTRY_228" id="_VPINDEXENTRY_228"></a><a name="_VPINDEXENTRY_229" id="_VPINDEXENTRY_229"></a>Previous to Ferret v6.6, HDF files could be read by Ferret only via OPeNDAP , that is the HDF file must first be put on an OPeNDAP server and then Ferret can access it by giving its OPeNDAP URL. Even by this means, Ferret will be successful in reading the file only if the HDF file is similar in its structure to a COARDS or CF netCDF file. Often, you will need to apply the USE/ORDER= qualifier to change the ordering of the coordinate axes.</p>
 <p align="left">If a file is on an OPeNDAP server, you can look at the OPeNDAP in your browser (the URL that ends in .das). When you look at the attribute data check to see if there are dimension variables with attributes that look like a Latitude or Longitude as in the <a href="../../coards-netcdf-conventions.html" title="Coards NetCDF Conventions">COARDS conventions</a>.</p>
@@ -283,12 +284,12 @@ TIME : 15-FEB 16:29
 <p align="left">DDS stands for Data Description Structure and this will return a text description of the data sets structure.</p>
 <p align="left"><a href="http://ferret.pmel.noaa.gov/pmel/thredds/dodsC/data/PMEL/coads_climatology.nc.das">http://ferret.pmel.noaa.gov/pmel/thredds/dodsC/data/PMEL/coads_climatology.nc.das</a><b> </b></p>
 <p align="left">DAS stands for Dataset Attribute Structure and this will return a text description of attributes assigned to the variables in the data set.</p>
-<p align="left"><a href="http://ferret.pmel.noaa.gov/pmel/thredds/dodsC/data/PMEL/coads_climatology.nc.info">http://ferret.pmel.noaa.gov/pmel/thredds/dodsC/data/PMEL/coads_climatology.nc.info</a><b> </b></p>
-<p align="left">This will return a text description of the variables in the dataset.</p>
+<p align="left">http://ferret.pmel.noaa.gov/pmel/thredds/dodsC/data/PMEL/coads_climatology.nc.info</a><b> </b></p>
+<p align="left">This will return a text description of the variables in the dataset, if available.</p>
 <p align="left"> </p>
 <p align="left" class="secHeader"><a name="ch2.7.4" id="ch2.7.4"></a><a name="_password" id="_password"></a><b>2.7.4 Security </b></p>
 <p align="left">Some OPeNDAP data providers will choose to control access to some or all of their data. When you request data from one of these servers, the OPeNDAP client will prompt you for a username and password. If you want to avoid the prompt, you can embed a username and password in it, like this:</p>
-<p align="left"><b><a href="http://user:password@www.dods.org/nph-dods/etc">http://user:password@www.dods.org/nph-dods/etc</a>...</b></p>
+<p align="left"><b>http://user:password@www.dods.org/nph-dods/etc...</b></p>
 <p align="left"> </p>
 <p align="left" class="secHeader"><a name="ch2.7.5" id="ch2.7.5"></a><b>2.7.5 Sharing Data Sets via </b>OPeNDAP</p>
 <p align="left">One of the most powerful aspect of OPeNDAP is the ease with which it allows for the sharing of data. With just a few simple steps, anyone running a web server can also be an OPeNDAP data server, thereby allowing data set access to anyone with an Internet connection.</p>

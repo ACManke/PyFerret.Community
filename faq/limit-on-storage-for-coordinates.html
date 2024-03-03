@@ -115,8 +115,6 @@ xmlns:schema="http://schema.org/">
 </div></header> 
 
 
-<!-- ----- this from main index.html, after </div></header>-->
-
       <section id="section-content" class="section section-content">
   <div id="zone-preface-wrapper" class="zone-wrapper zone-preface-wrapper clearfix">  
   <div id="zone-preface" class="zone zone-preface clearfix equal-height-container container-12">
@@ -140,8 +138,6 @@ xmlns:schema="http://schema.org/">
     <div class="content clearfix">
       <article about="/Ferret/index.html" typeof="foaf:Document" class="node node-page node-published node-not-promoted node-not-sticky author-burger odd clearfix" id="node-page-771">
 
-
-<!--   ... from main index.html, -->
 <h2 class="block-title"><a href="ferret-faqs.html" class="active-trail">FAQ</a></h2>
 <a id="main-content"></a>
 <div class="element-invisible">    <h1 class="title" id="page-title">Limit on Storage for Coordinates</h1>
@@ -178,13 +174,13 @@ xmlns:schema="http://schema.org/">
 <p> </p>
 <h2>Solutions:</h2>
 <p>There are two solutions to this. If the axis is in fact regularly spaced, add information to the netCDF file to tell Ferret this. Or, if this is a time axis, you can just open the file with a qualifier which tells Ferret to treat the axis as a regularly-spaced axis.</p>
-<p>1) From Chapter 10 in the <a href="../documentation/users-guide/converting-to-netcdf/WRITING-A-CONVERSION-PROGRAM#_VPID_361" title="10.3 WRITING A CONVERSION PROGRAM">Ferret Users Guide:</a></p>
+<p>1) From <b><a href="../documentation/users-guide/converting-to-netcdf/WRITING-A-CONVERSION-PROGRAM.html#_VPID_361" title="10.3 WRITING A CONVERSION PROGRAM">Chapter 10 </a></b>in the Ferret Users Guide:</p>
 <blockquote><p>10.3.5.4 Evenly spaced coordinates (long axes), see "memory, NetCDF" in the Users Guide index.</p>
 <p>If the coordinate axes are evenly spaced, the attribute "point spacing" should be used:</p>
 <pre>
 slat: point_spacing = "even" ;</pre><p>When used, this attribute will improve memory use efficiency in Ferret. This is especially important for very large axes--10,000 points or more.</p>
 </blockquote>
-<p>You can use the Ferret function NCO_ATTR to add this attribute to an axis of your file.If the axis also has bounds then you will also need to remove the bounds attribute from the axis. Or use NCO operators from the Unix command line. See the NCO_ATTR function in the Ferret documentation. <a href="../documentation/users-guide/appendix-a-external-functions/NCO_ATTR" title="NCO_ATTR">Ferret Users Guide</a>. The documentation includes references to the NCO operators.</p>
+<p>You can use the Ferret function NCO_ATTR to add this attribute to an axis of your file.If the axis also has bounds then you will also need to remove the bounds attribute from the axis. Or use NCO operators from the Unix command line. See the <b><a href="../documentation/users-guide/appendix-a-external-functions/NCO_ATTR.html" title="NCO_ATTR">NCO_ATTR function </a></b>in the Ferret documentation. Ferret Users Guide. The documentation includes references to the NCO operators.</p>
 <p>To add</p>
 <pre>
 TEMP:point_spacing = "even" ;</pre><p>to your file dat.nc, just</p>

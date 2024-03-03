@@ -115,8 +115,6 @@ xmlns:schema="http://schema.org/">
 </div></header> 
 
 
-<!-- ----- this from main index.html, after </div></header>-->
-
       <section id="section-content" class="section section-content">
   <div id="zone-preface-wrapper" class="zone-wrapper zone-preface-wrapper clearfix">  
   <div id="zone-preface" class="zone zone-preface clearfix equal-height-container container-12">
@@ -140,8 +138,6 @@ xmlns:schema="http://schema.org/">
     <div class="content clearfix">
       <article about="/Ferret/index.html" typeof="foaf:Document" class="node node-page node-published node-not-promoted node-not-sticky author-burger odd clearfix" id="node-page-771">
 
-
-<!--   ... from main index.html, -->
 <h2 class="block-title"><a href="ferret-faqs.html" class="active-trail">FAQ</a></h2>
 <a id="main-content"></a>
 <div class="element-invisible">    <h1 class="title" id="page-title">Depth axis to Density axis</h1>
@@ -158,7 +154,7 @@ xmlns:schema="http://schema.org/">
 <div class="field-item even" property="content:encoded"><h2>Question:</h2>
 <p>How can I convert between two depth axes, for example from depth to density?</p>
 <h2>Solution:</h2>
-<p><a href="../documentation/users-guide/Grids-Regions/GRIDS#_4.2.6" title="4.2 GRIDS">Auxiliary-variable regridding</a> (Ferret v6.95 and higher) applies an Auxiliary coordinate variable in a regridding operation, to apply the conversion in the coordinate variable to the density axis.</p>
+<p><b><a href="../documentation/users-guide/Grids-Regions/GRIDS.html#_4.2.6" title="4.2 GRIDS">Auxiliary-variable regridding</a></b> (Ferret v6.95 and higher) applies an Auxiliary coordinate variable in a regridding operation, to apply the conversion in the coordinate variable to the density axis.</p>
 <pre>
 ! Define the density conversion, and apply a regridding operation
  
@@ -181,7 +177,7 @@ yes? fill/y=0/x=120e:75w/vlimits=28:21:-1 salt_on_density
 <p>
  </p>
 <p><b>Alternate method:</b></p>
-<p>The <a href="../documentation/users-guide/variables-xpressions/XPRESSIONS#Chapter3-zaxreplace" title="3.2 EXPRESSIONS">ZAXREPLACE( salt, sigma, z[gz=axden])</a> function is designed to do this conversion. It makes the same computations as the auxiliary regridding operation described above.</p>
+<p>The <b><a href="../documentation/users-guide/variables-xpressions/XPRESSIONS.html#Chapter3-zaxreplace" title="3.2 EXPRESSIONS">ZAXREPLACE( salt, sigma, z[gz=axden])</a></b> function is designed to do this conversion. It makes the same computations as the auxiliary regridding operation described above.</p>
 <p>Argument 1 is the field of data values, say temperature on the "source" Z-axis, which is depth in this case. The second argument, ZVALS, contains values in units of the desired destination Z axis (ZAX) on the Z axis as V for example, density values associated with each vertical depth. The third argument, ZAX, is any variable defined on the destination Z axis, here "Z[gz=zaxis_name]" is used. For example:</p>
 <pre>
 ! Convert between a depth and density Z axis using the function ZAXREPLACE

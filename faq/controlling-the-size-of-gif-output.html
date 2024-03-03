@@ -115,8 +115,6 @@ xmlns:schema="http://schema.org/">
 </div></header> 
 
 
-<!-- ----- this from main index.html, after </div></header>-->
-
       <section id="section-content" class="section section-content">
   <div id="zone-preface-wrapper" class="zone-wrapper zone-preface-wrapper clearfix">  
   <div id="zone-preface" class="zone zone-preface clearfix equal-height-container container-12">
@@ -140,8 +138,6 @@ xmlns:schema="http://schema.org/">
     <div class="content clearfix">
       <article about="/Ferret/index.html" typeof="foaf:Document" class="node node-page node-published node-not-promoted node-not-sticky author-burger odd clearfix" id="node-page-771">
 
-
-<!--   ... from main index.html, -->
 <h2 class="block-title"><a href="ferret-faqs.html" class="active-trail">FAQ</a></h2>
 <a id="main-content"></a>
 <div class="element-invisible">    <h1 class="title" id="page-title">controlling the size of GIF or PNG output</h1>
@@ -160,7 +156,7 @@ xmlns:schema="http://schema.org/">
 </blockquote>
 <h2>Explanation:</h2>
 <p>You can get any size gif you want, using SET WINDOW/SIZE and SET WINDOW/ASPECT, and the Ferret symbols PPL$XPIXEL and PPL$YPIXEL to check what size the GIF output is.</p>
-<p class="callout">The PyFerret <a href="../documentation/users-guide/commands-reference/SET#set_window_xinch" title="SET">SET WINDOW</a> command offers inch settings or pixel settings with qualifiers /XINCHES/YINCHES/ASPECT and /XPIXELS/YPIXELS/ASPECT.</p>
+<p class="callout">The PyFerret <a href="../documentation/users-guide/commands-reference/SET.html#set_window_xinch" title="SET">SET WINDOW</a> command offers inch settings or pixel settings with qualifiers /XINCHES/YINCHES/ASPECT and /XPIXELS/YPIXELS/ASPECT.</p>
 <p>Ferret sets the pixel symbols when a plot is drawn. We will use these symbols to resetthe size of the window to the desired width and height. <b>SET WINDOW/ASPECT=y_over_x</b> sets the ratio of the height to the width of the window. <b>SET WINDOW/SIZE=0.7*frac</b> rescales the <i>area</i> of the plot window to <b>frac</b> times the area of the default window.</p>
 <p>When running with an X-window server, gif images are grabbed back from the output window.This can give inconsistent results. Run Ferret in -gif mode. (Note that prior to Ferret v5.8the symbols <b>PPL$XPIXEL</b> and <b>PPL$YPIXEL</b> were not available when in -gif mode.)</p>
 <h2>Solution:</h2>

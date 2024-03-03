@@ -408,24 +408,31 @@ lon=
 depth=
 5.0,15.0,25.0,35.0,45.0,55.0,65.0,75.0,85.0,95.0,106.25,120.0,136.25,
 155.0,177.5,205.0,240.0,288.5,362.5,483.5,680.0,979.5,1395.5,1916.0,
-2524.0,3174.0,3824.0; }</pre><p align="left">To use <a name="_VPINDEXENTRY_1101" id="_VPINDEXENTRY_1101"></a>this CDL file type:</p>
+2524.0,3174.0,3824.0; }</pre>
+<a name="_VPINDEXENTRY_1101" id="_VPINDEXENTRY_1101"></a><a name="_VPINDEXENTRY_1102" id="_VPINDEXENTRY_1102"></a>
+<a name="_VPINDEXENTRY_1103" id="_VPINDEXENTRY_1103"></a><p align="left">To use this CDL file type:</p>
 <pre>
- 
-<p align="left"><a name="_VPINDEXENTRY_1103" id="_VPINDEXENTRY_1103"></a>Another netCDF command, "ncdump", can be used to generate a CDL file from an existing netCDF file. The command</p>
+% ncgen -o my_data.cdf converting_to_netcdf.basic</pre>
+<p align="left">This will create a file called "my_data.cdf" to which data can be directed (see next section).</p>
+<p align="left">Another netCDF command, "ncdump", can be used to generate a CDL file from an existing netCDF file. The command</p>
 <pre>
- 
+% ncdump -h my_data.cdf
+</pre><p align="left">will list the CDL representation of a preexisting my_data.cdf without the Data section, while</p>
 <pre>
- 
+% ncdump my_data.cdf
+</pre><p align="left">will list the CDL file with the Data section. The command</p>
 <pre>
- 
+% ncdump -c my_data.cdf
+</pre><p align="left">will create a CDL file in which only coordinate variables are included in the Data section. The listed output can be redirected to a file as in the command</p>
 <pre>
- 
+% ncdump -c my_data.cdf &gt; my_data.cdl
+</pre><p> </p>
 <p>
 <a name="Chapter10-Standard_Attributes" id="Chapter10-Standard_Attributes"></a><a name="_VPID_355" id="_VPID_355"></a></p>
 <p> </p>
 <p align="left" class="secHeader">10.3.3 <b>Standardized NetCDF attributes </b></p>
-<p align="left">Ferret adheres to the <a href="../../coards-netcdf-conventions.html" title="Coards NetCDF Conventions">COARDS netCDF conventions</a>, also available at</p>
-<p align="left"><a href="http://www.unidata.ucar.edu/packages/netcdf/conventions.html">http://www.unidata.ucar.edu/packages/netcdf/conventions.html</a></p>
+<p align="left">Ferret adheres to the <a href="../../coards-netcdf-conventions.html" title="Coards NetCDF Conventions">COARDS netCDF conventions</a>, and to the CF conventions available at</p>
+<p align="left"><a href="https://cfconventions.org/">https://cfconventions.org/</a></p>
 <p align="left">The following are the attributes most commonly used with Ferret. They are described in greater detail in the reference document named above.</p>
 <p align="left"> </p>
 <p class="indented"><b>Global Attributes</b><br />

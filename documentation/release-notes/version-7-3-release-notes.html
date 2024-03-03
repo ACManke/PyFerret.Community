@@ -252,7 +252,7 @@ xmlns:schema="http://schema.org/">
 <p><i>..... Limit on Storage for Coordinates"&gt;**TMAP ERR: limit on storage for coordinates has been reached</i></p>
 <p>Ferret now stores coordinate data using dynamically allocated memory instead of static internal storage. This includes coordinate axes from netCDF or OPeNDAP datasests, and axes defined with DEFINE AXIS.  Previously the fixed amount of static storage could be filled up, resulting in the above error. Dynamic memory is allocated for coordinate storage, so this limitation is lifted.</p>
 <p><strong>2. New qualifier makes it easy to write global attributes to a netCDF file.</strong></p>
-<p>The new qualifier <a href="../../users-guide/commands-reference/LIST.html#_SAVE_ASGLOBAL"><strong>SAVE/ASGLOBAL</strong></a> writes the given variable as a global attribute. This may be a numeric or string variable.</p>
+<p>The new qualifier <a href="../users-guide/commands-reference/LIST.html#_SAVE_ASGLOBAL"><strong>SAVE/ASGLOBAL</strong></a> writes the given variable as a global attribute. This may be a numeric or string variable.</p>
 <pre>
 yes? let instrument_type = "Specification 1.2"
 yes? save/append/file=data_2017.nc/asglobal instrument_type

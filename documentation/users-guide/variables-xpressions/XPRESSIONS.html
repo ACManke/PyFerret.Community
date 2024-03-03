@@ -189,7 +189,7 @@ xmlns:schema="http://schema.org/">
 <li id="menu-1351-1" class="middle odd sf-item-9 sf-depth-3 sf-no-children"><a href="../../demos/ferret-polymark-demo.html" class="sf-depth-3">Ferret Polymark Demo</a></li>
 <li id="menu-1349-1" class="middle even sf-item-10 sf-depth-3 sf-no-children"><a href="../../demos/ferret-constant-array-demo.html" class="sf-depth-3">Ferret Constant-Array demo</a></li>
 <li id="menu-1356-1" class="middle odd sf-item-11 sf-depth-3 sf-no-children"><a href="../../demos/ferret-land_detail-demo.html" class="sf-depth-3">Ferret land_detail demo</a></li>
-<li id="menu-1340-1" class="middle even sf-item-12 sf-depth-3 sf-no-children"><a href=".../../demos/coads-tour.html" class="sf-depth-3">COADS Tour</a></li>
+<li id="menu-1340-1" class="middle even sf-item-12 sf-depth-3 sf-no-children"><a href="../../demos/coads-tour.html" class="sf-depth-3">COADS Tour</a></li>
 <li id="menu-1341-1" class="middle odd sf-item-13 sf-depth-3 sf-no-children"><a href="../../demos/levitus-tour.html" class="sf-depth-3">Levitus Tour</a></li>
 <li id="menu-1342-1" class="middle even sf-item-14 sf-depth-3 sf-no-children"><a href="../../demos/how-to-use-ferret-and-opendap-to-access-and-analyze-remote-data-1.html" class="sf-depth-3">Use OPeNDAP</a></li>
 <li id="menu-1348-1" class="last odd sf-item-15 sf-depth-3 sf-no-children"><a href="../../demos/ferret-binary-read-demo.html" class="sf-depth-3">Ferret binary read demo</a></li>
@@ -776,7 +776,7 @@ yes? fill/y=0/x=120e:75w saltonsigma</b></pre><p align="left">Note that one coul
 <td>
 <p align="left">Inherited from TO_BE_SAMPLED</p>
 </td>
-</tr></tbody></table><p align="left">See the demonstration <a href="../../sorting-demo.html" title="Sorting Demo">ef_sort_demo.jnl </a>for a common usage of this function. As with other functions which change axes, specify any region information for the variable TO_BE_SAMPLED explicitly in the function call. See the discussion of <a href="XPRESSIONS.html#_VPINDEXENTRY_306">grid-changing functions</a>. For instance</p>
+</tr></tbody></table><p align="left">See the demonstration <a href="../../demos/sorting-demo.html" title="Sorting Demo">ef_sort_demo.jnl </a>for a common usage of this function. As with other functions which change axes, specify any region information for the variable TO_BE_SAMPLED explicitly in the function call. See the discussion of <a href="XPRESSIONS.html#_VPINDEXENTRY_306">grid-changing functions</a>. For instance</p>
 <p align="left"><b>yes? LET sampled_data = samplei(airt[X=160E:180E], xindices) </b></p>
 <p> </p>
 <p> </p>
@@ -1531,7 +1531,7 @@ u_on_newgrid = RESHAPE(upts, xpts)
 yes? SET WIN/NEW
 yes? SHADE u_on_newgrid</pre><p align="left"> </p>
 <p align="left">Ferret includes a number of SCAT2GRID functions which take a set of scattered locations in 2 dimensions, a grid definition, and interpolate data at the scattered locations to a grid. See below for the rest of the SCAT2GRIDGAUSS functions, followed by the <a href="#_SCAT2GRIDLAPLACE_XY">SCAT2GRIDLAPLACE</a> functions. Also see Appendix A for functions that use binning to put data onto a grid: <a href="../appendix-a-external-functions/scat2grid_bin_xy.html" title="SCAT2GRID_BIN_XY and SCAT2GRID_BIN_XYT">SCAT2GRID_BIN_XY</a>, and the count of scattered data used in a gridding operation: <a href="../appendix-a-external-functions/scatgrid_nbin_xyt.html" title="SCAT2GRID_NBIN_XY and SCAT2GRID_NBIN_XYT">SCAT2GRID_NBIN_XY</a> and <a href="../appendix-a-external-functions/scat2grid_nobs_xy.html" title="SCAT2GRID_NOBS_XY">SCAT2GRID_NOBS_XY</a>. These binning functions also have XYT versions.</p>
-<p align="left"><a href="../data-set-basics/2-8-discrete-geometries-datasets-1">Discrete Sampling Geometries</a> (DSG) data:</p>
+<p align="left"><a href="../working-with-special-data-sets/DSG_datasets.html">Discrete Sampling Geometries</a> (DSG) data:</p>
 <p align="left">Observational data from DSG datasets contain collections of data which while not truly scattered, has lists of coordinate information that can feed into these functions for gridding into a multi-dimensional grid.  However, with the exception of trajectory data the coordinates do not all have the same dimensionality.  Timeseries data for instance has a station location for each station, and multiple observations in time.  Profile data has station location and time, and multiple heights/depths in each profile. For the SCAT2GRID functions we need all of the first arguments, the "scattered" locations and observation, to be of the same size.  We need to expand the station data to repeat the station location for each time in that station's time series.</p>
 <p>The FAQ, <a href="../../../faq/calling-scat2grid-functions-dsg-data.html">Calling SCAT2GRID functions for DSG data</a> explains how to work with these datasets.</p>
 <p align="left" class="secHeader">Ch3 Sec2.3 <a name="_SCAT2GRIDGAUSS_XY" id="_SCAT2GRIDGAUSS_XY"></a><a name="_VPID_128" id="_VPID_128"></a><a name="_VPINDEXENTRY_370" id="_VPINDEXENTRY_370"></a>SCAT2GRIDGAUSS_XY</p>
@@ -1820,7 +1820,7 @@ Any grid points farther than NRNG away from the nearest data point will be set t
 <p><b><a name="AppendixA_scat2gridlaplace" id="AppendixA_scat2gridlaplace"></a></b> The gridding algorithm is discussed under <a href="XPRESSIONS.html#_VPINDEXENTRY_376">SCAT2GRIDLAPLACE_XY</a>. For examples of the gridding functions, run the script <i>objective_analysis_demo,</i> or see the on-line demonstration</p>
 <p> </p>
 <p align="left"><strong>Note:</strong></p>
-<p align="left"><a href="../data-set-basics/2-8-discrete-geometries-datasets-1">Discrete Sampling Geometries</a> (DSG) data:</p>
+<p align="left"><a href="../working-with-special-data-sets/DSG_datasets.html">Discrete Sampling Geometries</a> (DSG) data:</p>
 <p align="left">Observational data from DSG datasets contain collections of data which while not truly scattered, has lists of coordinate information that can feed into these functions for gridding into a multi-dimensional grid.  However, with the exception of trajectory data the coordinates do not all have the same dimensionality.  Timeseries data for instance has a station location for each station, and multiple observations in time.  Profile data has station location and time, and multiple heights/depths in each profile. For the SCAT2GRID functions we need all of the first arguments, the "scattered" locations and observation, to be of the same size.  We need to expand the station data to repeat the station location for each time in that station's time series.</p>
 <p>The FAQ, <a href="../../../faq/calling-scat2grid-functions-dsg-data.html">Calling SCAT2GRID functions for DSG data</a> explains how to work with these datasets.</p>
 <p align="left">

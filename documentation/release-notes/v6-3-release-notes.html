@@ -265,7 +265,7 @@ xmlns:schema="http://schema.org/">
 </li>
 <li>The value of the offset in SET AXIS/STRIDES/OFFSET=  is now the value of the offset the delta from the first index value. Previously it indicated the index at which to start.That is, SET AXIS/STRIDE=n/OFFSET=0 means no offset is applied; /OFFSET=1 means start with the coordinate at the second index.
 </li>
-<li>The <a href="../users-guide/index-1/index.html">Index to the Users Guide</a> has been reformatted to make it easier to read.</li>
+<li>The <a href="../users-guide/full-index/index.html">Index to the Users Guide</a> has been reformatted to make it easier to read.</li>
 </ol><h3>Bug Fixes:</h3>
 <ol><li><a href="#if_repeat">An IF block inside a REPEAT loop</a> caused an error in some instances. </li>
 <li><a href="#lat_correction">The correction to grid-cell sizes for the latitude</a> of the cell on theEarth was incorrect when the coordinate location was not centeredwithin the grid cell.</li>
@@ -279,7 +279,7 @@ xmlns:schema="http://schema.org/">
 <li><a href="#save_reversed">When saving a reversed axis with /EDGES</a> we got an error.</li>
 <li><a href="#save_a_string">SAVE of a string variable</a> defined from grid-changing functions used the wrong data type.
 <p></p></li>
-</ol><h3><a href="../v6-2-release-notes.html#exitscript">New Features:</a></h3>
+</ol><h3>New Features:</h3>
 <p>
 </p><ol><li><b><a name="colors_var" id="colors_var"></a>Variance-based levels (automatic open-ended levels). </b><br />The syntax /LEV=(-inf)(lo,hi,del)(inf) lets us specify open-ended levels, where values outside of (lo,hi) are represented by a single color at each end of the color spectrum.  Here we introduce a new syntax to let Ferret determine open-ended levels automatically. Ferret finds the mean and standard deviation of the data to be color-filled. Within the mean plus-or-minus 1 std, fine levels are chosen, and between 1 std and 2 std on each end, coarser levels are used. An open-ended level is used to represent values outside 2 std. <br /><b>Example:</b>
 <pre>yes? SHADE/lev=50v ! var-based levels using approx 50 levels<br />yes? SHADE/lev=50vc ! var-based levels, use 0 as the "mean"<br /></pre><p></p></li>

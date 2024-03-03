@@ -255,7 +255,7 @@ xmlns:schema="http://schema.org/">
 <p>Within the External Functions framework, users can write their own Fortran routines to be called by Ferret. External functions are treated by Ferret in a manner nearly identical to Ferret's "internal" functions. The syntax for using external functions is exactly the same as for any other Ferret function.</p>
 <p>The external functions are compiled individually to create shared object (.so) files and are dynamically linked to Ferret at run time. Ferret looks for shared object files in the directories specified in the <b>FER_EXTERNAL_FUNCTIONS</b> environment variable.</p>
 <h3>EF Documentation</h3>
-<p>Documentation for writing and using external functions is available in the chapter on External Functions in the <a href="users-guide/writing-external-functions">Ferret Users Guide</a>.</p>
+<p>Documentation for writing and using external functions is available in the chapter on External Functions in the <a href="users-guide/writing-external-functions/writing-external-functions.html">Ferret Users Guide</a>.</p>
 <h3>EF Downloads</h3>
 <p>The install or upgrade procedure for Ferret (Version 5.0 and after), installs all of the External Functions functionality. The environment variable FER_EXTERNAL_FUNCTIONS is defined and set to a directory where the shared object files for external functions reside (.so files). For the Ferret-installed External Functions this directory is set as follows:</p>
 <p class="callout">setenv FER_EXTERNAL_FUNCTIONS "$FER_DIR/ext_func/libs"</p>
@@ -275,8 +275,12 @@ setenv FER_EXTERNAL_FUNCTIONS "$MY_LOCAL_EXTFCNS $FER_EXTERNAL_FUNCTIONS"</p>
 <p></p>
 <li>Now when you run Ferret, <b>yes? show function/external</b> will list all the external functions, including those in your local external functions directory, and they are ready to use. It also lists the large number of functions originally written as external functions, which are linked internally into the Ferret executable.</li>
 <li>Use the chapter in the Users Guide on writing external functions to begin to write your own functions. Create external functions directories for your functions, each with a Makefile analygous to the ones in examples/ and fft_sample/</li>
-</ol><p>Source code for example external functions: <a href="external-functions-contents-of-the-examples-tar-file" title="External Functions: Contents of the Examples TAR file">EF_double_precision</a> (tar file contents)</p>
-<p><a href="ftp://ftp.pmel.noaa.gov/ferret/pub/ExternalFunctions/EF_double_precision.tar.gz">EF_double_precision.tar.gz</a> contains the examples directory and the platform flags and Makefiles for compiling external functions in double precision. Ferret v6.8 and higher is compiled in double precision. Your functions do not need any changes to run with Ferret v6.8+ which in addition to being double precision, implements a 6-dimensioned grid. See the V6.8 Release Notes.</p>
+</ol>
+<!-- Lost to the sands of time 
+<p>Source code for example external functions: <a href="external-functions-contents-of-the-examples-tar-file" title="External Functions: Contents of the Examples TAR file">EF_double_precision</a> (tar file contents)</p>
+<p><a href="ftp://ftp.pmel.noaa.gov/ferret/pub/ExternalFunctions/EF_double_precision.tar.gz">EF_double_precision.tar.gz</a> 
+
+contains the examples directory and the platform flags and Makefiles for compiling external functions in double precision. Ferret v6.8 and higher is compiled in double precision. Your functions do not need any changes to run with Ferret v6.8+ which in addition to being double precision, implements a 6-dimensioned grid. See the V6.8 Release Notes.</p> -->
 <p><strong>More Examples:</strong></p>
 <p>Externally linked: The functions that we distribute as externally linked functions are included in the Ferret Environment tar file from the PyFerret or Ferret gitHub release page (see Downloads). When you untar that file the code is in the ext_func/src directories.</p>
 

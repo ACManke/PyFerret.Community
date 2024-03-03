@@ -255,8 +255,6 @@ xmlns:schema="http://schema.org/">
 <p>April 25, 2019</p>
 <ul><li>Version 7.5 of PyFerret and Ferret are linked with netCDF 4.6.3.  This version of the netCDF library resolves failures when using earlier library versions in using some OPeNDAP url's pointing to large datasets.<br />
 	 </li>
-<li>The "<strong><a href="../downloads">Downloads</a></strong>" pages in the on-line documentation are updated and consolidated.<br />
-	 </li>
 <li>In v7.44, the default color-palette was changed from rainbow to viridis. </li>
 </ul><p class="secHeader">New Features and enhancements</p>
 <ul><li>
@@ -290,7 +288,7 @@ yes? DEFINE DATA /AGG /T /TAXIS=aggtime/toverlap myagg = data2009.nc, data2010.n
 *** NOTE: Ignored last 1 timesteps of data2009.nc due to overlap with data2010.nc
 *** NOTE: Ignored last 3 timesteps of data2010.nc due to overlap with data2011.nc
 *** NOTE: Time axis coordinates matched using @XACT</pre></li>
-<li>A new function <strong><a href="../documentation/samplexyzt">SAMPLEXYZT</a></strong> joins the suite of sample functions, picking out data from a grid at a set of lon,lat,z,and time points.<br /><pre>
+<li>A new function <strong><a href="../documentation/appendix-a-external-functions/samplexyzt.html">SAMPLEXYZT</a></strong> joins the suite of sample functions, picking out data from a grid at a set of lon,lat,z,and time points.<br /><pre>
 yes? show function samplexyzt
 SAMPLEXYZT(DAT_TO_SAMPLE,XPTS,YPTS,ZPTS,TPTS)
     Returns data sampled at a set of points in X,Y,Z,T, using linear interpolation
@@ -300,7 +298,7 @@ SAMPLEXYZT(DAT_TO_SAMPLE,XPTS,YPTS,ZPTS,TPTS)
     ZPTS: Z values of sample points
     TPTS: T values of sample points
 </pre></li>
-<li>The functions <strong><a href="../documentation/sampleimulti-and-j-k-l-m-n">SAMPLE*_MULTI</a></strong> are updated for all 6 dimensions,<br /><pre>
+<li>The functions <strong><a href="../documentation/appendix-a-external-functions/sampleimulti-and-j-k-l-m-n.html">SAMPLE*_MULTI</a></strong> are updated for all 6 dimensions,<br /><pre>
 yes? show function sample*_multi
 SAMPLEI_MULTI(DAT_TO_SAMPLE,I_INDICES)
     Returns data sampled according to I indices which may vary in JKLMN
@@ -314,7 +312,7 @@ SAMPLEI_MULTI(DAT_TO_SAMPLE,I_INDICES)
 <li>For some time axes, 2-D plots such as time-depth plots yielded a blank plot. This is fixed.<br />
 	 </li>
 <li>
-<p>The output of <a href="../documentation/users-guide/commands-reference/LIST#_VPINDEXENTRY_1429"><strong>list/precision=</strong></a> now behaves in the same way as precision specified in a grave-accent expression evaluation.  If the precision is given as a negative integer, that controls the number of decimal places after the decimal point. Previously a negative value in LIST/PRECISION=  returned no fractional part. The change also applies to LIST commands given after a global SET LIST/PRECISION=</p>
+<p>The output of <a href="../documentation/users-guide/commands-reference/LIST.html#_VPINDEXENTRY_1429"><strong>list/precision=</strong></a> now behaves in the same way as precision specified in a grave-accent expression evaluation.  If the precision is given as a negative integer, that controls the number of decimal places after the decimal point. Previously a negative value in LIST/PRECISION=  returned no fractional part. The change also applies to LIST commands given after a global SET LIST/PRECISION=</p>
 <pre>
 yes? let a = 54.13482
  

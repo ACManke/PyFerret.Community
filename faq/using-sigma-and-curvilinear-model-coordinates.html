@@ -115,8 +115,6 @@ xmlns:schema="http://schema.org/">
 </div></header> 
 
 
-<!-- ----- this from main index.html, after </div></header>-->
-
       <section id="section-content" class="section section-content">
   <div id="zone-preface-wrapper" class="zone-wrapper zone-preface-wrapper clearfix">  
   <div id="zone-preface" class="zone zone-preface clearfix equal-height-container container-12">
@@ -140,8 +138,6 @@ xmlns:schema="http://schema.org/">
     <div class="content clearfix">
       <article about="/Ferret/index.html" typeof="foaf:Document" class="node node-page node-published node-not-promoted node-not-sticky author-burger odd clearfix" id="node-page-771">
 
-
-<!--   ... from main index.html, -->
 <h2 class="block-title"><a href="ferret-faqs.html" class="active-trail">FAQ</a></h2>
 <a id="main-content"></a>
 <div class="element-invisible">    <h1 class="title" id="page-title">Using sigma and curvilinear model coordinates</h1>
@@ -259,10 +255,9 @@ let depth = h[k=@rsum]-h/2
 set variable/title="DEPTH function"/unit=meters depth
 </pre><p><strong>Bathymetry and DEPTH(layer):</strong></p>
 <div class="dnd-atom-wrapper type-image context-sdl_editor_representation" contenteditable="false">
-<div class="dnd-drop-wrapper"><!-- scald=79:sdl_editor_representation --><div class='image'><img typeof="foaf:Image" src="https://ferret.pmel.noaa.gov/Ferret/sites/default/files/thumbnails/image/sig_reference.png" width="1203" height="481" alt="sig_reference.png" title="sig_reference.png" /></div><!-- END scald=79 --></div>
+<div class="dnd-drop-wrapper"><div class='image'><img typeof="foaf:Image" src="../sites/default/files/thumbnails/image/sig_reference.png" width="1203" height="481" alt="sig_reference.png" title="sig_reference.png" /></div></div>
 <div class="dnd-legend-wrapper" contenteditable="true">
-<div class="meta">
-<!--copyright=79--><!--END copyright=79--></div>
+<div class="meta"></div>
 </div>
 </div>
 <p><b>Solutions:</b></p>
@@ -275,8 +270,8 @@ set variable/title="Y"/unit=kilometers ygg
  
 ! use the three argument 'shade' command
 shade flow[x=0,l=1], ygg, depth[x=0,i=1]
-</pre><p>(See the <a href="../documentation/release-notes/version-4-9-release-notes.html#gridded_curvilinear_data"> v4.9 release notes</a> for more information on the three-argument SHADE command.)</p>
-<p>See <b>sigma_coordinate_demo.jnl</b>for details of the variable definitions.</p>
+</pre><p>(See <a href="../documentation/users-guide/customizing-plots/MAP-PROJECTIONS-AND-CURVILINEAR-COORDINATES.html"> Chapter 6</a> for more information on the three-argument SHADE command.)</p>
+<p>Run the <b>sigma_coordinate_demo.jnl</b> script for details of the variable definitions.</p>
 <p>Note: this demo is graphical but the procedure is valid for analysis, as well</p>
 <p>Define flow field on a surface of constant 50 m depth</p>
 <pre>
@@ -291,29 +286,27 @@ LET flow_at_50 = flow_on_depth[Z=50]
 <pre>
 PLOT/X=0/Y=0/L=1:20 flow[k=8], flow_at_50</pre><p> </p>
 <div class="dnd-atom-wrapper type-image context-sdl_editor_representation" contenteditable="false">
-<div class="dnd-drop-wrapper"><!-- scald=81:sdl_editor_representation --><div class='image'><img typeof="foaf:Image" src="https://ferret.pmel.noaa.gov/Ferret/sites/default/files/thumbnails/image/sig_time_series.png" width="1177" height="588" alt="sig_time_series.png" title="sig_time_series.png" /></div><!-- END scald=81 --></div>
+<div class="dnd-drop-wrapper"><div class='image'><img typeof="foaf:Image" src="../sites/default/files/thumbnails/image/sig_time_series.png" width="1177" height="588" alt="sig_time_series.png" title="sig_time_series.png" /></div></div>
 <div class="dnd-legend-wrapper" contenteditable="true">
 <div class="meta">
-<!--END copyright=81--></div>
+</div>
 </div>
 </div>
 <p> </p>
 <pre>
 Right hand frame: SHADE/Z=0:180/Y=0/L=1 flow_on_depth</pre><div class="dnd-atom-wrapper type-image context-sdl_editor_representation" contenteditable="false">
-<div class="dnd-drop-wrapper"><!-- scald=83:sdl_editor_representation --><div class='image'><img typeof="foaf:Image" src="https://ferret.pmel.noaa.gov/Ferret/sites/default/files/thumbnails/image/cross_section.png" width="1177" height="588" alt="cross_section.png" title="cross_section.png" /></div><!-- END scald=83 --></div>
+<div class="dnd-drop-wrapper"><div class='image'><img typeof="foaf:Image" src="../sites/default/files/thumbnails/image/cross_section.png" width="1177" height="588" alt="cross_section.png" title="cross_section.png" /></div></div>
 <div class="dnd-legend-wrapper" contenteditable="true">
-<div class="meta">
-<!--copyright=83--><!--END copyright=83--></div>
+<div class="meta"></div>
 </div>
 </div>
 <p> </p>
 <pre>
 Right hand frame: SHADE/Z=0:180/X=0/L=1 flow_on_depth</pre><p> </p>
 <div class="dnd-atom-wrapper type-image context-sdl_editor_representation" contenteditable="false">
-<div class="dnd-drop-wrapper"><!-- scald=84:sdl_editor_representation --><div class='image'><img typeof="foaf:Image" src="https://ferret.pmel.noaa.gov/Ferret/sites/default/files/thumbnails/image/along_channel.png" width="1177" height="588" alt="along_channel.png" title="along_channel.png" /></div><!-- END scald=84 --></div>
+<div class="dnd-drop-wrapper"><div class='image'><img typeof="foaf:Image" src="../sites/default/files/thumbnails/image/along_channel.png" width="1177" height="588" alt="along_channel.png" title="along_channel.png" /></div></div>
 <div class="dnd-legend-wrapper" contenteditable="true">
-<div class="meta">
-<!--copyright=84--><!--END copyright=84--></div>
+<div class="meta"></div>
 </div>
 </div>
 <p> </p>

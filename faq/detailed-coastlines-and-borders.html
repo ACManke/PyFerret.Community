@@ -115,8 +115,6 @@ xmlns:schema="http://schema.org/">
 </div></header> 
 
 
-<!-- ----- this from main index.html, after </div></header>-->
-
       <section id="section-content" class="section section-content">
   <div id="zone-preface-wrapper" class="zone-wrapper zone-preface-wrapper clearfix">  
   <div id="zone-preface" class="zone zone-preface clearfix equal-height-container container-12">
@@ -140,8 +138,6 @@ xmlns:schema="http://schema.org/">
     <div class="content clearfix">
       <article about="/Ferret/index.html" typeof="foaf:Document" class="node node-page node-published node-not-promoted node-not-sticky author-burger odd clearfix" id="node-page-771">
 
-
-<!--   ... from main index.html, -->
 <h2 class="block-title"><a href="ferret-faqs.html" class="active-trail">FAQ</a></h2>
 <a id="main-content"></a>
 <div class="element-invisible">    <h1 class="title" id="page-title">Detailed Coastlines and Borders</h1>
@@ -168,12 +164,14 @@ xmlns:schema="http://schema.org/">
 <h2>Solution:</h2>
 <p> </p>
 <p>(First, try Ferret's land_detail script, which uses data from the GMT (Generic Mapping Tools) site at 
-<a href="https://www.soest.hawaii.edu/soestwp/research/data/generic-mapping-tool-gmt/">https://www.soest.hawaii.edu/soestwp/research/data/generic-mapping-tool-gmt/</a> (the GMT intermediate level of resolution). A demo of land_detail.jnl is at 
-<a href="../demos/land_detail_demo.html">land_detail_demo.html</a>)<br />
+<a href="https://www.soest.hawaii.edu/soestwp/research/data/generic-mapping-tool-gmt/">https://www.soest.hawaii.edu/soestwp/research/data/generic-mapping-tool-gmt/</a> (the GMT intermediate level of resolution). For a demonstration, run 
  </p>
+<pre> yes? go land_detail.jnl 
+</pre> 
+<p> </p>
 <p>The USGS has a <b>Coastline Explorer</b> server:<a href="https://rmgsc.cr.usgs.gov/gce/">https://rmgsc.cr.usgs.gov/gce/</a> 
 which appears to be a successor to the previous Coastline Extractor tool The Coastline Extractor made availablefor download coastline, boundary, and river segments with a choice of resolutions. 
-We have not used this tool, but hope that the ideas here will be useful in converting updated coastline data for use by the "go land" scripts.</p>
+We have not used this version of the tool, but hope that the ideas here will be useful in convertin coastline data for use by the "go land" scripts.</p>
 <p>We have recently discovered a resource for up-to-date political boundaries, see the section below.</p>
 <p>For<b> Coastline Extractor </b>data, Proceed as follows:</p>
 <ul><li>Get coastline/border data from the Coastline Extractor
@@ -197,7 +195,7 @@ We have not used this tool, but hope that the ideas here will be useful in conve
 <li>Add rivers or/and political boundaries from other files. Political boundariesaren't necessarily up to date, but it may be possible for you to locate by latitude and longitudeany segments you want to remove from the data file.</li>
 </ul><p> </p>
 <p>For up-to-date changes in political boundaries, try the <b>GADM database of Global Administrative Areas</b>. This is intended to return data for GIS tools, but it can give us data that Ferret can read.</p>
-<p><a href="http://www.gadm.org/country">http://www.gadm.org/country</a></p>
+<p><a href="https://gadm.org/data.html">https://gadm.org/data.html</a></p>
 <p>Choose the country and ask for the Google Earth kmz output. The tool will show a map. If it looks up-to-date, then download the Level 0 file - the data for the national boundary. This is a compressed kml file. From the Unix command line,</p>
 <p>% unzip countryA.kmz</p>
 <p>The result is a kml file, countryA.kml. Rename it, for instance to countryA.dat, and edit that. Remove all of the kml tags at the start and end of the file, that is all of the lines where text is enclosed in brackets &lt; &gt;. If the boundary consists of multiple pieces, such as a set of islands, then there are additional tags between the individual parts of the boundary. Insert a line containing the values</p>

@@ -137,7 +137,7 @@ xmlns:schema="http://schema.org/">
 <li id="menu-1613-1" class="first odd sf-item-1 sf-depth-3 sf-no-children"><a href="../users-guide/full-index/index.html" class="sf-depth-3">Users Guide Index</a></li>
 <li id="menu-1154-1" class="middle even sf-item-2 sf-depth-3 sf-total-children-41 sf-parent-children-0 sf-single-children-41 menuparent"><a href="../users-guide/commands-reference/commands-reference.html" class="sf-depth-3 menuparent">Commands Reference</a></li>
 
-<li id="menu-1390-1" class="middle odd sf-item-3 sf-depth-3 sf-total-children-8 sf-parent-children-0 sf-single-children-8 menuparent"><a href=../introduction/introduction.html" class="sf-depth-3 menuparent">1. Introduction</a>
+<li id="menu-1390-1" class="middle odd sf-item-3 sf-depth-3 sf-total-children-8 sf-parent-children-0 sf-single-children-8 menuparent"><a href="../users-guide/introduction/introduction.html" class="sf-depth-3 menuparent">1. Introduction</a>
 
 </li>
 <li id="menu-1391-1" class="middle even sf-item-4 sf-depth-3 sf-total-children-9 sf-parent-children-1 sf-single-children-8 menuparent"><a href="../users-guide/data-set-basics/data-set-basics.html" class="sf-depth-3 menuparent">2. Data Set Basics</a>
@@ -416,7 +416,7 @@ yes? SHADE/L=9/LEVELS=(-3,33,2) sst
 yes? SET VIEW LR
 yes? SHADE/L=12/LEVELS=(-3,33,2) sst
 </pre><p>
-<img class="image-inline" src="../../sites/default/files/images/documentation/tutorial_images/copy_of_ferret_tour_p18.png" /></p>
+<img class="image-inline" src="../../sites/default/files/images/documentation/tutorial_images/ferret_tour_p18.png" /></p> -->
 <p>It's difficult to pick out the differences in the fields, isn't it ? </p>
 <p>FERRET has many ways to help you explore this kind of problem. Lets begin by looking at the average over all 12 time steps. We do this with the "AVE" transformation applied to the time axis.</p>
 <p>"SHADE/LINE" tells FERRET to overlay contour lines instead of putting a color key on the plot.</p>
@@ -443,7 +443,8 @@ yes? SET VIEW LL
 yes? SHADE/L=9/LEVELS=(-14)(-5,5,1)(14)/PALETTE=centered sst_anom
 yes? SET VIEW LR
 yes? SHADE/L=12/LEVELS=(-14)(-5,5,1)(14)/PALETTE=centered sst_anom
-</pre><<p><img class="image-inline" src="../../sites/default/files/images/documentation/tutorial_images/copy2_of_copy_of_ferret_tour_p21.png" /></p>
+
+</pre><<p><img class="image-inline" src="../../sites/default/files/images/documentation/tutorial_images/ferret_tour_p21.png" /></p>
 <p>Lets focus our attention at a particular longitude, say, X=180, the International Dateline. We can get an accurate picture of the SST changes there by producing a 2-dimensional view along the Y and T axes. We will use the SET REGION command to confine ourselves to X=180. </p>
 <p>The time axis of this data set is referred to as a "modulo" axis -- that is, the first month follows on after the last in a circular way. So the L=1:48 qualifier repeats the data over 4 cycles in time -- emphasizing its modular nature.</p>
 <pre>

@@ -115,8 +115,6 @@ xmlns:schema="http://schema.org/">
 </div></header> 
 
 
-<!-- ----- this from main index.html, after </div></header>-->
-
       <section id="section-content" class="section section-content">
   <div id="zone-preface-wrapper" class="zone-wrapper zone-preface-wrapper clearfix">  
   <div id="zone-preface" class="zone zone-preface clearfix equal-height-container container-12">
@@ -140,8 +138,6 @@ xmlns:schema="http://schema.org/">
     <div class="content clearfix">
       <article about="/Ferret/index.html" typeof="foaf:Document" class="node node-page node-published node-not-promoted node-not-sticky author-burger odd clearfix" id="node-page-771">
 
-
-<!--   ... from main index.html, -->
 <h2 class="block-title"><a href="ferret-faqs.html" class="active-trail">FAQ</a></h2>
 <a id="main-content"></a>
 <div class="element-invisible">    <h1 class="title" id="page-title">Map Projections: Curvilinear coordinates version</h1>
@@ -168,12 +164,62 @@ How do I create map projections with Ferret?</pre><h2>Examples:</h2>
 <p> </p>
 <p> </p>
 <h2>Explanation:</h2>
-<p>Map projection scripts released with Ferret take advantage of the 3 argument<b>SHADE</b><b> </b>and <b>FILL</b> commands which were introduced with the Version 4.9 release of Ferret. The scripts are described in the <a href="../documentation/release-notes/version-4-9-release-notes#curvilinear_shade_and_fill" title="Version 4.9 Release Notes"> V4.9 release notes</a>.</p>
-<p> </p>
+<p>Map projection scripts released with Ferret take advantage of the 3 argument<b>SHADE</b><b> </b>and <b>FILL</b> commands which were introduced with the Version 4.9 release of Ferret. The scripts are described in the <a href="../documentation/release-notes/version-4-9-release-notes.html#curvilinear_shade_and_fill" title="Version 4.9 Release Notes"> V4.9 release notes</a>.</p>
+
 <h2>Solution:</h2>
 <p>To see a demonstration of the map projection capabilities you can run the map projection demo script:</p>
 <pre>
 yes? go mp_demo
+</pre>
+<p>To list the map projection scripts including the utility scripts, from the Unix command line:</p>
+<pre>% Fgo mp
+line_samples.jnl: draw examples of the line styles used by the PLOT command
+mp_annotate.jnl:  write text on a predefined map projection. 
+mp_aspect.jnl:  Calculate the appropriate aspect ratio
+mp_aspect.jnl.bak:  Calculate the appropriate aspect ration
+mp_bonne.jnl:  Sets up variables for a Bonne map of the world
+mp_craster_parabolic.jnl:  Sets up variables for a Craster Parabolic map of the world
+mp_demo.jnl: demo of map projection scripts, including
+mp_eckert_greifendorff.jnl:  Sets up variables for a Eckert-Greifendorff map of the world
+mp_eckert_iii.jnl:  Sets up variables for a Eckert III map of the world
+mp_eckert_v.jnl:  Sets up variables for a Eckert V map of the world
+mp_fland.jnl: Plot or overlay an area-filled map of the continents
+mp_graticule.jnl:  Overlay a graticule on a map.
+mp_graticule_limit.jnl:  Overlay a graticule on a map, limited by a range of x and
+mp_graticule_limit.jnl.bak:  Overlay a graticule on a map, limited by a range of x and
+mp_grid.jnl:  Associates a data grid with a predefined map projection. 
+mp_hammer.jnl:  Sets up variables for a Hammer map of the world
+mp_label.jnl:  Place a label on a map projection using user coordinates
+mp_lambert_cyl.jnl:  Sets up variables for a Lambert Cylindrical Equal Area map of the world
+mp_land.jnl: Plot outlines of continents, countries, and/or states
+mp_land_detail.jnl: Plot outlines of continents, countries, and/or states
+mp_land_stripmap.jnl:  This journal file is not "nice" and is provided as an example only.
+mp_line.jnl:  Plots data using a predefined map projection. 
+mp_mask_outline.jnl: For a plot using map projections, define a contour field with 
+mp_mcbryde_fpp.jnl:  Sets up variables for a McBryde-Thomas Flat-Polar Parabolic map of the world
+mp_mercator.jnl:  Sets up variables for a Mercator projection
+mp_ocean_stripmap.jnl:  This journal file is not "nice" and is provided as an example only.
+mp_orthographic.jnl:  Sets up variables for a Orthographic map of the world
+mp_plate_caree.jnl:  Sets up variables for a Plate Caree map of the world
+mp_poly_vectors.jnl: 
+mp_polyconic.jnl:  Sets up variables for a Polyconic map of the world
+mp_polymark.jnl:  Plot polygons using a predefined map projection. 
+mp_polytube.jnl:  Plot a colored tube using a predefined map projection. 
+mp_polytube_bent.jnl:  Plot a colored tube using a predefined map projection. 
+mp_rotate.jnl:  Sets up variables for a Rotated map of the world
+mp_sinusoidal.jnl:  Sets up variables for a Sinusoidal map of the world
+mp_stereographic_eq.jnl:  Sets up variables for a Stereographic Equatorial map of the world
+mp_stereographic_north.jnl:  Sets up variables for a Stereographic North map of the world
+mp_stereographic_south.jnl:  Sets up variables for a Stereographic South map of the world
+mp_tics.jnl: 
+mp_trackplot.jnl:  Plot a trackplot using a predefined map projection. 
+mp_vertical_perspective.jnl:  Sets up variables for a Vertical Perspective map of the world
+mp_viewport_aspect.jnl:  Define a viewport for plotting map projections
+mp_wagner_vii.jnl:  Sets up variables for a Wagner VII map of the world
+mp_winkel_i.jnl:  Sets up variables for a Winkel I map of the world
+test_mp_land.jnl: 
+test_mp_land_detail.jnl: 
+ 
 </pre></div>
 </div>
 </div>

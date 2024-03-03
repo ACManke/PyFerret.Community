@@ -250,17 +250,17 @@ xmlns:schema="http://schema.org/">
 <div class="field-items">
 <div class="field-item even" property="content:encoded"><p class="secHeader">New features in Ferret and PyFerret v7.2</p>
 <p><strong>1. Updated Memory Management </strong></p>
-<p>For version 7.2, significant enhancements were made to how Ferret manages memory. Instead of allocating a chunk of memory on startup, memory is allocated only as needed. SET MEMORY now simply specifies an upper limit on memory which will be allocated. See the new section in the Users Guide entitled <strong><a href="../../users-guide/computing-environment/MEMORY-USE.html">Understanding Ferret Memory Management Concepts and Tools</a></strong>. Here are the new tools that enable users to interact with memory management</p>
-<ul><li><a href="../../users-guide/commands-reference/SET.html#_mode_frugal">MODE FRUGAL</a> is added.</li>
+<p>For version 7.2, significant enhancements were made to how Ferret manages memory. Instead of allocating a chunk of memory on startup, memory is allocated only as needed. SET MEMORY now simply specifies an upper limit on memory which will be allocated. See the new section in the Users Guide entitled <strong><a href="../users-guide/computing-environment/MEMORY-USE.html">Understanding Ferret Memory Management Concepts and Tools</a></strong>. Here are the new tools that enable users to interact with memory management</p>
+<ul><li><a href="../users-guide/commands-reference/SET.html#_mode_frugal">MODE FRUGAL</a> is added.</li>
 <li>SHOW MEMORY now reveals the current cache size and the peak "essential" memory that has been in use.</li>
-<li><a href="../../users-guide/commands-reference/SHOW.html#_show_mem_diag">SHOW MEMORY/DIAGNOSTIC</a> reveals the memory management choices that were taken during the previous command that read or computed data.</li>
+<li><a href="../users-guide/commands-reference/SHOW.html#_show_mem_diag">SHOW MEMORY/DIAGNOSTIC</a> reveals the memory management choices that were taken during the previous command that read or computed data.</li>
 <li>The current cache is no longer cleared when SET MEMORY/SIZE=&lt;size&gt; is issued.</li>
 <li>MODE DESPERATE is deprecated.  Use of the command no longer has any effect.</li>
 <li>The new symbol ($PEAK_MEMORY) is always set; it contains the peak amount of “essential” memory that has been required since the last time this symbol was zeroed by SET MEMORY/SIZE=&lt;size&gt; or CANCEL MEMORY</li>
 </ul><p><strong>2. More computations are broken into pieces.</strong></p>
 <p>Ferret has always done calculations in chunks where  possible for improved performance. For instance, to compute an area average from data on an XYT grid to return a time series, it may read in subsets in the time direction and computes the area average for each set of timesteps before reading and computing the next set of timesteps.  <strong>Now</strong>, transformations such as AVERAGE or MAXIMUM, which compress the result along an axis, can flexibly do the computation in chunks along the transformed axis if that is most efficient. For instance, if our operation is an average in time of our XYT grid, the entire time series need not be loaded at once.</p>
 <p><strong>3. Scaleability enhancements</strong></p>
-<p><strong><a href="../../users-guide/commands-reference/DEFINE.html#_define_data_agg">Defining aggregations</a></strong> on the fly means we may need to open many, many datasets, which define many grids.  Data structures for handling internal information about datasets and grids are streamlined in v7.2, and these limits are raised:</p>
+<p><strong><a href="../users-guide/commands-reference/DEFINE.html#_define_data_agg">Defining aggregations</a></strong> on the fly means we may need to open many, many datasets, which define many grids.  Data structures for handling internal information about datasets and grids are streamlined in v7.2, and these limits are raised:</p>
 <ul><li>The number of datasets that can be open at a time is increased from 400 to 5000</li>
 <li>The number of different grids defined at one time from 500 to 5000</li>
 </ul><p><strong>4. New symbol ($SPAWN_STATUS) is always defined. </strong></p>
@@ -272,7 +272,7 @@ IF `($SPAWN_STATUS) EQ 0` THEN
 ELSE 
 ! stuff to do if the file does not exist
 ENDIFn
-</pre><p><strong>3. New function <a href="../../users-guide/appendix-a-external-functions/DOT.html">DOT</a> performs a dot product (matrix multiplication).</strong></p>
+</pre><p><strong>3. New function <a href="../users-guide/appendix-a-external-functions/DOT.html">DOT</a> performs a dot product (matrix multiplication).</strong></p>
 <pre>
 yes? show function dot 
 DOT(VAR1,VAR2,IDIM)
@@ -281,7 +281,7 @@ VAR1: Variable 1
 VAR2: Variable 2 
 IDIM: Dimension (e.g.1,2,...)
 </pre><p><b>DOT</b> is one of a new class of functions: <em>direction-dependent functions</em>. One or more arguments are designated to determine the direction of the function's operation. In fact, there are functions DOT_X, DOT_Y, ..., and DOT calls one of those based on the value of argument 3.</p>
-<p><strong>4. New function <a href="../../users-guide/appendix-a-external-functions/TRANSPOSE.html">TRANSPOSE</a> transposes data in specified directions</strong></p>
+<p><strong>4. New function <a href="../users-guide/appendix-a-external-functions/TRANSPOSE.html">TRANSPOSE</a> transposes data in specified directions</strong></p>
 <pre>
 yes? show function transpose
 TRANSPOSE(VAR,DIM1,DIM2)

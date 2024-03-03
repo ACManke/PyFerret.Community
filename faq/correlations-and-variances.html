@@ -115,8 +115,6 @@ xmlns:schema="http://schema.org/">
 </div></header> 
 
 
-<!-- ----- this from main index.html, after </div></header>-->
-
       <section id="section-content" class="section section-content">
   <div id="zone-preface-wrapper" class="zone-wrapper zone-preface-wrapper clearfix">  
   <div id="zone-preface" class="zone zone-preface clearfix equal-height-container container-12">
@@ -140,8 +138,6 @@ xmlns:schema="http://schema.org/">
     <div class="content clearfix">
       <article about="/Ferret/index.html" typeof="foaf:Document" class="node node-page node-published node-not-promoted node-not-sticky author-burger odd clearfix" id="node-page-771">
 
-
-<!--   ... from main index.html, -->
 <h2 class="block-title"><a href="ferret-faqs.html" class="active-trail">FAQ</a></h2>
 <a id="main-content"></a>
 <div class="element-invisible">    <h1 class="title" id="page-title">Correlations and Variances</h1>
@@ -215,7 +211,7 @@ Column 1: CORREL is CORRELATION OF P AND Q
 Column 2: COVAR is COVARIANCE OF P AND Q
 CORREL COVAR 
 I / *: 0.6347 0.1036
-</pre><p>The comments in variance.jnl suggest running <b><a href="http://ferret.pmel.noaa.gov/static/FAQ/analysis/var_n.jnl">var_n.jnl</a></b> to make the n/n+1 correction. It is to be run after variance.jnl, and it redefines the variances to make that correction. So correlation and covariance are also redefined, as correl and covar are defined in terms of p_var and q_var.</p>
+</pre><p>The comments in variance.jnl suggest running <b>var_n.jnl</b> to make the n/n+1 correction. It is to be run after variance.jnl, and it redefines the variances to make that correction. So correlation and covariance are also redefined, as correl and covar are defined in terms of p_var and q_var.</p>
 <p>Show the definitions of p_var and correl; see how p_var has a new definition after running the script var_n.jnl</p>
 <pre>
 <b> yes? SHOW VAR p_var</b>
@@ -329,3 +325,4 @@ yes? go/help correlation_with_students_t_test
 </div>  <div id="body-bg-bottom"></div>
 </body>
 </html>
+

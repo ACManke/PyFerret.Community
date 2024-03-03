@@ -295,7 +295,7 @@ xmlns:schema="http://schema.org/">
 </tr></tbody></table><p align="left"><b>Note:</b> The algorithm will return a value of 1 for points that lie "inside" the polygon even if it is not a closed curve. Carefully check the shape that you define with XVERT,YVERT and the results of the function.</p>
 <p align="left"><b>Note:</b> <i>Prior to Ferret v6.94, if the longitudes given in the second argument XVERT lie on a different modulo longitude branch than the longitudes in the grid of the variable A, the function did NOT translate the longitudes in XVERT. So, in the example below, if we had specified "let xp = {-60, -40, -25, -45, -60}", then the function would return no points within the polygon. Check the grid of the variable and use longitudes in its native range. </i>In Ferret v6.94 and later, if the XY grid of argument 1 is a modulo axis, then modulo operations are applied and the function returns correct results.</p>
 <p>
-This function is based on the code by W. Randolph Franklin, found in his web pages at<br /><a href="http://www.ecse.rpi.edu/Homepages/wrf/Research/Short_Notes/pnpoly.html" rel="nofollow">http://www.ecse.rpi.edu/Homepages/wrf/Research/Short_Notes/pnpoly.html</a></p>
+This function is based on the code by W. Randolph Franklin of Rensselaer Polytechnic Institute, and found in his web pages at<br /><a href="https://wrfranklin.org/nikola/pages/software/#pnpoly" rel="nofollow">https://wrfranklin.org/nikola/pages/software/#pnpoly</a></p>
 <p align="left"> </p>
 <p>
 <b>Example</b>:<br />

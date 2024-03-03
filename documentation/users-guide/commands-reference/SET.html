@@ -725,7 +725,7 @@ SET LIST/NCFORMAT=netcdf4  !write a NetCDF-4 formatted file, using HDF5
 SET LIST/NCFORMAT=classic  !write a Netcdf-4 Classic Model Formatted file, compatible with software that uses NetCDF-3.    
 SET LIST/NCFORMAT=64BIT_OFFSET  ! Writes the 64-bit offset format, a variation on the classic format</pre><p align="left">SET LIST/NCFORMAT=netcdf4 may be abbreveiated as SET LIST/NCFORMAT=4 and SET LIST/NCFORMAT=classic may be abbreviated as SET LIST/NCFORMAT=3.</p>
 <p align="left">The NetCDF documentation describes these formats:</p>
-<p align="left"><a href="http://www.unidata.ucar.edu/software/netcdf/docs/netcdf/File-Format.html">http://www.unidata.ucar.edu/software/netcdf/docs/netcdf/File-Format.html</a></p>
+<p align="left"><a href="http://https://docs.unidata.ucar.edu/netcdf-c/current/file_format_specifications.html">http://https://docs.unidata.ucar.edu/netcdf-c/current/file_format_specifications.html</a></p>
 <p><a name="_VPINDEXENTRY_setlist_endian" id="_VPINDEXENTRY_setlist_endian"></a></p>
 <p>SET LIST<strong>/ENDIAN</strong></p>
 <p>In netCDF classic format, the problem of endianness is solved by writing all data in big-endian order. The HDF5 library allows data to be written as either big or little endian, and automatically reorders the data when it is read, if necessary.</p>
@@ -1168,7 +1168,7 @@ yes? PPL COLOR,8,60,0,100    ! purple</pre><p align="left">See the example in th
 <pre>
 yes? SET MODE LINECOLORS:7
 yes? USE etopo60
-yes? FILL/GRATICULE=[DASH,COLOR=7,THICKNESS=1] rose</pre><p><a href=", and run the demonstration script ef_eofsvd_demo.jnl for examples of this function./default/files/images/documentation/users-guide/user_guide_images/Ref_linecolors.gif"><img alt="Ref_linecolors" class="image-inline" src=", and run the demonstration script ef_eofsvd_demo.jnl for examples of this function./default/files/images/documentation/users-guide/user_guide_images/Ref_linecolors.gif" style="width: 200px; height: 172px;" /></a></p>
+yes? FILL/GRATICULE=[DASH,COLOR=7,THICKNESS=1] rose</pre><p><a href="../../../sites/default/files/images/documentation/users-guide/user_guide_images/Ref_linecolors.gif"><img alt="Ref_linecolors" class="image-inline" src="../../../sites/default/files/images/documentation/users-guide/user_guide_images/Ref_linecolors.gif" style="width: 200px; height: 172px;" /></a></p>
 <p align="left">MODE LINECOLORS cannot be canceled; issuing the command CANCEL MODE LINECOLORS will reset the number back to 6.</p>
 <h3 align="left">Ref Sec31.8.14.</h3>
 <p><a name="_VPID_495" id="_VPID_495"></a><a name="_VPINDEXENTRY_1716" id="_VPINDEXENTRY_1716"></a><a name="_VPINDEXENTRY_1717" id="_VPINDEXENTRY_1717"></a></p>
@@ -1482,25 +1482,25 @@ yes? fill sst
 yes? set text/italic/bold moveable
  
 yes? annotate/norm/xpos=0.5/ypos=0.5/halign=0/siz=0.2  "COADS January Temperature"
-</b></pre><p><img alt="PyFerret labels: large text size" class="image-left" src=", and run the demonstration script ef_eofsvd_demo.jnl for examples of this function./default/files/images/documentation/users-guide/commands-reference/large_label.png" /></p>
+</b></pre><p><img alt="PyFerret labels: large text size" class="image-left" src="../../../sites/default/files/images/documentation/users-guide/commands-reference/large_label.png" /></p>
 <p class="pnormal">Control over contour label text helps them stand out.  Note that without a SET TEXT/COLOR=  setting for the contour text-group, the contour labels always match the color of the contour lines.</p>
 <pre class="pliteral">
 yes? use levitus_climatology
 yes? set text/font=arial
 yes? set text/color=(100,20,0) contour
-yes? contour/z=0/nolab temp</pre><p><b><img class="image-inline" src=", and run the demonstration script ef_eofsvd_demo.jnl for examples of this function./default/files/images/documentation/users-guide/commands-reference/custom_contour_labels.png" /></b></p>
+yes? contour/z=0/nolab temp</pre><p><b><img class="image-inline" src="../../../sites/default/files/images/documentation/users-guide/commands-reference/custom_contour_labels.png" /></b></p>
 <h3><a name="pyferret_embedded_symbols" id="pyferret_embedded_symbols"></a>PyFerret: embedding Special Characters in labels</h3>
 <p class="pnormal">Using PyFerret, we have access to special characters including Math symbols, Greek and other non-Latin alphabets, and International symbols such as the Euro sign, by means of HTML character syntax, e.g. see references such as</p>
-<p class="rteindent1"><a href="http://www.w3schools.com/html/html_symbols.asp"><img alt="" src=", and run the demonstration script ef_eofsvd_demo.jnl for examples of this function./default/files/icons/link_icon.gif" />http://www.w3schools.com/html/html_symbols.asp</a></p>
-<p class="rteindent1"><a href="http://www.w3schools.com/html/html_symbols.asp"><img alt="" src=", and run the demonstration script ef_eofsvd_demo.jnl for examples of this function./default/files/icons/link_icon.gif" /></a><a href="http://character-code.com/">http://character-code.com</a></p>
-<p class="rteindent1"><a href="http://www.w3schools.com/html/html_symbols.asp"><img alt="" src=", and run the demonstration script ef_eofsvd_demo.jnl for examples of this function./default/files/icons/link_icon.gif" /></a><a href="https://www.w3.org/TR/html401/sgml/entities.html">https://www.w3.org/TR/html401/sgml/entities.html</a></p>
+<p class="rteindent1"><a href="http://www.w3schools.com/html/html_symbols.asp"><img alt="" src="../../../sites/default/files/icons/link_icon.gif" />http://www.w3schools.com/html/html_symbols.asp</a></p>
+<p class="rteindent1"><a href="http://www.w3schools.com/html/html_symbols.asp"><img alt="" src="../../../sites/default/files/icons/link_icon.gif" /></a><a href="http://character-code.com/">http://character-code.com</a></p>
+<p class="rteindent1"><a href="http://www.w3schools.com/html/html_symbols.asp"><img alt="" src="../../../sites/default/files/icons/link_icon.gif" /></a><a href="http://www.w3.org/TR/html401/sgml/entities.html">http://www.w3.org/TR/html401/sgml/entities.html</a></p>
 <p align="left" class="pnormal"><b>Example:</b><br />
 The following title specifications both put a lowercase letter tau into the title as shown below.</p>
 <pre class="pliteral">
 <b>yes? set text/font=arial  ! we must use a font other than the Hershey font
- 
+
 yes? plot/title="stress &lt;#964&gt;-x" tau  ! or,
-yes? plot/title="stress &lt;&amp;tau&gt;-x" tau</b></pre><p align="left" class="callout"><b><img class="image-inline" src=", and run the demonstration script ef_eofsvd_demo.jnl for examples of this function./default/files/images/documentation/users-guide/commands-reference/tau_label.png" /></b></p>
+yes? plot/title="stress &lt;&amp;tau&gt;-x" tau</b></pre><p align="left" class="callout"><b><img class="image-inline" src="../../../sites/default/files/images/documentation/users-guide/commands-reference/tau_label.png" /></b></p>
 <p align="left" class="pnormal">The syntax is either &lt;#nnnn&gt; where the number is up to four digits as listed in the HTML character tables, or &lt;&amp;name&gt; if a name is assigned. When the character is a Greek letter, capitalizing the name will result in a capital letter.</p>
 <p align="left" class="pnormal"><strong>Examples:</strong></p>
 <pre class="pliteral">

@@ -115,8 +115,6 @@ xmlns:schema="http://schema.org/">
 </div></header> 
 
 
-<!-- ----- this from main index.html, after </div></header>-->
-
       <section id="section-content" class="section section-content">
   <div id="zone-preface-wrapper" class="zone-wrapper zone-preface-wrapper clearfix">  
   <div id="zone-preface" class="zone zone-preface clearfix equal-height-container container-12">
@@ -140,8 +138,6 @@ xmlns:schema="http://schema.org/">
     <div class="content clearfix">
       <article about="/Ferret/index.html" typeof="foaf:Document" class="node node-page node-published node-not-promoted node-not-sticky author-burger odd clearfix" id="node-page-771">
 
-
-<!--   ... from main index.html, -->
 <h2 class="block-title"><a href="ferret-faqs.html" class="active-trail">FAQ</a></h2>
 <a id="main-content"></a>
 <div class="element-invisible">    <h1 class="title" id="page-title">Calling SCAT2GRID functions for DSG data</h1>
@@ -160,7 +156,7 @@ xmlns:schema="http://schema.org/">
 <h2>Discussion:</h2>
 <p>This FAQ uses a SCAT2GRID_BIN function but the method will work for any of the SCAT2GRID functions, see</p>
 <pre>
-yes? show function SCAT2GRID*</pre><p align="left"><a href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/data-set-basics/2-8-discrete-geometries-datasets-1">Discrete Sampling Geometries</a> (DSG) data:</p>
+yes? show function SCAT2GRID*</pre><p align="left"><a href="../documentation/users-guide/working-with-special-data-sets/DSG_datasets.html">Discrete Sampling Geometries</a> (DSG) data:</p>
 <p align="left">Observational data from DSG datasets contain collections of data and coordinate locatinos.  The lists of coordinate information that can feed into the functions for gridding into a multi-dimensional grid.  However, with the exception of trajectory data the coordinates do not all have the same dimensionality.  Timeseries data for instance has a station location for each station, and multiple observations in time.  Profile data has one location and time per stations, and multiple heights/depths in each profile. For the SCAT2GRID functions we need all of the first arguments, the scattered locations and observations, to be of the same size.  We need to expand the station data to repeat the station location for each time in that station's time series.</p>
 <p align="left">The function EXPND_BY_LEN does just this.</p>
 <pre>

@@ -384,7 +384,7 @@ AbAb AAb</pre><p> </p>
 <p class="indented">2) For FORTRAN-formatted and UNFORMATTED (binary) output, the contents of a single output "record" are determined by the /ORDER qualifier. For example, each record will be a line of Y values for LIST/ORDER=YX. If /ORDER is omitted, the records will be the first output axis of greater than unity length taken in the order X, Y, Z, then T. FORTRAN-formatted output records may be further split by the usual rules of FORTRAN output formatting.</p>
 <p> </p>
 <p align="left"> </p>
-<p class="indented">3) FORTRAN formats must be enclosed in parentheses. If blanks are included in the format it must be enclosed in quotation marks. Output strings are permitted in the format. For writing string data, if a single variable is being written, the format LIST/FORMAT=(A) may be used. Listing multiple string variables or string and numeric variables cannot be done with a Fortran format. (But try /FORMAT=comma or /FORMAT=tab). See <a href="../handing-string-data-symbols/STRING-VARIABLES.html#_VPINDEXENTRY_stringwrite">Chapter 7</a> for examples.</p>
+<p class="indented">3) FORTRAN formats must be enclosed in parentheses. If blanks are included in the format it must be enclosed in quotation marks. Output strings are permitted in the format. For writing string data, if a single variable is being written, the format LIST/FORMAT=(A) may be used. Listing multiple string variables or string and numeric variables cannot be done with a Fortran format. (But try /FORMAT=comma or /FORMAT=tab). See <a href="../handling-string-data-symbols/STRING-VARIABLES.html#_VPINDEXENTRY_stringwrite">Chapter 7</a> for examples.</p>
 <p> </p>
 <p align="left"><b>Example:</b><b> </b></p>
 <pre>
@@ -547,7 +547,7 @@ TIME : 16-JAN 06:00
 For writing NetCDF-4 formatted files (Ferret version 6.6 and higher), sets chunk sizes in each coordinate direction. Only valid with LIST/FORMAT=CDF (alias SAVE), and with NetCDF-4 formatted files. The values are given as integers and must be less than or equal to the size of the dimension. If these are not specified, the compression will use the defaultchunk-size scheme of the NetCDF-4 library. If you specify a chunk sizefor any dimension, you must specify it for all of the dimensions present in the grid.</p>
 <pre>
 yes? SAVE/FILE=deflate.nc/CLOBBER/NCFORMAT=4/DEFLATE=1/SHUFFLE=1\
-/XCHUNK=30/YCHUNK=30/ZCHUNK=1/TCHUNK=1 temp</pre><p align="left">This document discusses improving performance with Chunking: <a href="http://www.unidata.ucar.edu/software/netcdf/docs/netcdf_perf_chunking.html">http://www.unidata.ucar.edu/software/netcdf/docs/netcdf_perf_chunking.html</a></p>
+/XCHUNK=30/YCHUNK=30/ZCHUNK=1/TCHUNK=1 temp</pre><p align="left">This document discusses improving performance with Chunking: <a href="http://https://docs.unidata.ucar.edu/nug/current/netcdf_perf_chunking.html">http://https://docs.unidata.ucar.edu/nug/current/netcdf_perf_chunking.html</a></p>
 <p align="left">Please see the full NetCDF documentation and descriptions of the use of HDF5 with netcdf-4 at the Unidata NetCDF pages,</p>
 <p><a href="http://www.unidata.ucar.edu/software/netcdf/">http://www.unidata.ucar.edu/software/netcdf/</a></p>
 <p> </p>

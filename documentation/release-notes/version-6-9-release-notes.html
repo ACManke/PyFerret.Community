@@ -281,7 +281,7 @@ xmlns:schema="http://schema.org/">
 <h3>New Features/Enhancements:</h3>
 <p><a name="new_xml" id="new_xml"></a>1)<b> Enhancements were made to the xml that Ferret writes describing datasets when it is running within LAS.</b> This version of Ferret is required for LAS v8.1.</p>
 <p>2) <b>Method to visualize the tree of GO-script calls.</b></p>
-<p>If a set of scripts is run, with scripts calling multiple other scripts, it is useful to be able to see how the flow of the session went. To enable this, we add some new lines written to standard output. When the setting <a href="../../users-guide/commands-reference/SET.html#_VPINDEXENTRY_SET_REDIRECT" title="SET REDIRECT">SET REDIRECT</a> has been made, then on entering or exiting any GO script, Ferret will write a line to the log file that SET REDIRECT is sending output to.</p>
+<p>If a set of scripts is run, with scripts calling multiple other scripts, it is useful to be able to see how the flow of the session went. To enable this, we add some new lines written to standard output. When the setting <a href="../users-guide/commands-reference/SET.html#_VPINDEXENTRY_SET_REDIRECT" title="SET REDIRECT">SET REDIRECT</a> has been made, then on entering or exiting any GO script, Ferret will write a line to the log file that SET REDIRECT is sending output to.</p>
 <p>On entering a script, the name of the script is listed together with the arguments exactly as executed, after any symbols or grave-accent expressions are evaluated</p>
 <pre>
 !! Enter_GO scriptname  &lt;arguments&gt;</pre><p>on exiting a script, the name of the script is written:</p>
@@ -329,7 +329,7 @@ yes? ppl shade
 <p>Wherever SHAKEY is used in existing scripts, the resulting plot will be unchanged. Here is the image from the above commands:</p>
 <p><img alt="Horizontal Colorbar example" class="image-left" src="../../sites/default/files/images/documentation/release-notes/horiz_colorbar.gif" /></p>
 <p> </p>
-<p><a name="missing_coords" id="missing_coords"></a>6) <b>Missing data is allowed in the coordinate variables when using the <a href="../../users-guide/customizing-plots/MAP-PROJECTIONS-AND-CURVILINEAR-COORDINATES.html" title="6.10 MAP PROJECTIONS AND CURVILINEAR COORDINATES">3-argument plot commands</a>.</b> Previously Ferret returned an error message and did not draw a plot. Computations with curvilienar coordinates, such as sampling or a regridding function, will still generally require that there be no missing coordinate values.</p>
+<p><a name="missing_coords" id="missing_coords"></a>6) <b>Missing data is allowed in the coordinate variables when using the <a href="../users-guide/customizing-plots/MAP-PROJECTIONS-AND-CURVILINEAR-COORDINATES.html" title="6.10 MAP PROJECTIONS AND CURVILINEAR COORDINATES">3-argument plot commands</a>.</b> Previously Ferret returned an error message and did not draw a plot. Computations with curvilienar coordinates, such as sampling or a regridding function, will still generally require that there be no missing coordinate values.</p>
 <p>For instance we may want a longitude - height plot where some of the height values are missing:</p>
 <pre>
 yes? shade ua, longitude, geopotential_height
