@@ -259,15 +259,15 @@ xmlns:schema="http://schema.org/">
 </ul><p class="secHeader">New Features and enhancements</p>
 <ul><li>
 <p><font color="#000000">As announced via email, the default color-palette for Ferrert/PyFerret was changed with Ferret/PyFerret v7.44.  The new default colormap is "viridis", which is a <a href="https://matplotlib.org/users/colormaps.html" rel="nofollow">Perceptually uniform colormap</a>. An additional set of the Perceptually Uniform Colormap palettes are also added.</font></p>
-<p>	<font color="#000000">See the FAQ's for more discussion of color palettes, in particular </font> <a href="../faq/ferret-color-palettes">Ferret Color Palettes</a><font color="#000000">.</font></p>
+<p>	<font color="#000000">See the FAQ's for more discussion of color palettes, in particular </font> <a href="../faq/ferret-color-palettes.html">Ferret Color Palettes</a><font color="#000000">.</font></p>
 <p>	<font color="#000000"><font color="#000000">You can always change your color palette in any of these ways:</font></font></p>
 <p><font color="#000000">  1) For a single command, with the /PALETTE qualifier:</font><font color="#000000"><tt> <br />
 	      SHADE/PALETTE=centered_diff wind_speed</tt></font></p>
 <p>	<font color="#000000">  2) For the current session with the PALETTE command:</font><font color="#000000"> <br />
 	        <tt>PALETTE rnb2  ! use rnb2 for subsequent commands unless /palette qualifier is used</tt></font></p>
-<p>	  3) <font color="#000000">For all your PyFerret or Ferret sessions, by putting a PALETTE command into a<b><tt> </tt></b> <a href="../documentation/users-guide/computing-environment/FILES-AND-ENVIRONMENT-VARIABLES-USED-BY-FERRET" rel="nofollow"><b><tt>.ferret</tt></b></a> startup file.</font></p>
+<p>	  3) <font color="#000000">For all your PyFerret or Ferret sessions, by putting a PALETTE command into a<b><tt> </tt></b> <a href="users-guide/computing-environment/FILES-AND-ENVIRONMENT-VARIABLES-USED-BY-FERRET.html" rel="nofollow"><b><tt>.ferret</tt></b></a> startup file.</font></p>
 <p>	 </p></li>
-<li>There is a new option to write date strings in ISO-1086 date format, the new MODE <a href="../documentation/users-guide/commands-reference/SET#_VPINDEXENTRY_mode_datefmt"><strong>MODE DATE_FORMAT</strong></a>. Turn on this feature by setting this mode with the value ISO. This affects each command where time-coordinates are converted to date-strings, such as SHOW AXIS, LIST, he TAX_DATESTRING function, and dates shown in labels on plots (but not date labels along the time axis of plots).<br /><pre>
+<li>There is a new option to write date strings in ISO-1086 date format, the new MODE <a href="users-guide/commands-reference/SET.html#_VPINDEXENTRY_mode_datefmt"><strong>MODE DATE_FORMAT</strong></a>. Turn on this feature by setting this mode with the value ISO. This affects each command where time-coordinates are converted to date-strings, such as SHOW AXIS, LIST, he TAX_DATESTRING function, and dates shown in labels on plots (but not date labels along the time axis of plots).<br /><pre>
 yes? set mode date_format:iso
  
 yes? list/i=100/j=40/k=1/l=1:4/nohead temp
@@ -279,16 +279,16 @@ yes? list/i=100/j=40/k=1/l=1:4/nohead temp
 yes? cancel mode date_format  ! return to the default
 </pre></li>
 <li>
-<p>When defining a Time aggregation on the fly with TSERIES (DEFINE DATA/AGGREGATE/T), a new qualifier <a href="../documentation/users-guide/commands-reference/DEFINE#_define_data_agg_taxis"><strong>/TAXIS=</strong></a> allows the user to specify a time axis to use. This allows for missing timesteps in the data being aggregated or even to define a different axis than what's represented by the timesteps in the member files.</p>
+<p>When defining a Time aggregation on the fly with TSERIES (DEFINE DATA/AGGREGATE/T), a new qualifier <a href="users-guide/commands-reference/DEFINE.html#_define_data_agg_taxis"><strong>/TAXIS=</strong></a> allows the user to specify a time axis to use. This allows for missing timesteps in the data being aggregated or even to define a different axis than what's represented by the timesteps in the member files.</p>
 <pre>
 yes? DEFINE DATA /AGGREGATE /HIDE /T /TAXIS=myax timeagg = aggfiles
 </pre></li>
-<li>For TSERIES aggregations a second new option <strong><a href="../documentation/users-guide/commands-reference/DEFINE#_define_data_agg_toverlap">/TOVERLAP</a></strong> specifies that if time steps overlap between files, those overlaps will be listed and skipped over. This is used in conjunction with /TAXIS=<br /><pre>
+<li>For TSERIES aggregations a second new option <strong><a href="users-guide/commands-reference/DEFINE.html#_define_data_agg_toverlap">/TOVERLAP</a></strong> specifies that if time steps overlap between files, those overlaps will be listed and skipped over. This is used in conjunction with /TAXIS=<br /><pre>
 yes? DEFINE DATA /AGG /T /TAXIS=aggtime/toverlap myagg = data2009.nc, data2010.nc , data2011.nc
 *** NOTE: Ignored last 1 timesteps of data2009.nc due to overlap with data2010.nc
 *** NOTE: Ignored last 3 timesteps of data2010.nc due to overlap with data2011.nc
 *** NOTE: Time axis coordinates matched using @XACT</pre></li>
-<li>A new function <strong><a href="../documentation/appendix-a-external-functions/samplexyzt.html">SAMPLEXYZT</a></strong> joins the suite of sample functions, picking out data from a grid at a set of lon,lat,z,and time points.<br /><pre>
+<li>A new function <strong><a href="users-guide/appendix-a-external-functions/samplexyzt.html">SAMPLEXYZT</a></strong> joins the suite of sample functions, picking out data from a grid at a set of lon,lat,z,and time points.<br /><pre>
 yes? show function samplexyzt
 SAMPLEXYZT(DAT_TO_SAMPLE,XPTS,YPTS,ZPTS,TPTS)
     Returns data sampled at a set of points in X,Y,Z,T, using linear interpolation
@@ -298,7 +298,7 @@ SAMPLEXYZT(DAT_TO_SAMPLE,XPTS,YPTS,ZPTS,TPTS)
     ZPTS: Z values of sample points
     TPTS: T values of sample points
 </pre></li>
-<li>The functions <strong><a href="../documentation/appendix-a-external-functions/sampleimulti-and-j-k-l-m-n.html">SAMPLE*_MULTI</a></strong> are updated for all 6 dimensions,<br /><pre>
+<li>The functions <strong><a href="users-guide/appendix-a-external-functions/sampleimulti-and-j-k-l-m-n.html">SAMPLE*_MULTI</a></strong> are updated for all 6 dimensions,<br /><pre>
 yes? show function sample*_multi
 SAMPLEI_MULTI(DAT_TO_SAMPLE,I_INDICES)
     Returns data sampled according to I indices which may vary in JKLMN
@@ -312,7 +312,7 @@ SAMPLEI_MULTI(DAT_TO_SAMPLE,I_INDICES)
 <li>For some time axes, 2-D plots such as time-depth plots yielded a blank plot. This is fixed.<br />
 	 </li>
 <li>
-<p>The output of <a href="../documentation/users-guide/commands-reference/LIST.html#_VPINDEXENTRY_1429"><strong>list/precision=</strong></a> now behaves in the same way as precision specified in a grave-accent expression evaluation.  If the precision is given as a negative integer, that controls the number of decimal places after the decimal point. Previously a negative value in LIST/PRECISION=  returned no fractional part. The change also applies to LIST commands given after a global SET LIST/PRECISION=</p>
+<p>The output of <a href="users-guide/commands-reference/LIST.html#_VPINDEXENTRY_1429"><strong>list/precision=</strong></a> now behaves in the same way as precision specified in a grave-accent expression evaluation.  If the precision is given as a negative integer, that controls the number of decimal places after the decimal point. Previously a negative value in LIST/PRECISION=  returned no fractional part. The change also applies to LIST commands given after a global SET LIST/PRECISION=</p>
 <pre>
 yes? let a = 54.13482
  

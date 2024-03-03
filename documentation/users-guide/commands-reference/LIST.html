@@ -547,7 +547,7 @@ TIME : 16-JAN 06:00
 For writing NetCDF-4 formatted files (Ferret version 6.6 and higher), sets chunk sizes in each coordinate direction. Only valid with LIST/FORMAT=CDF (alias SAVE), and with NetCDF-4 formatted files. The values are given as integers and must be less than or equal to the size of the dimension. If these are not specified, the compression will use the defaultchunk-size scheme of the NetCDF-4 library. If you specify a chunk sizefor any dimension, you must specify it for all of the dimensions present in the grid.</p>
 <pre>
 yes? SAVE/FILE=deflate.nc/CLOBBER/NCFORMAT=4/DEFLATE=1/SHUFFLE=1\
-/XCHUNK=30/YCHUNK=30/ZCHUNK=1/TCHUNK=1 temp</pre><p align="left">This document discusses improving performance with Chunking: <a href="http://https://docs.unidata.ucar.edu/nug/current/netcdf_perf_chunking.html">http://https://docs.unidata.ucar.edu/nug/current/netcdf_perf_chunking.html</a></p>
+/XCHUNK=30/YCHUNK=30/ZCHUNK=1/TCHUNK=1 temp</pre><p align="left">This document discusses improving performance with Chunking: <a href="https://docs.unidata.ucar.edu/nug/current/netcdf_perf_chunking.html">https://docs.unidata.ucar.edu/nug/current/netcdf_perf_chunking.html</a></p>
 <p align="left">Please see the full NetCDF documentation and descriptions of the use of HDF5 with netcdf-4 at the Unidata NetCDF pages,</p>
 <p><a href="http://www.unidata.ucar.edu/software/netcdf/">http://www.unidata.ucar.edu/software/netcdf/</a></p>
 <p> </p>

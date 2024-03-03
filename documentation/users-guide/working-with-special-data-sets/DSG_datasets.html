@@ -249,9 +249,9 @@ xmlns:schema="http://schema.org/">
 <p>The datasets are feature-collections, and a single feature is a single instance of a timeseries, a profile, a trajectory, or a point. The observations lie along the "observation" axis and the information describing features lie along the "instance" axis, which is of length nfeatures. In the documentation and example scripts we use the abbreviation "DSG files". A common source for DSG datasets is ERDDAP, where a file is saved from a tabledap dataset as data type .ncCF.</p>
 <p>When a dataset contains the relevant attributes for a Discrete Geometries dataset, Ferret will assign the observations axis to the X direction for Trajectory data, the T direction for Timeseries data, the Z direction for Profile data, and the instance axis (which describe each feature) to the E direction. For Point data each point is an instance, so the observations lie in the E direction. The sample_dimension identifies a count variable, usually called Rowsize, listing the number of observations in each feature, and names the sample dimension to which it applies.  Ferret locates the coordinate information, and defines a "translation grid" which allows it to map data to the world coordinates for the data type: stations in XYZ for Timeseries, stations in XYT for Profiles, trajectories along XYT and perhaps Z for Trajectories, and Points in ZYZT.  Using the coordinate information, the ordinary region-selection commands apply, including qualifiers /X= /Y= /Z= /T=  or SET REGION, or variable[x=, y=, z= ,t=].  Plots and listings are automatically labeled as always.</p>
 <p>The variables which describe each feature are put onto the E axis.</p>
-<p>Run the <a href="../../dsg-files-discrete-sampling-geometries-demo.html">tutorial script</a></p>
+<p>Run the <b><a href="../../demos/dsg-files-discrete-sampling-geometries-demo.html">tutorial script</a></b></p>
 <pre>
-yes? dsg_tutorial
+yes? go dsg_tutorial
 </pre><p> </p>
 <p>Here is a summary of the enhancements:</p>
 <p>Command outputs customized to work with DSG datasets:</p>

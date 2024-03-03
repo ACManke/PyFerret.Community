@@ -284,12 +284,12 @@ yes? PLOT/ALONG=t/x=330 sst
 *** NOTE: Decimating PLOT/ALONG lines to /KEY limit of 40
 </pre><p>Some useful commands in combination with PLOT/ALONG:</p>
 <ul><li>The <b><a href="PLOT.html#_VPINDEXENTRY_1476" title="PLOT">/LINE qualifier</a>:</b> PLOT/ALONG=/LINE draws lines only, no symbols. the set of lines is drawn first with all of the colors and a thin line, then switching to thicker lines/.</li>
-<li><b>MODE LINECOLOR: </b>Use<a href="../customizing-plots/COLOR.html#linecolors" title="6.5 COLOR"> MODE LINECOLOR</a> to define a larger number of colors than the initial set. Then PLOT/ALONG will use all of the colors before starting to repeat with other line styles and the same increased set of colors.</li>
+<li><b>MODE LINECOLOR: </b>Use<b><a href="../customizing-plots/COLOR.html#linecolors" title="6.5 COLOR"> MODE LINECOLOR</a></b> to define a larger number of colors than the initial set. Then PLOT/ALONG will use all of the colors before starting to repeat with other line styles and the same increased set of colors.</li>
 <li>The<b> <a href="PLOT.html#_SKIPSYM" title="PLOT">/SKIPSYM qualifier</a>:</b> PLOT/ALONG= /SKIPSYM= decimates the symbols along the lines to clean up the image.</li>
 <li>The <b><a href="PLOT.html#_VPINDEXENTRY_1509" title="PLOT">/NOKEY qualifier</a>:</b> PLOT/ALONG= /NOKEY removes the key and labels below the plot. When there are many lines, the individual labels and line examples may not be as useful as a general descriptive title, e.g. PLOT/ALONG=t/NOKEY/TITLE="Annual cycle in the range -40:40 longitude" my_var</li>
 </ul><p> </p>
 <p align="left"><a name="_VPINDEXENTRY_1466" id="_VPINDEXENTRY_1466"></a><a name="_VPINDEXENTRY_1467" id="_VPINDEXENTRY_1467"></a>PLOT/<b>FRAME</b></p>
-<p align="left">Causes the graphic image produced to be captured as an animation frame and written to the movie file specified by SET MOVIE. In general the <a href="FRAME.html">FRAME command</a> is more flexible and we recommend its use rather than this qualifier. (note that HDF movies are discontinued with Ferret V6.6).</p>
+<p align="left">Causes the graphic image produced to be captured as an animation frame and written to the movie file specified by SET MOVIE. In general the <strong><a href="FRAME.html">FRAME command</a></strong> is more flexible and we recommend its use rather than this qualifier. (note that HDF movies are discontinued with Ferret V6.6).</p>
 <p align="left"> </p>
 <p><a name="PartII-Plot_color_thickness" id="PartII-Plot_color_thickness"></a></p>
 <p align="left"><a name="_VPINDEXENTRY_1468" id="_VPINDEXENTRY_1468"></a><a name="_VPINDEXENTRY_1469" id="_VPINDEXENTRY_1469"></a><a name="_VPINDEXENTRY_1470" id="_VPINDEXENTRY_1470"></a><a name="_VPINDEXENTRY_1471" id="_VPINDEXENTRY_1471"></a>PLOT/<b>COLOR=/THICKNESS=</b></p>
@@ -304,18 +304,18 @@ yes? plot/i=1:20/COLOR 2./i, 3/i</pre><p align="left"> </p>
 <p><a name="_pyferret_color_thick" id="_pyferret_color_thick"></a></p>
 <p align="left" class="pnormal"><strong>PyFerret Only:</strong></p>
 <p align="left" class="pnormal"><strong>/COLOR=</strong><br />
-In PyFerret, the value for the /COLOR= may be specified as a color name or number, as in classic Ferret; or may be of the form (R,G,B) or (R,G,B,A). The values of R, G, B, and A range from zero to 100 and are the percent of red, green, blue, and opacity (alpha channel) for the color. If only R, G, and B are given, an opacity of 100 (opaque) is used.</p>
+In PyFerret, the value for the /COLOR= may be specified as a color name or number, as in classic Ferret; or may be of the form (R,G,B) or (R,G,B,A). The values of R, G, B, and A range from mode zero to 100 and are the percent of red, green, blue, and opacity (alpha channel) for the color. If only R, G, and B are given, an opacity of 100 (opaque) is used.</p>
 <pre class="pliteral">
 yes? PLOT/COLOR=(88,100,55) temp</pre><p class="pnormal"><strong>/THICKNESS=</strong><br />
 In PyFerret, the value given to /THICKNESS may be any positive real number.</p>
 <p class="pnormal"><b>/OPACITY=</b><br />
 In PyFerret, the /OPACITY option can be used to specify the opacity (alpha channel value) of the colors used in the plot. The opacity given by this option will be used even if a color definition includes an opacity.</p>
 <p> </p>
-<p align="left"><a name="_pyferret_color_thick" id="_pyferret_color_thick">See the section below, </a><a href="PLOT.html#_PLOT_RIBBON" title="PLOT">PLOT/RIBBON</a>, for plotting lines colored according to the value of a variable along the line.</p>
+<p align="left"><a name="_pyferret_color_thick" id="_pyferret_color_thick">See the section below, </a><b><a href="PLOT.html#_PLOT_RIBBON" title="PLOT">PLOT/RIBBON</a></b>, for plotting lines colored according to the value of a variable along the line.</p>
 <p> </p>
 <p align="left">Prior to Ferret v5.80, /THICK with no accompanying /COLOR plotted all lines in black. Starting with v5.80 PLOT/THICK for plot lines overlaid on the same plot cycles through the colors Black, Red, Green, Blue, LightBlue and Purple. PLOT/THICK alone produces six in thickness 2 and six in thickness 3.</p>
 <p align="left">When plotting a number of lines together with PLOT/OVER/COLOR=/THICKNESS= the default behavior is for symbols to be plotted starting with the seventh line plotted. To plot lines only, add the /LINE qualifier.</p>
-<p align="left">After you have created your plot, if you need the lines even thicker to show up properly when printed, see the FAQ, <a href="../../../faq/changing-line-thickness-in-postscript-files">How can I control line thickness when I translate a metafile to a postscript file?</a></p>
+<p align="left">After you have created your plot, if you need the lines even thicker to show up properly when printed, see the FAQ, <b><a href="../../../faq/changing-line-thickness-in-postscript-files">How can I control line thickness when I translate a metafile to a postscript file?</a></b></p>
 <p align="left"><a name="_VPINDEXENTRY_1472" id="_VPINDEXENTRY_1472"></a><a name="_VPINDEXENTRY_1473" id="_VPINDEXENTRY_1473"></a>PLOT/COLOR=/THICKNESS=<b>/SYMBOL=/SIZE=</b><br />
 Simple syntax for plots using symbols. For symbol (scatter) plots (PLOT/VS or PLOT/SYMBOL), control the color, size, and line thickness of the symbols with commands such as:</p>
 <pre>
@@ -330,7 +330,7 @@ yes? PLOT/OVER/DASH=(0.6,0.2,0.1,0.2)/COLOR=RED/THICK/I=1:100 sin(i/9)</pre><p a
 <p><a name="PartII-Plot/line" id="PartII-Plot/line"></a></p>
 <p align="left"><a name="_VPINDEXENTRY_1476" id="_VPINDEXENTRY_1476"></a><a name="_VPINDEXENTRY_1477" id="_VPINDEXENTRY_1477"></a>PLOT/<b>LINE[=]</b></p>
 <p align="left">The /LINE qualifier without =n causes the PLOT command to connect the plotted points with a line regardless of the state of the /SYMBOLS qualifier.</p>
-<p align="left">For simpler specification of line characteristics see <a href="#_VPINDEXENTRY_1471">PLOT/COLOR=/THICKNESS=/DASH=</a>, above. /LINE=n specifies a pre-defined <a name="_VPINDEXENTRY_1478" id="_VPINDEXENTRY_1478"></a><a name="_VPINDEXENTRY_1479" id="_VPINDEXENTRY_1479"></a>line style. "n" is an integer between 1 and 18. <i><b>GO line_thickness</b></i> draw samples of the line colors and thickness:</p>
+<p align="left">For simpler specification of line characteristics see <b><a href="#_VPINDEXENTRY_1471">PLOT/COLOR=/THICKNESS=/DASH=</a></b>, above. /LINE=n specifies a pre-defined <a name="_VPINDEXENTRY_1478" id="_VPINDEXENTRY_1478"></a><a name="_VPINDEXENTRY_1479" id="_VPINDEXENTRY_1479"></a>line style. "n" is an integer between 1 and 18. <i><b>GO line_thickness</b></i> draw samples of the line colors and thickness:</p>
 <p align="left"> </p>
 
 
@@ -338,7 +338,7 @@ yes? PLOT/OVER/DASH=(0.6,0.2,0.1,0.2)/COLOR=RED/THICK/I=1:100 sin(i/9)</pre><p a
 <p> </p>
 
 <p align="left">
-Line style "1" is always a solid line in the foreground color (black or white). Other line styles are device dependent (colors or dash patterns). For color devices, n=1–6 draws single-thickness lines each a different color. n=7–12 draws double-thick lines in the same color order, and n=13–18 draws triple-thick lines. See the chapter "Customizing Plots", section "<a href="../customizing-plots/COLOR.html#_VPID_246">Text and line colors</a>" for a chart of the default colors.</p>
+Line style "1" is always a solid line in the foreground color (black or white). Other line styles are device dependent (colors or dash patterns). For color devices, n=1–6 draws single-thickness lines each a different color. n=7–12 draws double-thick lines in the same color order, and n=13–18 draws triple-thick lines. See the chapter "Customizing Plots", section "<b><a href="../customizing-plots/COLOR.html#_VPID_246">Text and line colors</a>"</b> for a chart of the default colors.</p>
 <p> </p>
 <p align="left">If more than 18 different plot lines are drawn using PLOT var1, var2, ... or with PLOT/OVER, then Ferret starts making symbols on the plots</p>
 <p align="left"><a name="_VPINDEXENTRY_1480" id="_VPINDEXENTRY_1480"></a>PLOT/<b>NOLABELS</b></p>
@@ -348,7 +348,7 @@ Line style "1" is always a solid line in the foreground color (black or white). 
 <p align="left">Causes the indicated field(s) to be <a name="_VPINDEXENTRY_1482" id="_VPINDEXENTRY_1482"></a>overlaid on the existing plot. This qualifier can also be used to overlay lines or symbols on 2D plots (SHADE, CONTOUR, or VECTOR) provided the axis scalings are appropriate.</p>
 <p align="left"> </p>
 <p align="left"><a name="_VPINDEXENTRY_1483" id="_VPINDEXENTRY_1483"></a>PLOT/<b>SET_UP</b></p>
-<p align="left">Performs all the internal preparations required by program Ferret for plotting but does not actually render the plot. The command PPL can then be used to make changes to the plot prior to producing output with the PPL PLOT command. This makes possible certain customizations that are not possible with Ferret command qualifiers. See the chapter "<a href="../customizing-plots/customizing-plots.html">Customizing Plots</a>".</p>
+<p align="left">Performs all the internal preparations required by program Ferret for plotting but does not actually render the plot. The command PPL can then be used to make changes to the plot prior to producing output with the PPL PLOT command. This makes possible certain customizations that are not possible with Ferret command qualifiers. See the chapter "<b><a href="../customizing-plots/customizing-plots.html">Customizing Plots</a>".</b></p>
 <p align="left"><a name="_VPINDEXENTRY_1484" id="_VPINDEXENTRY_1484"></a></p>
 <p align="left"><a name="_VPINDEXENTRY_1485" id="_VPINDEXENTRY_1485"></a>PLOT/<b>SYMBOL[=]</b></p>
 <p align="left">The /SYMBOL qualifier causes the PLOT command to mark each plotted point with a symbol. If the /LINE qualifier is given too the symbols are also connected with a line; if /LINE is omitted no connecting line is drawn.  For standard (non-ribbon) plots symbols may be colored using the color given with the /COLOR qualifier. For Ribbon plots, colors are controlled by the /PALETTE qualifier.</p>
@@ -493,7 +493,7 @@ yes? PLOT/AXES[=top,bottom,left,right] var</pre><p align="left">where the argume
 yes? PLOT/AXES=0,1,1,0 sst ! Draws the bottom and left axes only</pre><p align="left"> </p>
 <p align="left"><a id="_VPINDEXENTRY_1501" name="_VPINDEXENTRY_1501"></a><a id="PartII-plot/hlog/vlog" name="PartII-plot/hlog/vlog"></a></p>
 <p align="left">PLOT/<b>NOYADJUST</b></p>
-<p align="left">Avoid resetting the Y origin -- relevant during PLOT commands that require extra room for a large key block under the axes or for viewports that lie close to the bottom of the window where there may not be much room below the Y origin. See the examples for <a href="DEFINE.html#_VPINDEXENTRY_1366">DEFINE VIEWPORT/AXES</a><a id="_VPINDEXENTRY_1502" name="_VPINDEXENTRY_1502"></a><a id="_VPINDEXENTRY_1503" name="_VPINDEXENTRY_1503"></a><a id="_VPINDEXENTRY_1504" name="_VPINDEXENTRY_1504"></a><a id="_VPINDEXENTRY_1505" name="_VPINDEXENTRY_1505"></a>.</p>
+<p align="left">Avoid resetting the Y origin -- relevant during PLOT commands that require extra room for a large key block under the axes or for viewports that lie close to the bottom of the window where there may not be much room below the Y origin. See the examples for <b><a href="DEFINE.html#_VPINDEXENTRY_1366">DEFINE VIEWPORT/AXES</a></b><a id="_VPINDEXENTRY_1502" name="_VPINDEXENTRY_1502"></a><a id="_VPINDEXENTRY_1503" name="_VPINDEXENTRY_1503"></a><a id="_VPINDEXENTRY_1504" name="_VPINDEXENTRY_1504"></a><a id="_VPINDEXENTRY_1505" name="_VPINDEXENTRY_1505"></a>.</p>
 <p align="left"> </p>
 <p align="left">PLOT/<b>HLOG /VLOG </b></p>
 <p align="left"> </p>
@@ -550,7 +550,7 @@ yes? ppl ribbon
 <p align="left">PLOT<b>/NOKEY</b></p>
 <p align="left">Turns off the automatically-generated key showing line types on plots with multiple lines. There are several scripts which will let you position your own keys in the plot window</p>
 <p align="left"><a id="_PLOT_KEY_TITLE" name="_PLOT_KEY_TITLE"></a>PLOT<b>/KEY=</b>TITLE</p>
-<p align="left">For a multi-line plot, PLOT/KEY=TITLE tells Ferret to use the variable titles in the legend below the plot. This uses the full title with units, exactly as it would appear on a single-line plot. The FAQ, <a href="../../../faq/working-with-the-legend-on-a-line-plot" title="Working with the legend on a line plot">modifying the legend (key) for a multi line plot</a> gives an example and shows how to call the legend.jnl script for further control over the plot legend.</p>
+<p align="left">For a multi-line plot, PLOT/KEY=TITLE tells Ferret to use the variable titles in the legend below the plot. This uses the full title with units, exactly as it would appear on a single-line plot. The FAQ, <b><a href="../../../faq/working-with-the-legend-on-a-line-plot" title="Working with the legend on a line plot">modifying the legend (key) for a multi line plot</a> </b>gives an example and shows how to call the legend.jnl script for further control over the plot legend.</p>
 <p align="left"> </p>
 <h4 align="left"><a id="_PLOT_RIBBON" name="_PLOT_RIBBON"></a>RIBBON PLOTS</h4>
 <p align="left">Ribbon plots are color-by-value 1-dimensional plots. The line is colored according to the value of a variable along the line.</p>
@@ -568,12 +568,12 @@ yes? RIBBON/THICK/Y=0/L=6 sst, speh</pre><p align="left">The title automatically
 <p align="left">The above is drawn with:</p>
 <pre>
 yes? GO basemap x=260:360 y=0:90 20
-yes? PLOT/VS/OVER/NOLAB/RIBBON/THICK/SIZE=0.08/SYMBOL=17/KEY/LEV=v  lon, lat, fco2_rec</pre><p align="left">If you use PLOT/SET_UP/RIBBON, in order to make changes to the plot prior to producing output (See the chapter "<a href="../customizing-plots.html">Customizing Plots</a>"), then to produce the output, issue a PPL RIBBON command. For example to remove the time and latitude labels from the upper left, change the title, and remove the label "Longitude" from the horizontal axis,</p>
+yes? PLOT/VS/OVER/NOLAB/RIBBON/THICK/SIZE=0.08/SYMBOL=17/KEY/LEV=v  lon, lat, fco2_rec</pre><p align="left">If you use PLOT/SET_UP/RIBBON, in order to make changes to the plot prior to producing output (See the chapter "<b><a href="../customizing-plots/customizing-plots.html">Customizing Plots</a>"</b>), then to produce the output, issue a PPL RIBBON command. For example to remove the time and latitude labels from the upper left, change the title, and remove the label "Longitude" from the horizontal axis,</p>
 <p align="left"> </p>
 <p align="left">RIBBON<b> /KEY /NOKEY</b></p>
 <p align="left">Turns on the color key. By default it is turned on for a first (underlay) plot; /NOKEY will turn it off.  On an overlay plot the color key is not turned on, but may be invoked with /KEY. <em>(This is a dual use of /NOKEY. For non-ribbon plots, /KEY and /NOKEY control the legend below the plot when multiple plot lines are drawn on a plot. <strong><a href="#_VPINDEXENTRY_1509">See above</a></strong>. )</em></p>
 <p align="left">/KEY options further customize the key. Multiple options may be given, stringing them together with commas, e.g. /KEY=CONT,HORIZ</p>
-<p align="left" class="pnormal">PyFerret offers an option to <a href="SET.html#_SETTEXT" title="SET">customize the text</a> style of the colorbar labels. The <a href="SET.html#_SETTEXT_GROUPS" title="SET">text-group</a> "CBAR" specifies a change to the colorbar label text.</p>
+<p align="left" class="pnormal">PyFerret offers an option to <b><a href="SET.html#_SETTEXT" title="SET">customize the text</a></b> style of the colorbar labels. The <b><a href="SET.html#_SETTEXT_GROUPS" title="SET">text-group</a></b> "CBAR" specifies a change to the colorbar label text.</p>
 <p align="left">RIBBON/<b>KEY=CONTINUOUS</b><br />
 Chooses a continous color key for the palette used in a color-filled contour plot, without lines separating the colors. This option is particularly good for fill plots having many levels. Only valid in conjunction with /PLOT/RIBBON.</p>
 <p align="left">RIBBON/<b>KEY=HORIZONTAL</b><br />
@@ -581,7 +581,7 @@ Draws a horizontal key just above a color fill plot.Only valid in conjunction wi
 <p><a name="_VPINDEXENTRY_1516" id="_VPINDEXENTRY_1516"></a><a name="_VPINDEXENTRY_1517" id="_VPINDEXENTRY_1517"></a>RIBBON/<b>KEY=CENTERLAB</b><br />
 Labels the color key in the colors of the key rather than at the line dividing one color from the next. The contour levels used, whether specified with a /LEVELS qualifier or computed by Ferret, correspond to the labeled color blocks along the colorbar. In other  colorbar styles, the levels correspond to the equivalent of contour lines between colors. Only valid in conjunction with /PLOT/RIBBON.</p>
 <p align="left"><a name="_PLOT_LEVELS" id="_PLOT_LEVELS"></a>RIBBON<b>/LEVELS</b><br />
-All of the <a href="../customizing-plots/CONTOURING.html#_VPINDEXENTRY_852" title="6.8 CONTOURING">LEVELS settings</a> used for FILL or SHADE plots are available for the colors in a ribbon plot. Only valid in conjunction with /PLOT/RIBBON.</p>
+All of the <b><a href="../customizing-plots/CONTOURING.html#_VPINDEXENTRY_852" title="6.8 CONTOURING">LEVELS settings</a></b>used for FILL or SHADE plots are available for the colors in a ribbon plot. Only valid in conjunction with /PLOT/RIBBON.</p>
 <p align="left"><a name="_PLOT_PALETTE" id="_PLOT_PALETTE"></a>RIBBON<b>/PALETTE</b><br />
 Specifies a color palette. Any color palette may be used. Only valid in conjunction with /PLOT/RIBBON.</p>
 <p align="left"><a name="_PLOT_FAST" id="_PLOT_FAST"></a>RIBBON<b>/FAST</b><br />

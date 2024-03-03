@@ -189,7 +189,7 @@ xmlns:schema="http://schema.org/">
 <li id="menu-1351-1" class="middle odd sf-item-9 sf-depth-3 sf-no-children"><a href="../../demos/ferret-polymark-demo.html" class="sf-depth-3">Ferret Polymark Demo</a></li>
 <li id="menu-1349-1" class="middle even sf-item-10 sf-depth-3 sf-no-children"><a href="../../demos/ferret-constant-array-demo.html" class="sf-depth-3">Ferret Constant-Array demo</a></li>
 <li id="menu-1356-1" class="middle odd sf-item-11 sf-depth-3 sf-no-children"><a href="../../demos/ferret-land_detail-demo.html" class="sf-depth-3">Ferret land_detail demo</a></li>
-<li id="menu-1340-1" class="middle even sf-item-12 sf-depth-3 sf-no-children"><a href=".../../demos/coads-tour.html" class="sf-depth-3">COADS Tour</a></li>
+<li id="menu-1340-1" class="middle even sf-item-12 sf-depth-3 sf-no-children"><a href="../../demos/coads-tour.html" class="sf-depth-3">COADS Tour</a></li>
 <li id="menu-1341-1" class="middle odd sf-item-13 sf-depth-3 sf-no-children"><a href="../../demos/levitus-tour.html" class="sf-depth-3">Levitus Tour</a></li>
 <li id="menu-1342-1" class="middle even sf-item-14 sf-depth-3 sf-no-children"><a href="../../demos/how-to-use-ferret-and-opendap-to-access-and-analyze-remote-data-1.html" class="sf-depth-3">Use OPeNDAP</a></li>
 <li id="menu-1348-1" class="last odd sf-item-15 sf-depth-3 sf-no-children"><a href="../../demos/ferret-binary-read-demo.html" class="sf-depth-3">Ferret binary read demo</a></li>
@@ -258,7 +258,7 @@ CONTOUR/Z=234.5 salt</pre><p align="left"><b>Embedded expressions:</b></p>
 <p align="left">By default Ferret formats the results of embedded expressions using 16 significant digits. If the result of the expression is invalid (e.g., 1/0) the result by default is the string "bad". Controls allow you to specify the formatting of embedded expression results in both valid and invalid cases and to query the size and shape of the result. </p>
 <p align="left">The syntax to achieve this control is KEYWORD=VALUE pairs inside the grave accents, following the expression and set off by commas. The recognized keywords are "BAD=", "PRECISION=", and "RETURN=". Only the first character of the keyword is significant, so they may be abbreviated as "B=", "P=", and "R=".</p>
 <p align="left">PRECISION=, BAD=, and RETURN= may be specified simultaneously, in any order, separated by commas. If RETURN= is included, however, the other keywords will be ignored.</p>
-<p align="left">For converting numeric data to formatted strings, see also the <b><a href="../handing-string-data-symbols/STRING-FUNCTIONS.html#_VPINDEXENTRY_floatstr">FLOATSTR function</a></b> which allows a Fortran numeric format specifier to control the format.</p>
+<p align="left">For converting numeric data to formatted strings, see also the <b><a href="../handling-string-data-symbols/STRING-FUNCTIONS.html#_VPINDEXENTRY_floatstr">FLOATSTR function</a></b> which allows a Fortran numeric format specifier to control the format.</p>
 <p align="left"> </p>
 <p align="left"><a name="_VPINDEXENTRY_569" id="_VPINDEXENTRY_569"></a><a name="_VPINDEXENTRY_570" id="_VPINDEXENTRY_570"></a><b>PRECISION=#digits</b></p>
 <p align="left">can be used to control the number of significant digits displayed, up to a maximum of 16. <i>(Prior to Ferret v6.8 this limit was 10 digits but actually at most 7 digits were significant since Ferret calculations were performed in single precision.)</i> Ferret will, however, truncate terminating zeros following the decimal place. Thus</p>

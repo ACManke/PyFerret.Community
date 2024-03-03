@@ -159,10 +159,11 @@ All I want to do is plot a ship track with a particular map projection.</pre><h2
 <p> </p>
 <h2>Explanation:</h2>
 <p> </p>
-<p>The mp_line.jnl script shouldonly be used to <b>overlay</b> a line plot on top of a SHADE,FILL or CONTOUR plot. When run by itself, without the /OVER qualifier,it does not work as expected.</p>
+<p>The mp_line.jnl script should only be used to <b>overlay</b> a line plot on top of a SHADE,FILL or CONTOUR plot. When run by itself, without the /OVER qualifier,it does not work as expected.</p>
 <p>An easy way to create a blank underlay for the mp_linescript is to shade data from one of the etopo datasets with variousqualifiers so that you end up with a blank plot.</p>
 <h2>Solution:</h2>
-<p>The plot above shows a ship track in Puget Sound, Washington.The script to create it is given below and is commented with severaltricks we used to get the plot just right.</p>
+<p>The plot above shows a ship track in Puget Sound, Washington. The script to create it is given below and is commented with severaltricks we used to get the plot just right.</p>
+<p>The data used in the example may be found here: <a href="mp_ship_track.dat">mp_ship_track.dat</a></p>
 <pre>
 ! How to draw a ship track in a map projection.
 !

@@ -255,7 +255,7 @@ let depth = h[k=@rsum]-h/2
 set variable/title="DEPTH function"/unit=meters depth
 </pre><p><strong>Bathymetry and DEPTH(layer):</strong></p>
 <div class="dnd-atom-wrapper type-image context-sdl_editor_representation" contenteditable="false">
-<div class="dnd-drop-wrapper"><div class='image'><img typeof="foaf:Image" src="../sites/default/files/thumbnails/image/sig_reference.png" width="1203" height="481" alt="sig_reference.png" title="sig_reference.png" /></div></div>
+<div class="dnd-drop-wrapper"><div class='image'><img typeof="foaf:Image" src="../sites/default/files/images/faq/sig_reference.png" width="1203" height="481" alt="sig_reference.png" title="sig_reference.png" /></div></div>
 <div class="dnd-legend-wrapper" contenteditable="true">
 <div class="meta"></div>
 </div>
@@ -279,14 +279,15 @@ DEFINE AXIS/Z=0:180:2/UNIT=meters/DEPTH zdepth
 LET flow_on_depth = ZAXREPLACE(flow,depth, z[gz=zdepth])
 LET flow_at_50 = flow_on_depth[Z=50]
 </pre><p><strong>Plan views of flow. Right hand frame: SHADE/L=1 flow_at_50:</strong></p>
-<div class="image"><img alt="plan_view.png" height="498" src="../sites/default/files/thumbnails/image/plan_view.png" title="plan_view.png" typeof="foaf:Image" width="996" /></div>
+<div class="image"><img alt="plan_view.png" height="498" src="../sites/default/files/images/faq/plan_view.png" title="plan_view.png" typeof="foaf:Image" width="996" /></div>
 <p> </p>
 <p>Note: the missing points between the flow and the black mask occur because the deepest layer of flow is considered to be 1/2 grid box above the bottom</p>
 <p> </p>
 <pre>
 PLOT/X=0/Y=0/L=1:20 flow[k=8], flow_at_50</pre><p> </p>
 <div class="dnd-atom-wrapper type-image context-sdl_editor_representation" contenteditable="false">
-<div class="dnd-drop-wrapper"><div class='image'><img typeof="foaf:Image" src="../sites/default/files/thumbnails/image/sig_time_series.png" width="1177" height="588" alt="sig_time_series.png" title="sig_time_series.png" /></div></div>
+<div class="dnd-drop-wrapper"><div class='image'><img typeof="foaf:Image" src="../sites/default/files/images/faq/sig_time_series.png
+" width="1177" height="588" alt="sig_time_series.png" title="sig_time_series.png" /></div></div>
 <div class="dnd-legend-wrapper" contenteditable="true">
 <div class="meta">
 </div>
@@ -295,7 +296,7 @@ PLOT/X=0/Y=0/L=1:20 flow[k=8], flow_at_50</pre><p> </p>
 <p> </p>
 <pre>
 Right hand frame: SHADE/Z=0:180/Y=0/L=1 flow_on_depth</pre><div class="dnd-atom-wrapper type-image context-sdl_editor_representation" contenteditable="false">
-<div class="dnd-drop-wrapper"><div class='image'><img typeof="foaf:Image" src="../sites/default/files/thumbnails/image/cross_section.png" width="1177" height="588" alt="cross_section.png" title="cross_section.png" /></div></div>
+<div class="dnd-drop-wrapper"><div class='image'><img typeof="foaf:Image" src="../sites/default/files/images/faq/cross_section.png" width="1177" height="588" alt="cross_section.png" title="cross_section.png" /></div></div>
 <div class="dnd-legend-wrapper" contenteditable="true">
 <div class="meta"></div>
 </div>
@@ -304,7 +305,7 @@ Right hand frame: SHADE/Z=0:180/Y=0/L=1 flow_on_depth</pre><div class="dnd-atom-
 <pre>
 Right hand frame: SHADE/Z=0:180/X=0/L=1 flow_on_depth</pre><p> </p>
 <div class="dnd-atom-wrapper type-image context-sdl_editor_representation" contenteditable="false">
-<div class="dnd-drop-wrapper"><div class='image'><img typeof="foaf:Image" src="../sites/default/files/thumbnails/image/along_channel.png" width="1177" height="588" alt="along_channel.png" title="along_channel.png" /></div></div>
+<div class="dnd-drop-wrapper"><div class='image'><img typeof="foaf:Image" src="../sites/default/files/images/faq/along_channel.png" width="1177" height="588" alt="along_channel.png" title="along_channel.png" /></div></div>
 <div class="dnd-legend-wrapper" contenteditable="true">
 <div class="meta"></div>
 </div>
