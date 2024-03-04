@@ -163,7 +163,6 @@ All I want to do is plot a ship track with a particular map projection.</pre><h2
 <p>An easy way to create a blank underlay for the mp_linescript is to shade data from one of the etopo datasets with variousqualifiers so that you end up with a blank plot.</p>
 <h2>Solution:</h2>
 <p>The plot above shows a ship track in Puget Sound, Washington. The script to create it is given below and is commented with severaltricks we used to get the plot just right.</p>
-<p>The data used in the example may be found here: <a href="mp_ship_track.dat">mp_ship_track.dat</a></p>
 <pre>
 ! How to draw a ship track in a map projection.
 !
@@ -195,7 +194,7 @@ go mp_aspect
 shade/noaxis/pal=white/nokey/nolabs rose[g=map_grid], x_page, y_page
  
 ! Get the ship track lat and lon
-file/var="ship_lat,ship_lon" <a href="mp_ship_track.dat">mp_ship_track.dat</a>
+file/var="ship_lat,ship_lon" my_ship_track.dat
  
 ! Ferret hates negative numbers so convert these longitudes
 ! (in the range -123:-122) to be greater than zero.

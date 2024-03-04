@@ -326,13 +326,13 @@ SUBSET   : 10 points (T)
 29900   / 10:"26-NOV-1982"
 </pre><p>In this example, one COULD specify just "sst" for the second argument, but in fact the whole variable for all time steps would then be loaded into memory as the variable is passed to the function. So, just give a variable representing the time axis.</p>
 <pre>
-yes? use "http://ferret.pmel.noaa.gov/thredds/dodsC/data/PMEL/COADS/coads_sst.cdf"
+yes? use "http://data.pmel.noaa.gov/thredds/dodsC/data/PMEL/COADS/coads_sst.cdf"
 yes? let tsteps = t[gt=sst,L=1200:1320:12]
 yes? list tax_datestring(tsteps, t[gt=sst], "year")
              VARIABLE : TAX_DATESTRING(TSTEPS, T[GT=SST], "year")
              DATA SET : COADS Surface Marine Observations (1854-1993)
              FILENAME : coads_sst.cdf
-             FILEPATH : http://ferret.pmel.noaa.gov/thredds/dodsC/data/PMEL/COADS/
+             FILEPATH : http://data.pmel.noaa.gov/thredds/dodsC/data/PMEL/COADS/
              SUBSET   : 11 points (TIME)
  DEC-1953 /  1:"1953"
  DEC-1954 /  2:"1954"

@@ -260,10 +260,10 @@ yes? SAVE/FILE=example.cdf/I=1:100 sin(I/100)</pre><p align="left">This will cre
 yes? USE example</pre><p align="left">(USE is an alias for SET DATA/FORMAT=CDF, see )</p>
 <p align="left">Prior to Ferret v7, to read a netCDF dataset that is on an OPeNDAP server, simply specify the OPeNDAP address in quotes. The quotes are not necessary for Ferret / PyFerret v7 and higher.</p>
 <pre>
-yes? use "http://ferret.pmel.noaa.gov/pmel/thredds/dodsC/data/PMEL/coads_climatology.nc"
+yes? use "https://data.pmel.noaa.gov/pmel/thredds/dodsC/data/PMEL/coads_climatology.nc"
  
 ! Ferret v7 and higher:
-yes? use http://ferret.pmel.noaa.gov/pmel/thredds/dodsC/data/PMEL/etopo5.nc
+yes? use https://data.pmel.noaa.gov/pmel/thredds/dodsC/data/PMEL/etopo5.nc
 </pre><p><a name="data_exists" id="data_exists"></a></p>
 <p align="left">To check whether a dataset exists or a URL is available, the <a href="../appendix-a-external-functions/test_opendap.html">TEST_OPENDAP</a> function returns the flag that the netCDF library sends back on an attempt to open the data.</p>
 <p align="left">If a filename is not specified for writing, Ferret will generate one. (See the <a href="../commands-reference/SET.html#_VPINDEXENTRY_1648" title="SET">command SET LIST/FILE</a> in the Commands Reference section). An example of converting TMAP-formatted data to netCDF goes as follows:</p>
@@ -426,7 +426,7 @@ yes? say `uwnd,return=tunits`
 <p align="left" class="secHeader"><a name="_netcdf_bounds" id="_netcdf_bounds"></a><b><a id="_VPID_41" name="_VPID_41"></a>2.2.3 NetCDF Data with the bounds attribute </b></p>
 <p> </p>
 <p align="left">The CF standard for netCDF files defines a bounds attribute for coordinate axes, where the upper and lower bounds of the grid cells along an axis are specified by a bounds variable which is of size n*2 for an axis of length N. See Section 7.1 of the CF document</p>
-<p align="left"><a class="generated" href="http://cfconventions.org/">http://cfconventions.org/</a></p>
+<p align="left"><a class="generated" href="https://cfconventions.org/">https://cfconventions.org/</a></p>
 <p align="left">The coordinates on the axis may be anywhere within the cells defined by the upper and lower cell bounds. Ferret uses these as the upper and lower bounds of of axis cells (also known as boxes). They may be listed or otherwise accessed using the pseudo-variables XBOXLO, XBHOXH, YBOXLO, etc.</p>
 <p align="left">For example, a simple netCDF file with bounds would have the following ncdump output:</p>
 <pre>
@@ -539,7 +539,7 @@ yes? use reversed_axes.cdf
 <p align="left" class="secHeader"><a name="_VPINDEXENTRY_183" id="_VPINDEXENTRY_183"></a><b>2.2.6 NetCDF and non-standard calendars </b></p>
 <p><a name="Chapter2 NetCDF nonstandard calendar" id="Chapter2 NetCDF nonstandard calendar"></a></p>
 <p align="left">The netCDF conventions document discusses and defines usage for different calendar axes. These conventions for calendars are implemented in Ferret version 5.3 See the discussion of calendars in Section 4 of the CF Conventions document at</p>
-<p align="left"><a href="http://cfconventions.org/">http://cfconventions.org/</a></p>
+<p align="left"><a href="https://cfconventions.org/">https://cfconventions.org/</a></p>
 <p align="left">The calendars allowed are:</p>
 <table><tbody><tr><td>
 <p align="left">GREGORIAN or STANDARD (default)</p>
@@ -592,7 +592,7 @@ yes? use reversed_axes.cdf
 <a name="_VPINDEXENTRY_scale_offset" id="_VPINDEXENTRY_scale_offset"></a></p>
 <p align="left" class="secHeader"><b>2.2.7 NetCDF "packed data" </b></p>
 <p><a name="Chapter2 NetCDF nonstandard calendar" id="Chapter2 NetCDF nonstandard calendar"></a></p>
-<p align="left">The netCDF conventions documents describe the use of scale_factor and add_offset attributes for packing data. When Ferret encounters a variable in a netCDF file that has these attributes, it automatically applies them as the data is read, returning the scaled data. For details, please see the description of the scale_factor and add_offset attributes in the CF standards document at <a href="http://ferret.pmel.noaa.gov/noaa_coop/coop_cdf_profile.html">http://ferret.pmel.noaa.gov/noaa_coop/coop_cdf_profile.html</a></p>
+<p align="left">The netCDF conventions documents describe the use of scale_factor and add_offset attributes for packing data. When Ferret encounters a variable in a netCDF file that has these attributes, it automatically applies them as the data is read, returning the scaled data. For details, please see the description of the scale_factor and add_offset attributes in the CF standards document at <a href="https://cfconventions.org/">href="https://cfconventions.org/">https://cfconventions.org/</a>.org/</a></p>
 <p align="left"> </p>
 <p align="left"> </p>
 <p align="left"> </p>

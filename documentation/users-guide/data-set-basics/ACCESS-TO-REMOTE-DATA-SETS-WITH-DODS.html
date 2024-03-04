@@ -249,7 +249,7 @@ xmlns:schema="http://schema.org/">
 <p> </p>
 <p align="left">OPeNDAP (formerly called DODS, the Distributed Oceanographic Data System) allows users to access data anywhere from the Internet using a variety of client/server methods, including Ferret. Together, OPeNDAP and Ferret create a powerful tool for the retrieval, sampling, analyzing and displaying of datasets; regardless of size or data format (though there are data format limitations).</p>
 <p align="left">For more information, please see the OPeNDAP home page at</p>
-<p class="indented"><a href="http://www.opendap.org/">http://www.opendap.org/</a></p>
+<p class="indented"><a href="https://www.opendap.org/">https://www.opendap.org/</a></p>
 <p>
 <a name="_VPINDEXENTRY_226" id="_VPINDEXENTRY_226"></a></p>
 <p align="left" class="secHeader"><a name="ch2.7.2" id="ch2.7.2"></a><b>2.7.2 Accessing Remote Data Sets </b></p>
@@ -264,7 +264,7 @@ yes? use http://ferret.pmel.noaa.gov/pmel/thredds/dodsC/data/PMEL/etopo5.nc
 yes? list/x=140w/y=2n/t="16-Feb" sst
 VARIABLE : SEA SURFACE TEMPERATURE (Deg C)
 FILENAME : coads_climatology.nc
-FILEPATH : http://ferret.pmel.noaa.gov/pmel/thredds/dodsC/data/PMEL/
+FILEPATH : https://data.pmel.noaa.gov/pmel/thredds/dodsC/data/PMEL/
 LONGITUDE: 141W
 LATITUDE : 1N
 TIME : 15-FEB 16:29
@@ -280,11 +280,11 @@ To locate OPeNDAP data, you can search the <a href="https://www.earthdata.nasa.g
 <p align="left" class="secHeader"><a name="ch2.7.3" id="ch2.7.3"></a><b>2.7.3 Debugging Access to Remote </b><b>OPeNDAP Data Sets </b></p>
 <p> </p>
 <p align="left">To find out more information about a particular dataset, or to debug problems, there are three elements of the dataset which may be accessed via a web browser. To access this information, merely append a dds, das, or info to the dataset name. For example:</p>
-<p align="left"><a href="http://ferret.pmel.noaa.gov/pmel/thredds/dodsC/data/PMEL/coads_climatology.nc.dds">http://ferret.pmel.noaa.gov/pmel/thredds/dodsC/data/PMEL/coads_climatology.nc.dds</a></p>
+<p align="left"><a href="https://data.pmel.noaa.gov/pmel/thredds/dodsC/data/PMEL/coads_climatology.nc.dds">https://data.pmel.noaa.gov/pmel/thredds/dodsC/data/PMEL/coads_climatology.nc.dds</a></p>
 <p align="left">DDS stands for Data Description Structure and this will return a text description of the data sets structure.</p>
-<p align="left"><a href="http://ferret.pmel.noaa.gov/pmel/thredds/dodsC/data/PMEL/coads_climatology.nc.das">http://ferret.pmel.noaa.gov/pmel/thredds/dodsC/data/PMEL/coads_climatology.nc.das</a><b> </b></p>
+<p align="left"><a href="https://data.pmel.noaa.gov/pmel/thredds/dodsC/data/PMEL/coads_climatology.nc.das">https://data.pmel.noaa.gov/pmel/thredds/dodsC/data/PMEL/coads_climatology.nc.das</a><b> </b></p>
 <p align="left">DAS stands for Dataset Attribute Structure and this will return a text description of attributes assigned to the variables in the data set.</p>
-<p align="left">http://ferret.pmel.noaa.gov/pmel/thredds/dodsC/data/PMEL/coads_climatology.nc.info</a><b> </b></p>
+<p align="left">https://data.pmel.noaa.gov/pmel/thredds/dodsC/data/PMEL/coads_climatology.nc.info</a><b> </b></p>
 <p align="left">This will return a text description of the variables in the dataset, if available.</p>
 <p align="left"> </p>
 <p align="left" class="secHeader"><a name="ch2.7.4" id="ch2.7.4"></a><a name="_password" id="_password"></a><b>2.7.4 Security </b></p>
@@ -298,7 +298,7 @@ To locate OPeNDAP data, you can search the <a href="https://www.earthdata.nasa.g
 <p> </p>
 <p align="left" class="secHeader"><a name="ch2.7.6" id="ch2.7.6"></a><b>2.7.6 </b><b>OPeNDAP caching </b></p>
 <p> </p>
-<p align="left">This feature allows caching of frequently accessed OPeNDAP served datasets to produce a quicker response when requesting remote data. The first time you access an OPeNDAP data set, a file in the users home directory will be created called<b> .dodsrc</b>. This file is the OPeNDAP client initialization file. Please see the OPeNDAP Users Guide <a href="http://www.opendap.org/user/guide-html/guide.html">http://www.opendap.org/user/guide-html/guide.html</a> for details of the paramaters that this file contains. Initially, OPeNDAP caching will be turned off. In order to turn caching on, change the line in the newly created ~/.dodsrc file from</p>
+<p align="left">This feature allows caching of frequently accessed OPeNDAP served datasets to produce a quicker response when requesting remote data. The first time you access an OPeNDAP data set, a file in the users home directory will be created called<b> .dodsrc</b>. This file is the OPeNDAP client initialization file. Please see the OPeNDAP Users Guide <a href="https://www.opendap.org/user/guide-html/guide.html">https://www.opendap.org/user/guide-html/guide.html</a> for details of the paramaters that this file contains. Initially, OPeNDAP caching will be turned off. In order to turn caching on, change the line in the newly created ~/.dodsrc file from</p>
 <p align="left">USE_CACHE=0<br />
 to<br />
 USE_CACHE=1</p>
@@ -306,7 +306,7 @@ USE_CACHE=1</p>
 <p align="left">Note that if you edit the .dodsrc file, make sure that the lines within it all start in the first column.</p>
 <p align="left">The next time Ferret is run, and a OPeNDAP-served dataset is accessed, a file called .dods_cache will be created, typically in the users home directory. The location of the OPeNDAP cache directory can be controlled by the line</p>
 <p align="left">CACHE_ROOT=/home/twaits/.dods_cache/</p>
-<p align="left">in the user's .dodsrc file. This directory is where all the cached information is stored. To clear the OPeNDAP cache, simply delete the .dods_cache directory and all of it's contents (for example, rm -rf ~/.dods_cache). This directory will be recreated and repopulated with caching information the next time data is accessed via OPeNDAP , if caching is turned on. All of the paramater values in the .dodsrc file can be modified to better suit individual needs, and will be incorporated the next time Ferret is run and OPeNDAP served data is accessed. Again, see the OPeNDAP User guide, in particular the section "The OPeNDAP Client Initialization File (.dodsrc)" (<a href="http://www.opendap.org/user/guide-html/guide_72.html">http://www.opendap.org/user/guide-html/guide.html</a>) for more detailed information.</p>
+<p align="left">in the user's .dodsrc file. This directory is where all the cached information is stored. To clear the OPeNDAP cache, simply delete the .dods_cache directory and all of it's contents (for example, rm -rf ~/.dods_cache). This directory will be recreated and repopulated with caching information the next time data is accessed via OPeNDAP , if caching is turned on. All of the paramater values in the .dodsrc file can be modified to better suit individual needs, and will be incorporated the next time Ferret is run and OPeNDAP served data is accessed. Again, see the OPeNDAP User guide, in particular the section "The OPeNDAP Client Initialization File (.dodsrc)" (<a href="https://www.opendap.org/support/user-documentation">https://www.opendap.org/support/user-documentation</a>) for more detailed information.</p>
 <p align="left">It is often a useful diagnostic exercise to turn caching off and/or clear out the cache directory when attempts to access datasets in Ferret appear inconsistent. For example, if Ferret attempted to access an OPeNDAP-served dataset that was unavailable because the OPeNDAP server was down, that information may get cached and adversely effect the next attempt at retrieving the data.</p>
 <p align="left">For more detailed information on using OPeNDAP , and on setting up an OPeNDAP server, see the OPeNDAP pages <a href="http://www.opendap.org/">http://www.opendap.org</a></p>
 <p> </p>

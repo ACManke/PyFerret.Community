@@ -254,7 +254,9 @@ yes? go fland 20 white basemap solid x=232:241 y=44:50
 yes? go land_detail black overlay 8 9 blue lightbluen</pre><p><img class="image-inline" src="../../sites/default/files/images/documentation/tutorial_images/land_detail_1.png" /></p>
 <p>Now show a color plot with national boundaries and rivers. Access the detailed topography/bathymetry data from Smith and Sandwell via OPeNDAP.</p>
 <pre>
-yes? use "http://ferret.pmel.noaa.gov/cgi-bin/nph-dods/data/PMEL/smith_sandwell_topo_v8_2.nc"yes? fill/lev=(-5000,-1000,500)(-1000,0,50)/pal=topo/x=0:24/y=30:46 roseyes? go land_detail black overlay red " " blue blue
+yes? use "https://data.pmel.noaa.gov/pmel/thredds/dodsC/data/PMEL/smith_sandwell_topo_v8_2.nc"
+yes? fill/lev=(-5000,-1000,500)(-1000,0,50)/pal=topo/x=0:24/y=30:46 rose
+yes? go land_detail black overlay red " " blue blue
 </pre><p><img class="image-inline" src="../../sites/default/files/images/documentation/tutorial_images/land_detail_2.png" /></p>
 <p>Now show a plot with international marine boundaries marked</p>
 <pre>

@@ -247,33 +247,33 @@ yes? show symbol netcdf_version</pre><p>will query the netCDF library and return
 <p>Prior to Ferret v7, url must be enclosed in quotation marks. This requirement is lifted in Ferret v7 and higher; quotes are optional.</p>
 <p><strong>For example:</strong></p>
 <pre>
-yes? SET DATA "http://ferret.pmel.noaa.gov/pmel/thredds/dodsC/data/PMEL/levitus_climatology.nc"
+yes? SET DATA "http://data.pmel.noaa.gov/pmel/thredds/dodsC/data/PMEL/levitus_climatology.nc"
 yes? SHADE temp[z=0]
  
 ! Ferret v7 and higher
-yes? SET DATA http://ferret.pmel.noaa.gov/pmel/thredds/dodsC/data/PMEL/levitus_climatology.nc
+yes? SET DATA http://data.pmel.noaa.gov/pmel/thredds/dodsC/data/PMEL/levitus_climatology.nc
 yes? SHADE temp[z=0]
 </pre><p>Documentation on use of OPeNDAP data sets in Ferret is in the Ferret User's Guide <a href="../users-guide/data-set-basics/ACCESS-TO-REMOTE-DATA-SETS-WITH-DODS.html" title="2.7 ACCESS TO REMOTE DATA SETS WITH DODS">Ch2 Sec7</a>: <i>Access to remote data sets with OPeNDAP</i></p>
 <h4>Ferret and OPeNDAP demonstrations</h4>
 <p class="indented"><a href="../demos/how-to-use-ferret-and-opendap-to-access-and-analyze-remote-data-1.html" title="OPeNDAP usage in Ferret">OPeNDAP demo</a></p>
 <p class="indented"><b>dods_demo.jnl</b> - script file</p>
-<p>Full OPeNDAP documentation can be found at <a href="opendap.org/">opendap.org/</a></p>
+<p>Full OPeNDAP documentation can be found at <a href="https://opendap.org/">https://opendap.org/</a></p>
 <h4>The features of OPeNDAP 3.2 include:</h4>
 <p class="indented"><strong>A client-side startup file</strong> (.dodsrc)</p>
 <p class="indented"><strong>Client-side caching to store data you have requested on your local computer.</strong> The size and location of the cache, and expiration dates can be set using the initialization file .dodsrc</p>
 <p class="indented"><strong>Proxy server support</strong>, configured in the .dodsrc file</p>
 <p class="indented"><strong>Availability of a OPeNDAP master data set list</strong><br /><a name="finding_dods" id="finding_dods"></a></p>
 <h4>Finding OPeNDAP datasets</h4>
-<p class="indented"><strong>Search the</strong> <a href="http://docs.opendap.org/index.php/Dataset_List">OPeNDAP data set list</a></p>
+<p class="indented"><strong>Search the</strong> <a href="https://docs.opendap.org/index.php/Dataset_List">OPeNDAP data set list</a></p>
 <p class="indented"><strong>Search the</strong> <a href="https://www.earthdata.nasa.gov/technology/global-change-master-directory-gcmd">Global Change Master Directory</a></p>
-<p class="indented"><strong>Browse</strong> <a href="https://ferret.pmel.noaa.gov/NVODS/">OPeNDAP datasets through LAS</a></p>
+<p class="indented"><strong>Browse</strong> <a href="https://data.pmel.noaa.gov/nvods/las/UI.vm">OPeNDAP datasets through LAS</a></p>
 <p class="indented">PMEL, <a href="https://www.esrl.noaa.gov/psd/thredds/catalog.html">ESRL</a>, and <a href="http://www.coaps.fsu.edu/thredds/catalog.html">FSU</a> are sample OPeNDAP servers.</p>
 <p class="indented">
 <strong>For example:</strong></p>
 <pre>
-yes? SET DATA "http://ferret.pmel.noaa.gov/pmel/thredds/dodsC/data/PMEL/levitus_climatology.nc"</pre>
-<p>See also the <a href="http://ferret.pmel.noaa.gov/NVODS/">NVODS homepage</a>, the National Virtual Ocean Data System.</p>
-<p><strong>For assistance in setting up an OPeNDAP server at your site, please see the <a href="opendap.org/">OPeNDAP webpage</a>.</strong></p>
+yes? SET DATA "http://data.pmel.noaa.gov/pmel/thredds/dodsC/data/PMEL/levitus_climatology.nc"</pre>
+<p>See also the <a href="https://data.pmel.noaa.gov/nvods/las/UI.vm">NVODS homepage</a>, the National Virtual Ocean Data System.</p>
+<p><strong>For assistance in setting up an OPeNDAP server at your site, please see the <a href="https://opendap.org/">OPeNDAP webpage</a>.</strong></p>
 </div>
 </div>
 </div>
