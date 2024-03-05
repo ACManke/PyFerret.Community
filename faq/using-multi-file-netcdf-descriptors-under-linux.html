@@ -155,10 +155,7 @@ xmlns:schema="http://schema.org/">
 <p>
 </p><hr /><h2>Question:</h2>
 <pre>Why won't my multi-file netCDF descriptors work when running Ferret<br />under the Linux operating system?</pre><h2>Example:</h2>
-<pre>&gt; ferret_v500beta1.1 <br /> NOAA/PMEL TMAP<br /> Program FERRET (V500beta1.1)<br /> Version 5.00 - 06/03/99<br /> 21-Mar-00 11:34 <br />yes? set data coads_clim_irreg<br /> **TMAP ERR: Error in namelist record<br /> Error in: FORMAT_RECORD; or file not descriptor file<br /> Data set: /home/kobrien/fer_dsets/descr/coads_clim_irreg.des<br /><br /></pre><h2>Explanation:</h2>
-<p>This error occurs because the descriptor was formatted forFortran 77 namelist reads, but the Linux version of Ferret wascompiled using Fortran 90. Since Fortran 90 has a different formatfor namelist reads, the descriptor fails.</p>
-<h2>Solution:</h2>
-<p>The solution is to linuxize, or Fortran 90ize, the descriptors.Here is a <a href="ftp://ftp.pmel.noaa.gov/ferret/pub/bin/linuxize_descriptors">scriptfile which attempts to linuxize</a> Fortran 77 style descriptors.It is possible that the linuxize_descriptor file will not fixsome custom created descriptors. In that case the script willhave to be modified to deal with custom additions, but it shouldbe a good start.</p>
+<p>... This FAQ is obsolete.</p>
  
 <hr /><i></i>
 <p><i> </i></p>

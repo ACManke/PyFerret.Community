@@ -248,22 +248,23 @@ xmlns:schema="http://schema.org/">
 01 May 1995 - added links, convention note</p>
 <p> </p>
 <p>University participants:</p>
-<ul><li><a href="http://cires.colorado.edu/">CIRES (University of Colorado Joint Institute, Boulder CO)</a></li>
+https://cires.colorado.edu/
+<ul><li><a href="https://cires.colorado.edu/">CIRES (University of Colorado Joint Institute, Boulder CO)</a></li>
 <li><a href="https://cicoes.uw.edu//">CICOES (The Cooperative Institute for Climate, Ocean, and Ecosystem Studies, University of Washington Joint Institute, Seattle WA)</a> Formerly JISAO</li>
 </ul><p>NOAA participants:</p>
 <ul><li>Climate Data Center, Boulder CO</li>
-<li><a href="https://www.ncdc.noaa.gov/">NCDC, Asheville NC</a></li>
+<li><a href="https://www.ncei.noaa.gov/">NCEI, Asheville NC, Boulder CO, Silver Spring, MD</a></li>
 <li><a href="https://www.pmel.noaa.gov/">PMEL, Seattle WA</a></li>
 </ul><p> </p>
 <hr /><p> </p>
 <h2><a name="rev2_issue13" id="rev2_issue13"></a>Relationship to other Standards:</h2>
-<p>This standard is a set of conventions adopted in order to promote the interchange and sharing of files created with the netCDF Application Programmer Interface (API). This standard is based upon version 2.3 of netCDF. Documentation of the netCDF API may be found in the<cite> <a href="http://www.unidata.ucar.edu/software/netcdf/docs/">NetCDF documentation</a>. <em>All conventions named in that document will be adhered to in this standard unless noted to the contrary.</em></cite></p>
-<p><a name="rev2_issue1" id="rev2_issue1"></a>This standard also refers to version 1.7.1 of the <a href="http://www.unidata.ucar.edu/software/udunits/">Udunits standard</a> supported by Unidata. Included in the udunits package is a file, udunits.dat, which lists collections of unit names. The names given therein and their plural forms will be regarded as acceptable unit names for this standard with the following additions and deletions:</p>
+<p>This standard is a set of conventions adopted in order to promote the interchange and sharing of files created with the netCDF Application Programmer Interface (API). This standard is based upon version 2.3 of netCDF. Documentation of the netCDF API may be found in the<cite> <a href="ttps://docs.unidata.ucar.edu/netcdf-c/current/">NetCDF documentation</a>. <em>All conventions named in that document will be adhered to in this standard unless noted to the contrary.</em></cite></p>
+<p><a name="rev2_issue1" id="rev2_issue1"></a>This standard also refers to version 1.7.1 of the <a href="https://www.unidata.ucar.edu/software/udunits/">Udunits standard</a> supported by Unidata. Included in the udunits package is a file, udunits.dat, which lists collections of unit names. The names given therein and their plural forms will be regarded as acceptable unit names for this standard with the following additions and deletions:</p>
 <ul><li>"degrees" - deleted</li>
 <li>"level", "layer", "sigma_level" - added</li>
 </ul><p>The unit "degrees" creates ambiguities when attempting to differentiate longitude and latitude coordinate variables; files must use "degrees_east" for units of longitude and "degrees_north" for units of latitude or the alternative "spellings" of those names listed in the sections on longitude and latitude coordinates below. The dimensionless units "level", "layer", and "sigma_level" are sometimes needed when representing numerical model outputs.</p>
-<p>The udunits package also supports linear transformation of all units through the syntax "scale_factor <a href="mailto:unit_name@offset">unit_name@offset</a>", for example,"0.0005 degC@40000". This syntax, however, is not supported by this standard.</p>
-<p>These conventions have been registered with Unidata as the <b>COARDS</b> conventions and are available at <cite><a href="ftp://ftp.unidata.ucar.edu/pub/netcdf/Conventions/COARDS">ftp://ftp.unidata.ucar.edu/pub/netcdf/Conventions/COARDS</a> (1995).</cite></p>
+<p>The udunits package also supports linear transformation of all units through the syntax "scale_factor unit_name@offset", for example,"0.0005 degC@40000". This syntax, however, is not supported by this standard.</p>
+<p>These conventions have been registered with Unidata as the <b>COARDS</b> conventions (1995).</cite></p>
 <p> </p>
 <hr /><p> </p>
 <h2>Conventions:</h2>

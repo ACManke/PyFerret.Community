@@ -410,7 +410,7 @@ For writing NetCDF-4 formatted files, sets the level of HDF5 compression. (Ferre
 <pre>
 yes? SAVE/FILE=new.nc/CLOBBER/NCFORMAT=4/DEFLATE  temp</pre><p align="left">NetCDF-4 topics are furher discussed in <a href="../data-set-basics/NETCDF-DATA.html#_VPINDEXENTRY_netcdf4" title="2.2 NETCDF DATA">Chapter 2, section netCDF4. </a></p>
 <p align="left">Please see the full NetCDF documentation and descriptions of the use of HDF5 with netcdf-4 at the Unidata NetCDF pages,</p>
-<p><a href="http://www.unidata.ucar.edu/software/netcdf/">http://www.unidata.ucar.edu/software/netcdf/</a></p>
+<p><a href="https://www.unidata.ucar.edu/software/netcdf/">https://www.unidata.ucar.edu/software/netcdf/</a></p>
 <p align="left"> </p>
 <p><a name="_VPINDEXENTRY_1422" id="_VPINDEXENTRY_1422"></a></p>
 <p>LIST/<strong>EDGES</strong></p>
@@ -422,7 +422,7 @@ yes? SAVE/FILE=new.nc/CLOBBER/NCFORMAT=4/DEFLATE  temp</pre><p align="left">NetC
 <p>For writing NetCDF files, sets the endianness. (Ferret v6.6 and higher.) Only valid with LIST/FORMAT=CDF (alias SAVE), and for NetCDF-4 formatted files. In netCDF classic format, the problem of endianness is solved by writing all data in big-endian order. The HDF5 library allows data to be written as either big or little endian, and automatically reorders the data when it is read, if necessary.</p>
 <p>By default, netCDF uses the native types on the machine which writes the data. Users may change the endianness of a variable (before any data are written). In that case the specified endian type will be used in HDF5 (for example, a H5T_STD_I16LE will be used for NC_SHORT, if little-endian has been specified for that variable.)</p>
 <p align="left">Please see the full NetCDF documentation and descriptions of the use of HDF5 with netcdf-4 at the Unidata NetCDF pages,</p>
-<p><a href="http://www.unidata.ucar.edu/software/netcdf/">http://www.unidata.ucar.edu/software/netcdf/</a></p>
+<p><a href="https://www.unidata.ucar.edu/software/netcdf/">https://www.unidata.ucar.edu/software/netcdf/</a></p>
 <p align="left">Arguments to /ENDIAN are big, little, and native. The default is native.</p>
 <pre>
 yes? SAVE/NCFORMAT=4/ENDIAN=big/FILE=newfile.nc  my_var</pre><p align="left"><a name="_VPINDEXENTRY_1424" id="_VPINDEXENTRY_1424"></a>LIST/<b>HEAD</b></p>
@@ -443,7 +443,7 @@ SAVE/NCFORMAT=classic/FILE=a.nc  var  !write a Netcdf-4 Classic Model Formatted 
 SAVE/NCFORMAT=64bit_offset/FILE=a.nc  var ! Writes the 64-bit offset formated file.</pre><p align="left">LIST/NCFORMAT=netcdf4 may be abbreveiated as LIST/NCFORMAT=4 and LIST/NCFORMAT=classic may be abbreviated as LIST/NCFORMAT=3. The classic model files are compatible with software that uses NetCDF-3. The 64-bit offset formated files are a variation on the classic format.</p>
 <p>Other qualifiers on the LIST command for making settings for NetCDF-4 formatted files are /DEFLATE /ENDIAN /SHUFFLE /XCHUNK /YCHUNK /ZCHUNK /TCHUNK</p>
 <p align="left">The NetCDF documentation describes these formats. Please see the full NetCDF documentation and descriptions of the use of HDF5 with netcdf-4 at the Unidata NetCDF pages,</p>
-<p><a href="http://www.unidata.ucar.edu/software/netcdf/">http://www.unidata.ucar.edu/software/netcdf/</a></p>
+<p><a href="https://www.unidata.ucar.edu/software/netcdf/">https://www.unidata.ucar.edu/software/netcdf/</a></p>
 <p> </p>
 <p align="left"><a name="_VPINDEXENTRY_1426" id="_VPINDEXENTRY_1426"></a>LIST/<b>NOHEAD</b></p>
 <p align="left">Does not precede listing with a heading describing dataset, variable and region. This qualifier overrides the SET LIST/HEAD command.</p>
@@ -544,7 +544,7 @@ For writing NetCDF-4 formatted files (Ferret version 6.6 and higher), sets chunk
 yes? SAVE/FILE=deflate.nc/CLOBBER/NCFORMAT=4/DEFLATE=1/SHUFFLE=1\
 /XCHUNK=30/YCHUNK=30/ZCHUNK=1/TCHUNK=1 temp</pre><p align="left">This document discusses improving performance with Chunking: <a href="https://docs.unidata.ucar.edu/nug/current/netcdf_perf_chunking.html">https://docs.unidata.ucar.edu/nug/current/netcdf_perf_chunking.html</a></p>
 <p align="left">Please see the full NetCDF documentation and descriptions of the use of HDF5 with netcdf-4 at the Unidata NetCDF pages,</p>
-<p><a href="http://www.unidata.ucar.edu/software/netcdf/">http://www.unidata.ucar.edu/software/netcdf/</a></p>
+<p><a href="https://www.unidata.ucar.edu/software/netcdf/">https://www.unidata.ucar.edu/software/netcdf/</a></p>
 <p> </p>
 </div>
 </div>

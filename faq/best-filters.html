@@ -188,7 +188,7 @@ yes? plot sinc,sinc^2
 <p> </p>
 <p>Note that both are 1 at x=0, decrease to 0 at x=1, and are wavy with decreasing amplitude at higher values of x. The value x=1 refers to a frequency of 1/(length of the boxcar). The value x=0 is the mean value of the time series. Note that sinc(x) takes both positive and negative values (the "ringing" referred to above is the negative lobes), but sinc^2(x) does not.</p>
 <p> </p>
-<p>Note that the functions sinc and sinc^2 plotted above correspond to a boxcar of length n and a triangle of length 2n-1. For example, <a href="mailto:to@sbx">to@sbx</a>:3 and @spz:5. The plot does <b>NOT</b> compare the frequency response of @sbx:n and @spz:n! It compares @sbx:n and @spz:(2n-1). To compare equal filter lengths:</p>
+<p>Note that the functions sinc and sinc^2 plotted above correspond to a boxcar of length n and a triangle of length 2n-1. For example, to@sbx:3 and @spz:5. The plot does <b>NOT</b> compare the frequency response of @sbx:n and @spz:n! It compares @sbx:n and @spz:(2n-1). To compare equal filter lengths:</p>
 <pre>
 yes? let x2=xx/2
 yes? let pix2=pi*x2
