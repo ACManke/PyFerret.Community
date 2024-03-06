@@ -508,7 +508,31 @@ yes? PPL PLOT</i></pre><p align="left"><a id="_DEF_AXIS_LIKE" name="_DEF_AXIS_LI
 <p align="left">The DEFINE AXIS/LIKE= command must include a direction, /X= /Y= etc. The direction must match the direction of the axis whose attributes we are inheriting.  The coordinates are not inherited; only the attributes, such as units. For time axes the units and time-origin are inherited, as well as the calendar definition (e.g. non-Gregorian calendars such as noleap).  For vertical axes, the positive=up or down attribute is inherited.</p>
 <p>If qualifiers such as /UNITS or /CALENDAR are given on the command line those settings supersede the inherited attribute.</p>
 <p align="left"><a name="_VPINDEXENTRY_1320" id="_VPINDEXENTRY_1320"></a><a name="_VPINDEXENTRY_1321" id="_VPINDEXENTRY_1321"></a>DEFINE AXIS/<b>MODULO[=len]</b></p>
-<p align="left">Specifies that the axis being defined be treated as modulo; that is, the first point will wrap around and follow the last point (e.g., a longitude axis).The optional modulo length is the length in axis units of the modulo repeat. If a length is specified, it may be longer than the axis span, so that the axis is treated as a subspan modulo axis, and if no length is specified then the default modulo length for the type of axis is used. See the sections on <a href="../Grids-Regions/REGIONS.html#Chapter4-Modulo_axes" title="4.3 REGIONS">modulo axes</a> and subspan modulo axes for more information</p>
+<p align="left">Specifies that the axis being defined be treated as modulo; that is, the first point will wrap around and follow the last point (e.g., a longitude axis).The optional modulo length is the length in axis units of the modulo repeat. If a length is specified, it may be longer than the axis span, so that the axis is treated as a subspan modulo axis, and if no length is specified then the default modulo length for the type of axis is used. See the sections on <b><a href="../Grids-Regions/REGIONS.html#Chapter4-Modulo_axes" title="4.3 REGIONS">modulo axes</a></b> and subspan modulo axes for more information.</p>
+
+<p align="left">The modulo length of an axis is the span from the lower bound of the first grid cell to the upper bound of the last grid cell. So a global modulo longitude axis should not include coordinates at both 0 degrees and at 360 degrees, as the lower bound of the first cell is below 0 and the upper bound of the last cell is larger than 360. If an X axis has units of degrees or degrees_east, and if its length is 360 degrees or less, then it is automatically defined as a modulo axis with modulo length 360 degrees. If a T axis lies within the years 0000-0001 and its length is one year or less, it is automatically defined as a modulo (climatological) axis with length 1 year.</p>
+<pre>
+yes? define axis/x=5:360:5/units=degrees_east/modulo=360 x5deg
+
+yes? define axis/x=0:359:1/units=degrees_east x1deg
+
+yes? define axis/x=180W:178E:2/units=degrees_east x2deg
+</pre>
+
+<p align="left">See also the examples defining climatological axes below, under <b><a href="#PartII-DefineTrueMonthly" title="DEFINE">DEFINE AXIS/EDGES</a></b>.</p>
+
+I<p align="left">f we try to define an axis whose length exceeds the modulo length, this error message is issued:</p>
+<pre>
+yes? define axis/x=0:360:10/units=degrees/modulo=360 xaxis
+ **ERROR: improper grid or axis definition: Axis length exceeds modulo length
+</pre>
+
+<p align="left">Some netCDF files may have longitude axes defined with coordinates ranging from 0 through 360 and an axis attribute modulo=360. On opening such a file, we will see a warning; The file is initialized but the axis is not defined as a modulo axis.</p>
+<pre>
+yes? use lat_too_long.nc
+           *** NOTE: Ignored modulo length less than axis length: XLON_AX
+</pre>
+
 <p align="left"><a name="_VPINDEXENTRY_1322" id="_VPINDEXENTRY_1322"></a>DEFINE AXIS/<b>NAME=</b></p>
 <p align="left">Used only in conjunction with /FROM_DATA to specify the name of the axis to be defined.</p>
 <pre>
@@ -609,7 +633,7 @@ yes? DEFINE AXIS/Z=0:2000:100/UNITS=CM ZCM</pre><p align="left"><a name="_VPINDE
 <pre>
 yes? DEFINE AXIS/T0=1-JAN-0000/T=0:12:1/EDGES/units=months/MODULO month_reg</pre><p align="left">defines a climatological monthly axis which does not "drift" over time due to leap years. This non-drift behavior can be observed using a commands like</p>
 <pre>
-yes? SHOW AXIS /l=1:12001:1200 month_reg</pre><p align="left">which will show every 100th January over 1000 years. To create a monthly Gregorian calendar axis - with axis cells beginning on the first of each month, see the example under <a href="DEFINE.html#PartII-DefineTrueMonthly" title="DEFINE">DEFINE AXIS/EDGES</a> .</p>
+yes? SHOW AXIS /l=1:12001:1200 month_reg</pre><p align="left">which will show every 100th January over 1000 years. To create a monthly Gregorian calendar axis - with axis cells beginning on the first of each month, see the example under <a href="#PartII-DefineTrueMonthly" title="DEFINE">DEFINE AXIS/EDGES</a> .</p>
 <p align="left">2) The units dbar and mbar are recognized by Ferret, however, no automatic conversion is attempted between these and any other units.</p>
 <p align="left"><b><a name="_VPINDEXENTRY_1332" id="_VPINDEXENTRY_1332"></a></b><b>TIP:</b><b> </b></p>
 <p align="left">Ferret will convert recognized units of length to meters and recognized units of time to seconds during transformations such as integration (@IIN and @DIN) and differentiation (@DDB, @DDC, @DDF) (see "<a href="../variables-xpressions/XPRESSIONS.html#_VPINDEXENTRY_421">General Information about transformations</a>"). Using this characteristic it is always possible to query Ferret about the conversion factors from meters or seconds by integrating a grid cell of width one on an axis of the units in question. For example:</p>
