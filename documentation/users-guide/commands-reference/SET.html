@@ -461,7 +461,11 @@ yes? use/STRICT repeat_t_coord.ncyes? use/strict repeat_t_coord.nc
 *** NOTE: Coordinates out of order or missing on axis TMIN at subscript 4
 *** NOTE: A dummy axis of subscripts will be used</pre><p align="left"><b>SET DATA/FORMAT=cdf/FEATURE=</b></p>
 <p align="left">For data files that follow the CF standard for Discrete Sampling Geometries (DSG) using contiguous ragged array form, Ferret/PyFerret v7.6 implements initializing and working with the data.  On USE dataset.nc, Ferret reads the header and locates the attributes that define the feature type and the coordinates, and defines the "translation grid" that is used to find data at specified times and locations.</p>
-<p align="left">The /FEATURE= qualifier is used to change the interpretation from the feature-type given in the dataset to another interpretation.  Currently a Trajectory dataset may be viewed as a Timeseries dataset, with a timeseries increasing along each trajctory, or USE/FEATURE=none may be specified to ignore the DSG specification and treat the data as a set of  1-D variables.</p>
+<p align="left">
+
+<a name="_VPINDEXENTRY_set_data_feature" id="_VPINDEXENTRY_set_data_feature"></a>
+<a name="_VPINDEXENTRY_set_data_fmask" id="_VPINDEXENTRY_set_data_fmask"></a>
+The /FEATURE= qualifier is used to change the interpretation from the feature-type given in the dataset to another interpretation.  Currently a Trajectory dataset may be viewed as a Timeseries dataset, with a timeseries increasing along each trajctory, or USE/FEATURE=none may be specified to ignore the DSG specification and treat the data as a set of  1-D variables.</p>
 <p align="left"><b>SET DATA/FORMAT=cdf/FMASK=</b></p>
 <p align="left">For data files that follow the CF standard for Discrete Sampling Geometries (DSG), and beginning with Ferret/PyFerret v7.6, a mask variable can be applied to the dataset, picking out a desired subset of the features.</p>
 <p align="left">These commands set a mask on the names of the station ID's. With the mask in place, only the features (Timeseries, Profiles, etc) chosen by the mask are used in listings, plots, etc. The alias FMASK stands for SET DATA/FMASK . CANCEL DATA/FMASK (whose alias is CLEARMASK)  removes the feature-mask fro the dataset.</p>
@@ -1131,7 +1135,7 @@ yes? SET MODE JOURNAL:my_journal_file.jnl</pre><p align="left">The optional argu
 yes? SET MODE LAT:2</pre><p align="left">default state: set (argument: 1)</p>
 <p align="left"><b>Arguments</b><b> </b></p>
 <p align="left">See the example under "<a href="SET.html#_VPID_494">SET MODE LONG</a>" for a detailed description of precision control.</p>
-<h3 align="left">Ref Sec31.8.13. <a name="PartII-Set_mode_long" id="PartII-Set_mode_long"></a><a name="_VPID_494" id="_VPID_494"></a><a name="_VPINDEXENTRY_1712" id="_VPINDEXENTRY_1712"></a><b><a name="_VPINDEXENTRY_1714" id="_VPINDEXENTRY_1714"></a></b><b><a name="_VPINDEXENTRY_1715" id="_VPINDEXENTRY_1715"></a></b><b><a name="_VPINDEXENTRY_1715" id="_VPINDEXENTRY_1715"></a></b></h3>
+<h3 align="left">Ref Sec31.8.13. <a name="PartII-Set_mode_long" id="PartII-Set_mode_long"></a><a name="_VPID_494" id="_VPID_494"></a><a name="_VPINDEXENTRY_1712" id="_VPINDEXENTRY_1712"></a><a name="_VPINDEXENTRY_1713" id="_VPINDEXENTRY_1713"></a><b><a name="_VPINDEXENTRY_1714" id="_VPINDEXENTRY_1714"></a></b><b><a name="_VPINDEXENTRY_1715" id="_VPINDEXENTRY_1715"></a></b><b><a name="_VPINDEXENTRY_1715" id="_VPINDEXENTRY_1715"></a></b></h3>
 <p align="left" class="callout"><b>SET MODE LONG_LABEL </b></p>
 <p align="left">SET MODE LONG_LABEL causes Ferret to output longitude coordinate information in degrees E/W format (instead of the internal longitude coordinate). This will affect both plotted and listed output.</p>
 <p align="left">This mode accepts an optional argument specifying the degree of precision for the output. If the argument is omitted the precision will be unchanged from its last value.</p>

@@ -5,13 +5,16 @@ xmlns:content="http://purl.org/rss/1.0/modules/content/"
 xmlns:dc="http://purl.org/dc/terms/"
 xmlns:foaf="http://xmlns.com/foaf/0.1/"
 xmlns:og="http://ogp.me/ns#"
-xmlns:rdfs="https://www.w3.org/2000/01/rdf-schema#"
+xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 xmlns:sioc="http://rdfs.org/sioc/ns#"
 xmlns:sioct="http://rdfs.org/sioc/types#"
-xmlns:skos="https://www.w3.org/2004/02/skos/core#"
-xmlns:xsd="https://www.w3.org/2001/XMLSchema#"
+xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
 xmlns:schema="http://schema.org/">
-<head profile="https://www.w3.org/1999/xhtml/vocab">
+
+<!-- Mirrored from ferret.pmel.noaa.gov/Ferret/documentation/users-guide/customizing-plots/MAP-PROJECTIONS-AND-CURVILINEAR-COORDINATES by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Jun 2023 18:11:33 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head profile="http://www.w3.org/1999/xhtml/vocab">
 <title>6.10 MAP PROJECTIONS AND CURVILINEAR COORDINATES - Ferret/PyFerret Documentation</title>
 
 <link rel="stylesheet" href="../../../modules/system/system.base.css">
@@ -194,7 +197,7 @@ xmlns:schema="http://schema.org/">
 <li id="menu-1333-1" class="middle odd sf-item-5 sf-depth-2 sf-total-children-13 sf-parent-children-1 sf-single-children-12 menuparent"><a href="../../pyferret.html" class="sf-depth-2 menuparent">PyFerret</a>
 <ul>
 <li id="menu-1426-1" class="first odd sf-item-1 sf-depth-3 sf-total-children-4 sf-parent-children-0 sf-single-children-4 menuparent"><a href="../../pyferret/downloads.html" class="sf-depth-3 menuparent">PyFerret Downloads and Install</a>
-../../faq/ferret-faqs.html</li>
+</li>
 <li id="menu-1359-1" class="middle even sf-item-2 sf-depth-3 sf-no-children"><a href="../../pyferret/what-is-pyferret.html" class="sf-depth-3">What is PyFerret?</a></li>
 <li id="menu-1360-1" class="middle odd sf-item-3 sf-depth-3 sf-no-children"><a href="../../pyferret/why-use-pyferret.html" class="sf-depth-3">Why use PyFerret?</a></li>
 <li id="menu-1361-1" class="middle even sf-item-4 sf-depth-3 sf-no-children"><a href="../../pyferret/example-sessions-ferret.html" class="sf-depth-3">PyFerret for the Ferret user</a></li>
@@ -236,9 +239,9 @@ xmlns:schema="http://schema.org/">
  
 <div class="field field-name-body field-type-text-with-summary field-label-hidden">
 <div class="field-items">
-<div class="field-item even" property="content:encoded"><p><a id="_VPID_267" name="_VPID_267"></a><a id="_VPINDEXENTRY_873" name="_VPINDEXENTRY_873"></a><a id="_VPINDEXENTRY_874" name="_VPINDEXENTRY_874"></a><br /><a id="Chapter6-3_arg_commands" name="Chapter6-3_arg_commands"></a><a id="_VPID_268" name="_VPID_268"></a><a id="_VPINDEXENTRY_875" name="_VPINDEXENTRY_875"></a><a id="_VPINDEXENTRY_876" name="_VPINDEXENTRY_876"></a><a id="_VPINDEXENTRY_877" name="_VPINDEXENTRY_877"></a><a id="_VPINDEXENTRY_878" n                                                                                       
+<div class="field-item even" property="content:encoded"><p><a id="_VPID_267" name="_VPID_267"></a><a id="_VPINDEXENTRY_873" name="_VPINDEXENTRY_873"></a><a id="_VPINDEXENTRY_874" name="_VPINDEXENTRY_874"></a><br /><a id="Chapter6-3_arg_commands" name="Chapter6-3_arg_commands"></a><a id="_VPID_268" name="_VPID_268"></a><a id="_VPINDEXENTRY_875" name="_VPINDEXENTRY_875"></a><a id="_VPINDEXENTRY_876" name="_VPINDEXENTRY_876"></a><a id="_VPINDEXENTRY_877" name="_VPINDEXENTRY_877"></a><a id="_VPINDEXENTRY_878" name="_VPINDEXENTRY_878"></a><a id="_VPINDEXENTRY_879" name="_VPINDEXENTRY_879"></a></p>
 <p align="left" class="secHeader">6.10.1 <b>Three-argument (curvilinear) version of SHADE, FILL, CONTOUR, and VECTOR </b></p>
-<p align="left">The SHADE, FILL, CONTOUR and VECTOR commands now have a 3-argument mode which allows them to create output in "curvilinear" coordinates; i.e. those on <a href="../working-with-special-data-sets/CURVILINEAR-COORDINATE-DATA.html" title="8.8 CURVILINEAR COORDINATE DATA">curvilinear grids</a> or if a <a href="MAP-PROJECTIONS-AND-CURVILINEAR-COORDINATES.html#Chapter6-Map_Projections" title="6.10 MAP PROJECTIONS AND CURVILINEAR COORDINATES">map projection</a> has been defined.This allows for easy generation                                                                                                                                                
+<p align="left">The SHADE, FILL, CONTOUR and VECTOR commands now have a 3-argument mode which allows them to create output in "curvilinear" coordinates; i.e. those on <a href="../working-with-special-data-sets/CURVILINEAR-COORDINATE-DATA.html" title="8.8 CURVILINEAR COORDINATE DATA">curvilinear grids</a> or if a <a href="MAP-PROJECTIONS-AND-CURVILINEAR-COORDINATES.html#Chapter6-Map_Projections" title="6.10 MAP PROJECTIONS AND CURVILINEAR COORDINATES">map projection</a> has been defined.This allows for easy generation of output plots using sigma coordinates as well as the application of various map projections. A typical command line entry will look like:</p>
 <pre>
 yes? SHADE sst, x_page, y_page
 yes? VECTOR/OVER/PEN=1 uwnd, vwnd, x_page, y_page</pre><p align="left">where the last two arguments, <i><b>x_page(i,j)</b></i> and <i><b>y_page(i,j)</b></i>, must be (at least) 2-dimensional grids which specify the X page (horizontal) position and Y page (vertical) position for each <i><b>(i,j)</b></i> index pair. The page positions may be in any units; Ferret will scale the plot according to the ranges of values in the position fields.</p>
@@ -256,7 +259,7 @@ yes? SHADE values, xcoords, ycoords</pre><p align="left">say that nVx<b> </b>is 
 yes? SHADE/HLIMITS=0:360/MODULO values, xcoords, ycoords</pre><p align="left"><a id="_VPINDEXENTRY_881" name="_VPINDEXENTRY_881"></a>4. There is an alternative to the 4-argument VECTOR command. The script mp_poly_vectors sets up to plot vectors in curvilinear coordinates using filled polygons. See the script poly_vec_demo.jnl for a demonstration of this capability.</p>
 <p><a id="_VPID_269" name="_VPID_269"></a><a id="_VPINDEXENTRY_882" name="_VPINDEXENTRY_882"></a><a id="_VPINDEXENTRY_883" name="_VPINDEXENTRY_883"></a></p>
 <p align="left" class="secHeader">6.10.2 <b>Gridded data sets on curvilinear coordinates </b></p>
-<p align="left">If a given gridded variable is defined on a <a href="../working-with-special-data-sets/CURVILINEAR-COORDINATE-DATA.html#Chapter8-curvi_grids" title="8.8 CURVILINEAR COORDINATE DATA">curvilinear coordinate</a> system, then one need only provide the X and Y coordinate fields in the 3-argument SHADE or FILL command to accurately depict the field. For example, if a data set contained a variable TEMP, which was Nx x Ny in the longitude-latitude plane, and the data set also contained variables LON_POSI                                                             
+<p align="left">If a given gridded variable is defined on a <a href="../working-with-special-data-sets/CURVILINEAR-COORDINATE-DATA.html#Chapter8-curvi_grids" title="8.8 CURVILINEAR COORDINATE DATA">curvilinear coordinate</a> system, then one need only provide the X and Y coordinate fields in the 3-argument SHADE or FILL command to accurately depict the field. For example, if a data set contained a variable TEMP, which was Nx x Ny in the longitude-latitude plane, and the data set also contained variables LON_POSITION and LAT_POSITION of the same size, then the command:</p>
 <pre>
 yes? SHADE TEMP, LON_POSITION, LAT_POSITION</pre><p align="left">would render the curvilinear plot.</p>
 <p> </p>
@@ -334,13 +337,13 @@ yes? SHADE/NOAXIS sst*mp_mask, x_page, y_page</pre><p>Note that if you are drawi
 <p align="left">Overlays can be drawn once a map projection script has been run. To add a filled land mask, sea level pressure and wind vectors onto our SST map we would issue the following commands (Figure 6_12):</p>
 <p><a href="../../../sites/default/files/images/documentation/users-guide/user_guide_images/Ch6_fig12.gif"><img alt="Ch6_fig12" class="image-inline" src="../../../sites/default/files/images/documentation/users-guide/user_guide_images/Ch6_fig12.gif" style="width: 200px; height: 172px;" /></a></p>
 <pre>
-..
+...
 yes? GO mp_grid uwnd
 yes? GO mp_fland
 yes? VECTOR/OVER/PEN=1 uwnd*mp_mask, vwnd*mp_mask, x_page, y_page
 yes? GO mp_grid slp
 yes? CONTOUR/OVER/PEN=5 slp*mp_mask, x_page, y_page</pre><p> </p>
-<p align="left">If, instead, we wished to overlay sea level pressure for the South Atlantic only, we would need to take advantage of the <i><b>mp_central_meridian</b></i> and <i><b>mp_standard_parallel</b></i> variables. Normally, the map projection scripts calculate the central meridian and standard parallel from the currently set region and generate the <i><b>x_page</b></i> and <i><b>y_page</b></i> coordinate transformations accordingly. When we overlay a subregion, we need to rerun the map projection scr                                                                                                                                                                                                                                              
+<p align="left">If, instead, we wished to overlay sea level pressure for the South Atlantic only, we would need to take advantage of the <i><b>mp_central_meridian</b></i> and <i><b>mp_standard_parallel</b></i> variables. Normally, the map projection scripts calculate the central meridian and standard parallel from the currently set region and generate the <i><b>x_page</b></i> and <i><b>y_page</b></i> coordinate transformations accordingly. When we overlay a subregion, we need to rerun the map projection script and pass in values for <i><b>mp_central_meridian</b></i> and <i><b>mp_standard_parallel</b></i> so that they are match the previous values and are <b>not</b> calculated from the subregion associated with the overlay. (Figure 6_13)</p>
 <p><a href="../../../sites/default/files/images/documentation/users-guide/user_guide_images/Ch6_fig13.gif"><img alt="Ch6_fig13" class="image-inline" src="../../../sites/default/files/images/documentation/users-guide/user_guide_images/Ch6_fig13.gif" style="width: 200px; height: 172px;" /></a></p>
 <pre>
 yes? USE coads_climatology

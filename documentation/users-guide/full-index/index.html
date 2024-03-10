@@ -1011,7 +1011,7 @@ functions scat2grid_bin</a></b>, put scattered data into a grid by binning<br />
 <b><a href="../commands-reference/DEFINE.html#_VPINDEXENTRY_1318" title="Commands Reference">precision</a></b><br />
 <b><a href="../variables-xpressions/VARIABLES.html#_VPINDEXENTRY_255" title="conformability">pseudo-variables</a></b><br />
 <b><a href="../variables-xpressions/EMBEDDED-XPRESSIONS.html#_VPINDEXENTRY_585" title="RETURN">RETURN= start,end coord</a></b><br />
-<b><a href="../working-with-special-data-sets/DSG_datasets.html#_return_dsg_coord">RETURN=xcoord , ycoord, coordinage variable in DSG dataset</a></b><br />
+<b><a href="../working-with-special-data-sets/DSG_datasets.html#_return_coord_variable">RETURN=xcoord, ycoord, zcoord, tcoord coordinate variable in DSG dataset</a></b><br />
 <b><a href="../commands-reference/SHOW.html#_VPINDEXENTRY_1840" title="Commands Reference">SHOW GRID /X/Y/Z/T/E/F</a></b><br />
 <b><a href="../working-with-special-data-sets/DSG_datasets.html#_show_grid_dsg">SHOW GRID of DSG dataset</a></b><br />
 <b><a href="../converting-to-netcdf/WRITING-A-CONVERSION-PROGRAM.html#_VPINDEXENTRY_1123" title="Converting to NetCDF">spacing, NetCDF</a></b><br />
@@ -1274,7 +1274,7 @@ See <b><a href="../data-set-basics/ASCII-DATA.html#_VPINDEXENTRY_213" title="Dat
 <b><a href="../../../faq/calling-scat2grid-functions-dsg-data.html">DSG-to-grid regridding FAQ</a></b><br />
 <b><a href="../commands-reference/LIST.html#_VPINDEXENTRY_list_dsg" title="Commands Reference">listings: ascii listings </a></b><br />
 <b><a href="../commands-reference/LIST.html#_VPINDEXENTRY_save_dsg" title="Commands Reference">listings: SAVE data </a></b><br />
-<b><a href="../commands-reference/LIST.html#_VPINDEXENTRY_plot_dsg_data title=">Native plot styles</a></b><br />
+<b><a href="../working-with-special-data-sets/DSG_datasets.html#_native_dsg_plots title=">Native plot styles</a></b><br />
 <b><a href="../working-with-special-data-sets/DSG_datasets.html#_plot_along_dsg">Non-Native plot styles</a></b> e.g. to plot a map showig profile or timeseries stations<br />
 <b><a href="../commands-reference/SET.html#_VPINDEXENTRY_mode_dsg">MODE DSG</a></b><br />
 <b><a href="../commands-reference/SHOW.html#_VPINDEXENTRY_show_data_dsg" title="Commands Reference">output of SHOW DATA</a></b><br />
@@ -2184,7 +2184,7 @@ See also:
 <b><a href="../commands-reference/SET.html#_VPINDEXENTRY_1658" title="Commands Reference">cache, default size</a></b><br />
 <b><a href="../commands-reference/CANCEL.html#_VPINDEXENTRY_1233" title="Commands Reference">CANCEL MEMORY</a></b><br />
 <b><a href="../computing-environment/MEMORY-USE.html" title="Computing Environment">insufficient memory</a></b><br />
-<b><a href="../commands-reference/SET.html#_VPINDEXENTRY_1681" title="Commands Reference">large calculations</a></b><br />
+<b><a href="../computing-environment/MEMORY-USE.html#_VPINDEXENTRY_1681" title="Commands Reference">large calculations</a></b><br />
 <b><a href="../commands-reference/LOAD.html#_VPINDEXENTRY_1440" title="Commands Reference">loading expressions into</a></b><br />
 <b><a href="../computing-environment/MEMORY-USE.html#_VPINDEXENTRY_1024" title="Computing Environment">management</a></b><br />
 <b><a href="../introduction/GETTING-STARTED.html#_VPINDEXENTRY_8" title="Introduction">-memsize switch</a></b><br />
@@ -2935,6 +2935,7 @@ $ (dollar sign)<br />
 <b><a href="../variables-xpressions/EMBEDDED-XPRESSIONS.html#_VPINDEXENTRY_591" title="BAD flag">BAD flag</a></b><br />
 <b><a href="../variables-xpressions/EMBEDDED-XPRESSIONS.html#_VPINDEXENTRY_594" title="CALENDAR">CALENDAR</a></b><br />
 <b><a href="../variables-xpressions/EMBEDDED-XPRESSIONS.html#_VPINDEXENTRY_586" title="coordinates of result">coordinates of result</a></b><br />
+<b><a href="../variables-xpressions/EMBEDDED-XPRESSIONS.html#_VPINDEXENTRY_return_xcoord" title="TMOD">Coordinate variables for DSG data</a></b><br />
 <b><a href="../variables-xpressions/EMBEDDED-XPRESSIONS.html#_VPINDEXENTRY_604" title="data set information">data set information</a></b><br />
 <b><a href="../variables-xpressions/EMBEDDED-XPRESSIONS.html#_VPINDEXENTRY_RETURNDEFINED" title="defined">DEFINED</a></b><br />
 <b><a href="../variables-xpressions/EMBEDDED-XPRESSIONS.html#_VPINDEXENTRY_605" title="DSET">DSET</a></b><br />
@@ -2961,6 +2962,7 @@ $ (dollar sign)<br />
 <b><a href="../variables-xpressions/EMBEDDED-XPRESSIONS.html#_VPINDEXENTRY_615" title="USER_SCALE">USER_SCALE</a></b><br />
 <b><a href="../variables-xpressions/EMBEDDED-XPRESSIONS.html#_VPINDEXENTRY_588" title="XEND">XEND (also YZTEF)</a></b><br />
 <b><a href="../variables-xpressions/EMBEDDED-XPRESSIONS.html#_VPINDEXENTRY_619" title="TMOD">XMOD</a></b><br />
+<b><a href="../variables-xpressions/EMBEDDED-XPRESSIONS.html#_VPINDEXENTRY_return_xcoord" title="TMOD">XCOORD (also Y,Z,T)</a></b> Coordinate variables from DSG dataset<br />
 <b><a href="../variables-xpressions/EMBEDDED-XPRESSIONS.html#_VPINDEXENTRY_587" title="XSTART">XSTART (also YZTEF)</a></b></p>
 <p>Reversed axis</p>
 <p class="rteindent1">
@@ -3151,7 +3153,6 @@ $ (dollar sign)<br />
 <a href="../data-set-basics/ASCII-DATA.html#_VPINDEXENTRY_209" title="Data Set Basics">ASCII data examples</a><br />
 <a href="../data-set-basics/OVERVIEW.html#_VPINDEXENTRY_158" title="Data Set Basics">data set basics</a><br />
 <a href="../data-set-basics/BINARY-DATA.html#_VPINDEXENTRY_195" title="Data Set Basics">Fortran binary data</a><br />
-<a href="../commands-reference/SET.html#_VPINDEXENTRY_SET_DATA_BROWSE" title="Commands Reference">Alias OPEN</a><br />
 <a href="../data-set-basics/NETCDF-DATA.html#_VPINDEXENTRY_164" title="Data Set Basics">NetCDF files</a><br />
 <a href="../data-set-basics/BINARY-DATA.html#_VPID_51" title="Data Set Basics">stream files</a></p>
 <p class="rteindent1">
@@ -3274,9 +3275,9 @@ $ (dollar sign)<br />
 <a href="../commands-reference/SET.html#set_window_quality" title="Commands Reference">/QUALITY</a><br />
 <a href="../commands-reference/SET.html#set_window_engine" title="Commands Reference">/ENGINE</a></p>
 
-<b><p><a a="" href="../commands-reference/SET.html#set_window_xinch">settings on startup</a></b></p>
+<b><p><a href="../commands-reference/SET.html#set_window_xinch">settings on startup</a></b></p>
 <p class="rteindent1">
-<a a="" href="../commands-reference/SET.html#set_window_xinch" title="Commands Reference">/XINCH/YINCH</a></b><br />
+<a href="../commands-reference/SET.html#set_window_xinch" title="Commands Reference">/XINCH/YINCH</a></b><br />
 <b><a href="../customizing-plots/SPECIAL-SYMBOLS.html#_VPINDEXENTRY_871" title="Customizing Plots">PPLUS and Ferret settings</a></b></p>
 <p>setup: <b><a href="../customizing-plots/OVERVIEW.html#_VPINDEXENTRY_764" title="Customizing Plots">/SET_UP</a></b> qualifier for plot calls<br /></p>
 <b><a href="../computing-environment/computing-environment.html" title="Computing Environment">setting up to run Ferret</a></b></p>
