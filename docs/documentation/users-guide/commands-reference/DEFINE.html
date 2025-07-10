@@ -925,7 +925,7 @@ yes? PLOT/VS/HLIM=-1:1/VLIM=-1:1/LINE/I=1:200 cos(i/15),sin(i/15)</pre><p><a hre
 <a name="_define_data_agg" id="_define_data_agg"></a><b>DEFINE DATA </b></p>
 <p align="left"><b>DEFINE DATA/AGGREGATE /T /E /F /U /TITLE /QUIET /HIDE /TAXIS /FAXIS /TOVERLAP</b> name = [list of datsets]</p>
 <p align="left">Defines a virtual dataset, aggregating a set of datsets. This command is implemented only in the T, E, and F directions.  In addition DEFINE DATA/U defines a Union aggregation.</p>
-<p align="left"><a name="_tseries_alias" id="_tseries_alias"></a><b>TSERIES </b>is an alias for DEFINE DATA/AGGREGATE/T</p>
+<p align="left"><a name="_tseries_alias" id="_tseries_alias"></a><a href="#_define_data_agg_t"><b>TSERIES</b></a> is an alias for DEFINE DATA/AGGREGATE/T</p>
 <p align="left">Define an time series dataset from a set of datasets that represent timesteps or sets of timesteps, containing those variables from the datasets that have identical variable names and grids. This command is in many ways the equivalent of using a <a href="../converting-to-netcdf/CREATING-A-MULTI-FILE-NETCDF-DATA-SET.html" title="10.4 CREATING A MULTI-FILE NETCDF DATA SET">descriptor file</a> or multi-CDF dataset. Each method for creating a virtual dataset has advantages. Multi-file datasets will initialize more quickly than making an aggregation definition, as the "DEFINE DATA" step needs to initialize all of the member datasets to determine the time axis, but in a multi-CDF dataset, that information is read from the descriptor file. With a TSERIES aggregation, however, the correct axis bounds are applied, and missing time steps are handled by filling the data for those time steps with missing-value flags. Also a TSERIES aggregation is more flexible, making a time series of the time-step datasets which are currently available.</p>
 <p align="left"><a name="_ensemble_alias" id="_ensemble_alias"></a><b>ENSEMBLE </b>is an alias for DEFINE DATA/AGGREGATE/E</p>
 <p align="left">Define an ensemble dataset from a set of datasets, containing those variables from the datasets that have identical variable names and grids.</p>
@@ -938,7 +938,11 @@ yes? PLOT/VS/HLIM=-1:1/VLIM=-1:1/LINE/I=1:200 cos(i/15),sin(i/15)</pre><p><a hre
 <p align="left">The extension .agg may be left off; it is added to the file extensions for datasets that are handled automatically, and the dataset directories will be searched for the .agg file.</p>
 <p align="left"> </p>
 <p align="left"><a name="_define_data_agg_t" id="_define_data_agg_t"></a>DEFINE DATA<b>/T</b></p>
-<p align="left">Define the aggregate in the T direction. The variables in the member datsets must have a T axis with the same time units. The time origins do not need to match. Ferret computes correct common time steps for the aggregated time axis. The DEFINE DATA command will define a time axis, and the variables which are common to all of the member datasets will be listed on this time axis. Any variables without a time axis in member datasets will be included in the aggregated dataset.  The list of datasets need not be ordered in time; Ferret will reorder the members in time.</p>
+<p align="left">Define the aggregate in the T direction. The variables in the member datsets must have a T axis with the same time units (but see the following paragraph). The time origins do not need to match. Ferret computes correct common time steps for the aggregated time axis. The DEFINE DATA command will define a time axis, and the variables which are common to all of the member datasets will be listed on this time axis. Any variables without a time axis in member datasets will be included in the aggregated dataset.  The list of datasets need not be ordered in time; Ferret will reorder the members in time.</p>
+
+<p>
+If the set of files contain the data for a set of time steps but do not contain a coordinate variable for time, a TSERIES aggregation may still be defined.  Beginning with PyFerret v7.65, the aggregation can be defined either using the /TAXIS= qualifier to assign a time axis to the aggregation, or if /TAXIS= is not specified, the aggregation is defined using an ABSTRACT axis in the L direction. Note that no checking is done for time information of any kind. The files will be assigned to the L or Time axis in the order listed in the command line.</p>
+
 <p align="left">If the list of files comes from a string variable, or from a spawn command, the list does not need to be ordered by time. Ferret will order the members of the files in time.</p>
 <p align="left"><i><b>NOTE:</b></i> For time aggregations, we are aggregating netCDF files or URL's, not Ferret datasets. The list of datasets must be the file names with path, or the url's, not Ferret dataset numbers.</p>
 <p align="left"> </p>
@@ -975,6 +979,7 @@ yes? DEFINE DATA /AGGREGATE /HIDE /T /TAXIS=mytax  timeagg = aggfiles
 <pre>
 yes? DEFINE DATA /AGGREGATE /HIDE /T /TAXIS=tax timeagg = aggfiles
 *** NOTE: Time axis coordinates matched using @BIN</pre><p>If the timesteps in the member files do not correspond to the defined axis, the files are simply assigned to the axis using an @ASN transformation.  If there are more timesteps in the axis than in the member datasets, missing-data fills in the end of the timeseries.</p>
+
 <pre>
 yes? DEFINE DATA /AGGREGATE /HIDE /T /TAXIS=tax2 timeagg = aggfiles
 *** NOTE: Time axis coordinates matched using @ASN</pre><p><a name="_define_data_agg_toverlap" id="_define_data_agg_toverlap"></a>DEFINE DATA<b>/T/TAXIS= /TOVERLAP[=max]</b></p>
