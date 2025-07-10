@@ -2093,10 +2093,13 @@ yes? SET VARIABLE/GRID=my_grid width[D=snoopy]</pre><p align="left">This is the 
 <p align="left"><b><a name="_VPINDEXENTRY_1759" id="_VPINDEXENTRY_1759"></a><a name="_VPINDEXENTRY_1760" id="_VPINDEXENTRY_1760"></a></b></p>
 <h3 align="left">Ref Sec31.13.2a.</h3>
 <p align="left">SET VARIABLE/NAME=<br />
-This is effectively a RENAME command -- applies to all classes of variables (but not pseudo-variables). Useful for renaming variables whose names are incorrect, or not meaningful; or if we want to define a new variable but name it using an existing variable name (see Example 2 below). A common application of this is in creating output netCDF files in which contain modified versions of variables from input files.</p>
+This is effectively a RENAME command -- applies to all classes of variables (but not pseudo-variables). Useful for renaming variables whose names are incorrect, or not meaningful; or if we want to define a new variable but name it using an existing variable name (see Example 2 below). A common application of this is in creating output netCDF files in which contain modified versions of variables from input files. </p>
+
 <pre>
 yes? SET VARIABLE/NAME=new old
-</pre><p align="left"><b>Example 1: </b></p>
+</pre>
+<p><i><b>Note:</b></i> Variable renaming is implemented for Aggregation datasets including Ensembles, Union aggregations, and Forecast aggregations allow SET VARIABLE/NAME beginning with PyFerret V7.65. If variables in the member files have been renamed in order to form the aggregation, then further renaming of the variables in the aggregation itself will likely fail with an error message. Renaming is not allowed for Timeseries aggregations or descriptor files (MC files) because the member datasets are not initialized until data is to be read from the files.</p>
+<p align="left"><b>Example 1: </b></p>
 <p>Give more useful names to a variable in a dataset. This changes the names for the variables that Ferret stored when it initialized the dataset. (In this example, we would probably also want to use SET VAR/UNITS and SET VAR/TITLE to set those attributes for the variables.)</p>
 <pre>
 yes? SHOW DATA
