@@ -180,10 +180,10 @@ let tt = T[gt=sst] ! tt is the coordinates along the T axis
  
 let t0 = tt[t="7-aug-0000"@itp]
 let val0 = sst[x=180,y=0,t="7-aug-0000"@itp]
-plot/vs/over/nolab/line=8/color=red t0,val0
+plot/vs/over/nolab/symbol/thick/color=red t0,val0
  
 ! put a box around the "X"
-polygon/over/line=8/title="Special region" t0+500*xsqr, 0.05*ysqr+val0
+polygon/over/thick/title="Special region" t0+500*xsqr, 0.05*ysqr+val0
  
 ! place an "X" on the data point nearest to 15-may
 ! Note that @ITP is absent, so behavior is set by MODE INTERPOLATE
@@ -208,7 +208,7 @@ shade/x=180 sst ! latitude vs time plot
 let tlo = tt[t="1-jul-0000"@itp]
 let thi = tt[t="1-aug-0000"@itp]
  
-polygon/over/line=7/pal=gray/pat=lite_up_left_to_right {`tlo`, `thi`,` thi`, `tlo`}, {20, 20, 40, 40}</pre></div>
+polygon/over/thick/pal=gray/opacity=40 {`tlo`, `thi`,` thi`, `tlo`}, {20, 20, 40, 40}</pre></div>
 </div>
 </div>
 
