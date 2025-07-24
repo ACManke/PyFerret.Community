@@ -73,8 +73,8 @@ myfile.nc</a>&quot;}<br>    yes? LET nfiles = `a,RETURN=IEND`<br>**    yes? IF `
   </blockquote>
   <pre>  Unfortunately, none of the Ferret versions (5.53,5.7,5.8 &amp; 6.0) on<br>  my Linux PC gives the intended result (nfiles=2 or 1):<br><br>  The above example will give nfiles a value, which is always 2000 <br>  plus the number of dummy filenames used in the definition of &quot;a&quot;,
 <br>  irrespective of whether &quot;<a rel="nofollow" href="http://myfile.nc" target="_blank" >myfile.nc</a>&quot; exists in pwd or not. <br>  This means that, in the presence of SPAWN command, Ferret have a
-<br>  bug/difficulty in extracting the number of entries using RETURN <br>  command. <br><br>  This is the reason why i suggested to use XSEQUENCE to get the<br>  number of files, in my earlier reply:<br>  (<a rel="nofollow" href="http://ferret.pmel.noaa.gov/Ferret/Mail_Archives/fu_2007/msg00225.html" target="_blank" >
-http://ferret.pmel.noaa.gov/Ferret/Mail_Archives/fu_2007/msg00225.html</a>)<br><br>  However, if the file &quot;<a rel="nofollow" href="http://myfile.nc" target="_blank" >myfile.nc</a>
+<br>  bug/difficulty in extracting the number of entries using RETURN <br>  command. <br><br>  This is the reason why i suggested to use XSEQUENCE to get the<br>  number of files, in my earlier reply:<br>  (<a rel="nofollow" href="../fu_2007/msg00225.html" target="_blank" >
+../fu_2007/msg00225.html</a>)<br><br>  However, if the file &quot;<a rel="nofollow" href="http://myfile.nc" target="_blank" >myfile.nc</a>
 &quot; does not exist in pwd, then the <br>  RETURN=IEND command will yield &quot;1&quot; instead of &quot;0&quot;, irrespective of<br>  whether we have used XSEQUENCE or not. See this example :<br><br>      yes? let a = {spawn:&quot;ls 
 <a rel="nofollow" href="http://nonexistent.nc" target="_blank" >nonexistent.nc</a>&quot;}<br>      yes? list a<br>           ls: <a rel="nofollow" href="http://nonexistent.nc" target="_blank" >
 nonexistent.nc</a>: No such file or directory<br>                VARIABLE : {SPAWN:&quot;ls <a rel="nofollow" href="http://nonexistent.nc" target="_blank" >nonexistent.nc</a>&quot;}<br>
