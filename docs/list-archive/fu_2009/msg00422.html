@@ -50,7 +50,7 @@
 Hi Fabian and Martin,<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; In Martins case, I guess the variable lwdn_ber do have a valid<br>time axis. According to me, the problem lies in the fact that, you are doing a time-axis<br>
 regridding and writing out data within a time-repeat loop. Remember that Ferret is not<br>a immediate mode evaluator and hence the requested linear interpolation is being done<br>when the respective variable hits an action command (see user manual, Ch3 Sec2. <br>
 EXPRESSIONS) ie. save.<b><br></b><p align="left"><b><font size="4" color="#1f1a17" face="Palatino">
-</font></b></p>&#xA0;The solution is to make the repeat loop over any other axis than time. See case 2 (in <br>Tricks)&#xA0; in the following post,<br><br><a rel="nofollow" href="http://www.pmel.noaa.gov/maillists/tmap/ferret_users/fu_2007/msg00489.html">http://www.pmel.noaa.gov/maillists/tmap/ferret_users/fu_2007/msg00489.html</a><br>
+</font></b></p>&#xA0;The solution is to make the repeat loop over any other axis than time. See case 2 (in <br>Tricks)&#xA0; in the following post,<br><br><a rel="nofollow" href="../fu_2007/msg00489.html">../fu_2007/msg00489.html</a><br>
 <br>Please let me know if you have any questions.<br><br>Thanks and Regards,<br><br>Jaison<br><br><br><div class="gmail_quote">On Wed, Jul 8, 2009 at 9:18 AM, Fabian Lienert <span dir="ltr">&lt;<a rel="nofollow" href="mailto:cccma-student-003@xxxxxxxx">cccma-student-003@xxxxxxxx</a>&gt;</span> wrote:<br>
 <blockquote class="gmail_quote" style="border-left: 1px solid rgb(204, 204, 204); margin: 0pt 0pt 0pt 0.8ex; padding-left: 1ex;">Hi Martin,<br>
 <br>
@@ -59,7 +59,7 @@ Appending lwdn_ber to a netcdf file inside a loop should work if lwdn_ber has a 
 If lwdn_ber does not have a time axis, the only way I could come up with is to add some<br>
 other variable with a time axis, multiplied by zero, so that the variable is being redefined<br>
 inside the loop. See my message in the ferret users archive, the second part might help you:<br>
-<a rel="nofollow" href="http://www.pmel.noaa.gov/maillists/tmap/ferret_users/fu_2009/msg00401.html" target="_blank">http://www.pmel.noaa.gov/maillists/tmap/ferret_users/fu_2009/msg00401.html</a><br>
+<a rel="nofollow" href="../fu_2009/msg00401.html" target="_blank">../fu_2009/msg00401.html</a><br>
 <br>
 Hope this helps.<br>
 Fabian<div><div></div><div class="h5"><br>

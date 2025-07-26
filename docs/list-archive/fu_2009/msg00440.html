@@ -51,7 +51,7 @@
 <!--X-Head-Body-Sep-End-->
 <!--X-Body-of-Message-->
 Hi All,<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; As Ansley explained, the non-persistent ppl commands should be used<br>with each call to plot/fill commands. Please have a look at the following <br>posting for a list of ppl commands by their nature (i have used the term<br>
-&quot;stand alone&quot; for persistent ppl commands).<br><br><a rel="nofollow" href="http://www.pmel.noaa.gov/maillists/tmap/ferret_users/fu_2006/msg00413.html">http://www.pmel.noaa.gov/maillists/tmap/ferret_users/fu_2006/msg00413.html</a><br>
+&quot;stand alone&quot; for persistent ppl commands).<br><br><a rel="nofollow" href="../fu_2006/msg00413.html">../fu_2006/msg00413.html</a><br>
 <br>With such non-persistent commands like SHAKEY, you could easily use the <br>Ferret symbol capabilities to make the multi-panel plotting easier. Define<br>a symbol like <br><br>&#xA0;&#xA0; define symbol shak&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; = , , 0.115&#xA0;&#xA0;&#xA0;&#xA0; ! change just the label size<br>
 <br>either in the beginning of your script, or even in the startup file. Then,<br>use it as <br><br>&#xA0;&#xA0; fill/....../set ....<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ppl shakey ($shak)<br>&#xA0;&#xA0; ppl fill<br><br>with all fill commands where you want to have a common type of colorkey.<br>
 <br>Please have a look at the attached custom_cmds.jnl file for a working <br>example. You could also define two fill commands as symbols, one for plots<br>with colorkey and one for without it. This is one good example for a <br>

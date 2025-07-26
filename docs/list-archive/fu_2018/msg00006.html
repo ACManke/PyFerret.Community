@@ -74,12 +74,12 @@
     just skip any call to set the aspect ratio, if you want to keep the
     aspect ratio that is results from your viewport definitions, or use
     the script &quot;mp_viewpot_aspect.jnl.&#xA0; For more details see this FAQ,<br>
-    <a rel="nofollow" class="m_6518090984498115445moz-txt-link-freetext" href="http://ferret.pmel.noaa.gov/Ferret/faq/map-projections-in-viewports" target="_blank">http://ferret.pmel.noaa.gov/<wbr>Ferret/faq/map-projections-in-<wbr>viewports</a><br>
+    <a rel="nofollow" class="m_6518090984498115445moz-txt-link-freetext" href="http://ferret.pmel.noaa.gov/Ferret/faq/map-projections-in-viewports" target="_blank">http://ferret.pmel.noaa.gov/Ferret/faq/map-projections-in-viewports</a><br>
     <br>
     For drawing a single color key for all of the viewports on the page,
     it sounds as if you are doing things as described in this message,
     for instance,<br>
-<a rel="nofollow" class="m_6518090984498115445moz-txt-link-freetext" href="https://www.pmel.noaa.gov/maillists/tmap/ferret_users/fu_2000/msg00226.html" target="_blank">https://www.pmel.noaa.gov/<wbr>maillists/tmap/ferret_users/<wbr>fu_2000/msg00226.html</a><br>
+<a rel="nofollow" class="m_6518090984498115445moz-txt-link-freetext" href="../fu_2000/msg00226.html" target="_blank">../fu_2000/msg00226.html</a><br>
     <br>
     <br>
     Another method would be to draw just the colorbar first, in its own
@@ -88,7 +88,7 @@
     <br>
     <tt>! Define the common colorbar and levels for all plots</tt><tt><br>
     </tt><tt>define symbol plot_qualifiers =
-      /palette=blue_orange/levels=(-<wbr>inf)(-20,20,4)(inf)</tt><tt><br>
+      /palette=blue_orange/levels=(-inf)(-20,20,4)(inf)</tt><tt><br>
       <br>
     </tt><tt>! Draw just the colorbar across the top of the page.</tt><tt><br>
     </tt><tt>! use a RIBBON/VS command with /noaxes and /nolabels,
@@ -101,7 +101,7 @@
     </tt><tt><br>
     </tt><tt>
     </tt><tt>set view full</tt><tt><br>
-    </tt><tt>ribbon/vs/hlim=5:10/nolab/<wbr>noax/key=horiz($plot_<wbr>qualifiers)&#xA0;
+    </tt><tt>ribbon/vs/hlim=5:10/nolab/noax/key=horiz($plot_qualifiers)&#xA0;
       {1,1}, {0,0},&#xA0; {0,0}</tt><tt><br>
     </tt><tt><br>
     </tt><tt>! Now define other viewports and draw the plots</tt><tt>,
@@ -147,14 +147,14 @@
         <div class="gmail_default" style="color:rgb(0,0,0)"><br>
         </div>
         <div class="gmail_default" style="color:rgb(0,0,0)">go
-          multi_view 3,2,.43,0.070,0.052,.26,.064,<wbr>0.058,a<br>
+          multi_view 3,2,.43,0.070,0.052,.26,.064,0.058,a<br>
         </div>
         <br>
         <div class="gmail_default" style="color:rgb(0,0,0)">
-          <div class="gmail_default" style="color:rgb(0,0,0)">use <a rel="nofollow" href="http://file1.nc" target="_blank">file1.nc</a>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;<wbr>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
+          <div class="gmail_default" style="color:rgb(0,0,0)">use <a rel="nofollow" href="http://file1.nc" target="_blank">file1.nc</a>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
             !!! file containing the variable !!!!!<br>
           </div>
-          use <a rel="nofollow" href="http://file2.nc" target="_blank">file2.nc</a>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;<wbr>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
+          use <a rel="nofollow" href="http://file2.nc" target="_blank">file2.nc</a>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
           !!! file containing the probability !!!!<br>
           <br>
           let ohcg1=ohc_new[d=1]<br>
@@ -188,14 +188,14 @@
           set viewport a32<br>
           GO mp_mcbryde_fpp<br>
           SET GRID slope; GO mp_aspect<br>
-          fill/NOLAB/NOAX/lev=(-inf)(-<wbr>20,20,4)(inf)/pal=blue_orange
+          fill/NOLAB/NOAX/lev=(-inf)(-20,20,4)(inf)/pal=blue_orange
           slope*12, x_page, y_page<br>
           GO mp_graticule&#xA0; `xmin` `xmax` `xdel` `ymin` `ymax` `ydel` 1
           0&#xA0;&#xA0; !20 380 30 -63 63 `126/6` 1 0<br>
           GO mp_fland 120 gray overlay detailed&#xA0; <br>
           GO mp_land thick<br>
           GO mp_grid p95<br>
-          plot/vs/OVER/sym=21/size=0.04/<wbr>nolab/nokey mp_mask*x_page*p95,
+          plot/vs/OVER/sym=21/size=0.04/nolab/nokey mp_mask*x_page*p95,
           mp_mask*y_page*p95<br>
           <br>
           go mp_label -8 -70 0 0 .11 &quot;@cr 20E&quot;<br>
@@ -263,14 +263,14 @@
                 <br>
               </div>
               <div class="gmail_default" style="color:rgb(0,0,0)">go
-                multi_view 3,2,.43,0.070,0.052,.26,.064,0<wbr>.058,a<br>
+                multi_view 3,2,.43,0.070,0.052,.26,.064,0.058,a<br>
               </div>
               <div class="gmail_default" style="color:rgb(0,0,0)"><br>
               </div>
-              <div class="gmail_default" style="color:rgb(0,0,0)">use <a rel="nofollow" href="http://file1.nc" target="_blank">file1.nc</a>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;<wbr>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
+              <div class="gmail_default" style="color:rgb(0,0,0)">use <a rel="nofollow" href="http://file1.nc" target="_blank">file1.nc</a>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
                 !!! file containing the variable !!!!!<br>
               </div>
-              <div class="gmail_default" style="color:rgb(0,0,0)">use <a rel="nofollow" href="http://file2.nc" target="_blank">file2.nc</a>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;<wbr>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
+              <div class="gmail_default" style="color:rgb(0,0,0)">use <a rel="nofollow" href="http://file2.nc" target="_blank">file2.nc</a>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
                 !!! file containing the probability !!!!<br>
               </div>
               <br>
@@ -298,7 +298,7 @@
               SET REGION/X=19.5:380.5/Y=-63:63<br>
               GO mp_mcbryde_fpp<br>
               SET GRID slope; GO mp_aspect<br>
-              fill/NOLAB/NOAX/NOKEY/lev=(-in<wbr>f)(-20,20,4)(inf)/pal=blue_ora<wbr>nge
+              fill/NOLAB/NOAX/NOKEY/lev=(-inf)(-20,20,4)(inf)/pal=blue_orange
               slope*12, x_page, y_page<br>
               ppl shakey 1, 0, 0.14, , 6, 6, -2.8, 3.8, .29, .50<br>
               GO mp_graticule 20 380 30 -63 63 `126/6` 1<br>

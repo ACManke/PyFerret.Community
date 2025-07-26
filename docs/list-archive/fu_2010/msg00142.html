@@ -47,7 +47,7 @@
 
 I had trouble with this before but found a work-around.  Here is some info...
 
-<a  rel="nofollow" href="http://www.pmel.noaa.gov/maillists/tmap/ferret_users/fu_2009/msg00601.html">http://www.pmel.noaa.gov/maillists/tmap/ferret_users/fu_2009/msg00601.html</a>
+<a  rel="nofollow" href="../fu_2009/msg00601.html">../fu_2009/msg00601.html</a>
 
 Basically, what worked for me was to convert the metafile to postscript then I used Imagemagick's &quot;convert&quot; command which has an antialias flag that will remove the lines.  I had to use a very high resolution to retain the quality of the original postscript in the conversion.  Here is a shell script I wrote to do some of these things.  You could edit it to meet your needs.  Note that without the &quot;convert&quot; command, this will not work.
 
