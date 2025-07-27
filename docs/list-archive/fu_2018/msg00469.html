@@ -1,3 +1,4 @@
+ 
 <!-- MHonArc v2.6.18 -->
 <!--X-Subject: Re: [ferret_users] integration of flux vector along the coastline to compute the transport -->
 <!--X-From-R13: Dlb Thehr <shehrNunjnvv.rqh> -->
@@ -15,7 +16,7 @@
 <!--X-Reference: CE303F7A&#45;3642&#45;4F1B&#45;84BA&#45;8FAD8804894C@noaa.gov -->
 <!--X-Head-End-->
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-        "http://www.w3.org/TR/html4/loose.dtd">
+"http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <title>Re: [ferret_users] integration of flux vector along the coastline to compute the transport</title>
@@ -27,7 +28,7 @@
 <!--X-TopPNI-->
 <HR>
 <center>[<a href="msg00468.html">Thread Prev</a>][<a href="msg00470.html">Thread Next</a>][<A HREF="threads2018.html#00469">Index</A>]</center>
-
+ 
 <!--X-TopPNI-End-->
 <!--X-MsgBody-->
 <!--X-Subject-Header-Begin-->
@@ -40,20 +41,7 @@
 <li><strong>Subject</strong>: <strong>Re: [ferret_users] integration of flux vector along the coastline to compute the transport</strong></li>
 <li><strong>From</strong>: <strong>Ryo Furue &lt;<a href="mailto:furue@DOMAIN.HIDDEN">furue@xxxxxxxxxx</a>&gt;</strong></li>
 <li>Date: Tue, 18 Dec 2018 13:30:19 +0900</li>
-<li>Arc-authentication-results: i=4; mx.google.com;       dkim=pass header.i=@hawaii-edu.20150623.gappssmtp.com header.s=20150623 header.b=fgasGEwD;       arc=pass (i=2 dkim=pass dkdomain=hawaii-edu.20150623.gappssmtp.com);       spf=softfail (google.com: domain of transitioning <a href="mailto:furue@DOMAIN.HIDDEN">furue@xxxxxxxxxx</a> does not designate 52.222.5.176 as permitted sender) smtp.mailfrom=<a href="mailto:furue@DOMAIN.HIDDEN">furue@xxxxxxxxxx</a></li>
-<li>Arc-authentication-results: i=3; mx.google.com;       dkim=pass header.i=@hawaii-edu.20150623.gappssmtp.com header.s=20150623 header.b=fgasGEwD;       arc=pass (i=2 dkim=pass dkdomain=hawaii-edu.20150623.gappssmtp.com);       spf=softfail (google.com: domain of transitioning <a href="mailto:furue@DOMAIN.HIDDEN">furue@xxxxxxxxxx</a> does not designate 52.222.5.176 as permitted sender) smtp.mailfrom=<a href="mailto:furue@DOMAIN.HIDDEN">furue@xxxxxxxxxx</a></li>
-<li>Arc-authentication-results: i=2; mx.google.com;       dkim=pass header.i=@hawaii-edu.20150623.gappssmtp.com header.s=20150623 header.b=fgasGEwD;       arc=pass (i=1 spf=pass spfdomain=hawaii.edu dkim=pass dkdomain=hawaii-edu.20150623.gappssmtp.com);       spf=softfail (google.com: domain of transitioning <a href="mailto:furue@DOMAIN.HIDDEN">furue@xxxxxxxxxx</a> does not designate 65.127.216.227 as permitted sender) smtp.mailfrom=<a href="mailto:furue@DOMAIN.HIDDEN">furue@xxxxxxxxxx</a></li>
-<li>Arc-authentication-results: i=1; mx.google.com;       dkim=pass header.i=@hawaii-edu.20150623.gappssmtp.com header.s=20150623 header.b=fgasGEwD;       spf=pass (google.com: domain of <a href="mailto:furue@DOMAIN.HIDDEN">furue@xxxxxxxxxx</a> designates 209.85.220.41 as permitted sender) smtp.mailfrom=<a href="mailto:furue@DOMAIN.HIDDEN">furue@xxxxxxxxxx</a></li>
-<li>Arc-message-signature: i=4; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;        h=list-archive:list-help:list-post:list-id:mailing-list:precedence         :message-id:cc:to:subject:date:from:in-reply-to:references         :mime-version:sender:dkim-signature;        bh=BzULKWfyg86hGQ34le8cCdc3dYqn3n+J0BIxbDVQkS8=;        b=LHZ62SmyZt7mputOB33/4SK8SGgSRsqZqQZuQrZFx+ywExLHDl37mXO4KknhqstTHW         NPFzdAQn45dONCQ4/hDAr2sIO73ZdG6NvmHLE8b3Gr25SGYL9MN2LxXqAlR+ssvqyMRz         OV5yaZIL+jj7QiSsqIhxOA04sib8gGVv65chsShFsNA9Tzaaf78Zc5x33RTJYXCAiFea         5aUSZrqDucHQMOZiIxWkDvLZVNbY4gPuuL7PbeTR826mBXzNtuHloDmdGHWIQfwLEl/J         B28HHvLIYVqTeszZcEGnK3vOhPl/Qvd4e1B7fp4LAIGACvet8fcxqhounJrk2F/YCGyX         CxuA==</li>
-<li>Arc-message-signature: i=3; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;        h=message-id:cc:to:subject:date:from:in-reply-to:references         :mime-version:dkim-signature;        bh=BzULKWfyg86hGQ34le8cCdc3dYqn3n+J0BIxbDVQkS8=;        b=Q1xvMzlqTFQpxT2oPWOiJfOmhxc/rDEWOnuK737ALOkpeZEEILatO/u96BtE/wN4FY         ooOkoKlcWu4HSoMavoiDZ47Ug/yh+sADKtiljSqJtQWbMvd9AANVeCqHR3/pu8z2ZS4y         5eUdzLLBgUuuf4r3v8v28gNEfRWXAcYuPLrFQYdTPRnR//aQpn0cWXQ2a9ZG9hH/xcnQ         IFCmxsBjkk59CSdWpz0JXvJaWaZMYW7rvCUhjaPJu647NMKaRjX1etbMC4H2M3KBcvkv         FO1bUoSFswzOWGmxlfzBev87oP3JmfHF9O6a+nS5QEQ/G4W6omT9UmW/YOMK64eR39Ag         Gl6g==</li>
-<li>Arc-message-signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;        h=cc:to:subject:message-id:date:from:in-reply-to:references         :mime-version:dkim-signature;        bh=BzULKWfyg86hGQ34le8cCdc3dYqn3n+J0BIxbDVQkS8=;        b=Tkb/rLazLqF2NzciLBrRsdlunxTPYf57Qc3e/tKiPDpU/ugBH1zkZPYygcSVH11DHF         QsXfH5CI6h4Ck9sgoXYK9fZY0qKkKVJBYJioz/mgRiaPAcq5JGwyW953FpCt44UfaBTY         TUJe6ihSDYlg+eR0u/gmNG5m9WmVmbPiO87b4LkuhKopLJ7fl8IR/fHWk645qRm18QNJ         kAD8dWyzb6WAfltrTeeZxU3EU4s/Li8WGGyIxOuuJxcIcl9/KDOivhB21YKIogFVmwrv         bKiKVU2+nZNSqw0ETZ5FMFPgz22eKQDdIkmveIfxYMzzyzgTt0Ca6maYX7FA00HchuLa         qrmw==</li>
-<li>Arc-message-signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;        h=cc:to:subject:message-id:date:from:in-reply-to:references         :mime-version:dkim-signature;        bh=BzULKWfyg86hGQ34le8cCdc3dYqn3n+J0BIxbDVQkS8=;        b=IzPGdPf9ah3xVOv4Di6uaHy6HJwS6w2EOqw2dUNgr+DFu/MUwrofgAHaclCXjmG/8b         31NoVnurvecHpSiJ2+xL37tIEBi0sKX1CI/GKAGE8WUnhxakoKu/ALowTkNiQ+MKP+G4         Usqp5wKW2UiLCmzjdUj0ZlacbMuNoXP5dFyGsrCY//KtX3jFwR0ohBtNY8VjMp5Q7ScT         s8+RrFgsfPvaLB1u8VudTRPb1qzqBEzu9piy4tX0reHiYTMaxRPRuPlBBl56dUnkEk9M         QD6HpcfPMshRnfplMnVCy/4K1VNsV/A/9xA5Xh+jFxYympYYdW1W8LmR7ccvBAv+98wq         JkQg==</li>
-<li>Arc-seal: i=4; a=rsa-sha256; t=1545107438; cv=pass;        d=google.com; s=arc-20160816;        b=RXqcQJ5CBipdcYIGxFxIfIlZAU8c6zFI0iXjulbXpPGt4J8dNi5vuZaes1N5KC8nO0         zNFtI6k6HIXgJo1AYcDkkF5nGSqDoEKRHMVxHIDZ5K6Gkb0qD2RyVr4epe7RgBWLEvQH         SoHsSUtnzSRUEPEhd3v6wdexD1ewmE5wrGAaq6fjU82pfAqgovD3AGrA/+rEz22P0boD         S3h7kMjUoeGEC9JoxRT9g078GktpmVto/f+Vne/WqQCY68vBnr1rQSmOx408ZrSpPjSi         uisioO93FDeNFSlcpt3EWlFLcOiFuyg5DjvNVekzWIL7sZmPLfIwXYG2vTeIp2ZhRdQ1         u6Cg==</li>
-<li>Arc-seal: i=3; a=rsa-sha256; t=1545107437; cv=pass;        d=google.com; s=arc-20160816;        b=QTmLAhbxPSRfukv46A8OjWXrPRT6xijB0Qcd/1JA9/2HiVv0g+1t8fQkIpnrlihI+2         nWY/8vFPmt6KZ/5aC7Ch5ogYqizVK4x/mVASAC7j2kJRpefxJgX38ABbARNtmos0EGa1         IhMlC3dnQdlYxhIHjbi7isLTJZyT433G7knG94s7K4suYCz9Nv4Uiy8rnM8njKrhebCR         GyVF7NJ2ARuUtVafKlX8mX2+2O/LihoS/eyqBgBj0veDX5TWMQ8V1e/jkgXx3j7lXtie         N5rtWjO/bceemUBbXiCq4b1GCNoNPOl5jxsFpsHrlc0/jtwxu9MZApyZCKS2R+S/B1Ml         0UCw==</li>
-<li>Arc-seal: i=2; a=rsa-sha256; t=1545107434; cv=pass;        d=google.com; s=arc-20160816;        b=fX+vcW0FJJuaHaiX/U7OHQ4aaJ2v/DXrBrn3AJ69fGg/x3w/spmRMFh1fGA0vksRWi         1ac84LcYryIIw51KoJkNgRz3cHUF3g6t7KtY2YeDYzksUa3u+U95Mx3CgVEaE8Fg5pgR         G/kMGE5gt4R+z8WSKtLb7/Ua28fJGYuKixKSqIttOCbXA3ruXln4yU+D4Ixaco79ps7i         duPXfieOedr0rS9hVSjUKFHOB6Uh///WDYGv4eMZSr//AwQm3QBy61SVMOVklI81Nija         5larOWqVMEIOGpFqJJNAokxvRGRODiTw22Sq+3182LUmWJ6oz9gmjeYU1Bk4dh+JiUv6         V5Xg==</li>
-<li>Arc-seal: i=1; a=rsa-sha256; t=1545107430; cv=none;        d=google.com; s=arc-20160816;        b=z+VHRV99FnihG39498eqiU8TwSh59g28yRIMgk/F1YV3jRSc/eCxT+0I0OirkieulD         o1k8mv98M+DNUtj8gSiDkjKY+XzfcOChPO7mzHq5Cj3r8T72SYMjKjZiMyVBN/ZJLFr3         peoCbvkKrFDlLVN/VPsVggSe6QRRzZ0TYcHmfl1q47bm+SPmSdV6XQ/Bbi9TkE6jw41N         r23wFq/AIVP9XSK3w/mIjvNecVIT+mmYH4ZSgHMyYY9+E57ObNJSbdwcWThvE6vc9yYG         R422ngOYYEvJyRvcEgoZ05Yl4f1WYlNXlLDv7pn4SlGCuqcSnJAxBYsL6t/85Yo/9jw+         jN1A==</li>
 <li>Cc: saurabh rathore &lt;<a href="mailto:rohitsrb2020@DOMAIN.HIDDEN">rohitsrb2020@xxxxxxxxx</a>&gt;,        Martin Schmidt &lt;<a href="mailto:martin.schmidt@DOMAIN.HIDDEN">martin.schmidt@xxxxxxxxxxxxxxxxx</a>&gt;,        Ferret &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</li>
-<li>Dkim-signature: v=1; a=rsa-sha256; c=relaxed/relaxed;        d=noaa.gov; s=google;        h=sender:mime-version:references:in-reply-to:from:date:subject:to:cc         :message-id:x-original-sender:x-original-authentication-results         :precedence:mailing-list:list-id:list-post:list-help:list-archive;        bh=BzULKWfyg86hGQ34le8cCdc3dYqn3n+J0BIxbDVQkS8=;        b=S/w4XoDX0fc8DcDP159Se96zQBdbtacPrmIheF3uPoRAknv+iL6+MTAU71XnT9XISu         +N6sh2xjICrYhLsfBlJd0MBE9P1txWQDlEaJRAOnz4u6hlvLJjxvl2uTrHdvnkxuD4q0         yGK1G5fWsEAIZYtrA4qxMaCd97pNjf9+9euK3kSeq1sRzvtAR3VahPUsyCUJP6TOZRJZ         z0l6ANDf7ei5LVFm9wm0BeRPmQmEacs5PlsTOzXAJ6RzDE8/Jvn1guBqMJjeMumiil37         H5G/fndmNhleVMGFBxITsLxd4qwYPvgdjFdyUNJozv43DtH2odIk2hcEjBuO1UgpBPnd         5MRw==</li>
 <li>In-reply-to: &lt;<a href="msg00468.html">CE303F7A-3642-4F1B-84BA-8FAD8804894C@noaa.gov</a>&gt;</li>
 <li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
 <li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
@@ -73,7 +61,7 @@
 &gt; The basic principle is &quot;easy&quot;: Let our &quot;coast line&quot; exactly follow the outline of the gridboxes that form Australia.&#xA0; In this case, the &quot;cross-shore direction&quot; is either zonal or meridional exactly.&#xA0; Therefore, the cumulative sum you want is the running sum of u &#x394;x or v &#x394;y, depending on the orientation of the local &quot;coastline&quot;.<br>
 <br>
 But you would have to do that before unwrapping. Or, carry along a marker for the &quot;outward&quot; direction of each gridface. And surely this is a tedious calculation, very easy to make a mistake.<br></blockquote><div><br></div><div>Thank you for the explanation. I totally agree with you that it&#39;s &quot;very easy to make a mistake&quot;.&#xA0; I trace the coastline and detect which direction it bends.&#xA0; That information determines which direction is &quot;outward&quot;.</div><div><br></div><div>It&#39;s a tedious programming.&#xA0; Here the property that my fluxes exactly satisfy Gauss&#39;s theorem helped me debug my code, because any error results in unexplained convergence or divergence.</div><div><br></div><div>Having said that, next time (if there is next time), I&#39;ll try your divergence theorem method.&#xA0; If we gradually expand the box, we&#39;ll get the cumulative transport across the boundary that extends when the box expands.&#xA0; Should be easier to implement than my current one.</div><div><br></div><div>Best regards,</div><div>Ryo</div></div></div>
-
+ 
 <!--X-Body-of-Message-End-->
 <!--X-MsgBody-End-->
 <!--X-Follow-Ups-->
@@ -115,10 +103,10 @@ But you would have to do that before unwrapping. Or, carry along a marker for th
 <li>Next by thread:
 <strong><a href="msg00470.html">Re: [ferret_users] integration of flux vector along the coastline to compute the transport</a></strong>
 </li>
-
+ 
 </UL>
 <center>[<a href="msg00468.html">Thread Prev</a>][<a href="msg00470.html">Thread Next</a>][<A HREF="threads2018.html#00469">Index</A>]</center>
-
+ 
 <hr>
 </body>
 </html>
