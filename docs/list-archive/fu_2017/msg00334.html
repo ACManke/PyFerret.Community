@@ -1,3 +1,4 @@
+ 
 <!-- MHonArc v2.6.18 -->
 <!--X-Subject: [ferret_users] How to check whether the attribute is defined in dataset or not, and how to save all global attributes in variable/array -->
 <!--X-From-R13: Oxfunl Vrtqr <nxfunl.x.urtqrNtznvy.pbz> -->
@@ -6,7 +7,7 @@
 <!--X-Content-Type: multipart/alternative -->
 <!--X-Head-End-->
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-        "http://www.w3.org/TR/html4/loose.dtd">
+"http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <title>[ferret_users] How to check whether the attribute is defined in dataset or not, and how to save all global attributes in variable/array</title>
@@ -18,7 +19,7 @@
 <!--X-TopPNI-->
 <HR>
 <center>[<a href="msg00331.html">Thread Prev</a>][<a href="msg00335.html">Thread Next</a>][<A HREF="threads2017.html#00334">Index</A>]</center>
-
+ 
 <!--X-TopPNI-End-->
 <!--X-MsgBody-->
 <!--X-Subject-Header-Begin-->
@@ -31,13 +32,6 @@
 <li><strong>Subject</strong>: <strong>[ferret_users] How to check whether the attribute is defined in dataset or not, and how to save all global attributes in variable/array</strong></li>
 <li><strong>From</strong>: <strong>Akshay Hegde &lt;<a href="mailto:akshay.k.hegde@DOMAIN.HIDDEN">akshay.k.hegde@xxxxxxxxx</a>&gt;</strong></li>
 <li>Date: Thu, 11 May 2017 18:21:09 +0530</li>
-<li>Arc-authentication-results: i=2; mx.google.com;       dkim=pass header.i=@gmail.com;       spf=pass (google.com: domain of <a href="mailto:akshay.k.hegde@DOMAIN.HIDDEN">akshay.k.hegde@xxxxxxxxx</a> designates 2607:f8b0:4001:c0b::230 as permitted sender) smtp.mailfrom=<a href="mailto:akshay.k.hegde@DOMAIN.HIDDEN">akshay.k.hegde@xxxxxxxxx</a>;       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=gmail.com</li>
-<li>Arc-authentication-results: i=1; mx.google.com;       dkim=pass header.i=@gmail.com;       spf=pass (google.com: domain of <a href="mailto:akshay.k.hegde@DOMAIN.HIDDEN">akshay.k.hegde@xxxxxxxxx</a> designates 2607:f8b0:4001:c0b::230 as permitted sender) smtp.mailfrom=<a href="mailto:akshay.k.hegde@DOMAIN.HIDDEN">akshay.k.hegde@xxxxxxxxx</a>;       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=gmail.com</li>
-<li>Arc-message-signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;        h=list-unsubscribe:list-archive:list-help:list-post:list-id         :mailing-list:precedence:to:subject:message-id:date:from         :mime-version:arc-authentication-results:arc-message-signature         :dkim-signature:arc-authentication-results;        bh=diRD9F7r0lrfjvdRSBDDMcNkDLz9EE1gfqBHCZdRFhA=;        b=cbpHEqVDED9WeUMe5/SK8+l2Mev1IhuaoqYixnEq20k26IzgZ9zOrbr/TNOCQ6lgUk         6G4+QZ10Ta5TPEgj0ZK5hY8sjwvhAmlNq1RbYodIOjdybvMuFtdrtJKbQuHU88M+P4/w         X71UxrCJ5BPCsM32VhN5XdBdMXq08XQml7YYJzwMd7kh2k8vDlsNZZbMXHp/JykAWiKo         NQo5A+JUa9G7q+cA7TyRkj0F8AmjyaZQTajk1oYthR9IFqlfvuIcjeCjO4qOKCGtsel+         UgMZNHDAHY11YNDW0G7hoS5ZrGfqKfhB1hqrpFAwbFsTtE4mGqh4wyX+MG3YdXJoTI6U         Ihfw==</li>
-<li>Arc-message-signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;        h=to:subject:message-id:date:from:mime-version:dkim-signature         :arc-authentication-results;        bh=diRD9F7r0lrfjvdRSBDDMcNkDLz9EE1gfqBHCZdRFhA=;        b=VYb2mN9VZbqmce8OYtiJTVfm1gXQX2R0d5RHJgFum+u+VTqVSJMQafqh0NdFT4cfat         GaHt4SRh++hOR0HcddIlkIfprBEHLbjZa8FJQbw0d/WJWL19XkWm9f/mox5EZBmN11OF         KNQ/XHHD0dU2k+y8gds/Frb/CP/VegltIdi34WGl0CG+lEKhdG6JRISeLJiL56jc0oY9         GUK5YXYPod+OUlZjSOKz7k5Sw1SOwDLDxc70OTBntjU74m346Y9jW/6GQHH5HdbbBVAV         Xi1Oe2E9iXtQUnzGOMZjsjDeD177b/vCSktb+nX3TZbemHoWm+3GiVx4jJCQPta7x2Dj         WCBQ==</li>
-<li>Arc-seal: i=2; a=rsa-sha256; t=1494507071; cv=pass;        d=google.com; s=arc-20160816;        b=zXWW2pev1nGU88wy26mbMkLXbdv9DEa38utycZub6Rg02zUYJH4WWarXKa+TffDbAj         KCiwHYNpriGmRFk69oVegBMavjGoEAFQeull1EHh5QorzHYF94Z6u6szwxDUEFxbeMPk         I8AGvYYxho+TEoFCgEeSHYroyq+sgn5I/6Ie5p7iThC8b+IC4AMQ/RekVUA/QE6XaMcP         UmHGRICdnrl0cjNNXuJgFu53iliVHeXoOWmu+hmU4JCoTdNN3GgRJnd9G0GrXUQNHSyt         65Z0IDa5X0kzkTsA8XGgp7CLne6VRrxnqYjNZtrlyg//cdSA3dagtr43NLPJ0b+i0Ix9         t/Qw==</li>
-<li>Arc-seal: i=1; a=rsa-sha256; t=1494507070; cv=none;        d=google.com; s=arc-20160816;        b=ORQVF1pjV1Ifl9qg9zHfk0qzV4KEW3CJEoxs91Kv5oc3JlQsD8D9UH/ijRDPzXjz0b         5vViy2X6HD8IK7iUvShUJTu35WosJb1Hbo2QojSX6ircQsrTn2cERk+w2y3NLTdVLTKe         B9ngk7f2Nc3AHwZOpuZMm1AWsjA1rdF7uJ//Y4Br0XccLwTQ+bz1D3q9dPZ7GaBT9Y4z         YYLzLvQLuA6lRB/H8sergTTecCiEK3Cu66OSeeqfVTTQnEYW1LK6R1PKOdtCpgJvSkFQ         t1mmpZ6CNHFMc+V7HP2kaE1WjabD2vIPwMmUJ3dGRHLzcIwY6tJLpEH0VU8O7Hcw7Pg1         1sOg==</li>
-<li>Dkim-signature: v=1; a=rsa-sha256; c=relaxed/relaxed;        d=noaa-gov.20150623.gappssmtp.com; s=20150623;        h=mime-version:from:date:message-id:subject:to:x-original-sender         :x-original-authentication-results:precedence:mailing-list:list-id         :list-post:list-help:list-archive:list-unsubscribe;        bh=diRD9F7r0lrfjvdRSBDDMcNkDLz9EE1gfqBHCZdRFhA=;        b=e8FtDxderP83WI8UwUYA9oimp43kpUyU8Z4eGVPfRyCP/FieHyc0+jCWGZjQ+jYYT4         Byd9KZtSqh+7G4WnIDVi0RrhpxSpZYcewFo8pz3hwKcIi5y2+qIj3qf0gLByGcFPk1HS         87yVqyzyGh4UHXQX0iFMmw9BRUoud+VxmXjyxH7dAi9nvIw3N7FHfsCTttsDWnvB7W3b         2awNP2P286H92d897Qrjop0tWm5fxQ8XlkSoTbhWeiuRMIH6lMzCdgrruiQzI2S71ntb         ItApoTtGavJuJ2L8DdAW9bH5KSLLOYe5CcMjIb5TZ/617YqhGn9c8junp4rZB5opUfST         v6HQ==</li>
 <li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
 <li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
 <li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
@@ -51,8 +45,106 @@
 <hr>
 <!--X-Head-Body-Sep-End-->
 <!--X-Body-of-Message-->
-<div dir="ltr"><div><div><b>1.</b> Is it possible to save the output of <b><span style="background-color:rgb(255,242,204)">show attr/all .</span></b> to some variable like <span style="background-color:rgb(255,242,204)"><b>let foo = ..varnames&#xA0;</b></span> <b><br>2.</b> How to check whether the attribute is defined in dataset (<span class="gmail-_Tgc"><b>Global attributes</b></span>) or not. <br><br><b>For Example</b> <b>:</b> <br><br>As you can see below attribute <span style="background-color:rgb(255,242,204)"><b>history</b></span> exists in dataset, so it doesn&#39;t throw any exception, but say if I type <span style="background-color:rgb(255,242,204)"><b>list</b>&#xA0;  <b>..someother_attr</b></span>, I get error since it doesn&#39;t exist, so is there any way to check whether attribute exists in dataset.<br><br><span style="background-color:rgb(255,242,204)">yes? use coads_climatology;<br>yes? show d<br>&#xA0;&#xA0;&#xA0;&#xA0; currently SET data sets:<br>&#xA0;&#xA0;&#xA0; 1&gt; /usr/local/ferret/fer_dsets/data/coads_climatology.cdf&#xA0; (default)<br>&#xA0;name&#xA0;&#xA0;&#xA0;&#xA0; title&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; I&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; J&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; K&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; L&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; M&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; N<br>&#xA0;SST&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; SEA SURFACE TEMPERATURE&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:180&#xA0;&#xA0;&#xA0;&#xA0; 1:90&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:12&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...<br>&#xA0;AIRT&#xA0;&#xA0;&#xA0;&#xA0; AIR TEMPERATURE&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:180&#xA0;&#xA0;&#xA0;&#xA0; 1:90&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:12&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...<br>&#xA0;SPEH&#xA0;&#xA0;&#xA0;&#xA0; SPECIFIC HUMIDITY&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:180&#xA0;&#xA0;&#xA0;&#xA0; 1:90&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:12&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...<br>&#xA0;WSPD&#xA0;&#xA0;&#xA0;&#xA0; WIND SPEED&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:180&#xA0;&#xA0;&#xA0;&#xA0; 1:90&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:12&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...<br>&#xA0;UWND&#xA0;&#xA0;&#xA0;&#xA0; ZONAL WIND&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:180&#xA0;&#xA0;&#xA0;&#xA0; 1:90&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:12&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...<br>&#xA0;VWND&#xA0;&#xA0;&#xA0;&#xA0; MERIDIONAL WIND&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:180&#xA0;&#xA0;&#xA0;&#xA0; 1:90&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:12&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...<br>&#xA0;SLP&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; SEA LEVEL PRESSURE&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:180&#xA0;&#xA0;&#xA0;&#xA0; 1:90&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:12&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...<br>&#xA0;<br>yes? show att/all .<br>&#xA0;&#xA0;&#xA0;&#xA0; attributes for dataset: /usr/local/ferret/fer_dsets/data/coads_climatology.cdf<br>&#xA0;..history = FERRET V4.45 (GUI) 22-May-97 <br>yes? list ..history<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; VARIABLE : ..HISTORY<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; FILENAME : coads_climatology.cdf<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; FILEPATH : /usr/local/ferret/fer_dsets/data/<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; X&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; : 1<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; &quot;FERRET V4.45 (GUI) 22-May-97&quot;<br>yes? list ..someother_attr<br>&#xA0;**ERROR: attribute undefined or invalid attribute name: ..SOMEOTHER_ATTR<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; attribute SOMEOTHER_ATTR not found for dataset<br>&#xA0;**ERROR: variable unknown or not in data set: ..SOMEOTHER_ATTR</span><br><br></div><b>I can check from outside using spawn like below<br><br></b><span style="background-color:rgb(255,242,204)">[akshay@localhost tmp]$&#xA0; ncdump -h /usr/local/ferret/fer_dsets/data/coads_climatology.cdf | grep -q &#39;:something&#39;&#xA0; &amp;&amp; echo &#39;exists&#39; || echo &#39;does not exist&#39;; <br><b>does not exist</b></span><br><br><span style="background-color:rgb(255,242,204)">[akshay@localhost tmp]$&#xA0; ncdump -h /usr/local/ferret/fer_dsets/data/coads_climatology.cdf | grep -q &#39;:history&#39;&#xA0; &amp;&amp; echo &#39;exists&#39; || echo &#39;does not exist&#39;; <br><b><span style="color:rgb(0,0,0)">exists</span></b></span><br><br></div>Thank you.<br><div><br><div><span class="gmail-im"><div class="gmail_extra">Regards,<br></div><div class="gmail_extra">Akshay Hegde,<br></div><div class="gmail_extra">Data and Information,<br></div><div class="gmail_extra">CSIR-NIO<br><a rel="nofollow" href="https://about.me/akshay.k.hegde">https://about.me/akshay.k.hegde</a><br></div></span></div></div></div>
-
+<div dir="ltr"><div><div><b>1.</b> Is it possible to save the output of <b><span style="background-color:rgb(255,242,204)">show attr/all .</span></b> to some variable like <span style="background-color:rgb(255,242,204)"><b>let foo = ..varnames</b></span> <b><br>
+ 
+2.</b> How to check whether the attribute is defined in dataset (<span class="gmail-_Tgc"><b>Global attributes</b></span>) or not. <br>
+ 
+<br>
+ 
+<b>For Example</b> <b>:</b> <br>
+ 
+<br>
+ 
+As you can see below attribute <span style="background-color:rgb(255,242,204)"><b>history</b></span> exists in dataset, so it doesn&#39;t throw any exception, but say if I type <span style="background-color:rgb(255,242,204)"><b>list</b>  <b>..someother_attr</b></span>, I get error since it doesn&#39;t exist, so is there any way to check whether attribute exists in dataset.<br>
+ 
+<br>
+ 
+<span style="background-color:rgb(255,242,204)">yes? use coads_climatology;<br>
+ 
+yes? show d<br>
+ 
+currently SET data sets:<br>
+ 
+1&gt; /usr/local/ferret/fer_dsets/data/coads_climatology.cdf (default)<br>
+ 
+name title I J K L M N<br>
+ 
+SST SEA SURFACE TEMPERATURE 1:180 1:90 ... 1:12 ... ...<br>
+ 
+AIRT AIR TEMPERATURE 1:180 1:90 ... 1:12 ... ...<br>
+ 
+SPEH SPECIFIC HUMIDITY 1:180 1:90 ... 1:12 ... ...<br>
+ 
+WSPD WIND SPEED 1:180 1:90 ... 1:12 ... ...<br>
+ 
+UWND ZONAL WIND 1:180 1:90 ... 1:12 ... ...<br>
+ 
+VWND MERIDIONAL WIND 1:180 1:90 ... 1:12 ... ...<br>
+ 
+SLP SEA LEVEL PRESSURE 1:180 1:90 ... 1:12 ... ...<br>
+ 
+<br>
+ 
+yes? show att/all .<br>
+ 
+attributes for dataset: /usr/local/ferret/fer_dsets/data/coads_climatology.cdf<br>
+ 
+..history = FERRET V4.45 (GUI) 22-May-97 <br>
+ 
+yes? list ..history<br>
+ 
+VARIABLE : ..HISTORY<br>
+ 
+FILENAME : coads_climatology.cdf<br>
+ 
+FILEPATH : /usr/local/ferret/fer_dsets/data/<br>
+ 
+X : 1<br>
+ 
+&quot;FERRET V4.45 (GUI) 22-May-97&quot;<br>
+ 
+yes? list ..someother_attr<br>
+ 
+**ERROR: attribute undefined or invalid attribute name: ..SOMEOTHER_ATTR<br>
+ 
+attribute SOMEOTHER_ATTR not found for dataset<br>
+ 
+**ERROR: variable unknown or not in data set: ..SOMEOTHER_ATTR</span><br>
+ 
+<br>
+ 
+</div><b>I can check from outside using spawn like below<br>
+ 
+<br>
+ 
+</b><span style="background-color:rgb(255,242,204)">[akshay@localhost tmp]$ ncdump -h /usr/local/ferret/fer_dsets/data/coads_climatology.cdf | grep -q &#39;:something&#39; &amp;&amp; echo &#39;exists&#39; || echo &#39;does not exist&#39;; <br>
+ 
+<b>does not exist</b></span><br>
+ 
+<br>
+ 
+<span style="background-color:rgb(255,242,204)">[akshay@localhost tmp]$ ncdump -h /usr/local/ferret/fer_dsets/data/coads_climatology.cdf | grep -q &#39;:history&#39; &amp;&amp; echo &#39;exists&#39; || echo &#39;does not exist&#39;; <br>
+ 
+<b><span style="color:rgb(0,0,0)">exists</span></b></span><br>
+ 
+<br>
+ 
+</div>Thank you.<br>
+ 
+<div><br>
+ 
+<div><span class="gmail-im"><div class="gmail_extra">Regards,<br>
+ 
+</div><div class="gmail_extra">Akshay Hegde,<br>
+ 
+</div><div class="gmail_extra">Data and Information,<br>
+ 
+</div><div class="gmail_extra">CSIR-NIO<br>
+ 
+<a rel="nofollow" href="https://about.me/akshay.k.hegde">https://about.me/akshay.k.hegde</a><br>
+ 
+</div></span></div></div></div>
+ 
 <!--X-Body-of-Message-End-->
 <!--X-MsgBody-End-->
 <!--X-Follow-Ups-->
@@ -73,10 +165,10 @@
 <li>Next by thread:
 <strong><a href="msg00335.html">Re: [ferret_users] How to check whether the attribute is defined in dataset or not, and how to save all global attributes in variable/array</a></strong>
 </li>
-
+ 
 </UL>
 <center>[<a href="msg00331.html">Thread Prev</a>][<a href="msg00335.html">Thread Next</a>][<A HREF="threads2017.html#00334">Index</A>]</center>
-
+ 
 <hr>
 </body>
 </html>
