@@ -1,14 +1,14 @@
 <!-- MHonArc v2.5.4 -->
-<!--X-Subject: Ferret needs your support! -->
-<!--X-From-R13: "Sq Vneevfba" <uneevfbaNenfpny.czry.abnn.tbi> -->
-<!--X-Date: Tue, 20 Jan 1998 16:16:56 &#45;0800 -->
-<!--X-Message-Id: 9801201616.ZM26066@rascal -->
+<!--X-Subject: Re: Percent signs in strings... -->
+<!--X-From-R13: fgenaqjtNhpne.rqh (Unel Egenaq) -->
+<!--X-Date: Wed, 13 Jan 1999 10:27:14 &#45;0800 -->
+<!--X-Message-Id: 199901131827.LAA10882@olympic.cgd.ucar.edu -->
 <!--X-Content-Type: text/plain -->
 <!--X-Head-End-->
 <!doctype html public "-//W3C//DTD HTML//EN">
 <html>
 <head>
-<title>Ferret needs your support!</title>
+<title>Re: Percent signs in strings...</title>
 </head>
 <body>
 <!--X-Body-Begin-->
@@ -16,20 +16,21 @@
 <!--X-User-Header-End-->
 <!--X-TopPNI-->
 <HR>
-<center>[<a href="msg00011.html">Thread Prev</a>][<a href="msg00016.html">Thread Next</a>][<A HREF="threads98.html#00015">Index</A>]</center>
+<center>[<a href="msg00011.html">Thread Prev</a>][<a href="msg00012.html">Thread Next</a>][<A HREF="threads99.html#00015">Index</A>]</center>
 
 <!--X-TopPNI-End-->
 <!--X-MsgBody-->
 <!--X-Subject-Header-Begin-->
-<h1>Ferret needs your support!</h1>
+<h1>Re: Percent signs in strings...</h1>
 <hr>
 <!--X-Subject-Header-End-->
 <!--X-Head-of-Message-->
 <ul>
-<li><strong>To</strong>: <strong><A HREF="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxxxxxxxxxxxxx</A></strong></li>
-<li><strong>Subject</strong>: <strong>Ferret needs your support!</strong></li>
-<li><strong>From</strong>: <strong>&quot;Ed Harrison&quot; &lt;<A HREF="mailto:harrison@DOMAIN.HIDDEN">harrison@xxxxxxxxxxxxxxxxxxxx</A>&gt;</strong></li>
-<li>Date: Tue, 20 Jan 1998 16:16:54 -0800</li>
+<li><strong>To</strong>: <strong>Ferret Users Mailing List &lt;<A HREF="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxxxxxxxxxxxxx</A>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: Percent signs in strings... </strong></li>
+<li><strong>From</strong>: <strong><A HREF="mailto:strandwg@DOMAIN.HIDDEN">strandwg@xxxxxxxx</A> (Gary Strand)</strong></li>
+<li>Date: Wed, 13 Jan 1999 11:27:10 -0700</li>
+<li>Reply-to: <A HREF="mailto:strandwg@DOMAIN.HIDDEN">strandwg@xxxxxxxx</A> (Gary Strand)</li>
 <li>Sender: owner-ferret_users</li>
 </ul>
 <!--X-Head-of-Message-End-->
@@ -38,54 +39,45 @@
 <!--X-Head-Body-Sep-End-->
 <!--X-Body-of-Message-->
 <pre>
-		*** Ferret needs your support! ***
+&gt; Have a look at the Ferret FAQ:
+&gt; <A  HREF="../../faq/model-outputs-with-equal-length-months.html">../../faq/model-outputs-with-equal-length-months.html</A>
+&gt; That particular FAQ deals with years of length 360 days, but the
+&gt; techniques work as well for 365 day years.
 
+Worked great:
+!
+set mem/size=64
+use 1990-2139_sst.cdf
+show data
+!
+! Define grid of 150 years each exactly 365 days long
+!
+define axis/t=30:54780:365/unit=days tmodel
+define grid/t=tmodel gmodel
+!
+! Define grid of 1801 &quot;months&quot;
+define axis/t=15-jan-1990:15-jan-2139/npoints=1801 tcalendar
+define grid/like=gmodel/t=tcalendar gcalendar
+!
+! Assign SST data to new grid - since there's only 1800 points
+! (despite grid being set to 1801 points) it uses only the
+! actual data
+!
+let sstf = sst[g=gcalendar@asn,l=1:450]
+save/clobber/file=sstf.nc sstf
+let sstf = sst[g=gcalendar@asn,l=451:900]
+save/append/file=sstf.nc sstf
+let sstf = sst[g=gcalendar@asn,l=901:1350]
+save/append/file=sstf.nc sstf
+let sstf = sst[g=gcalendar@asn,l=1351:1800]
+save/append/file=sstf.nc sstf
+quit
 
-This is a request for help from you, the users of Ferret.
+Thanks muchly, as always, Steve!
 
-Steve Hankin and I are putting together a request to NOAA management to
-continue to provide Ferret support and upgrades to our user community. To make
-an effective case, we need to document the extent to which Ferret is an
-important research/data management tool outside of our own laboratory, and has
-contributed to the advancement of science.
-
-So I'm asking for the following help
-
- 1. Would you please identify yourselves, the research group and institution
- that you are a part of, and the leader(s) of your group;
-
- 2. Would you please send a bibliography of refereed and non-refereed
- publications in which you made use of Ferret;
-
- 3. If you possibly can, please write me a letter, telling me about how Ferret
- assists in your research and how the loss of access to Ferret would affect
- your work. Letters signed by group leaders would be particularly helpful;
-
- 4. If you know of Ferret users in other research groups who may not subscribe
- to the ferret_users Email group, please pass this request for help along to
- them.
-
-We are putting the request for support together right now, so quick replies
-will help the most.
-
-Thank you very much!
-
-	Yours, in Ferreting....  Ed Harrison
-
-
-PS.  For those of you to whom my name is unfamiliar, let me tell you a little
-of the history of Ferret.  Steve started building what we now call Ferret back
-in 1984, to make it possible for me to do a combination of ocean modeling and
-data analysis projects with a small research group.  Steve soon was in charge
-of
-Ferret and all the many things that Ferret can do, and now runs his own team.
-However we join forces in order to do science, keep Ferret capabilities
-closely linked to scientific needs as well as data management and access
-issues, and to raise money to fund all of the above.  Thanks again for your
-help in maintaining this collaboration, which has worked well for over a
-decade.
-
-
+--
+Gary Strand
+strandwg@ucar.edu                              <A  HREF="http://www.cgd.ucar.edu/ccr/gary">http://www.cgd.ucar.edu/ccr/gary</A>
 
 </pre>
 
@@ -99,15 +91,14 @@ decade.
 <!--X-BotPNI-->
 <UL>
 <li>Previous by thread:
-<strong><a href="msg00011.html">Saving 4D data slicewise</a></strong>
+<strong><a href="msg00011.html">Re: Percent signs in strings...</a></strong>
 </li>
 <li>Next by thread:
-<strong><a href="msg00016.html">Re: Solaris problems with ferret 4.90</a></strong>
+<strong><a href="msg00012.html">My 3D gridding problem.</a></strong>
 </li>
 
 </UL>
-<center>[<a href="msg00011.html">Thread Prev</a>][<a href="msg00016.html">Thread Next</a>][<A HREF="threads98.html#00015">Index</A>]</center>
-
+<center>[<a href="msg00011.html">Thread Prev</a>][<a href="msg00012.html">Thread Next</a>][<A HREF="threads99.html#00015">Index</A>]</center>
 
 <hr>
 </body>

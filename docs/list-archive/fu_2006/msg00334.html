@@ -42,14 +42,14 @@ Hi everyone!<br>
 <br>
 I want to make cross correlation (with time lag) between two variables 
 (such as SLP and SST). Referring to many sources, i.e. 
-<a  href="http://ferret.pmel.noaa.gov/Ferret/FAQ/analysis/correlations.html">http://ferret.pmel.noaa.gov/Ferret/FAQ/analysis/correlations.html</a> and 
+<a  href="../../faq/correlations-and-variances.html">../../faq/correlations-and-variances.html</a> and 
 <a  href="../fu_97/msg00037.html">../fu_97/msg00037.html</a> I 
 managed to calculate the correlation. For further analysis I introduced 
 the timelag by shifting one of the time series. And now I want to save a 
 new dataset with the correlations and the timelag. As I don't use the z 
 axis I thought I could use it for the time lag. But how was I supposed 
 to save the information properly? Refering to 
-<a  href="http://ferret.wrc.noaa.gov/Ferret/FAQ/data_management/multi_dataset.html">http://ferret.wrc.noaa.gov/Ferret/FAQ/data_management/multi_dataset.html</a> 
+<a  href="../../faq/using-data-that-spans-multiple-files.html">../../faq/using-data-that-spans-multiple-files.html</a> 
 I had found the solution. So I wrote the script above, which tries to 
 save the time laged correlations to the z axis. But it doesn't work. The 
 only thing I achieve is a properly dimensioned grid, but always with 

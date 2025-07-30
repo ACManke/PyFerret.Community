@@ -1,14 +1,15 @@
 <!-- MHonArc v2.5.4 -->
-<!--X-Subject: Reading fortran unformatted data -->
-<!--X-From-R13: Quevf Bvpgba <puevfcNpet.oco.jvgf.np.mn> -->
-<!--X-Date: Tue, 22 Dec 1998 02:29:21 &#45;0800 -->
-<!--X-Message-Id: Pine.LNX.3.95.981222122121.31346B&#45;100000@crg.bpb.wits.ac.za -->
+<!--X-Subject: Re: log contour intervals -->
+<!--X-From-R13: Egrir Vnaxva <unaxvaNczry.abnn.tbi> -->
+<!--X-Date: Mon, 23 Aug 1999 09:11:20 &#45;0700 -->
+<!--X-Message-Id: 37C17196.4BFDCD93@pmel.noaa.gov -->
 <!--X-Content-Type: text/plain -->
+<!--X-Reference: 01JEZNRGDALU8WZHBQ@ZETA.PMEL.NOAA.GOV -->
 <!--X-Head-End-->
 <!doctype html public "-//W3C//DTD HTML//EN">
 <html>
 <head>
-<title>Reading fortran unformatted data</title>
+<title>Re: log contour intervals</title>
 </head>
 <body>
 <!--X-Body-Begin-->
@@ -16,21 +17,22 @@
 <!--X-User-Header-End-->
 <!--X-TopPNI-->
 <HR>
-<center>[<a href="msg00252.html">Thread Prev</a>][<a href="msg00254.html">Thread Next</a>][<A HREF="threads98.html#00253">Index</A>]</center>
+<center>[<a href="msg00252.html">Thread Prev</a>][<a href="msg00250.html">Thread Next</a>][<A HREF="threads99.html#00253">Index</A>]</center>
 
 <!--X-TopPNI-End-->
 <!--X-MsgBody-->
 <!--X-Subject-Header-Begin-->
-<h1>Reading fortran unformatted data</h1>
+<h1>Re: log contour intervals</h1>
 <hr>
 <!--X-Subject-Header-End-->
 <!--X-Head-of-Message-->
 <ul>
-<li><strong>To</strong>: <strong><A HREF="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxxxxxxxxxxxxx</A></strong></li>
-<li><strong>Subject</strong>: <strong>Reading fortran unformatted data</strong></li>
-<li><strong>From</strong>: <strong>Chris Picton &lt;<A HREF="mailto:chrisp@DOMAIN.HIDDEN">chrisp@xxxxxxxxxxxxxxxxxx</A>&gt;</strong></li>
-<li>Date: Tue, 22 Dec 1998 12:36:02 +0200 (SAT)</li>
-<li>Reply-to: Chris Picton &lt;<A HREF="mailto:chrisp@DOMAIN.HIDDEN">chrisp@xxxxxxxxxxxxxxxxxx</A>&gt;</li>
+<li><strong>To</strong>: <strong><A HREF="mailto:SPILLANE@DOMAIN.HIDDEN">SPILLANE@xxxxxxxxxxxxx</A></strong></li>
+<li><strong>Subject</strong>: <strong>Re: log contour intervals</strong></li>
+<li><strong>From</strong>: <strong>Steve Hankin &lt;<A HREF="mailto:hankin@DOMAIN.HIDDEN">hankin@xxxxxxxxxxxxx</A>&gt;</strong></li>
+<li>Date: Mon, 23 Aug 1999 09:06:46 -0700</li>
+<li>Cc: <A HREF="mailto:a.larkin@DOMAIN.HIDDEN">a.larkin@xxxxxxxx</A>, <A HREF="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxxxxxxxxxxxxx</A></li>
+<li>References: &lt;<a href="msg00251.html">01JEZNRGDALU8WZHBQ@ZETA.PMEL.NOAA.GOV</a>&gt;</li>
 <li>Sender: owner-ferret_users</li>
 </ul>
 <!--X-Head-of-Message-End-->
@@ -39,29 +41,62 @@
 <!--X-Head-Body-Sep-End-->
 <!--X-Body-of-Message-->
 <pre>
-Hi
+Hi Mick and Alice,
 
-Im am trying to read 4-dimensional data from a file written by a fortran
-program.
+I overlooked the FAQ about customizing the color bar. It has the same substance
+as my previous message, but much more readable.
 
-The code which wrote the file looks something like this.
+    <A  HREF="../../faq/modifying-the-shade-key.html">../../faq/modifying-the-shade-key.html</A>
 
-     WRITE (20)
-     +       (((DOUT(L,K,IZ,J,I,IP),L=1,NLG),K=NLT,1,-1),IZ=1,NZ)
+    - steve
 
-IP is fixed, and there is a loop over J and I
+====================================================
 
-ie, it writes J*I records (these are incremental in time), and each record
-is a block of 3-dimensional data.  This is written as an unformatted
-stream.
+SPILLANE@pmel.noaa.gov wrote:
 
-Is there any way to read this entire data file in ferret?  Any help would
-be appreciated
+&gt; Hello Alice,
+&gt;         I don't see a simple solution to your color key labelling
+&gt; problem, unless contouring the (base-10) log of the function is
+&gt; acceptable.  The latter might make the setting of your non-integer
+&gt; exponents easier in a way.
+&gt;
+&gt;         I believe ferret doesn't have the newer plotplus commands
+&gt; that customise the colorbar (colorbar,cbaxis,cbfor,cblabp,cblint
+&gt; and cbcsze).  If you could turn off the key labels (cblabp) or
+&gt; render them with zero height (cbcsze) then you could use &quot;ppl
+&gt; %label&quot; or movable labels to put in any values you like. Perhaps
+&gt; you can still use this idea by plotting a white polygon to blot
+&gt; out the offending key labels
+&gt; polygon/i=1:4/pal=blue/nokey/nolab/over xx,yy
+&gt; where xx,yy set by ysequence are the coords of the white rectangle.
+&gt;
+&gt;         Another workaround would be to drop the key entirely and
+&gt; use overlay contours to put correctly labelled contour lines on
+&gt; the plot itself.  For your case if you want levels at 1.5x10^n
+&gt; where n=-10,-9,-8...-4 say then using a test function 1/10^(i+j+0.5)
+&gt; you would (leaving the color bar as a check here)
+&gt;
+&gt; fill/i=1:10/j=1:10/lev=(-9.824,-3.824,1) log(1/10^(i+j+0.5))
+&gt; ppl conpre,@sr1.5e
+&gt; contour/over/i=1:10/j=1:10/nolab/lev=(-9.824,-3.824,1,-1) log(1/10^(i+j+0.5))
+&gt;
+&gt; Note the extra &quot;-1&quot; in the contour lev instruction which forces
+&gt; integer contour labels.  This in combination with the &quot;conpre&quot;
+&gt; results in labels like 1.5e-10.
+&gt;
+&gt; Hope this is of some help.
+&gt; Mick
+&gt; -------------------------------------------------------------------------
+&gt; Mick Spillane                            _/_/_/_/ _/_/_/_/  _/_/   _/_/_/
+&gt; Phone : (206)526-6780                   _/         _/   _/  _/   _/    _/
+&gt; E-mail: spillane@pmel.noaa.gov         _/_/_/     _/_/_/   _/   _/
+&gt; U of W Box 357941                     _/         _/       _/   _/    _/
+&gt; Room 2070 Building#3 NOAA/PMEL       _/_/_/_/  _/_/     _/_/   _/_/_/
 
-Thanks
-
-Chris Picton
-chrisp@global.co.za
+--
+Steve Hankin
+NOAA/PMEL, 7600 Sand Point Way NE, Seattle, WA 98115-0070
+ph. (206) 526-6080 -- FAX (206) 526-6744
 
 
 
@@ -71,26 +106,25 @@ chrisp@global.co.za
 <!--X-MsgBody-End-->
 <!--X-Follow-Ups-->
 <hr>
-<ul><li><strong>Follow-Ups</strong>:
-<ul>
-<li><strong><a name="00254" href="msg00254.html">Re: Reading fortran unformatted data</a></strong>
-<ul><li><em>From:</em> Steve Hankin</li></ul></li>
-</ul></li></ul>
 <!--X-Follow-Ups-End-->
 <!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00251" href="msg00251.html">Re: log contour intervals</a></strong>
+<ul><li><em>From:</em> SPILLANE</li></ul></li>
+</ul></li></ul>
 <!--X-References-End-->
 <!--X-BotPNI-->
 <UL>
 <li>Previous by thread:
-<strong><a href="msg00252.html">Virtual Reality out of Ferret</a></strong>
+<strong><a href="msg00252.html">Re: log contour intervals (==&gt; SHAKEY)</a></strong>
 </li>
 <li>Next by thread:
-<strong><a href="msg00254.html">Re: Reading fortran unformatted data</a></strong>
+<strong><a href="msg00250.html">Minor bugette in loading netcdf files?</a></strong>
 </li>
 
 </UL>
-<center>[<a href="msg00252.html">Thread Prev</a>][<a href="msg00254.html">Thread Next</a>][<A HREF="threads98.html#00253">Index</A>]</center>
-
+<center>[<a href="msg00252.html">Thread Prev</a>][<a href="msg00250.html">Thread Next</a>][<A HREF="threads99.html#00253">Index</A>]</center>
 
 <hr>
 </body>
