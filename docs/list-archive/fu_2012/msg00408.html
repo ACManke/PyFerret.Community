@@ -77,7 +77,7 @@ AM<BR><B>To:</B> ferret_users@xxxxxxxx; Savin Chand<BR><B>Subject:</B> Re:
 <DIV></DIV>Hi Savin,<BR>There are several steps to this.<BR><BR>What you want to 
 do is I think similar to what's described here, putting a set of labels at 
 locations on a plot. <BR><A rel="nofollow" class=moz-txt-link-freetext 
-href="http://ferret.pmel.noaa.gov/Ferret/faq/labelling-dates-along-a-trackline">http://ferret.pmel.noaa.gov/Ferret/faq/labelling-dates-along-a-trackline</A>&nbsp;&nbsp; 
+href="../../faq/labelling-dates-along-a-trackline">../../faq/labelling-dates-along-a-trackline</A>&nbsp;&nbsp; 
 Is that right?&nbsp; Or, reading your message again, maybe you want just one 
 label corresponding to the date of the plot.<BR><BR>Either way you need to open 
 and read the ascii file, and use the variables in it to make the labels. It 
@@ -86,7 +86,7 @@ would look something like this<BR>
   my_ascii.dat<BR></TT></BLOCKQUOTE>You want to make dates out of that time 
 variable.&nbsp; There's a discussion about that here,<BR><A rel="nofollow" 
 class=moz-txt-link-freetext 
-href="http://ferret.pmel.noaa.gov/Ferret/faq/creating-a-time-axis-from-time-variables">http://ferret.pmel.noaa.gov/Ferret/faq/creating-a-time-axis-from-time-variables</A><BR><BR>but 
+href="../../faq/creating-a-time-axis-from-time-variables">../../faq/creating-a-time-axis-from-time-variables</A><BR><BR>but 
 first you need to define separate variables for the year, month, day. <BR>
 <BLOCKQUOTE><TT>yes? let years = INT(timevar/10000)<BR>yes? let months = 
   int((timevar-10000*years)/100)<BR>yes? let days = (timevar-10000*years) - 

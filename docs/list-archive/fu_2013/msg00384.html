@@ -58,7 +58,7 @@
 <!--X-Head-Body-Sep-End-->
 <!--X-Body-of-Message-->
 Dear Ferret users,<div><br></div><div>&#xA0; As I have sort out this issue with the help of Sudheer, but still it requires further refinement, I require further input.</div><div><br></div><div><div>This is with reference to the following FAQ, in which abstract value in I axis is converted into time axis</div>
-<div><br></div><div><a rel="nofollow" href="http://ferret.pmel.noaa.gov/Ferret/faq/creating-a-time-axis-from-time-variables" target="_blank">http://ferret.pmel.noaa.gov/Ferret/faq/creating-a-time-axis-from-time-variables</a></div><div><br>
+<div><br></div><div><a rel="nofollow" href="../../faq/creating-a-time-axis-from-time-variables" target="_blank">../../faq/creating-a-time-axis-from-time-variables</a></div><div><br>
 </div><div>As there is no proper declaration of variable hour, minute in this FAQ so it is not working.</div><div><br></div>My script for the same problem goes like this</div><div><br></div><div>!----------------------------------------------------------------------------------</div>
 <div><div>!Suppose we have 4320 abstract value in I-axis</div><div>!First get the end time kepping 1-jan-1900 as a start time</div><div><br></div><div>let end_date = days1900toymdhms(4320)</div><div><br></div><div>!-------------Its output is as follows-----------</div>
 <div>!yes? list days1900toymdhms(4320)</div><div>! &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; VARIABLE : DAYS1900TOYMDHMS(4320)</div><div>! &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; SUBSET &#xA0; : 6 points (Z)</div><div>! 1 &#xA0; / 1: &#xA0;1911.</div><div>! 2 &#xA0; / 2: &#xA0; &#xA0;10.</div><div>! 3 &#xA0; / 3: &#xA0; &#xA0;31.</div>
@@ -101,7 +101,7 @@ Dear Ferret users,<div><br></div><div>&#xA0; As I have sort out this issue with 
 def axis/t=01-01-2001:31-12-2012:1/units =days tax<br><br>let grid= t[gt=tax]<br>or if you have another axis say longitude<br>
 def axis/x=30:100:1/units=degrees_east xax<br>let ngrd=x[gx=xax]+t[gt=tax]<br>let new_var=reshape(old_var,ngrd)<br>hope this helps<span><font color="#888888"><br>Sudheer</font></span><div><div>
 <br><br><div class="gmail_quote">On Fri, Jun 7, 2013 at 4:01 PM, samir pokhrel <span dir="ltr">&lt;<a rel="nofollow" href="mailto:pokhrelsamir@xxxxxxxxx" target="_blank">pokhrelsamir@xxxxxxxxx</a>&gt;</span> wrote:<br>
-<blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">Sudheer,<div><br></div><div>Can you just have a look on this FAQ</div><div><br></div><div><a rel="nofollow" href="http://ferret.pmel.noaa.gov/Ferret/faq/creating-a-time-axis-from-time-variables" target="_blank">http://ferret.pmel.noaa.gov/Ferret/faq/creating-a-time-axis-from-time-variables</a></div>
+<blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">Sudheer,<div><br></div><div>Can you just have a look on this FAQ</div><div><br></div><div><a rel="nofollow" href="../../faq/creating-a-time-axis-from-time-variables" target="_blank">../../faq/creating-a-time-axis-from-time-variables</a></div>
 
 
 
