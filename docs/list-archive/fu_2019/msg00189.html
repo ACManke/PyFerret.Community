@@ -1,3 +1,4 @@
+ 
 <!-- MHonArc v2.6.18 -->
 <!--X-Subject: [ferret_users] How to set Z&#45;axis as elevation -->
 <!--X-From-R13: Bengvx Ynq <cengvxxnq17Ntznvy.pbz> -->
@@ -7,7 +8,7 @@
 <!--X-Derived: bin8vWMUoOm0v.bin -->
 <!--X-Head-End-->
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-        "http://www.w3.org/TR/html4/loose.dtd">
+"http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <title>[ferret_users] How to set Z-axis as elevation</title>
@@ -19,7 +20,7 @@
 <!--X-TopPNI-->
 <HR>
 <center>[<a href="msg00187.html">Thread Prev</a>][<a href="msg00191.html">Thread Next</a>][<A HREF="threads2019.html#00189">Index</A>]</center>
-
+ 
 <!--X-TopPNI-End-->
 <!--X-MsgBody-->
 <!--X-Subject-Header-Begin-->
@@ -32,19 +33,6 @@
 <li><strong>Subject</strong>: <strong>[ferret_users] How to set Z-axis as elevation</strong></li>
 <li><strong>From</strong>: <strong>Pratik Kad &lt;<a href="mailto:pratikkad17@DOMAIN.HIDDEN">pratikkad17@xxxxxxxxx</a>&gt;</strong></li>
 <li>Date: Mon, 27 May 2019 10:17:32 +0900</li>
-<li>Arc-authentication-results: i=4; mx.google.com;       dkim=pass header.i=@gmail.com header.s=20161025 header.b=LxhSgxZe;       arc=pass (i=2 dkim=pass dkdomain=gmail.com);       spf=softfail (google.com: domain of transitioning <a href="mailto:pratikkad17@DOMAIN.HIDDEN">pratikkad17@xxxxxxxxx</a> does not designate 52.222.5.176 as permitted sender) smtp.mailfrom=<a href="mailto:pratikkad17@DOMAIN.HIDDEN">pratikkad17@xxxxxxxxx</a>;       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com</li>
-<li>Arc-authentication-results: i=3; mx.google.com;       dkim=pass header.i=@gmail.com header.s=20161025 header.b=LxhSgxZe;       arc=pass (i=2 dkim=pass dkdomain=gmail.com);       spf=softfail (google.com: domain of transitioning <a href="mailto:pratikkad17@DOMAIN.HIDDEN">pratikkad17@xxxxxxxxx</a> does not designate 52.222.5.176 as permitted sender) smtp.mailfrom=<a href="mailto:pratikkad17@DOMAIN.HIDDEN">pratikkad17@xxxxxxxxx</a>;       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com</li>
-<li>Arc-authentication-results: i=2; mx.google.com;       dkim=pass header.i=@gmail.com header.s=20161025 header.b=LxhSgxZe;       arc=pass (i=1 spf=pass spfdomain=gmail.com dkim=pass dkdomain=gmail.com dmarc=pass fromdomain=gmail.com);       spf=softfail (google.com: domain of transitioning <a href="mailto:pratikkad17@DOMAIN.HIDDEN">pratikkad17@xxxxxxxxx</a> does not designate 65.127.216.231 as permitted sender) smtp.mailfrom=<a href="mailto:pratikkad17@DOMAIN.HIDDEN">pratikkad17@xxxxxxxxx</a></li>
-<li>Arc-authentication-results: i=1; mx.google.com;       dkim=pass header.i=@gmail.com header.s=20161025 header.b=LxhSgxZe;       spf=pass (google.com: domain of <a href="mailto:pratikkad17@DOMAIN.HIDDEN">pratikkad17@xxxxxxxxx</a> designates 209.85.220.41 as permitted sender) smtp.mailfrom=<a href="mailto:pratikkad17@DOMAIN.HIDDEN">pratikkad17@xxxxxxxxx</a>;       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com</li>
-<li>Arc-message-signature: i=4; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;        h=list-archive:list-help:list-post:list-id:mailing-list:precedence         :message-id:to:subject:date:from:mime-version:sender:dkim-signature;        bh=nte5Oc4hntEsWeDwFq67H1tBaZHPFXT2gSMeOvObcog=;        b=HvHxEkML4jxOgo5izS80HfX1WanHm1+am08fTZwuJczHEBBQFxFvl86Jj77yjDvD9e         uPXSNGrD/+z68snkwxL2bE5n1fwgIl/l7MDWECR14FJvaFmTnJqgRhHYn4aXVnTb/dDR         PDkLJ1M6oqoy50v0HDSyvzzGdQv9AyafoxZBu5jJ0qcUMW/WONs78sH+xWKKT7CJvQOZ         pTdgdO8ub7ySvnPoxOfzPoEKUVEDt1TGideMnweRRTUqQQfWwIeHZ806xRtsP5GJS8Zm         Ks0/kArnVI3yivTEM5qIybXFdajj4567GFQ3Q0jprm4h3YRE5jcaDr+ajKnWLZmLPYh8         lO2Q==</li>
-<li>Arc-message-signature: i=3; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;        h=message-id:to:subject:date:from:mime-version:dkim-signature;        bh=nte5Oc4hntEsWeDwFq67H1tBaZHPFXT2gSMeOvObcog=;        b=Yn4mi8AeACfvdOuCp+knYaQf3zZU9UAHqcYGih0JYgcZvd1EED+3wRF8ElIEW61a/3         2WqtDSRxCe8J4nrDJ8X+j10zaVyIq1rmnXl8vgKQc/jb01mz2kV/YM3WpoaA4lJpxGob         asOXrYq923vSNiX/0mGzFko4apfdfsOXzdeoIfc04YJvIDItbXvkdA+Bbj77fRN0yN6A         nOwtop5W3jBVN9gblBVWIw7D1eOq8mvLA0lmLWM7vhtua+Ytm+hyb9vxB56ERNasAq32         K3pQm092aWDbRZp7LAKgS+TXxn1Uz0S++VewQjGmuZ1eD8USwjBxIK/dKIuYpHGVJCfd         HtBQ==</li>
-<li>Arc-message-signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;        h=to:subject:message-id:date:from:mime-version:dkim-signature;        bh=nte5Oc4hntEsWeDwFq67H1tBaZHPFXT2gSMeOvObcog=;        b=UcxdHA9wCb/qv5gxgdbTRlct69y7G5peTE0xjVG+VWTZyhD/uOkG/QLltBosHEcRl+         vfGcGpjUArVNA2SOi363vyWs9PjpaY6XsacujerKbLurNiIUt5HMLTC2NFuafez0MoQf         Bqw5lyeVK0Knekuzt0vXE9Q2SZFt9qjPu4wk8mn4m/mZIGJDrKa9U7HnljLnJAbcSQPI         RA3hA5ISARCz1j4e2Wx6o8uFl3cSvn9XyRfptocOgGUHNdvacyDgHxkb0PpRBbnC54VZ         DX8A6YSu65WH64ufo5WQa1kk3q9eX9a52F86e+zLcgu2EAufm1Kqyfd7oAmcNJFngx7M         mgPw==</li>
-<li>Arc-message-signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;        h=to:subject:message-id:date:from:mime-version:dkim-signature;        bh=nte5Oc4hntEsWeDwFq67H1tBaZHPFXT2gSMeOvObcog=;        b=lGUqSicguuNQq0PplbqX+GBuD63VDfixKQowtVt13dSV6QGJSycw56BulSKPbwsJ0p         1xiDqP2fPftbiFEMPsMyxrxXeCnT37KOQj6eMj0RokGDAlumVC18C4l3BEQ1GJZNgO3h         +0rOZhsumpsOrYiWvFtBKQ779+1SHNKlh0p0jpSsIr5ZNY4n7OpsnH674X6HDQ6JNe9a         /W96DoH6ktg3gJNYxAaqNiuzBkBKD41SXcCnDJdk+3Hpc7SPvg9/tyfzUFqVUIwT7HUZ         bjbS87vcjyqPeZMW32XvgInA3WRHdjRQsslRLfgwKmDTkqSdreRtYRcSzGlS2FMA3Un+         LwVA==</li>
-<li>Arc-seal: i=4; a=rsa-sha256; t=1558919884; cv=pass;        d=google.com; s=arc-20160816;        b=D3nkYiP+ICZvteg6apTUBc17MNZBqcCAbvGWAX902Q8VRs+sCueQN2SwOga+mJ+XvL         +P6MM+ZAjFxJXkjNKQ29jocvABNh+m3Y7ExH0mojQIZSOipLeQ2UnJityUy2RIyzL1/S         PHnz2QwdBztwZ1zmDXnWl3HDJ/dGbOQLn0LoVl2WtP3emxWjnz7iOJ2cTIOw6w/21OaL         cPB21lFpGNGysphqTbpecnqQy+veqUoWftYKLgBcg49nugWZfrIB5vhiZhvZgwCNxtti         nXU9/hV0/83Ag0UlKDLLyQGrrK+zM/0NQ0jeoAZThDnZZJ5BJn5SViE0hrYIU5Gy+N+p         RBug==</li>
-<li>Arc-seal: i=3; a=rsa-sha256; t=1558919882; cv=pass;        d=google.com; s=arc-20160816;        b=i7/5ucVeGZGSZmaF3FryO15qqOQanyL0OnWsmWIYdwSOc0D/FbhxlebAfKvcs0mMkL         TA18Etl1Tt6SKsYVIk9d2jMHwaAqmoV0IMMOhHcOu+4IMfoXkX0ySup2xXpbLW/rtuPR         RVlI3vkvbfhOWak44hXR9xvbC4Dw1tD8us4t76LrlRr5Dyw92RyxHf8kKXVa7j3c2Ohr         +r4eTNzuRU1iaQMcG7A2tZ1PLChcIg13BniB9W5DLuXGI7zAxMzjfxk/dmlJYGXNm92U         mcK3BPs4yv67ZWjJ82jpoy6L5XvgDogFDWnPjMYOdUPqQw9DMBIErVRv7POkzhh2xNzX         xmXw==</li>
-<li>Arc-seal: i=2; a=rsa-sha256; t=1558919871; cv=pass;        d=google.com; s=arc-20160816;        b=JIRyT9yNzzsfgeRbLKle3WXuhOzVHIshPn8jDsolaktmtOuvyh9OiZF9P6FrV35Mwf         QceXSqEypbH44os0edel50qoDIstztxDYreRf8e+OfBe7RkV6wzpdoXYK+oHU2arNbIP         MO7Lzei6gKpAyVUz5f4vYGTd7SFRnG58GIfUMco8wEWZycNGW34nQvMoipuhx3uY0hJ9         aNeVAcIyk2nfeyjnrpXA4oiwzxU2CR9fXyaizFgXZ9a/YkZxlUOLBwFdOrU1QOw6XV0T         9jWaD0Bei47WOkxoRmV6P6YffmcXuYU/DWeiIRhYV1d814QmwaQQ/DUlKpvhJZCWdAN5         BU5A==</li>
-<li>Arc-seal: i=1; a=rsa-sha256; t=1558919864; cv=none;        d=google.com; s=arc-20160816;        b=gbUzAffU3hjIoYL36QDEuP4TaRg1nbQIVxAnv60WAa4Co+vLGxiKBqLLcH82PRV7Hn         y55RbGckDn+yONt7Mu/DKKyj9RChrgeVNe2sKqWMlT2mFEOfsr58W2jChqOzfZu+PuTL         qlg1hmJMCkju/4LEDLETslD2YvNPkxmu+Pa9/JffEsibylmtC/zRJhuVYMaVl2ji1qVp         WzcEjajv02svE5BLcqZLNNwhXV+GP9F4fmZbs+5aOCyLtkpBTqYDuFBrqJsKnZaalO4o         ADMrcsgYlpBvM6nb6q7hidzgSrA97SFU7ITkxSm3er5jGhMHIRQ9q3SHA4k4kgp7q2RP         XYNw==</li>
-<li>Dkim-signature: v=1; a=rsa-sha256; c=relaxed/relaxed;        d=noaa.gov; s=google;        h=sender:mime-version:from:date:subject:to:message-id         :x-original-sender:x-original-authentication-results:precedence         :mailing-list:list-id:list-post:list-help:list-archive;        bh=nte5Oc4hntEsWeDwFq67H1tBaZHPFXT2gSMeOvObcog=;        b=bw2My2fpCJQCBw+GlA6RFBTwtnlPeiNgG8ixIhfC3YXFMXRuWL6Okm3XxUmn5PNs2+         qwxF7ve+x/rH/8N9FXHL9VJIURlMyIYsoqhZ0QCKRW8+6U/rifBZeBqL4zPXjpV2EWKe         bWIhZwC8hd6FxiM0imeAMGzAlP3q8kpZWDE4KlodHl7yi32O64w9yXzVaEITJNwG3KV+         03H1WeOOn4sljx8xhqapIT9yG+IZT/3ZDN3Owedoruzlh3/DHtE3fc9exJ89w6nbu2KR         h7JZEnRbKjSN6q9n5npXQCLSn/IMFWzpSkldZ2pibvB3huh5sYypzySa14XzTZy6VBS5         HlvQ==</li>
 <li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
 <li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
 <li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
@@ -61,7 +49,7 @@
 <p><strong>Attachment:
 <a href="bin8vWMUoOm0v.bin" ><tt>rainfall.topo.nc</tt></a></strong><br>
 <em>Description:</em> Binary data</p>
-
+ 
 <!--X-Body-of-Message-End-->
 <!--X-MsgBody-End-->
 <!--X-Follow-Ups-->
@@ -82,10 +70,10 @@
 <li>Next by thread:
 <strong><a href="msg00191.html">Re: [ferret_users] How to set Z-axis as elevation</a></strong>
 </li>
-
+ 
 </UL>
 <center>[<a href="msg00187.html">Thread Prev</a>][<a href="msg00191.html">Thread Next</a>][<A HREF="threads2019.html#00189">Index</A>]</center>
-
+ 
 <hr>
 </body>
 </html>

@@ -1,3 +1,4 @@
+ 
 <!-- MHonArc v2.6.18 -->
 <!--X-Subject: Re: [ferret_users] discarding NaN values in a sequenced data series -->
 <!--X-From-R13: fnhenou enguber <ebuvgfeo2020Ntznvy.pbz> -->
@@ -8,7 +9,7 @@
 <!--X-Reference: ME2PR01MB3220DB625487B17E125429079DD00@ME2PR01MB3220.ausprd01.prod.outlook.com -->
 <!--X-Head-End-->
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-        "http://www.w3.org/TR/html4/loose.dtd">
+"http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <title>Re: [ferret_users] discarding NaN values in a sequenced data series</title>
@@ -20,7 +21,7 @@
 <!--X-TopPNI-->
 <HR>
 <center>[<a href="msg00620.html">Thread Prev</a>][Thread Next][<A HREF="threads2019.html#00621">Index</A>]</center>
-
+ 
 <!--X-TopPNI-End-->
 <!--X-MsgBody-->
 <!--X-Subject-Header-Begin-->
@@ -33,20 +34,7 @@
 <li><strong>Subject</strong>: <strong>Re: [ferret_users] discarding NaN values in a sequenced data series</strong></li>
 <li><strong>From</strong>: <strong>saurabh rathore &lt;<a href="mailto:rohitsrb2020@DOMAIN.HIDDEN">rohitsrb2020@xxxxxxxxx</a>&gt;</strong></li>
 <li>Date: Fri, 24 Apr 2020 14:32:29 +1000</li>
-<li>Arc-authentication-results: i=4; mx.google.com;       dkim=pass header.i=@gmail.com header.s=20161025 header.b=vUsCjFwE;       arc=pass (i=2 dkim=pass dkdomain=gmail.com);       spf=pass (google.com: domain of <a href="mailto:rohitsrb2020@DOMAIN.HIDDEN">rohitsrb2020@xxxxxxxxx</a> designates 209.85.160.200 as permitted sender) smtp.mailfrom=<a href="mailto:rohitsrb2020@DOMAIN.HIDDEN">rohitsrb2020@xxxxxxxxx</a></li>
-<li>Arc-authentication-results: i=3; mx.google.com;       dkim=pass header.i=@gmail.com header.s=20161025 header.b=vUsCjFwE;       arc=pass (i=2 dkim=pass dkdomain=gmail.com);       spf=pass (google.com: domain of <a href="mailto:rohitsrb2020@DOMAIN.HIDDEN">rohitsrb2020@xxxxxxxxx</a> designates 209.85.160.200 as permitted sender) smtp.mailfrom=<a href="mailto:rohitsrb2020@DOMAIN.HIDDEN">rohitsrb2020@xxxxxxxxx</a></li>
-<li>Arc-authentication-results: i=2; mx.google.com;       dkim=pass header.i=@gmail.com header.s=20161025 header.b=vUsCjFwE;       arc=pass (i=1 spf=pass spfdomain=gmail.com dkim=pass dkdomain=gmail.com dmarc=pass fromdomain=gmail.com);       spf=softfail (google.com: domain of transitioning <a href="mailto:rohitsrb2020@DOMAIN.HIDDEN">rohitsrb2020@xxxxxxxxx</a> does not designate 65.153.203.168 as permitted sender) smtp.mailfrom=<a href="mailto:rohitsrb2020@DOMAIN.HIDDEN">rohitsrb2020@xxxxxxxxx</a></li>
-<li>Arc-authentication-results: i=1; mx.google.com;       dkim=pass header.i=@gmail.com header.s=20161025 header.b=vUsCjFwE;       spf=pass (google.com: domain of <a href="mailto:rohitsrb2020@DOMAIN.HIDDEN">rohitsrb2020@xxxxxxxxx</a> designates 209.85.220.41 as permitted sender) smtp.mailfrom=<a href="mailto:rohitsrb2020@DOMAIN.HIDDEN">rohitsrb2020@xxxxxxxxx</a>;       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com</li>
-<li>Arc-message-signature: i=4; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;        h=list-archive:list-help:list-post:list-id:mailing-list:precedence         :message-id:cc:to:subject:date:from:in-reply-to:references         :mime-version:sender:dkim-signature;        bh=i7s7+rBEGmiZuBZSKXiUqQ//jDP82GjlpplEWQmr7cs=;        b=moSODsPtoy/p2PkgGaiXJS1X+LRe1HwzYIOQe7RB7UP25Q2Tzh/97j5mozO1QTDtKt         HrVWtLUkCcQq7pi4Qsu0s/3MmtkzHRF606ybKmqQUtfcn3Qjq9rlpEv07bkUH8QOS9PY         CyXqAmfNdSZtaBgNbR2sSv9X1+JXEpOw31exQmxq7m/dyXrgEYyibHdyAQrCX3znHXps         T2YkMz8eX5aEbXNRjRN70K5VO433fJcY4Uy8CdxuWiiuoSTeAD21DZmUqxO45bkS5db2         qtkePWYDuUvCROY3wjQsIvyZdTOKI0KQFW8ILyumonY9BKld7HOau2Ey+CKReyU1+GHN         cN1g==</li>
-<li>Arc-message-signature: i=3; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;        h=message-id:cc:to:subject:date:from:in-reply-to:references         :mime-version:dkim-signature;        bh=i7s7+rBEGmiZuBZSKXiUqQ//jDP82GjlpplEWQmr7cs=;        b=Px/HVx3NjHyBq4WxSQOurQ64chrVscv11Z0oykc0Xsq/TC28r4ILs8xSiB2SG+T2Oy         00Dhw6y3OkVBAju71SeKGL8kKSzQioay4hxCT7u9r+Q86S/XkTNzSj1/2yHt+s0nu77k         lKTU3O6vIZqYqtpPnYeODnD0tjbZ5grDQAAyg8nShrzzEJDE1/uDyKJHC8KbDRWMVeD6         VS9y8Tl/JUwdiCXuhHapLhpRqdEyzZNGr4j0U6s2NjXn0s03+cPT4TxJUaWtambzmXkz         8Hl6+kEFsd5NY98/rJhR2bwEkXf2Hnr/BmnitCGJQbe+lsUw94UU0oXFYp2sn0Ejbp9k         MVmA==</li>
-<li>Arc-message-signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;        h=cc:to:subject:message-id:date:from:in-reply-to:references         :mime-version:dkim-signature;        bh=i7s7+rBEGmiZuBZSKXiUqQ//jDP82GjlpplEWQmr7cs=;        b=b/amEd2zgWqK/HOSPI57fhnnMVxoOP7/Jy7/E48w5BWNxG0VE9uaSn80J3xnIUDYsY         0GaeGMyB5bfM014a4GDc2iqgY0tca5JE9ZYym2xrAYSVbgzCsbA5Gg4NGlnI1ZUAwtfT         aUShO4nFolrGw4elM+8s/t3GOmGMIZyDvCAdFL18nsu30lbdq8o1mJLQyBCqT8pv3gMn         3WTkbWYtrvRgB3uVmPp3ObC9wFM5Eg7ALbC8UwnfA08KabqXFkyyQn5YQXghcGoLuTzD         fZ/aBGB2t46PSen0Uc89caYNBpBKhBWn555gdtnFBqyDKl63pNzIYL/9YfMHMAmfQgz7         Br8Q==</li>
-<li>Arc-message-signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;        h=cc:to:subject:message-id:date:from:in-reply-to:references         :mime-version:dkim-signature;        bh=i7s7+rBEGmiZuBZSKXiUqQ//jDP82GjlpplEWQmr7cs=;        b=sEc2LBuV/QZO0SjSuQ5kXmoEBBUBNOjEEsuTBL4FsPUmvlzzddgwAcQYKY0LLAfOC6         EEUT/C2UuEi0s1HUL4Irug2kPRoElLR0gE0SLblJ6lIIXyBoZZlsRIh9eRNgk7TGzhTP         jE6ibQ7dEZNNoespfpIr6oWxMbYIi0UfBycFlCQiNjLlm4OFoR2mqM0ukpEREaxM7eyE         7JEvgj/nZMX63/HGPgEuzgnoEcZxbkM0KCkdjIiIV59bO0M+GzKljTzVdBkFra9yNu6h         kInmP1uSObrdonY3uWcW5G7USDFBHAdxNkCOd5r9Gl1U+3VvKghoxJqJX8MMP3kJcWOC         W71w==</li>
-<li>Arc-seal: i=4; a=rsa-sha256; t=1587702765; cv=pass;        d=google.com; s=arc-20160816;        b=iic4RqnhAm8BzRIGK7H/aUIFzG0Qj2NUejguwq672XUe4Ao8Rmzo02OHDD/DHYSIzz         fwKbzea7f/CeVoib5Ob5AERfwGG/cDpNOpaUJ6cZ/pnibbS/6ajfbub3wlkWnWLTFhdZ         lNbDMd69L9sxcu0cjD/GVrwe3Za0WsjsXNFoYR2cch1v10UGnY6idKcJhX/BW5pm9RVa         /pgb6hL63BZQcqYjqwwGfu2EzgTKkZFOAy2hK/ageIV2zvblc+EkZQyp/cs2KKOi3BuC         xevbnOWl/iAExiHEL37UkDdNKM5fw5+nbH1xTVqN5B8Y2R13ffR7Lo6PZR4+wr+9E6eF         cpBA==</li>
-<li>Arc-seal: i=3; a=rsa-sha256; t=1587702764; cv=pass;        d=google.com; s=arc-20160816;        b=p0VwRsZLIk61MroGF+1bdZOY+NCzzayeq+qzU45uTkNfZPNZsvSWqqkr5vPHIYH3Zj         etNlr8l/ptuuFDtfw4ppK1jl2fZIgFqz6k04lGstMO15Rp6w8ZSX99c96Dz4eQoxa33M         t8CnD8N9ojCvzm6fMoiHw6vbIRB8KNaoSPtfPcXA4tGrQC5S6EBFOGjF/AKyrrW8vw1L         DhAxAHM4uDq4zZ5LeeGlMC9EgybsQ99VnAxFibmAsp0Aa50/enx+J15+y/LonfbWA/BI         Ds+V+f/wTBwvLK2g6s7M1ZqqBiOcJR5YaI7l73TLqSRpfDckKLo0EEavvJNClRzXgDsh         /Fsw==</li>
-<li>Arc-seal: i=2; a=rsa-sha256; t=1587702761; cv=pass;        d=google.com; s=arc-20160816;        b=p1b6wuPkZCY5/TOO5Z9jgEXS6baVcDQ7U9P/kiOyIOiruhUNG8TRBP9fjhtkvm7P15         7J6ozLsqJnqk+3uroX/7QZzZe6SbXdGA9TQnsYgTqxBD8US52YSO/L0MVmg/NCJ9HLM1         AnS55vHPDObhOJHRzOt/RSsSNt/xb307WInYcI1gv48T1I/3km87OE9xcQ2nKTOGTN37         gnlnsK6zft+vs9yrell9O+ElCs/NyU8TSOvDUIpZ6KaWw/W3X+2ErUdNnfTVanc/Bw0O         7qe6pqh1B4Dwrw7bmXrfSm3/BWAnagFSJ6sb50p7s5SrfLSRMygsgjLFQuzCLAw20kNU         iddg==</li>
-<li>Arc-seal: i=1; a=rsa-sha256; t=1587702760; cv=none;        d=google.com; s=arc-20160816;        b=YUKqemGKyb3s/obmSxXrPFQVBAjtTylUSYhfE6WR4D5UMFCodkppv6BptROLpzpHgk         OpmE74/3Ej1zFcV27/YUmPlO4imbojMAo9+t2NwtzaD6H/l/BrAqZgc6gFo+SEGmDpgi         cNev8yhdWexFl6ZyFrfcrFypQWwJIDX8ttn+H9wlwp4/mRdkRzoXZnMGLlUolmCoyMQF         VYywVJBu04GUoM/6NGkjBZ0i9FT1qUB0HZE83ewPmm9jZRzuXm1K0IuLRYld8ddD2nbz         IfQ361tHYI3xooXhlc4nmf+au9v29yUvmeDPfUYk78EL+BIzpARoo+qdNSo+0frkGKaS         gSsA==</li>
 <li>Cc: ferret users &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</li>
-<li>Dkim-signature: v=1; a=rsa-sha256; c=relaxed/relaxed;        d=noaa.gov; s=google;        h=sender:mime-version:references:in-reply-to:from:date:subject:to:cc         :message-id:x-original-sender:x-original-authentication-results         :precedence:mailing-list:list-id:list-post:list-help:list-archive;        bh=i7s7+rBEGmiZuBZSKXiUqQ//jDP82GjlpplEWQmr7cs=;        b=VTpdqh+ufANx8bYL5+Ke3kPaIac7V5OqdQh7fvlkr+7TE2jHJI5EmR9DEF2W32hetB         KH+p6GcYnqIBpmq8KPoY79luioz8KT9NjyT4AOImKq0SDa9PnmXZZhmWlcCRDpH1Oke1         Y/5h62Vg/q2KYwahBAW8Pyi1YY3fBKoNNg0lfX3AwCV1LowhFyVq3UvOhuNT+2Jox8e1         yAK5gPWgRxGkHnNR+HcHGcf6vGx9HWr/qYBE1mi2lQkIFtmvcu1Kbrm8a8jUXXWhU1bs         TPEG+U5GyTCkoLLbyZT2DbRj3gTdrZBQaucEhxk9NVLjF+J+kmJ3InDh2XtCUmp0lODE         uoUw==</li>
 <li>In-reply-to: &lt;<a href="msg00620.html">ME2PR01MB3220DB625487B17E125429079DD00@ME2PR01MB3220.ausprd01.prod.outlook.com</a>&gt;</li>
 <li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
 <li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
@@ -62,10 +50,10 @@
 <!--X-Head-Body-Sep-End-->
 <!--X-Body-of-Message-->
 <div dir="ltr"><div class="gmail_default" style="color:#000000">Thank you Russ,</div><div class="gmail_default" style="color:#000000">The compressl function is working fine. <br></div><div class="gmail_default" style="color:#000000"><br></div><div class="gmail_default" style="color:#000000">Cheers, Saurabh<br></div></div><br><div class="gmail_quote"><div dir="ltr" class="gmail_attr">On Fri, Apr 24, 2020 at 12:18 PM Fiedler, Russell (O&amp;A, Hobart) &lt;Russell.Fiedler@xxxxxxxx&gt; wrote:<br></div><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex">
-
-
-
-
+ 
+ 
+ 
+ 
 <div dir="ltr">
 <div style="font-family:Calibri,Arial,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
 <br>
@@ -132,7 +120,7 @@ Russ<br>
 <div style="color:rgb(0,0,0)"><br>
 </div>
 <div style="color:rgb(0,0,0)">I am emailing for a problem to discard the NaN values and making the 3-d or 4-d data into 1-d data by using sequence x/y/z/t function. I am unable to do discard the NaN values in sequencing the data. I just
- want good/valid values in my sequenced data. I am trying to use @ngd operator but it seems that I am not able to use it in a proper way.
+want good/valid values in my sequenced data. I am trying to use @ngd operator but it seems that I am not able to use it in a proper way.
 <br>
 </div>
 <div style="color:rgb(0,0,0)"><br>
@@ -223,9 +211,9 @@ OBST &#xA0; &#xA0; TSEQUENCE(SST1) &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#x
 </div>
 </div>
 </div>
-
+ 
 </blockquote></div><br clear="all"><br>-- <br><div dir="ltr" class="gmail_signature"><div dir="ltr"><div><div dir="ltr"><div><font size="4" color="#0000ff"><b><br></b></font></div><div><font size="4" color="#0000ff"><b><br></b></font></div><font size="4" face="times new roman, serif" color="#0000ff"><b>REGARDS</b></font><div><font size="4" face="times new roman, serif" color="#0000ff"><b><br></b></font><div><font size="4" face="times new roman, serif" color="#0000ff"><b>Saurabh Rathore</b></font></div><div><font size="4" face="times new roman, serif" color="#0000ff"><b>Research Scholar (PhD.)</b></font></div><div><font size="4" face="times new roman, serif" color="#0000ff"><b>Centre For Oceans, Rivers, Atmosphere &amp; Land Science Technology</b></font></div><div><font size="4" face="times new roman, serif" color="#0000ff"><b>Indian Institute Of Technology, Kharagpur</b></font></div><div><font size="4" face="times new roman, serif" color="#0000ff"><b>contact :- 91- 8345984434</b></font></div></div></div></div></div></div>
-
+ 
 <!--X-Body-of-Message-End-->
 <!--X-MsgBody-End-->
 <!--X-Follow-Ups-->
@@ -245,10 +233,10 @@ OBST &#xA0; &#xA0; TSEQUENCE(SST1) &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#x
 <li>Previous by thread:
 <strong><a href="msg00620.html">Re: [ferret_users] discarding NaN values in a sequenced data series</a></strong>
 </li>
-
+ 
 </UL>
 <center>[<a href="msg00620.html">Thread Prev</a>][Thread Next][<A HREF="threads2019.html#00621">Index</A>]</center>
-
+ 
 <hr>
 </body>
 </html>
