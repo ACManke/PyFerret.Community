@@ -58,9 +58,7 @@ experiments of my own, and it seems that the /VLIM=40:0:2 which you
 have used to reverse the vertical axis is what is causing the SHADE
 command in gif mode to go wrong.&nbsp; I think this goes all the way back to
 2003, when we implemented a new method of drawing SHADE plots in gif
-mode
-(<a rel="nofollow" class="moz-txt-link-freetext" href="http://ferret.pmel.noaa.gov/FERRET_17sep07/Documentation/Release_Notes/v553.html#cellarray">http://ferret.pmel.noaa.gov/FERRET_17sep07/Documentation/Release_Notes/v553.html#cellarray</a>)
-. <br>
+mode. <br>
 <blockquote><tt>ferret -gif<br>
 yes? shade/i=1:40/j=1:40/vlim=40:0:2 i+j<br>
 yes? frame/file=xx.gif</tt><br>

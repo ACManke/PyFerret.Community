@@ -44,7 +44,7 @@
 <hr>
 <!--X-Head-Body-Sep-End-->
 <!--X-Body-of-Message-->
-Hi Savin,<br><br>I believe you should use @DDC, @DDB or DDF transformations (<a rel="nofollow" href="http://ferret.pmel.noaa.gov/FERRET_17sep07/Documentation/Users_Guide/v607/Chapter3_Variables_and_Expressions.htm#_VPINDEXENTRY_482">see description here</a>).<br>
+Hi Savin,<br><br>I believe you should use @DDC, @DDB or DDF transformations <br>
 <br>Supposing you are using relative vorticity defined as<br><br>zeta = du/dx - dv/dy<br><br>in Ferret, you can do something like:<br><br>let dudx = u[i=@ddc]<br>let dvdy = v[j=@ddc]<br>let zeta = dudx - dvdy<br><br>Where zeta is Z-component of relative vorticity, u and v are your wind component variables.<br>
 <br>Hope it helps,<br>Paulo Santiago<br><br><div class="gmail_quote">2008/6/25 Savin &lt;<a rel="nofollow" href="mailto:schand@xxxxxxxxxxxxxxxxxxxx">schand@xxxxxxxxxxxxxxxxxxxx</a>&gt;:<br><blockquote class="gmail_quote" style="border-left: 1px solid rgb(204, 204, 204); margin: 0pt 0pt 0pt 0.8ex; padding-left: 1ex;">
 
