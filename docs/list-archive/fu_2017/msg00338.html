@@ -46,7 +46,7 @@
 <!--X-Head-Body-Sep-End-->
 <!--X-Body-of-Message-->
 <div dir="ltr"><div><div><div>Dear ALL<br>
-</div>I am using CHIRPS data to compute EOFs and only I need upto 6 eofs . I am using this link <a rel="nofollow" href="http://ferret.pmel.noaa.gov/static/Demos/ef_eof_demo/ef_eof_demo.html">http://ferret.pmel.noaa.gov/static/Demos/ef_eof_demo/ef_eof_demo.html</a><br>
+</div>I am using CHIRPS data to compute EOFs and only I need upto 6 eofs . I am using this link <a rel="nofollow" href="../../documentation/demos/ferret-eof-demo.html">../../documentation/demos/ferret-eof-demo.html</a><br>
 <br>
 </div>However, i continue to get memory Issue even after reducing the eofs to only 6<br>
 <br>
@@ -60,7 +60,7 @@ PR PRE*MASK 1:653 1:765 ... 1:300 ... ...<br>
 <br>
 yes? SET REGION/X=28E:42E/Y=11S:5N<br>
 yes? LET eof_xyfcn = eof_space(pr, 0.5)<br>
-yes? SAVE/CLOBBER/FILE=<a rel="nofollow" href="http://sst_clim_eof_space.nc">sst_clim_eof_space.nc</a> eof_xyfcn[l=1:6]<br>
+yes? SAVE/CLOBBER/FILE=sst_clim_eof_space.nc eof_xyfcn[l=1:6]<br>
 **ERROR: request exceeds memory setting: 55 Mwords were requested.<br>
 *** NOTE: You can use SET MEMORY/SIZE=xxx to increase memory.<br>
 *** NOTE: The &quot;Memory use&quot; section of the FERRET Users Guide has further tips.<br>
