@@ -61,8 +61,7 @@ which will make that pen gray.<br>
 <br>
 To mark a grid on your plot, an easier way than ALINE is to use the
 /GRATICULE qualifier on your plot command.&nbsp; (See the on-line demo of
-this <a rel="nofollow"
- href="../../documentation/demos/ferret-graticules-demo.html">../../documentation/demos/ferret-graticules-demo.html</a>)<br>
+this <a href="../../documentation/demos/ferret-graticules-demo.html">../../documentation/demos/ferret-graticules-demo.html</a>)<br>
 <br>
 You might do:<br>
 <blockquote>yes? use coads_climatology<br>
