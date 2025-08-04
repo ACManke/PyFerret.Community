@@ -54,7 +54,7 @@
 Hi,
  
 </pre><tt>It looks as if we need a clarification to the documentation, and perhaps 
-</tt><tt>the code itself.&#xA0; In my example,
+</tt><tt>the code itself. In my example,
 </tt><pre style="margin: 0em;">
  
 yes? set text/font=serif
@@ -63,7 +63,7 @@ yes? ! draw plots...
  
 </pre><tt>if we leave off the first SET TEXT, then the second one, asking for a 
 </tt><tt>setting for one text group, is ignored, and we're still using Hershey 
-</tt><tt>font.&#xA0; I think that's what you were reporting at the start of this 
+</tt><tt>font. I think that's what you were reporting at the start of this 
 </tt><tt>thread. PyFerret should write a NOTE in that case.
 </tt><pre style="margin: 0em;">
  
@@ -81,9 +81,9 @@ PyFerret system font, not a mix of those, so the setting is either &quot;SET
 TEXT/FONT=&quot; for system fonts or &quot;CANCEL TEXT&quot; for Hershey. You can turn
 the PyFerret fonts on and off as your script draws the plot [...].
  
-[...]&#xA0; You could change your labels to use the
+[...] You could change your labels to use the
 subscript and superscript methods for PyFerret fonts,
-<a  rel="nofollow" href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/SET#pyferret_subscript">https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/SET#pyferret_subscript</a>.
+<a  rel="nofollow" href="../../documentation/users-guide/commands-reference/SET.html#pyferret_subscript">../../documentation/users-guide/commands-reference/SET.html#pyferret_subscript</a>.
 Or I suppose if it makes sense, do a CANCEL TEXT before drawing the
 moveable labels, and SET TEXT/FONT= afterwards.
 </pre></blockquote><pre style="margin: 0em;">

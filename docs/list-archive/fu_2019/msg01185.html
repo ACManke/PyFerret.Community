@@ -60,25 +60,25 @@ have the same set of depths, then you could use the timeseries
 aggregation method to define a virtual dataset containing all the
 data, which is Z by T</p>
 <p>See
-<a rel="nofollow" class="moz-txt-link-freetext" href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/DEFINE#_define_data_agg">https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/DEFINE#_define_data_agg</a></p>
+<a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/users-guide/commands-reference/DEFINE.html#_define_data_agg">../../documentation/users-guide/commands-reference/DEFINE.html#_define_data_agg</a></p>
 <p>It might look like this:<br>
 </p>
 <p><font face="monospace">yes? let my_files=spawn("ls -1
-/datapath/station*.nc") &#xA0; <br>
+/datapath/station*.nc")  <br>
 yes? tseries all_stations = my_files</font></p>
 <p><font face="monospace">yes? show data<br>
-&#xA0;&#xA0;&#xA0;&#xA0; currently SET data sets:<br>
-&#xA0;&#xA0;&#xA0; 1&gt; all_stations&#xA0; (default)<br>
-&#xA0;name&#xA0;&#xA0;&#xA0;&#xA0; title&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; I&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; J&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
-K&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; L<br>
-&#xA0;var &#xA0;&#xA0;&#xA0;&#xA0; station data &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ... &#xA0;&#xA0; &#xA0;&#xA0; ... &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
-1:20 &#xA0;&#xA0;&#xA0;&#xA0; 1:25<br>
-&#xA0;<br>
+ currently SET data sets:<br>
+ 1&gt; all_stations (default)<br>
+name title I J
+K L<br>
+var  station data        ...   ... 
+1:20  1:25<br>
+<br>
 yes? plot/along=z var</font><br>
 <br>
 </p>
 <p>The plot/along= will draw a set of line plots from a
-multi-dimensional variable.&#xA0; <br>
+multi-dimensional variable. <br>
 </p>
 <p>Ansley<br>
 </p>
@@ -96,14 +96,14 @@ cite="">
 you can do is:</div>
 <div><br>
 </div>
-<div>let my_files=spawn("ls -1 /datapath/station*.nc") &#xA0;&#xA0;</div>
+<div>let my_files=spawn("ls -1 /datapath/station*.nc") </div>
 <div>! it will look like when you use the list command and it is
 like an array that stores your files one by one</div>
 <div><br>
 </div>
 <div>repeat/range=1:25/name=order (define symbol xx=`order`; use
 'my_files[x=($xx)]')</div>
-<div>! variable order will&#xA0;change every time you do a loop and
+<div>! variable order willchange every time you do a loop and
 you need a variable to respond to the changes</div>
 <div><br>
 </div>
@@ -112,8 +112,8 @@ that you can use a similar method like</div>
 <div><br>
 </div>
 <div>repeat/range=1:25/name=order (define symbol xx=`order`;
-plot 'T[d=($xx)]')&#xA0;</div>
-<div>but I never tried it before.&#xA0;&#x1F639;<br>
+plot 'T[d=($xx)]')</div>
+<div>but I never tried it before.&#x1F639;<br>
 </div>
 <div><br>
 </div>
@@ -123,7 +123,7 @@ plot 'T[d=($xx)]')&#xA0;</div>
 <div>Xiaoyu</div>
 <div><br>
 </div>
-<div>&#xA0;&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;</div>
+<div>     </div>
 </div>
 <br>
 <div class="gmail_quote">
@@ -137,24 +137,24 @@ wrote:<br>
 color="red">Caution</font></strong>: Email from External
 Sender. Do not click or open links or attachments unless you
 know this sender.]<br>
-<span>&#xA0;</span>
+<span></span>
 <div dir="ltr">Hello all
 <div><br>
 </div>
 <div>I have 25 station point data stored in 25 files. I need
 to plot a time series of variable temperature for 25
-stations.&#xA0;</div>
+stations.</div>
 <div><br>
 </div>
-<div>I am currently using the below code to do it. Is&#xA0;there
-any efficient way to achieve&#xA0;the same ?</div>
+<div>I am currently using the below code to do it. Isthere
+any efficient way to achievethe same ?</div>
 <div><br>
 </div>
-<div>use <a rel="nofollow" href="http://station1.nc" target="_blank"
+<div>use <a rel="nofollow" href="http://station1.nc"
 moz-do-not-send="true">station1.nc</a></div>
 <div>..</div>
 <div>..</div>
-<div>use <a rel="nofollow" href="http://station25.nc" target="_blank"
+<div>use <a rel="nofollow" href="http://station25.nc"
 moz-do-not-send="true">station25.nc</a></div>
 <div><br>
 </div>

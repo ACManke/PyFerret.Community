@@ -57,22 +57,22 @@
  
 <p>Hi Billy,</p>
 <p>I'm glad to hear the Auxiliary Coordinate Regridding is the
-solution for you.&#xA0; It's really the best answer, as it's a more
+solution for you. It's really the best answer, as it's a more
 flexible technique working in different directions, and doesn't
 have some of the limitations that ZAXREPLACE_AVG and
-ZAXREPLACE_BIN do.&#xA0; Namely:<br>
+ZAXREPLACE_BIN do. Namely:<br>
 </p>
 <p>For the ZAXREPLACE_AVG and ZAXREPLACE_BIN calls you were trying,
 were you sending in any subset information within the arguments to
-the function?&#xA0; Because these functions are implemented as external
-functions, and because they are grid-changing functions&#xA0; you would
+the function? Because these functions are implemented as external
+functions, and because they are grid-changing functions you would
 need to specify a subset as</p>
-<p><font face="monospace">&#xA0;&#xA0; FILL
+<p><font face="monospace"> FILL
 ZAXREPLACE_AVG(flow[x=1,L=3],depth[x=1,L=3],z[gz=zaxis])</font><br>
 </p>
 <p>instead of <br>
 </p>
-<p><font face="monospace">&#xA0;&#xA0; FILL/x=1/L=3
+<p><font face="monospace"> FILL/x=1/L=3
 ZAXREPLACE_AVG(flow,depth,z[gz=zaxis])</font></p>
 <p><br>
 </p>
@@ -121,9 +121,8 @@ wrote:<br>
 heavily, so there may be something wrong.<br>
 </p>
 <p>As an alternative, you might look at using the Auxiliary
-Coordinate Regridding syntax, introduced in&#xA0; <a rel="nofollow"
-href="https://ferret.pmel.noaa.gov/Ferret/documentation/release-notes/version-6-95-release-notes"
-target="_blank" moz-do-not-send="true">V6.95</a>. This
+Coordinate Regridding syntax, introduced in <a rel="nofollow"
+href="../../documentation/release-notes/version-6-95-release-notes.html"  moz-do-not-send="true">V6.95</a>. This
 is an extension of the logic behind ZAXREPLACE, working in
 any direction and with two options for the way the
 transformation is done, either by linear interpolation or
@@ -156,8 +155,8 @@ TE = corresponding temperature<br>
 <br>
 <div>I want to remap UE onto a temperature z-axis
 (zthick) in half-degree steps.</div>
-<div>ZTHICK &#xA0; &#xA0;Z (#C) &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;55 r &#xA0; 4.25 &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;
-&#xA0; &#xA0; &#xA0; 31.25</div>
+<div>ZTHICK  Z (#C)       55 r  4.25     
+   31.25</div>
 <div><br>
 </div>
 <div>The definition of the plotted quantities are always
@@ -203,8 +202,7 @@ NOAA / Pacific Marine Environmental Laboratory<br>
 7600 Sand Point Way NE<br>
 Seattle WA 98115 USA<br>
 <br>
-<a rel="nofollow" href="mailto:william.s.kessler@xxxxxxxx"
-target="_blank" moz-do-not-send="true"
+<a rel="nofollow" href="mailto:william.s.kessler@xxxxxxxx"  moz-do-not-send="true"
 class="moz-txt-link-freetext">william.s.kessler@xxxxxxxx</a><br>
 Tel: +1 206-526-6221<br>
 Fax: +1 206-526-674</div>

@@ -53,52 +53,52 @@
  
 <p>Hi Josh,</p>
 <p>Zero is a bit problematic for use as a bad-value, especially when
-your data contains zeros.&#xA0; Try it this way:<br>
+your data contains zeros. Try it this way:<br>
 </p>
-<p><tt>&#xA0;&#xA0; LET no_strat = if stratified[l=1:12@sum] eq 0 then 1 </tt><br>
+<p><tt> LET no_strat = if stratified[l=1:12@sum] eq 0 then 1 </tt><br>
 </p>
-<p>You don't need an "else" here.&#xA0; By default in an IF, if there is
-no else it's treated as "else missing".&#xA0; As I've written that
+<p>You don't need an "else" here. By default in an IF, if there is
+no else it's treated as "else missing". As I've written that
 command, the default missing-value of -1.e34 will be used for
 missing-data. If you want to assign a particular missing-value,
 then you can do that right on the LET command.<br>
 </p>
-<p><tt>&#xA0;&#xA0; LET/bad=-9999 </tt><tt> no_strat = if
+<p><tt> LET/bad=-9999 </tt><tt> no_strat = if
 stratified[l=1:12@sum] eq 0 then 1 <br>
 </tt></p>
 <p>Also have a look in the documentation about the distinction
 between <a rel="nofollow" moz-do-not-send="true"
-href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/variables-xpressions/XPRESSIONS#_VPINDEXENTRY_553">IF
-and IFV</a>.&#xA0;&#xA0;&#xA0; There can be valid values of 0 in data.&#xA0;&#xA0; Here's
+href="../../documentation/users-guide/variables-xpressions/XPRESSIONS.html#_VPINDEXENTRY_553">IF
+and IFV</a>. There can be valid values of 0 in data. Here's
 a variable with one value that's 0 and another that's missing.<br>
 </p>
 <p><tt>yes? let var = {6, 2, 0, 2, , 3}</tt></p>
 <tt>yes? list IF var then 1</tt><tt><br>
-</tt><tt>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; VARIABLE : IF VAR THEN 1</tt><tt><br>
-</tt><tt>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; SUBSET&#xA0;&#xA0; : 6 points (X)</tt><tt><br>
-</tt><tt>&#xA0;1&#xA0;&#xA0; / 1:&#xA0; 1.000</tt><tt><br>
-</tt><tt>&#xA0;2&#xA0;&#xA0; / 2:&#xA0; 1.000</tt><tt><br>
-</tt><tt>&#xA0;3&#xA0;&#xA0; / 3:&#xA0;&#xA0; ....</tt><tt><br>
-</tt><tt>&#xA0;4&#xA0;&#xA0; / 4:&#xA0; 1.000</tt><tt><br>
-</tt><tt>&#xA0;5&#xA0;&#xA0; / 5:&#xA0;&#xA0; ....</tt><tt><br>
-</tt><tt>&#xA0;6&#xA0;&#xA0; / 6:&#xA0; 1.000</tt><tt><br>
+</tt><tt> VARIABLE : IF VAR THEN 1</tt><tt><br>
+</tt><tt> SUBSET : 6 points (X)</tt><tt><br>
+</tt><tt>1 / 1: 1.000</tt><tt><br>
+</tt><tt>2 / 2: 1.000</tt><tt><br>
+</tt><tt>3 / 3: ....</tt><tt><br>
+</tt><tt>4 / 4: 1.000</tt><tt><br>
+</tt><tt>5 / 5: ....</tt><tt><br>
+</tt><tt>6 / 6: 1.000</tt><tt><br>
 </tt><tt><br>
 </tt><tt>yes? list IFV var then 1</tt><tt><br>
-</tt><tt>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; VARIABLE : IFV VAR THEN 1</tt><tt><br>
-</tt><tt>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; SUBSET&#xA0;&#xA0; : 6 points (X)</tt><tt><br>
-</tt><tt>&#xA0;1&#xA0;&#xA0; / 1:&#xA0; 1.000</tt><tt><br>
-</tt><tt>&#xA0;2&#xA0;&#xA0; / 2:&#xA0; 1.000</tt><tt><br>
-</tt><tt>&#xA0;3&#xA0;&#xA0; / 3:&#xA0; 1.000</tt><tt><br>
-</tt><tt>&#xA0;4&#xA0;&#xA0; / 4:&#xA0; 1.000</tt><tt><br>
-</tt><tt>&#xA0;5&#xA0;&#xA0; / 5:&#xA0;&#xA0; ....</tt><tt><br>
-</tt><tt>&#xA0;6&#xA0;&#xA0; / 6:&#xA0; 1.000</tt><br>
+</tt><tt> VARIABLE : IFV VAR THEN 1</tt><tt><br>
+</tt><tt> SUBSET : 6 points (X)</tt><tt><br>
+</tt><tt>1 / 1: 1.000</tt><tt><br>
+</tt><tt>2 / 2: 1.000</tt><tt><br>
+</tt><tt>3 / 3: 1.000</tt><tt><br>
+</tt><tt>4 / 4: 1.000</tt><tt><br>
+</tt><tt>5 / 5: ....</tt><tt><br>
+</tt><tt>6 / 6: 1.000</tt><br>
 <br>
 <p>By the way, you shouldn't be able to X as a variable name. (Did
 Ferret really let you use that command? Or were you just
-simplifying for writing the question? A command with&#xA0; LET X =
+simplifying for writing the question? A command with LET X =
 should return an error, " **ERROR: command syntax: cannot define:
-X")&#xA0;&#xA0; X is a <a rel="nofollow" moz-do-not-send="true"
-href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/DEFINE#_VPINDEXENTRY_1352">reserved
+X") X is a <a rel="nofollow" moz-do-not-send="true"
+href="../../documentation/users-guide/commands-reference/DEFINE.html#_VPINDEXENTRY_1352">reserved
 keyword</a> , used to refer to the x coordinate of the grid, so
 it's best to use other variable names.</p>
 <p><br>
@@ -115,49 +115,49 @@ cite="">
  
 <div class="WordSection1">
 <p class="MsoNormal">Good Afternoon,</p>
-<p class="MsoNormal"><o:p>&#xA0;</o:p></p>
+<p class="MsoNormal"><o:p></o:p></p>
 <p class="MsoNormal">I&#x2019;m having an issue using the set var/bad =
 0 <b>dataset</b> command. I&#x2019;ve defined some new regions as
 the following, to indicate presence or absence of
 stratification:</p>
-<p class="MsoNormal"><o:p>&#xA0;</o:p></p>
+<p class="MsoNormal"><o:p></o:p></p>
 <p class="MsoNormal"><i>let X = if stratified[l=1:12@sum] eq 0
 then 1 else 0<o:p></o:p></i></p>
 <p class="MsoNormal"><i>let Y = if stratified[l=10:2@sum] eq 0
 and stratified[l=3:9@sum] gt 0 and stratified[l=3:9@sum] le
 3 then 1 else 0<o:p></o:p></i></p>
-<p class="MsoNormal"><o:p>&#xA0;</o:p></p>
+<p class="MsoNormal"><o:p></o:p></p>
 <p class="MsoNormal">So this creates a map of 1&#x2019;s where the
 region matches what is described in the mask, and 0&#x2019;s where it
 doesn&#x2019;t.</p>
-<p class="MsoNormal"><o:p>&#xA0;</o:p></p>
+<p class="MsoNormal"><o:p></o:p></p>
 <p class="MsoNormal">So now I try to mask out all of the 0&#x2019;s so
 that I can create shapefiles of the areas matching my
 description using:</p>
-<p class="MsoNormal"><o:p>&#xA0;</o:p></p>
+<p class="MsoNormal"><o:p></o:p></p>
 <p class="MsoNormal"><i>Set var/bad = 0 X<o:p></o:p></i></p>
 <p class="MsoNormal"><i>Set var/bad = 0 Y<o:p></o:p></i></p>
-<p class="MsoNormal"><o:p>&#xA0;</o:p></p>
+<p class="MsoNormal"><o:p></o:p></p>
 <p class="MsoNormal">However, this seems to mask the entirety of
 my data and I get a screen telling me that no data is
 available.</p>
-<p class="MsoNormal"><o:p>&#xA0;</o:p></p>
+<p class="MsoNormal"><o:p></o:p></p>
 <p class="MsoNormal">Does anyone have any clues as to why this
 happens? Because I am lost for ideas, I think it might be to
 do with the fact that both of these &#x2018;original&#x2019; datasets will
 have values of 0 (as seen in original definitions), and so it
 is masking the original dataset, does anyone know how I can
 make the mask apply only to my map of 1&#x2019;s and 0&#x2019;s?</p>
-<p class="MsoNormal"><o:p>&#xA0;</o:p></p>
+<p class="MsoNormal"><o:p></o:p></p>
 <p class="MsoNormal">Many thanks,</p>
-<p class="MsoNormal"><o:p>&#xA0;</o:p></p>
+<p class="MsoNormal"><o:p></o:p></p>
 <p class="MsoNormal">Josh</p>
-<p class="MsoNormal"><o:p>&#xA0;</o:p></p>
+<p class="MsoNormal"><o:p></o:p></p>
 <p class="MsoNormal">Sent from <a rel="nofollow"
 href="https://go.microsoft.com/fwlink/?LinkId=550986"
 moz-do-not-send="true">
 Mail</a> for Windows 10</p>
-<p class="MsoNormal"><o:p>&#xA0;</o:p></p>
+<p class="MsoNormal"><o:p></o:p></p>
 </div>
 </blockquote>
 <div class="moz-signature">-- <br>

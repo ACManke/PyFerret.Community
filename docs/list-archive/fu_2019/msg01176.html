@@ -58,64 +58,64 @@
 scale_factors from each step file are applied as the data are read
 from the file. This is noted in the documentation about <a rel="nofollow"
 moz-do-not-send="true"
-href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/converting-to-netcdf/CREATING-A-MULTI-FILE-NETCDF-DATA-SET">descriptor
+href="../../documentation/users-guide/converting-to-netcdf/CREATING-A-MULTI-FILE-NETCDF-DATA-SET.html">descriptor
 files</a><br>
 </p>
 <p>I have attached a tar file with some simple example files,
 vary_scale.des which uses stepfiles varyscale_1.nc and
-varyscale_2.nc.&#xA0; Here is what happens:<br>
+varyscale_2.nc. Here is what happens:<br>
 </p>
-<blockquote><font face="monospace">! First open each stepfile.&#xA0; The
+<blockquote><font face="monospace">! First open each stepfile. The
 variable tt has the same data values in both, but different
 scale and offset attributes:<br>
 <br>
 yes? use varyscale_1.nc</font><br>
 <font face="monospace">yes? show attributes tt</font><br>
-<font face="monospace">&#xA0;&#xA0;&#xA0;&#xA0; attributes for dataset:
+<font face="monospace"> attributes for dataset:
 ./varyscale_1.nc</font><br>
-<font face="monospace">&#xA0;TT.missing_value = -1.E+34</font><br>
-<font face="monospace">&#xA0;TT._FillValue = -1.E+34</font><br>
-<font face="monospace">&#xA0;TT.long_name = 1 + 0*T[GT=DAYT] </font><br>
-<b><font face="monospace">&#xA0;TT.scale_factor = -1</font></b><b><br>
-</b><b><font face="monospace">&#xA0;TT.add_offset = 0.5</font></b><br>
+<font face="monospace">TT.missing_value = -1.E+34</font><br>
+<font face="monospace">TT._FillValue = -1.E+34</font><br>
+<font face="monospace">TT.long_name = 1 + 0*T[GT=DAYT] </font><br>
+<b><font face="monospace">TT.scale_factor = -1</font></b><b><br>
+</b><b><font face="monospace">TT.add_offset = 0.5</font></b><br>
 <font face="monospace">yes? list tt</font><br>
-<font face="monospace">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; VARIABLE : 1 + 0*T[GT=DAYT]</font><br>
-<font face="monospace">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; FILENAME : varyscale_1.nc</font><br>
-<font face="monospace">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; SUBSET&#xA0;&#xA0; : 10 points (TIME)</font><br>
-<font face="monospace">&#xA0;01-JAN-1990 00 /&#xA0; 1: -0.500</font><br>
-<font face="monospace">&#xA0;02-JAN-1990 00 /&#xA0; 2: -1.500</font><br>
-<font face="monospace">&#xA0;03-JAN-1990 00 /&#xA0; 3: -2.500</font><br>
-<font face="monospace">&#xA0;04-JAN-1990 00 /&#xA0; 4: -3.500</font><br>
-<font face="monospace">&#xA0;05-JAN-1990 00 /&#xA0; 5: -4.500</font><br>
-<font face="monospace">&#xA0;06-JAN-1990 00 /&#xA0; 6: -5.500</font><br>
-<font face="monospace">&#xA0;07-JAN-1990 00 /&#xA0; 7: -6.500</font><br>
-<font face="monospace">&#xA0;08-JAN-1990 00 /&#xA0; 8: -7.500</font><br>
-<font face="monospace">&#xA0;09-JAN-1990 00 /&#xA0; 9: -8.500</font><br>
-<font face="monospace">&#xA0;10-JAN-1990 00 / 10: -9.500</font><br>
+<font face="monospace"> VARIABLE : 1 + 0*T[GT=DAYT]</font><br>
+<font face="monospace"> FILENAME : varyscale_1.nc</font><br>
+<font face="monospace"> SUBSET : 10 points (TIME)</font><br>
+<font face="monospace">01-JAN-1990 00 / 1: -0.500</font><br>
+<font face="monospace">02-JAN-1990 00 / 2: -1.500</font><br>
+<font face="monospace">03-JAN-1990 00 / 3: -2.500</font><br>
+<font face="monospace">04-JAN-1990 00 / 4: -3.500</font><br>
+<font face="monospace">05-JAN-1990 00 / 5: -4.500</font><br>
+<font face="monospace">06-JAN-1990 00 / 6: -5.500</font><br>
+<font face="monospace">07-JAN-1990 00 / 7: -6.500</font><br>
+<font face="monospace">08-JAN-1990 00 / 8: -7.500</font><br>
+<font face="monospace">09-JAN-1990 00 / 9: -8.500</font><br>
+<font face="monospace">10-JAN-1990 00 / 10: -9.500</font><br>
 <br>
 <font face="monospace">yes? use varyscale_2.nc </font><br>
 <font face="monospace">yes? show attributes tt</font><br>
-<font face="monospace">&#xA0;&#xA0;&#xA0;&#xA0; attributes for dataset:
+<font face="monospace"> attributes for dataset:
 ./varyscale_2.nc</font><br>
-<font face="monospace">&#xA0;TT.missing_value = -1.E+34</font><br>
-<font face="monospace">&#xA0;TT._FillValue = -1.E+34</font><br>
-<font face="monospace">&#xA0;TT.long_name = 1 + 0*T[GT=DAYT] </font><br>
-<b><font face="monospace">&#xA0;TT.scale_factor = 2</font></b><b><br>
-</b><b><font face="monospace">&#xA0;TT.add_offset = -0.02</font></b><br>
+<font face="monospace">TT.missing_value = -1.E+34</font><br>
+<font face="monospace">TT._FillValue = -1.E+34</font><br>
+<font face="monospace">TT.long_name = 1 + 0*T[GT=DAYT] </font><br>
+<b><font face="monospace">TT.scale_factor = 2</font></b><b><br>
+</b><b><font face="monospace">TT.add_offset = -0.02</font></b><br>
 <font face="monospace">yes? list tt</font><br>
-<font face="monospace">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; VARIABLE : 1 + 0*T[GT=DAYT]</font><br>
-<font face="monospace">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; FILENAME : varyscale_2.nc</font><br>
-<font face="monospace">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; SUBSET&#xA0;&#xA0; : 10 points (TIME)</font><br>
-<font face="monospace">&#xA0;11-JAN-1990 00 /&#xA0; 1:&#xA0;&#xA0; 1.98</font><br>
-<font face="monospace">&#xA0;12-JAN-1990 00 /&#xA0; 2:&#xA0;&#xA0; 3.98</font><br>
-<font face="monospace">&#xA0;13-JAN-1990 00 /&#xA0; 3:&#xA0;&#xA0; 5.98</font><br>
-<font face="monospace">&#xA0;14-JAN-1990 00 /&#xA0; 4:&#xA0;&#xA0; 7.98</font><br>
-<font face="monospace">&#xA0;15-JAN-1990 00 /&#xA0; 5:&#xA0;&#xA0; 9.98</font><br>
-<font face="monospace">&#xA0;16-JAN-1990 00 /&#xA0; 6:&#xA0; 11.98</font><br>
-<font face="monospace">&#xA0;17-JAN-1990 00 /&#xA0; 7:&#xA0; 13.98</font><br>
-<font face="monospace">&#xA0;18-JAN-1990 00 /&#xA0; 8:&#xA0; 15.98</font><br>
-<font face="monospace">&#xA0;19-JAN-1990 00 /&#xA0; 9:&#xA0; 17.98</font><br>
-<font face="monospace">&#xA0;20-JAN-1990 00 / 10:&#xA0; 19.98</font><br>
+<font face="monospace"> VARIABLE : 1 + 0*T[GT=DAYT]</font><br>
+<font face="monospace"> FILENAME : varyscale_2.nc</font><br>
+<font face="monospace"> SUBSET : 10 points (TIME)</font><br>
+<font face="monospace">11-JAN-1990 00 / 1: 1.98</font><br>
+<font face="monospace">12-JAN-1990 00 / 2: 3.98</font><br>
+<font face="monospace">13-JAN-1990 00 / 3: 5.98</font><br>
+<font face="monospace">14-JAN-1990 00 / 4: 7.98</font><br>
+<font face="monospace">15-JAN-1990 00 / 5: 9.98</font><br>
+<font face="monospace">16-JAN-1990 00 / 6: 11.98</font><br>
+<font face="monospace">17-JAN-1990 00 / 7: 13.98</font><br>
+<font face="monospace">18-JAN-1990 00 / 8: 15.98</font><br>
+<font face="monospace">19-JAN-1990 00 / 9: 17.98</font><br>
+<font face="monospace">20-JAN-1990 00 / 10: 19.98</font><br>
 <br>
 <font face="monospace">! Now open the descriptor file and read the
 data. The scaling is<br>
@@ -125,37 +125,37 @@ data. The scaling is<br>
 <br>
 </font><font face="monospace">yes? use vary_scale.des</font><br>
 <font face="monospace">yes? list tt</font><br>
-<font face="monospace">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; VARIABLE : 1 + 0*T[GT=DAYT]</font><br>
-<font face="monospace">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; DATA SET : Model Output, Daily
+<font face="monospace"> VARIABLE : 1 + 0*T[GT=DAYT]</font><br>
+<font face="monospace"> DATA SET : Model Output, Daily
 Averages</font><br>
-<font face="monospace">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; FILENAME : vary_scale.des</font><br>
-<font face="monospace">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; SUBSET&#xA0;&#xA0; : 20 points (TIME)</font><br>
-<font face="monospace">&#xA0;01-JAN-1990 00 /&#xA0; 1:&#xA0; -0.50</font><br>
-<font face="monospace">&#xA0;02-JAN-1990 00 /&#xA0; 2:&#xA0; -1.50</font><br>
-<font face="monospace">&#xA0;03-JAN-1990 00 /&#xA0; 3:&#xA0; -2.50</font><br>
-<font face="monospace">&#xA0;04-JAN-1990 00 /&#xA0; 4:&#xA0; -3.50</font><br>
-<font face="monospace">&#xA0;05-JAN-1990 00 /&#xA0; 5:&#xA0; -4.50</font><br>
-<font face="monospace">&#xA0;06-JAN-1990 00 /&#xA0; 6:&#xA0; -5.50</font><br>
-<font face="monospace">&#xA0;07-JAN-1990 00 /&#xA0; 7:&#xA0; -6.50</font><br>
-<font face="monospace">&#xA0;08-JAN-1990 00 /&#xA0; 8:&#xA0; -7.50</font><br>
-<font face="monospace">&#xA0;09-JAN-1990 00 /&#xA0; 9:&#xA0; -8.50</font><br>
-<font face="monospace">&#xA0;10-JAN-1990 00 / 10:&#xA0; -9.50</font><br>
-<font face="monospace">&#xA0;11-JAN-1990 00 / 11:&#xA0;&#xA0; 1.98</font><br>
-<font face="monospace">&#xA0;12-JAN-1990 00 / 12:&#xA0;&#xA0; 3.98</font><br>
-<font face="monospace">&#xA0;13-JAN-1990 00 / 13:&#xA0;&#xA0; 5.98</font><br>
-<font face="monospace">&#xA0;14-JAN-1990 00 / 14:&#xA0;&#xA0; 7.98</font><br>
-<font face="monospace">&#xA0;15-JAN-1990 00 / 15:&#xA0;&#xA0; 9.98</font><br>
-<font face="monospace">&#xA0;16-JAN-1990 00 / 16:&#xA0; 11.98</font><br>
-<font face="monospace">&#xA0;17-JAN-1990 00 / 17:&#xA0; 13.98</font><br>
-<font face="monospace">&#xA0;18-JAN-1990 00 / 18:&#xA0; 15.98</font><br>
-<font face="monospace">&#xA0;19-JAN-1990 00 / 19:&#xA0; 17.98</font><br>
-<font face="monospace">&#xA0;20-JAN-1990 00 / 20:&#xA0; 19.98</font><br>
+<font face="monospace"> FILENAME : vary_scale.des</font><br>
+<font face="monospace"> SUBSET : 20 points (TIME)</font><br>
+<font face="monospace">01-JAN-1990 00 / 1: -0.50</font><br>
+<font face="monospace">02-JAN-1990 00 / 2: -1.50</font><br>
+<font face="monospace">03-JAN-1990 00 / 3: -2.50</font><br>
+<font face="monospace">04-JAN-1990 00 / 4: -3.50</font><br>
+<font face="monospace">05-JAN-1990 00 / 5: -4.50</font><br>
+<font face="monospace">06-JAN-1990 00 / 6: -5.50</font><br>
+<font face="monospace">07-JAN-1990 00 / 7: -6.50</font><br>
+<font face="monospace">08-JAN-1990 00 / 8: -7.50</font><br>
+<font face="monospace">09-JAN-1990 00 / 9: -8.50</font><br>
+<font face="monospace">10-JAN-1990 00 / 10: -9.50</font><br>
+<font face="monospace">11-JAN-1990 00 / 11: 1.98</font><br>
+<font face="monospace">12-JAN-1990 00 / 12: 3.98</font><br>
+<font face="monospace">13-JAN-1990 00 / 13: 5.98</font><br>
+<font face="monospace">14-JAN-1990 00 / 14: 7.98</font><br>
+<font face="monospace">15-JAN-1990 00 / 15: 9.98</font><br>
+<font face="monospace">16-JAN-1990 00 / 16: 11.98</font><br>
+<font face="monospace">17-JAN-1990 00 / 17: 13.98</font><br>
+<font face="monospace">18-JAN-1990 00 / 18: 15.98</font><br>
+<font face="monospace">19-JAN-1990 00 / 19: 17.98</font><br>
+<font face="monospace">20-JAN-1990 00 / 20: 19.98</font><br>
 </blockquote>
 <br>
 When looking at the descriptor file, If you ask for the values of
 the add_offset and scale_factor attributes, the values for the first
 file are shown, but when loading data, the attribute values from
-each file are applied.&#xA0;
+each file are applied.
 <p><br>
 </p>
 <div class="moz-cite-prefix">On 8/25/2022 4:36 AM, Seon Tae Kim
@@ -164,21 +164,21 @@ wrote:<br>
 <blockquote type="cite"
 cite="">
  
-<div dir="ltr">Dear ferreters&#xA0;
+<div dir="ltr">Dear ferreters
 <div><br>
 </div>
-<div>When I tried to use a descriptor file to&#xA0;aggregate the
-multiple netcdf files,&#xA0;</div>
+<div>When I tried to use a descriptor file toaggregate the
+multiple netcdf files,</div>
 <div>I realized that the add_offset and scale_factors in the
-first step file are to all step files&#xA0;in a multi-file set of a
-descriptor&#xA0;file.</div>
+first step file are to all step filesin a multi-file set of a
+descriptorfile.</div>
 <div><br>
 </div>
-<div>I can not find&#xA0;any solution to this problem in the ferret
-e-mail archives.&#xA0;</div>
+<div>I can not findany solution to this problem in the ferret
+e-mail archives.</div>
 <div><br>
 </div>
-<div>Best,&#xA0;</div>
+<div>Best,</div>
 <div><br>
 </div>
 <div>Seon</div>

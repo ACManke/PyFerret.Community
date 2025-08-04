@@ -50,7 +50,7 @@
 Thanks Ashley about those useful tips.<div><br></div><div>I'm now adapting my zaxreplace script for other applications (see attached), but I have again issues on saving the output. I think the problem is that the grid is too large for some models, and Ferret complains by saying</div><div><br></div><div><span style="font-family:monospace"><span style="background-color: rgb(255, 255, 255);">**ERROR: request exceeds memory setting: A negative number of words were requested.
 </span><br> *** NOTE: The current grid is most likely too large<br></span>
 <br>So I'm subsetting the variable to select only the region I need, and the computation works. But when I'm saving the generated field into netcdf at line 52, Ferret comes out with the good ol' error</div><div><br></div><div><span style="font-family:monospace"><span style="background-color: rgb(255, 255, 255);">**TMAP ERR: error in line definition
-</span><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;file coords dont match variable coords on axis LAT77_203</span></div><div><br></div><div>It doesn't change whether I'm using RESHAPE or not. I also tried to adapt my RESHAPE call according to what I read here (https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/variables-xpressions/XPRESSIONS), but with no luck. Can you please help me again about this?</div><div><br></div><div>Cheers,</div><div>Giorgio<br>
+</span><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;file coords dont match variable coords on axis LAT77_203</span></div><div><br></div><div>It doesn't change whether I'm using RESHAPE or not. I also tried to adapt my RESHAPE call according to what I read here (../../documentation/users-guide/variables-xpressions/XPRESSIONS.html), but with no luck. Can you please help me again about this?</div><div><br></div><div>Cheers,</div><div>Giorgio<br>
 <blockquote>
 ----Messaggio originale----
 <br> Da: ansley.b.manke@xxxxxxxx
@@ -70,7 +70,7 @@ Thanks Ashley about those useful tips.<div><br></div><div>I'm now adapting my za
 <tt><br> &nbsp;&nbsp; use /home/data/model`r`.nc;\</tt>
 <br>
 <p><tt>...<br></tt></p>
-<p>There are details on the <a rel="nofollow" moz-do-not-send="true" href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/variables-xpressions/EMBEDDED-XPRESSIONS#_VPINDEXENTRY_562">grave-accent evaluation </a>that give you some flexibility.&nbsp; For instance if the models are named model01.nc, model02.nc, ...&nbsp; use the "precision" specifier to ask for the value to be replaced with zero-filled numbers, here 2-digits.<br></p>
+<p>There are details on the <a rel="nofollow" moz-do-not-send="true" href="../../documentation/users-guide/variables-xpressions/EMBEDDED-XPRESSIONS#_VPINDEXENTRY_562">grave-accent evaluation </a>that give you some flexibility.&nbsp; For instance if the models are named model01.nc, model02.nc, ...&nbsp; use the "precision" specifier to ask for the value to be replaced with zero-filled numbers, here 2-digits.<br></p>
 <tt>&nbsp;&nbsp; let nmodel = ($1)</tt>
 <tt><br></tt>
 <tt>&nbsp;&nbsp; repeat/range=1:`nmodel`/name=r (\</tt>
@@ -151,7 +151,7 @@ Giorgio
 <p>Another method for sending Ferret/PyFerret a set of commands is to use the -script option on startup.</p>
 <p>&gt; pyferret -script my_script.jnl&nbsp; [arguments]</p>
 <p>This is generally more flexible than piping commands.&nbsp; The startup option -batch for Ferret or -nodisplay for PyFerret are also useful when you don't want to have graphics windows display.&nbsp; Note that -script must appear last among command line switches so that the script arguments will be parsed correctly.</p>
-<p><a rel="nofollow" moz-do-not-send="true" href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/introduction/GETTING-STARTED#_VPID_8">Unix command-line switches</a><br></p>
+<p><a rel="nofollow" moz-do-not-send="true" href="../../documentation/users-guide/introduction/GETTING-STARTED#_VPID_8">Unix command-line switches</a><br></p>
 <p><br></p>
 <p><br></p>
 <div class="moz-cite-prefix">

@@ -52,19 +52,19 @@
  
  
 <p>Hi Xioyu,</p>
-<p>Yes, you can do this.&#xA0; The usual way is to redefine a pen to
-temporarily use a different color.&#xA0; For example change&#xA0; pen # 2,
+<p>Yes, you can do this. The usual way is to redefine a pen to
+temporarily use a different color. For example change pen # 2,
 by specifying the pen number, and red-green-blue values ranging
-from 0 to 100.&#xA0; Here is a short script.<br>
+from 0 to 100. Here is a short script.<br>
 </p>
-<p><font face="Courier New, Courier, monospace">&#xA0; yes? use etopo20<br>
-&#xA0; yes? fill rose<br>
+<p><font face="Courier New, Courier, monospace"> yes? use etopo20<br>
+ yes? fill rose<br>
 </font></p>
-<p><font face="Courier New, Courier, monospace">&#xA0; yes? ppl
-color,2,75,75,75&#xA0; ! set pen 2 to a light gray<br>
-&#xA0; yes? go land 2</font></p>
+<p><font face="Courier New, Courier, monospace"> yes? ppl
+color,2,75,75,75 ! set pen 2 to a light gray<br>
+ yes? go land 2</font></p>
 <p><font face="monospace"><font face="Courier New, Courier,
-monospace">&#xA0; yes? ppl color,2,100,0,0&#xA0; ! return pen 2 to red
+monospace"> yes? ppl color,2,100,0,0 ! return pen 2 to red
 color</font><br>
 </font></p>
 <p>This is not very flexible, but it works well with all versions of
@@ -74,24 +74,24 @@ Ferret and PyFerret.</p>
 <p>If you are using PyFerret, the attached new version of land.jnl
 allows the arguments for the pens to be given as (r,g,b) colors
 using the same syntax that may be used for line plots, see
-<a rel="nofollow" class="moz-txt-link-freetext" href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/PLOT#_VPINDEXENTRY_1468">https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/PLOT#_VPINDEXENTRY_1468</a><br>
+<a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/users-guide/commands-reference/PLOT.html#_VPINDEXENTRY_1468">../../documentation/users-guide/commands-reference/PLOT.html#_VPINDEXENTRY_1468</a><br>
 </p>
 <p>So, just as in PyFerret you can say <br>
 </p>
-<p><font face="Courier New, Courier, monospace">&#xA0; yes?
+<p><font face="Courier New, Courier, monospace"> yes?
 plot/color=(50,50,50) my_var</font></p>
 <p>The arguments to this new version of land could be</p>
-<p><font face="Courier New, Courier, monospace">&#xA0; yes? go land
+<p><font face="Courier New, Courier, monospace"> yes? go land
 (50,50,50) </font><br>
 </p>
 <p><br>
 </p>
-<p>Please read the comments at the start of the updated land.jnl.&#xA0;
+<p>Please read the comments at the start of the updated land.jnl.
 This version of land.jnl also works fine with the classic ways to
 send arguments to the script. I expect that this version of
-land.jnl will be included with future releases of PyFerret.&#xA0; For
+land.jnl will be included with future releases of PyFerret. For
 now you can try using it by just putting it in your local
-directory.&#xA0; <br>
+directory. <br>
 </p>
 <p>Ansley</p>
 <p><br>
@@ -108,10 +108,10 @@ cite="">
 href="https://github.com/NOAA-PMEL/PyFerret/blob/master/jnls/go/land_detail.jnl"
 moz-do-not-send="true" class="moz-txt-link-freetext">https://github.com/NOAA-PMEL/PyFerret/blob/master/jnls/go/land_detail.jnl</a>)
 and am wondering if we can add a pen color as gray. Looks like
-currently we have&#xA0;<span style="color:rgb(36,41,47);font-family:ui-monospace,SFMono-Regular,&quot;SF Mono&quot;,Menlo,Consolas,&quot;Liberation Mono&quot;,monospace;font-size:12px;white-space:pre">"black", "red", "green", "blue", "lightblue" "purple" "white"&#xA0;</span>&#xA0;colors
+currently we have<span style="color:rgb(36,41,47);font-family:ui-monospace,SFMono-Regular,&quot;SF Mono&quot;,Menlo,Consolas,&quot;Liberation Mono&quot;,monospace;font-size:12px;white-space:pre">"black", "red", "green", "blue", "lightblue" "purple" "white"</span>colors
 for land_detail. Let me know if we can change the transparency
 of black color to obtain a gray base map.</div>
-<div>&#xA0;&#xA0;<br>
+<div><br>
 </div>
 <div>Thank you very much and stay healthy,</div>
 <div><br>

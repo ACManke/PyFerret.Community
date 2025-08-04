@@ -50,14 +50,14 @@
 <hr>
 <!--X-Head-Body-Sep-End-->
 <!--X-Body-of-Message-->
-<div dir="ltr"><div dir="ltr">Hi Sybren,</div><div><br></div><div>It&#39;s just occurred to me that curve linear coordinates&#xA0;may be what you want.&#xA0; You can make plots using the &quot;SHADE var, lon, lat&quot; form (<a rel="nofollow" href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/working-with-special-data-sets/CURVILINEAR-COORDINATE-DATA">https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/working-with-special-data-sets/CURVILINEAR-COORDINATE-DATA</a>) to plot your variable in your curve linear coordinates and you can even regrid it onto your coordinates using CURV_TO_RECT_MAP (<a rel="nofollow" href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/appendix-a-external-functions/CURV-TO-RECT-MAP">https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/appendix-a-external-functions/CURV-TO-RECT-MAP</a>).&#xA0; Perhaps I should explore this avenue next time.</div><div><br></div><div>Ryo</div><div><div class="gmail_quote"><div dir="ltr" class="gmail_attr"></div></div></div><div class="gmail_quote"><div dir="ltr" class="gmail_attr"><br></div><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div lang="NL" style="overflow-wrap: break-word;"><div class="gmail-m_5751779367630720846WordSection1">
-<p class="MsoNormal"><span lang="EN-US"><u></u>&#xA0;<u></u></span></p>
+<div dir="ltr"><div dir="ltr">Hi Sybren,</div><div><br></div><div>It&#39;s just occurred to me that curve linear coordinatesmay be what you want. You can make plots using the &quot;SHADE var, lon, lat&quot; form (<a rel="nofollow" href="../../documentation/users-guide/working-with-special-data-sets/CURVILINEAR-COORDINATE-DATA">../../documentation/users-guide/working-with-special-data-sets/CURVILINEAR-COORDINATE-DATA</a>) to plot your variable in your curve linear coordinates and you can even regrid it onto your coordinates using CURV_TO_RECT_MAP (<a rel="nofollow" href="../../documentation/users-guide/appendix-a-external-functions/CURV-TO-RECT-MAP">../../documentation/users-guide/appendix-a-external-functions/CURV-TO-RECT-MAP</a>). Perhaps I should explore this avenue next time.</div><div><br></div><div>Ryo</div><div><div class="gmail_quote"><div dir="ltr" class="gmail_attr"></div></div></div><div class="gmail_quote"><div dir="ltr" class="gmail_attr"><br></div><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div lang="NL" style="overflow-wrap: break-word;"><div class="gmail-m_5751779367630720846WordSection1">
+<p class="MsoNormal"><span lang="EN-US"><u></u><u></u></span></p>
 <div style="border-right:none;border-bottom:none;border-left:none;border-top:1pt solid rgb(181,196,223);padding:3pt 0cm 0cm">
 <p class="MsoNormal" style="margin-bottom:12pt"><b><span style="font-size:12pt;color:black">Van:
-</span></b><span style="font-size:12pt;color:black">Ryo Furue &lt;<a rel="nofollow" href="mailto:furue@xxxxxxxxxx" target="_blank">furue@xxxxxxxxxx</a>&gt;<br>
+</span></b><span style="font-size:12pt;color:black">Ryo Furue &lt;<a rel="nofollow" href="mailto:furue@xxxxxxxxxx">furue@xxxxxxxxxx</a>&gt;<br>
 <b>Datum: </b>dinsdag, 4 mei 2021 om 18:19<br>
-<b>Aan: </b>Drijfhout, S.S. (Sybren) &lt;<a rel="nofollow" href="mailto:s.s.drijfhout@xxxxx" target="_blank">s.s.drijfhout@xxxxx</a>&gt;<br>
-<b>CC: </b><a rel="nofollow" href="mailto:ferret_users@xxxxxxxx" target="_blank">ferret_users@xxxxxxxx</a> &lt;<a rel="nofollow" href="mailto:ferret_users@xxxxxxxx" target="_blank">ferret_users@xxxxxxxx</a>&gt;<br>
+<b>Aan: </b>Drijfhout, S.S. (Sybren) &lt;<a rel="nofollow" href="mailto:s.s.drijfhout@xxxxx">s.s.drijfhout@xxxxx</a>&gt;<br>
+<b>CC: </b><a rel="nofollow" href="mailto:ferret_users@xxxxxxxx">ferret_users@xxxxxxxx</a> &lt;<a rel="nofollow" href="mailto:ferret_users@xxxxxxxx">ferret_users@xxxxxxxx</a>&gt;<br>
 <b>Onderwerp: </b>Re: [ferret_users] Regridding from a regular grid to natural coordinates defined by along/cross isotherms, isobars, bathymetry, streamlines etc.<u></u><u></u></span></p>
 </div>
 <div>
@@ -66,34 +66,34 @@
 </div>
 <div>
 <div>
-<p class="MsoNormal"><u></u>&#xA0;<u></u></p>
+<p class="MsoNormal"><u></u><u></u></p>
 </div>
 <blockquote style="border-top:none;border-right:none;border-bottom:none;border-left:1pt solid rgb(204,204,204);padding:0cm 0cm 0cm 6pt;margin-left:4.8pt;margin-right:0cm">
 <div>
 <div>
-<p class="MsoNormal"><span lang="EN-US" style="color:black">In theory I have to map xv(i,j) to xvnew(I,jstar) &#xA0;with jstar=j-j1</span><u></u><u></u></p>
+<p class="MsoNormal"><span lang="EN-US" style="color:black">In theory I have to map xv(i,j) to xvnew(I,jstar) with jstar=j-j1</span><u></u><u></u></p>
 <p class="MsoNormal"><span lang="EN-US" style="color:black">Ferret wants me to define a new y-axis but does not allow me to define ystar by a let command, and using j and ja gives errors because of
-recursive problems. &#xA0;</span><u></u><u></u></p>
+recursive problems. </span><u></u><u></u></p>
 <p class="MsoNormal"><span lang="EN-US" style="color:black">Has anybody experience with regridding to something like streamline-coordinates and/or does anybody know how to perform such a regridding
 operation in ferret?</span><u></u><u></u></p>
 </div>
 </div>
 </blockquote>
 <div>
-<p class="MsoNormal"><u></u>&#xA0;<u></u></p>
+<p class="MsoNormal"><u></u><u></u></p>
 </div>
 <div>
-<p class="MsoNormal">I do that using Fortran. I didn&#39;t even consider using Ferret. . . . But I guess you can at least define xstar(i) and ystar(i) for a single curve.&#xA0; Then you can get the values along the curve using the SAMPLEXY(var, xstar, ystar) function.&#xA0;
+<p class="MsoNormal">I do that using Fortran. I didn&#39;t even consider using Ferret. . . . But I guess you can at least define xstar(i) and ystar(i) for a single curve. Then you can get the values along the curve using the SAMPLEXY(var, xstar, ystar) function.
 Save the result and move on to the next curve. . . . Finally, you combine these &quot;layers&quot; in the ystar direction.<u></u><u></u></p>
 </div>
 <div>
-<p class="MsoNormal"><u></u>&#xA0;<u></u></p>
+<p class="MsoNormal"><u></u><u></u></p>
 </div>
 <div>
 <p class="MsoNormal">In my Fortran code, I just shift the array in the j direction by j1.<u></u><u></u></p>
 </div>
 <div>
-<p class="MsoNormal"><u></u>&#xA0;<u></u></p>
+<p class="MsoNormal"><u></u><u></u></p>
 </div>
 <div>
 <p class="MsoNormal">Regards,<u></u><u></u></p>
@@ -102,18 +102,18 @@ Save the result and move on to the next curve. . . . Finally, you combine these 
 <p class="MsoNormal">Ryo<u></u><u></u></p>
 </div>
 <div>
-<p class="MsoNormal"><u></u>&#xA0;<u></u></p>
+<p class="MsoNormal"><u></u><u></u></p>
 </div>
 <div>
-<p class="MsoNormal">&#xA0;<u></u><u></u></p>
+<p class="MsoNormal"><u></u><u></u></p>
 </div>
 <blockquote style="border-top:none;border-right:none;border-bottom:none;border-left:1pt solid rgb(204,204,204);padding:0cm 0cm 0cm 6pt;margin-left:4.8pt;margin-right:0cm">
 <div>
 <div>
-<p class="MsoNormal"><span lang="EN-US" style="color:black">&#xA0;</span><u></u><u></u></p>
+<p class="MsoNormal"><span lang="EN-US" style="color:black"></span><u></u><u></u></p>
 <p class="MsoNormal"><span lang="EN-US" style="color:black">Sybren</span><u></u><u></u></p>
-<p class="MsoNormal"><span lang="EN-US" style="color:black">&#xA0;</span><u></u><u></u></p>
-<p class="MsoNormal"><span lang="EN-US">&#xA0;</span><u></u><u></u></p>
+<p class="MsoNormal"><span lang="EN-US" style="color:black"></span><u></u><u></u></p>
+<p class="MsoNormal"><span lang="EN-US"></span><u></u><u></u></p>
 </div>
 </div>
 </blockquote>

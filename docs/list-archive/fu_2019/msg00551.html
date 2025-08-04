@@ -53,11 +53,11 @@
  
  
  
-<p>Good ideas, Ryo.&#xA0; <br>
+<p>Good ideas, Ryo. <br>
 </p>
 <p>There's a useful discussion about how transformations are done,
 here: "<a rel="nofollow" moz-do-not-send="true"
-href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/variables-xpressions/XPRESSIONS#_VPINDEXENTRY_421">General
+href="../../documentation/users-guide/variables-xpressions/XPRESSIONS.html#_VPINDEXENTRY_421">General
 Infrormation about Transformations</a>"<br>
 </p>
 <p>And here's another way to define a mask,<br>
@@ -103,14 +103,14 @@ for example, to add levels 2,5, and 7?</blockquote>
 <div>One idea is to mask out the other levels:</div>
 <div><br>
 </div>
-<div>let myvar_masked = IF (k eq 2) or&#xA0; (k eq 5) or . . . THEN
+<div>let myvar_masked = IF (k eq 2) or (k eq 5) or . . . THEN
 myvar</div>
 <div><br>
 </div>
 <div>This new variable has valid values only at levels k = 2,
 5, . . . so that the sum you want is
 myvar_masked[k=1:kmax@SUM].</div>
-<div>&#xA0;</div>
+<div></div>
 <blockquote class="gmail_quote" style="margin:0px 0px 0px
 0.8ex;border-left:1px solid
 rgb(204,204,204);padding-left:1ex">
@@ -130,20 +130,20 @@ at least one NaN. It seems an inconsistent behavior.<br>
 </div>
 <div>For arithmetic operations (plus, minus, . . .) and
 functions (sin, exp, . . . ), the entire _expression_ results
-in a "missing" ("undefined") value if one value is missing.&#xA0;
-On the other hand, the "@" operations <b>skip</b>&#xA0;missing
-values.&#xA0; The latter property is crucial when you, for
+in a "missing" ("undefined") value if one value is missing.
+On the other hand, the "@" operations <b>skip</b>missing
+values. The latter property is crucial when you, for
 example, want to ignore land points for your ocean
 temperature average.</div>
 <div><br>
 </div>
-<div>In other words,&#xA0;@SUM is NOT</div>
+<div>In other words,@SUM is NOT</div>
 <div><br>
 </div>
 </div>
 <blockquote style="margin:0 0 0 40px;border:none;padding:0px">
 <div class="gmail_quote">
-<div>&#xA0;<font face="monospace">a(1)&#xA0;+ a(2)&#xA0;+ a(3)&#xA0;+ . . .&#xA0;</font></div>
+<div><font face="monospace">a(1)+ a(2)+ a(3)+ . . .</font></div>
 </div>
 </blockquote>
 <div class="gmail_quote">
@@ -161,13 +161,13 @@ temperature average.</div>
 <div><font face="monospace">for i = 1 to N</font></div>
 </div>
 <div class="gmail_quote">
-<div><font face="monospace">&#xA0; &#xA0;if (a(i) is not missing) then</font></div>
+<div><font face="monospace"> if (a(i) is not missing) then</font></div>
 </div>
 <div class="gmail_quote">
-<div><font face="monospace">&#xA0; &#xA0; &#xA0; sum = sum&#xA0;+ a(i)</font></div>
+<div><font face="monospace">   sum = sum+ a(i)</font></div>
 </div>
 <div class="gmail_quote">
-<div><font face="monospace">&#xA0; &#xA0;endif</font></div>
+<div><font face="monospace"> endif</font></div>
 </div>
 <div class="gmail_quote">
 <div><font face="monospace">endfor</font></div>

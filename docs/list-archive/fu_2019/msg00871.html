@@ -53,11 +53,11 @@
  
 <p>Hi Carolyn,</p>
 <p>The <a rel="nofollow" moz-do-not-send="true"
-href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/SET#_VPINDEXENTRY_SET_REDIRECT">SET
+href="../../documentation/users-guide/commands-reference/SET.html#_VPINDEXENTRY_SET_REDIRECT">SET
 REDIRECT</a> command is designed to do this kind of in a Ferret
 or PyFerret session -- it takes all of the messages that normally
 go to the terminal in an interactive session and writes them to a
-designated file.&#xA0; It writes everything that would be written to
+designated file. It writes everything that would be written to
 stdout or stderr or both, depending on the call to SET REDIRECT.</p>
 <p>So a python or shell script for file testing could run a journal
 file that defines an output filename, executes a SET REDIRECT
@@ -66,9 +66,9 @@ netCDF file.<br>
 </p>
 <p>Ansley <br>
 </p>
-<p>(The content of this&#xA0; message are mine personally.&#xA0; I am not
+<p>(The content of this message are mine personally. I am not
 affiliated with PMEL.)</p>
-<p>&#xA0; <font size="2"><span><br>
+<p> <font size="2"><span><br>
 </span></font></p>
 <div class="moz-cite-prefix">On 11/11/2020 1:46 PM, Carolyn Whitlock
 - NOAA Affiliate wrote:<br>
@@ -91,25 +91,25 @@ Notes in it using the following code:</div>
 <div><br>
 </div>
 <div>def test_pyferret_read(nc_file):<br>
-&#xA0; &#xA0; oldout = sys.stdout<br>
-&#xA0; &#xA0; stdout_fd = sys.stdout.fileno()<br>
-&#xA0; &#xA0; out = StringIO.StringIO()<br>
-&#xA0; &#xA0; with open('output.txt', 'w') as f, stdout_redirected(f):<br>
-&#xA0; &#xA0; &#xA0; pyferret.start(quiet = True)<br>
-&#xA0; &#xA0; &#xA0; pyferret.run("use " + nc_file)<br>
-&#xA0; &#xA0; &#xA0; out = pyferret.showdata(brief = True)<br>
-&#xA0; &#xA0; &#xA0; pyferret.stop()<br>
-&#xA0; &#xA0; sys.stdout = oldout<br>
-&#xA0; &#xA0; content = myout.getvalue()<br>
-&#xA0; &#xA0; errcount = content.count("error")<br>
-&#xA0; &#xA0; print("count of errors")<br>
-&#xA0; &#xA0; print(str(errcount))<br>
-&#xA0; &#xA0; if errcount &gt; 0:<br>
-&#xA0; &#xA0; &#xA0; &#xA0; print("Pyferret found at least " + str(errcount) + "
+  oldout = sys.stdout<br>
+  stdout_fd = sys.stdout.fileno()<br>
+  out = StringIO.StringIO()<br>
+  with open('output.txt', 'w') as f, stdout_redirected(f):<br>
+   pyferret.start(quiet = True)<br>
+   pyferret.run("use " + nc_file)<br>
+   out = pyferret.showdata(brief = True)<br>
+   pyferret.stop()<br>
+  sys.stdout = oldout<br>
+  content = myout.getvalue()<br>
+  errcount = content.count("error")<br>
+  print("count of errors")<br>
+  print(str(errcount))<br>
+  if errcount &gt; 0:<br>
+    print("Pyferret found at least " + str(errcount) + "
 standards error in this file.")<br>
-&#xA0; &#xA0; &#xA0; &#xA0; print(content)<br>
-&#xA0; &#xA0; else:<br>
-&#xA0; &#xA0; &#xA0; &#xA0; print("No errors in formatting found")</div>
+    print(content)<br>
+  else:<br>
+    print("No errors in formatting found")</div>
 <div><br>
 </div>
 <div>Looking through some of the online python documentation,

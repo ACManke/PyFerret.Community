@@ -62,23 +62,23 @@ here.</p>
 <p>Just to recap some of the details about the character-size
 settings for colorbars:</p>
 <p><b>set text/font= <a rel="nofollow" moz-do-not-send="true"
-href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/SET#_SETTEXT_ISIZ">/isize=</a>
+href="../../documentation/users-guide/commands-reference/SET.html#_SETTEXT_ISIZ">/isize=</a>
 </b>is used to set the <b>size of all text</b>, or of the text
-for different text-groupings on a page.&#xA0;&#xA0; Its argument is not a
+for different text-groupings on a page. Its argument is not a
 character size, it is an integer to make the text bigger with
 values 1 through 4, or smaller with values -1 through -4.<br>
 </p>
 <p><a rel="nofollow" moz-do-not-send="true"
-href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/appendix-c-ferret-specific-pplus-enhancements/ENHANCED-COMMANDS-DESCRIPTION#_VPID_767"><b>PPL
+href="../../documentation/users-guide/appendix-c-ferret-specific-pplus-enhancements/ENHANCED-COMMANDS-DESCRIPTION.html#_VPID_767"><b>PPL
 SHAKEY</b></a> is used to customize colorbars, including the
 placement on the page, the width of the bar, and elements of the
-labeling including the size of the labels.&#xA0; One of its arguments
+labeling including the size of the labels. One of its arguments
 is the label-size setting, given in "inches".<br>
 </p>
 <p>So often, using Pyferret's SET TEXT will be enough to change the
 size of the the text in labels, but if using PPL SHAKEY for other
 customizations such as the placement of the colorbar itself, the
-size argument can be useful.&#xA0; <br>
+size argument can be useful. <br>
 </p>
 <p>-Ansley<br>
 </p>
@@ -91,14 +91,14 @@ cite="">
 <p>Hi,</p>
 <p>The code that locates the text is trying to account for the
 location on the page next to the colorbar, fitting the text into
-the margin around the plot, and the text size.&#xA0; I have seen
+the margin around the plot, and the text size. I have seen
 examples using PyFerret which have text overlaying the colorbar,
-so this issue needs some work within PyFerret.&#xA0; One workaround
+so this issue needs some work within PyFerret. One workaround
 for you might be to define the margins so there is more white
-space next to the colorbar.&#xA0; The script "go margins" is a
-convenient way to set the plot margins.&#xA0; It uses "plot inches",
+space next to the colorbar. The script "go margins" is a
+convenient way to set the plot margins. It uses "plot inches",
 so if you are using viewports, often a little experimenting is
-needed.&#xA0; Another possibility, if the colorbar labels have a
+needed. Another possibility, if the colorbar labels have a
 large number of digits, may be to rescale your data. <br>
 </p>
 <p>If you would be willing to send more details about your
@@ -113,13 +113,13 @@ wrote:<br>
 cite="">
  
 <div dir="auto">Hi all,
-<div dir="auto">First of all thank you all for&#xA0;your time and
+<div dir="auto">First of all thank you all foryour time and
 consideration.... I know how to control the font size of a
 colour bar in ferret. But Im experiencing the problem with
 pyferret... When I specify the font size in Shakey, the
 labels are overlapping the colour bar. I don't know how to
 adjust it on the right side of it..... I'm really sorry for
-the incomplete information.... Kindly&#xA0;advise...</div>
+the incomplete information.... Kindlyadvise...</div>
 <div dir="auto"><br>
 </div>
 <div dir="auto"><br>
@@ -183,7 +183,7 @@ Saurabh<br>
 <div class="gmail_quote">
 <div dir="ltr" class="gmail_attr">On Thu, May 30, 2019 at
 12:36 PM Ansley C. Manke &lt;<a rel="nofollow"
-href="mailto:ansley.b.manke@xxxxxxxx" target="_blank"
+href="mailto:ansley.b.manke@xxxxxxxx"
 rel="noreferrer" moz-do-not-send="true">ansley.b.manke@xxxxxxxx</a>&gt;
 wrote:<br>
 </div>
@@ -191,9 +191,9 @@ wrote:<br>
 0.8ex;border-left:1px solid
 rgb(204,204,204);padding-left:1ex">
 <div bgcolor="#FFFFFF"> Hi,<br>
-<p>I'm not sure what problem you are having.&#xA0; SHAKEY
+<p>I'm not sure what problem you are having. SHAKEY
 gives you a lot of control over the size of labels
-as well as other features of the colorbar.&#xA0; The SET
+as well as other features of the colorbar. The SET
 TEXT command with /ISIZE is intended as a simple
 short-cut way to increase or decrease the size of
 different label groups including the colorbar For
@@ -236,11 +236,10 @@ class="m_-6073716045911688401gmail-m_-4445707995597186741moz-cite-prefix">On
 <div>Hi all,</div>
 <div>I have a problem with labelling the shakey.
 If I set the label size in the shakey command,
-it is&#xA0; appeared on the colour bar. I tried the
+it is appeared on the colour bar. I tried the
 solution given in this link:</div>
 <div><a rel="nofollow"
-href="../fu_2016/msg00587.html"
-target="_blank" rel="noreferrer"
+href="../fu_2016/msg00587.html"  rel="noreferrer"
 moz-do-not-send="true">../fu_2016/msg00587.html</a></div>
 <div>But I'm also experiencing the similar issue
 with the font size.</div>

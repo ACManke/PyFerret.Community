@@ -58,10 +58,10 @@ Try it with a smaller value for set memory/size= setting, perhaps /size=50.
  
 For information about memory use, please see this discussion:
  
-<a  rel="nofollow" href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/computing-environment/MEMORY-USE">https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/computing-environment/MEMORY-USE</a>
+<a  rel="nofollow" href="../../documentation/users-guide/computing-environment/MEMORY-USE">../../documentation/users-guide/computing-environment/MEMORY-USE</a>
  
 </pre><tt>Note that you would only see the error message &quot;Unable to allocate xxx 
-</tt><tt>Mwords of memory&quot; under older versions of Ferret.&#xA0; If you are running an 
+</tt><tt>Mwords of memory&quot; under older versions of Ferret. If you are running an 
 </tt><tt>older Ferret, scroll down to the bottom of that documentation page.
 </tt><pre style="margin: 0em;">
  
@@ -71,25 +71,25 @@ Hello,
  
 I tried set memory/size=600
  
-But&#xA0; again I got this error:
+But again I got this error:
  
-&#xA0;Cached data cleared from memory
+Cached data cleared from memory
 Unable to allocate 600.0 Mwords of memory.
 Restoring previous memory of 25.6 Mwords.
  
 This is the error I get while running the scipt:
  
 fill/x=-70:100/y=0:55/pal=blue_orange/nolab/set correl
-&#xA0;**ERROR: request exceeds memory setting: 21 Mwords were requested.
+**ERROR: request exceeds memory setting: 21 Mwords were requested.
 CONTOUR/FILL/x=-70:100/y=0:55/pal=blue_orange/nolab/set correl
 Command file, command group, or REPEAT execution aborted
-&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; *** NOTE: You can use SET MEMORY/SIZE=xxx to increase memory.
-</pre><tt>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; *** NOTE: The &quot;Memory use&quot; section of the FERRET Users 
+ *** NOTE: You can use SET MEMORY/SIZE=xxx to increase memory.
+</pre><tt> *** NOTE: The &quot;Memory use&quot; section of the FERRET Users 
 </tt><tt>Guide has further tips.
 </tt><pre style="margin: 0em;">
  
  
-Is it somehow related to the internal memory of the device&#xA0; I am using?
+Is it somehow related to the internal memory of the device I am using?
  
 Thanking you in anticipation
 Asiya
@@ -101,42 +101,42 @@ Hi Asiya,
  
 First I'd like to say that in the most recent versions of Ferret, SET
 MEMORY does not allocate memory from the system but only sets an upper
-limit on the amount it will use as needed.&#xA0; This discussion is for
-versions previous to v7.2.&#xA0; The current documentation for SET MEMORY
+limit on the amount it will use as needed. This discussion is for
+versions previous to v7.2. The current documentation for SET MEMORY
 is here, with the discussion at the bottom of the page for earlier
 versions.
  
  
-</pre><tt><a  rel="nofollow" href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/computing-environment/MEMORY-USE">https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/computing-environment/MEMORY-USE</a> 
+</pre><tt><a  rel="nofollow" href="../../documentation/users-guide/computing-environment/MEMORY-USE">../../documentation/users-guide/computing-environment/MEMORY-USE</a> 
 </tt><tt>
 </tt><pre style="margin: 0em;">
 [1]
  
 In Ferret v7, the SET MEMORY/SIZE= causes Ferret to ask the system to
 allocate that numer of mega-words (storage locations) of memory, so
-SET MEM/SIZE=1400 asks for over 11 Gb of memory.&#xA0; When you tried
-tried &quot;SET MEMORY/SIZE=1400&quot;&#xA0; did you see an error message?&#xA0; In v7,
+SET MEM/SIZE=1400 asks for over 11 Gb of memory. When you tried
+tried &quot;SET MEMORY/SIZE=1400&quot; did you see an error message? In v7,
 it might report
  
 </pre><blockquote style="border-left: #5555EE solid 0.2em; margin: 0em; padding-left: 0.85em"><pre style="margin: 0em;">
-&#xA0;Cached data cleared from memory
+Cached data cleared from memory
 Unable to allocate 1400.0 Mwords of memory.
 Restoring previous memory of 25.6 Mwords.
 </pre></blockquote><pre style="margin: 0em;">
  
-To get an idea of the&#xA0; amount of memory you might need, look at the
+To get an idea of the amount of memory you might need, look at the
 subset of the grid that your definitions use. The expression
 SST_0001[X=120:180@AVE,Y=-16:6@AVE] needs to read data 60*22*165.
 It's in megawords, so,
  
 yes? list 60*22*165/1000
-&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; VARIABLE : 60*22*165/1000
-&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 217.8
+ VARIABLE : 60*22*165/1000
+ 217.8
  
 So just for that expression you'd need to have the SET MEMORY/SIZE
-setting larger than 218.&#xA0; Ferret will store intermediate results and
+setting larger than 218. Ferret will store intermediate results and
 re-use some of the memory, but there are a number of calculations done
-to evaluate variable&#xA0; &quot;correl&quot;, so probably more memory is needed.
+to evaluate variable &quot;correl&quot;, so probably more memory is needed.
 Try SET MEMORY/SIZE=300, or maybe 500
  
 On 1/22/2020 11:52 PM, abs15ms027 wrote:
@@ -148,9 +148,9 @@ I am repeatedly getting an error while using some of the data sets
 in Ferret. Error is as follows:
  
 Command file, command group, or REPEAT execution aborted
-&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; *** NOTE: You can use SET MEMORY/SIZE=xxx to
+ *** NOTE: You can use SET MEMORY/SIZE=xxx to
 increase memory.
-&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; *** NOTE: The &quot;Memory use&quot; section of the
+ *** NOTE: The &quot;Memory use&quot; section of the
 FERRET Users Guide has further tips.
  
 I tried SET MEMORY/SIZE=1400 and SET MEMORY/SIZE=5e12, but still, I
@@ -194,22 +194,22 @@ Ferret version I am using is FERRET v7 (opt)
 The data set used is ERA 5 single-level data and includes these
 variables:-
  
-&#xA0;name
+name
 title
-I&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; J K&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; L&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; &#xA0; M
+I J K L  M
 N
-&#xA0;SST_0001 Sea surface temperature&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:1440
-1:721 ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:164&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...
-&#xA0;SP_0001&#xA0; Surface pressure
-1:1440&#xA0;&#xA0;&#xA0; 1:721 ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:164&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...
-&#xA0;TP_0001&#xA0; Total precipitation
-1:1440&#xA0;&#xA0;&#xA0; 1:721 ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:164&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...
-&#xA0;SST_0005 Sea surface temperature&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:1440
-1:721 ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:164&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...
-&#xA0;SP_0005&#xA0; Surface pressure
-1:1440&#xA0;&#xA0;&#xA0; 1:721 ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:164&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...
-&#xA0;TP_0005&#xA0; Total precipitation
-1:1440&#xA0;&#xA0;&#xA0; 1:721 ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:164
+SST_0001 Sea surface temperature 1:1440
+1:721 ... 1:164 ... ...
+SP_0001 Surface pressure
+1:1440 1:721 ... 1:164 ... ...
+TP_0001 Total precipitation
+1:1440 1:721 ... 1:164 ... ...
+SST_0005 Sea surface temperature 1:1440
+1:721 ... 1:164 ... ...
+SP_0005 Surface pressure
+1:1440 1:721 ... 1:164 ... ...
+TP_0005 Total precipitation
+1:1440 1:721 ... 1:164
  
 It would be of great help if you could provide me with a solution
 to this problem.
@@ -223,7 +223,7 @@ Links:
 ------
 [1]
  
-</pre><tt><a  rel="nofollow" href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/computing-environment/MEMORY-USE">https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/computing-environment/MEMORY-USE</a> 
+</pre><tt><a  rel="nofollow" href="../../documentation/users-guide/computing-environment/MEMORY-USE">../../documentation/users-guide/computing-environment/MEMORY-USE</a> 
 </tt><tt>
 </tt></blockquote><pre style="margin: 0em;">
  

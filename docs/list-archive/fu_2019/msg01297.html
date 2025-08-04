@@ -52,15 +52,15 @@
 <p>You can look at the header information for a netCDF dataset using
 the Unix command ncdump:</p>
 <p><font face="Courier New, Courier, monospace">&gt; ncdump -h
-<a rel="nofollow" href="http://filename.nc" target="_blank">filename.nc</a></font></p>
+filename.nc</font></p>
 <p>The output of this command shows the dimensions defined in the
 file, and the variables and coordinate variables that it contains.</p>
 <p>There is more about netCDF files in the Ferret Users&#39; guide,
-<a rel="nofollow" href="https://urldefense.com/v3/__https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/converting-to-netcdf__;!!PvDODwlR4mBZyAb0!X0STCVQ4lkqNyGRZB0ZdmE3984J0TvOJowlPDQoagN8XsTod3Oi4ooKoBzDHRz6kOUmGPNN11H3ukFNZpA$" target="_blank">https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/converting-to-netcdf</a>.
+<a rel="nofollow" href="../../documentation/users-guide/converting-to-netcdf/converting-to-netcdf.html">../../documentation/users-guide/converting-to-netcdf/converting-to-netcdf.html</a>.
 <br>
 </p>
 <p>The full CF standard is here (quite a long document!)&#xA0;
-<a rel="nofollow" href="https://urldefense.com/v3/__https://cfconventions.org/Data/cf-conventions/cf-conventions-1.10/cf-conventions.html__;!!PvDODwlR4mBZyAb0!X0STCVQ4lkqNyGRZB0ZdmE3984J0TvOJowlPDQoagN8XsTod3Oi4ooKoBzDHRz6kOUmGPNN11H1ZLZi8_Q$" target="_blank">https://cfconventions.org/Data/cf-conventions/cf-conventions-1.10/cf-conventions.html</a></p></div></blockquote><div><br></div><div>It&#39;s quite a long document but to fix the current problem is easy: Add an attribute</div><div><br></div><div>axis=&quot;T&quot;</div><div><br></div><div>to the time coordinate variable.</div><div><br></div><div>I recommend everybody <b><i>fix the dataset</i></b> instead of trying to accommodate&#xA0;a non-conforming dataset when you use it.&#xA0; Adhering to the CF convention when you create your netCDF file brings overall benefits to the users of the dataset.</div><div><br></div><div>Ryo</div><div><br></div></div></div>
+<a rel="nofollow" href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.10/cf-conventions.html">https://cfconventions.org/Data/cf-conventions/cf-conventions-1.10/cf-conventions.html</a></p></div></blockquote><div><br></div><div>It&#39;s quite a long document but to fix the current problem is easy: Add an attribute</div><div><br></div><div>axis=&quot;T&quot;</div><div><br></div><div>to the time coordinate variable.</div><div><br></div><div>I recommend everybody <b><i>fix the dataset</i></b> instead of trying to accommodate&#xA0;a non-conforming dataset when you use it.&#xA0; Adhering to the CF convention when you create your netCDF file brings overall benefits to the users of the dataset.</div><div><br></div><div>Ryo</div><div><br></div></div></div>
  
 <!--X-Body-of-Message-End-->
 <!--X-MsgBody-End-->

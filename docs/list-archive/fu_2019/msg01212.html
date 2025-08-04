@@ -54,13 +54,13 @@
  
  
 <p>Here's a good discussion about arguments to jnl scripts:</p>
-<p><a rel="nofollow" class="moz-txt-link-freetext" href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/introduction/GO-FILES#_VPINDEXENTRY_126">https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/introduction/GO-FILES#_VPINDEXENTRY_126</a>,
-especially the section "Arguments to GO tools".&#xA0; Arguments are
+<p><a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/users-guide/introduction/GO-FILES.html#_VPINDEXENTRY_126">../../documentation/users-guide/introduction/GO-FILES.html#_VPINDEXENTRY_126</a>,
+especially the section "Arguments to GO tools". Arguments are
 Ferret symbols, so symbol parsing and substitution syntax works
 here.<br>
 </p>
 <p>One thing I often want to do is to check whether the argument has
-been given, and if so, does it have a valid value.&#xA0; Says I'm
+been given, and if so, does it have a valid value. Says I'm
 expecting a value for the year in argument 1.<br>
 </p>
 <p>This says, assign the value of the argument to a variable. If
@@ -68,20 +68,20 @@ they didn't send in a value, then assign 0 to my variable. Then
 the script can check to see if that's a valid value. (The
 parentheses are optional.)<br>
 </p>
-<p><font face="monospace">&#xA0;&#xA0; let year = ($1%0%)<br>
-&#xA0;&#xA0; if `year gt 2020` then ...<br>
+<p><font face="monospace"> let year = ($1%0%)<br>
+ if `year gt 2020` then ...<br>
 </font></p>
-<p>&#xA0;Or do something like this:<br>
+<p>Or do something like this:<br>
 <br>
-<font face="monospace">&#xA0;&#xA0; if `($1%0%) LT 2015 or ($1%0%) GT 2023`
+<font face="monospace"> if `($1%0%) LT 2015 or ($1%0%) GT 2023`
 THEN<br>
-&#xA0; &#xA0; &#xA0; say argument 1 is not in the valid range of years: $1<br>
-&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; exit/script<br>
-&#xA0;&#xA0; endif</font><br>
+   say argument 1 is not in the valid range of years: $1<br>
+ exit/script<br>
+ endif</font><br>
 </p>
 <p>The QUERY command lets you do this kind of checking, and issue an
 error message if needed, without the IF statements, but it doesn't
-do anything you couldn't do with an&#xA0; IF-THEN-ENDIF sequence.&#xA0; See
+do anything you couldn't do with an IF-THEN-ENDIF sequence. See
 it in some of the scripts included with PyFerret: <br>
 </p>
 <p>yes? go/help land.jnl</p>
@@ -149,7 +149,7 @@ rgb(204,204,204);padding-left:1ex">
 <div lang="EN-AU">
 <div>
 <p class="MsoNormal"><span lang="EN-US">I have a
-very simple question.&#xA0; I want to check the
+very simple question. I want to check the
 value of arguments in GO scripts, e.g. $1 $2
 and so on when a program is running.</span></p>
 </div>
@@ -159,7 +159,7 @@ and so on when a program is running.</span></p>
 <div><br>
 </div>
 <div>I suppose you want to print out the values on your
-screen.&#xA0; If so,</div>
+screen. If so,</div>
 <div><br>
 </div>
 <div>\cancel mode verify</div>
@@ -170,7 +170,7 @@ screen.&#xA0; If so,</div>
 </div>
 <div>(Switching off and on of the verify mode is
 optional.)</div>
-<div>&#xA0;</div>
+<div></div>
 <blockquote class="gmail_quote" style="margin:0px 0px 0px
 0.8ex;border-left:1px solid
 rgb(204,204,204);padding-left:1ex">
@@ -178,7 +178,7 @@ rgb(204,204,204);padding-left:1ex">
 <div lang="EN-AU">
 <div>
 <p class="MsoNormal"><span lang="EN-US"></span></p>
-<p class="MsoNormal"><span lang="EN-US">&#xA0;</span></p>
+<p class="MsoNormal"><span lang="EN-US"></span></p>
 <p class="MsoNormal"><span lang="EN-US">If I
 include the command QUERY $1 in a GO script
 the value is returned to the terminal but the

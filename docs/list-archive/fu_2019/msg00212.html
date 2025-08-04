@@ -57,16 +57,16 @@
  
 <p>Hi Martin,</p>
 <p>Some of the hard limits have been eliminated, and others raised
-in recent versions of Ferret/PyFerret.&#xA0; There still are some fixed
+in recent versions of Ferret/PyFerret. There still are some fixed
 limits, however, on the number of open files, grids, and axes that
-can be defined.&#xA0; Here's a table with many of those limits:</p>
-<p><a rel="nofollow" class="moz-txt-link-freetext" href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/Grids-Regions/FERRET-PROGRAM-LIMITS">https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/Grids-Regions/FERRET-PROGRAM-LIMITS</a></p>
-<p>You'll see that the upper limit for axes is 1500.&#xA0; I assume you
-are doing a time aggregation.&#xA0; Each time axis in the member files
-will use one of these axis definitions.&#xA0; Here is a case where you
+can be defined. Here's a table with many of those limits:</p>
+<p><a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/users-guide/Grids-Regions/FERRET-PROGRAM-LIMITS">../../documentation/users-guide/Grids-Regions/FERRET-PROGRAM-LIMITS</a></p>
+<p>You'll see that the upper limit for axes is 1500. I assume you
+are doing a time aggregation. Each time axis in the member files
+will use one of these axis definitions. Here is a case where you
 might do better with a descriptor file, if that is a possibility
-for the data you are working with.&#xA0; Descriptor files define just
-one time axis for the multi-file set.&#xA0; Or, as you are doing,
+for the data you are working with. Descriptor files define just
+one time axis for the multi-file set. Or, as you are doing,
 working with subsets of the data, and finding other means to put
 it all together.</p>
 <p>Ansley<br>
@@ -79,11 +79,11 @@ cite="">
  
 <p>Hi Karl,</p>
 <p>thank you very much. So it is not a simple internal python
-issue or something like this.&#xA0; I also did not notice another
+issue or something like this. I also did not notice another
 similar limitation. Shortly before the limit in teh string
 number shows up, an internal limit is met:</p>
 <p>**TMAP ERR: limit on number of axes has been reached</p>
-<p>Meanwhile I am working "piecewise".&#xA0; <br>
+<p>Meanwhile I am working "piecewise". <br>
 </p>
 <p>Best,</p>
 <p>Martin<br>
@@ -102,9 +102,9 @@ cite="">
 reads the results of a command (the C function fopen) when I
 noticed that there is a hard limit of 2000 strings per
 string variable still being imposed in the code without
-proper error handling.&#xA0; I am fairly sure this limitation
+proper error handling. I am fairly sure this limitation
 should no longer be imposed, but will need to be
-investigated.&#xA0; And, obviously, if it does still have to be
+investigated. And, obviously, if it does still have to be
 imposed, the limit needs to be increased and given proper
 error handling.</div>
 <div><br>
@@ -175,34 +175,34 @@ free(): invalid pointer: 0x00007fcfbc746698 ***<br>
 <br>
 ... several 100 similar lines from many other libraries in
 the miniconda <br>
-based python including a memory map&#xA0; and finally<br>
+based python including a memory map and finally<br>
 <br>
 Traceback (most recent call last):<br>
-&#xA0;&#xA0; File "&lt;string&gt;", line 1, in &lt;module&gt;<br>
-&#xA0;&#xA0; File <br>
+ File "&lt;string&gt;", line 1, in &lt;module&gt;<br>
+ File <br>
 "/sw/viz/ferret/py_ferret_v750_os423_py_2715_netcdf463/lib/python2.7/site-packages/pyferret/__init__.py",
 <br>
 line 482, in init<br>
-&#xA0;&#xA0;&#xA0;&#xA0; result = run()<br>
-&#xA0;&#xA0; File <br>
+ result = run()<br>
+ File <br>
 "/sw/viz/ferret/py_ferret_v750_os423_py_2715_netcdf463/lib/python2.7/site-packages/pyferret/__init__.py",
 <br>
 line 887, in run<br>
-&#xA0;&#xA0;&#xA0;&#xA0; retval = libpyferret._run(str_command)<br>
+ retval = libpyferret._run(str_command)<br>
 RuntimeError: etc<br>
 <br>
 I have no idea, which limit or ulimit, (but it is not the
 stacksize) <br>
-could be violated.&#xA0; I have no idea how to produce this list
+could be violated. I have no idea how to produce this list
 in python <br>
 directly, to check if this a python or ferret issue.<br>
 <br>
 in _init_.py it crashs here:<br>
 <br>
-&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
+
 readline.set_completer_delims(FERRET_READLINE_DELIMS)<br>
-&#xA0;&#xA0;&#xA0;&#xA0; # the actual Ferret function call<br>
-&#xA0;&#xA0;&#xA0;&#xA0; retval = libpyferret._run(str_command)<br>
+ # the actual Ferret function call<br>
+ retval = libpyferret._run(str_command)<br>
 <br>
 Is there eventually a limit in ferret itself?<br>
 <br>

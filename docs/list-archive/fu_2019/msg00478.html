@@ -53,8 +53,8 @@ Hi Alexander,
  
 No, this kind of striding isn't available in Ferret/PyFerret.
  
-</pre><tt>Do you want to compute a seasonal climatology?&#xA0; Or an average to an axis 
-</tt><tt>with 4 points per year?&#xA0; If so then a regridding operation can do it for 
+</pre><tt>Do you want to compute a seasonal climatology? Or an average to an axis 
+</tt><tt>with 4 points per year? If so then a regridding operation can do it for 
 </tt><tt>you without your having to specify strides yourself
 </tt><pre style="margin: 0em;">
  
@@ -72,38 +72,38 @@ No, this kind of striding isn't available in Ferret/PyFerret.
 </pre><tt>If the grid is still too large to work with for one of the above 
 </tt><tt>operations, or if you're doing some other kind of analysis you can work 
 </tt><tt>on the grid in pieces, appending to a netCDF file in some dimension 
-</tt><tt>other than time.&#xA0;&#xA0; You need to first set up the file with the full 
+</tt><tt>other than time. You need to first set up the file with the full 
 </tt><tt>range, and then append into it, filling the grid piece by piece.
 </tt><pre style="margin: 0em;">
  
-<a  rel="nofollow" href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/converting-to-netcdf/SIMPLE-CONVERSIONS-USING-FERRET#_VPINDEXENTRY_1071">https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/converting-to-netcdf/SIMPLE-CONVERSIONS-USING-FERRET#_VPINDEXENTRY_1071</a>
+<a  rel="nofollow" href="../../documentation/users-guide/converting-to-netcdf/SIMPLE-CONVERSIONS-USING-FERRET#_VPINDEXENTRY_1071">../../documentation/users-guide/converting-to-netcdf/SIMPLE-CONVERSIONS-USING-FERRET#_VPINDEXENTRY_1071</a>
  
 -Ansley
  
 On 1/3/2020 7:23 AM, Alexander Audet wrote:
 </pre><blockquote style="border-left: #5555EE solid 0.2em; margin: 0em; padding-left: 0.85em"><pre style="margin: 0em;">
 Ferret User Community
-</pre><tt>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;I am trying to work with a very 
+</pre><tt>                   I am trying to work with a very 
 </tt><tt>large grided dataset and trying to get as high a resolution 
-</tt><tt>as&#xA0;possible. I am trying to correlate 1 season of data across a number 
+</tt><tt>aspossible. I am trying to correlate 1 season of data across a number 
 </tt><tt>of years to a time series. Thus, it appears that I need to average 
 </tt><tt>498355200 points of data into four seasons then perform a stride so 
 </tt><tt>that only the winter season is selected (right now defined as JFM, 
 </tt><tt>later I will need to compare to DJF).
 </tt><pre style="margin: 0em;">
  
-</pre><tt>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;The problem is that there are 
-</tt><tt>too many data points for my ferret to average&#xA0;the data into 4 seasons 
+</pre><tt>                    The problem is that there are 
+</tt><tt>too many data points for my ferret to averagethe data into 4 seasons 
 </tt><tt>as it gives me a memory error when I try to work with the resulting 
 </tt><tt>variable. If I first trim down the data (stride over several degrees 
 </tt><tt>Lat and Long) into a variable, the correlation does work. I think that 
 </tt><tt>if I could first isolate JFM monthly data from the rest of the year, 
-</tt><tt>then average those, I will be able to perform&#xA0;@AVE over a larger part 
+</tt><tt>then average those, I will be able to perform@AVE over a larger part 
 </tt><tt>of the dataset of interest to me and create a higher 
-</tt><tt>resolution&#xA0;correlation.
+</tt><tt>resolutioncorrelation.
 </tt><pre style="margin: 0em;">
  
-</pre><tt>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;Is there a way to select 
+</pre><tt>                    Is there a way to select 
 </tt><tt>chunks of data? Say if I had 24 months over 2 years, so that L=1:24, 
 </tt><tt>somehow select 1:3, then 13:15? I could imagine using a command like 
 </tt><tt>1:24:3:12, (select 3 points at every 12th value). My browsing through 

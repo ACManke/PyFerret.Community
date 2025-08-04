@@ -53,39 +53,39 @@
 <pre style="margin: 0em;">
 Hi,
  
-</pre><tt>Interesting thread.&#xA0; I hadn't been aware of that detail regarding the 
+</pre><tt>Interesting thread. I hadn't been aware of that detail regarding the 
 </tt><tt>equal sign on DEFINE SYMBOL.
 </tt><pre style="margin: 0em;">
  
 </pre><tt>Some of this is described in Command Syntax, 
-</tt><tt><a  rel="nofollow" href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/introduction/COMMAND-SYNTAX">https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/introduction/COMMAND-SYNTAX</a> 
+</tt><tt><a  rel="nofollow" href="../../documentation/users-guide/introduction/COMMAND-SYNTAX">../../documentation/users-guide/introduction/COMMAND-SYNTAX</a> 
 </tt><tt>and other documentation about syntax is linked in that section,
 </tt><pre style="margin: 0em;">
  
  
 </pre><tt>In the Ferret/PyFerret command parser, the first thing that happens, is 
-</tt><tt>that the different &quot;words&quot; in the command are located.&#xA0; They're 
+</tt><tt>that the different &quot;words&quot; in the command are located. They're 
 </tt><tt>separated by spaces,
 </tt><pre style="margin: 0em;">
  
-&#xA0;&#xA0;&#xA0; LET variable = 7
+ LET variable = 7
  
 or by slashes
  
-&#xA0;&#xA0; PLOT/X=157/Y=33/Z=20/COLOR=blue/title=&quot;measured oxygen&quot; o2_observed
+ PLOT/X=157/Y=33/Z=20/COLOR=blue/title=&quot;measured oxygen&quot; o2_observed
  
 </pre><tt>If it finds quotes, then everything inside those quotes is grouped 
-</tt><tt>together, until the next quote is found.&#xA0; Likewise the start and end of 
+</tt><tt>together, until the next quote is found. Likewise the start and end of 
 </tt><tt>square brackets or curly braces is located.
 </tt><pre style="margin: 0em;">
  
 </pre><tt>During command parsing, any expression within any grave-accents, so 
-</tt><tt>`stuff`&#xA0; is immediately evaluated and its value put into the command line.
+</tt><tt>`stuff` is immediately evaluated and its value put into the command line.
 </tt><pre style="margin: 0em;">
  
 </pre><tt>Once the &quot;words&quot; are located, their role is identified, is it a command, 
-</tt><tt>or a subcommand, e.g. DEFINE SYMBOL are a command and subcommand.&#xA0; Or is 
-</tt><tt>it a qualifier, /X=157, or /TITLE=&#xA0; or is it an argument, or an element 
+</tt><tt>or a subcommand, e.g. DEFINE SYMBOL are a command and subcommand. Or is 
+</tt><tt>it a qualifier, /X=157, or /TITLE= or is it an argument, or an element 
 </tt><tt>of an expression.
 </tt><pre style="margin: 0em;">
  
@@ -96,20 +96,20 @@ There seem to be some odd little artifacts about trailing slashes.
 </tt><tt>start of the next qualifier, and if there isn't one,
 </tt><pre style="margin: 0em;">
  
-&#xA0;&#xA0; yes? let/title=myvar/units=m/ var = 8
-&#xA0;**ERROR: unknown command qualifier: var = 8
+ yes? let/title=myvar/units=m/ var = 8
+**ERROR: unknown command qualifier: var = 8
  
 but if it's in an expression, it's ignored.
  
-yes? let/title=myvar/units=m&#xA0; var = 9/
+yes? let/title=myvar/units=m var = 9/
 yes? list var
-&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; VARIABLE : myvar (m)
-&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 9.000
+ VARIABLE : myvar (m)
+ 9.000
  
  
 </pre><tt>DEFINE SYMBOL seems to be set up so the value of the symbol is taken to 
 </tt><tt>be everything following &quot;define symbol&quot; on the command line, up to but 
-</tt><tt>not including a ! comment,&#xA0; and not including a trailing slash.
+</tt><tt>not including a ! comment, and not including a trailing slash.
 </tt><pre style="margin: 0em;">
  
 </pre><tt>yes? define symbol sym1 = Some text including $ and / but not including 
@@ -129,20 +129,20 @@ SYM2 = &quot;Some text including $ and / but not including this comment&quot;
 </tt><tt>for a PLOT command might be built up depending on the state of things 
 </tt><tt>and different settings, so over the course of running a set of scripts 
 </tt><tt>that open a dataset and make a plot, these definitions might be 
-</tt><tt>scattered in there.&#xA0; If the first one starts with a slash, and each new 
-</tt><tt>one gets its own slash, it all works out in the end.&#xA0; The PLOT command 
+</tt><tt>scattered in there. If the first one starts with a slash, and each new 
+</tt><tt>one gets its own slash, it all works out in the end. The PLOT command 
 </tt><tt>also works even if there are no qualifiers set at all.
 </tt><pre style="margin: 0em;">
  
-cancel symbol qualifiers&#xA0; ! at the start of the session.
+cancel symbol qualifiers ! at the start of the session.
  
 DEFINE SYMBOL qualifiers = ($qualifiers)/X=157/Y=33/Z=20
 DEFINE SYMBOL qualifiers = ($qualifiers)/T=1-jan-2020:31-mar-2020
 DEFINE SYMBOL qualifiers = ($qualifiers)/title=&quot;the title&quot;
 DEFINE SYMBOL qualifiers = ($qualifiers)/dash/color=red
  
-plot($qualifiers)&#xA0; theta
-</pre><tt>&#xA0;!-&gt; plot/X=157/Y=33/Z=20/T=1-jan-2020:31-mar-2020/title=&quot;the 
+plot($qualifiers) theta
+</pre><tt>!-&gt; plot/X=157/Y=33/Z=20/T=1-jan-2020:31-mar-2020/title=&quot;the 
 </tt><tt>title&quot;/dash/color=red theta
 </tt><pre style="margin: 0em;">
  
@@ -240,7 +240,7 @@ course.
  
 &#x2014;Marco
  
-[1]: <a  rel="nofollow" href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/DEFINE">https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/DEFINE</a>
+[1]: <a  rel="nofollow" href="../../documentation/users-guide/commands-reference/DEFINE.html">../../documentation/users-guide/commands-reference/DEFINE.html</a>
  
 </pre></blockquote><pre style="margin: 0em;">
  

@@ -52,14 +52,14 @@
 <!--X-Body-of-Message-->
 <pre style="margin: 0em;">
 Hi Russ,
-</pre><tt>Thanks for your answer.&#xA0; The info about the -nojnl startup option is now 
+</pre><tt>Thanks for your answer. The info about the -nojnl startup option is now 
 </tt><tt>added to the FAQ about jnl files.
 </tt><pre style="margin: 0em;">
  
 <a  rel="nofollow" href="../../faq/controlling-ferret-jnl-files.html">../../faq/controlling-ferret-jnl-files</a>
  
 </pre><tt>In there too, is a link to the related command, SET REDIRECT 
-</tt><tt>&lt;<a  rel="nofollow" href="http://ferret.pmel.noaa.gov/documentation/users-guide/commands-reference/SET#_VPINDEXENTRY_SET_REDIRECT">http://ferret.pmel.noaa.gov/documentation/users-guide/commands-reference/SET#_VPINDEXENTRY_SET_REDIRECT</a>&gt; 
+</tt><tt>&lt;<a  rel="nofollow" href="http://ferret.pmel.noaa.gov/documentation/users-guide/commands-reference/SET.html#_VPINDEXENTRY_SET_REDIRECT">http://ferret.pmel.noaa.gov/documentation/users-guide/commands-reference/SET.html#_VPINDEXENTRY_SET_REDIRECT</a>&gt; 
 </tt><tt>whch gives us more options send Ferret output to files.
 </tt><pre style="margin: 0em;">
  
@@ -86,7 +86,7 @@ can data file1; use file1
  
 </pre><tt>By changing the files you possibly change the metadata in the files 
 </tt><tt>that Ferret (or any other application) needs. Updating that is tricky.
-</tt><tt>If it's just the data that has changed&#xA0; clearing out anything Ferret 
+</tt><tt>If it's just the data that has changed clearing out anything Ferret 
 </tt><tt>has cached may work but I wouldn't trust it.
 </tt><pre style="margin: 0em;">
  
@@ -102,7 +102,7 @@ plot var1[d=file1],var2[d=file1],var1[d=file2],var2[d=file2]
  
 To create ensembles, time series and unions of data sets see
  
-<a  rel="nofollow" href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/DEFINE#_define_data_agg">https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/DEFINE#_define_data_agg</a>
+<a  rel="nofollow" href="../../documentation/users-guide/commands-reference/DEFINE.html#_define_data_agg">../../documentation/users-guide/commands-reference/DEFINE.html#_define_data_agg</a>
  
  
 </pre><tt>4) I use journal files in development. Just cut and paste the 
@@ -139,27 +139,27 @@ better than just sending multiple emails. I&#x2019;ve searched up and down the
 </tt><tt>questions.
 </tt><pre style="margin: 0em;">
  
-</pre><tt>1.&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; How do I reload the files when they have changed? At the 
+</pre><tt>1. How do I reload the files when they have changed? At the 
 </tt><tt>moment I am
 </tt><pre style="margin: 0em;">
 using cancel data/all and then have to &#x201C;use file1.nc&#x201D;, etc.
-</pre><tt>2.&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Is there autocomplete variable names, commands, palette names, 
+</pre><tt>2. Is there autocomplete variable names, commands, palette names, 
 </tt><tt>etc.
 </tt><pre style="margin: 0em;">
 similarly to R console or linux Bash?
-</pre><tt>3.&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Can I only access one data set at the time? Or is it possible 
+</pre><tt>3. Can I only access one data set at the time? Or is it possible 
 </tt><tt>to do
 </tt><pre style="margin: 0em;">
 something like: plot variable/data1, variable/data2? If not, is it
 possible to quickly merge two data sets with the same time steps and
 spatial extent inside ferret?
-</pre><tt>4.&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Couple of questions in regards to the command history files. 
+</pre><tt>4. Couple of questions in regards to the command history files. 
 </tt><tt>How do I
 </tt><pre style="margin: 0em;">
 use them? Because when I type &#x201C;go ferret.jnl&#x201D; I get this message
 **ERROR: ferret.jnl: Success. And is there a way to disable them? They
 tend to fill up my folders with lots of history files.
-</pre><tt>5.&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Is there any way to control the size and position of the plot 
+</pre><tt>5. Is there any way to control the size and position of the plot 
 </tt><tt>window
 </tt><pre style="margin: 0em;">
 when the first plot command is used? I use ferret through Xterm and

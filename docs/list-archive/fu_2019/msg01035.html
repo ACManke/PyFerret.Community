@@ -49,19 +49,19 @@
 <hr>
 <!--X-Head-Body-Sep-End-->
 <!--X-Body-of-Message-->
-<div dir="ltr">Hi Ansley,<div><br></div><div><font face="monospace">I tried with your method.&#xA0;</font></div><div><br></div><div>use agg_macav2metdata_pr_NorESM1-M_r1i1p1_historical_1950_2005_CONUS_monthly.nc<br>yes? let/like=precipitation p_tave=precipitation[t=@AVE]<br>yes? save/file=NorESM_hist_ave.nc p_tave<br>&#xA0;LISTing to file NorESM_hist_ave.nc<br></div><div>cancel data 1<br>yes? use NorESM_hist_ave.nc<br>yes? use agg_macav2metdata_pr_NorESM1-M_r1i1p1_rcp85_2006_2099_CONUS_monthly.nc<br>yes? let/d=2/like=precipitation p_tave=precipitation[t=@AVE,gxy=p_tave[d=1]]<br></div><div><br></div><div><font face="monospace">I got an error saying:</font></div><div><br></div><div>**ERROR: variable unknown or not in data set: PRECIPITATION[T=@AVE]<br></div><div><br></div><div><font face="monospace">When I checked the data:</font></div><div><br></div><div>&#xA0;sh data<br>&#xA0; &#xA0; &#xA0;currently SET data sets:<br>&#xA0; &#xA0; 1&gt; ./NorESM_hist_ave.nc<br>&#xA0;name &#xA0; &#xA0; title &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; I &#xA0; &#xA0; &#xA0; &#xA0; J &#xA0; &#xA0; &#xA0; &#xA0; K &#xA0; &#xA0; &#xA0; &#xA0; L<br>&#xA0;P_TAVE &#xA0; Monthly Precipitation Amount &#xA0; &#xA0; 1:251 &#xA0; &#xA0; 1:144 &#xA0; &#xA0; ... &#xA0; &#xA0; &#xA0; ...<br>&#xA0; &#xA0; &#xA0; &#xA0;(T=30-DEC-1949 12:00:30-DEC-2005 00:00)<br>&#xA0;<br>&#xA0; &#xA0; 2&gt; ./agg_macav2metdata_pr_NorESM1-M_r1i1p1_rcp85_2006_2099_CONUS_monthly.nc &#xA0;(default)<br>&#xA0;name &#xA0; &#xA0; title &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; I &#xA0; &#xA0; &#xA0; &#xA0; J &#xA0; &#xA0; &#xA0; &#xA0; K &#xA0; &#xA0; &#xA0; &#xA0; L<br>&#xA0;PRECIPITATION<br>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; Monthly Precipitation Amount &#xA0; &#xA0; 1:251 &#xA0; &#xA0; 1:144 &#xA0; &#xA0; ... &#xA0; &#xA0; &#xA0; 1:1128<br>&#xA0;------------------------------<br>&#xA0;P_TAVE[D=agg_macav2metdata_pr_NorESM1-M_r1i1p1_rcp85_2006_2099_CONUS_monthly                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+<div dir="ltr">Hi Ansley,<div><br></div><div><font face="monospace">I tried with your method.</font></div><div><br></div><div>use agg_macav2metdata_pr_NorESM1-M_r1i1p1_historical_1950_2005_CONUS_monthly.nc<br>yes? let/like=precipitation p_tave=precipitation[t=@AVE]<br>yes? save/file=NorESM_hist_ave.nc p_tave<br>LISTing to file NorESM_hist_ave.nc<br></div><div>cancel data 1<br>yes? use NorESM_hist_ave.nc<br>yes? use agg_macav2metdata_pr_NorESM1-M_r1i1p1_rcp85_2006_2099_CONUS_monthly.nc<br>yes? let/d=2/like=precipitation p_tave=precipitation[t=@AVE,gxy=p_tave[d=1]]<br></div><div><br></div><div><font face="monospace">I got an error saying:</font></div><div><br></div><div>**ERROR: variable unknown or not in data set: PRECIPITATION[T=@AVE]<br></div><div><br></div><div><font face="monospace">When I checked the data:</font></div><div><br></div><div>sh data<br>  currently SET data sets:<br>  1&gt; ./NorESM_hist_ave.nc<br>name   title               I     J     K     L<br>P_TAVE  Monthly Precipitation Amount   1:251   1:144   ...    ...<br>   (T=30-DEC-1949 12:00:30-DEC-2005 00:00)<br><br>  2&gt; ./agg_macav2metdata_pr_NorESM1-M_r1i1p1_rcp85_2006_2099_CONUS_monthly.nc (default)<br>name   title               I     J     K     L<br>PRECIPITATION<br>     Monthly Precipitation Amount   1:251   1:144   ...    1:1128<br>------------------------------<br>P_TAVE[D=agg_macav2metdata_pr_NorESM1-M_r1i1p1_rcp85_2006_2099_CONUS_monthly                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
  
  
  
-<div>[<strong><font color="red">Caution</font></strong>: Email from External Sender. Do not click or open links or attachments unless you know this sender.]<br><span>&#xA0;</span>
+<div>[<strong><font color="red">Caution</font></strong>: Email from External Sender. Do not click or open links or attachments unless you know this sender.]<br><span></span>
 <p>Hi,</p>
 <p>Your datasets do not share a time range, so this is not a typical
 ensemble.</p>
 <p>Usually, you can define an ensemble when the datasets do not have
-the same space/time grids,&#xA0; by first defining a regridding
+the same space/time grids, by first defining a regridding
 operation so that all datasets have the same space/time grid as
 the first dataset in your list. On the page,</p>
-<p><a rel="nofollow" href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/DEFINE#_define_data_agg" target="_blank">https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/DEFINE#_define_data_agg</a></p>
+<p><a rel="nofollow" href="../../documentation/users-guide/commands-reference/DEFINE.html#_define_data_agg">../../documentation/users-guide/commands-reference/DEFINE.html#_define_data_agg</a></p>
 <p>scroll down in that page to find &quot;Ensemble Examples&quot;. Example 3
 shows how to define an ensemble for data on two different grids,
 including for this data a modulo regridding operation to define
@@ -71,25 +71,25 @@ within the Ferret session, and then define the new regridded
 variables using the desired names.</p>
 <p><br>
 </p>
-<p>I am not sure what commands you tried using @AVE.&#xA0; If you did a
+<p>I am not sure what commands you tried using @AVE. If you did a
 time average, then the resulting grid no longer depends on time,
 so there should not be an error message about time axes. Look at
 this example:</p>
 <p><font face="monospace">! Make a file containing the variables in
-the first dataset, averaged in time.&#xA0; <br>
+the first dataset, averaged in time. <br>
 ! An ensemble needs one file with the grid that is going to be
 used in the <br>
 ! ensemble; not all of the grids can come from LET definitions.<br>
 </font></p>
 <p><font face="monospace">yes? use dataset_1<br>
 yes? let/like=precip p_tave = precip [t=@ave]<br>
-yes? save/file=<a rel="nofollow" href="http://data1.nc" target="_blank">data1.nc</a> p_tave <br>
+yes? save/file=<a rel="nofollow" href="http://data1.nc">data1.nc</a> p_tave <br>
 yes? cancel data 1</font></p>
 <p><font face="monospace">! Now open this data and define variables
 in the other dataset(s) so that <br>
 ! they can be included in an ensemble.<br>
 </font></p>
-<p><font face="monospace">yes? use <a rel="nofollow" href="http://data1.nc" target="_blank">data1.nc</a><br>
+<p><font face="monospace">yes? use <a rel="nofollow" href="http://data1.nc">data1.nc</a><br>
 </font></p>
 <p><font face="monospace">yes? use dataset_2<br>
 yes? let/d=2/like=precip p_tave = precip[t=@ave,gxy=p_tave
@@ -111,29 +111,29 @@ wrote:<br>
 <div dir="ltr">Dear ferreters,
 <div><br>
 </div>
-<div>I am trying to ensemble&#xA0;RCPs (2005-2099) and control runs
+<div>I am trying to ensembleRCPs (2005-2099) and control runs
 (1949-2005) together but keep getting T axis differs error.</div>
 <div><br>
 </div>
 <div>*** NOTE: Variable &quot;PRECIPITATION&quot; excluded from aggregate:
 T axis differs among members<br>
-&#xA0;**ERROR: error defining aggregate dataset: No valid datasets
+**ERROR: error defining aggregate dataset: No valid datasets
 or datasets share no variables that can be aggregated.<br>
 </div>
 <div><br>
 </div>
 <div>It makes sense for pyferret to think the time axis are
-different. But comparing the&#xA0;@AVE value from different time
-series should also make sense to&#xA0;pyferret. I am wondering how
+different. But comparing the@AVE value from different time
+series should also make sense topyferret. I am wondering how
 to solve this problem.</div>
 <div><br>
 </div>
-<div>By the way, I already tried to read data in separately&#xA0;and
-do&#xA0;@AVE first then compare. It still showed the same
-error&#xA0;because the data still come from different time series.&#xA0;</div>
+<div>By the way, I already tried to read data in separatelyand
+do@AVE first then compare. It still showed the same
+errorbecause the data still come from different time series.</div>
 <div><br>
 </div>
-<div>If you want to learn more about&#xA0;ensembles: <a rel="nofollow" href="https://ferret.pmel.noaa.gov/tutorials/PyFerret_exploring_ensembles.pdf" target="_blank">https://ferret.pmel.noaa.gov/tutorials/PyFerret_exploring_ensembles.pdf</a></div>
+<div>If you want to learn more aboutensembles: <a rel="nofollow" href="https://ferret.pmel.noaa.gov/tutorials/PyFerret_exploring_ensembles.pdf">https://ferret.pmel.noaa.gov/tutorials/PyFerret_exploring_ensembles.pdf</a></div>
 <div>
 <div><br>
 </div>

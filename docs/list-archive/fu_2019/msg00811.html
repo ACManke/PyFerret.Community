@@ -54,9 +54,9 @@
 Hi Alexander<br>
 <br>
 Are you working from the PyFerret command line,that is from the
-"yes?"&#xA0; prompt?&#xA0; If so you can define a variable that contains the
-coordinates of an axis.&#xA0; The topic in the documentation is
-"pseudo-variables".&#xA0; <br>
+"yes?" prompt? If so you can define a variable that contains the
+coordinates of an axis. The topic in the documentation is
+"pseudo-variables". <br>
 <br>
 let zval = z[gz=variable]<br>
 repeat/k=1:32 (let val= `zval`)<br>
@@ -64,8 +64,8 @@ repeat/k=1:32 (let val= `zval`)<br>
 <br>
 There is syntax for controling the formatting of values in the
 grave-accent expressions, which may be useful to you when using
-numeric values within a file name.&#xA0; See this:<br>
-<a rel="nofollow" class="moz-txt-link-freetext" href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/variables-xpressions/EMBEDDED-XPRESSIONS#_VPINDEXENTRY_562">https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/variables-xpressions/EMBEDDED-XPRESSIONS#_VPINDEXENTRY_562</a><br>
+numeric values within a file name. See this:<br>
+<a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/users-guide/variables-xpressions/EMBEDDED-XPRESSIONS#_VPINDEXENTRY_562">../../documentation/users-guide/variables-xpressions/EMBEDDED-XPRESSIONS#_VPINDEXENTRY_562</a><br>
 <br>
 <br>
 <div class="moz-cite-prefix">On 9/2/2020 1:02 PM, Alexander Audet
@@ -79,22 +79,22 @@ cite="">
 <div dir="ltr">
 <div dir="ltr">
 <div dir="ltr">Hello Everyone,
-<div>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;I am trying to return
+<div>             I am trying to return
 coordinate values along an irregular axis using the
 index values. So if I have 32 pressure levels
 (K=1:32:1) spread out between Z=100-1000mb, I might
 want to say get the value 500 (mb
-mb)&#xA0;from inputting K=17 somehow.&#xA0;</div>
+mb)from inputting K=17 somehow.</div>
 <div><br>
 </div>
-<div>What I have&#xA0;done:</div>
+<div>What I havedone:</div>
 <div><br>
 </div>
 <div>I came across the pyferret.get_axis_coordinates
 ETF, however, that seems to require I code my own ETF
 to use. Either way, I am still confused about how to
 use it, and how it could help me get the result I
-want, even after using&#xA0;<b>help(pyferret.get_axis_coordinates)</b>.</div>
+want, even after using<b>help(pyferret.get_axis_coordinates)</b>.</div>
 <div>
 <p class="gmail-p1"
 style="margin:0px;font-variant-numeric:normal;font-variant-east-asian:normal;font-stretch:normal;font-size:11px;line-height:normal;font-family:Menlo;color:rgb(0,0,0)"><br>
@@ -104,20 +104,20 @@ style="margin:0px;font-variant-numeric:normal;font-variant-east-asian:normal;fon
 </div>
 <div>It has crossed my mind that I may be able to
 somehow create a new axis from the old ending at K=17,
-and then return&#xA0;the end value by using&#xA0;<b
+and then returnthe end value by using<b
 style="font-size:13px;margin:0px;padding:0px;border:0px;outline:0px;vertical-align:baseline;font-variant-numeric:inherit;font-variant-east-asian:inherit;font-stretch:inherit;line-height:inherit;font-family:Verdana,Helvetica,Arial,sans-serif;color:rgb(0,0,0)">RETURN=XEND</b>.
 However, I do not currently know how to create a
-subaxis from another axis.&#xA0;</div>
+subaxis from another axis.</div>
 <div><br>
 </div>
 <div>What I am actually trying to do (in case that
-helps):&#xA0;</div>
+helps):</div>
 <div><br>
 </div>
 <div>I am running a REPEAT and want to create a series
 of file names with the appropriate pressure levels in
-the file name. I have a variety of different&#xA0;files, so
-no 1 size fits all.&#xA0;</div>
+the file name. I have a variety of differentfiles, so
+no 1 size fits all.</div>
 <div><br>
 </div>
 <div>Many thanks,</div>

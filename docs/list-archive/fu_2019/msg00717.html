@@ -52,19 +52,19 @@
 Hi Giorgio,
 </pre><tt>When you can, try to update to a newer version of pyferret or ferret. 
 </tt><tt>Starting with Ferret v7.2 
-</tt><tt>&lt;<a  rel="nofollow" href="https://ferret.pmel.noaa.gov/Ferret/documentation/release_notes/version-7-2-release-notes">https://ferret.pmel.noaa.gov/Ferret/documentation/release_notes/version-7-2-release-notes</a>&gt;, 
-</tt><tt>there is much better memory management.&#xA0; With your version of Ferret you 
-</tt><tt>can try &quot;set memory/size=&quot;&#xA0; to give it a larger&#xA0; working memory buffer.
+</tt><tt>&lt;<a  rel="nofollow" href="../../documentation/release_notes/version-7-2-release-notes">../../documentation/release_notes/version-7-2-release-notes</a>&gt;, 
+</tt><tt>there is much better memory management. With your version of Ferret you 
+</tt><tt>can try &quot;set memory/size=&quot; to give it a larger working memory buffer.
 </tt><pre style="margin: 0em;">
  
 </pre><tt>For the errors you're seeing when trying to append to a file, the thing 
 </tt><tt>to know is that the grid of the variable you are appending needs to 
 </tt><tt>match what is in the file, except for time when appending in the time 
-</tt><tt>direction.&#xA0; I can't quite see what is happening with the different grids 
+</tt><tt>direction. I can't quite see what is happening with the different grids 
 </tt><tt>and datasets in your script. What I would do to see what is happening, 
 </tt><tt>is at the point in your script where the error occurs, instead write 
 </tt><tt>that variable to a second file, and then compare the new file with the 
-</tt><tt>one you were trying to append to.&#xA0; The error message is saying that the 
+</tt><tt>one you were trying to append to. The error message is saying that the 
 </tt><tt>latitude coordinates don't match.
 </tt><pre style="margin: 0em;">
  
@@ -91,11 +91,11 @@ Thanks Ashley about those useful tips.
 </tt><pre style="margin: 0em;">
  
 **TMAP ERR: error in line definition
-&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;file coords dont match variable coords on axis LAT77_203
+file coords dont match variable coords on axis LAT77_203
  
 </pre><tt>It doesn't change whether I'm using RESHAPE or not. I also tried to 
 </tt><tt>adapt my RESHAPE call according to what I read here 
-</tt><tt>(<a  rel="nofollow" href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/variables-xpressions/XPRESSIONS">https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/variables-xpressions/XPRESSIONS</a>), 
+</tt><tt>(<a  rel="nofollow" href="../../documentation/users-guide/variables-xpressions/XPRESSIONS.html">../../documentation/users-guide/variables-xpressions/XPRESSIONS.html</a>), 
 </tt><tt>but with no luck. Can you please help me again about this?
 </tt><pre style="margin: 0em;">
  
@@ -117,21 +117,21 @@ You could pass into the script the number of models
  
 The script then does a repeat loop that would start like this.
  
-&#xA0;&#xA0; let nmodel = ($1)
-&#xA0;&#xA0; repeat/range=1:($1)/name=r (\
-&#xA0;&#xA0; use /home/data/model`r`.nc;\
+ let nmodel = ($1)
+ repeat/range=1:($1)/name=r (\
+ use /home/data/model`r`.nc;\
  
 ...
  
 There are details on the grave-accent evaluation
-&lt;<a  rel="nofollow" href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/variables-xpressions/EMBEDDED-XPRESSIONS#_VPINDEXENTRY_562">https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/variables-xpressions/EMBEDDED-XPRESSIONS#_VPINDEXENTRY_562</a>&gt;that
-give you some flexibility.&#xA0; For instance if the models are named
-model01.nc, model02.nc, ...&#xA0; use the &quot;precision&quot; specifier to ask
+&lt;<a  rel="nofollow" href="../../documentation/users-guide/variables-xpressions/EMBEDDED-XPRESSIONS#_VPINDEXENTRY_562">../../documentation/users-guide/variables-xpressions/EMBEDDED-XPRESSIONS#_VPINDEXENTRY_562</a>&gt;that
+give you some flexibility. For instance if the models are named
+model01.nc, model02.nc, ... use the &quot;precision&quot; specifier to ask
 for the value to be replaced with zero-filled numbers, here 2-digits.
  
-&#xA0;&#xA0; let nmodel = ($1)
-&#xA0;&#xA0; repeat/range=1:`nmodel`/name=r (\
-&#xA0;&#xA0; use /home/data/model`r,p=z2`.nc;
+ let nmodel = ($1)
+ repeat/range=1:`nmodel`/name=r (\
+ use /home/data/model`r,p=z2`.nc;
  
  
 Or, you could use a unix foreach loop and write your script to
@@ -190,17 +190,17 @@ Hi Giorgio,
 Another method for sending Ferret/PyFerret a set of commands
 is to use the -script option on startup.
  
-&gt; pyferret -script my_script.jnl&#xA0; [arguments]
+&gt; pyferret -script my_script.jnl [arguments]
  
-This is generally more flexible than piping commands.&#xA0; The
+This is generally more flexible than piping commands. The
 startup option -batch for Ferret or -nodisplay for PyFerret
 are also useful when you don't want to have graphics windows
-display.&#xA0; Note that -script must appear last among command
+display. Note that -script must appear last among command
 line switches so that the script arguments will be parsed
 correctly.
  
 Unix command-line switches
-&lt;<a  rel="nofollow" href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/introduction/GETTING-STARTED#_VPID_8">https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/introduction/GETTING-STARTED#_VPID_8</a>&gt;
+&lt;<a  rel="nofollow" href="../../documentation/users-guide/introduction/GETTING-STARTED#_VPID_8">../../documentation/users-guide/introduction/GETTING-STARTED#_VPID_8</a>&gt;
  
  
  
@@ -241,13 +241,13 @@ define symbol ii `i`
 . . .
 STOP
  
-Where did `i`&#xA0; go?
+Where did `i` go?
  
 In the shell script as well as in the ferret script, the
-backquote construct is evaluated.&#xA0; In the above shell
-script, the shell tries to run a command named &quot;i&quot;.&#xA0; It
+backquote construct is evaluated. In the above shell
+script, the shell tries to run a command named &quot;i&quot;. It
 fails and is replaced with an empty string. I
-suppose&#xA0;you saw this error message on your screen
+supposeyou saw this error message on your screen
  
 . . . i: command not found
  

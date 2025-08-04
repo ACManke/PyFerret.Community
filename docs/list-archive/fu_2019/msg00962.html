@@ -63,13 +63,13 @@
 <p>(The x_page,y_page coordinates in my example wrapped to the next
 line - I meant them to be included.)</p>
 <p>What is happening here is that the /xskip and /yskip are not
-being applied when using vector/set.&#xA0; The plot is all black
+being applied when using vector/set. The plot is all black
 because it&#39;s drawing all of the vectors on a fine grid which just
-fills in the entire plot.&#xA0; <br>
+fills in the entire plot. <br>
 </p>
-<p>For VECTOR/SET_UP, I see some details in <a rel="nofollow" href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/VECTOR#_VPINDEXENTRY_1917" target="_blank">the
+<p>For VECTOR/SET_UP, I see some details in <a rel="nofollow" href="../../documentation/users-guide/commands-reference/VECTOR#_VPINDEXENTRY_1917">the
 documentation</a>, which says that /xskip and /yskip aren&#39;t
-applied if /SET is used.&#xA0; This example shows what to do instead:<br>
+applied if /SET is used. This example shows what to do instead:<br>
 </p>
 <blockquote><font face="monospace">yes? USE coads_climatology<br>
 yes? VECTOR/SET uwnd,vwnd<br>
@@ -103,7 +103,7 @@ Uwind_ov, Vwind_ov<br>
 </div>
 <div><br>
 </div>
-<div>the vector&#xA0;does not appear to be on the projected grid.</div>
+<div>the vectordoes not appear to be on the projected grid.</div>
 <div><br>
 </div>
 <div><img src="pngGzBF2PaHUd.png" alt="ERA5_WS500_annual.png" width="562" height="393"><br>
@@ -118,7 +118,7 @@ uwnd_ov, vwnd_ov, x_page, y_page<br>
 </div>
 <div><br>
 </div>
-<div>The same black result ensues.&#xA0;</div>
+<div>The same black result ensues.</div>
 <div><br>
 </div>
 <div><img src="png99__h9k8OZ.png" alt="ERA5_WS500_annual1.png" width="562" height="393"><br>
@@ -135,7 +135,7 @@ uwnd_ov, vwnd_ov, x_page, y_page<br>
 <br>
 <div class="gmail_quote">
 <div dir="ltr" class="gmail_attr">On Mon, Jun 21, 2021 at 8:35
-PM Ansley Manke &lt;<a rel="nofollow" href="mailto:a.c.manke@xxxxxxxxx" target="_blank">a.c.manke@xxxxxxxxx</a>&gt; wrote:<br>
+PM Ansley Manke &lt;<a rel="nofollow" href="mailto:a.c.manke@xxxxxxxxx">a.c.manke@xxxxxxxxx</a>&gt; wrote:<br>
 </div>
 <blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex">Hi
 Alexander,<br>
@@ -144,7 +144,7 @@ I haven&#39;t tried your examples in any detail, but I think for
 the map <br>
 projection vector overlay to work correctly, you would need to
 have the <br>
-vector variables on the same grid as the underlying plot.&#xA0;
+vector variables on the same grid as the underlying plot.
 That way the <br>
 x_page, y_page coordinate variables are defined once and are
 consistent <br>
@@ -175,7 +175,7 @@ ppl vector/overlay<br>
 On 6/21/2021 9:05 AM, Alexander Audet wrote:<br>
 &gt; Hello ferret community,<br>
 &gt;<br>
-&gt; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; Not sure if this is an impossible
+&gt;           Not sure if this is an impossible
 combination, but <br>
 &gt; I was trying to see if I could refine my vector overlay
 over my <br>
@@ -201,15 +201,15 @@ Uwind, Vwind, <br>
 &gt; ppl VECKEY/NOUSER 3.5,1,,(f3.0,&quot; m/s&quot;)<br>
 &gt; ppl vector/overlay<br>
 &gt; GO mp_land<br>
-&gt; go mp_label 675,80,0,0,0.13&#xA0; &quot;ERA5&quot;<br>
+&gt; go mp_label 675,80,0,0,0.13 &quot;ERA5&quot;<br>
 &gt; PPL COLOR,6,50,50,50<br>
 &gt; Go mp_graticule 0, 360, 20, -90, 90, 20, 6, 1<br>
 &gt;<br>
 &gt; In another variation, I can use PPlus commands before
 shading, <br>
-&gt; however, while&#xA0;this does impact the standard vector
+&gt; however, whilethis does impact the standard vector
 length, and the <br>
-&gt; format&#xA0;of the vactor key, it does not place the key where
+&gt; formatof the vactor key, it does not place the key where
 desired. It <br>
 &gt; even seems to have mixed results about getting the scale
 correct, and <br>
@@ -232,7 +232,7 @@ p[D=1], x_page, <br>
 Uwind, <br>
 &gt; Vwind, x_page, y_page<br>
 &gt; GO mp_land<br>
-&gt; go mp_label 520,80,0,0,0.13&#xA0; &quot;ERA5&quot;<br>
+&gt; go mp_label 520,80,0,0,0.13 &quot;ERA5&quot;<br>
 &gt; PPL COLOR,6,50,50,50<br>
 &gt; Go mp_graticule 0, 360, 20, -90, 90, 20, 6, 1<br>
 &gt;<br>

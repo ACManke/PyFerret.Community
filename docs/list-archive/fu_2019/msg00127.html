@@ -99,7 +99,7 @@ Mail</a> for Windows 10</p>
 <div>
 <p>Hi Josh,</p>
 <p>The commands you use in your examples here look ok as far as I can see without knowing what's in the datasets. My guess is that you're using a grid-name. &nbsp;The commands are most commonly given using
-<a rel="nofollow" moz-do-not-send="true" href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/Grids-Regions/GRIDS#_VPINDEXENTRY_650">
+<a rel="nofollow" moz-do-not-send="true" href="../../documentation/users-guide/Grids-Regions/GRIDS#_VPINDEXENTRY_650">
 variable names</a>, not grid names. Or, if you are using a grid name in specifying the regridding operation, leave off the [d=2].&nbsp; There's a demo script<br>
 </p>
 <p><i>yes? show go regridding_demo</i></p>
@@ -115,7 +115,7 @@ defined in world coordinates but the T axis of&nbsp; the T_AN grid are just inde
 <i>yes? use &quot;./ocn_tempyearmean.nc&quot; !model output data</i><br>
 <i>yes? let regridxyz = T_AN[d=1,gxyz = </i><i>ocn_temp[d=2]] </i><br>
 <i>yes? let regrid=regridxyz[gt=</i><i><i>ocn_temp[d=2@asn]]</i></i>
-<p>And finally don't forget to set units and title for the final variable&nbsp; with LET/units=&quot;units_string&quot;/TITLE=&quot;title_string&quot;, or have a look at &quot;<a rel="nofollow" moz-do-not-send="true" href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/DEFINE#_LET_LIKE">define
+<p>And finally don't forget to set units and title for the final variable&nbsp; with LET/units=&quot;units_string&quot;/TITLE=&quot;title_string&quot;, or have a look at &quot;<a rel="nofollow" moz-do-not-send="true" href="../../documentation/users-guide/commands-reference/DEFINE.html#_LET_LIKE">define
 variable/LIKE=</a>&quot;&nbsp; in the documentation for setting the attributes of a variable using the attributes of an existing one.<br>
 </p>
 <p>Ansley<br>

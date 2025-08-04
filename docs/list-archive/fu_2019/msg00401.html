@@ -53,14 +53,14 @@
  
 <p>Hi Randye,</p>
 <p>There's some documentation about "masking", here</p>
-<p><a rel="nofollow" class="moz-txt-link-freetext" href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/variables-xpressions/XPRESSIONS#_VPID_181">https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/variables-xpressions/XPRESSIONS#_VPID_181</a></p>
+<p><a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/users-guide/variables-xpressions/XPRESSIONS.html#_VPID_181">../../documentation/users-guide/variables-xpressions/XPRESSIONS.html#_VPID_181</a></p>
 <p><br>
 </p>
 <p>You'll open up your mask file, and the timeseries-data file, and
 then make sure the mask and the data are on the same time axis
 with a regridding operation -- and multiply the model-data
-variable by one of the masks.&#xA0; Something like this, if the model
-data has a variable called "uvar".&#xA0; The result will be the masked
+variable by one of the masks. Something like this, if the model
+data has a variable called "uvar". The result will be the masked
 variable on the whole grid of uvar, <br>
 </p>
 <p><br>
@@ -73,10 +73,10 @@ variable on the whole grid of uvar, <br>
 uvar[d=2,gt=var1[d=1]]</tt></p>
 <p><tt><br>
 </tt></p>
-<p><tt>!&#xA0; See a time-series of the masked variable at some point</tt><tt>
+<p><tt>! See a time-series of the masked variable at some point</tt><tt>
 in uvar's grid.<br>
 </tt></p>
-<p><tt>yes? plot</tt><tt>/symbol</tt><tt>/x=300/y=40/y=0&#xA0;
+<p><tt>yes? plot</tt><tt>/symbol</tt><tt>/x=300/y=40/y=0
 masked_uvar</tt></p>
 <p><tt><br>
 </tt></p>
@@ -102,8 +102,8 @@ cite="">
 </div>
 <div>Last week I posted a question seeking a method for having
 Ferret return the year that a temperature anomaly occurs if
-given a threshold. &#xA0;The response I received was very helpful
-and allowed me to do this. &#xA0;</div>
+given a threshold. The response I received was very helpful
+and allowed me to do this. </div>
 <div><br>
 </div>
 <div>I basically followed these commands:</div>
@@ -114,31 +114,30 @@ and allowed me to do this. &#xA0;</div>
 use to do.</div>
 <div class="gmail_default"><br>
 </div>
-<div class="gmail_default">use&#xA0;&#xA0;<a rel="nofollow" href="http://data.nc"
-target="_blank" rel="noopener noreferrer"
-moz-do-not-send="true">data.nc</a>&#xA0; &#xA0;! load the data !</div>
+<div class="gmail_default">use<a rel="nofollow" href="http://data.nc"  rel="noopener noreferrer"
+moz-do-not-send="true">data.nc</a> ! load the data !</div>
 <div class="gmail_default"><br>
 </div>
 <div class="gmail_default">! generate the mask of the variable
-(var) in the data set, to your query&#xA0;I hope it is the time
+(var) in the data set, to your queryI hope it is the time
 series you are talking about e.g. ENSO index time series !</div>
 <div class="gmail_default"><br>
 </div>
-<div class="gmail_default">let var1 = if var ge 1 then var&#xA0; &#xA0;
-&#xA0;!! this is the value which is greater than or equal to 1</div>
-<div class="gmail_default">let var2 = if var le -1 then var&#xA0; &#xA0;
-&#xA0;!!&#xA0; this is the value which is less than or equal to -1</div>
+<div class="gmail_default">let var1 = if var ge 1 then var 
+!! this is the value which is greater than or equal to 1</div>
+<div class="gmail_default">let var2 = if var le -1 then var 
+!! this is the value which is less than or equal to -1</div>
 <div class="gmail_default"><br>
 </div>
-<div class="gmail_default">list var1, var2&#xA0; &#xA0; &#xA0; &#xA0; !! this will
+<div class="gmail_default">list var1, var2    !! this will
 show you the magnitude with dates !!<br>
 </div>
 <div class="gmail_default"><br>
 </div>
 <div class="gmail_default">save/file=<a rel="nofollow"
-href="http://mask-var.nc" target="_blank" rel="noopener
-noreferrer" moz-do-not-send="true">mask-var.nc</a>&#xA0;var1,
-var2&#xA0; &#xA0;!! in case if you want to save them !!</div>
+href="http://mask-var.nc" rel="noopener
+noreferrer" moz-do-not-send="true">mask-var.nc</a>var1,
+var2 !! in case if you want to save them !!</div>
 <div class="gmail_default"><br>
 </div>
 <div class="gmail_default">exit</div>
@@ -147,11 +146,11 @@ var2&#xA0; &#xA0;!! in case if you want to save them !!</div>
 <div class="gmail_default">***********************************************</div>
 <div class="gmail_default"><br>
 </div>
-<div class="gmail_default">Now, I am stuck on the next step.&#xA0;
+<div class="gmail_default">Now, I am stuck on the next step.
 I would like to use the dates generated for the anomolous
 and non-anomalous years to look at other model outputs. In
 other words, I want to compare various model outputs during
-years with and without temperature anomalies.&#xA0; However, I do
+years with and without temperature anomalies. However, I do
 not know how to proceed to accomplish this.</div>
 <div class="gmail_default"><br>
 </div>
@@ -176,14 +175,14 @@ word-spacing:0px; word-wrap:break-word">
 Dr. Randye Rutberg<br>
 Assistant Professor<br>
 Department of Geography<br>
-Hunter College of the City University of&#xA0;New York<br>
+Hunter College of the City University ofNew York<br>
 <br>
 Office: 1047 Hunter North<br>
 Phone: 212 772 5326<br>
-Fax: &#xA0; &#xA0; &#xA0;212 772 5268<br>
-Email: &#xA0; <a rel="nofollow" class="moz-txt-link-abbreviated" href="mailto:rrutberg@xxxxxxxxxxxxxxx">rrutberg@xxxxxxxxxxxxxxx</a><br>
-Snail mail: &#xA0;695 Park Ave<br>
-&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;New York, NY &#xA0;10021</div>
+Fax:   212 772 5268<br>
+Email:  <a rel="nofollow" class="moz-txt-link-abbreviated" href="mailto:rrutberg@xxxxxxxxxxxxxxx">rrutberg@xxxxxxxxxxxxxxx</a><br>
+Snail mail: 695 Park Ave<br>
+         New York, NY 10021</div>
 </div>
 <br>
 </div>

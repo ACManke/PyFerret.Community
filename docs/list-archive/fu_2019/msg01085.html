@@ -48,33 +48,33 @@
 <hr>
 <!--X-Head-Body-Sep-End-->
 <!--X-Body-of-Message-->
-<div dir="ltr"><div dir="ltr"><div dir="ltr"><div dir="ltr">The date format is a standard string form of ISO 8601 dates - a comprehensive time library should recognize it.<br><br>So an alternative solution (similar vein to Billy&#39;s) for those using pyFerret and/or with some familiarity to python leverages the Pandas/Datetime libraries.<br><br>it obfuscates the calendar conversions behind the scenes and doesn&#39;t require direct file regex search and replacement (so less error prone).<br><br>```<br>import pandas as pd</div><div dir="ltr"><br></div><div dir="ltr">file = &#39;2021_SpringDeployed_BS_BioPUFFS_POPS0001.csv&#39;</div><div dir="ltr"><br></div><div dir="ltr"><div dir="ltr">bottom_data = pd.read_csv(file,parse_dates=True,index_col=&#39;time (UTC)&#39;) #read in and recognize dates, then use them as the dataframe index</div><div dir="ltr">bottom_data.index = bottom_data.index.tz_localize(None) #to get rid of the +00:00&#xA0; utc notation in the parsed dates</div><div dir="ltr"><br></div><div>bottom_data.to_csv(&#39;output.csv&#39;)</div><div>```</div><div>The output is still a string date - unless you know how to pass a variable from python to ferret within pyferret (sorry, I&#39;m not an active ferret or pyferret user) - that can use Ansley&#39;s solution with no need for editing the original file.</div><div><br></div><div>Shaun</div><br></div></div></div></div><br><div class="gmail_quote"><div dir="ltr" class="gmail_attr">On Mon, Jan 31, 2022 at 2:48 PM Ansley Manke &lt;<a rel="nofollow" href="mailto:a.c.manke@xxxxxxxxx">a.c.manke@xxxxxxxxx</a>&gt; wrote:<br></div><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex">
+<div dir="ltr"><div dir="ltr"><div dir="ltr"><div dir="ltr">The date format is a standard string form of ISO 8601 dates - a comprehensive time library should recognize it.<br><br>So an alternative solution (similar vein to Billy&#39;s) for those using pyFerret and/or with some familiarity to python leverages the Pandas/Datetime libraries.<br><br>it obfuscates the calendar conversions behind the scenes and doesn&#39;t require direct file regex search and replacement (so less error prone).<br><br>```<br>import pandas as pd</div><div dir="ltr"><br></div><div dir="ltr">file = &#39;2021_SpringDeployed_BS_BioPUFFS_POPS0001.csv&#39;</div><div dir="ltr"><br></div><div dir="ltr"><div dir="ltr">bottom_data = pd.read_csv(file,parse_dates=True,index_col=&#39;time (UTC)&#39;) #read in and recognize dates, then use them as the dataframe index</div><div dir="ltr">bottom_data.index = bottom_data.index.tz_localize(None) #to get rid of the +00:00 utc notation in the parsed dates</div><div dir="ltr"><br></div><div>bottom_data.to_csv(&#39;output.csv&#39;)</div><div>```</div><div>The output is still a string date - unless you know how to pass a variable from python to ferret within pyferret (sorry, I&#39;m not an active ferret or pyferret user) - that can use Ansley&#39;s solution with no need for editing the original file.</div><div><br></div><div>Shaun</div><br></div></div></div></div><br><div class="gmail_quote"><div dir="ltr" class="gmail_attr">On Mon, Jan 31, 2022 at 2:48 PM Ansley Manke &lt;<a rel="nofollow" href="mailto:a.c.manke@xxxxxxxxx">a.c.manke@xxxxxxxxx</a>&gt; wrote:<br></div><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex">
  
  
  
 <div>
 <p>Hi Al,</p>
 <p>In general, you can read date/ time information from a text file
-with&#xA0; &quot;set data/form=delimited&quot;&#xA0; <br>
+with &quot;set data/form=delimited&quot; <br>
 </p>
-<p><a rel="nofollow" href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/SET#_VPINDEXENTRY_1612" target="_blank">https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/SET#_VPINDEXENTRY_1612</a><br>
-<a rel="nofollow" href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/data-set-basics/ASCII-DATA#Chapter2-delimited_files" target="_blank">https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/data-set-basics/ASCII-DATA#Chapter2-delimited_files</a><br>
+<p><a rel="nofollow" href="../../documentation/users-guide/commands-reference/SET.html#_VPINDEXENTRY_1612">../../documentation/users-guide/commands-reference/SET.html#_VPINDEXENTRY_1612</a><br>
+<a rel="nofollow" href="../../documentation/users-guide/data-set-basics/ASCII-DATA.html#Chapter2-delimited_files">../../documentation/users-guide/data-set-basics/ASCII-DATA.html#Chapter2-delimited_files</a><br>
 </p>
 <p>It looks like what&#39;s in your file corresponds to the &quot;datime&quot;
 format, but you would need to edit the file to replace the T with
-a space, and remove the Z.&#xA0; Also, if the file has quotation marks
+a space, and remove the Z. Also, if the file has quotation marks
 around the dates, remove those.</p>
 <p>It should go something like this:<br>
 </p>
-<p><font face="monospace">&#xA0; yes?
+<p><font face="monospace"> yes?
 file/form=delim/var=&quot;ftime&quot;/type=&quot;datime&quot; myfile.csv</font><font face="monospace"><br>
 </font></p>
-<p><font face="monospace">&#xA0; ! Look at the time data and its units.
+<p><font face="monospace"> ! Look at the time data and its units.
 Dates are translated into &quot;days since 1900, <br>
-&#xA0; ! and time is added as a fraction of the day</font><br>
+ ! and time is added as a fraction of the day</font><br>
 </p>
-<p><font face="monospace">&#xA0;&#xA0; list/i=1:10/precision=8 ftime&#xA0; <br>
-&#xA0;&#xA0; define axis/t/t0=1=jan=1900/units=days my_time_axis = ftime</font><br>
+<p><font face="monospace"> list/i=1:10/precision=8 ftime <br>
+ define axis/t/t0=1=jan=1900/units=days my_time_axis = ftime</font><br>
 </p>
 <div><br>
 </div>
@@ -87,36 +87,36 @@ NOAA Affiliate wrote:<br>
  
 <div dir="ltr">
 <div>Hi,</div>
-Does anyone know how to easily map&#xA0;dates like the ones shown
+Does anyone know how to easily mapdates like the ones shown
 below (contained as a variable in a csv file) onto a time axis
 in ferret? The file contains one date string and temperature
 value (plus other variables) per line. So far I have not found
 any ferret function that can interpret these strings - does
-one&#xA0;exist? Thanks.
+oneexist? Thanks.
 <div>-Al Hermann</div>
 <div><br>
 </div>
 <div><br clear="all">
 <div>yes? list/i=1:10 time<br>
-&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;VARIABLE : TIME<br>
-&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;FILENAME :
+      VARIABLE : TIME<br>
+      FILENAME :
 2021_SpringDeployed_BS_BioPUFFS_POPS0001_bottomdata.csv<br>
-&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;SUBSET &#xA0; : 10 points (X)<br>
-&#xA0;1 &#xA0; &#xA0;/ &#xA0;1:&quot;2021-05-13T00:10:00Z&quot;<br>
-&#xA0;2 &#xA0; &#xA0;/ &#xA0;2:&quot;2021-05-13T01:10:00Z&quot;<br>
-&#xA0;3 &#xA0; &#xA0;/ &#xA0;3:&quot;2021-05-13T02:10:00Z&quot;<br>
-&#xA0;4 &#xA0; &#xA0;/ &#xA0;4:&quot;2021-05-13T03:10:00Z&quot;<br>
-&#xA0;5 &#xA0; &#xA0;/ &#xA0;5:&quot;2021-05-13T04:10:00Z&quot;<br>
-&#xA0;6 &#xA0; &#xA0;/ &#xA0;6:&quot;2021-05-13T05:10:00Z&quot;<br>
-&#xA0;7 &#xA0; &#xA0;/ &#xA0;7:&quot;2021-05-13T06:10:00Z&quot;<br>
-&#xA0;8 &#xA0; &#xA0;/ &#xA0;8:&quot;2021-05-13T07:10:00Z&quot;<br>
-&#xA0;9 &#xA0; &#xA0;/ &#xA0;9:&quot;2021-05-13T08:10:00Z&quot;<br>
-&#xA0;10 &#xA0; / 10:&quot;2021-05-13T09:10:00Z&quot;</div>
+      SUBSET  : 10 points (X)<br>
+1  / 1:&quot;2021-05-13T00:10:00Z&quot;<br>
+2  / 2:&quot;2021-05-13T01:10:00Z&quot;<br>
+3  / 3:&quot;2021-05-13T02:10:00Z&quot;<br>
+4  / 4:&quot;2021-05-13T03:10:00Z&quot;<br>
+5  / 5:&quot;2021-05-13T04:10:00Z&quot;<br>
+6  / 6:&quot;2021-05-13T05:10:00Z&quot;<br>
+7  / 7:&quot;2021-05-13T06:10:00Z&quot;<br>
+8  / 8:&quot;2021-05-13T07:10:00Z&quot;<br>
+9  / 9:&quot;2021-05-13T08:10:00Z&quot;<br>
+10  / 10:&quot;2021-05-13T09:10:00Z&quot;</div>
 </div>
 <div><br>
 </div>
 -- <br>
-<div dir="ltr"><a rel="nofollow" href="mailto:albert.j.hermann@xxxxxxxx" target="_blank">albert.j.hermann@xxxxxxxx</a><br>
+<div dir="ltr"><a rel="nofollow" href="mailto:albert.j.hermann@xxxxxxxx">albert.j.hermann@xxxxxxxx</a><br>
 Pacific Marine Environmental Laboratory<br>
 7600 Sand Point Way NE<br>
 Seattle WA 98115<br>
@@ -125,7 +125,7 @@ Seattle WA 98115<br>
 </blockquote>
 </div>
  
-</blockquote></div><br clear="all"><div><br></div>-- <br><div dir="ltr" class="gmail_signature"><div dir="ltr">------------------------------------------------------------------------------------------<br><div>Shaun Bell - Physical Scientist&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;<br></div><div><br></div><div>EcoFOCI</div>NOAA/PMEL Building 3<br>7600 Sand Point Way NE&#xA0; &#xA0; &#xA0; <br>Seattle, WA 98115-6349<br>206-526-6556 - office<br><br></div></div>
+</blockquote></div><br clear="all"><div><br></div>-- <br><div dir="ltr" class="gmail_signature"><div dir="ltr">------------------------------------------------------------------------------------------<br><div>Shaun Bell - Physical Scientist       <br></div><div><br></div><div>EcoFOCI</div>NOAA/PMEL Building 3<br>7600 Sand Point Way NE   <br>Seattle, WA 98115-6349<br>206-526-6556 - office<br><br></div></div>
  
 <!--X-Body-of-Message-End-->
 <!--X-MsgBody-End-->

@@ -61,11 +61,11 @@ write to a file:<br>
 monospace">N</font></font><font face="Courier New, Courier,
 monospace">etCDF: One or more variable sizes violate format
 constraints (OPeNDAP/netCDF Error code -62)</font></div>
-<div class=""><font face="Courier New, Courier, monospace">&#xA0;could
+<div class=""><font face="Courier New, Courier, monospace">could
 not change CDF mode</font><font face="Courier New, Courier,
 monospace"><br>
 </font></div>
-<div class=""><font face="Courier New, Courier, monospace">list/format=cdf/file="data/Hi_freq_data/xx_20hz_data.nc.nc"/append&#xA0;
+<div class=""><font face="Courier New, Courier, monospace">list/format=cdf/file="data/Hi_freq_data/xx_20hz_data.nc.nc"/append
 variable_38<br>
 </font></div>
 <div class=""><font face="Courier New, Courier, monospace">Command
@@ -75,7 +75,7 @@ file, command group, or REPEAT execution aborted</font></div>
 <div class="">The dataset being written is high-frequncy data, with
 a lot of large variables being added to the file. What is
 happening, is that the file becomes too large for the default
-netcdf-3 type data file.&#xA0; Now, the modern netCDF library has
+netcdf-3 type data file. Now, the modern netCDF library has
 large-file support, as described here:
 <a rel="nofollow" class="moz-txt-link-freetext" href="https://docs.unidata.ucar.edu/netcdf-c/current/faq.html#Large-File-Support">https://docs.unidata.ucar.edu/netcdf-c/current/faq.html#Large-File-Support</a></div>
 <div class=""><br>
@@ -85,17 +85,17 @@ supports large files. We have the option to write files with
 netcdf-4 formatting, and also the 64-bit offset format mentioned
 on that page. Because many linux systems come with only older
 netCDF-3 libraries, the PyFerret developers decided to write
-netCDF files using netcdf-3 formatting by default.&#xA0; That way
+netCDF files using netcdf-3 formatting by default. That way
 things like the ncdump and ncgen utilities on people's systems
 will be able to work with the files. But PyFerret also has command
 qualifiers available to request netCDF-4 formatted files or 64-bit
-offset formatted files.&#xA0; In addition to large-file support,
+offset formatted files. In addition to large-file support,
 netCDF-4 offers some other options. The syntax for all of this is
 described here:<br>
 </div>
 <div class=""><br>
 </div>
-<div class=""><a rel="nofollow" class="moz-txt-link-freetext" href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/data-set-basics/NETCDF-DATA#_VPINDEXENTRY_netcdf4">https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/data-set-basics/NETCDF-DATA#_VPINDEXENTRY_netcdf4</a></div>
+<div class=""><a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/users-guide/data-set-basics/NETCDF-DATA.html#_VPINDEXENTRY_netcdf4">../../documentation/users-guide/data-set-basics/NETCDF-DATA.html#_VPINDEXENTRY_netcdf4</a></div>
 <div class=""><br>
 </div>
 <div class="">A solution for the question above was to use
@@ -104,7 +104,7 @@ SAVE/NCFORMAT=netcdf4</div>
 </div>
 <div class="">(Another good solution would be to use Union
 Aggregation, writing each variable to its own file and then
-aggregating them in the PyFerret session into a virtual dataset.&#xA0;
+aggregating them in the PyFerret session into a virtual dataset.
 See "Aggretation" in the documentation for how to do that.)</div>
 <div class=""><br>
 </div>
@@ -115,8 +115,8 @@ See "Aggretation" in the documentation for how to do that.)</div>
 <div class=""><br>
 </div>
 <div class=""><br class="">
-The contents of this message are&#xA0;mine personally. I am not
-affiliated with the National Oceanic&#xA0;and Atmospheric
+The contents of this message aremine personally. I am not
+affiliated with the National Oceanicand Atmospheric
 Administration.
 <div><br class="">
 </div>

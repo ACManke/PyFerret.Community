@@ -56,16 +56,16 @@
 Hi Marco,
  
 </pre><tt>I have a few ideas, most of which I think you know, but there may be 
-</tt><tt>some new details.&#xA0; As you know, the `var,return=` keywords are intended 
+</tt><tt>some new details. As you know, the `var,return=` keywords are intended 
 </tt><tt>to let you get information that might otherwise appear just in the 
-</tt><tt>output of commands such as SHOW.&#xA0; For convenience,
+</tt><tt>output of commands such as SHOW. For convenience,
 </tt><pre style="margin: 0em;">
-<a  rel="nofollow" href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/variables-xpressions/EMBEDDED-XPRESSIONS#Chapter3-RETURN">https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/variables-xpressions/EMBEDDED-XPRESSIONS#Chapter3-RETURN</a>
+<a  rel="nofollow" href="../../documentation/users-guide/variables-xpressions/EMBEDDED-XPRESSIONS#Chapter3-RETURN">../../documentation/users-guide/variables-xpressions/EMBEDDED-XPRESSIONS#Chapter3-RETURN</a>
  
 </pre><tt>Other useful constructs are the ones for access to attributes of files 
 </tt><tt>and variables, see here:
 </tt><pre style="margin: 0em;">
-<a  rel="nofollow" href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/variables-xpressions/VARIABLES#_VPINDEXENTRY_attributes">https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/variables-xpressions/VARIABLES#_VPINDEXENTRY_attributes</a>
+<a  rel="nofollow" href="../../documentation/users-guide/variables-xpressions/VARIABLES#_VPINDEXENTRY_attributes">../../documentation/users-guide/variables-xpressions/VARIABLES#_VPINDEXENTRY_attributes</a>
  
 </pre><tt>To find out how many datasets are open, if the current default dataset 
 </tt><tt>corresponds to the last opened, you could define a variable based on the 
@@ -79,22 +79,22 @@ yes? use etopo60
  
 yes? let nvars = ..nvars
 yes? let last_dset = `nvars,return=dsetnum`
-&#xA0;!-&gt; MESSAGE/CONTINUE 3
+!-&gt; MESSAGE/CONTINUE 3
 3
  
 </pre><tt>Note things can get messy, if for example the set of scripts may open 
 </tt><tt>datasets and close some of them, or if we did a &quot;set data 2&quot; here so the 
-</tt><tt>default dataset isn't the highest number opened.&#xA0; The dataset number for 
+</tt><tt>default dataset isn't the highest number opened. The dataset number for 
 </tt><tt>each open dataset stays the same within a Ferret session.
 </tt><pre style="margin: 0em;">
  
  
-The LET/LIKE=&#xA0; acts just the same as this grave-accent evaluation:
+The LET/LIKE= acts just the same as this grave-accent evaluation:
  
 yes? let/units=&quot;`aa,return=units`&quot;/&quot;`aa,return=title`&quot; tr = aa+123
  
 </pre><tt>except that it transfers all of the attributes. In those grave-accent 
-</tt><tt>evaluations, aa has to refer to the variable in a particular dataset.&#xA0; 
+</tt><tt>evaluations, aa has to refer to the variable in a particular dataset. 
 </tt><tt>Once the dataset number is known, you could use SET VARIABLE/UNITS= /TITLE=
 </tt><pre style="margin: 0em;">
  
@@ -118,7 +118,7 @@ On 11 Feb 03:09 Fiedler, Russell (O&amp;A, Hobart) wrote:
 </pre><blockquote style="border-left: #5555EE solid 0.2em; margin: 0em; padding-left: 0.85em"><pre style="margin: 0em;">
 It looks like the /LIKE qualifier could be what you're after.
  
-<a  rel="nofollow" href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/DEFINE#_VPINDEXENTRY_1348">https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/DEFINE#_VPINDEXENTRY_1348</a>
+<a  rel="nofollow" href="../../documentation/users-guide/commands-reference/DEFINE.html#_VPINDEXENTRY_1348">../../documentation/users-guide/commands-reference/DEFINE.html#_VPINDEXENTRY_1348</a>
  
 All attributes are inherited (apart from missing_value, scaling and offset). You can override some if you want.
  

@@ -53,11 +53,11 @@
 <div dir="ltr"><div>Hi Ansley,</div><div><br></div><div>Yes it does show the right boundary. Actually I found a solution by specifying the i/j limits of the var in the definition (I think because I used &quot;dimensional&quot; lists to define the polygon, it was somehow inconsistent with dimension of the variable). So something like that works: <br></div><div><br></div><div>
 <div>let xp=LON[d=7,i=1:735178] <br></div><div>let yp=LAT[d=7,i=1:735178]</div><div>let mask = if pt_in_poly(Tmax[d=1,l=1,i=1:350,j=1:95],xp,yp) gt 0 then 1</div>
  
-</div><div><br></div><div>Cheers,</div><div>Nicolas</div><div><br></div></div><br><div class="gmail_quote"><div dir="ltr" class="gmail_attr">Le&#xA0;mar. 26 mars 2019 &#xE0;&#xA0;16:22, Ansley C. Manke &lt;<a rel="nofollow" href="mailto:ansley.b.manke@xxxxxxxx">ansley.b.manke@xxxxxxxx</a>&gt; a &#xE9;crit&#xA0;:<br></div><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex">Hi Nicolas,<br>
+</div><div><br></div><div>Cheers,</div><div>Nicolas</div><div><br></div></div><br><div class="gmail_quote"><div dir="ltr" class="gmail_attr">Lemar. 26 mars 2019 &#xE0;16:22, Ansley C. Manke &lt;<a rel="nofollow" href="mailto:ansley.b.manke@xxxxxxxx">ansley.b.manke@xxxxxxxx</a>&gt; a &#xE9;crit:<br></div><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex">Hi Nicolas,<br>
 <br>
 As a check of your definition, does a plot of the points<br>
 <br>
-&#xA0;&#xA0; PLOT/VS/LINE xp, yp<br>
+ PLOT/VS/LINE xp, yp<br>
 <br>
 show the outline of the boundary you want?<br>
 <br>
@@ -65,13 +65,13 @@ On 3/25/2019 4:18 AM, Nicolas Freychet wrote:<br>
 &gt; Dear Ferret users,<br>
 &gt;<br>
 &gt; I&#39;m trying to create a mask for a country, following this discussion: <br>
-&gt; <a rel="nofollow" href="../fu_2012/msg00019.html" rel="noreferrer" target="_blank">../fu_2012/msg00019.html</a><br>
+&gt; <a rel="nofollow" href="../fu_2012/msg00019.html" rel="noreferrer">../fu_2012/msg00019.html</a><br>
 &gt;<br>
 &gt; I managed to have a netcdf file with all lon/lat coordinate to define <br>
 &gt; a polygon of the country as in the discussion, but now I am not sure <br>
 &gt; how to apply it to mask my data.<br>
 &gt; The pt_in_poly function <br>
-&gt; (<a rel="nofollow" href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/appendix-a-external-functions/pt_in_poly" rel="noreferrer" target="_blank">https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/appendix-a-external-functions/pt_in_poly</a>) <br>
+&gt; (<a rel="nofollow" href="../../documentation/users-guide/appendix-a-external-functions/pt_in_poly" rel="noreferrer">../../documentation/users-guide/appendix-a-external-functions/pt_in_poly</a>) <br>
 &gt; requires to define a table of xp/yp. I tried to do something like:<br>
 &gt;<br>
 &gt; let xp=LON[d=7,i=1:735178]<br>

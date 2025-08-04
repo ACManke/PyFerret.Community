@@ -63,7 +63,7 @@ and 0's that algorithm can't do much. <br>
 cite="">
  
 <div dir="auto">The very simple yet frustrating fix was to use
-Shade rather than Fill!!!&#xA0;</div>
+Shade rather than Fill!!!</div>
 <div class="gmail_extra"><br>
 <div class="gmail_quote">On 24 Jun 2019 18:42,
 <a rel="nofollow" class="moz-txt-link-rfc2396E" href="mailto:JoshAB1995@xxxxxxxxxxx">"JoshAB1995@xxxxxxxxxxx"</a> <a rel="nofollow" class="moz-txt-link-rfc2396E" href="mailto:joshab1995@xxxxxxxxxxx">&lt;joshab1995@xxxxxxxxxxx&gt;</a> wrote:<br
@@ -84,7 +84,7 @@ Cc: <br>
 <div dir="auto">Hi Ansley,
 <div dir="auto"><br>
 </div>
-<div dir="auto">Thanks again.&#xA0;</div>
+<div dir="auto">Thanks again.</div>
 <div dir="auto"><br>
 </div>
 <div dir="auto">So i do want them to be missing but
@@ -97,14 +97,14 @@ disappears too.</div>
 and see what happens. It might be because some of
 the months are zero in terms of the strat value
 and so its getting confused about which section of
-my calculations to mask?&#xA0;</div>
+my calculations to mask?</div>
 <div dir="auto"><br>
 </div>
 <div dir="auto">I'll feed back my results when i get
-a chance to log on later.&#xA0;</div>
+a chance to log on later.</div>
 <div dir="auto"><br>
 </div>
-<div dir="auto">Many thanks,&#xA0;</div>
+<div dir="auto">Many thanks,</div>
 <div dir="auto"><br>
 </div>
 <div dir="auto">Josh</div>
@@ -118,7 +118,7 @@ wrote:<br type="attribution">
 solid;padding-left:1ex">
 <div>
 <p>Oh yes of course if you want the values to
-be valid data with a value of 0.&#xA0; If a shade
+be valid data with a value of 0. If a shade
 plot of this looks correct<br>
 </p>
 <p><tt>LET no_strat = if
@@ -153,33 +153,33 @@ wrote:<br>
 <blockquote>
 <div>
 <p>Hi Ansley,</p>
-<p>&#xA0;</p>
+<p></p>
 <p>Thanks for this. It makes sense,
 however by removing the else 0, ferret
 doesn&#x2019;t display anything in the output
 [fill/sha etc]. When I add in the else 0
 then it will display the output.</p>
-<p>&#xA0;</p>
+<p></p>
 <p>Even when using a variation on your
 equation:</p>
-<p>&#xA0;</p>
+<p></p>
 <p>LET/bad=-9999 no_strat = if
 stratified[l=1:12@sum] eq 0 then 1 else
 (-9999)</p>
-<p>&#xA0;</p>
+<p></p>
 <p>The output shows no valid data... Bit
 stuck, maybe it&#x2019;s something to do with
 the land values? (which are selected by
 my l=1:12@sum eq 0)</p>
-<p>&#xA0;</p>
+<p></p>
 <p>Thanks again,</p>
 <p>Josh</p>
-<p>&#xA0;</p>
+<p></p>
 <p>Sent from <a rel="nofollow"
 href="https://go.microsoft.com/fwlink/?LinkId=550986"
 moz-do-not-send="true">Mail</a> for
 Windows 10</p>
-<p>&#xA0;</p>
+<p></p>
 </div>
 <hr style="display:inline-block;width:98%">
 <div dir="ltr"><font style="font-size:11pt"
@@ -203,73 +203,73 @@ href="mailto:ferret_users@xxxxxxxx"
 moz-do-not-send="true">ferret_users@xxxxxxxx</a><br>
 <b>Subject:</b> Re: [ferret_users]
 Masking and set var/bad = 0</font>
-<div>&#xA0;</div>
+<div></div>
 </div>
 <div>
 <p>Hi Josh,</p>
 <p>Zero is a bit problematic for use as a
 bad-value, especially when your data
-contains zeros.&#xA0; Try it this way:<br>
+contains zeros. Try it this way:<br>
 </p>
-<p><tt>&#xA0;&#xA0; LET no_strat = if
+<p><tt> LET no_strat = if
 stratified[l=1:12@sum] eq 0 then 1 </tt><br>
 </p>
-<p>You don't need an "else" here.&#xA0; By
+<p>You don't need an "else" here. By
 default in an IF, if there is no else
-it's treated as "else missing".&#xA0; As I've
+it's treated as "else missing". As I've
 written that command, the default
 missing-value of -1.e34 will be used for
 missing-data. If you want to assign a
 particular missing-value, then you can
 do that right on the LET command.<br>
 </p>
-<p><tt>&#xA0;&#xA0; LET/bad=-9999 </tt><tt>no_strat
+<p><tt> LET/bad=-9999 </tt><tt>no_strat
 = if stratified[l=1:12@sum] eq 0 then
 1
 <br>
 </tt></p>
 <p>Also have a look in the documentation
 about the distinction between <a rel="nofollow"
-href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/variables-xpressions/XPRESSIONS#_VPINDEXENTRY_553"
+href="../../documentation/users-guide/variables-xpressions/XPRESSIONS.html#_VPINDEXENTRY_553"
 moz-do-not-send="true">
-IF and IFV</a>.&#xA0;&#xA0;&#xA0; There can be valid
-values of 0 in data.&#xA0;&#xA0; Here's a variable
+IF and IFV</a>. There can be valid
+values of 0 in data. Here's a variable
 with one value that's 0 and another
 that's missing.<br>
 </p>
 <p><tt>yes? let var = {6, 2, 0, 2, , 3}</tt></p>
 <tt>yes? list IF var then 1</tt><tt><br>
-</tt><tt>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; VARIABLE : IF VAR
+</tt><tt> VARIABLE : IF VAR
 THEN 1</tt><tt><br>
-</tt><tt>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; SUBSET&#xA0;&#xA0; : 6 points
+</tt><tt> SUBSET : 6 points
 (X)</tt><tt><br>
-</tt><tt>&#xA0;1&#xA0;&#xA0; / 1:&#xA0; 1.000</tt><tt><br>
-</tt><tt>&#xA0;2&#xA0;&#xA0; / 2:&#xA0; 1.000</tt><tt><br>
-</tt><tt>&#xA0;3&#xA0;&#xA0; / 3:&#xA0;&#xA0; ....</tt><tt><br>
-</tt><tt>&#xA0;4&#xA0;&#xA0; / 4:&#xA0; 1.000</tt><tt><br>
-</tt><tt>&#xA0;5&#xA0;&#xA0; / 5:&#xA0;&#xA0; ....</tt><tt><br>
-</tt><tt>&#xA0;6&#xA0;&#xA0; / 6:&#xA0; 1.000</tt><tt><br>
+</tt><tt>1 / 1: 1.000</tt><tt><br>
+</tt><tt>2 / 2: 1.000</tt><tt><br>
+</tt><tt>3 / 3: ....</tt><tt><br>
+</tt><tt>4 / 4: 1.000</tt><tt><br>
+</tt><tt>5 / 5: ....</tt><tt><br>
+</tt><tt>6 / 6: 1.000</tt><tt><br>
 </tt><tt><br>
 </tt><tt>yes? list IFV var then 1</tt><tt><br>
-</tt><tt>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; VARIABLE : IFV VAR
+</tt><tt> VARIABLE : IFV VAR
 THEN 1</tt><tt><br>
-</tt><tt>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; SUBSET&#xA0;&#xA0; : 6 points
+</tt><tt> SUBSET : 6 points
 (X)</tt><tt><br>
-</tt><tt>&#xA0;1&#xA0;&#xA0; / 1:&#xA0; 1.000</tt><tt><br>
-</tt><tt>&#xA0;2&#xA0;&#xA0; / 2:&#xA0; 1.000</tt><tt><br>
-</tt><tt>&#xA0;3&#xA0;&#xA0; / 3:&#xA0; 1.000</tt><tt><br>
-</tt><tt>&#xA0;4&#xA0;&#xA0; / 4:&#xA0; 1.000</tt><tt><br>
-</tt><tt>&#xA0;5&#xA0;&#xA0; / 5:&#xA0;&#xA0; ....</tt><tt><br>
-</tt><tt>&#xA0;6&#xA0;&#xA0; / 6:&#xA0; 1.000</tt><br>
+</tt><tt>1 / 1: 1.000</tt><tt><br>
+</tt><tt>2 / 2: 1.000</tt><tt><br>
+</tt><tt>3 / 3: 1.000</tt><tt><br>
+</tt><tt>4 / 4: 1.000</tt><tt><br>
+</tt><tt>5 / 5: ....</tt><tt><br>
+</tt><tt>6 / 6: 1.000</tt><br>
 <br>
 <p>By the way, you shouldn't be able to X
 as a variable name. (Did Ferret really
 let you use that command? Or were you
 just simplifying for writing the
-question? A command with&#xA0; LET X = should
+question? A command with LET X = should
 return an error, " **ERROR: command
-syntax: cannot define: X")&#xA0;&#xA0; X is a <a rel="nofollow"
-href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/DEFINE#_VPINDEXENTRY_1352"
+syntax: cannot define: X") X is a <a rel="nofollow"
+href="../../documentation/users-guide/commands-reference/DEFINE.html#_VPINDEXENTRY_1352"
 moz-do-not-send="true">
 reserved keyword</a> , used to refer
 to the x coordinate of the grid, so it's
@@ -286,13 +286,13 @@ wrote:<br>
 <blockquote>
 <div>
 <p>Good Afternoon,</p>
-<p>&#xA0;</p>
+<p></p>
 <p>I&#x2019;m having an issue using the set
 var/bad = 0 <b>dataset</b> command.
 I&#x2019;ve defined some new regions as the
 following, to indicate presence or
 absence of stratification:</p>
-<p>&#xA0;</p>
+<p></p>
 <p><i>let X = if
 stratified[l=1:12@sum] eq 0 then 1
 else 0</i></p>
@@ -301,25 +301,25 @@ stratified[l=10:2@sum] eq 0 and
 stratified[l=3:9@sum] gt 0 and
 stratified[l=3:9@sum] le 3 then 1
 else 0</i></p>
-<p>&#xA0;</p>
+<p></p>
 <p>So this creates a map of 1&#x2019;s where
 the region matches what is described
 in the mask, and 0&#x2019;s where it
 doesn&#x2019;t.</p>
-<p>&#xA0;</p>
+<p></p>
 <p>So now I try to mask out all of the
 0&#x2019;s so that I can create shapefiles
 of the areas matching my description
 using:</p>
-<p>&#xA0;</p>
+<p></p>
 <p><i>Set var/bad = 0 X</i></p>
 <p><i>Set var/bad = 0 Y</i></p>
-<p>&#xA0;</p>
+<p></p>
 <p>However, this seems to mask the
 entirety of my data and I get a
 screen telling me that no data is
 available.</p>
-<p>&#xA0;</p>
+<p></p>
 <p>Does anyone have any clues as to
 why this happens? Because I am lost
 for ideas, I think it might be to do
@@ -330,16 +330,16 @@ definitions), and so it is masking
 the original dataset, does anyone
 know how I can make the mask apply
 only to my map of 1&#x2019;s and 0&#x2019;s?</p>
-<p>&#xA0;</p>
+<p></p>
 <p>Many thanks,</p>
-<p>&#xA0;</p>
+<p></p>
 <p>Josh</p>
-<p>&#xA0;</p>
+<p></p>
 <p>Sent from <a rel="nofollow"
 href="https://go.microsoft.com/fwlink/?LinkId=550986"
 moz-do-not-send="true">Mail</a>
 for Windows 10</p>
-<p>&#xA0;</p>
+<p></p>
 </div>
 </blockquote>
 <div>-- <br>

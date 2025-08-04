@@ -52,12 +52,12 @@
  
  
 <p>Hi,</p>
-<p>I believe you can do this using the transformation @WEQ.&#xA0; Please
+<p>I believe you can do this using the transformation @WEQ. Please
 see the examples and explanation in the Users Guide, <br>
 </p>
-<p><a rel="nofollow" class="moz-txt-link-freetext" href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/variables-xpressions/XPRESSIONS#_VPINDEXENTRY_532">https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/variables-xpressions/XPRESSIONS#_VPINDEXENTRY_532</a></p>
+<p><a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/users-guide/variables-xpressions/XPRESSIONS.html#_VPINDEXENTRY_532">../../documentation/users-guide/variables-xpressions/XPRESSIONS.html#_VPINDEXENTRY_532</a></p>
 <p>It looks as though there are discussions of @WEQ in the Archives
-of this list, which might give you&#xA0; more ideas.</p>
+of this list, which might give you more ideas.</p>
 <p><br>
 </p>
 <p>Ansley<br>
@@ -74,20 +74,20 @@ style="font-family:georgia,serif;color:#0b5394">Dear
 Ferreters,</div>
 <div class="gmail_default"
 style="font-family:georgia,serif;color:#0b5394">I have .nc
-data in which there are many variables&#xA0; but only 2 dimensions
+data in which there are many variables but only 2 dimensions
 that are l and m. l is time (l=1:365 ) and m is no events
-occurred (m=1:1753). so,&#xA0; I want to list a variable by based
+occurred (m=1:1753). so, I want to list a variable by based
 on specific condition that is l=@loc:o</div>
 <div class="gmail_default"
 style="font-family:georgia,serif;color:#0b5394">Example.
 variable called 'dist2land', so list/m=1:1753
-dist2land[l=@loc:0],&#xA0;</div>
+dist2land[l=@loc:0],</div>
 <div class="gmail_default"
 style="font-family:georgia,serif;color:#0b5394">then I am
 getting list of 'dist2land' when it become 0 during entire l
 from 1 to 365 in each event from 1 to 1753. Now, I want to
 list the another variable called 'wind' corresponds to the
-list of 'dist2land'.&#xA0;</div>
+list of 'dist2land'.</div>
 <div class="gmail_default"
 style="font-family:georgia,serif;color:#0b5394"><br>
 </div>
@@ -108,32 +108,32 @@ style="font-family:georgia,serif;color:#0b5394">I have data
 like this for each value of m(1:1753), L ranges from 1 to 365
 shown below</div>
 <div class="gmail_default"
-style="font-family:georgia,serif;color:#0b5394">L&#xA0; &#xA0; &#xA0; &#xA0; &#xA0;
-dist2land&#xA0; &#xA0; &#xA0; &#xA0; wind</div>
+style="font-family:georgia,serif;color:#0b5394">L    
+dist2land    wind</div>
 <div class="gmail_default"
-style="font-family:georgia,serif;color:#0b5394">1&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;
-&#xA0; &#xA0; 15&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;50</div>
+style="font-family:georgia,serif;color:#0b5394">1      
+  15        50</div>
 <div class="gmail_default"
-style="font-family:georgia,serif;color:#0b5394">2&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;
-&#xA0; &#xA0; 05&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; 45&#xA0;&#xA0;</div>
+style="font-family:georgia,serif;color:#0b5394">2      
+  05        45</div>
 <div class="gmail_default"
-style="font-family:georgia,serif;color:#0b5394">3&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;
-&#xA0; &#xA0; &#xA0;0&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;15</div>
+style="font-family:georgia,serif;color:#0b5394">3      
+  0        15</div>
 <div class="gmail_default"
-style="font-family:georgia,serif;color:#0b5394">4&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;
-&#xA0; &#xA0; &#xA0;45&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; 47</div>
+style="font-family:georgia,serif;color:#0b5394">4      
+  45        47</div>
 <div class="gmail_default"
-style="font-family:georgia,serif;color:#0b5394">.&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;
-&#xA0; &#xA0; &#xA0; &#xA0;.&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; .</div>
+style="font-family:georgia,serif;color:#0b5394">.      
+   .           .</div>
 <div class="gmail_default"
-style="font-family:georgia,serif;color:#0b5394">.&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;
-&#xA0; &#xA0; &#xA0; &#xA0;.&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;.</div>
+style="font-family:georgia,serif;color:#0b5394">.      
+   .           .</div>
 <div class="gmail_default"
-style="font-family:georgia,serif;color:#0b5394">.&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;
-&#xA0; &#xA0; &#xA0; &#xA0;.&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;.</div>
+style="font-family:georgia,serif;color:#0b5394">.      
+   .           .</div>
 <div class="gmail_default"
-style="font-family:georgia,serif;color:#0b5394">upto 365&#xA0; &#xA0; &#xA0;
-&#xA0;25&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; 45</div>
+style="font-family:georgia,serif;color:#0b5394">upto 365  
+25         45</div>
 <div class="gmail_default"
 style="font-family:georgia,serif;color:#0b5394"><br>
 </div>
@@ -145,7 +145,7 @@ style="font-family:georgia,serif;color:#0b5394">Now, I have
 list the data of dist2land and corresponding wind when
 dist2land value is 0.</div>
 <div class="gmail_default"
-style="font-family:georgia,serif;color:#0b5394">i.e.&#xA0; l=3,
+style="font-family:georgia,serif;color:#0b5394">i.e. l=3,
 corresponding wind is 15. it should be done upto last value of
 m .i.e. 1753.</div>
 <div class="gmail_default"
@@ -154,7 +154,7 @@ style="font-family:georgia,serif;color:#0b5394"><br>
 <div class="gmail_default"
 style="font-family:georgia,serif;color:#0b5394">Thank you.</div>
 <div class="gmail_default"
-style="font-family:georgia,serif;color:#0b5394">&#xA0;</div>
+style="font-family:georgia,serif;color:#0b5394"></div>
 <div class="gmail_default"
 style="font-family:georgia,serif;color:#0b5394"><b
 style="font-family:Arial,Helvetica,sans-serif;color:rgb(204,0,0);font-size:12.8px"><br>
@@ -166,7 +166,7 @@ style="font-family:Arial,Helvetica,sans-serif;color:rgb(204,0,0);font-size:12.8p
 <div class="gmail_default"
 style="font-family:georgia,serif;color:#0b5394"><b
 style="font-family:Arial,Helvetica,sans-serif;color:rgb(204,0,0);font-size:12.8px">Thanks
-&amp;&#xA0;</b><b
+&amp;</b><b
 style="font-family:Arial,Helvetica,sans-serif;color:rgb(204,0,0);font-size:12.8px">Regards</b><br>
 </div>
 <div>
@@ -188,10 +188,10 @@ Meteorology &amp; Oceanography</span></div>
 University</span></div>
 <div><span style="font-size:12.8px">Visakhapatnam
 - 530003</span></div>
-<div><span style="font-size:12.8px">INDIA -&#xA0;<span
+<div><span style="font-size:12.8px">INDIA -<span
 style="font-size:12.8px">91-9676155827</span></span></div>
 <div dir="ltr"><br>
-<div>&#xA0; &#xA0;&#xA0;
+<div> 
 <div><br>
 <br>
 </div>

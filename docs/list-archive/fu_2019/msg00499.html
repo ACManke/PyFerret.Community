@@ -54,41 +54,41 @@
 <p>Hi Asiya,</p>
 <p>First I'd like to say that in the most recent versions of Ferret,
 SET MEMORY does not allocate memory from the system but only sets
-an upper limit on the amount it will use as needed.&#xA0; This
-discussion is for versions previous to v7.2.&#xA0; The current
+an upper limit on the amount it will use as needed. This
+discussion is for versions previous to v7.2. The current
 documentation for SET MEMORY is here, with the discussion at the
 bottom of the page for earlier versions.<br>
 </p>
-<p><a rel="nofollow" class="moz-txt-link-freetext" href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/computing-environment/MEMORY-USE">https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/computing-environment/MEMORY-USE</a></p>
+<p><a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/users-guide/computing-environment/MEMORY-USE">../../documentation/users-guide/computing-environment/MEMORY-USE</a></p>
 <p><br>
 </p>
 <p>In Ferret v7, the SET MEMORY/SIZE= causes Ferret to ask the
 system to allocate that numer of mega-words (storage locations) of
-memory, so SET MEM/SIZE=1400 asks for over 11 Gb of memory.&#xA0; When
-you tried tried "SET MEMORY/SIZE=1400"&#xA0; did you see an error
-message?&#xA0; In v7, it might report <br>
+memory, so SET MEM/SIZE=1400 asks for over 11 Gb of memory. When
+you tried tried "SET MEMORY/SIZE=1400" did you see an error
+message? In v7, it might report <br>
 </p>
 <blockquote>
-<p>&#xA0;Cached data cleared from memory<br>
+<p>Cached data cleared from memory<br>
 Unable to allocate 1400.0 Mwords of memory.<br>
 Restoring previous memory of 25.6 Mwords.<br>
 </p>
 </blockquote>
 <p><br>
 </p>
-<p>To get an idea of the&#xA0; amount of memory you might need, look at
+<p>To get an idea of the amount of memory you might need, look at
 the subset of the grid that your definitions use. The _expression_ <b>sst_0001[x=120:180@ave,y=-16:6@ave]</b>
-needs to read data&#xA0; 60*22*165.&#xA0; It's in megawords, so,<br>
+needs to read data 60*22*165. It's in megawords, so,<br>
 </p>
 <p>yes? list 60*22*165/1000<br>
-&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; VARIABLE : 60*22*165/1000<br>
-&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 217.8<br>
+ VARIABLE : 60*22*165/1000<br>
+ 217.8<br>
 </p>
 <p>So just for that _expression_ you'd need to have the SET
-MEMORY/SIZE setting larger than 218.&#xA0; Ferret will store
+MEMORY/SIZE setting larger than 218. Ferret will store
 intermediate results and re-use some of the memory, but there are
-a number of calculations done to evaluate variable&#xA0; "correl", so
-probably more memory is needed.&#xA0; Try SET MEMORY/SIZE=300, or maybe
+a number of calculations done to evaluate variable "correl", so
+probably more memory is needed. Try SET MEMORY/SIZE=300, or maybe
 500<br>
 </p>
 <br>
@@ -107,10 +107,10 @@ in Ferret. Error is as follows:
 <br>
 Command file, command group, or REPEAT execution aborted
 <br>
-&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; *** NOTE: You can use SET MEMORY/SIZE=xxx to increase
+ *** NOTE: You can use SET MEMORY/SIZE=xxx to increase
 memory.
 <br>
-&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; *** NOTE: The "Memory use" section of the FERRET Users
+ *** NOTE: The "Memory use" section of the FERRET Users
 Guide has further tips.
 <br>
 <br>
@@ -174,26 +174,26 @@ The data set used is ERA 5 single-level data and includes these
 variables:-
 <br>
 <br>
-&#xA0;name&#xA0;&#xA0;&#xA0;&#xA0; title&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; I&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; J K&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
-L&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; &#xA0; M&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; N
+name title I J K
+L  M N
 <br>
-&#xA0;SST_0001 Sea surface temperature&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:1440&#xA0;&#xA0;&#xA0; 1:721
-...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:164&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...
+SST_0001 Sea surface temperature 1:1440 1:721
+... 1:164 ... ...
 <br>
-&#xA0;SP_0001&#xA0; Surface pressure&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:1440&#xA0;&#xA0;&#xA0; 1:721
-...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:164&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...
+SP_0001 Surface pressure 1:1440 1:721
+... 1:164 ... ...
 <br>
-&#xA0;TP_0001&#xA0; Total precipitation&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:1440&#xA0;&#xA0;&#xA0; 1:721
-...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:164&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...
+TP_0001 Total precipitation 1:1440 1:721
+... 1:164 ... ...
 <br>
-&#xA0;SST_0005 Sea surface temperature&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:1440&#xA0;&#xA0;&#xA0; 1:721
-...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:164&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...
+SST_0005 Sea surface temperature 1:1440 1:721
+... 1:164 ... ...
 <br>
-&#xA0;SP_0005&#xA0; Surface pressure&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:1440&#xA0;&#xA0;&#xA0; 1:721
-...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:164&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...
+SP_0005 Surface pressure 1:1440 1:721
+... 1:164 ... ...
 <br>
-&#xA0;TP_0005&#xA0; Total precipitation&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:1440&#xA0;&#xA0;&#xA0; 1:721
-...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:164
+TP_0005 Total precipitation 1:1440 1:721
+... 1:164
 <br>
 <br>
 It would be of great help if you could provide me with a solution

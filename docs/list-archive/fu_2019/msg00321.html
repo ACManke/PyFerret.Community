@@ -50,47 +50,47 @@
  
 <p>Hi all,</p>
 <p>There have been a couple of questions lately about working with
-attributes in datasets.&#xA0; Here's a note about some of the commands
+attributes in datasets. Here's a note about some of the commands
 and options you may not know about. All of this is here in the
 documentation:<br>
 </p>
-<p><a rel="nofollow" class="moz-txt-link-freetext" href="http://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/SET#_VPID_474">http://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/SET#_VPID_474</a></p>
+<p><a rel="nofollow" class="moz-txt-link-freetext" href="http://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/SET.html#_VPID_474">http://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/SET.html#_VPID_474</a></p>
 <p><br>
 </p>
 <p> <b>SET ATTRIBUTE/LIKE= </b>This command takes all of the
 attributes from var1 and copies them to attributes belonging to
 var2, so if you're defining a new variable based on a file
 variable, you'll be able to keep the units, title, and anything
-else that the file variable has.&#xA0; (It doesn't inherit
+else that the file variable has. (It doesn't inherit
 missing-value flags - those are defined as always when var2 is
 defined.)<br>
 </p>
 <p><tt>yes? set attribute/like=fvar var2</tt></p>
 <p>(See also <b><a rel="nofollow" moz-do-not-send="true"
-href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/DEFINE#_LET_LIKE">LET/LIKE=</a></b><b>
+href="../../documentation/users-guide/commands-reference/DEFINE.html#_LET_LIKE">LET/LIKE=</a></b><b>
 </b>which applies the same setting when defining variables.)</p>
 <p><br>
 </p>
-<p> <b>SET ATTRIBUTE/OUTPUT</b>&#xA0; This marks attributes for writing
+<p> <b>SET ATTRIBUTE/OUTPUT</b> This marks attributes for writing
 out to netCDF files. By default Ferret/PyFerret only write the
 title, units and history, but this lets you set properties so they
-are written out.&#xA0; To set a property so that one attribute or all
+are written out. To set a property so that one attribute or all
 attributes on a variable will be written out:<br>
 </p>
-<p><tt>yes? set attribute/output fvar.comment&#xA0; </tt><tt><br>
+<p><tt>yes? set attribute/output fvar.comment </tt><tt><br>
 </tt><tt>yes? set attribute/output=all fvar</tt><br>
 </p>
 <p>(See also <a rel="nofollow" moz-do-not-send="true"
-href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/DEFINE#_VPINDEXENTRY_1298"><b>DEFINE
+href="../../documentation/users-guide/commands-reference/DEFINE.html#_VPINDEXENTRY_1298"><b>DEFINE
 ATTRIBUTE/OUTPUT</b></a> for setting the output property when
 defining a new attribute)</p>
 <p><br>
 </p>
-<p><b>To work with global attributes</b>, use a dot.&#xA0; This acts as a
-virtual "global-attribute" variable name.&#xA0; Global attributes are
+<p><b>To work with global attributes</b>, use a dot. This acts as a
+virtual "global-attribute" variable name. Global attributes are
 written when first creating a file, writing variables that belong
 to that file (writing user-variables based on file variables will
-also trigger writing the global attributes from that file.)&#xA0; To
+also trigger writing the global attributes from that file.) To
 write a couple of attributes:<br>
 </p>
 <p><tt>yes? set attribute/output ..investigators</tt><tt><br>
@@ -99,8 +99,8 @@ write a couple of attributes:<br>
 <p><tt>yes? set attribute/output .<br>
 </tt></p>
 <p>Finally, to add new global attributes to an existing dataset,
-uses&#xA0; <b><a rel="nofollow" moz-do-not-send="true"
-href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/LIST#_SAVE_ASGLOBAL">SAVE/ASGLOBAL</a></b>
+uses <b><a rel="nofollow" moz-do-not-send="true"
+href="../../documentation/users-guide/commands-reference/LIST#_SAVE_ASGLOBAL">SAVE/ASGLOBAL</a></b>
 which was new in version 7.3</p>
 <p><br>
 </p>

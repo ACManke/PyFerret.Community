@@ -57,66 +57,66 @@
  
 <p>Hi Nicolas,</p>
 <p>Yes, sometimes it's useful to do a SHOW FUNCTION/DETAILS to see
-how the result depends on the grids of the arguments.&#xA0; The result
+how the result depends on the grids of the arguments. The result
 mask you're defining will have the x and y axes of the first
-argument, and the other arguments are just lists.&#xA0; <br>
+argument, and the other arguments are just lists. <br>
 </p>
 <p>Most often for function calls, it's best to specify any ranges as
-a context in square brackets right in the function call.&#xA0; I don't
+a context in square brackets right in the function call. I don't
 know what mihght have been going wrong in your original example,
 but if you had a global region defined using SET REGION that could
 throw things off.<br>
 </p>
 <p> <tt>yes? show func/details pt_in_poly</tt><tt><br>
 </tt><tt>PT_IN_POLY(A,XVERT,YVERT)</tt><tt><br>
-</tt><tt>&#xA0;&#xA0;&#xA0; Return -1 outside, 0 if on edge, 1 if inside polygon</tt><tt><br>
-</tt><tt>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Axes of result:</tt><tt><br>
-</tt><tt>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; X: inherited from argument(s)</tt><tt><br>
-</tt><tt>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Y: inherited from argument(s)</tt><tt><br>
-</tt><tt>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Z: NORMAL (no axis)</tt><tt><br>
-</tt><tt>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; T: NORMAL (no axis)</tt><tt><br>
-</tt><tt>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; E: NORMAL (no axis)</tt><tt><br>
-</tt><tt>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; F: NORMAL (no axis)</tt><tt><br>
-</tt><tt>&#xA0;&#xA0;&#xA0; A: Variable on the XY grid and region to be tested
+</tt><tt> Return -1 outside, 0 if on edge, 1 if inside polygon</tt><tt><br>
+</tt><tt> Axes of result:</tt><tt><br>
+</tt><tt> X: inherited from argument(s)</tt><tt><br>
+</tt><tt> Y: inherited from argument(s)</tt><tt><br>
+</tt><tt> Z: NORMAL (no axis)</tt><tt><br>
+</tt><tt> T: NORMAL (no axis)</tt><tt><br>
+</tt><tt> E: NORMAL (no axis)</tt><tt><br>
+</tt><tt> F: NORMAL (no axis)</tt><tt><br>
+</tt><tt> A: Variable on the XY grid and region to be tested
 (FLOAT)</tt><tt><br>
-</tt><tt>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Influence on output axes:</tt><tt><br>
-</tt><tt>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; X: passed to result grid</tt><tt><br>
-</tt><tt>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Y: passed to result grid</tt><tt><br>
-</tt><tt>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Z: no influence (indicate argument limits with
+</tt><tt> Influence on output axes:</tt><tt><br>
+</tt><tt> X: passed to result grid</tt><tt><br>
+</tt><tt> Y: passed to result grid</tt><tt><br>
+</tt><tt> Z: no influence (indicate argument limits with
 "[]")</tt><tt><br>
-</tt><tt>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; T: no influence (indicate argument limits with
+</tt><tt> T: no influence (indicate argument limits with
 "[]")</tt><tt><br>
-</tt><tt>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; E: no influence (indicate argument limits with
+</tt><tt> E: no influence (indicate argument limits with
 "[]")</tt><tt><br>
-</tt><tt>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; F: no influence (indicate argument limits with
+</tt><tt> F: no influence (indicate argument limits with
 "[]")</tt><tt><br>
-</tt><tt>&#xA0;&#xA0;&#xA0; XVERT: X-coordinates of vertices of polygon (FLOAT)</tt><tt><br>
-</tt><tt>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Influence on output axes:</tt><tt><br>
-</tt><tt>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; X: no influence (indicate argument limits with
+</tt><tt> XVERT: X-coordinates of vertices of polygon (FLOAT)</tt><tt><br>
+</tt><tt> Influence on output axes:</tt><tt><br>
+</tt><tt> X: no influence (indicate argument limits with
 "[]")</tt><tt><br>
-</tt><tt>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Y: no influence (indicate argument limits with
+</tt><tt> Y: no influence (indicate argument limits with
 "[]")</tt><tt><br>
-</tt><tt>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Z: no influence (indicate argument limits with
+</tt><tt> Z: no influence (indicate argument limits with
 "[]")</tt><tt><br>
-</tt><tt>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; T: no influence (indicate argument limits with
+</tt><tt> T: no influence (indicate argument limits with
 "[]")</tt><tt><br>
-</tt><tt>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; E: no influence (indicate argument limits with
+</tt><tt> E: no influence (indicate argument limits with
 "[]")</tt><tt><br>
-</tt><tt>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; F: no influence (indicate argument limits with
+</tt><tt> F: no influence (indicate argument limits with
 "[]")</tt><tt><br>
-</tt><tt>&#xA0;&#xA0;&#xA0; YVERT: Y-coordinates of vertices of polygon (FLOAT)</tt><tt><br>
-</tt><tt>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Influence on output axes:</tt><tt><br>
-</tt><tt>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; X: no influence (indicate argument limits with
+</tt><tt> YVERT: Y-coordinates of vertices of polygon (FLOAT)</tt><tt><br>
+</tt><tt> Influence on output axes:</tt><tt><br>
+</tt><tt> X: no influence (indicate argument limits with
 "[]")</tt><tt><br>
-</tt><tt>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Y: no influence (indicate argument limits with
+</tt><tt> Y: no influence (indicate argument limits with
 "[]")</tt><tt><br>
-</tt><tt>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Z: no influence (indicate argument limits with
+</tt><tt> Z: no influence (indicate argument limits with
 "[]")</tt><tt><br>
-</tt><tt>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; T: no influence (indicate argument limits with
+</tt><tt> T: no influence (indicate argument limits with
 "[]")</tt><tt><br>
-</tt><tt>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; E: no influence (indicate argument limits with
+</tt><tt> E: no influence (indicate argument limits with
 "[]")</tt><tt><br>
-</tt><tt>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; F: no influence (indicate argument limits with
+</tt><tt> F: no influence (indicate argument limits with
 "[]")</tt><tt><br>
 </tt><br>
 </p>
@@ -154,10 +154,10 @@ pt_in_poly(Tmax[d=1,l=1,i=1:350,j=1:95],xp,yp) gt 0 then 1</div>
 </div>
 <br>
 <div class="gmail_quote">
-<div dir="ltr" class="gmail_attr">Le&#xA0;mar. 26 mars 2019 &#xE0;&#xA0;16:22,
+<div dir="ltr" class="gmail_attr">Lemar. 26 mars 2019 &#xE0;16:22,
 Ansley C. Manke &lt;<a rel="nofollow" href="mailto:ansley.b.manke@xxxxxxxx"
 moz-do-not-send="true">ansley.b.manke@xxxxxxxx</a>&gt; a
-&#xE9;crit&#xA0;:<br>
+&#xE9;crit:<br>
 </div>
 <blockquote class="gmail_quote" style="margin:0px 0px 0px
 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex">Hi
@@ -165,7 +165,7 @@ Nicolas,<br>
 <br>
 As a check of your definition, does a plot of the points<br>
 <br>
-&#xA0;&#xA0; PLOT/VS/LINE xp, yp<br>
+ PLOT/VS/LINE xp, yp<br>
 <br>
 show the outline of the boundary you want?<br>
 <br>
@@ -176,7 +176,7 @@ On 3/25/2019 4:18 AM, Nicolas Freychet wrote:<br>
 discussion: <br>
 &gt; <a rel="nofollow"
 href="../fu_2012/msg00019.html"
-rel="noreferrer" target="_blank" moz-do-not-send="true">../fu_2012/msg00019.html</a><br>
+rel="noreferrer" moz-do-not-send="true">../fu_2012/msg00019.html</a><br>
 &gt;<br>
 &gt; I managed to have a netcdf file with all lon/lat
 coordinate to define <br>
@@ -185,8 +185,8 @@ am not sure <br>
 &gt; how to apply it to mask my data.<br>
 &gt; The pt_in_poly function <br>
 &gt; (<a rel="nofollow"
-href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/appendix-a-external-functions/pt_in_poly"
-rel="noreferrer" target="_blank" moz-do-not-send="true">https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/appendix-a-external-functions/pt_in_poly</a>)
+href="../../documentation/users-guide/appendix-a-external-functions/pt_in_poly"
+rel="noreferrer" moz-do-not-send="true">../../documentation/users-guide/appendix-a-external-functions/pt_in_poly</a>)
 <br>
 &gt; requires to define a table of xp/yp. I tried to do
 something like:<br>

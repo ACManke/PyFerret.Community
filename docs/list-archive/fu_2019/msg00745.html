@@ -49,21 +49,21 @@
 <hr>
 <!--X-Head-Body-Sep-End-->
 <!--X-Body-of-Message-->
-<div dir="ltr">Dear Ansley,<div><br></div><div>I think I got it. Looks like to me, ferret&#xA0;&quot;puts&quot; an extra layer between my vertical levels and gave two extra layers to both ends (top and surface of the atmosphere) to do the&#xA0;integration. Say a 550 hPa between 500 and 600 hPa. Thus, the K=1&#xA0;@DIN&#xA0;starts from 5 hPa instead of 10 hPa and K=17 @DIN became 1032.5 hPa instead of 1000 hPa.</div><div><br></div><div>Thank you very much and stay healthy,</div><div><br></div><div>Xiaoyu</div></div><br><div class="gmail_quote"><div dir="ltr" class="gmail_attr">On Thu, Jun 11, 2020 at 5:15 PM Ansley C. Manke &lt;<a rel="nofollow" href="mailto:ansley.b.manke@xxxxxxxx">ansley.b.manke@xxxxxxxx</a>&gt; wrote:<br></div><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex">Hi,<br>
+<div dir="ltr">Dear Ansley,<div><br></div><div>I think I got it. Looks like to me, ferret&quot;puts&quot; an extra layer between my vertical levels and gave two extra layers to both ends (top and surface of the atmosphere) to do theintegration. Say a 550 hPa between 500 and 600 hPa. Thus, the K=1@DINstarts from 5 hPa instead of 10 hPa and K=17 @DIN became 1032.5 hPa instead of 1000 hPa.</div><div><br></div><div>Thank you very much and stay healthy,</div><div><br></div><div>Xiaoyu</div></div><br><div class="gmail_quote"><div dir="ltr" class="gmail_attr">On Thu, Jun 11, 2020 at 5:15 PM Ansley C. Manke &lt;<a rel="nofollow" href="mailto:ansley.b.manke@xxxxxxxx">ansley.b.manke@xxxxxxxx</a>&gt; wrote:<br></div><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex">Hi,<br>
 Sometimes defining a very simple variable and applying the <br>
-transformation to it is helpful.&#xA0; Do the integration operations on a <br>
+transformation to it is helpful. Do the integration operations on a <br>
 variable like this<br>
 <br>
-&#xA0;&#xA0; let constant_var = 1 + 0*test<br>
+ let constant_var = 1 + 0*test<br>
 <br>
-to see if it helps you understand what may be happening.&#xA0; Also looking <br>
+to see if it helps you understand what may be happening. Also looking <br>
 at the indefinite integral of both your original variables and this <br>
 simple one might be useful.<br>
 <br>
 As you may know, transformations such as the definite integral always <br>
-take the grid-cell sizes into account.&#xA0; This is described in detail <br>
+take the grid-cell sizes into account. This is described in detail <br>
 here, &quot;General Information about Transformations&quot;,<br>
-<a rel="nofollow" href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/variables-xpressions/XPRESSIONS#GeneralInfo" rel="noreferrer" target="_blank">https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/variables-xpressions/XPRESSIONS#GeneralInfo</a><br>
+<a rel="nofollow" href="../../documentation/users-guide/variables-xpressions/XPRESSIONS.html#GeneralInfo" rel="noreferrer">../../documentation/users-guide/variables-xpressions/XPRESSIONS.html#GeneralInfo</a><br>
 <br>
 I wonder if there is something particular in the definition of the grid <br>
 cells in Z that makes the computations inconsistent.<br>
@@ -71,69 +71,69 @@ cells in Z that makes the computations inconsistent.<br>
 Ansley<br>
 <br>
 On 6/10/2020 6:48 PM, Xiaoyu Bai wrote:<br>
-&gt; Dear&#xA0;ferreters,<br>
+&gt; Dearferreters,<br>
 &gt;<br>
 &gt; I have 17 levels of v-wind data.<br>
 &gt;<br>
 &gt; list/j=82/l=6 va_4CO2_MPAS_monthly_ave<br>
-&gt; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;VARIABLE : VA_4CO2_MPAS_MONTHLY[X=@AVE]<br>
-&gt; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;SUBSET &#xA0; : 17 points (Z (Pa))<br>
-&gt; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;LONGITUDE: 1.2W(-1.2) to 1.2W<br>
-&gt; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;LATITUDE : 63.5N<br>
-&gt; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;TIME &#xA0; &#xA0; : 16-JUN 00:00 NOLEAP<br>
-&gt; &#xA0;1000 &#xA0; &#xA0; / &#xA0;1: -0.0394<br>
-&gt; &#xA0;2000 &#xA0; &#xA0; / &#xA0;2: -0.0227<br>
-&gt; &#xA0;3000 &#xA0; &#xA0; / &#xA0;3: -0.0209<br>
-&gt; &#xA0;5000 &#xA0; &#xA0; / &#xA0;4: -0.0252<br>
-&gt; &#xA0;7000 &#xA0; &#xA0; / &#xA0;5: -0.0219<br>
-&gt; &#xA0;10000 &#xA0; &#xA0;/ &#xA0;6: -0.0125<br>
-&gt; &#xA0;15000 &#xA0; &#xA0;/ &#xA0;7: &#xA0;0.0496<br>
-&gt; &#xA0;20000 &#xA0; &#xA0;/ &#xA0;8: &#xA0;0.1512<br>
-&gt; &#xA0;25000 &#xA0; &#xA0;/ &#xA0;9: &#xA0;0.1367<br>
-&gt; &#xA0;30000 &#xA0; &#xA0;/ 10: &#xA0;0.0665<br>
-&gt; &#xA0;40000 &#xA0; &#xA0;/ 11: &#xA0;0.0014<br>
-&gt; &#xA0;50000 &#xA0; &#xA0;/ 12: -0.0065<br>
-&gt; &#xA0;60000 &#xA0; &#xA0;/ 13: -0.0048<br>
-&gt; &#xA0;70000 &#xA0; &#xA0;/ 14: -0.0037<br>
-&gt; &#xA0;85000 &#xA0; &#xA0;/ 15: -0.0020<br>
-&gt; &#xA0;92500 &#xA0; &#xA0;/ 16: &#xA0;0.0645<br>
-&gt; &#xA0;100000 &#xA0; / 17: &#xA0;0.2435<br>
-&gt; I corrected the noise of it first and then applied&#xA0;@DIN for the <br>
+&gt;       VARIABLE : VA_4CO2_MPAS_MONTHLY[X=@AVE]<br>
+&gt;       SUBSET  : 17 points (Z (Pa))<br>
+&gt;       LONGITUDE: 1.2W(-1.2) to 1.2W<br>
+&gt;       LATITUDE : 63.5N<br>
+&gt;       TIME   : 16-JUN 00:00 NOLEAP<br>
+&gt; 1000   / 1: -0.0394<br>
+&gt; 2000   / 2: -0.0227<br>
+&gt; 3000   / 3: -0.0209<br>
+&gt; 5000   / 4: -0.0252<br>
+&gt; 7000   / 5: -0.0219<br>
+&gt; 10000  / 6: -0.0125<br>
+&gt; 15000  / 7: 0.0496<br>
+&gt; 20000  / 8: 0.1512<br>
+&gt; 25000  / 9: 0.1367<br>
+&gt; 30000  / 10: 0.0665<br>
+&gt; 40000  / 11: 0.0014<br>
+&gt; 50000  / 12: -0.0065<br>
+&gt; 60000  / 13: -0.0048<br>
+&gt; 70000  / 14: -0.0037<br>
+&gt; 85000  / 15: -0.0020<br>
+&gt; 92500  / 16: 0.0645<br>
+&gt; 100000  / 17: 0.2435<br>
+&gt; I corrected the noise of it first and then applied@DIN for the <br>
 &gt; vertical levels.<br>
 &gt; list/j=82/l=6 test<br>
-&gt; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;VARIABLE : VA_4CO2_MPAS_MONTHLY_AVE-0.03951<br>
-&gt; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;SUBSET &#xA0; : 17 points (Z (Pa))<br>
-&gt; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;LONGITUDE: 1.2W(-1.2) to 1.2W<br>
-&gt; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;LATITUDE : 63.5N<br>
-&gt; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;TIME &#xA0; &#xA0; : 16-JUN 00:00 NOLEAP<br>
-&gt; &#xA0;1000 &#xA0; &#xA0; / &#xA0;1: -0.0789<br>
-&gt; &#xA0;2000 &#xA0; &#xA0; / &#xA0;2: -0.0622<br>
-&gt; &#xA0;3000 &#xA0; &#xA0; / &#xA0;3: -0.0605<br>
-&gt; &#xA0;5000 &#xA0; &#xA0; / &#xA0;4: -0.0647<br>
-&gt; &#xA0;7000 &#xA0; &#xA0; / &#xA0;5: -0.0614<br>
-&gt; &#xA0;10000 &#xA0; &#xA0;/ &#xA0;6: -0.0520<br>
-&gt; &#xA0;15000 &#xA0; &#xA0;/ &#xA0;7: &#xA0;0.0101<br>
-&gt; &#xA0;20000 &#xA0; &#xA0;/ &#xA0;8: &#xA0;0.1117<br>
-&gt; &#xA0;25000 &#xA0; &#xA0;/ &#xA0;9: &#xA0;0.0971<br>
-&gt; &#xA0;30000 &#xA0; &#xA0;/ 10: &#xA0;0.0270<br>
-&gt; &#xA0;40000 &#xA0; &#xA0;/ 11: -0.0381<br>
-&gt; &#xA0;50000 &#xA0; &#xA0;/ 12: -0.0460<br>
-&gt; &#xA0;60000 &#xA0; &#xA0;/ 13: -0.0443<br>
-&gt; &#xA0;70000 &#xA0; &#xA0;/ 14: -0.0433<br>
-&gt; &#xA0;85000 &#xA0; &#xA0;/ 15: -0.0415<br>
-&gt; &#xA0;92500 &#xA0; &#xA0;/ 16: &#xA0;0.0250<br>
-&gt; &#xA0;100000 &#xA0; / 17: &#xA0;0.2040<br>
+&gt;       VARIABLE : VA_4CO2_MPAS_MONTHLY_AVE-0.03951<br>
+&gt;       SUBSET  : 17 points (Z (Pa))<br>
+&gt;       LONGITUDE: 1.2W(-1.2) to 1.2W<br>
+&gt;       LATITUDE : 63.5N<br>
+&gt;       TIME   : 16-JUN 00:00 NOLEAP<br>
+&gt; 1000   / 1: -0.0789<br>
+&gt; 2000   / 2: -0.0622<br>
+&gt; 3000   / 3: -0.0605<br>
+&gt; 5000   / 4: -0.0647<br>
+&gt; 7000   / 5: -0.0614<br>
+&gt; 10000  / 6: -0.0520<br>
+&gt; 15000  / 7: 0.0101<br>
+&gt; 20000  / 8: 0.1117<br>
+&gt; 25000  / 9: 0.0971<br>
+&gt; 30000  / 10: 0.0270<br>
+&gt; 40000  / 11: -0.0381<br>
+&gt; 50000  / 12: -0.0460<br>
+&gt; 60000  / 13: -0.0443<br>
+&gt; 70000  / 14: -0.0433<br>
+&gt; 85000  / 15: -0.0415<br>
+&gt; 92500  / 16: 0.0250<br>
+&gt; 100000  / 17: 0.2040<br>
 &gt; When I listed out the results I found that the vertical levels shifted <br>
 &gt; 50 Pa comparing to the original data:<br>
 &gt; list/j=82/l=6 test_re, test_up, test_down2<br>
-&gt; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;LONGITUDE: 1.2W(-1.2) to 1.2W<br>
-&gt; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;LATITUDE: 63.5N<br>
-&gt; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;TIME: 16-JUN 00:00 NOLEAP<br>
-&gt; &#xA0;Column &#xA0;1: TEST_RE[Z=500:103750] is TEST[K=1:17@DIN]/9.8<br>
-&gt; &#xA0;Column &#xA0;2: TEST_UP[Z=500:55000] is TEST[K=1:12@DIN]/9.8<br>
-&gt; &#xA0;Column &#xA0;3: TEST_DOWN2[Z=55000:103750] is TEST[K=13:17@DIN]/9.8<br>
-&gt; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; TEST_RE &#xA0;TEST_UP TEST_DOWN2<br>
-&gt; I / *: &#xA0; &#xA0; 0.04177 &#xA0;-27.18 &#xA0; 27.22<br>
+&gt;       LONGITUDE: 1.2W(-1.2) to 1.2W<br>
+&gt;       LATITUDE: 63.5N<br>
+&gt;       TIME: 16-JUN 00:00 NOLEAP<br>
+&gt; Column 1: TEST_RE[Z=500:103750] is TEST[K=1:17@DIN]/9.8<br>
+&gt; Column 2: TEST_UP[Z=500:55000] is TEST[K=1:12@DIN]/9.8<br>
+&gt; Column 3: TEST_DOWN2[Z=55000:103750] is TEST[K=13:17@DIN]/9.8<br>
+&gt;      TEST_RE TEST_UP TEST_DOWN2<br>
+&gt; I / *:   0.04177 -27.18  27.22<br>
 &gt; Is there a reason for it?<br>
 &gt;<br>
 &gt; Thank you in advance.<br>

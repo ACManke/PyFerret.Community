@@ -49,21 +49,21 @@
 <hr>
 <!--X-Head-Body-Sep-End-->
 <!--X-Body-of-Message-->
-<div dir="ltr"><div class="gmail_default" style="color:#000000">Dear Ansley</div><div class="gmail_default" style="color:#000000">G&#39;day</div><div class="gmail_default" style="color:#000000"><br></div><div class="gmail_default" style="color:#000000">Thank you very much your reply was indeed&#xA0;very helpful and I have learned new things which are very useful.&#xA0;</div><div class="gmail_default" style="color:#000000"><br></div><div class="gmail_default" style="color:#000000">I am attaching the code also based on the Nature paper I mentioned earlier. I check both&#xA0;@LOC and&#xA0;@WEQ and they give the same output.</div><div class="gmail_default" style="color:#000000"><br></div><div class="gmail_default" style="color:#000000">use /projets/nemo-rd/SOCHIC/saurabh/n42tm21-ex/potential-density_991_1000_M.nc<br><br>let thres = potden[z=10] + 0.03<br>let thres0 = potden - thres<br>let mldz = thres0[z=@loc:0]<br>let mldf = thres0[z=@weq:0]<br><br>let zed = z[gz=potden] + 0*potden<br>let mldw1 = zed*mldf<br>let mldw = mldw1[z=@sum]<br><br>let mldloc = mldz&#xA0;<br>let mldweq = mldw&#xA0;</div><div class="gmail_default" style="color:#000000"><br>set var/title=&quot;Mixed Layer Depth (Density Criteria@LOC)&quot;/units=&quot;meters&quot; mldloc<br>set var/title=&quot;Mixed Layer Depth (Density Criteria@WEQ)&quot;/units=&quot;meters&quot; mldweq<br><br>repeat/l=1:120:1 (save/append/file=<a rel="nofollow" href="http://mld-dens-loc.nc">mld-dens-loc.nc</a> mldloc;can mem/all;set mem/size=6000)<br>repeat/l=1:120:1 (save/append/file=<a rel="nofollow" href="http://mld-dens-weq.nc">mld-dens-weq.nc</a> mldweq;can mem/all;set mem/size=6000)<br><br>exit<br></div><div class="gmail_default" style="color:#000000"><br></div></div><br><div class="gmail_quote"><div dir="ltr" class="gmail_attr">On Tue, May 31, 2022 at 9:12 PM Ansley Manke &lt;<a rel="nofollow" href="mailto:a.c.manke@xxxxxxxxx">a.c.manke@xxxxxxxxx</a>&gt; wrote:<br></div><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,2                      
+<div dir="ltr"><div class="gmail_default" style="color:#000000">Dear Ansley</div><div class="gmail_default" style="color:#000000">G&#39;day</div><div class="gmail_default" style="color:#000000"><br></div><div class="gmail_default" style="color:#000000">Thank you very much your reply was indeedvery helpful and I have learned new things which are very useful.</div><div class="gmail_default" style="color:#000000"><br></div><div class="gmail_default" style="color:#000000">I am attaching the code also based on the Nature paper I mentioned earlier. I check both@LOC and@WEQ and they give the same output.</div><div class="gmail_default" style="color:#000000"><br></div><div class="gmail_default" style="color:#000000">use /projets/nemo-rd/SOCHIC/saurabh/n42tm21-ex/potential-density_991_1000_M.nc<br><br>let thres = potden[z=10] + 0.03<br>let thres0 = potden - thres<br>let mldz = thres0[z=@loc:0]<br>let mldf = thres0[z=@weq:0]<br><br>let zed = z[gz=potden] + 0*potden<br>let mldw1 = zed*mldf<br>let mldw = mldw1[z=@sum]<br><br>let mldloc = mldz<br>let mldweq = mldw</div><div class="gmail_default" style="color:#000000"><br>set var/title=&quot;Mixed Layer Depth (Density Criteria@LOC)&quot;/units=&quot;meters&quot; mldloc<br>set var/title=&quot;Mixed Layer Depth (Density Criteria@WEQ)&quot;/units=&quot;meters&quot; mldweq<br><br>repeat/l=1:120:1 (save/append/file=<a rel="nofollow" href="http://mld-dens-loc.nc">mld-dens-loc.nc</a> mldloc;can mem/all;set mem/size=6000)<br>repeat/l=1:120:1 (save/append/file=<a rel="nofollow" href="http://mld-dens-weq.nc">mld-dens-weq.nc</a> mldweq;can mem/all;set mem/size=6000)<br><br>exit<br></div><div class="gmail_default" style="color:#000000"><br></div></div><br><div class="gmail_quote"><div dir="ltr" class="gmail_attr">On Tue, May 31, 2022 at 9:12 PM Ansley Manke &lt;<a rel="nofollow" href="mailto:a.c.manke@xxxxxxxxx">a.c.manke@xxxxxxxxx</a>&gt; wrote:<br></div><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,2                      
  
  
  
 <div>
 <p>Hi,</p>
-<p>There are a couple of transformations that may help you: <a rel="nofollow" href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/variables-xpressions/XPRESSIONS#_VPINDEXENTRY_528" target="_blank">@LOC</a>
-and <a rel="nofollow" href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/variables-xpressions/XPRESSIONS#_VPINDEXENTRY_532" target="_blank">@WEQ</a>.&#xA0;
+<p>There are a couple of transformations that may help you: <a rel="nofollow" href="../../documentation/users-guide/variables-xpressions/XPRESSIONS.html#_VPINDEXENTRY_528">@LOC</a>
+and <a rel="nofollow" href="../../documentation/users-guide/variables-xpressions/XPRESSIONS.html#_VPINDEXENTRY_532">@WEQ</a>.
 Besides their documentation for those transformations, here are
 examples from the list archives and an FAQ about using those
 functions<br>
 </p>
-<p>This, about mixed-layer depth, using @LOC.&#xA0; This is from a
+<p>This, about mixed-layer depth, using @LOC. This is from a
 knowledgeable contributor: <br>
-<a rel="nofollow" href="../fu_2004/msg00523.html" target="_blank">../fu_2004/msg00523.html</a><br>
+<a rel="nofollow" href="../fu_2004/msg00523.html">../fu_2004/msg00523.html</a><br>
 The same contributor offered the script &quot;mld_temp.jnl&quot; which is
 included in the scripts with your installation of Ferret or
 PyFerret.</p>
@@ -88,9 +88,9 @@ wrote:<br>
 </div>
 <div class="gmail_default" style="color:rgb(0,0,0)">I am performing
 a computation of MLD using the potential density criterion
-i.e.&#xA0;potential density referenced to the surface, &#x3C3;0, exceeds
+i.e.potential density referenced to the surface, &#x3C3;0, exceeds
 by a threshold of 0.03 kg m&#x2212;3 the density of the water at 10
-m,&#xA0;</div>
+m,</div>
 <div class="gmail_default" style="color:rgb(0,0,0)"><br>
 </div>
 <div class="gmail_default" style="color:rgb(0,0,0)">&#x3C3;0(z = &#x2212;H) =
@@ -104,7 +104,7 @@ potential density as</div>
 <div class="gmail_default" style="color:rgb(0,0,0)">let dens_10m =
 density[z=10]</div>
 <div class="gmail_default" style="color:rgb(0,0,0)">let threshold =
-dens_10m&#xA0;+ 0.03</div>
+dens_10m+ 0.03</div>
 <div class="gmail_default" style="color:rgb(0,0,0)">let mask = if
 density le threshold then density</div>
 <div class="gmail_default" style="color:rgb(0,0,0)"><br>

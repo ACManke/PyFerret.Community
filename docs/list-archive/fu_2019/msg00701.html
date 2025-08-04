@@ -69,15 +69,15 @@ into this yet:<br>
 <p>Just for reference, the documentation about PyFerret fonts is
 here:</p>
 <p><a rel="nofollow" class="moz-txt-link-freetext"
-href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/SET#_SETTEXT"
-moz-do-not-send="true">https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/SET#_SETTEXT</a></p>
+href="../../documentation/users-guide/commands-reference/SET.html#_SETTEXT"
+moz-do-not-send="true">../../documentation/users-guide/commands-reference/SET.html#_SETTEXT</a></p>
 <p>and a summary of PyFerret syntax that extends or changes Ferret
 capabilities is here:</p>
 <p><a rel="nofollow" class="moz-txt-link-freetext"
-href="https://ferret.pmel.noaa.gov/Ferret/documentation/pyferret/pyferret-quick-start-notes"
-moz-do-not-send="true">https://ferret.pmel.noaa.gov/Ferret/documentation/pyferret/pyferret-quick-start-notes</a></p>
+href="../../documentation/pyferret/pyferret-quick-start-notes.html"
+moz-do-not-send="true">../../documentation/pyferret/pyferret-quick-start-notes.html</a></p>
 <p>When the documents talk about SET TEXT/FONT= they say, "The fonts
-available are those available to the Python packages".&#xA0; This does
+available are those available to the Python packages". This does
 generally mean the ones available on the system, so we'll add that
 information to these pages.<br>
 </p>
@@ -108,9 +108,9 @@ look under the 'fmly' options).</div>
 <div><br>
 </div>
 <div>On my Mac the command-line program "atsutil font
--list" gives a list of fonts.&#xA0; (I just did an "apropos
-font" to discover the&#xA0;atsutil program, so I am not sure
-if this is the best answer.)&#xA0; Note that if you specify a
+-list" gives a list of fonts. (I just did an "apropos
+font" to discover theatsutil program, so I am not sure
+if this is the best answer.) Note that if you specify a
 font that is not present, the program (or rather the
 graphics library) will substitute whatever it thinks is
 an appropriate substitute.</div>
@@ -118,27 +118,27 @@ an appropriate substitute.</div>
 </blockquote>
 <div><br>
 </div>
-<div>Thanks!&#xA0; That means that all fonts the OS recognizes can
-(in principle) be used.&#xA0; That's useful information.&#xA0; (And I
+<div>Thanks! That means that all fonts the OS recognizes can
+(in principle) be used. That's useful information. (And I
 hope you will write it in the official PyFerret manual.)</div>
 <div><br>
 </div>
 <div>In that case, macOS has a utility called "Font Book" in
-the "Applications" folder.&#xA0; &#xA0;I found a bewildering number of
+the "Applications" folder. I found a bewildering number of
 fonts!</div>
 <div><br>
 </div>
-<div>This application shows samples for each font.&#xA0;
+<div>This application shows samples for each font.
 Unfortunately, the samples don't include the hyphen
-character.&#xA0; (Understandably.&#xA0; Nobody would look into the
+character. (Understandably. Nobody would look into the
 font gallery specifically to examine the hyphen character!)</div>
-<div>&#xA0;</div>
+<div></div>
 <blockquote class="gmail_quote" style="margin:0px 0px 0px
 0.8ex;border-left:1px solid
 rgb(204,204,204);padding-left:1ex">
 <div dir="ltr">
 <div>When using system fonts, especially under Python 3.x,
-unicode (UTF8) is used.&#xA0; So I think (but I have not
+unicode (UTF8) is used. So I think (but I have not
 tested this) you should be able to specify UTF8
 characters and not be limited to ASCII.</div>
 </div>
@@ -154,7 +154,7 @@ colorbar.</div>
 0.8ex;border-left:1px solid
 rgb(204,204,204);padding-left:1ex">
 <div dir="ltr">
-<div>&#xA0; (And my suspicion&#xA0;about this bug is that a
+<div> (And my suspicionabout this bug is that a
 non-ASCII UTF8 character is getting used with the old
 Hershey font.)</div>
 </div>
@@ -162,8 +162,8 @@ Hershey font.)</div>
 <div><br>
 </div>
 <div>I found that the PDF file PyFerret generates includes the
-"real" degree symbol (" &#xB0; ") from unicode.&#xA0; This symbol&#xA0;is
-non-ASCII, although It's in the Extended ASCII set.&#xA0; But I
+"real" degree symbol (" &#xB0; ") from unicode. This symbolis
+non-ASCII, although It's in the Extended ASCII set. But I
 guess Hershey is fine with it?</div>
 <div><br>
 </div>

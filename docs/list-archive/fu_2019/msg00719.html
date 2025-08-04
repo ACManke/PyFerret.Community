@@ -48,11 +48,11 @@
 <hr>
 <!--X-Head-Body-Sep-End-->
 <!--X-Body-of-Message-->
-<tt>Try making a plot of the variable you've defined.&#xA0; That will load it 
+<tt>Try making a plot of the variable you've defined. That will load it 
 </tt><tt>into memory, doing all the transformations.
 </tt><pre style="margin: 0em;">
  
-&#xA0;&#xA0; shade stc_trans_rho_1025
+ shade stc_trans_rho_1025
  
  
  
@@ -63,7 +63,7 @@ Thanks Ansley for your suggestions.
 </pre><tt>Unfortunately I'm running Ferret on a cluster, because data are too 
 </tt><tt>big to be saved on my local computer, so I don't know whether I miht 
 </tt><tt>install a newer version of Ferret by myself. I'll ask to my cluster 
-</tt><tt>support. Meanwhile, I tried to increase the amount of allocated&#xA0;memory 
+</tt><tt>support. Meanwhile, I tried to increase the amount of allocatedmemory 
 </tt><tt>and removed all subsetting, but the process got killed by the system.
 </tt><pre style="margin: 0em;">
  
@@ -95,7 +95,7 @@ let ty_trans_pacific_rho_1025 = ty_trans_pacific_rho_lons[z=1025]
 </tt><pre style="margin: 0em;">
  
 </pre><tt>The error can't be related to append, because I'm saving only one 
-</tt><tt>variable into that file.&#xA0; Other variables are saved into another file, 
+</tt><tt>variable into that file. Other variables are saved into another file, 
 </tt><tt>but I have no problem with that.
 </tt><pre style="margin: 0em;">
  
@@ -111,25 +111,25 @@ Ogg: Re: [ferret_users] Problems with netcdf output and zaxreplace
 Hi Giorgio,
 When you can, try to update to a newer version of pyferret or ferret.
 Starting with Ferret v7.2
-&lt;<a  rel="nofollow" href="https://ferret.pmel.noaa.gov/Ferret/documentation/release_notes/version-7-2-release-notes">https://ferret.pmel.noaa.gov/Ferret/documentation/release_notes/version-7-2-release-notes</a>&gt;,
+&lt;<a  rel="nofollow" href="../../documentation/release_notes/version-7-2-release-notes">../../documentation/release_notes/version-7-2-release-notes</a>&gt;,
  
-there is much better memory management.&#xA0; With your version of
+there is much better memory management. With your version of
 Ferret you
-can try &quot;set memory/size=&quot;&#xA0; to give it a larger&#xA0; working memory
+can try &quot;set memory/size=&quot; to give it a larger working memory
 buffer.
  
 For the errors you're seeing when trying to append to a file, the
 thing
 to know is that the grid of the variable you are appending needs to
 match what is in the file, except for time when appending in the time
-direction.&#xA0; I can't quite see what is happening with the different
+direction. I can't quite see what is happening with the different
 grids
 and datasets in your script. What I would do to see what is
 happening,
 is at the point in your script where the error occurs, instead write
 that variable to a second file, and then compare the new file with
 the
-one you were trying to append to.&#xA0; The error message is saying
+one you were trying to append to. The error message is saying
 that the
 latitude coordinates don't match.
  
@@ -154,233 +154,233 @@ and
 &gt; netcdf at line 52, Ferret comes out with the good ol' error
 &gt;
 &gt; **TMAP ERR: error in line definition
-&gt; &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;file coords dont match variable coords on axis
+&gt; file coords dont match variable coords on axis
 LAT77_203
 &gt;
 &gt; It doesn't change whether I'm using RESHAPE or not. I also tried to
 &gt; adapt my RESHAPE call according to what I read here
 &gt;
-(<a  rel="nofollow" href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/variables-xpressions/XPRESSIONS">https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/variables-xpressions/XPRESSIONS</a>),
+(<a  rel="nofollow" href="../../documentation/users-guide/variables-xpressions/XPRESSIONS.html">../../documentation/users-guide/variables-xpressions/XPRESSIONS.html</a>),
  
 &gt; but with no luck. Can you please help me again about this?
 &gt;
 &gt; Cheers,
 &gt; Giorgio
 &gt;
-&gt;&#xA0;&#xA0;&#xA0;&#xA0; ----Messaggio originale----
-&gt;&#xA0;&#xA0;&#xA0;&#xA0; Da: ansley.b.manke@xxxxxxxx
-&gt;&#xA0;&#xA0;&#xA0;&#xA0; Data: 20-mag-2020 18.52
-&gt;&#xA0;&#xA0;&#xA0;&#xA0; A: &quot;Giorgio Graffino&quot;&lt;g.graffino@xxxxxx&gt;
-&gt;&#xA0;&#xA0;&#xA0;&#xA0; Cc: &lt;ferret_users@xxxxxxxx&gt;
-&gt;&#xA0;&#xA0;&#xA0;&#xA0; Ogg: Re: [ferret_users] Problems with netcdf output and
+&gt; ----Messaggio originale----
+&gt; Da: ansley.b.manke@xxxxxxxx
+&gt; Data: 20-mag-2020 18.52
+&gt; A: &quot;Giorgio Graffino&quot;&lt;g.graffino@xxxxxx&gt;
+&gt; Cc: &lt;ferret_users@xxxxxxxx&gt;
+&gt; Ogg: Re: [ferret_users] Problems with netcdf output and
 zaxreplace
 &gt;
-&gt;&#xA0;&#xA0;&#xA0;&#xA0; Hi,
+&gt; Hi,
 &gt;
-&gt;&#xA0;&#xA0;&#xA0;&#xA0; You could pass into the script the number of models
+&gt; You could pass into the script the number of models
 &gt;
-&gt;&#xA0;&#xA0;&#xA0;&#xA0; &gt; ferret -script scriptname.jnl 7
+&gt; &gt; ferret -script scriptname.jnl 7
 &gt;
-&gt;&#xA0;&#xA0;&#xA0;&#xA0; The script then does a repeat loop that would start like this.
+&gt; The script then does a repeat loop that would start like this.
 &gt;
-&gt;&#xA0;&#xA0;&#xA0;&#xA0; &#xA0;&#xA0; let nmodel = ($1)
-&gt;&#xA0;&#xA0;&#xA0;&#xA0; &#xA0;&#xA0; repeat/range=1:($1)/name=r (\
-&gt;&#xA0;&#xA0;&#xA0;&#xA0; &#xA0;&#xA0; use /home/data/model`r`.nc;\
+&gt;  let nmodel = ($1)
+&gt;  repeat/range=1:($1)/name=r (\
+&gt;  use /home/data/model`r`.nc;\
 &gt;
-&gt;&#xA0;&#xA0;&#xA0;&#xA0; ...
+&gt; ...
 &gt;
-&gt;&#xA0;&#xA0;&#xA0;&#xA0; There are details on the grave-accent evaluation
+&gt; There are details on the grave-accent evaluation
 &gt;
-&lt;<a  rel="nofollow" href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/variables-xpressions/EMBEDDED-XPRESSIONS#_VPINDEXENTRY_562">https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/variables-xpressions/EMBEDDED-XPRESSIONS#_VPINDEXENTRY_562</a>&gt;that
+&lt;<a  rel="nofollow" href="../../documentation/users-guide/variables-xpressions/EMBEDDED-XPRESSIONS#_VPINDEXENTRY_562">../../documentation/users-guide/variables-xpressions/EMBEDDED-XPRESSIONS#_VPINDEXENTRY_562</a>&gt;that
  
-&gt;&#xA0;&#xA0;&#xA0;&#xA0; give you some flexibility.&#xA0; For instance if the models are
+&gt; give you some flexibility. For instance if the models are
 named
-&gt;&#xA0;&#xA0;&#xA0;&#xA0; model01.nc, model02.nc, ...&#xA0; use the &quot;precision&quot; specifier
+&gt; model01.nc, model02.nc, ... use the &quot;precision&quot; specifier
 to ask
-&gt;&#xA0;&#xA0;&#xA0;&#xA0; for the value to be replaced with zero-filled numbers, here
+&gt; for the value to be replaced with zero-filled numbers, here
 2-digits.
 &gt;
-&gt;&#xA0;&#xA0;&#xA0;&#xA0; &#xA0;&#xA0; let nmodel = ($1)
-&gt;&#xA0;&#xA0;&#xA0;&#xA0; &#xA0;&#xA0; repeat/range=1:`nmodel`/name=r (\
-&gt;&#xA0;&#xA0;&#xA0;&#xA0; &#xA0;&#xA0; use /home/data/model`r,p=z2`.nc;
+&gt;  let nmodel = ($1)
+&gt;  repeat/range=1:`nmodel`/name=r (\
+&gt;  use /home/data/model`r,p=z2`.nc;
 &gt;
 &gt;
-&gt;&#xA0;&#xA0;&#xA0;&#xA0; Or, you could use a unix foreach loop and write your script to
-&gt;&#xA0;&#xA0;&#xA0;&#xA0; operate on just one model if that makes sense for what you are
-&gt;&#xA0;&#xA0;&#xA0;&#xA0; doing. Here I've made a script myscript.jnl with:
+&gt; Or, you could use a unix foreach loop and write your script to
+&gt; operate on just one model if that makes sense for what you are
+&gt; doing. Here I've made a script myscript.jnl with:
 &gt;
-&gt;&#xA0;&#xA0;&#xA0;&#xA0; ! myscript.jnl
-&gt;&#xA0;&#xA0;&#xA0;&#xA0; echo ($1)
+&gt; ! myscript.jnl
+&gt; echo ($1)
 &gt;
 &gt;
-&gt;&#xA0;&#xA0;&#xA0;&#xA0; This is csh, other shells will have other syntax.
+&gt; This is csh, other shells will have other syntax.
 &gt;
-&gt;&#xA0;&#xA0;&#xA0;&#xA0; /home/users/ansley&gt; set flist = 'model_run_7.nc
-&gt;&#xA0;&#xA0;&#xA0;&#xA0; ocean_model_run5.nc <a  rel="nofollow" href="http://address/climate.nc">http://address/climate.nc</a>'
-&gt;&#xA0;&#xA0;&#xA0;&#xA0; /home/users/ansley&gt; foreach fname ($flist)
-&gt;&#xA0;&#xA0;&#xA0;&#xA0; foreach? ferret -script myscript.jnl $fname
-&gt;&#xA0;&#xA0;&#xA0;&#xA0; foreach? end
-&gt;&#xA0;&#xA0;&#xA0;&#xA0; model_run_7.nc
-&gt;&#xA0;&#xA0;&#xA0;&#xA0; ocean_model_run5.nc
+&gt; /home/users/ansley&gt; set flist = 'model_run_7.nc
+&gt; ocean_model_run5.nc <a  rel="nofollow" href="http://address/climate.nc">http://address/climate.nc</a>'
+&gt; /home/users/ansley&gt; foreach fname ($flist)
+&gt; foreach? ferret -script myscript.jnl $fname
+&gt; foreach? end
+&gt; model_run_7.nc
+&gt; ocean_model_run5.nc
 &gt; <a  rel="nofollow" href="http://address/data/climate.nc">http://address/data/climate.nc</a>
 &gt;
 &gt;
-&gt;&#xA0;&#xA0;&#xA0;&#xA0; On 5/18/2020 10:47 AM, Giorgio Graffino wrote:
-&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0; Hi Ashley,
-&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0; thanks for your suggestion.
+&gt; On 5/18/2020 10:47 AM, Giorgio Graffino wrote:
+&gt;&gt; Hi Ashley,
+&gt;&gt; thanks for your suggestion.
 &gt;&gt;
-&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0; I preferred to implement the other method because it
+&gt;&gt; I preferred to implement the other method because it
 involved a
-&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0; single Ferret call, but I haven't thought about passing all
-&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0; variables in that way. You are suggesting something like
+&gt;&gt; single Ferret call, but I haven't thought about passing all
+&gt;&gt; variables in that way. You are suggesting something like
 &gt;&gt;
-&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0; ferret -script scriptname.jnl model1 model2 model3
+&gt;&gt; ferret -script scriptname.jnl model1 model2 model3
 &gt;&gt;
-&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0; which would be great to have, but I should find a way to loop
-&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0; across all models from inside the jnl script. Now my jnl
+&gt;&gt; which would be great to have, but I should find a way to loop
+&gt;&gt; across all models from inside the jnl script. Now my jnl
 script
-&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0; includes
+&gt;&gt; includes
 &gt;&gt;
-&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0; define symbol model = ($01)
+&gt;&gt; define symbol model = ($01)
 &gt;&gt;
-&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0; to read the argument, because I'm parsing only one argument
+&gt;&gt; to read the argument, because I'm parsing only one argument
 at a
-&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0; time. How can I loop over all models from inside the jnl
+&gt;&gt; time. How can I loop over all models from inside the jnl
 script?
 &gt;&gt;
-&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0; Cheers,
-&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0; Giorgio
+&gt;&gt; Cheers,
+&gt;&gt; Giorgio
 &gt;&gt;
 &gt;&gt;
-&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ----Messaggio originale----
-&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Da: ansley.b.manke@xxxxxxxx
-&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Data: 12-mag-2020 19.55
-&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; A: &lt;ferret_users@xxxxxxxx&gt;
-&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Ogg: Re: [ferret_users] Problems with netcdf output and
-&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; zaxreplace
+&gt;&gt; ----Messaggio originale----
+&gt;&gt; Da: ansley.b.manke@xxxxxxxx
+&gt;&gt; Data: 12-mag-2020 19.55
+&gt;&gt; A: &lt;ferret_users@xxxxxxxx&gt;
+&gt;&gt; Ogg: Re: [ferret_users] Problems with netcdf output and
+&gt;&gt; zaxreplace
 &gt;&gt;
-&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Hi Giorgio,
+&gt;&gt; Hi Giorgio,
 &gt;&gt;
-&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Another method for sending Ferret/PyFerret a set of
+&gt;&gt; Another method for sending Ferret/PyFerret a set of
 commands
-&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; is to use the -script option on startup.
+&gt;&gt; is to use the -script option on startup.
 &gt;&gt;
-&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; &gt; pyferret -script my_script.jnl [arguments]
+&gt;&gt; &gt; pyferret -script my_script.jnl [arguments]
 &gt;&gt;
-&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; This is generally more flexible than piping commands.&#xA0; The
-&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; startup option -batch for Ferret or -nodisplay for
+&gt;&gt; This is generally more flexible than piping commands. The
+&gt;&gt; startup option -batch for Ferret or -nodisplay for
 PyFerret
-&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; are also useful when you don't want to have graphics
+&gt;&gt; are also useful when you don't want to have graphics
 windows
-&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; display.&#xA0; Note that -script must appear last among command
-&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; line switches so that the script arguments will be parsed
-&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; correctly.
+&gt;&gt; display. Note that -script must appear last among command
+&gt;&gt; line switches so that the script arguments will be parsed
+&gt;&gt; correctly.
 &gt;&gt;
-&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Unix command-line switches
+&gt;&gt; Unix command-line switches
 &gt;&gt;
-&lt;<a  rel="nofollow" href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/introduction/GETTING-STARTED#_VPID_8">https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/introduction/GETTING-STARTED#_VPID_8</a>&gt;
+&lt;<a  rel="nofollow" href="../../documentation/users-guide/introduction/GETTING-STARTED#_VPID_8">../../documentation/users-guide/introduction/GETTING-STARTED#_VPID_8</a>&gt;
  
 &gt;&gt;
 &gt;&gt;
 &gt;&gt;
-&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; On 5/9/2020 3:19 AM, Giorgio Graffino wrote:
-&gt;&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Hi Ryo,
-&gt;&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; thanks to your &quot;quote&quot; suggestion I could successfully
+&gt;&gt; On 5/9/2020 3:19 AM, Giorgio Graffino wrote:
+&gt;&gt;&gt; Hi Ryo,
+&gt;&gt;&gt; thanks to your &quot;quote&quot; suggestion I could successfully
 run
-&gt;&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; my bash script.
+&gt;&gt;&gt; my bash script.
 &gt;&gt;&gt;
-&gt;&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Cheers,
-&gt;&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Giorgio
+&gt;&gt;&gt; Cheers,
+&gt;&gt;&gt; Giorgio
 &gt;&gt;&gt;
-&gt;&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ----Messaggio originale----
-&gt;&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Da: furue@xxxxxxxxxx
-&gt;&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Data: 28-apr-2020 14.28
-&gt;&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; A: &quot;Giorgio Graffino&quot; &lt;g.graffino@xxxxxx&gt;
-&gt;&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Cc: &quot;Ferret&quot; &lt;ferret_users@xxxxxxxx&gt;
-&gt;&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Ogg: Re: [ferret_users] Problems with netcdf
+&gt;&gt;&gt; ----Messaggio originale----
+&gt;&gt;&gt; Da: furue@xxxxxxxxxx
+&gt;&gt;&gt; Data: 28-apr-2020 14.28
+&gt;&gt;&gt; A: &quot;Giorgio Graffino&quot; &lt;g.graffino@xxxxxx&gt;
+&gt;&gt;&gt; Cc: &quot;Ferret&quot; &lt;ferret_users@xxxxxxxx&gt;
+&gt;&gt;&gt; Ogg: Re: [ferret_users] Problems with netcdf
 output and
-&gt;&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; zaxreplace
+&gt;&gt;&gt; zaxreplace
 &gt;&gt;&gt;
-&gt;&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Hi Giorgio,
+&gt;&gt;&gt; Hi Giorgio,
 &gt;&gt;&gt;
-&gt;&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; On Tue, Apr 28, 2020 at 7:09 PM Giorgio Graffino &lt;
-&gt;&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; g.graffino@xxxxxx &lt;invalidurl.gif&gt;&gt; wrote:
-&gt;&gt;&gt;
-&gt;&gt;&gt;
-&gt;&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; !-&gt; REPEAT: I=1
-&gt;&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; **ERROR: command syntax: II = ???
-&gt;&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; define symbol ii
+&gt;&gt;&gt; On Tue, Apr 28, 2020 at 7:09 PM Giorgio Graffino &lt;
+&gt;&gt;&gt; g.graffino@xxxxxx &lt;invalidurl.gif&gt;&gt; wrote:
 &gt;&gt;&gt;
 &gt;&gt;&gt;
-&gt;&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Compare this line with the one in the original shell
-&gt;&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; script:
+&gt;&gt;&gt; !-&gt; REPEAT: I=1
+&gt;&gt;&gt; **ERROR: command syntax: II = ???
+&gt;&gt;&gt; define symbol ii
 &gt;&gt;&gt;
-&gt;&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ferret &lt;&lt; STOP
-&gt;&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; . . .
-&gt;&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; define symbol ii `i`
-&gt;&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; . . .
-&gt;&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; STOP
 &gt;&gt;&gt;
-&gt;&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Where did `i`&#xA0; go?
+&gt;&gt;&gt; Compare this line with the one in the original shell
+&gt;&gt;&gt; script:
 &gt;&gt;&gt;
-&gt;&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; In the shell script as well as in the ferret
+&gt;&gt;&gt; ferret &lt;&lt; STOP
+&gt;&gt;&gt; . . .
+&gt;&gt;&gt; define symbol ii `i`
+&gt;&gt;&gt; . . .
+&gt;&gt;&gt; STOP
+&gt;&gt;&gt;
+&gt;&gt;&gt; Where did `i` go?
+&gt;&gt;&gt;
+&gt;&gt;&gt; In the shell script as well as in the ferret
 script, the
-&gt;&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; backquote construct is evaluated.&#xA0; In the above shell
-&gt;&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; script, the shell tries to run a command named
-&quot;i&quot;.&#xA0; It
-&gt;&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; fails and is replaced with an empty string. I
-&gt;&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; suppose&#xA0;you saw this error message on your screen
+&gt;&gt;&gt; backquote construct is evaluated. In the above shell
+&gt;&gt;&gt; script, the shell tries to run a command named
+&quot;i&quot;. It
+&gt;&gt;&gt; fails and is replaced with an empty string. I
+&gt;&gt;&gt; supposeyou saw this error message on your screen
 &gt;&gt;&gt;
-&gt;&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; . . . i: command not found
+&gt;&gt;&gt; . . . i: command not found
 &gt;&gt;&gt;
-&gt;&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; To prevent the shell from interpreting the backquote
-&gt;&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; construct, you &quot;quote&quot; the here-document by
+&gt;&gt;&gt; To prevent the shell from interpreting the backquote
+&gt;&gt;&gt; construct, you &quot;quote&quot; the here-document by
 &gt;&gt;&gt;
-&gt;&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ferret &lt;&lt;'STOP'
-&gt;&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; . . .
-&gt;&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; STOP
+&gt;&gt;&gt; ferret &lt;&lt;'STOP'
+&gt;&gt;&gt; . . .
+&gt;&gt;&gt; STOP
 &gt;&gt;&gt;
-&gt;&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Ryo
-&gt;&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; --------------------
-&gt;&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; To see what's going on, run this kind of test
+&gt;&gt;&gt; Ryo
+&gt;&gt;&gt; --------------------
+&gt;&gt;&gt; To see what's going on, run this kind of test
 shell script
 &gt;&gt;&gt;
-&gt;&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; echo date
-&gt;&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; echo `date`
-&gt;&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; echo &quot;abc `date` def&quot;
-&gt;&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; echo 'abc `date` def'
+&gt;&gt;&gt; echo date
+&gt;&gt;&gt; echo `date`
+&gt;&gt;&gt; echo &quot;abc `date` def&quot;
+&gt;&gt;&gt; echo 'abc `date` def'
 &gt;&gt;&gt;
-&gt;&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; cat &lt;&lt;EOF
-&gt;&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; date
-&gt;&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; `date`
-&gt;&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; EOF
+&gt;&gt;&gt; cat &lt;&lt;EOF
+&gt;&gt;&gt; date
+&gt;&gt;&gt; `date`
+&gt;&gt;&gt; EOF
 &gt;&gt;&gt;
-&gt;&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; cat &lt;&lt;'EOF'
-&gt;&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; date
-&gt;&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; `date`
-&gt;&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; EOF
+&gt;&gt;&gt; cat &lt;&lt;'EOF'
+&gt;&gt;&gt; date
+&gt;&gt;&gt; `date`
+&gt;&gt;&gt; EOF
 &gt;&gt;&gt;
 &gt;&gt;&gt;
 &gt;&gt;&gt;
-&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; --
-&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Ansley Manke
-&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Science Data Integration Group
-&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; NOAA Pacific Marine Environmental Laboratory
-&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 7600 Sand Point Way NE
-&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Seattle WA 98115
+&gt;&gt; --
+&gt;&gt; Ansley Manke
+&gt;&gt; Science Data Integration Group
+&gt;&gt; NOAA Pacific Marine Environmental Laboratory
+&gt;&gt; 7600 Sand Point Way NE
+&gt;&gt; Seattle WA 98115
 &gt;&gt;
-&gt;&gt;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; I am currently teleworking and am available Tue-Wed-Thu.
+&gt;&gt; I am currently teleworking and am available Tue-Wed-Thu.
 &gt;&gt;
 &gt;&gt;
 &gt;&gt;
-&gt;&#xA0;&#xA0;&#xA0;&#xA0; --
-&gt;&#xA0;&#xA0;&#xA0;&#xA0; Ansley Manke
-&gt;&#xA0;&#xA0;&#xA0;&#xA0; Science Data Integration Group
-&gt;&#xA0;&#xA0;&#xA0;&#xA0; NOAA Pacific Marine Environmental Laboratory
-&gt;&#xA0;&#xA0;&#xA0;&#xA0; 7600 Sand Point Way NE
-&gt;&#xA0;&#xA0;&#xA0;&#xA0; Seattle WA 98115
+&gt; --
+&gt; Ansley Manke
+&gt; Science Data Integration Group
+&gt; NOAA Pacific Marine Environmental Laboratory
+&gt; 7600 Sand Point Way NE
+&gt; Seattle WA 98115
 &gt;
-&gt;&#xA0;&#xA0;&#xA0;&#xA0; I am currently teleworking and am available Tue-Wed-Thu.
+&gt; I am currently teleworking and am available Tue-Wed-Thu.
 &gt;
 &gt;
 &gt;

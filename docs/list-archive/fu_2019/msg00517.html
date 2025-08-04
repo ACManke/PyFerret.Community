@@ -52,20 +52,20 @@
 <!--X-Body-of-Message-->
 <div dir="ltr"><div class="gmail_default" style=""><p class="MsoNormal" style="margin:0in 0in 0.0001pt"><font face="arial, sans-serif" style=""><a rel="nofollow" name="_GoBack"></a>Dear Russ, Ansley, and Martin,</font></p>
  
-<p class="MsoNormal" style="margin:0in 0in 0.0001pt"><font face="arial, sans-serif">&#xA0;</font></p>
+<p class="MsoNormal" style="margin:0in 0in 0.0001pt"><font face="arial, sans-serif"></font></p>
  
 <p class="MsoNormal" style="margin:0in 0in 0.0001pt"><font face="arial, sans-serif">Thanks a lot for your quick response and excellent
-suggestions &#x2013; they should enable me to accomplish what I am trying to do, with better efficiency.&#xA0;</font></p><p class="MsoNormal" style="margin:0in 0in 0.0001pt"><font face="arial, sans-serif"><br></font></p><p class="MsoNormal" style="margin:0in 0in 0.0001pt"><font face="arial, sans-serif">Will reach out to this group again if additional help is needed.</font></p>
+suggestions &#x2013; they should enable me to accomplish what I am trying to do, with better efficiency.</font></p><p class="MsoNormal" style="margin:0in 0in 0.0001pt"><font face="arial, sans-serif"><br></font></p><p class="MsoNormal" style="margin:0in 0in 0.0001pt"><font face="arial, sans-serif">Will reach out to this group again if additional help is needed.</font></p>
  
-<p class="MsoNormal" style="margin:0in 0in 0.0001pt"><font face="arial, sans-serif">&#xA0;</font></p>
+<p class="MsoNormal" style="margin:0in 0in 0.0001pt"><font face="arial, sans-serif"></font></p>
  
 <p class="MsoNormal" style="margin:0in 0in 0.0001pt"><font face="arial, sans-serif">Best regards,</font></p>
  
-<p class="MsoNormal" style="margin:0in 0in 0.0001pt"><font face="arial, sans-serif">&#xA0;</font></p>
+<p class="MsoNormal" style="margin:0in 0in 0.0001pt"><font face="arial, sans-serif"></font></p>
  
 <p class="MsoNormal" style="margin:0in 0in 0.0001pt"><font face="arial, sans-serif" style="">--- Peng </font></p>
  
-<p class="MsoNormal" style="font-size:12pt;margin:0in 0in 0.0001pt;font-family:Calibri,sans-serif">&#xA0;</p></div></div><br><div class="gmail_quote"><div dir="ltr" class="gmail_attr">On Wed, Feb 5, 2020 at 7:28 PM Fiedler, Russell (O&amp;A, Hobart) &lt;Russell.Fiedler@xxxxxxxx&gt; wrote:<br></div><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex">
+<p class="MsoNormal" style="font-size:12pt;margin:0in 0in 0.0001pt;font-family:Calibri,sans-serif"></p></div></div><br><div class="gmail_quote"><div dir="ltr" class="gmail_attr">On Wed, Feb 5, 2020 at 7:28 PM Fiedler, Russell (O&amp;A, Hobart) &lt;Russell.Fiedler@xxxxxxxx&gt; wrote:<br></div><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex">
  
  
  
@@ -135,17 +135,17 @@ Russ<br>
 </div>
 <div id="gmail-m_3922401826955919671appendonsend"></div>
 <hr style="display:inline-block;width:98%">
-<div id="gmail-m_3922401826955919671divRplyFwdMsg" dir="ltr"><font face="Calibri, sans-serif" style="font-size:11pt" color="#000000"><b>From:</b> <a rel="nofollow" href="mailto:owner-ferret_users@xxxxxxxx" target="_blank">owner-ferret_users@xxxxxxxx</a> &lt;<a rel="nofollow" href="mailto:owner-ferret_users@xxxxxxxx" target="_blank">owner-ferret_users@xxxxxxxx</a>&gt; on behalf of Ansley C. Manke &lt;<a rel="nofollow" href="mailto:ansley.b.manke@xxxxxxxx" target="_blank">ansley.b.manke@xxxxxxxx</a>&gt;<br>
+<div id="gmail-m_3922401826955919671divRplyFwdMsg" dir="ltr"><font face="Calibri, sans-serif" style="font-size:11pt" color="#000000"><b>From:</b> <a rel="nofollow" href="mailto:owner-ferret_users@xxxxxxxx">owner-ferret_users@xxxxxxxx</a> &lt;<a rel="nofollow" href="mailto:owner-ferret_users@xxxxxxxx">owner-ferret_users@xxxxxxxx</a>&gt; on behalf of Ansley C. Manke &lt;<a rel="nofollow" href="mailto:ansley.b.manke@xxxxxxxx">ansley.b.manke@xxxxxxxx</a>&gt;<br>
 <b>Sent:</b> Thursday, 6 February 2020 10:43 AM<br>
-<b>To:</b> <a rel="nofollow" href="mailto:ferret_users@xxxxxxxx" target="_blank">ferret_users@xxxxxxxx</a> &lt;<a rel="nofollow" href="mailto:ferret_users@xxxxxxxx" target="_blank">ferret_users@xxxxxxxx</a>&gt;<br>
+<b>To:</b> <a rel="nofollow" href="mailto:ferret_users@xxxxxxxx">ferret_users@xxxxxxxx</a> &lt;<a rel="nofollow" href="mailto:ferret_users@xxxxxxxx">ferret_users@xxxxxxxx</a>&gt;<br>
 <b>Subject:</b> Re: [ferret_users] Appending output data to a netCDF file in i-dimension</font>
-<div>&#xA0;</div>
+<div></div>
 </div>
 <div>
-<p>The general answer for appending to a file in directions other than time, is to first create the file with the full limits that you want to appear in the file, using /ILIMITS, /JLIMITS, /KLIMITS, in all except the time axis.&#xA0; Then make sure the variable
+<p>The general answer for appending to a file in directions other than time, is to first create the file with the full limits that you want to appear in the file, using /ILIMITS, /JLIMITS, /KLIMITS, in all except the time axis. Then make sure the variable
 is defined on the same grid, so that when you&#39;re writing data at i=1, it&#39;s i=1 on the axis, with the same axis names so that it can be appended.</p>
 <p>The documentattion for /ILIMITS, etc is here,</p>
-<p><a rel="nofollow" href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/LIST#_VPINDEXENTRY_1409" target="_blank">https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/LIST#_VPINDEXENTRY_1409</a></p>
+<p><a rel="nofollow" href="../../documentation/users-guide/commands-reference/LIST#_VPINDEXENTRY_1409">../../documentation/users-guide/commands-reference/LIST#_VPINDEXENTRY_1409</a></p>
 <p>and follow the links there to examples of appending in I, J, or Z.</p>
 <p><br>
 </p>
@@ -160,25 +160,25 @@ is defined on the same grid, so that when you&#39;re writing data at i=1, it&#39
 <div style="font-size:small"><br clear="all">
 </div>
 <div>
-<p style="margin:0in 0in 0.0001pt"><font face="arial, sans-serif">I need to compute daily climate normals (30-yrs averages) from a daily dataset &#xA0;<span style="font-size:small">(</span>variable: var_dta<span style="font-size:small">)</span>,
+<p style="margin:0in 0in 0.0001pt"><font face="arial, sans-serif">I need to compute daily climate normals (30-yrs averages) from a daily dataset <span style="font-size:small">(</span>variable: var_dta<span style="font-size:small">)</span>,
 with dimensions of I:1385; J:596; L:10957. </font></p>
-<p style="margin:0in 0in 0.0001pt"><font face="arial, sans-serif">&#xA0;</font></p>
-<p style="margin:0in 0in 0.0001pt"><font face="arial, sans-serif">As&#xA0;<span style="font-size:small">the machine memory is not large enough for me</span> to compute the normals for the entire field, I had to do so at
-each data point along the i-dimension (1:1385) and output the results to an intermediate nc file, using the code below.<span style="font-size:small"> (Potentially, I may have to do so at each of xy data points.&#xA0;</span></font>Printing
+<p style="margin:0in 0in 0.0001pt"><font face="arial, sans-serif"></font></p>
+<p style="margin:0in 0in 0.0001pt"><font face="arial, sans-serif">As<span style="font-size:small">the machine memory is not large enough for me</span> to compute the normals for the entire field, I had to do so at
+each data point along the i-dimension (1:1385) and output the results to an intermediate nc file, using the code below.<span style="font-size:small"> (Potentially, I may have to do so at each of xy data points.</span></font>Printing
 out values at each <span style="font-size:small">of all </span>
-xy data point<span style="font-size:small">s</span> to an ascii&#xA0;file takes too long!<span style="font-family:arial,sans-serif">)</span></p>
-<p style="margin:0in 0in 0.0001pt"><font face="arial, sans-serif">&#xA0;</font></p>
+xy data point<span style="font-size:small">s</span> to an asciifile takes too long!<span style="font-family:arial,sans-serif">)</span></p>
+<p style="margin:0in 0in 0.0001pt"><font face="arial, sans-serif"></font></p>
 <p style="margin:0in 0in 0.0001pt"><font face="arial, sans-serif">Unfortunately, I am getting an error message
-<span style="font-size:small">(see below) </span>and would appreciate any help you may provide.<span style="font-size:small">&#xA0;</span></font></p>
+<span style="font-size:small">(see below) </span>and would appreciate any help you may provide.<span style="font-size:small"></span></font></p>
 <p style="margin:0in 0in 0.0001pt"><font face="arial, sans-serif"><span style="font-size:small"><br>
 </span></font></p>
 <p style="margin:0in 0in 0.0001pt"><font face="arial, sans-serif"><span style="font-size:small">If you have a better way for computing daily climate normals with a large dataset, I&#39;d appreciate it if you could share
 your method with me.</span></font></p>
-<p style="margin:0in 0in 0.0001pt"><font face="arial, sans-serif">&#xA0;</font></p>
+<p style="margin:0in 0in 0.0001pt"><font face="arial, sans-serif"></font></p>
 <p style="margin:0in 0in 0.0001pt"><font face="arial, sans-serif">Thanks,</font></p>
-<p style="margin:0in 0in 0.0001pt"><font face="arial, sans-serif">&#xA0;</font></p>
+<p style="margin:0in 0in 0.0001pt"><font face="arial, sans-serif"></font></p>
 <p style="margin:0in 0in 0.0001pt"><font face="arial, sans-serif">--- Peng</font></p>
-<p style="margin:0in 0in 0.0001pt"><font face="arial, sans-serif">&#xA0;</font></p>
+<p style="margin:0in 0in 0.0001pt"><font face="arial, sans-serif"></font></p>
 <p style="margin:0in 0in 0.0001pt;font-size:12pt;font-family:Calibri,sans-serif">
 ------</p>
 <p style="margin:0in 0in 0.0001pt;font-size:12pt;font-family:Calibri,sans-serif">
@@ -186,51 +186,51 @@ your method with me.</span></font></p>
 <p style="text-indent:11pt;margin:0in 0in 0.0001pt;font-size:12pt;font-family:Calibri,sans-serif">
 def axis/t=0:365.2425/edges/npoints=365/t0=1-JAN-0001/units=days/modulo tdaily</p>
 <p style="margin:0in 0in 0.0001pt;font-size:12pt;font-family:Calibri,sans-serif">
-&#xA0;</p>
+</p>
 <p style="margin:0in 0in 0.0001pt;font-size:12pt;font-family:Calibri,sans-serif">
 ! &#x2013; Compute daily normals along i-dimension</p>
 <p style="text-indent:11pt;margin:0in 0in 0.0001pt;font-size:12pt;font-family:Calibri,sans-serif">
-&#xA0;&#xA0;&#xA0;&#xA0; sp rm -f <a rel="nofollow" href="http://v_ij.nc" target="_blank">v_ij.nc</a></p>
+ sp rm -f <a rel="nofollow" href="http://v_ij.nc">v_ij.nc</a></p>
 <p style="text-indent:11pt;margin:0in 0in 0.0001pt;font-size:12pt;font-family:Calibri,sans-serif">
-&#xA0;&#xA0;&#xA0;&#xA0; repeat/range=1:`idm`/name=ii (;\</p>
+ repeat/range=1:`idm`/name=ii (;\</p>
 <p style="text-indent:11pt;margin:0in 0in 0.0001pt;font-size:12pt;font-family:Calibri,sans-serif">
-&#xA0;&#xA0;&#xA0;&#xA0; let v_ij=var_dta[i=`ii`] ;\</p>
+ let v_ij=var_dta[i=`ii`] ;\</p>
 <p style="text-indent:11pt;margin:0in 0in 0.0001pt;font-size:12pt;font-family:Calibri,sans-serif">
-&#xA0;&#xA0;&#xA0;&#xA0; let v_norm=v_ij[GT=tdaily@mod] ;\</p>
+ let v_norm=v_ij[GT=tdaily@mod] ;\</p>
 <p style="text-indent:11pt;margin:0in 0in 0.0001pt;font-size:12pt;font-family:Calibri,sans-serif">
-&#xA0;&#xA0;&#xA0;&#xA0; let v_std=(v_ij[GT=tdaily@modvar])^0.5 ;\</p>
+ let v_std=(v_ij[GT=tdaily@modvar])^0.5 ;\</p>
 <p style="text-indent:11pt;margin:0in 0in 0.0001pt;font-size:12pt;font-family:Calibri,sans-serif">
-&#xA0;&#xA0;&#xA0;&#xA0; let v_min=v_ij[GT=tdaily@modmin] ;\</p>
+ let v_min=v_ij[GT=tdaily@modmin] ;\</p>
 <p style="text-indent:11pt;margin:0in 0in 0.0001pt;font-size:12pt;font-family:Calibri,sans-serif">
-&#xA0;&#xA0;&#xA0;&#xA0; let v_max=v_ij[GT=tdaily@modmax] ;\</p>
+ let v_max=v_ij[GT=tdaily@modmax] ;\</p>
 <p style="text-indent:11pt;margin:0in 0in 0.0001pt;font-size:12pt;font-family:Calibri,sans-serif">
-&#xA0;&#xA0;&#xA0;&#xA0; let v_npts=v_ij[GT=tdaily@modngd] ;\</p>
+ let v_npts=v_ij[GT=tdaily@modngd] ;\</p>
 <p style="text-indent:11pt;margin:0in 0in 0.0001pt;font-size:12pt;font-family:Calibri,sans-serif">
-&#xA0;&#xA0;&#xA0;&#xA0; save/file=<a rel="nofollow" href="http://v_ij.nc/app%0D%20%20%20%20%20%20%20%20%20%20%20%20%20%20v_norm,v_std,v_min,v_max,v_npts" target="_blank">v_ij.nc/app v_norm,v_std,v_min,v_max,v_npts</a> ;\</p>
+ save/file=<a rel="nofollow" href="http://v_ij.nc/app%0D%20%20%20%20%20%20%20%20%20%20%20%20%20%20v_norm,v_std,v_min,v_max,v_npts">v_ij.nc/app v_norm,v_std,v_min,v_max,v_npts</a> ;\</p>
 <p style="text-indent:11pt;margin:0in 0in 0.0001pt;font-size:12pt;font-family:Calibri,sans-serif">
-&#xA0;&#xA0;&#xA0;&#xA0; can var v_* ;\</p>
+ can var v_* ;\</p>
 <p style="text-indent:11pt;margin:0in 0in 0.0001pt;font-size:12pt;font-family:Calibri,sans-serif">
-&#xA0;&#xA0;&#xA0;&#xA0; )</p>
+ )</p>
 <p style="text-indent:11pt;margin:0in 0in 0.0001pt;font-size:12pt;font-family:Calibri,sans-serif">
-&#xA0;</p>
+</p>
 <p style="text-indent:11pt;margin:0in 0in 0.0001pt;font-size:12pt;font-family:Calibri,sans-serif">
 **TMAP ERR: Requested data range is outside of data set limits</p>
 <p style="text-indent:11pt;margin:0in 0in 0.0001pt;font-size:12pt;font-family:Calibri,sans-serif">
-&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;Expected: V_NORM[I=&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 2 :&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 2 ] Found: V_NORM[I=&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1 :&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1 ]</p>
+ Expected: V_NORM[I= 2 : 2 ] Found: V_NORM[I= 1 : 1 ]</p>
 <p style="text-indent:11pt;margin:0in 0in 0.0001pt;font-size:12pt;font-family:Calibri,sans-serif">
-LIST/FORMAT=CDF/file=<a rel="nofollow" href="http://v_ij.nc/app%0D%20%20%20%20%20%20%20%20%20%20%20%20%20%20v_norm,v_std,v_min,v_max,v_npts" target="_blank">v_ij.nc/app v_norm,v_std,v_min,v_max,v_npts</a></p>
+LIST/FORMAT=CDF/file=<a rel="nofollow" href="http://v_ij.nc/app%0D%20%20%20%20%20%20%20%20%20%20%20%20%20%20v_norm,v_std,v_min,v_max,v_npts">v_ij.nc/app v_norm,v_std,v_min,v_max,v_npts</a></p>
 <p style="text-indent:11pt;margin:0in 0in 0.0001pt;font-size:12pt;font-family:Calibri,sans-serif">
-&#xA0;</p>
+</p>
 <p style="text-indent:11pt;margin:0in 0in 0.0001pt">
 <b><font face="arial, sans-serif">The same error message if I use either one of the following two:</font></b></p>
 <p style="text-indent:11pt;margin:0in 0in 0.0001pt">
-<font face="arial, sans-serif">save/file=<a rel="nofollow" href="http://v_ij.nc/app/" target="_blank">v_ij.nc/app/</a><span style="color:rgb(192,0,0)">I=1
+<font face="arial, sans-serif">save/file=<a rel="nofollow" href="http://v_ij.nc/app/">v_ij.nc/app/</a><span style="color:rgb(192,0,0)">I=1
 </span>v_norm,v_std,v_min,v_max,v_npts ;\</font></p>
 <p style="text-indent:11pt;margin:0in 0in 0.0001pt">
-<font face="arial, sans-serif">save/file=<a rel="nofollow" href="http://v_ij.nc/app/" target="_blank">v_ij.nc/app/</a><span style="color:rgb(192,0,0)">I=`ii`
+<font face="arial, sans-serif">save/file=<a rel="nofollow" href="http://v_ij.nc/app/">v_ij.nc/app/</a><span style="color:rgb(192,0,0)">I=`ii`
 </span>v_norm,v_std,v_min,v_max,v_npts ;\</font></p>
 <p style="text-indent:11pt;margin:0in 0in 0.0001pt;font-size:12pt;font-family:Calibri,sans-serif">
-&#xA0;</p>
+</p>
 </div>
 -- <br>
 <div dir="ltr">
@@ -246,16 +246,16 @@ LIST/FORMAT=CDF/file=<a rel="nofollow" href="http://v_ij.nc/app%0D%20%20%20%20%2
 <div dir="ltr">
 <p><b><span style="font-size:9pt;font-family:Arial;color:rgb(51,51,51);background:white">Ge Peng, PhD</span></b><span style="font-size:9pt;font-family:Arial;color:rgb(51,51,51);background:white"><br>
 <b>Research Scholar</b><br>
-</span><span style="font-size:9pt;font-family:Arial;color:rgb(34,34,34)">NOAA&#39;s Cooperative Institute for Satellite Earth System Studies (CISESS) at</span><span style="font-size:9pt;color:rgb(34,34,34)"><font face="Times">&#xA0;</font></span></p>
+</span><span style="font-size:9pt;font-family:Arial;color:rgb(34,34,34)">NOAA&#39;s Cooperative Institute for Satellite Earth System Studies (CISESS) at</span><span style="font-size:9pt;color:rgb(34,34,34)"><font face="Times"></font></span></p>
 <p><span style="font-family:Arial;font-size:9pt">NOAA&#x2019;s National Centers for Environmental Information (NCEI)</span></p>
 <p><span style="font-size:9pt;font-family:Times"></span></p>
 <p><span style="font-size:9pt;font-family:Arial;color:rgb(34,34,34)">Center for Weather and Climate (CWC)</span><span style="font-size:9pt;font-family:Times"></span></p>
 <p><span style="font-size:9pt;font-family:Arial;color:rgb(51,51,51);background:white">151 Patton Ave, Asheville, NC 28801 USA<br>
 <a rel="nofollow"><span style="color:rgb(17,85,204)">+1 828 257 3009</span></a>; <span style="color:rgb(17,85,204)">
-<a rel="nofollow" href="mailto:ge.peng@xxxxxxxx" target="_blank">ge.peng@xxxxxxxx</a></span></span></p>
-<p><span style="font-size:9pt;font-family:Arial">ORCID: http://</span><span style="font-size:9pt;font-family:Arial;color:rgb(73,74,76);background-image:initial;background-position:initial;background-repeat:initial"><a rel="nofollow" href="http://orcid.org/0000-0002-1986-9115" target="_blank">orcid.org/0000-0002-1986-9115</a></span></p>
+<a rel="nofollow" href="mailto:ge.peng@xxxxxxxx">ge.peng@xxxxxxxx</a></span></span></p>
+<p><span style="font-size:9pt;font-family:Arial">ORCID: http://</span><span style="font-size:9pt;font-family:Arial;color:rgb(73,74,76);background-image:initial;background-position:initial;background-repeat:initial"><a rel="nofollow" href="http://orcid.org/0000-0002-1986-9115">orcid.org/0000-0002-1986-9115</a></span></p>
 <p style="color:rgb(51,51,51);font-family:Times;font-size:13.6364px;margin-bottom:0.0001pt;background-color:white">
-<span style="font-family:arial,helvetica,sans-serif;font-size:10.9091px;line-height:11.9886px;text-align:-webkit-center">Following CICS-NC on&#xA0;</span><a rel="nofollow" href="http://www.facebook.com/cicsnc" style="font-family:arial,helvetica,sans-serif;font-size:10.9091px;line-height:11.9886px;color:rgb(38,58,143);text-decoration:none;font-weight:bold" target="_blank">Facebook</a></p>
+<span style="font-family:arial,helvetica,sans-serif;font-size:10.9091px;line-height:11.9886px;text-align:-webkit-center">Following CICS-NC on</span><a rel="nofollow" href="http://www.facebook.com/cicsnc" style="font-family:arial,helvetica,sans-serif;font-size:10.9091px;line-height:11.9886px;color:rgb(38,58,143);text-decoration:none;font-weight:bold">Facebook</a></p>
 <table width="500" cellspacing="2" cellpadding="2" border="0" style="max-width:100%;border-collapse:collapse;border-spacing:0px;color:rgb(51,51,51);font-size:14px;font-family:Times;line-height:12px">
 <tbody>
 <tr>
@@ -285,11 +285,11 @@ LIST/FORMAT=CDF/file=<a rel="nofollow" href="http://v_ij.nc/app%0D%20%20%20%20%2
  
 </blockquote></div><br clear="all"><div><br></div>-- <br><div dir="ltr" class="gmail_signature"><div dir="ltr"><div><div dir="ltr"><div dir="ltr"><div dir="ltr"><div dir="ltr"><div dir="ltr"><div dir="ltr"><div dir="ltr"><div dir="ltr"><p><b><span style="font-size:9pt;font-family:Arial;color:rgb(51,51,51);background:white">Ge
 Peng, PhD</span></b><span style="font-size:9pt;font-family:Arial;color:rgb(51,51,51);background:white"><br>
-<b>Research Scholar</b><br></span><span style="font-size:9pt;font-family:Arial;color:rgb(34,34,34)">NOAA&#39;s Cooperative Institute for Satellite Earth System Studies (CISESS) at</span><span style="font-size:9pt;color:rgb(34,34,34)"><font face="Times">&#xA0;</font></span></p><p><span style="font-family:Arial;font-size:9pt">NOAA&#x2019;s
+<b>Research Scholar</b><br></span><span style="font-size:9pt;font-family:Arial;color:rgb(34,34,34)">NOAA&#39;s Cooperative Institute for Satellite Earth System Studies (CISESS) at</span><span style="font-size:9pt;color:rgb(34,34,34)"><font face="Times"></font></span></p><p><span style="font-family:Arial;font-size:9pt">NOAA&#x2019;s
 National Centers for Environmental Information (NCEI)</span></p><p><span style="font-size:9pt;font-family:Times"></span></p><p><span style="font-size:9pt;font-family:Arial;color:rgb(34,34,34)">Center
 for Weather and Climate (CWC)</span><span style="font-size:9pt;font-family:Times"></span></p><p><span style="font-size:9pt;font-family:Arial;color:rgb(51,51,51);background:white">151 Patton Ave, Asheville, NC
 28801 USA<br>
-<a rel="nofollow"><span style="color:rgb(17,85,204)">+1 828 257 3009</span></a>; <span style="color:rgb(17,85,204)"><a rel="nofollow" href="mailto:ge.peng@xxxxxxxx" target="_blank">ge.peng@xxxxxxxx</a></span></span></p><p><span style="font-size:9pt;font-family:Arial">ORCID: http://</span><span style="font-size:9pt;font-family:Arial;color:rgb(73,74,76);background-image:initial;background-position:initial;background-repeat:initial"><a rel="nofollow" href="http://orcid.org/0000-0002-1986-9115" target="_blank">orcid.org/0000-0002-1986-9115</a></span></p><p style="color:rgb(51,51,51);font-family:Times;font-size:13.6364px;margin-bottom:0.0001pt;background-color:white"><span style="font-family:arial,helvetica,sans-serif;font-size:10.9091px;line-height:11.9886px;text-align:-webkit-center">Following CICS-NC on&#xA0;</span><a rel="nofollow" href="http://www.facebook.com/cicsnc" style="font-family:arial,helvetica,sans-serif;font-size:10.9091px;line-height:11.9886px;text-align:-webkit-center;color:rgb(38,58,143);text-decoration:none;font-weight:bold" target="_blank">Facebook</a></p><table border="0" cellpadding="2" cellspacing="2" width="500" style="max-width:100%;border-collapse:collapse;border-spacing:0px;color:rgb(51,51,51);font-size:14px;font-family:Times;line-height:12px"><tbody><tr><td align="center" height="71" width="71"><br></td><td valign="top"><br></td></tr></tbody></table><br></div></div></div></div></div></div></div></div></div></div></div>
+<a rel="nofollow"><span style="color:rgb(17,85,204)">+1 828 257 3009</span></a>; <span style="color:rgb(17,85,204)"><a rel="nofollow" href="mailto:ge.peng@xxxxxxxx">ge.peng@xxxxxxxx</a></span></span></p><p><span style="font-size:9pt;font-family:Arial">ORCID: http://</span><span style="font-size:9pt;font-family:Arial;color:rgb(73,74,76);background-image:initial;background-position:initial;background-repeat:initial"><a rel="nofollow" href="http://orcid.org/0000-0002-1986-9115">orcid.org/0000-0002-1986-9115</a></span></p><p style="color:rgb(51,51,51);font-family:Times;font-size:13.6364px;margin-bottom:0.0001pt;background-color:white"><span style="font-family:arial,helvetica,sans-serif;font-size:10.9091px;line-height:11.9886px;text-align:-webkit-center">Following CICS-NC on</span><a rel="nofollow" href="http://www.facebook.com/cicsnc" style="font-family:arial,helvetica,sans-serif;font-size:10.9091px;line-height:11.9886px;text-align:-webkit-center;color:rgb(38,58,143);text-decoration:none;font-weight:bold">Facebook</a></p><table border="0" cellpadding="2" cellspacing="2" width="500" style="max-width:100%;border-collapse:collapse;border-spacing:0px;color:rgb(51,51,51);font-size:14px;font-family:Times;line-height:12px"><tbody><tr><td align="center" height="71" width="71"><br></td><td valign="top"><br></td></tr></tbody></table><br></div></div></div></div></div></div></div></div></div></div></div>
  
 <!--X-Body-of-Message-End-->
 <!--X-MsgBody-End-->

@@ -55,9 +55,9 @@
  
 <p>Hi,</p>
 <p>There are a lot of ways to customize plots - a lot of them use
-plot qualifiers, but some come with other syntax like the PPL&#xA0;
-commands.&#xA0; They're listed in the documentation here:</p>
-<p><a rel="nofollow" class="moz-txt-link-freetext" href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/customizing-plots">https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/customizing-plots</a><br>
+plot qualifiers, but some come with other syntax like the PPL
+commands. They're listed in the documentation here:</p>
+<p><a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/users-guide/customizing-plots">../../documentation/users-guide/customizing-plots</a><br>
 </p>
 <div class="moz-cite-prefix">On 7/29/2021 4:08 AM, Claude-Michel
 Nzotungicimpaye wrote:<br>
@@ -83,15 +83,15 @@ is controlled by PPL XFOR and YFOR:<br>
 In each plot panel:<br>
 <br>
 PLOT/SET ....<br>
-PPL XFOR,(f5.2); PPL YFOR,(...)&#xA0; &#xA0;! fortran-style formats<br>
+PPL XFOR,(f5.2); PPL YFOR,(...) ! fortran-style formats<br>
 PPL PLOT<br>
 <br>
 You can also control lat/lon labels this way (for example to
 force these if the data is not on a lat-lon grid but it should
 be):<br>
 <br>
-PPL YFOR,(i5,''lat'')&#xA0; &#xA0;! force integer labels<br>
-PPL YFOR,(f5.1,''lon'')&#xA0; &#xA0;! single decimal label; I think you
+PPL YFOR,(i5,''lat'') ! force integer labels<br>
+PPL YFOR,(f5.1,''lon'') ! single decimal label; I think you
 must allow for 5 digits<br>
 <br>
 In the above, those are two single quotes around lat and lon,
@@ -105,7 +105,7 @@ Billy<br>
 <br>
 &gt; On Jul 28, 2021, at 4:24 PM, Claude-Michel
 Nzotungicimpaye &lt;<a rel="nofollow"
-href="mailto:miklonzo.science@xxxxxxxxx" target="_blank"
+href="mailto:miklonzo.science@xxxxxxxxx"
 moz-do-not-send="true">miklonzo.science@xxxxxxxxx</a>&gt;
 wrote:<br>
 &gt; <br>

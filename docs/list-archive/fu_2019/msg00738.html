@@ -54,14 +54,14 @@
 According to the manual [1], however, the syntax should contain an<br>
 equal sign, like<br>
 <br>
-&#xA0; &#xA0;define symbol ss = something<br>
+ define symbol ss = something<br>
 <br>
 instead of<br>
 <br>
-&#xA0; &#xA0;define symbol ss something<br>
+ define symbol ss something<br>
 <br>
 Without the equal sign it works best, though, because you can use<br>
-quotation marks without them becoming part of the symbol.</blockquote><div><br></div><div>I didn&#39;t know that!&#xA0; As you say, DEFINE SYMBOL without the equal sign is easier to understand and use:</div><div><br></div><div><font face="monospace">yes? define symbol ss = /abc/<br>yes? show symbol ss<br>SS = &quot;/abc&quot;<br>yes? define symbol ss = &quot;/abc/&quot;<br>yes? show symbol ss<br>SS = &quot;&quot;/abc/&quot;&quot;<br>yes? define symbol ss /abc/<br>yes? show symbol ss<br>SS = &quot;/abc&quot;<br>yes? define symbol ss &quot;/abc/&quot;<br>yes? show symbol ss<br>SS = &quot;/abc/&quot;</font><br></div><div><br></div><div>I don&#39;t know if there are cases&#xA0;where the equal sign is useful or necessary.</div><div><br></div><div>Ryo</div><div><br></div><div>[1]: <a rel="nofollow" href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/DEFINE">https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/DEFINE</a><br></div></div></div>
+quotation marks without them becoming part of the symbol.</blockquote><div><br></div><div>I didn&#39;t know that! As you say, DEFINE SYMBOL without the equal sign is easier to understand and use:</div><div><br></div><div><font face="monospace">yes? define symbol ss = /abc/<br>yes? show symbol ss<br>SS = &quot;/abc&quot;<br>yes? define symbol ss = &quot;/abc/&quot;<br>yes? show symbol ss<br>SS = &quot;&quot;/abc/&quot;&quot;<br>yes? define symbol ss /abc/<br>yes? show symbol ss<br>SS = &quot;/abc&quot;<br>yes? define symbol ss &quot;/abc/&quot;<br>yes? show symbol ss<br>SS = &quot;/abc/&quot;</font><br></div><div><br></div><div>I don&#39;t know if there are caseswhere the equal sign is useful or necessary.</div><div><br></div><div>Ryo</div><div><br></div><div>[1]: <a rel="nofollow" href="../../documentation/users-guide/commands-reference/DEFINE.html">../../documentation/users-guide/commands-reference/DEFINE.html</a><br></div></div></div>
  
 <!--X-Body-of-Message-End-->
 <!--X-MsgBody-End-->

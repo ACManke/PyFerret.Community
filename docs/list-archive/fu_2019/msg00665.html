@@ -55,23 +55,23 @@
 <p>Hi,</p>
 <p>You could pass into the script the number of models</p>
 <p>&gt; ferret -script scriptname.jnl 7</p>
-<p>The script then does a repeat loop that would start like this.&#xA0; <br>
+<p>The script then does a repeat loop that would start like this. <br>
 </p>
-<tt>&#xA0;&#xA0; let nmodel = ($1)</tt><tt><br>
-</tt><tt>&#xA0;&#xA0; repeat/range=1:($1)/name=r (\</tt><tt><br>
-&#xA0;&#xA0; use /home/data/model`r`.nc;\</tt><br>
+<tt> let nmodel = ($1)</tt><tt><br>
+</tt><tt> repeat/range=1:($1)/name=r (\</tt><tt><br>
+ use /home/data/model`r`.nc;\</tt><br>
 <p><tt>...<br>
 </tt></p>
 <p>There are details on the <a rel="nofollow" moz-do-not-send="true"
-href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/variables-xpressions/EMBEDDED-XPRESSIONS#_VPINDEXENTRY_562">grave-accent
-evaluation </a>that give you some flexibility.&#xA0; For instance if
-the models are named model01.nc, model02.nc, ...&#xA0; use the
+href="../../documentation/users-guide/variables-xpressions/EMBEDDED-XPRESSIONS#_VPINDEXENTRY_562">grave-accent
+evaluation </a>that give you some flexibility. For instance if
+the models are named model01.nc, model02.nc, ... use the
 "precision" specifier to ask for the value to be replaced with
 zero-filled numbers, here 2-digits.<br>
 </p>
-<tt>&#xA0;&#xA0; let nmodel = ($1)</tt><tt><br>
-</tt><tt>&#xA0;&#xA0; repeat/range=1:`nmodel`/name=r (\</tt><tt><br>
-&#xA0;&#xA0; use /home/data/model`r,p=z2`.nc;</tt>
+<tt> let nmodel = ($1)</tt><tt><br>
+</tt><tt> repeat/range=1:`nmodel`/name=r (\</tt><tt><br>
+ use /home/data/model`r,p=z2`.nc;</tt>
 <p><br>
 </p>
 <p>Or, you could use a unix foreach loop and write your script to
@@ -165,15 +165,15 @@ zaxreplace <br>
 <p>Hi Giorgio,</p>
 <p>Another method for sending Ferret/PyFerret a set of
 commands is to use the -script option on startup.</p>
-<p>&gt; pyferret -script my_script.jnl&#xA0; [arguments]</p>
-<p>This is generally more flexible than piping commands.&#xA0; The
+<p>&gt; pyferret -script my_script.jnl [arguments]</p>
+<p>This is generally more flexible than piping commands. The
 startup option -batch for Ferret or -nodisplay for PyFerret
 are also useful when you don't want to have graphics windows
-display.&#xA0; Note that -script must appear last among command
+display. Note that -script must appear last among command
 line switches so that the script arguments will be parsed
 correctly.</p>
 <p><a rel="nofollow" moz-do-not-send="true"
-href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/introduction/GETTING-STARTED#_VPID_8">Unix
+href="../../documentation/users-guide/introduction/GETTING-STARTED#_VPID_8">Unix
 command-line switches</a><br>
 </p>
 <p><br>
@@ -240,22 +240,22 @@ shell script: </div>
 </div>
 <div> <font face="monospace">ferret &lt;&lt; STOP</font>
 </div>
-<div> <font face="monospace">. . .&#xA0;</font> </div>
+<div> <font face="monospace">. . .</font> </div>
 <div> <font face="monospace">define symbol ii <font
 color="#ff0000">`i`</font></font> </div>
 <div> <font face="monospace">. . .</font> </div>
 <div> <font face="monospace">STOP</font> </div>
 <div> <br>
 </div>
-<div> Where did&#xA0;&#xA0; <font face="monospace"
-color="#ff0000">`i`</font>&#xA0; go? </div>
+<div> Where did <font face="monospace"
+color="#ff0000">`i`</font> go? </div>
 <div> <br>
 </div>
 <div> In the shell script as well as in the ferret
-script, the backquote construct is evaluated.&#xA0; In
+script, the backquote construct is evaluated. In
 the above shell script, the shell tries to run a
-command named "i".&#xA0; It fails and is replaced with
-an empty string.&#xA0; I suppose&#xA0;you saw this error
+command named "i". It fails and is replaced with
+an empty string. I supposeyou saw this error
 message on your screen </div>
 <div> <br>
 </div>
@@ -271,7 +271,7 @@ by </div>
 </div>
 <div> <font face="monospace">ferret &lt;&lt;<font
 color="#ff0000">'STOP'</font></font> </div>
-<div> <font face="monospace">. . .&#xA0;</font> </div>
+<div> <font face="monospace">. . .</font> </div>
 <div> <font face="monospace">STOP</font> </div>
 <div> <br>
 </div>

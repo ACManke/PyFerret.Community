@@ -51,10 +51,10 @@
 <pre style="margin: 0em;">
 Hi,
  
-</pre><tt>Here's an FAQ, for when the locations LON, LAT, PRES represent a grid.&#xA0; 
+</pre><tt>Here's an FAQ, for when the locations LON, LAT, PRES represent a grid. 
 </tt><tt>It shows an example where the data is 2-D, but it should get you 
-</tt><tt>started.&#xA0; Note that the way the data are ordered in the file is 
-</tt><tt>important.&#xA0; If longitude varies fastest, then latitude, then pressure, 
+</tt><tt>started. Note that the way the data are ordered in the file is 
+</tt><tt>important. If longitude varies fastest, then latitude, then pressure, 
 </tt><tt>this method is what you need.
 </tt><pre style="margin: 0em;">
  
@@ -63,9 +63,9 @@ Hi,
  
 </pre><tt>If the data are ordered differently or if the data locations are not a 
 </tt><tt>grid but are scattered, then it's called &quot;Point data&quot; in the 
-</tt><tt>documentation.&#xA0; You'll want to use one of the SCAT2GRID functions. Look 
+</tt><tt>documentation. You'll want to use one of the SCAT2GRID functions. Look 
 </tt><tt>here: 
-</tt><tt><a  rel="nofollow" href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/working-with-special-data-sets/POINT-DATA">https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/working-with-special-data-sets/POINT-DATA</a>
+</tt><tt><a  rel="nofollow" href="../../documentation/users-guide/working-with-special-data-sets/POINT-DATA">../../documentation/users-guide/working-with-special-data-sets/POINT-DATA</a>
 </tt><pre style="margin: 0em;">
  
 </pre><tt>To see a list of the functions that are available for working in x,y,z, 
@@ -73,7 +73,7 @@ Hi,
 </tt><pre style="margin: 0em;">
  
  
-&#xA0;&#xA0; yes? show function scat2grid*xyz*
+ yes? show function scat2grid*xyz*
  
  
 On 3/1/2021 4:08 AM, Swetha sivakumar wrote:
@@ -81,11 +81,11 @@ On 3/1/2021 4:08 AM, Swetha sivakumar wrote:
 </pre><blockquote style="border-left: #5555EE solid 0.2em; margin: 0em; padding-left: 0.85em"><pre style="margin: 0em;">
 Hello
  
-name &#xA0; &#xA0; title &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; I &#xA0; &#xA0; &#xA0; &#xA0; J &#xA0; &#xA0; K &#xA0; &#xA0; &#xA0; &#xA0; L
-&#xA0;LAT &#xA0; &#xA0; &#xA0;lat &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;1:44 &#xA0; &#xA0; &#xA0;... ... &#xA0; &#xA0; &#xA0; ...
-&#xA0;LON &#xA0; &#xA0; &#xA0;lon &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;1:44 &#xA0; &#xA0; &#xA0;... ... &#xA0; &#xA0; &#xA0; ...
-&#xA0;WS &#xA0; &#xA0; &#xA0; ws &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; 1:44 &#xA0; &#xA0; &#xA0;... ... &#xA0; &#xA0; &#xA0; ...
-&#xA0;PRESS &#xA0; &#xA0;press &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;1:44 &#xA0; &#xA0; &#xA0;... ... &#xA0; &#xA0; &#xA0; ...
+name   title               I     J   K     L
+LAT   lat               1:44   ... ...    ...
+LON   lon               1:44   ... ...    ...
+WS    ws                1:44   ... ...    ...
+PRESS  press              1:44   ... ...    ...
  
 </pre><tt>The above is my data. I want to convert ws and press from 1d to 3d 
 </tt><tt>(lon,lat,var).

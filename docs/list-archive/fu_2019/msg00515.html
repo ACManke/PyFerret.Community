@@ -54,12 +54,12 @@
 <p>The general answer for appending to a file in directions other
 than time, is to first create the file with the full limits that
 you want to appear in the file, using /ILIMITS, /JLIMITS,
-/KLIMITS, in all except the time axis.&#xA0; Then make sure the
+/KLIMITS, in all except the time axis. Then make sure the
 variable is defined on the same grid, so that when you're writing
 data at i=1, it's i=1 on the axis, with the same axis names so
 that it can be appended.</p>
 <p>The documentattion for /ILIMITS, etc is here,</p>
-<p><a rel="nofollow" class="moz-txt-link-freetext" href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/LIST#_VPINDEXENTRY_1409">https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/LIST#_VPINDEXENTRY_1409</a></p>
+<p><a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/users-guide/commands-reference/LIST#_VPINDEXENTRY_1409">../../documentation/users-guide/commands-reference/LIST#_VPINDEXENTRY_1409</a></p>
 <p>and follow the links there to examples of appending in I, J, or
 Z.</p>
 <p><br>
@@ -82,15 +82,15 @@ clear="all">
 <p class="MsoNormal" style="margin:0in 0in 0.0001pt"><font
 face="arial, sans-serif">I need to compute daily climate
 normals (30-yrs averages) from
-a daily dataset &#xA0;<span class="gmail_default"
+a daily dataset <span class="gmail_default"
 style="font-size:small">(</span>variable: var_dta<span
 class="gmail_default" style="font-size:small">)</span>,
 with
 dimensions of I:1385; J:596; L:10957. </font></p>
 <p class="MsoNormal" style="margin:0in 0in 0.0001pt"><font
-face="arial, sans-serif">&#xA0;</font></p>
+face="arial, sans-serif"></font></p>
 <p class="MsoNormal" style="margin:0in 0in 0.0001pt"><font
-face="arial, sans-serif">As&#xA0;<span class="gmail_default"
+face="arial, sans-serif">As<span class="gmail_default"
 style="font-size:small">the machine memory is not large
 enough for me</span> to compute the normals for the
 entire
@@ -99,20 +99,20 @@ i-dimension (1:1385) and
 output the results to an intermediate nc file, using the
 code below.<span class="gmail_default"
 style="font-size:small"> (Potentially, I may have to do
-so at each of xy data points.&#xA0;</span></font>Printing out
+so at each of xy data points.</span></font>Printing out
 values at each <span class="gmail_default"
 style="font-size:small">of all </span>xy data point<span
 class="gmail_default" style="font-size:small">s</span> to
-an ascii&#xA0;file takes too long!<span
+an asciifile takes too long!<span
 style="font-family:arial,sans-serif">)</span></p>
 <p class="MsoNormal" style="margin:0in 0in 0.0001pt"><font
-face="arial, sans-serif">&#xA0;</font></p>
+face="arial, sans-serif"></font></p>
 <p class="MsoNormal" style="margin:0in 0in 0.0001pt"><font
 face="arial, sans-serif">Unfortunately, I am getting an
 error message <span class="gmail_default"
 style="font-size:small">(see below) </span>and would
 appreciate any help you may provide.<span
-class="gmail_default" style="font-size:small">&#xA0;</span></font></p>
+class="gmail_default" style="font-size:small"></span></font></p>
 <p class="MsoNormal" style="margin:0in 0in 0.0001pt"><font
 face="arial, sans-serif"><span class="gmail_default"
 style="font-size:small"><br>
@@ -124,15 +124,15 @@ computing daily climate normals with a large dataset,
 I'd appreciate it if you could share your method with
 me.</span></font></p>
 <p class="MsoNormal" style="margin:0in 0in 0.0001pt"><font
-face="arial, sans-serif">&#xA0;</font></p>
+face="arial, sans-serif"></font></p>
 <p class="MsoNormal" style="margin:0in 0in 0.0001pt"><font
 face="arial, sans-serif">Thanks,</font></p>
 <p class="MsoNormal" style="margin:0in 0in 0.0001pt"><font
-face="arial, sans-serif">&#xA0;</font></p>
+face="arial, sans-serif"></font></p>
 <p class="MsoNormal" style="margin:0in 0in 0.0001pt"><font
 face="arial, sans-serif">--- Peng</font></p>
 <p class="MsoNormal" style="margin:0in 0in 0.0001pt"><font
-face="arial, sans-serif">&#xA0;</font></p>
+face="arial, sans-serif"></font></p>
 <p class="MsoNormal" style="margin:0in 0in
 0.0001pt;font-size:12pt;font-family:Calibri,sans-serif">------</p>
 <p class="MsoNormal" style="margin:0in 0in
@@ -143,62 +143,62 @@ Define a daily modulo time axis</p>
 axis/t=0:365.2425/edges/npoints=365/t0=1-JAN-0001/units=days/modulo
 tdaily</p>
 <p class="MsoNormal" style="margin:0in 0in
-0.0001pt;font-size:12pt;font-family:Calibri,sans-serif">&#xA0;</p>
+0.0001pt;font-size:12pt;font-family:Calibri,sans-serif"></p>
 <p class="MsoNormal" style="margin:0in 0in
 0.0001pt;font-size:12pt;font-family:Calibri,sans-serif">! &#x2013;
 Compute daily normals along i-dimension</p>
 <p class="MsoNormal" style="text-indent:11pt;margin:0in 0in
-0.0001pt;font-size:12pt;font-family:Calibri,sans-serif">&#xA0;&#xA0;&#xA0;&#xA0;
+0.0001pt;font-size:12pt;font-family:Calibri,sans-serif">
 sp rm -f <a rel="nofollow" href="http://v_ij.nc" moz-do-not-send="true">v_ij.nc</a></p>
 <p class="MsoNormal" style="text-indent:11pt;margin:0in 0in
-0.0001pt;font-size:12pt;font-family:Calibri,sans-serif">&#xA0;&#xA0;&#xA0;&#xA0;
+0.0001pt;font-size:12pt;font-family:Calibri,sans-serif">
 repeat/range=1:`idm`/name=ii (;\</p>
 <p class="MsoNormal" style="text-indent:11pt;margin:0in 0in
-0.0001pt;font-size:12pt;font-family:Calibri,sans-serif">&#xA0;&#xA0;&#xA0;&#xA0;
+0.0001pt;font-size:12pt;font-family:Calibri,sans-serif">
 let v_ij=var_dta[i=`ii`] ;\</p>
 <p class="MsoNormal" style="text-indent:11pt;margin:0in 0in
-0.0001pt;font-size:12pt;font-family:Calibri,sans-serif">&#xA0;&#xA0;&#xA0;&#xA0;
+0.0001pt;font-size:12pt;font-family:Calibri,sans-serif">
 let v_norm=v_ij[GT=tdaily@mod] ;\</p>
 <p class="MsoNormal" style="text-indent:11pt;margin:0in 0in
-0.0001pt;font-size:12pt;font-family:Calibri,sans-serif">&#xA0;&#xA0;&#xA0;&#xA0;
+0.0001pt;font-size:12pt;font-family:Calibri,sans-serif">
 let v_std=(v_ij[GT=tdaily@modvar])^0.5 ;\</p>
 <p class="MsoNormal" style="text-indent:11pt;margin:0in 0in
-0.0001pt;font-size:12pt;font-family:Calibri,sans-serif">&#xA0;&#xA0;&#xA0;&#xA0;
+0.0001pt;font-size:12pt;font-family:Calibri,sans-serif">
 let v_min=v_ij[GT=tdaily@modmin] ;\</p>
 <p class="MsoNormal" style="text-indent:11pt;margin:0in 0in
-0.0001pt;font-size:12pt;font-family:Calibri,sans-serif">&#xA0;&#xA0;&#xA0;&#xA0;
+0.0001pt;font-size:12pt;font-family:Calibri,sans-serif">
 let v_max=v_ij[GT=tdaily@modmax] ;\</p>
 <p class="MsoNormal" style="text-indent:11pt;margin:0in 0in
-0.0001pt;font-size:12pt;font-family:Calibri,sans-serif">&#xA0;&#xA0;&#xA0;&#xA0;
+0.0001pt;font-size:12pt;font-family:Calibri,sans-serif">
 let v_npts=v_ij[GT=tdaily@modngd] ;\</p>
 <p class="MsoNormal" style="text-indent:11pt;margin:0in 0in
-0.0001pt;font-size:12pt;font-family:Calibri,sans-serif">&#xA0;&#xA0;&#xA0;&#xA0;
+0.0001pt;font-size:12pt;font-family:Calibri,sans-serif">
 save/file=<a rel="nofollow" href="http://v_ij.nc/app
 v_norm,v_std,v_min,v_max,v_npts" moz-do-not-send="true">v_ij.nc/app
 v_norm,v_std,v_min,v_max,v_npts</a> ;\</p>
 <p class="MsoNormal" style="text-indent:11pt;margin:0in 0in
-0.0001pt;font-size:12pt;font-family:Calibri,sans-serif">&#xA0;&#xA0;&#xA0;&#xA0;
+0.0001pt;font-size:12pt;font-family:Calibri,sans-serif">
 can var v_* ;\</p>
 <p class="MsoNormal" style="text-indent:11pt;margin:0in 0in
-0.0001pt;font-size:12pt;font-family:Calibri,sans-serif">&#xA0;&#xA0;&#xA0;&#xA0;
+0.0001pt;font-size:12pt;font-family:Calibri,sans-serif">
 )</p>
 <p class="MsoNormal" style="text-indent:11pt;margin:0in 0in
-0.0001pt;font-size:12pt;font-family:Calibri,sans-serif">&#xA0;</p>
+0.0001pt;font-size:12pt;font-family:Calibri,sans-serif"></p>
 <p class="MsoNormal" style="text-indent:11pt;margin:0in 0in
 0.0001pt;font-size:12pt;font-family:Calibri,sans-serif">**TMAP
 ERR: Requested data range
 is outside of data set limits</p>
 <p class="MsoNormal" style="text-indent:11pt;margin:0in 0in
-0.0001pt;font-size:12pt;font-family:Calibri,sans-serif">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
-&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;Expected: V_NORM[I=&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 2 :&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 2 ]
-Found: V_NORM[I=&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1 :&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1 ]</p>
+0.0001pt;font-size:12pt;font-family:Calibri,sans-serif">
+Expected: V_NORM[I= 2 : 2 ]
+Found: V_NORM[I= 1 : 1 ]</p>
 <p class="MsoNormal" style="text-indent:11pt;margin:0in 0in
 0.0001pt;font-size:12pt;font-family:Calibri,sans-serif">LIST/FORMAT=CDF/file=<a rel="nofollow"
 href="http://v_ij.nc/app
 v_norm,v_std,v_min,v_max,v_npts" moz-do-not-send="true">v_ij.nc/app
 v_norm,v_std,v_min,v_max,v_npts</a></p>
 <p class="MsoNormal" style="text-indent:11pt;margin:0in 0in
-0.0001pt;font-size:12pt;font-family:Calibri,sans-serif">&#xA0;</p>
+0.0001pt;font-size:12pt;font-family:Calibri,sans-serif"></p>
 <p class="MsoNormal" style="text-indent:11pt;margin:0in 0in
 0.0001pt"><b style=""><font face="arial, sans-serif">The
 same error message if I use
@@ -214,7 +214,7 @@ href="http://v_ij.nc/app/" moz-do-not-send="true">v_ij.nc/app/</a><span
 style="color:rgb(192,0,0)">I=`ii` </span>v_norm,v_std,v_min,v_max,v_npts
 ;\</font></p>
 <p class="MsoNormal" style="text-indent:11pt;margin:0in 0in
-0.0001pt;font-size:12pt;font-family:Calibri,sans-serif">&#xA0;</p>
+0.0001pt;font-size:12pt;font-family:Calibri,sans-serif"></p>
 </div>
 -- <br>
 <div dir="ltr" class="gmail_signature"
@@ -238,7 +238,7 @@ style="font-size:9pt;font-family:Arial;color:rgb(51,51,51);background:white"><br
 style="font-size:9pt;font-family:Arial;color:rgb(34,34,34)">NOAA's
 Cooperative Institute for Satellite
 Earth System Studies (CISESS) at</span><span
-style="font-size:9pt;color:rgb(34,34,34)"><font face="Times">&#xA0;</font></span></p>
+style="font-size:9pt;color:rgb(34,34,34)"><font face="Times"></font></span></p>
 <p><span
 style="font-family:Arial;font-size:9pt">NOAA&#x2019;s
 National Centers for Environmental
@@ -257,22 +257,20 @@ Patton Ave, Asheville, NC
 style="color:rgb(17,85,204)">+1
 828 257 3009</span></a>; <span
 style="color:rgb(17,85,204)"><a rel="nofollow"
-href="mailto:ge.peng@xxxxxxxx"
-target="_blank"
+href="mailto:ge.peng@xxxxxxxx" 
 moz-do-not-send="true">ge.peng@xxxxxxxx</a></span></span></p>
 <p><span
 style="font-size:9pt;font-family:Arial">ORCID:
 http://</span><span
 style="font-size:9pt;font-family:Arial;color:rgb(73,74,76);background-image:initial;background-position:initial;background-repeat:initial"><a rel="nofollow"
-href="http://orcid.org/0000-0002-1986-9115" target="_blank"
+href="http://orcid.org/0000-0002-1986-9115"
 moz-do-not-send="true">orcid.org/0000-0002-1986-9115</a></span></p>
 <p
 style="color:rgb(51,51,51);font-family:Times;font-size:13.6364px;margin-bottom:0.0001pt;background-color:white"><span
 style="font-family:arial,helvetica,sans-serif;font-size:10.9091px;line-height:11.9886px;text-align:-webkit-center">Following
-CICS-NC on&#xA0;</span><a rel="nofollow"
+CICS-NC on</span><a rel="nofollow"
 href="http://www.facebook.com/cicsnc"
-style="font-family:arial,helvetica,sans-serif;font-size:10.9091px;line-height:11.9886px;text-align:-webkit-center;color:rgb(38,58,143);text-decoration:none;font-weight:bold"
-target="_blank" moz-do-not-send="true">Facebook</a></p>
+style="font-family:arial,helvetica,sans-serif;font-size:10.9091px;line-height:11.9886px;text-align:-webkit-center;color:rgb(38,58,143);text-decoration:none;font-weight:bold"  moz-do-not-send="true">Facebook</a></p>
 <table
 style="max-width:100%;border-collapse:collapse;border-spacing:0px;color:rgb(51,51,51);font-size:14px;font-family:Times;line-height:12px"
 width="500" cellspacing="2"

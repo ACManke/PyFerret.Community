@@ -59,15 +59,15 @@
 <p>Hi Andy,<br>
 </p>
 <p>NCO is often a really good answer, and of course you could do all
-of this with NCO.&#xA0; <br>
+of this with NCO. <br>
 </p>
 <p>But since we're on the topic, maybe I can finish it off from the
-Ferret point of view.&#xA0; (By the way, look for "timestamp" in the
+Ferret point of view. (By the way, look for "timestamp" in the
 Ferret documentation.)</p>
 <p>If your time axis is defined as a calendar time axis with
 recognized time units and timesteps defined terms of dates, it
 should automatically be marked as the record axis when saved to a
-netCDF file.&#xA0; <br>
+netCDF file. <br>
 </p>
 <blockquote><font face="monospace"><br>
 ! open dataset containing SST, and define the time axis.<br>
@@ -86,7 +86,7 @@ set variable/name=sst_in sst<br>
 <br>
 ! Define the variable with the original name, units, and title,
 and<br>
-! adding the time axis to the grid.&#xA0; tax is the record axis.<br>
+! adding the time axis to the grid. tax is the record axis.<br>
 <br>
 let/like=sst_in sst = sst_in + timestamp<br>
 save/clobber/file=new_xyt_data.nc sst</font></blockquote>
@@ -94,15 +94,15 @@ save/clobber/file=new_xyt_data.nc sst</font></blockquote>
 </p>
 <p>A pretty common thing is for someone to create a set of files
 files containing for example a single month per file, but the
-variables in the files have no time axis.&#xA0; The time information
+variables in the files have no time axis. The time information
 might be in an attribute somewhere or be indicated only by the
-filename.&#xA0; The framework above can be used to define a a time axis
-for the whole&#xA0; time range and then apply the appropriate timestep
-to each file.&#xA0; <br>
+filename. The framework above can be used to define a a time axis
+for the whole time range and then apply the appropriate timestep
+to each file. <br>
 </p>
 <p>There is much discussion of monthly time axes in the
 documentation, regularly-spaced axes, true monthly axes, and so
-on.&#xA0; See the "DEFINE" section of the manual.&#xA0; Here I'll show how
+on. See the "DEFINE" section of the manual. Here I'll show how
 this goes using a regularly spaced axis.</p>
 <p><br>
 </p>
@@ -139,7 +139,7 @@ sst[L=2]</font><br>
 </p>
 <p>Now, you can use a time aggregation to work with the set of files
 as a virtual timeseries dataset, see
-<a rel="nofollow" class="moz-txt-link-freetext" href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/DEFINE#_define_data_agg">https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/DEFINE#_define_data_agg</a><br>
+<a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/users-guide/commands-reference/DEFINE.html#_define_data_agg">../../documentation/users-guide/commands-reference/DEFINE.html#_define_data_agg</a><br>
 </p>
 <p><br>
 </p>
@@ -150,9 +150,9 @@ let file_list = SPAWN ("ls -1 data_*fixed.nc")<br>
 <br>
 tseries sst_months = file_list<br>
 <br>
-show data &#xA0; &#xA0; &#xA0; ! sst in dataset sst_months will have a time
+show data    ! sst in dataset sst_months will have a time
 axis<br>
-show grid sst&#xA0;&#xA0; ! the time axis is tmonth</font><br>
+show grid sst ! the time axis is tmonth</font><br>
 </blockquote>
 <p><br>
 <br>
@@ -192,8 +192,8 @@ On 3/31/21 6:59 PM, Ansley Manke wrote:
 <br>
 <br>
 You can add a variable on the desired time axis with a value
-of 0 everywhere.&#xA0; This uses the idea of "conformability
-<a rel="nofollow" class="moz-txt-link-rfc2396E" href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/variables-xpressions/XPRESSIONS#_VPINDEXENTRY_300">&lt;https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/variables-xpressions/XPRESSIONS#_VPINDEXENTRY_300&gt;</a>"
+of 0 everywhere. This uses the idea of "conformability
+<a rel="nofollow" class="moz-txt-link-rfc2396E" href="../../documentation/users-guide/variables-xpressions/XPRESSIONS.html#_VPINDEXENTRY_300">&lt;../../documentation/users-guide/variables-xpressions/XPRESSIONS.html#_VPINDEXENTRY_300&gt;</a>"
 - the principals that govern how variables created from on
 unlike grids can be combined.
 <br>
@@ -239,10 +239,10 @@ On Wed, Mar 31, 2021 at 10:04 PM Andy Jacobson
 <a rel="nofollow" class="moz-txt-link-rfc2396E" href="mailto:andy.jacobson@xxxxxxxx">&lt;mailto:andy.jacobson@xxxxxxxx&gt;</a>&gt; wrote:
 <br>
 <br>
-&#xA0;&#xA0;&#xA0; Howdy,
+ Howdy,
 <br>
 <br>
-&#xA0;&#xA0;&#xA0; I have a 2-d variable (lat, lon) that I read from a
+ I have a 2-d variable (lat, lon) that I read from a
 well-formatted netCDF file. This represents one month out
 of a time series of many such files. I'd like to add a
 time axis to this variable. I've defined my single-point
@@ -252,26 +252,26 @@ in NCO but I'd like to stay in ferret this time. Is there
 some reshape trickery involved?
 <br>
 <br>
-&#xA0;&#xA0;&#xA0; Thanks,
+ Thanks,
 <br>
 <br>
-&#xA0;&#xA0;&#xA0; Andy
+ Andy
 <br>
 <br>
-&#xA0;&#xA0;&#xA0; -- &#xA0;&#xA0;&#xA0; Andy Jacobson
+ --  Andy Jacobson
 <br>
 <a rel="nofollow" class="moz-txt-link-abbreviated" href="mailto:andy.jacobson@xxxxxxxx">andy.jacobson@xxxxxxxx</a>
 <a rel="nofollow" class="moz-txt-link-rfc2396E" href="mailto:andy.jacobson@xxxxxxxx">&lt;mailto:andy.jacobson@xxxxxxxx&gt;</a>
 <br>
 <br>
-&#xA0;&#xA0;&#xA0; NOAA Global Monitoring Laboratory
+ NOAA Global Monitoring Laboratory
 <br>
-&#xA0;&#xA0;&#xA0; 325 Broadway R/GMD1
+ 325 Broadway R/GMD1
 <br>
-&#xA0;&#xA0;&#xA0; Boulder, Colorado 80305
+ Boulder, Colorado 80305
 <br>
 <br>
-&#xA0;&#xA0;&#xA0; 303/497-4916
+ 303/497-4916
 <br>
 <br>
 <br>

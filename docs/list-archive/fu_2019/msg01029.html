@@ -56,21 +56,21 @@
 of the colorbar including its location and labeling.<br>
 </p>
 <p><b><a rel="nofollow" class="moz-txt-link-freetext"
-href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/appendix-c-ferret-specific-pplus-enhancements/ENHANCED-COMMANDS-DESCRIPTION#_VPINDEXENTRY_2079">https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/appendix-c-ferret-specific-pplus-enhancements/ENHANCED-COMMANDS-DESCRIPTION#_VPINDEXENTRY_2079</a></b></p>
+href="../../documentation/users-guide/appendix-c-ferret-specific-pplus-enhancements/ENHANCED-COMMANDS-DESCRIPTION.html#_VPINDEXENTRY_2079">../../documentation/users-guide/appendix-c-ferret-specific-pplus-enhancements/ENHANCED-COMMANDS-DESCRIPTION.html#_VPINDEXENTRY_2079</a></b></p>
 <p>It's a <b><a rel="nofollow" moz-do-not-send="true"
-href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/customizing-plots/OVERVIEW">PPLUS
+href="../../documentation/users-guide/customizing-plots/OVERVIEW">PPLUS
 customization command</a></b> so you issue the plotting
 command with /SET, then the PPL SHAKEY command, and then PPL FILL
-to finish drawing the plot.&#xA0; Something like this should work:<br>
+to finish drawing the plot. Something like this should work:<br>
 </p>
-<p><font face="monospace">fill/palette= /levels= /set&#xA0; var<br>
-&#xA0;&#xA0; ppl shakey,1,1,0,0,-2<br>
+<p><font face="monospace">fill/palette= /levels= /set var<br>
+ ppl shakey,1,1,0,0,-2<br>
 ppl fill</font></p>
 <p><br>
 I've used values for the first four arguments there, to choose the
 default settings but make it easier to read, and the fourth
-argument chooses 2 decimal places to be used in the labels.&#xA0; You
-could alternatively work with the 5th argument.&#xA0; <br>
+argument chooses 2 decimal places to be used in the labels. You
+could alternatively work with the 5th argument. <br>
 </p>
 <p>Ansley<br>
 </p>

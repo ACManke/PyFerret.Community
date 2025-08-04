@@ -56,17 +56,17 @@ Yes you can do this. It will require some features that might not be
 well known to a lot of users. You will need to know how to specify a
 particular set of color-levels that don't use the
 /levels=(lo,hi,del) syntax, and you will need to define a custom
-color palette.&#xA0; I'll show this with some simple examples to try.<br>
+color palette. I'll show this with some simple examples to try.<br>
 <br>
-Color levels can be specified with a lot of flexibility.&#xA0; Here is
+Color levels can be specified with a lot of flexibility. Here is
 the whole list of the settings,
-<a rel="nofollow" class="moz-txt-link-freetext" href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/customizing-plots/CONTOURING#_VPINDEXENTRY_852">https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/customizing-plots/CONTOURING#_VPINDEXENTRY_852</a><br>
+<a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/users-guide/customizing-plots/CONTOURING#_VPINDEXENTRY_852">../../documentation/users-guide/customizing-plots/CONTOURING#_VPINDEXENTRY_852</a><br>
 <br>
 For a FILL plot (recall that FILL is an alias for CONTOUR/FILL), the
 levels specified using the /LEVELS= qualifier are where the contour
 lines are drawn, with the color fill between the lines. For a SHADE
 plot, the levels are the boundaries between the colors on the
-colorbar with grid cells colored accordingly.&#xA0; The most common way
+colorbar with grid cells colored accordingly. The most common way
 to set levels is with /LEVELS=(lo,hi,del).<br>
 <br>
 Compare these two plots, which use a variable I have made up.<br>
@@ -90,15 +90,15 @@ For your variable you will probably use
 /level=(-0.2)(0)(0.2)(0.3)(0.6)(1) <br>
 <br>
 It looks as if you want to leave some blank space between 0.2 and
-0.3.&#xA0; I think the best way to do that is to color that piece of the
+0.3. I think the best way to do that is to color that piece of the
 plot using white, though there might also be ways to do it by
-overlaying two different SHADE commands.&#xA0; This way the white will
+overlaying two different SHADE commands. This way the white will
 show up on your color key.<br>
 <br>
 To define your color palette, you need a color palette that is a "by
 level" color palette. For the details of the different kinds of
 color palettes see
-<a rel="nofollow" class="moz-txt-link-freetext" href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/customizing-plots/COLOR#_VPID_247">https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/customizing-plots/COLOR#_VPID_247</a><br>
+<a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/users-guide/customizing-plots/COLOR#_VPID_247">../../documentation/users-guide/customizing-plots/COLOR#_VPID_247</a><br>
 <br>
 Try this to see what a by-level color palette does:<br>
 <br>
@@ -107,12 +107,12 @@ shade/x=1:5/y=1:5/lev=(2.5)(5.2)(6)(7.1)(10)/palette=ten_by_levels
 x+y</font><br>
 <br>
 The first color in the palette is assigned to the first level, the
-second color is assigned to the second level, and so on.&#xA0; You can
+second color is assigned to the second level, and so on. You can
 create your own palette of this type, making the colors blue, then
 yellow, etc.<br>
 <br>
 You can search the pre-installed color palettes using the Unix
-command-line command "Fpalette".&#xA0; Search for the palettes that
+command-line command "Fpalette". Search for the palettes that
 include "level" in their name<br>
 <br>
 <font face="Courier New, Courier, monospace">&gt; Fpalette level<br>
@@ -123,13 +123,13 @@ ten_bright_levels.spk:<br>
 ten_by_levels.spk:<br>
 ten_reordered_levels.spk:<br>
 thirty_by_levels.spk:</font><br>
-&#xA0;<br>
+<br>
 I would start with one of these. Copy it from where it is installed
 on your system to your local directory, and rename it. Edit your
 palette file so that color 1 is blue, color 2 is yellow, color 3 is
 white (for that gap between 0.2 and 0.3), color 4 is orange, and
-color 5 is green.&#xA0; If I'm making a palette, I use the Fpalette
-command a lot.&#xA0; Maybe I want a different orange than what I have, so
+color 5 is green. If I'm making a palette, I use the Fpalette
+command a lot. Maybe I want a different orange than what I have, so
 <br>
 <p><font face="Courier New, Courier, monospace">&gt; Fpalette orange</font></p>
 <p>and then look in those files to see how different colors are

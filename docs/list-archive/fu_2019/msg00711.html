@@ -51,7 +51,7 @@
 <hr>
 <!--X-Head-Body-Sep-End-->
 <!--X-Body-of-Message-->
-<div dir="ltr">Hi all,<div><br></div><div>This &quot;thin white line&quot; issue has been around for a long time, unfortunately.<br>There is a work-around with the PyFerret &quot;SET WINDOW /OUTLINE=...&quot; command (<a rel="nofollow" href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/SET#set_window_outline">https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/SET#set_window_outline</a>) in which an outline of the specified width is added to all polygons.&#xA0; Usually a small value, such a 0.05, is enough to remove all these lines.</div><div><br></div><div>We did discover this is a known issue with many graphics products drawing two polygons right next to each other using floating point coordinates.&#xA0; Their solution was similar to ours - add an outline.&#xA0; We have not done this by default since the outline does slightly change the dividing line between the two polygons (since the outlines overlap, and one outline is drawn after the other) if one is inspecting closely.</div><div><br></div><div>Karl</div><div><br></div></div><br><div class="gmail_quote"><div dir="ltr" class="gmail_attr">On Fri, May 29, 2020 at 6:40 AM Pierre Sepulchre &lt;<a rel="nofollow" href="mailto:pierre.sepulchre@xxxxxxxxxxxx" target="_blank">pierre.sepulchre@xxxxxxxxxxxx</a>&gt; wrote:<br></div><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex">
+<div dir="ltr">Hi all,<div><br></div><div>This &quot;thin white line&quot; issue has been around for a long time, unfortunately.<br>There is a work-around with the PyFerret &quot;SET WINDOW /OUTLINE=...&quot; command (<a rel="nofollow" href="../../documentation/users-guide/commands-reference/SET.html#set_window_outline">../../documentation/users-guide/commands-reference/SET.html#set_window_outline</a>) in which an outline of the specified width is added to all polygons. Usually a small value, such a 0.05, is enough to remove all these lines.</div><div><br></div><div>We did discover this is a known issue with many graphics products drawing two polygons right next to each other using floating point coordinates. Their solution was similar to ours - add an outline. We have not done this by default since the outline does slightly change the dividing line between the two polygons (since the outlines overlap, and one outline is drawn after the other) if one is inspecting closely.</div><div><br></div><div>Karl</div><div><br></div></div><br><div class="gmail_quote"><div dir="ltr" class="gmail_attr">On Fri, May 29, 2020 at 6:40 AM Pierre Sepulchre &lt;<a rel="nofollow" href="mailto:pierre.sepulchre@xxxxxxxxxxxx">pierre.sepulchre@xxxxxxxxxxxx</a>&gt; wrote:<br></div><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex">
  
  
  
@@ -62,18 +62,18 @@
 still make very nice figures in jupyter notebooks. <br>
 </p>
 <p>For a taste, you&#39;ll find a link to an interactive notebook here :</p>
-<p><a rel="nofollow" href="https://zenodo.org/record/3549652" target="_blank">https://zenodo.org/record/3549652</a></p>
+<p><a rel="nofollow" href="https://zenodo.org/record/3549652">https://zenodo.org/record/3549652</a></p>
 <p>Pierre</p>
 <p><br>
 </p>
 <div>Le 29/05/2020 &#xE0; 15:12, Paulo B.
-Oliveira a &#xE9;crit&#xA0;:<br>
+Oliveira a &#xE9;crit:<br>
 </div>
 <blockquote type="cite">
  
-<p>Hi,&#xA0;</p>
+<p>Hi,</p>
 <p>Thank you Pierre and Patrick for sharing your experience with
-ferret and jupyter, and Patrick for <a rel="nofollow" href="https://github.com/PBrockmann/ipython_ferretmagic" target="_blank">ferretmagic</a>.</p>
+ferret and jupyter, and Patrick for <a rel="nofollow" href="https://github.com/PBrockmann/ipython_ferretmagic">ferretmagic</a>.</p>
 <p>I use ferret for a long time, but I&#39;m just starting with
 jupyter. If I understood correctly, the only way to avoid the
 horizontal lines is by calling pyferret externally ?</p>
@@ -144,16 +144,16 @@ the location of the horizontal bars.</p>
 <p>I would be grateful if someone had an hint to solve this
 issue.</p>
 <p>I provide the examples here :</p>
-<p><a rel="nofollow" href="https://sharebox.lsce.ipsl.fr/index.php/s/QleW9tCk7HSYxhT" target="_blank">https://sharebox.lsce.ipsl.fr/index.php/s/QleW9tCk7HSYxhT</a></p>
+<p><a rel="nofollow" href="https://sharebox.lsce.ipsl.fr/index.php/s/QleW9tCk7HSYxhT">https://sharebox.lsce.ipsl.fr/index.php/s/QleW9tCk7HSYxhT</a></p>
 <p>All the best,</p>
 <p>Pierre</p>
 <div>-- <br>
 <p>CNRS/Laboratoire des Sciences du Climat et de
 l&#39;Environnement, Gif-sur-Yvette, France<br>
 tel : +33 (0) 1 69 08 65 49<br>
-<a rel="nofollow" href="https://scholar.google.fr/citations?hl=fr&amp;user=Er4h_F8AAAAJ&amp;view_op=list_works&amp;sortby=pubdate" target="_blank">What I am working on </a><br>
-twitter: <a rel="nofollow" href="https://twitter.com/pierresepulchre?lang=fr" target="_blank">@PierreSepulchre</a><br>
-github: <a rel="nofollow" href="https://github.com/psepulchre/" target="_blank">psepulchre</a></p>
+<a rel="nofollow" href="https://scholar.google.fr/citations?hl=fr&amp;user=Er4h_F8AAAAJ&amp;view_op=list_works&amp;sortby=pubdate">What I am working on </a><br>
+twitter: <a rel="nofollow" href="https://twitter.com/pierresepulchre?lang=fr">@PierreSepulchre</a><br>
+github: <a rel="nofollow" href="https://github.com/psepulchre/">psepulchre</a></p>
 </div>
 </div>
 </div>
@@ -163,10 +163,10 @@ github: <a rel="nofollow" href="https://github.com/psepulchre/" target="_blank">
 <p>CNRS/Laboratoire des Sciences du Climat et de l&#39;Environnement,
 Gif-sur-Yvette, France<br>
 tel : +33 (0) 1 69 08 65 49<br>
-<a rel="nofollow" href="https://scholar.google.fr/citations?hl=fr&amp;user=Er4h_F8AAAAJ&amp;view_op=list_works&amp;sortby=pubdate" target="_blank">What
+<a rel="nofollow" href="https://scholar.google.fr/citations?hl=fr&amp;user=Er4h_F8AAAAJ&amp;view_op=list_works&amp;sortby=pubdate">What
 I am working on&#xFEFF; </a><br>
-twitter: <a rel="nofollow" href="https://twitter.com/pierresepulchre?lang=fr" target="_blank">@PierreSepulchre</a><br>
-github: <a rel="nofollow" href="https://github.com/psepulchre/" target="_blank">psepulchre</a></p>
+twitter: <a rel="nofollow" href="https://twitter.com/pierresepulchre?lang=fr">@PierreSepulchre</a><br>
+github: <a rel="nofollow" href="https://github.com/psepulchre/">psepulchre</a></p>
 </div>
 </div>
  

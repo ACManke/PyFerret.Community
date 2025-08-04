@@ -58,7 +58,7 @@
  
 Hi Andrew,<br>
 <p>In general the text of the line is already reported, as executed,
-that is after parsing for symbol and grave-accent evaluations.&#xA0;
+that is after parsing for symbol and grave-accent evaluations.
 So, for instance if I have a script</p>
 <blockquote><tt>! define_variable.jnl</tt><br>
 <tt>cancel mode verify</tt><br>
@@ -72,7 +72,7 @@ So, for instance if I have a script</p>
 <tt>yes? go define_variable </tt><br>
 <tt>! Enter_GO define_variable</tt><br>
 <tt>cancel mode verify</tt><br>
-<tt>&#xA0;**ERROR: command syntax: illegal name: 400</tt><br>
+<tt>**ERROR: command syntax: illegal name: 400</tt><br>
 <tt>DEFINE VARIABLE 400 = 12</tt><br>
 <tt>! Exit_GO</tt><br>
 </blockquote>
@@ -80,25 +80,25 @@ So, for instance if I have a script</p>
 </tt>
 <p>The result of the error-handling is the lines:<br>
 <br>
-<tt>&#xA0;**ERROR: command syntax: illegal name: 400</tt><br>
+<tt>**ERROR: command syntax: illegal name: 400</tt><br>
 <tt>DEFINE VARIABLE 400 = 12</tt></p>
 <p>And the "SET REDIRECT" at the start of the session has added the
-lines starting with ! Enter_GO and&#xA0;&#xA0; ! Exit_GO.<br>
+lines starting with ! Enter_GO and ! Exit_GO.<br>
 </p>
 <p>so we're proposing here, to amend this to something like</p>
-<p><tt>&#xA0;**ERROR: command syntax: illegal name: 400</tt><br>
+<p><tt>**ERROR: command syntax: illegal name: 400</tt><br>
 <tt>DEFINE VARIABLE 400 = 12<br>
 Running script define_variable.jnl</tt></p>
 <p>Or maybe that could coach us to go back and make use of SET
 REDIRECT.</p>
 <p><tt><br>
-&#xA0;
+
 </tt><tt><tt>**ERROR: </tt>...<br>
-Running script define_variable.jnl.&#xA0; Start session with SET
+Running script define_variable.jnl. Start session with SET
 REDIRECT for a complete log<br>
 </tt></p>
 <p>I'm not sure that any of this adds much more than the output of
-the SET REDIRECT log.&#xA0; Some ideas:<br>
+the SET REDIRECT log. Some ideas:<br>
 </p>
 <p>-- Maybe some options on FshowGO to list some more context on the
 GO commands? <br>
@@ -128,8 +128,8 @@ style="font-family:arial,helvetica,sans-serif"><br>
 <div class="gmail_default"
 style="font-family:arial,helvetica,sans-serif">I agree that
 (optionally) providing some context for error messages would
-be very helpful.&#xA0; Perhaps could be implemented as a MODE
-TRACEBACK.&#xA0; It could start with the name of the script, but
+be very helpful. Perhaps could be implemented as a MODE
+TRACEBACK. It could start with the name of the script, but
 could also be extended into a full hierarchical traceback
 showing the entire stack of calling scripts and the
 last-executed lines within them.</div>
@@ -138,10 +138,10 @@ style="font-family:arial,helvetica,sans-serif"><br>
 </div>
 <div class="gmail_default"
 style="font-family:arial,helvetica,sans-serif">If printing
-out the line number isn't easy to do,&#xA0;then just as good
+out the line number isn't easy to do,then just as good
 would be to print out the text of the most recent line or
-command that was parsed.&#xA0; Presumably that text exists in
-some stack in Ferret?&#xA0; Then the user could easily grep
+command that was parsed. Presumably that text exists in
+some stack in Ferret? Then the user could easily grep
 through their script to locate that line.</div>
 <div class="gmail_default"
 style="font-family:arial,helvetica,sans-serif"><br>
@@ -162,30 +162,30 @@ wrote:<br>
 rgb(204,204,204);padding-left:1ex">Hi Marco<br>
 <br>
 I like the idea of including the name of the script in error
-messages.&#xA0; <br>
-I would make use of that.&#xA0; I'm not sure whether also
+messages. <br>
+I would make use of that. I'm not sure whether also
 including the <br>
 line-number would be easy to implement but we'll have a look
 at these ideas.<br>
 <br>
-Meanwhile a further tool is available for debugging.&#xA0;
+Meanwhile a further tool is available for debugging.
 Starting with <br>
 Ferret v6.9, redirect the output to a log file using SET
-REDIRECT.&#xA0; Then <br>
+REDIRECT. Then <br>
 that log output includes lines that list entry and exit from
 scripts, <br>
 and the Unix tool FshowGO makes a listing of the go-script
-calls.&#xA0; This <br>
+calls. This <br>
 is discussed here:<br>
 <br>
 <a rel="nofollow"
-href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/SET#_VPINDEXENTRY_SET_REDIRECT"
-rel="noreferrer" target="_blank" moz-do-not-send="true">https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/SET#_VPINDEXENTRY_SET_REDIRECT</a><br>
+href="../../documentation/users-guide/commands-reference/SET.html#_VPINDEXENTRY_SET_REDIRECT"
+rel="noreferrer" moz-do-not-send="true">../../documentation/users-guide/commands-reference/SET.html#_VPINDEXENTRY_SET_REDIRECT</a><br>
 <a rel="nofollow"
-href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/introduction/UNIX-TOOLS#_FshowGO"
-rel="noreferrer" target="_blank" moz-do-not-send="true">https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/introduction/UNIX-TOOLS#_FshowGO</a><br>
+href="../../documentation/users-guide/introduction/UNIX-TOOLS#_FshowGO"
+rel="noreferrer" moz-do-not-send="true">../../documentation/users-guide/introduction/UNIX-TOOLS#_FshowGO</a><br>
 <br>
-And one more thing:&#xA0; if your set of&#xA0; calls includes scripts
+And one more thing: if your set of calls includes scripts
 that may <br>
 turn off mode verify, but you want to see the commands they
 run, start <br>
@@ -203,7 +203,7 @@ On 1/28/2020 1:09 AM, Marco van Hulten wrote:<br>
 &gt;<br>
 &gt; On 28 Jan 11:46 Ryo Furue wrote:<br>
 &gt;&gt; On Mon, Jan 27, 2020 at 11:39 PM Marco van Hulten
-&lt;<a rel="nofollow" href="mailto:Marco.Hulten@xxxxxx" target="_blank"
+&lt;<a rel="nofollow" href="mailto:Marco.Hulten@xxxxxx"
 moz-do-not-send="true">Marco.Hulten@xxxxxx</a>&gt;<br>
 &gt;&gt; wrote:<br>
 &gt;&gt;<br>
@@ -214,18 +214,18 @@ print the filename and<br>
 &gt;&gt;&gt; This is especially useful in my case where I am
 using jnl scripts that<br>
 &gt;&gt;&gt; call other jnl scripts and so on.<br>
-&gt;&gt;&gt;&#xA0; &#xA0;<br>
-&gt;&gt; I would certainly appreciate such a feature.&#xA0; But,
+&gt;&gt;&gt; <br>
+&gt;&gt; I would certainly appreciate such a feature. But,
 with "set mode verify",<br>
 &gt;&gt; you can usually track down where the error is.<br>
-&gt; Yes, that's true enough.&#xA0; I now initialise a variable
+&gt; Yes, that's true enough. I now initialise a variable
 "verbosity" and<br>
 &gt; then use this line at the start of my scripts:<br>
 &gt;<br>
-&gt;&#xA0; &#xA0; &#xA0; \if `verbosity lt 2` then cancel mode verify else
+&gt;   \if `verbosity lt 2` then cancel mode verify else
 set mode verify<br>
 &gt;<br>
-&gt; and cancel at the end of the script.&#xA0; That way VERIFY
+&gt; and cancel at the end of the script. That way VERIFY
 is disabled when<br>
 &gt; back at the prompt.<br>
 &gt;<br>

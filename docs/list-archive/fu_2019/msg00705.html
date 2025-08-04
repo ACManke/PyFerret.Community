@@ -52,27 +52,27 @@
 Hi Alexander,
  
 </pre><tt>Just a quick answer to your first question: Adding a &quot;timestamp&quot; to a 
-</tt><tt>grid that doesn't have a time axis.&#xA0; You'll define a zero-valued 
+</tt><tt>grid that doesn't have a time axis. You'll define a zero-valued 
 </tt><tt>variable that has a one-point time axis with the time value that you 
 </tt><tt>want, and add it to the variable that doesn't have time.
 </tt><pre style="margin: 0em;">
  
-</pre><tt><a  rel="nofollow" href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/SAVE#timestamp">https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/SAVE#timestamp</a> 
+</pre><tt><a  rel="nofollow" href="../../documentation/users-guide/commands-reference/SAVE#timestamp">../../documentation/users-guide/commands-reference/SAVE#timestamp</a> 
 </tt><tt>(By the way, look up &quot;time&quot; in the *Users Guide index 
-</tt><tt>&lt;<a  rel="nofollow" href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/index-1/index">https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/index-1/index</a>&gt;*; 
+</tt><tt>&lt;<a  rel="nofollow" href="../../documentation/users-guide/index-1/index">../../documentation/users-guide/index-1/index</a>&gt;*; 
 </tt><tt>there's an entry &quot;*create time axis when var has none (timestamp) 
-</tt><tt>&lt;<a  rel="nofollow" href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/SAVE#timestamp">https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/SAVE#timestamp</a>&gt;***).
+</tt><tt>&lt;<a  rel="nofollow" href="../../documentation/users-guide/commands-reference/SAVE#timestamp">../../documentation/users-guide/commands-reference/SAVE#timestamp</a>&gt;***).
 </tt><pre style="margin: 0em;">
  
-</pre><tt>Make sure you give your new variable the right title and units, etc.&#xA0;&#xA0; 
+</pre><tt>Make sure you give your new variable the right title and units, etc. 
 </tt><tt>This uses the Ferret/Pyferret concept of &quot;conformability&quot; which are the 
 </tt><tt>rules used to combine variables with different dimensionality -- again 
-</tt><tt>have a look in the Users Guide index&#xA0; for the word conformability or 
+</tt><tt>have a look in the Users Guide index for the word conformability or 
 </tt><tt>conformable. I'm not criticizing you for not finding these things, just 
 </tt><tt>pointing out some good ways to hunt.
 </tt><pre style="margin: 0em;">
  
-</pre><tt>These will get you started.&#xA0; I haven't studied the rest of what you've 
+</pre><tt>These will get you started. I haven't studied the rest of what you've 
 </tt><tt>written, but write back if you have more questions.
 </tt><pre style="margin: 0em;">
  
@@ -81,7 +81,7 @@ Hi Alexander,
 On 5/27/2020 4:37 PM, Alexander Audet wrote:
 </pre><blockquote style="border-left: #5555EE solid 0.2em; margin: 0em; padding-left: 0.85em"><pre style="margin: 0em;">
 Ferret community,
-</pre><tt>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;&#xA0; My main question is how to add a 
+</pre><tt>               My main question is how to add a 
 </tt><tt>time-axis to a file without one. Regridding the file on a grid with a 
 </tt><tt>single time point does not seem to work.
 </tt><pre style="margin: 0em;">
@@ -100,7 +100,7 @@ image.png
 </tt><pre style="margin: 0em;">
  
 Here is some background as to what I am actually trying to do:
-</pre><tt>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;&#xA0; I have a netcdf file that is the result 
+</pre><tt>               I have a netcdf file that is the result 
 </tt><tt>of a correlation analysis that I am trying to view in VAPOUR (a 3D 
 </tt><tt>display software). Currently, I have taken the correlation results I 
 </tt><tt>have calculated for each pressure level and appended them into a file 
@@ -108,30 +108,30 @@ Here is some background as to what I am actually trying to do:
 </tt><tt>two time series, the file does not have a T axis as is appropriate. 
 </tt><tt>However, when I place my completed file into VAPOUR, VAPOUR does not 
 </tt><tt>read it.
-</tt><tt>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;&#xA0; It seems to me that not having a time 
+</tt><tt>              It seems to me that not having a time 
 </tt><tt>axis might be part of the problem. (See netcdf &amp; cf conventions 
 </tt><tt>&lt;<a  rel="nofollow" href="https://www.docs.vapor.ucar.edu/gettingDataIntoVapor.html">https://www.docs.vapor.ucar.edu/gettingDataIntoVapor.html</a>&gt; on the 
 </tt><tt>VAPOUR page).
 </tt><pre style="margin: 0em;">
  
-</pre><tt>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; On a side note, (it might be part of the 
+</pre><tt>              On a side note, (it might be part of the 
 </tt><tt>overall problem) whenever I add the variables I am using to the NC 
 </tt><tt>files I output,
 </tt><pre style="margin: 0em;">
  
 *SAVE/clobber/FILE=VerticalWindSpeedNZCorrel_VAPOUR2.nc PascalVAPOUR*
  
-&#xA0;it give me this message:
+it give me this message:
  
 ***TMAP ERR: attempt to redefine line
-&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; axis AX006YY of grid for PASCALVAPOUR doesn't match CDF file*
+ axis AX006YY of grid for PASCALVAPOUR doesn't match CDF file*
  
 </pre><tt>However, I can then successfully add the variable to the file with the 
 </tt><tt>append function after it has been created.
 </tt><pre style="margin: 0em;">
  
 *SAVE/append/FILE=VerticalWindSpeedNZCorrel_VAPOUR2.nc PascalVAPOUR
-&#xA0;LISTing to file VerticalWindSpeedNZCorrel_VAPOUR2.nc*
+LISTing to file VerticalWindSpeedNZCorrel_VAPOUR2.nc*
  
 </pre><tt>This also happened when I was originally constructing my vertical file 
 </tt><tt>from each horizontal level. The first time I clobbered and created the 

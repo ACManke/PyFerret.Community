@@ -55,17 +55,17 @@
  
  
 <p>Hi,</p>
-<p>I'd just add a&#xA0; link to more documentation about working with
+<p>I'd just add a link to more documentation about working with
 Discrete Sampling Geometries (DSG) datasets from the PyFerret
-command line.&#xA0; This capability is available in PyFerret version
-7.6 and higher: &#xA0; <a rel="nofollow" class="moz-txt-link-freetext"
-href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/working-with-special-data-sets/DSG_datasets">https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/working-with-special-data-sets/DSG_datasets</a>
+command line. This capability is available in PyFerret version
+7.6 and higher:  <a rel="nofollow" class="moz-txt-link-freetext"
+href="../../documentation/users-guide/working-with-special-data-sets/DSG_datasets">../../documentation/users-guide/working-with-special-data-sets/DSG_datasets</a>
 </p>
 <p>Ansley Manke<br>
 </p>
-<p>(The content of this&#xA0; message are mine personally.&#xA0; I am not
+<p>(The content of this message are mine personally. I am not
 affiliated with PMEL.)</p>
-<p>&#xA0; <font size="2"><span><br>
+<p> <font size="2"><span><br>
 </span></font></p>
 <div class="moz-cite-prefix">On 11/2/2020 5:25 AM, Roland Schweitzer
 - NOAA Affiliate wrote:<br>
@@ -76,15 +76,15 @@ cite="">
 <div dir="ltr">HI,
 <div><br>
 </div>
-<div>I'll take a stab at elaborating. An&#xA0;ERDDAP server is an
+<div>I'll take a stab at elaborating. AnERDDAP server is an
 OPeNDAP server and takes the later part of its name from the
 Data Access Protocol (DAP) of OPeNDAP.</div>
 <div><br>
 </div>
 <div>Broadly speaking, data in ERDDAP servers are organized into
-two subcategories which the ERDDAP documentation&#xA0;refers to as
+two subcategories which the ERDDAP documentationrefers to as
 "TABLEDAP" and "GRIDDAP" data sets. GRIDDAP datasets are
-rectilinear grids in up to 4 dimensions&#xA0;(XYZT) which follow
+rectilinear grids in up to 4 dimensions(XYZT) which follow
 the CF conventions for grids, and TABLEDAP data sets are
 served as OPeNDAP sequences (more in a moment). However, both
 data types can also be retrieved from the server in a couple
@@ -110,28 +110,28 @@ minus the ".html".</div>
 <div><br>
 </div>
 <div><font face="monospace">[rhs@dunkel
-&#xA0; &#xA0; &#xA0; &#xA0; NOAA/PMEL TMAP<br>
-&#xA0; &#xA0; &#xA0; &#xA0; PyFerret v7.63 (optimized)<br>
-&#xA0; &#xA0; &#xA0; &#xA0; Linux 2.6.32-754.33.1.el6.x86_64 - 09/28/20<br>
-&#xA0; &#xA0; &#xA0; &#xA0; &#xA0;2-Nov-20 04:48<br>
+    NOAA/PMEL TMAP<br>
+    PyFerret v7.63 (optimized)<br>
+    Linux 2.6.32-754.33.1.el6.x86_64 - 09/28/20<br>
+    2-Nov-20 04:48<br>
 <br>
 yes? use "<a rel="nofollow"
 href="https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplAvisoSshMon"
 moz-do-not-send="true">https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplAvisoSshMon</a>"<br>
 yes? show data<br>
-&#xA0; &#xA0; &#xA0;currently SET data sets:<br>
-&#xA0; &#xA0; 1&gt; <a rel="nofollow"
+  currently SET data sets:<br>
+  1&gt; <a rel="nofollow"
 href="https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplAvisoSshMon"
 moz-do-not-send="true">https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplAvisoSshMon</a>
-&#xA0;(default)<br>
-&#xA0;name &#xA0; &#xA0; title &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; I &#xA0; &#xA0; &#xA0; &#xA0; J &#xA0; &#xA0;
-&#xA0; &#xA0; K &#xA0; &#xA0; &#xA0; &#xA0; L<br>
-&#xA0;SSHAG &#xA0; &#xA0;Sea Surface Height Above Geoid &#xA0; 1:360 &#xA0; &#xA0; 1:180 &#xA0;
-&#xA0; ... &#xA0; &#xA0; &#xA0; 1:219<br>
-&#xA0;NOBS &#xA0; &#xA0; Number of Observations &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; 1:360 &#xA0; &#xA0; 1:180 &#xA0;
-&#xA0; ... &#xA0; &#xA0; &#xA0; 1:219<br>
-&#xA0;STDERR &#xA0; Standard Error &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; 1:360 &#xA0; &#xA0; 1:180 &#xA0;
-&#xA0; ... &#xA0; &#xA0; &#xA0; 1:219<br>
+(default)<br>
+name   title               I     J  
+  K     L<br>
+SSHAG  Sea Surface Height Above Geoid  1:360   1:180 
+ ...    1:219<br>
+NOBS   Number of Observations      1:360   1:180 
+ ...    1:219<br>
+STDERR  Standard Error          1:360   1:180 
+ ...    1:219<br>
 <br>
 yes?</font><br>
 </div>
@@ -140,7 +140,7 @@ yes?</font><br>
 <div>Using PyFerret with the TABLEDATA data is a bit different.
 OPeNDAP sequences are indeterminant in length and it's
 difficult for PyFerret to negotiate with the server
-efficiently&#xA0;for the information in needs via the OPeNDAP
+efficientlyfor the information in needs via the OPeNDAP
 sequences DAP protocol. So, when we use TABLEDAP data sets in
 our own software (like <a rel="nofollow"
 href="https://github.com/NOAA-PMEL/las9"
@@ -150,13 +150,13 @@ moz-do-not-send="true">older version running against the
 data Patrick first mentioned</a>) we generally use ERDDAP
 constraint expressions to determine the subset of the data we
 find interesting and then download a netCDF CF DSG data file
-to use with Ferret.&#xA0;</div>
+to use with Ferret.</div>
 <div><br>
 </div>
 <div>Suppose you wanted just the November data <a rel="nofollow"
 href="https://ferret.pmel.noaa.gov/pmel/erddap/tabledap/ThirtyMinute_fd49_7acb_ec76.html"
 moz-do-not-send="true">from this experiment</a>, you could
-get is with a URL like this:&#xA0;<a rel="nofollow"
+get is with a URL like this:<a rel="nofollow"
 href="https://ferret.pmel.noaa.gov/pmel/erddap/tabledap/ThirtyMinute_fd49_7acb_ec76.ncCF?S_41&amp;latitude"
 moz-do-not-send="true">https://ferret.pmel.noaa.gov/pmel/erddap/tabledap/ThirtyMinute_fd49_7acb_ec76.ncCF?S_41&amp;latitude</a>&gt;=-90&amp;latitude&lt;=90&amp;time&gt;=1995-11-01T00:00:00.000Z&amp;time&lt;=1995-11-30T00:00:00.000Z&amp;orderBy("id,time").
 You can download it with wget (using the encoded version which
@@ -165,15 +165,15 @@ from you browser which will do the encoding for you.</div>
 <div><br>
 </div>
 <div>Then you can plot the result in PyFerret using the new <a rel="nofollow"
-href="https://ferret.pmel.noaa.gov/Ferret/documentation/dsg-files-discrete-sampling-geometries-demo"
+href="../../documentation/dsg-files-discrete-sampling-geometries-demo"
 moz-do-not-send="true">DSG capabilities</a>.</div>
 <div><br>
 </div>
 <div><font face="monospace">[rhs@dunkel
-&#xA0; &#xA0; &#xA0; &#xA0; NOAA/PMEL TMAP<br>
-&#xA0; &#xA0; &#xA0; &#xA0; PyFerret v7.63 (optimized)<br>
-&#xA0; &#xA0; &#xA0; &#xA0; Linux 2.6.32-754.33.1.el6.x86_64 - 09/28/20<br>
-&#xA0; &#xA0; &#xA0; &#xA0; &#xA0;2-Nov-20 05:17<br>
+    NOAA/PMEL TMAP<br>
+    PyFerret v7.63 (optimized)<br>
+    Linux 2.6.32-754.33.1.el6.x86_64 - 09/28/20<br>
+    2-Nov-20 05:17<br>
 <br>
 yes? use ThirtyMinute_fd49_7acb_ec76.ncCF<br>
 yes? plot S_41<br>
@@ -211,7 +211,7 @@ Patrick and Joshua,</span><br>
 <div class="gmail_quote">
 <div dir="ltr" class="gmail_attr">On Sat, Oct 31, 2020 at
 1:37 AM Joshua Osborne - NOAA Affiliate &lt;<a rel="nofollow"
-href="mailto:joshua.osborne@xxxxxxxx" target="_blank"
+href="mailto:joshua.osborne@xxxxxxxx"
 moz-do-not-send="true">joshua.osborne@xxxxxxxx</a>&gt;
 wrote:<br>
 </div>
@@ -222,25 +222,24 @@ rgb(204,204,204);padding-left:1ex">
 <div dir="ltr"><span
 id="gmail-m_9152499575488208114gmail-m_4084491939895242257gmail-docs-internal-guid-62aa494a-7fff-1539-f34a-d013193f6e6e">
 <p dir="ltr"
-style="line-height:1.38;margin-top:0pt;margin-bottom:0pt"><span style="background-color:transparent;color:rgb(0,0,0);font-family:Arial;font-size:11pt;white-space:pre-wrap">&#xA0;</span><span style="background-color:transparent;color:rgb(0,0,0);font-family:Arial;white-space:pre-wrap"> You can, therefore, use ERDDAP as a data source from within PyFerret just as you would any other data source.</span></p>
+style="line-height:1.38;margin-top:0pt;margin-bottom:0pt"><span style="background-color:transparent;color:rgb(0,0,0);font-family:Arial;font-size:11pt;white-space:pre-wrap"></span><span style="background-color:transparent;color:rgb(0,0,0);font-family:Arial;white-space:pre-wrap"> You can, therefore, use ERDDAP as a data source from within PyFerret just as you would any other data source.</span></p>
 </span></div>
 </blockquote>
 <div><br>
 </div>
-<div>I wonder if you can elaborate on this?&#xA0; I'm curious
+<div>I wonder if you can elaborate on this? I'm curious
 and interested.</div>
 <div><br>
 </div>
-<div>I'm familiar with OPeNDAP servers.&#xA0; If you visit a
+<div>I'm familiar with OPeNDAP servers. If you visit a
 data server such as <a rel="nofollow"
-href="http://apdrc.soest.hawaii.edu" target="_blank"
+href="http://apdrc.soest.hawaii.edu"
 moz-do-not-send="true">apdrc.soest.hawaii.edu</a> ,
 you find this kind of page:</div>
 <div><br>
 </div>
 <div><a rel="nofollow"
-href="http://apdrc.soest.hawaii.edu/dods/public_data/Argo_Products/annual_mean/Gridded_annual_mean.info"
-target="_blank" moz-do-not-send="true">http://apdrc.soest.hawaii.edu/dods/public_data/Argo_Products/annual_mean/Gridded_annual_mean.info</a><br>
+href="http://apdrc.soest.hawaii.edu/dods/public_data/Argo_Products/annual_mean/Gridded_annual_mean.info"  moz-do-not-send="true">http://apdrc.soest.hawaii.edu/dods/public_data/Argo_Products/annual_mean/Gridded_annual_mean.info</a><br>
 </div>
 <div><br>
 </div>
@@ -249,8 +248,7 @@ such as</div>
 <div><br>
 </div>
 <a rel="nofollow"
-href="http://apdrc.soest.hawaii.edu:80/dods/public_data/Argo_Products/annual_mean/Gridded_annual_mean"
-target="_blank" moz-do-not-send="true">http://apdrc.soest.hawaii.edu:80/dods/public_data/Argo_Products/annual_mean/Gridded_annual_mean</a></div>
+href="http://apdrc.soest.hawaii.edu:80/dods/public_data/Argo_Products/annual_mean/Gridded_annual_mean"  moz-do-not-send="true">http://apdrc.soest.hawaii.edu:80/dods/public_data/Argo_Products/annual_mean/Gridded_annual_mean</a></div>
 <div class="gmail_quote"><br>
 </div>
 <div class="gmail_quote">You open this URL on PyFerret, like
@@ -258,11 +256,10 @@ so</div>
 <div><br>
 </div>
 <font face="monospace">yes? set data "<a rel="nofollow"
-href="http://apdrc.soest.hawaii.edu:80/dods/public_data/Argo_Products/annual_mean/Gridded_annual_mean"
-target="_blank" moz-do-not-send="true">http://apdrc.soest.hawaii.edu:80/dods/public_data/Argo_Products/annual_mean/Gridded_annual_mean</a>"<br>
+href="http://apdrc.soest.hawaii.edu:80/dods/public_data/Argo_Products/annual_mean/Gridded_annual_mean"  moz-do-not-send="true">http://apdrc.soest.hawaii.edu:80/dods/public_data/Argo_Products/annual_mean/Gridded_annual_mean</a>"<br>
 </font>
 <div class="gmail_quote"><font face="monospace">yes? show
-data&#xA0;</font><br>
+data</font><br>
 </div>
 <div class="gmail_quote"><br>
 </div>
@@ -270,9 +267,8 @@ data&#xA0;</font><br>
 if it were a local netCDF file.</div>
 <div class="gmail_quote"><br>
 </div>
-<div class="gmail_quote">What about ERDDAP ?&#xA0; The page (<a rel="nofollow"
-href="https://ferret.pmel.noaa.gov/pmel/erddap/index.html"
-target="_blank" moz-do-not-send="true">https://ferret.pmel.noaa.gov/pmel/erddap/index.html</a>
+<div class="gmail_quote">What about ERDDAP ? The page (<a rel="nofollow"
+href="https://ferret.pmel.noaa.gov/pmel/erddap/index.html"  moz-do-not-send="true">https://ferret.pmel.noaa.gov/pmel/erddap/index.html</a>
 ) seems to be saying that OPeNDAP is somehow included or
 covered or something.</div>
 <div class="gmail_quote"><br>

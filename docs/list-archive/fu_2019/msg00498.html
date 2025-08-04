@@ -48,11 +48,11 @@
 <hr>
 <!--X-Head-Body-Sep-End-->
 <!--X-Body-of-Message-->
-<div dir="ltr">Hi Olivier,<div><br></div><div>You&#xA0;need to describe the grid of the result.</div><div><br></div><div>By default Ferret/PyFerret assumes the axes of the results of an external function (in Fortran or Python) is inherited from the axes of all the argument(s).&#xA0; This means all arguments must have compatible grids and the result will be this grid.&#xA0; If this is not the case (as in your PyEF), one needs to describe the what axes are inherited from which arguments, and/or if the result uses custom (or abstract) axes.&#xA0; There is an example under &quot;A grid-changing PyEF&quot; on the documentation page&#xA0;<a rel="nofollow" href="https://ferret.pmel.noaa.gov/Ferret/documentation/pyferret/pyefs">https://ferret.pmel.noaa.gov/Ferret/documentation/pyferret/pyefs</a>&#xA0;&#xA0;</div><div><br></div><div>In your case you could add the following to the initialization dictionary variable &quot;initdict&quot;:</div><div><br></div><div><font face="monospace">&#xA0; &#xA0; &#xA0; &#xA0; &quot;axes&quot;: (pyferret.AXIS_IMPLIED_BY_ARGS, pyferret.AXIS_IMPLIED_BY_ARGS,<br>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;pyferret.AXIS_IMPLIED_BY_ARGS, pyferret.AXIS_IMPLIED_BY_ARGS,</font></div><div><font face="monospace">&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;pyferret.AXIS_IMPLIED_BY_ARGS, pyferret.AXIS_IMPLIED_BY_ARGS),<br>&#xA0; &#xA0; &#xA0; &#xA0; &quot;influences&quot;: ((False,False,False,False,False,False),</font></div><div><font face="monospace">&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;(True,True,True,True,True,True)),</font><br></div><div><br></div><div><font face="arial, sans-serif">(The &quot;axes&quot; tuple above is actually the default and only &quot;influences&quot; tuple of tuples is actually needed here, but I include it for the custom axis discussion below.)&#xA0;&#xA0;</font></div><div><font face="arial, sans-serif">This would tell Ferret to that the grid of the result is exactly the grid of the second argu                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+<div dir="ltr">Hi Olivier,<div><br></div><div>Youneed to describe the grid of the result.</div><div><br></div><div>By default Ferret/PyFerret assumes the axes of the results of an external function (in Fortran or Python) is inherited from the axes of all the argument(s). This means all arguments must have compatible grids and the result will be this grid. If this is not the case (as in your PyEF), one needs to describe the what axes are inherited from which arguments, and/or if the result uses custom (or abstract) axes. There is an example under &quot;A grid-changing PyEF&quot; on the documentation page<a rel="nofollow" href="../../documentation/pyferret/pyefs">../../documentation/pyferret/pyefs</a></div><div><br></div><div>In your case you could add the following to the initialization dictionary variable &quot;initdict&quot;:</div><div><br></div><div><font face="monospace">    &quot;axes&quot;: (pyferret.AXIS_IMPLIED_BY_ARGS, pyferret.AXIS_IMPLIED_BY_ARGS,<br>        pyferret.AXIS_IMPLIED_BY_ARGS, pyferret.AXIS_IMPLIED_BY_ARGS,</font></div><div><font face="monospace">        pyferret.AXIS_IMPLIED_BY_ARGS, pyferret.AXIS_IMPLIED_BY_ARGS),<br>    &quot;influences&quot;: ((False,False,False,False,False,False),</font></div><div><font face="monospace">           (True,True,True,True,True,True)),</font><br></div><div><br></div><div><font face="arial, sans-serif">(The &quot;axes&quot; tuple above is actually the default and only &quot;influences&quot; tuple of tuples is actually needed here, but I include it for the custom axis discussion below.)</font></div><div><font face="arial, sans-serif">This would tell Ferret to that the grid of the result is exactly the grid of the second argu                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
 <br>
 I&#39;m trying to build a python external function (PyEF). It should build an histogram from a list of classes. So the input arguments will be a Ferret array, and a list of classes. With a call like :<br>
 <br>
-histo(&#xA0; SIICECOV[L=1,K=1])&#xA0; &#xA0; &#xA0; &#xA0; &#xA0;, XSEQUENCE({0., 0.1, 0.2, 1.0, 2.0}) )<br>
+histo( SIICECOV[L=1,K=1])    , XSEQUENCE({0., 0.1, 0.2, 1.0, 2.0}) )<br>
 or<br>
 histo( XSEQUENCE(SIICECOV[L=1,K=1]), XSEQUENCE({0., 0.1, 0.2, 1.0, 2.0}) )<br>
 or<br>
@@ -61,9 +61,9 @@ histo( XSEQUENCE(SIICECOV[L=1,K=1]), YSEQUENCE({0., 0.1, 0.2, 1.0, 2.0}) )<br>
 But it always fails. For instance :<br>
 <br>
 &gt; STAT histo( XSEQUENCE(SIICECOV[L=1,K=1]), XSEQUENCE({0., 0.1, 0.2, 1.0, 2.0}) )<br>
-&#xA0;**ERROR: inconsistent sizes of data regions: X axis<br>
-&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; XSEQUENCE({0., 0.1, 0.2, 1.0, 2.0}) has 5 points (I=1:5)<br>
-&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; _expression_ has 9216 points (I=0001:9216)<br>
+**ERROR: inconsistent sizes of data regions: X axis<br>
+     XSEQUENCE({0., 0.1, 0.2, 1.0, 2.0}) has 5 points (I=1:5)<br>
+     _expression_ has 9216 points (I=0001:9216)<br>
 STAT histo( XSEQUENCE(SIICECOV[L=1,K=1]), XSEQUENCE({0., 0.1, 0.2, 1.0, 2.0}) )<br>
 Command file, command group, or REPEAT execution aborted<br>
 <br>
@@ -71,8 +71,8 @@ Command file, command group, or REPEAT execution aborted<br>
 or <br>
 <br>
 &gt; STAT histo( XSEQUENCE(SIICECOV[L=1,K=1]), XYEQUENCE({0., 0.1, 0.2, 1.0, 2.0}) )<br>
-&#xA0;**ERROR: command syntax: XYEQUENCE({0., 0.1, 0.2, 1.0, 2.0})<br>
-&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; unknown function &quot;XYEQUENCE&quot;<br>
+**ERROR: command syntax: XYEQUENCE({0., 0.1, 0.2, 1.0, 2.0})<br>
+     unknown function &quot;XYEQUENCE&quot;<br>
 STAT histo( XSEQUENCE(SIICECOV[L=1,K=1]), XYEQUENCE({0., 0.1, 0.2, 1.0, 2.0}) )<br>
 Command file, command group, or REPEAT execution aborted<br>
 <br>
@@ -93,28 +93,28 @@ import numpy<br>
 import pyferret<br>
 <br>
 def ferret_init(id):<br>
-&#xA0; &#xA0; &#39;&#39;&#39;Creates and returns the initialization dictionary for this PyEF&#39;&#39;&#39;<br>
-&#xA0; &#xA0; initdict = { &quot;numargs&quot; : 2, &quot;descript&quot;: &quot;Test function&quot;,<br>
-&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;&quot;argnames&quot;: (&quot;A&quot;, &quot;Histogram boundaries&quot;),<br>
-&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;}<br>
-&#xA0; &#xA0; return initdict<br>
+  &#39;&#39;&#39;Creates and returns the initialization dictionary for this PyEF&#39;&#39;&#39;<br>
+  initdict = { &quot;numargs&quot; : 2, &quot;descript&quot;: &quot;Test function&quot;,<br>
+        &quot;argnames&quot;: (&quot;A&quot;, &quot;Histogram boundaries&quot;),<br>
+          }<br>
+  return initdict<br>
 <br>
 def ferret_compute(id, result, result_bad_flag, inputs, input_bad_flags):<br>
-&#xA0; &#xA0; &#39;&#39;&#39; Essai d&#39;histogramme<br>
-&#xA0; &#xA0; ARG1 is the array. <br>
-&#xA0; &#xA0; ARG2 is the list of class boundaries<br>
-&#xA0; &#xA0; &#39;&#39;&#39;<br>
+  &#39;&#39;&#39; Essai d&#39;histogramme<br>
+  ARG1 is the array. <br>
+  ARG2 is the list of class boundaries<br>
+  &#39;&#39;&#39;<br>
 <br>
-&#xA0; &#xA0; badmask = ( numpy.fabs(inputs[pyferret.ARG1] - input_bad_flags[pyferret.ARG1]) &lt; 1.0E-5 )<br>
-&#xA0; &#xA0; goodmask = numpy.logical_not(badmask)<br>
+  badmask = ( numpy.fabs(inputs[pyferret.ARG1] - input_bad_flags[pyferret.ARG1]) &lt; 1.0E-5 )<br>
+  goodmask = numpy.logical_not(badmask)<br>
 <br>
-&#xA0; &#xA0; result[badmask]&#xA0; = input_bad_flags[pyferret.ARG1]<br>
-&#xA0; &#xA0; result[goodmask] = inputs[pyferret.ARG1][goodmask]<br>
+  result[badmask] = input_bad_flags[pyferret.ARG1]<br>
+  result[goodmask] = inputs[pyferret.ARG1][goodmask]<br>
 <br>
 &#x2014; <br>
-Olivier Marti&#xA0; - LSCE B&#xE2;t 714 p. 1049<br>
+Olivier Marti - LSCE B&#xE2;t 714 p. 1049<br>
 Tel : +33 1 69 08 77 27<br>
-mailto:<a rel="nofollow" href="mailto:olivier.marti@xxxxxxxxxxxx" target="_blank">olivier.marti@xxxxxxxxxxxx</a><br>
+mailto:<a rel="nofollow" href="mailto:olivier.marti@xxxxxxxxxxxx">olivier.marti@xxxxxxxxxxxx</a><br>
 <br>
 <br>
 </blockquote></div><br clear="all"><div><br></div>-- <br><div dir="ltr" class="gmail_signature"><div dir="ltr">Karl M. Smith, Ph.D.<br>JISAO Univ. Wash. and PMEL NOAA<br>&quot;The contents of this message are mine personally and do<br>not necessarily reflect any position of the Government<br>or the National Oceanic and Atmospheric Administration.&quot;<br></div></div>

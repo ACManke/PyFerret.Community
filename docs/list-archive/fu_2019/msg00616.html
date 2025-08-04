@@ -55,11 +55,11 @@
 some more explanation and another idea or two.<br>
 </p>
 <p>The axes with names such as LAT153_153 are Ferret-generated
-names, created when you save a subset of data in that direction.&#xA0;
+names, created when you save a subset of data in that direction.
 If you have data on a grid with an axis LAT and you save data at
-one location, for instance "SAVE/Y=35.5 myvar"&#xA0; then the one-point
+one location, for instance "SAVE/Y=35.5 myvar" then the one-point
 latitude axis is named with the index range based on the original
-axis - here the y=35.5 corresponds index J=153.&#xA0; A range such as
+axis - here the y=35.5 corresponds index J=153. A range such as
 "SAVE/y=35.5:42" would name the axis something like LAT153_162<br>
 </p>
 <p>Then it sounds as if you are trying to append more data which has
@@ -68,14 +68,14 @@ in the grid don't match up, hence the error message about
 coordinates. If you are doing SAVE/APPEND with a variable name
 that is already in the file, then the coordinates of the variable
 being saved must match what's in the file, except for time, where
-one can append new timesteps along the time axis.&#xA0; The
+one can append new timesteps along the time axis. The
 characteristics of the time axis of the variable being written
 must match the time axis in the file, that is, it must have the
-same time origin and time units, and the calendar must match.&#xA0; To
+same time origin and time units, and the calendar must match. To
 append in directions other than time you'd need to pre-define the
 output grid when the file is first created, as discussed here <a rel="nofollow"
 moz-do-not-send="true"
-href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/converting-to-netcdf/SIMPLE-CONVERSIONS-USING-FERRET#_VPINDEXENTRY_1071">in
+href="../../documentation/users-guide/converting-to-netcdf/SIMPLE-CONVERSIONS-USING-FERRET#_VPINDEXENTRY_1071">in
 the documentation</a>.<br>
 </p>
 <p>-Ansley<br>
@@ -115,7 +115,7 @@ useful output files, because of error messages like this one:<br>
 <div><br>
 </div>
 <div>TMAP ERR: error in line definition<br>
-&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; file coords dont match variable coords on axis
+ file coords dont match variable coords on axis
 LAT153_153</div>
 <div><br>
 </div>
@@ -136,7 +136,7 @@ about the axis transformation. The error in this case is:</div>
 </div>
 <div>**ERROR: regridding: only @ASN regridding between calendar
 and<br>
-&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; non-calendar axes: DENS</div>
+ non-calendar axes: DENS</div>
 <div><br>
 </div>
 <div>No variable is produced after using zaxreplace. I'm puzzled

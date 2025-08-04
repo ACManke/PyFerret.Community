@@ -61,14 +61,14 @@ functions that do this:<br>
 <tt>yes? show function/brief SCAT2GRID*</tt><br>
 <br>
 I would suggest SCAT2GRID_BIN_XYT to use a binning method because it
-looks as though your data is quite sparse.&#xA0;&#xA0; The arguments to the
+looks as though your data is quite sparse. The arguments to the
 SCAT2GRID function are xpts, ypts, tpts, varpts, and variables
 defining the output grid.<br>
 <p>The data in your multiple files needs to be gathered together
 into variables that are simple lists of points, and you will need
-to create a variable representing time.&#xA0; There may be more elegant
-ways to do this, but sometimes a simple method is easiest.&#xA0; I
-would write all of the data to an ascii file.&#xA0;&#xA0; Here is the idea -</p>
+to create a variable representing time. There may be more elegant
+ways to do this, but sometimes a simple method is easiest. I
+would write all of the data to an ascii file. Here is the idea -</p>
 <br>
 <tt><br>
 use 20140101.nc<br>
@@ -91,8 +91,8 @@ longitude, latitude, day<br>
 cancel data 1</tt><tt></tt><br>
 <p><br>
 </p>
-<p>The _expression_&#xA0; "let day = 1+0*amplitude" etc has the effect of
-defining a&#xA0; variable "day" on the same grid as "amplitude", with
+<p>The _expression_ "let day = 1+0*amplitude" etc has the effect of
+defining a variable "day" on the same grid as "amplitude", with
 value 1 for file 1, and so on.<br>
 </p>
 <br>
@@ -109,22 +109,22 @@ let filenames = SPAWN("ls 2014*.nc")<br>
 ! Loop over list of filenames<br>
 <br>
 repeat/range=1:365/name=in (let filename = filenames[i=`in`] ; \<br>
-&#xA0; define symbol filen = `filename` ; \<br>
-&#xA0; use ($filen) ; \<br>
-&#xA0; let day = `in` + 0*amplitude ; \<br>
-&#xA0; list/append/noheader/norow/file="2014_data.dat" amplitude,
+ define symbol filen = `filename` ; \<br>
+ use ($filen) ; \<br>
+ let day = `in` + 0*amplitude ; \<br>
+ list/append/noheader/norow/file="2014_data.dat" amplitude,
 longitude, latitude, day;\<br>
-&#xA0; cancel data ($filen) )</tt><tt><br>
+ cancel data ($filen) )</tt><tt><br>
 </tt><br>
 <p>Now, read the variables "amplitude, longitude, latitude, day"
 from this text file as described under "<a rel="nofollow" moz-do-not-send="true"
-href="https://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/data-set-basics/ASCII-DATA#_VPINDEXENTRY_210">ASCII
-data</a>".&#xA0; This will be the case of multiple variables, one
-dimension.&#xA0; Then define your output grid with an xaxis, yaxis and
+href="../../documentation/users-guide/data-set-basics/ASCII-DATA.html#_VPINDEXENTRY_210">ASCII
+data</a>". This will be the case of multiple variables, one
+dimension. Then define your output grid with an xaxis, yaxis and
 taxis; and call the SCAT2GRID_BIN_XYT function.<br>
 </p>
 <p>I haven't run the commands so of course there may be typos - but
-I hope this gives you the right idea.&#xA0; List out some of the
+I hope this gives you the right idea. List out some of the
 variables as you go along to see what the commands are doing.<br>
 </p>
 <p>Ansley<br>
@@ -147,12 +147,11 @@ if I could convey my question properly to all.</i></div>
 <div dir="auto"><br>
 </div>
 <div dir="auto">I have 365 daily files '<a rel="nofollow"
-href="http://20140101.nc" rel="noreferrer noreferrer"
-target="_blank" moz-do-not-send="true">20140101.nc</a>',
+href="http://20140101.nc" rel="noreferrer noreferrer"  moz-do-not-send="true">20140101.nc</a>',
 '<a rel="nofollow" href="http://20140102.nc" rel="noreferrer
-noreferrer" target="_blank" moz-do-not-send="true">20140102.nc</a>',.....till
+noreferrer" moz-do-not-send="true">20140102.nc</a>',.....till
 '<a rel="nofollow" href="http://20141231.nc" rel="noreferrer
-noreferrer" target="_blank" moz-do-not-send="true">20141231.nc</a>'.
+noreferrer" moz-do-not-send="true">20141231.nc</a>'.
 Each file contains 3 variables:</div>
 <div dir="auto">eddy_amplitude, longitude, and latitude.</div>
 <div dir="auto">Each of these variables have only 1 axis,
@@ -160,18 +159,18 @@ i.e. J axis.</div>
 <div dir="auto">For example,</div>
 <div dir="auto"><br>
 </div>
-<div dir="auto">&#xA0;<i> &#xA0; <b>currently SET data sets:<br>
-&#xA0; &#xA0; 1&gt; ./<a rel="nofollow" href="http://20140101.nc"
-rel="noreferrer noreferrer" target="_blank"
-moz-do-not-send="true">20140101.nc</a> &#xA0;(default)<br>
-&#xA0;name &#xA0; &#xA0; title &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; I &#xA0; &#xA0; &#xA0;
-&#xA0; J &#xA0; &#xA0; &#xA0; &#xA0; K &#xA0; &#xA0; &#xA0; &#xA0; L<br>
-AMPLITUDE&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;... &#xA0; &#xA0; &#xA0; 1:3 &#xA0;
-&#xA0; &#xA0; ... &#xA0; &#xA0; &#xA0; ...</b></i></div>
-<div dir="auto"><i><b>LONGITUDE&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;
-&#xA0;... &#xA0; &#xA0; &#xA0; 1:3 &#xA0; &#xA0; &#xA0; ... &#xA0; &#xA0; &#xA0; ...</b></i></div>
-<div dir="auto"><i><b>LATITUDE&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;
-&#xA0; &#xA0;... &#xA0; &#xA0; &#xA0; 1:3 &#xA0; &#xA0; &#xA0; ... &#xA0; &#xA0; &#xA0; ...</b></i></div>
+<div dir="auto"><i>  <b>currently SET data sets:<br>
+  1&gt; ./<a rel="nofollow" href="http://20140101.nc"
+rel="noreferrer noreferrer"
+moz-do-not-send="true">20140101.nc</a> (default)<br>
+name   title               I   
+ J     K     L<br>
+AMPLITUDE             ...    1:3 
+  ...    ...</b></i></div>
+<div dir="auto"><i><b>LONGITUDE            
+...    1:3    ...    ...</b></i></div>
+<div dir="auto"><i><b>LATITUDE             
+ ...    1:3    ...    ...</b></i></div>
 <div dir="auto"><br>
 </div>
 <div dir="auto">This means that, I have records of
@@ -181,33 +180,32 @@ day, 01-jan-2014.</div>
 <div><br>
 </div>
 <div>I want to make a single annual netcdf file '<a rel="nofollow"
-href="http://eddy.nc" rel="noreferrer noreferrer"
-target="_blank" moz-do-not-send="true">eddy.nc</a>'
+href="http://eddy.nc" rel="noreferrer noreferrer"  moz-do-not-send="true">eddy.nc</a>'
 like this:</div>
 <div><br>
 </div>
-<div>&#xA0; &#xA0; &#xA0; <i>&#xA0; &#xA0; <b>&#xA0; &#xA0; currently SET data sets:</b></i></div>
-<i><b>&#xA0; &#xA0; 1&gt; <a rel="nofollow" href="http://eddy.nc" rel="noreferrer
-noreferrer" target="_blank" moz-do-not-send="true">eddy.nc</a>
-&#xA0;(default)<br>
-&#xA0;name &#xA0; &#xA0; title&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;I&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;
-J&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; K&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; L<br>
-&#xA0;AMP&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; 1:21 &#xA0; &#xA0; &#xA0;1:21
-&#xA0; &#xA0; &#xA0;... &#xA0; &#xA0; &#xA0; 1:365</b></i></div>
+<div>   <i>  <b>  currently SET data sets:</b></i></div>
+<i><b>  1&gt; <a rel="nofollow" href="http://eddy.nc" rel="noreferrer
+noreferrer" moz-do-not-send="true">eddy.nc</a>
+(default)<br>
+name   title             I     
+J     K      L<br>
+AMP                  1:21   1:21
+  ...    1:365</b></i></div>
 <div dir="auto"><i><b><br>
 </b></i></div>
 <div dir="auto"><b><i>yes? sh gr AMP<br>
-&#xA0;GRID&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; MY_GRID<br>
-&#xA0; name&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;axis&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;# pts&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;
-start&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; end&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;
+GRID     MY_GRID<br>
+ name      axis     # pts       
+start              end      
 subset<br>
-&#xA0;XAXIX &#xA0; &#xA0; LONGITUDE&#xA0; &#xA0; 21mr&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; 79E&#xA0; &#xA0; &#xA0; &#xA0;
-&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; 99E&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;full<br>
-&#xA0;YAXIX &#xA0; &#xA0; LATITUDE&#xA0; &#xA0; &#xA0; &#xA0; &#xA0;21 r&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; 3N&#xA0;
-&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; 23N&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;full<br>
-&#xA0;normal&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; Z<br>
-&#xA0;TAXIS&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; TIME&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; 365 r &#xA0; 01-JAN-2014
-12:00 &#xA0; &#xA0;31-DEC-2014 12:00 &#xA0; full</i></b><br>
+XAXIX   LONGITUDE  21mr        79E   
+          99E         full<br>
+YAXIX   LATITUDE    21 r         3N
+             23N         full<br>
+normal       Z<br>
+TAXIS      TIME     365 r  01-JAN-2014
+12:00  31-DEC-2014 12:00  full</i></b><br>
 </div>
 <div dir="auto"><i><b><br>
 </b></i></div>
