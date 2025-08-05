@@ -51,7 +51,7 @@
 <hr>
 <!--X-Head-Body-Sep-End-->
 <!--X-Body-of-Message-->
-<div dir="ltr"><div><div><div>Hella,<br></div>You might try an experiment or two, perhaps making a much shorter common time axis and doing the commands without the netCDF compression, to see if that might be related to the crash.&#xA0; I&#39;m not aware of any problems with that in the netCDF4 calls, but that might be worth checking.<br><br></div>The &quot;DEFINE DATA&quot; aggregations on the fly would want to create an ensemble by defining an E axis and treating the ensemble members as a list on that new axis.&#xA0; Since your data have an E axis already, in order to use that you&#39;d need to perhaps open your datasets with and force the data onto another grid, maybe with USE/ORDER=TF&#xA0; - but as you say the variables are not coming in on the same grid so this probably doesn&#39;t quite fit.<br><br></div>Ansley<br></div><div class="gmail_extra"><br><div class="gmail_quote">On Thu, Apr 27, 2017 at 8:24 AM, Riede, Hella <span dir="ltr">&lt;<a rel="nofollow" href="mailto:hella.riede@xxxxxxx" target="_blank">hella.riede@xxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">Hi Karl,<br>
+<div dir="ltr"><div><div><div>Hella,<br></div>You might try an experiment or two, perhaps making a much shorter common time axis and doing the commands without the netCDF compression, to see if that might be related to the crash.&#xA0; I&#39;m not aware of any problems with that in the netCDF4 calls, but that might be worth checking.<br><br></div>The &quot;DEFINE DATA&quot; aggregations on the fly would want to create an ensemble by defining an E axis and treating the ensemble members as a list on that new axis.&#xA0; Since your data have an E axis already, in order to use that you&#39;d need to perhaps open your datasets with and force the data onto another grid, maybe with USE/ORDER=TF&#xA0; - but as you say the variables are not coming in on the same grid so this probably doesn&#39;t quite fit.<br><br></div>Ansley<br></div><div class="gmail_extra"><br><div class="gmail_quote">On Thu, Apr 27, 2017 at 8:24 AM, Riede, Hella <span dir="ltr">&lt;<a rel="nofollow" href="mailto:hella.riede@xxxxxxx">hella.riede@xxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">Hi Karl,<br>
 <br>
 thanks for your idea. As to the aggregate command, this only works for &quot;those variables from the datasets that have identical variable names and grids.&quot;. I do have identical variable names in all files, but not identical grids yet.<br>
 <br>
@@ -74,7 +74,7 @@ The cryptic error message is showing the (last) line in the &#39;pyferret&#39; s
 <br>
 As for aggregating your datasets, have you tried the define data /aggregate command?<br>
 <br>
-<a rel="nofollow" href="http://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/DEFINE#_define_data" rel="noreferrer" target="_blank">http://ferret.pmel.noaa.gov/<wbr>Ferret/documentation/users-<wbr>guide/commands-reference/<wbr>DEFINE#_define_data</a><br>
+<a rel="nofollow" href="../../documentation/users-guide/commands-reference/DEFINE.html#_define_data" rel="noreferrer">http://ferret.pmel.noaa.gov/<wbr>Ferret/documentation/users-<wbr>guide/commands-reference/<wbr>DEFINE#_define_data</a><br>
 <br>
 I must admit I did not look closely enough at what you had to see if one of the options would work.<br>
 <br>

@@ -57,20 +57,20 @@
 </div><div>file/skip=3/var=myvar/columns=($columns)/grid=mygrid MSLA.dat</div><div>set variable/bad=($badflag) myvar</div><div><br>
 </div><div>shade myvar</div><div>save/file=MSLA.nc<br>
 </div></div><div><br>
-</div><div><div>But, the y-axis was reversed so that I got the mirror image.</div><div>After following &quot;<span style="color:rgb(0,0,0);font-family:&#39;Times New Roman&#39;;font-size:medium">use/order=x-yMSLA.nc&quot; from</span><a rel="nofollow" href="../fu_2011/msg00785.html" target="_blank">../fu_2011/msg00785.html</a>, it was corrected.</div></div><div><br>
+</div><div><div>But, the y-axis was reversed so that I got the mirror image.</div><div>After following &quot;<span style="color:rgb(0,0,0);font-family:&#39;Times New Roman&#39;;font-size:medium">use/order=x-yMSLA.nc&quot; from</span><a rel="nofollow" href="../fu_2011/msg00785.html">../fu_2011/msg00785.html</a>, it was corrected.</div></div><div><br>
 </div><div style="">Thank you...</div><div><br>
 </div><div><br>
 </div><div><div><br>
 </div><div><br>
 </div></div><div class="gmail_extra"><br>
-<div class="gmail_quote">2017-10-19 21:51 GMT+05:30 Ansley C. Manke <span dir="ltr">&lt;<a rel="nofollow" href="mailto:ansley.b.manke@xxxxxxxx" target="_blank">ansley.b.manke@xxxxxxxx</a>&gt;</span>:<br>
+<div class="gmail_quote">2017-10-19 21:51 GMT+05:30 Ansley C. Manke <span dir="ltr">&lt;<a rel="nofollow" href="mailto:ansley.b.manke@xxxxxxxx">ansley.b.manke@xxxxxxxx</a>&gt;</span>:<br>
 <blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left-width:1px;border-left-style:solid;border-left-color:rgb(204,204,204);padding-left:1ex">
  
  
  
 <div bgcolor="#FFFFFF">
 <p>Hi Karnan,</p>
-<p>This is under &quot;<a rel="nofollow" href="http://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/data-set-basics/ASCII-DATA" target="_blank">reading
+<p>This is under &quot;<a rel="nofollow" href="../../documentation/users-guide/data-set-basics/ASCII-DATA.html">reading
 ascii data</a>&quot;. You&#39;ll need to define the grid and use a SET
 DATA/EZ command or a COLUMNS command (which is an alias for SET
 DATA/EZ/DELIMITED) to read it. Look up the syntax for reading tab
@@ -108,7 +108,7 @@ fill/shade it spatially. My data looks like the following
 <pre style="color:rgb(0,0,0);word-wrap:break-word;white-space:pre-wrap">             VARIABLE : Sea Level Anomalies (m)
 DATA SET : NRT merged all satellites Global Ocean Gridded Sea Level Anomalies L4 product
 FILENAME : dataset-duacs-nrt-over30d-global-allsat-msla-h
-FILEPATH : <a rel="nofollow" href="http://atoll-aviso.vlandata.cls.fr:41080/thredds/dodsC/" target="_blank">http://atoll-aviso.vlandata.cls.fr:41080/thredds/dodsC/</a>
+FILEPATH : <a rel="nofollow" href="http://atoll-aviso.vlandata.cls.fr:41080/thredds/dodsC/">http://atoll-aviso.vlandata.cls.fr:41080/thredds/dodsC/</a>
 SUBSET   : 8 by 8 points (LONGITUDE-LATITUDE)
 TIME     : 02-JUN-2014 00:00
 60.13E  60.38E  60.63E  60.88E  61.13E  61.38E  61.63E  61.88E 
@@ -128,7 +128,7 @@ TIME     : 02-JUN-2014 00:00
 <div class="gmail_extra"><br>
  
 <div class="gmail_quote">2017-10-19 12:58 GMT+05:30 Russ Fiedler
-<span dir="ltr">&lt;<a rel="nofollow" href="mailto:russell.fiedler@xxxxxxxx" target="_blank">russell.fiedler@xxxxxxxx</a>&gt;</span>:<br>
+<span dir="ltr">&lt;<a rel="nofollow" href="mailto:russell.fiedler@xxxxxxxx">russell.fiedler@xxxxxxxx</a>&gt;</span>:<br>
  
 <blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left-width:1px;border-left-style:solid;border-left-color:rgb(204,204,204);padding-left:1ex">
 <div bgcolor="#FFFFFF">
@@ -142,7 +142,7 @@ Check out the function FILLL_XY<br>
  
 <br>
  
-<a rel="nofollow" class="gmail-m_6657977836420790263gmail-m_-1495706674450241072m_6712626174448682062m_8757614911886413141m_-4148791387049022228moz-txt-link-freetext" href="http://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/appendix-a-external-functions/fill_xy" target="_blank">http://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/appendix-a-external-functions/fill_xy</a><br>
+<a rel="nofollow" class="gmail-m_6657977836420790263gmail-m_-1495706674450241072m_6712626174448682062m_8757614911886413141m_-4148791387049022228moz-txt-link-freetext" href="../../documentation/users-guide/appendix-a-external-functions/fill_xy.html">../../documentation/users-guide/appendix-a-external-functions/fill_xy</a><br>
  
 <br>
  

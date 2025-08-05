@@ -55,7 +55,7 @@
 <hr>
 <!--X-Head-Body-Sep-End-->
 <!--X-Body-of-Message-->
-<div dir="ltr"><div class="gmail_default" style="color:#000000">Thank you Russ and Ansley</div><div class="gmail_default" style="color:#000000"><br></div><div class="gmail_default" style="color:#000000">The problem has been sorted out with your suggestions.&#xA0;</div><div class="gmail_default" style="color:#000000"><br></div><div class="gmail_default" style="color:#000000">cheers, saurabh</div></div><div class="gmail_extra"><br><div class="gmail_quote">On Thu, Feb 16, 2017 at 4:57 AM, Ansley C. Manke <span dir="ltr">&lt;<a rel="nofollow" href="mailto:ansley.b.manke@xxxxxxxx" target="_blank">ansley.b.manke@xxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
+<div dir="ltr"><div class="gmail_default" style="color:#000000">Thank you Russ and Ansley</div><div class="gmail_default" style="color:#000000"><br></div><div class="gmail_default" style="color:#000000">The problem has been sorted out with your suggestions.&#xA0;</div><div class="gmail_default" style="color:#000000"><br></div><div class="gmail_default" style="color:#000000">cheers, saurabh</div></div><div class="gmail_extra"><br><div class="gmail_quote">On Thu, Feb 16, 2017 at 4:57 AM, Ansley C. Manke <span dir="ltr">&lt;<a rel="nofollow" href="mailto:ansley.b.manke@xxxxxxxx">ansley.b.manke@xxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
   
     
   
@@ -79,7 +79,7 @@
     <p>Does this work correctly without the /SET? <br>
     </p>
     <p><tt>&#xA0;&#xA0;
-fill/nokey/hlimits=0E:0W:20/<wbr>vlimits=62.5S:62.5N:10/lev=(-<wbr>inf)(-.8,.8,.2)(inf)/nolab/<wbr>palette=blue_orange
+fill/nokey/hlimits=0E:0W:20/vlimits=62.5S:62.5N:10/lev=(-inf)(-.8,.8,.2)(inf)/nolab/palette=blue_orange
         correl</tt></p>
     <p>How about this, without the /OVER?<br>
     </p>
@@ -98,7 +98,7 @@ fill/nokey/hlimits=0E:0W:20/<wbr>vlimits=62.5S:62.5N:10/lev=(-<wbr>inf)(-.8,.8,.
         <br>
         I don&#39;t understand what you are trying to overlay.<br>
         <br>
-        let ppt = if abs(t2t[i=1:`nx`:1,j=1:`ny`:1]<wbr>) ge 1.9 then t2t<br>
+        let ppt = if abs(t2t[i=1:`nx`:1,j=1:`ny`:1]) ge 1.9 then t2t<br>
         ...<br>
         plot/nolab/nokey/vs/ov/sym=dot ppt*lon, ppt*lat<br>
         <br>
@@ -109,14 +109,14 @@ fill/nokey/hlimits=0E:0W:20/<wbr>vlimits=62.5S:62.5N:10/lev=(-<wbr>inf)(-.8,.8,.
         <br>
         I think you want<br>
         <br>
-        let ppt = if abs(t2t[i=1:`nx`:1,j=1:`ny`:1]<wbr>) ge 1.9 then 1<br>
+        let ppt = if abs(t2t[i=1:`nx`:1,j=1:`ny`:1]) ge 1.9 then 1<br>
         <br>
         which should just return the locations if t2t is greater than
         1.9.<br>
         <br>
         See example 2 here<br>
         <br>
-        <a rel="nofollow" class="m_5014586062985384729moz-txt-link-freetext" href="http://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/PATTERN" target="_blank">http://ferret.pmel.noaa.gov/<wbr>Ferret/documentation/users-<wbr>guide/commands-reference/<wbr>PATTERN</a><br>
+        <a rel="nofollow" class="m_5014586062985384729moz-txt-link-freetext" href="../../documentation/users-guide/commands-reference/PATTERN.html">http://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/PATTERN</a><br>
         <br>
         <br>
         Russ<br>
@@ -131,14 +131,14 @@ fill/nokey/hlimits=0E:0W:20/<wbr>vlimits=62.5S:62.5N:10/lev=(-<wbr>inf)(-.8,.8,.
             is my ferret script and all the details please have a look.<br>
           </div>
           <div class="gmail_default" style="color:rgb(0,0,0)"><br>
-            use <a rel="nofollow" href="http://all_sln.nc" target="_blank">all_sln.nc</a><br>
-            use <a rel="nofollow" href="http://all_pp.nc" target="_blank">all_pp.nc</a><br>
+            use all_sln.nc<br>
+            use all_pp.nc<br>
             <br>
             <br>
             sh da<br>
             <br>
             currently SET data sets:<br>
-            &#xA0;&#xA0;&#xA0; 1&gt;&#xA0; /media/work/sln/<a rel="nofollow" href="http://all_sln.nc" target="_blank">all_sln.nc</a> <br>
+            &#xA0;&#xA0;&#xA0; 1&gt;&#xA0; /media/work/sln/all_sln.nc <br>
             &#xA0;name&#xA0;&#xA0;&#xA0;&#xA0; title&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;
             &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; I&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; J&#xA0; &#xA0; &#xA0; &#xA0; &#xA0;&#xA0;&#xA0;&#xA0;&#xA0; K&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; L &#xA0;&#xA0;
             &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; M&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; N<br>
@@ -147,11 +147,11 @@ fill/nokey/hlimits=0E:0W:20/<wbr>vlimits=62.5S:62.5N:10/lev=(-<wbr>inf)(-.8,.8,.
             1:27&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:142 &#xA0; &#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...<br>
             <br>
             &#xA0;<br>
-            &#xA0;&#xA0;&#xA0; 2&gt; /media/ppr/<a rel="nofollow" href="http://all_pp.nc" target="_blank">all_pp.nc</a>&#xA0; (default)<br>
+            &#xA0;&#xA0;&#xA0; 2&gt; /media/ppr/all_pp.nc&#xA0; (default)<br>
             &#xA0;name&#xA0;&#xA0;&#xA0;&#xA0; title&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;
             &#xA0;&#xA0; &#xA0;&#xA0;&#xA0; I&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; J&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; K&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; L&#xA0;&#xA0;&#xA0;&#xA0; &#xA0;&#xA0; &#xA0;&#xA0; M&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; N<br>
             &#xA0;PP_ALL<br>
-            &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; PP-PP_CLI[GT=PP@ASN]&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;<wbr>&#xA0;&#xA0; 1:144&#xA0;&#xA0;&#xA0;&#xA0;
+            &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; PP-PP_CLI[GT=PP@ASN]&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:144&#xA0;&#xA0;&#xA0;&#xA0;
             1:50&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:139&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...<br>
             <br>
             <br>
@@ -162,10 +162,10 @@ fill/nokey/hlimits=0E:0W:20/<wbr>vlimits=62.5S:62.5N:10/lev=(-<wbr>inf)(-.8,.8,.
             start&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; end&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
             subset<br>
             &#xA0;LON1&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; LONGITUDE&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 144mr&#xA0;&#xA0;&#xA0; &#xA0;
-            1.25E&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;<wbr>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1.25W&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
+            1.25E&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1.25W&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
             full<br>
             &#xA0;LAT11_622_51 LATITUDE&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 50 r&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
-            61.25S&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;<wbr>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 61.25N&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
+            61.25S&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 61.25N&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
             full<br>
             &#xA0;normal&#xA0;&#xA0;&#xA0; Z<br>
             &#xA0;TIME1&#xA0;&#xA0;&#xA0;&#xA0; TIME&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 139 i&#xA0;&#xA0; 01-JAN-2005
@@ -177,14 +177,14 @@ fill/nokey/hlimits=0E:0W:20/<wbr>vlimits=62.5S:62.5N:10/lev=(-<wbr>inf)(-.8,.8,.
             start&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; end&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;
             &#xA0;&#xA0; &#xA0;&#xA0;&#xA0;&#xA0;&#xA0; subset<br>
             &#xA0;LON&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; LONGITUDE&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 360mr&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
-            0.5E&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;<wbr>&#xA0;
-            0.5W&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;<wbr>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; full<br>
+            0.5E&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
+            0.5W&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; full<br>
             &#xA0;LAT28_153 LATITUDE&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 126 r&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
-            62.5S&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;<wbr>&#xA0;
-            62.5N&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;<wbr>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; full<br>
+            62.5S&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
+            62.5N&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; full<br>
             &#xA0;LEV&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; DEPTH (m)&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 27 i-&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
-            0&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;<wbr>&#xA0;&#xA0;&#xA0;&#xA0;
-            2000&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;<wbr>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; full<br>
+            0&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
+            2000&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; full<br>
             &#xA0;TIME&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; TIME&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 142 i&#xA0;&#xA0; 15-JAN-2005
             00:00&#xA0;&#xA0;&#xA0; 15-OCT-2016 00:00&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; full<br>
             &#xA0;normal&#xA0;&#xA0;&#xA0; E<br>
@@ -222,7 +222,7 @@ fill/nokey/hlimits=0E:0W:20/<wbr>vlimits=62.5S:62.5N:10/lev=(-<wbr>inf)(-.8,.8,.
             0*y[gy=correl,j=1:`ny`:1]<br>
             let lat = 0*x[gx=correl,i=1:`nx`:1] +
             y[gy=correl,j=1:`ny`:1]<br>
-            let ppt = if abs(t2t[i=1:`nx`:1,j=1:`ny`:1]<wbr>) ge 1.9 then t2t
+            let ppt = if abs(t2t[i=1:`nx`:1,j=1:`ny`:1]) ge 1.9 then t2t
             <br>
             <br>
             let nx = `t2t,return=isize`<br>
@@ -237,12 +237,12 @@ fill/nokey/hlimits=0E:0W:20/<wbr>vlimits=62.5S:62.5N:10/lev=(-<wbr>inf)(-.8,.8,.
             y[gy=correl,j=1:`ny`:1]<br>
             &#xA0;!-&gt; DEFINE VARIABLE lat = 0*x[gx=correl,i=1:360:1] +
             y[gy=correl,j=1:126:1]<br>
-            let ppt = if abs(t2t[i=1:`nx`:1,j=1:`ny`:1]<wbr>) ge 1.9 then t2t<br>
+            let ppt = if abs(t2t[i=1:`nx`:1,j=1:`ny`:1]) ge 1.9 then t2t<br>
             &#xA0;!-&gt; DEFINE VARIABLE ppt = if
             abs(t2t[i=1:360:1,j=1:126:1]) ge 1.9 then t2t<br>
             <br>
             set viewport a11<br>
-fill/nokey/set/hlimits=0E:0W:<wbr>20/vlimits=62.5S:62.5N:10/lev=<wbr>(-inf)(-.8,.8,.2)(inf)/nolab/<wbr>palette=blue_orange
+fill/nokey/set/hlimits=0E:0W:20/vlimits=62.5S:62.5N:10/lev=(-inf)(-.8,.8,.2)(inf)/nolab/palette=blue_orange
             correl<br>
             plot/nolab/nokey/vs/ov/sym=dot ppt*lon, ppt*lat<br>
             Segmentation fault (core dumped)<br>
@@ -263,7 +263,7 @@ fill/nokey/set/hlimits=0E:0W:<wbr>20/vlimits=62.5S:62.5N:10/lev=<wbr>(-inf)(-.8,
         </div>
         <div class="gmail_extra"><br>
           <div class="gmail_quote">On Wed, Feb 15, 2017 at 3:37 PM, Ryo
-            Furue <span dir="ltr">&lt;<a rel="nofollow" href="mailto:furue@xxxxxxxxxx" target="_blank">furue@xxxxxxxxxx</a>&gt;</span>
+            Furue <span dir="ltr">&lt;<a rel="nofollow" href="mailto:furue@xxxxxxxxxx">furue@xxxxxxxxxx</a>&gt;</span>
             wrote:<br>
             <blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
               <div dir="ltr">Hi S<span style="color:rgb(0,0,0)">aurabh,</span>
