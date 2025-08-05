@@ -51,7 +51,7 @@
 <!--X-Head-Body-Sep-End-->
 <!--X-Body-of-Message-->
 <div dir="ltr"><div class="gmail_default" style="font-family:arial,helvetica,sans-serif">Hi Billy,</div><div class="gmail_default" style="font-family:arial,helvetica,sans-serif"><br></div><div class="gmail_default" style="font-family:arial,helvetica,sans-serif">It&#39;s probably due to your time-dependent mask.&#xA0; First try filling narrow longitude gaps with:</div><div class="gmail_default" style="font-family:arial,helvetica,sans-serif"><br></div><div class="gmail_default"><font face="arial, helvetica, sans-serif">yes? let var_fill = IF max(var[x=@cia],var[x=@cib]) LE 2 THEN var[x=@fln]</font><br></div><div class="gmail_default" style="font-family:arial,helvetica,sans-serif"><br></div><div class="gmail_default" style="font-family:arial,helvetica,sans-serif">Then omit years with particularly bad coverage:</div><div class="gmail_default" style="font-family:arial,helvetica,sans-serif"><br></div><div class="gmail_default"><font face="arial, helvetica, sans-serif">yes? let var_crop = var_fill[t=1-jan-1995:1-jan-2016]</font><br></div><div class="gmail_default"><font face="arial, helvetica, sans-serif"><br></font></div><div class="gmail_default"><font face="arial, helvetica, sans-serif">Then make your mask stationary in time, by masking out any longitudes that are EVER missing:</font></div><div class="gmail_default"><font face="arial, helvetica, sans-serif"><br></font></div><div class="gmail_default"><font face="arial, helvetica, sans-serif">yes? let var_static = IF var_crop[t=@nbd] EQ 0 THEN var_crop</font></div><div class="gmail_default"><font face="arial, helvetica, sans-serif"><br></font></div><div class="gmail_default"><font face="arial, helvetica, sans-serif">Then try your test again on VAR_STATIC.</font></div><div class="gmail_default" style="font-family:arial,helvetica,sans-serif"><br></div><div class="gmail_default" style="font-family:arial,helvetica,sans-serif">Andrew</div><div class="gmail_extra">
-<br><div class="gmail_quote">On Wed, Mar 22, 2017 at 4:39 PM, Martin Schmidt <span dir="ltr">&lt;<a rel="nofollow" href="mailto:martin.schmidt@xxxxxxxxxxxxxxxxx" target="_blank">martin.schmidt@xxxxxxxxxxxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex">
+<br><div class="gmail_quote">On Wed, Mar 22, 2017 at 4:39 PM, Martin Schmidt <span dir="ltr">&lt;<a rel="nofollow" href="mailto:martin.schmidt@xxxxxxxxxxxxxxxxx">martin.schmidt@xxxxxxxxxxxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex">
   
     
   
@@ -110,9 +110,9 @@ NOAA / Pacific Marine Environmental Laboratory
 7600 Sand Point Way NE
 Seattle WA 98115 USA
 
-<a rel="nofollow" class="gmail-m_7741843557293167429moz-txt-link-abbreviated" href="mailto:william.s.kessler@xxxxxxxx" target="_blank">william.s.kessler@xxxxxxxx</a>
-Tel: <a rel="nofollow" href="tel:(206)%20526-6221" value="+12065266221" target="_blank">+1 206-526-6221</a>
-Fax: <a rel="nofollow" href="tel:(206)%20526-6744" value="+12065266744" target="_blank">+1 206-526-6744</a>
+<a rel="nofollow" class="gmail-m_7741843557293167429moz-txt-link-abbreviated" href="mailto:william.s.kessler@xxxxxxxx">william.s.kessler@xxxxxxxx</a>
+Tel: <a rel="nofollow" href="tel:(206)%20526-6221" value="+12065266221">+1 206-526-6221</a>
+Fax: <a rel="nofollow" href="tel:(206)%20526-6744" value="+12065266744">+1 206-526-6744</a>
 </pre>
       <br>
       <fieldset class="gmail-m_7741843557293167429mimeAttachmentHeader"></fieldset>

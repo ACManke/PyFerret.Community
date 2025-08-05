@@ -51,7 +51,7 @@
 <hr>
 <!--X-Head-Body-Sep-End-->
 <!--X-Body-of-Message-->
-<div dir="ltr"><div><div><div><div>Thanks Russ,<br>An update on working with my large dataset:<br><br></div>I tried several of your methods and slight variations of, trying to understand how they work and what size the finished .nc file would be.<br><br></div>I was able to produce my desired detrended dataset via repeating through one latitude at a time rather than through time and space as I previous attempted. This took about 24 hours; and the resulting .nc is the same size as the original data 265 GB.&#xA0; So, not the quickest, and probably not the way I should go in the future if a quicker/more efficient method exists.<br><br></div>I also ran the chunking method.&#xA0; This created 3.4 GB file in about 4 hours. When loaded and shade in ferret/pyferret, the data are missing values for the complete file. Also, when I ncdump -h, I receive an error NetCDF: Unknown file format. I am a novice when it comes to understanding how the computer is compressing the file via chunk, though I am trying to understand through the ferret doc and its reference to unidata and its documention on netcdf4 file compression.<br><br>I include my modified script below, thanks for the help, Paul<br><br>use &quot;./<a rel="nofollow" href="http://CM2.6_Control_SSH_01810101-02001231.nc">CM2.6_Control_SSH_01810101-02001231.nc</a>&quot;<br><br>set memory/size=99999<br><br>let P&#xA0; = T[GT=SSH,l=1:7305]<br>let Q = SSH[l=1:7305]<br>SET GRID Q<br>GO regresst<br><br>let SSH_Detrended = SSH - qhat<br><br>def sym XC 40<br>def sym YC 30<br>def sym TC 100<br><br>def sym chunking &quot;XCHUNK=($XC)/YCHUNK=($YC)/TCHUNK=($TC)&quot;<br><br>def sym filepath &quot;./<a rel="nofollow" href="http://CM2.6_Control_SSH_DETRENDED_01810101-02001231_Chunks.nc">CM2.6_Control_SSH_DETRENDED_01810101-02001231_Chunks.nc</a>&quot;<br><br>def sym savecom save/($chunking)/NCFORMAT=4/deflate=1/shuffle/file=&quot;($filepath)&quot;<br><br></div></div><div class="gmail_extra"><br><div class="gmail_quote">On Thu, Apr 20, 2017 at 9:05 PM, Russ Fiedler <span dir="ltr">&lt;<a rel="nofollow" href="mailto:russell.fiedler@xxxxxxxx" target="_blank">russell.fiedler@xxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
+<div dir="ltr"><div><div><div><div>Thanks Russ,<br>An update on working with my large dataset:<br><br></div>I tried several of your methods and slight variations of, trying to understand how they work and what size the finished .nc file would be.<br><br></div>I was able to produce my desired detrended dataset via repeating through one latitude at a time rather than through time and space as I previous attempted. This took about 24 hours; and the resulting .nc is the same size as the original data 265 GB.&#xA0; So, not the quickest, and probably not the way I should go in the future if a quicker/more efficient method exists.<br><br></div>I also ran the chunking method.&#xA0; This created 3.4 GB file in about 4 hours. When loaded and shade in ferret/pyferret, the data are missing values for the complete file. Also, when I ncdump -h, I receive an error NetCDF: Unknown file format. I am a novice when it comes to understanding how the computer is compressing the file via chunk, though I am trying to understand through the ferret doc and its reference to unidata and its documention on netcdf4 file compression.<br><br>I include my modified script below, thanks for the help, Paul<br><br>use &quot;./<a rel="nofollow" href="http://CM2.6_Control_SSH_01810101-02001231.nc">CM2.6_Control_SSH_01810101-02001231.nc</a>&quot;<br><br>set memory/size=99999<br><br>let P&#xA0; = T[GT=SSH,l=1:7305]<br>let Q = SSH[l=1:7305]<br>SET GRID Q<br>GO regresst<br><br>let SSH_Detrended = SSH - qhat<br><br>def sym XC 40<br>def sym YC 30<br>def sym TC 100<br><br>def sym chunking &quot;XCHUNK=($XC)/YCHUNK=($YC)/TCHUNK=($TC)&quot;<br><br>def sym filepath &quot;./<a rel="nofollow" href="http://CM2.6_Control_SSH_DETRENDED_01810101-02001231_Chunks.nc">CM2.6_Control_SSH_DETRENDED_01810101-02001231_Chunks.nc</a>&quot;<br><br>def sym savecom save/($chunking)/NCFORMAT=4/deflate=1/shuffle/file=&quot;($filepath)&quot;<br><br></div></div><div class="gmail_extra"><br><div class="gmail_quote">On Thu, Apr 20, 2017 at 9:05 PM, Russ Fiedler <span dir="ltr">&lt;<a rel="nofollow" href="mailto:russell.fiedler@xxxxxxxx">russell.fiedler@xxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
   
     
   
@@ -64,7 +64,7 @@
       and I missed a slash in the following.<br>
       <br>
       def sym savecom
-      &quot;save/($chunking)/NCFORMAT=4/<wbr>deflate=1/shuffle/file=<a rel="nofollow" href="http://ssh_detrend.nc" target="_blank">ssh_<wbr>detrend.nc</a>&quot;<span class="HOEnZb"><font color="#888888"><br>
+      &quot;save/($chunking)/NCFORMAT=4/<wbr>deflate=1/shuffle/file=<a rel="nofollow" href="http://ssh_detrend.nc">ssh_<wbr>detrend.nc</a>&quot;<span class="HOEnZb"><font color="#888888"><br>
       <br>
       <br>
       Russ</font></span><div><div class="h5"><br>
@@ -100,17 +100,17 @@
         <br>
         ! Save all values<br>
         <br>
-save/i=1/j=1/l=1/clob/ilimits=<wbr>1:3600/jlimits=1:2700/file=<a rel="nofollow" href="http://ssh_detrend.nc" target="_blank">ssh<wbr>_detrend.nc</a>
+save/i=1/j=1/l=1/clob/ilimits=<wbr>1:3600/jlimits=1:2700/file=<a rel="nofollow" href="http://ssh_detrend.nc">ssh<wbr>_detrend.nc</a>
         ssh_detrended<br>
-        repeat/j=1:2700 save/app/file=<a rel="nofollow" href="http://ssh_detrend.nc" target="_blank">ssh_detrend.nc</a>
+        repeat/j=1:2700 save/app/file=<a rel="nofollow" href="http://ssh_detrend.nc">ssh_detrend.nc</a>
         ssh_detrended&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;<wbr>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ! See note below
         on chunking&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <br>
         <br>
         ! Save just the slope and intercept<br>
         <br>
-save/i=1/j=1/clob/file=<a rel="nofollow" href="http://slope_int.nc/ilimits=1:3600/jlimits=1:2700" target="_blank">slope_<wbr>int.nc/ilimits=1:3600/jlimits=<wbr>1:2700</a>
+save/i=1/j=1/clob/file=<a rel="nofollow" href="http://slope_int.nc/ilimits=1:3600/jlimits=1:2700">slope_<wbr>int.nc/ilimits=1:3600/jlimits=<wbr>1:2700</a>
         slope,intercept<br>
-        repeat/j=1:2700 save/app/file=<a rel="nofollow" href="http://slope_int.nc" target="_blank">slope_int.nc</a> slope,intercept<br>
+        repeat/j=1:2700 save/app/file=<a rel="nofollow" href="http://slope_int.nc">slope_int.nc</a> slope,intercept<br>
         <br>
         If the original data is is only 4 byte real then SET
         VAR/OUTTYPE=FLOAT is probably useful.<br>
@@ -128,7 +128,7 @@ save/i=1/j=1/clob/file=<a rel="nofollow" href="http://slope_int.nc/ilimits=1:360
         <br>
         def sym chunking &quot;XCHUNK=($XC)/YCHUNK=($YC)/<wbr>TCHUNK=($TC)&quot;<br>
         def sym savecom &quot;save/($chunking)/NCFORMAT=4/<wbr>deflate=1/shuffle
-        file=<a rel="nofollow" href="http://ssh_detrend.nc" target="_blank">ssh_detrend.nc</a>&quot;<br>
+        file=<a rel="nofollow" href="http://ssh_detrend.nc">ssh_detrend.nc</a>&quot;<br>
         &#xA0;<br>
         ($savecome)/i=1/j=1/l=1/clob/<wbr>ilimits=1:3600/jlimits=1:2700
         ssh_detrended<br>
@@ -178,7 +178,7 @@ save/i=1/j=1/clob/file=<a rel="nofollow" href="http://slope_int.nc/ilimits=1:360
           can var/all<br>
           can win/all<br>
           <br>
-          use &quot;./<a rel="nofollow" href="http://CM2.6_Control_SSH_01810101-02001231.nc" target="_blank">CM2.6_Control_SSH_01810101-<wbr>02001231.nc</a>&quot;<br>
+          use &quot;./<a rel="nofollow" href="http://CM2.6_Control_SSH_01810101-02001231.nc">CM2.6_Control_SSH_01810101-<wbr>02001231.nc</a>&quot;<br>
           <br>
           set memory/size=99999<br>
           <br>
@@ -192,12 +192,12 @@ save/i=1/j=1/clob/file=<a rel="nofollow" href="http://slope_int.nc/ilimits=1:360
           <br>
           !Control save<br>
           save/clobber/file =
-          &quot;/archive/Paul.Goddard/CM2.6/<wbr>Storm_Surge_Project/<a rel="nofollow" href="http://CM2.6_Control_SSH_DETRENDED_01810101-02001231.nc" target="_blank">CM2.6_<wbr>Control_SSH_DETRENDED_<wbr>01810101-02001231.nc</a>&quot;
+          &quot;/archive/Paul.Goddard/CM2.6/<wbr>Storm_Surge_Project/<a rel="nofollow" href="http://CM2.6_Control_SSH_DETRENDED_01810101-02001231.nc">CM2.6_<wbr>Control_SSH_DETRENDED_<wbr>01810101-02001231.nc</a>&quot;
           SSH_DETRENDED[l=1]<br>
           <br>
           repeat/l=2:7305 (\<br>
           save/append/file =
-          &quot;/archive/Paul.Goddard/CM2.6/<wbr>Storm_Surge_Project/<a rel="nofollow" href="http://CM2.6_Control_SSH_DETRENDED_01810101-02001231.nc" target="_blank">CM2.6_<wbr>Control_SSH_DETRENDED_<wbr>01810101-02001231.nc</a>&quot;
+          &quot;/archive/Paul.Goddard/CM2.6/<wbr>Storm_Surge_Project/<a rel="nofollow" href="http://CM2.6_Control_SSH_DETRENDED_01810101-02001231.nc">CM2.6_<wbr>Control_SSH_DETRENDED_<wbr>01810101-02001231.nc</a>&quot;
           SSH_DETRENDED[l=`l`])<br>
           <br>
         </div>

@@ -52,8 +52,8 @@
 <hr>
 <!--X-Head-Body-Sep-End-->
 <!--X-Body-of-Message-->
-<div dir="ltr"><div class="gmail_default" style="color:rgb(0,0,0)">Dear Russ</div><div class="gmail_default" style="color:rgb(0,0,0)"><br></div><div class="gmail_default" style="color:rgb(0,0,0)">Following steps working correctly but just for L=1 when it goes to L=2 it is showing following error.<br></div><div class="gmail_default" style="color:rgb(0,0,0)"><br></div><div class="gmail_default" style="color:rgb(0,0,0)">!-&gt; REPEAT: L=2<br>!-&gt; REPEAT: MM:1<br>!-&gt; REPEAT: KK:1<br>&#xA0;!-&gt; LIST/FORMAT=CDF/append/file=<a rel="nofollow" href="http://hist_russ.nc/m=1/k=1:4">hist_russ.nc/m=1/k=1:4</a> histzd<br>&#xA0;LISTing to file <a rel="nofollow" href="http://hist_russ.nc">hist_russ.nc</a><br>&#xA0;**TMAP ERR: Requested data range is outside of data set limits<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Expected: HISTZD[L=&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 2 :&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 2 ] Found: HISTZD[L=&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1 :&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1 ]<br>LIST/FORMAT=CDF/append/file=<a rel="nofollow" href="http://hist_russ.nc/m=1/k=1:4">hist_russ.nc/m=1/k=1:4</a> histzd<br>Command file, command group, or REPEAT execution aborted</div><div class="gmail_default" style="color:rgb(0,0,0)"><br></div><div class="gmail_default" style="color:rgb(0,0,0)">But if I put llimits also in this command</div><div class="gmail_default" style="color:rgb(0,0,0)"><br></div><div class="gmail_default" style="color:rgb(0,0,0)">save/i=1/j=1/k=1/l=1/m=1/<wbr>ilimits=1:1:360/jlimits=1:126/<wbr>klimits=1:36/mlimits=1:11/llimits=1:312/<wbr>file=<a rel="nofollow" href="http://myfile.nc/clob" target="_blank">myfile.nc/clob</a>
-myvar</div><div class="gmail_default" style="color:rgb(0,0,0)"><br></div><div class="gmail_default" style="color:rgb(0,0,0)">then my code is running without any error. So is it saving the correct data ? for all the models and for all time steps ?</div><div class="gmail_default" style="color:rgb(0,0,0)"><br></div><div class="gmail_default" style="color:rgb(0,0,0)">regards, saurabh<br></div></div><div class="gmail_extra"><br><div class="gmail_quote">On Mon, Jul 23, 2018 at 1:59 PM, Russ Fiedler <span dir="ltr">&lt;<a rel="nofollow" href="mailto:russell.fiedler@xxxxxxxx" target="_blank">russell.fiedler@xxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
+<div dir="ltr"><div class="gmail_default" style="color:rgb(0,0,0)">Dear Russ</div><div class="gmail_default" style="color:rgb(0,0,0)"><br></div><div class="gmail_default" style="color:rgb(0,0,0)">Following steps working correctly but just for L=1 when it goes to L=2 it is showing following error.<br></div><div class="gmail_default" style="color:rgb(0,0,0)"><br></div><div class="gmail_default" style="color:rgb(0,0,0)">!-&gt; REPEAT: L=2<br>!-&gt; REPEAT: MM:1<br>!-&gt; REPEAT: KK:1<br>&#xA0;!-&gt; LIST/FORMAT=CDF/append/file=<a rel="nofollow" href="http://hist_russ.nc/m=1/k=1:4">hist_russ.nc/m=1/k=1:4</a> histzd<br>&#xA0;LISTing to file <a rel="nofollow" href="http://hist_russ.nc">hist_russ.nc</a><br>&#xA0;**TMAP ERR: Requested data range is outside of data set limits<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Expected: HISTZD[L=&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 2 :&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 2 ] Found: HISTZD[L=&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1 :&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1 ]<br>LIST/FORMAT=CDF/append/file=<a rel="nofollow" href="http://hist_russ.nc/m=1/k=1:4">hist_russ.nc/m=1/k=1:4</a> histzd<br>Command file, command group, or REPEAT execution aborted</div><div class="gmail_default" style="color:rgb(0,0,0)"><br></div><div class="gmail_default" style="color:rgb(0,0,0)">But if I put llimits also in this command</div><div class="gmail_default" style="color:rgb(0,0,0)"><br></div><div class="gmail_default" style="color:rgb(0,0,0)">save/i=1/j=1/k=1/l=1/m=1/<wbr>ilimits=1:1:360/jlimits=1:126/<wbr>klimits=1:36/mlimits=1:11/llimits=1:312/<wbr>file=<a rel="nofollow" href="http://myfile.nc/clob">myfile.nc/clob</a>
+myvar</div><div class="gmail_default" style="color:rgb(0,0,0)"><br></div><div class="gmail_default" style="color:rgb(0,0,0)">then my code is running without any error. So is it saving the correct data ? for all the models and for all time steps ?</div><div class="gmail_default" style="color:rgb(0,0,0)"><br></div><div class="gmail_default" style="color:rgb(0,0,0)">regards, saurabh<br></div></div><div class="gmail_extra"><br><div class="gmail_quote">On Mon, Jul 23, 2018 at 1:59 PM, Russ Fiedler <span dir="ltr">&lt;<a rel="nofollow" href="mailto:russell.fiedler@xxxxxxxx">russell.fiedler@xxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
  
  
  
@@ -66,10 +66,10 @@ If you really need to save it then you you can use multiple loops<br>
 ! assume L is unlimited so we do not need to specify LLIMITS save
 by level to reduce memory.<br>
 <br>
-save/i=1/j=1/k=1/l=1/m=1/<wbr>ilimits=1:1:360/jlimits=1:126/<wbr>klimits=1:36/mlimits=1:11/<wbr>file=<a rel="nofollow" href="http://myfile.nc/clob" target="_blank">myfile.nc/clob</a>
+save/i=1/j=1/k=1/l=1/m=1/<wbr>ilimits=1:1:360/jlimits=1:126/<wbr>klimits=1:36/mlimits=1:11/<wbr>file=<a rel="nofollow" href="http://myfile.nc/clob">myfile.nc/clob</a>
 myvar<br>
 repeat/l=1:312 (repeat/range=1:11/name=mm
-(repeat/range=1:36/name=kk save/app/file=<a rel="nofollow" href="http://myfile.nc/m=mm/k=kk" target="_blank">myfile.nc/m=`mm`<wbr>/k=`kk`</a>
+(repeat/range=1:36/name=kk save/app/file=<a rel="nofollow" href="http://myfile.nc/m=mm/k=kk">myfile.nc/m=`mm`<wbr>/k=`kk`</a>
 myvar))<br>
 <br>
 <br>
@@ -92,7 +92,7 @@ e.g. if ZCHUNK=9<br>
 ! Save blocks of 9 levels<br>
 repeat/l=1:312 (repeat/range=1:11/name=mm
 (repeat/range=1:36:9/name=kk
-save/app/file=<a rel="nofollow" href="http://myfile.nc/m=mm/k=kk:kk+8" target="_blank">myfile.nc/m=`mm`<wbr>/k=`kk`:`kk+8`</a> myvar))<br>
+save/app/file=<a rel="nofollow" href="http://myfile.nc/m=mm/k=kk:kk+8">myfile.nc/m=`mm`<wbr>/k=`kk`:`kk+8`</a> myvar))<br>
 <br>
 <br>
 Cheers,<br>
@@ -113,7 +113,7 @@ you mentioned is more like <br>
 <div class="gmail_default" style="color:rgb(0,0,0)"><br>
 </div>
 <div class="gmail_default" style="color:rgb(0,0,0)">repeat/l=1:312:1
-(save/append/file=<a rel="nofollow" href="http://ensemble_mean.nc" target="_blank">ensemble_<wbr>mean.nc</a> var;set
+(save/append/file=<a rel="nofollow" href="http://ensemble_mean.nc">ensemble_<wbr>mean.nc</a> var;set
 mem/size=xxxx)</div>
 <div class="gmail_default" style="color:rgb(0,0,0)"><br>
 </div>
@@ -160,7 +160,7 @@ saurabh<br>
 </div>
 <div class="gmail_extra"><br>
 <div class="gmail_quote">On Thu, Jul 19, 2018 at 10:29 AM,
-saurabh rathore <span dir="ltr">&lt;<a rel="nofollow" href="mailto:rohitsrb2020@xxxxxxxxx" target="_blank">rohitsrb2020@xxxxxxxxx</a>&gt;</span>
+saurabh rathore <span dir="ltr">&lt;<a rel="nofollow" href="mailto:rohitsrb2020@xxxxxxxxx">rohitsrb2020@xxxxxxxxx</a>&gt;</span>
 wrote:<br>
 <blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
 <div dir="ltr">
@@ -180,7 +180,7 @@ saurabh</div>
 <div class="m_4304773386501407679h5">
 <div class="gmail_extra"><br>
 <div class="gmail_quote">On Tue, Jul 17, 2018 at 9:31
-PM, Satyesh Ghetiya <span dir="ltr">&lt;<a rel="nofollow" href="mailto:satyeshghetiya@xxxxxxxxx" target="_blank">satyeshghetiya@xxxxxxxxx</a>&gt;</span>
+PM, Satyesh Ghetiya <span dir="ltr">&lt;<a rel="nofollow" href="mailto:satyeshghetiya@xxxxxxxxx">satyeshghetiya@xxxxxxxxx</a>&gt;</span>
 wrote:<br>
 <blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
 <div dir="ltr">Hi Saurabh,
@@ -212,7 +212,7 @@ var[d=1,i=`aa`;])<br>
 <div>
 <div class="m_4304773386501407679m_1329261042872057991h5"><br>
 <div class="gmail_quote">On Tue, Jul 17,
-2018 at 1:38 PM, saurabh rathore <span dir="ltr">&lt;<a rel="nofollow" href="mailto:rohitsrb2020@xxxxxxxxx" target="_blank">rohitsrb2020@xxxxxxxxx</a>&gt;</span>
+2018 at 1:38 PM, saurabh rathore <span dir="ltr">&lt;<a rel="nofollow" href="mailto:rohitsrb2020@xxxxxxxxx">rohitsrb2020@xxxxxxxxx</a>&gt;</span>
 wrote:<br>
 <blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
 <div dir="ltr">

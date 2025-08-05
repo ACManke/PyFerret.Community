@@ -49,7 +49,7 @@
 <hr>
 <!--X-Head-Body-Sep-End-->
 <!--X-Body-of-Message-->
-<div dir="ltr"><div style="color:rgb(0,0,0)" class="gmail_default">&#x200B;Dear Ansley and Dr. Abhisek,<br><br></div><div style="color:rgb(0,0,0)" class="gmail_default">Thank you for this quick and new way to solve such issues. Thanks again for the info that you provided regarding mask variable.&#x200B;<br><br></div><div style="color:rgb(0,0,0)" class="gmail_default">regards, saurabh<br></div></div><div class="gmail_extra"><br><div class="gmail_quote">On Wed, Apr 18, 2018 at 2:35 AM, Ansley C. Manke <span dir="ltr">&lt;<a rel="nofollow" href="mailto:ansley.b.manke@xxxxxxxx" target="_blank">ansley.b.manke@xxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
+<div dir="ltr"><div style="color:rgb(0,0,0)" class="gmail_default">&#x200B;Dear Ansley and Dr. Abhisek,<br><br></div><div style="color:rgb(0,0,0)" class="gmail_default">Thank you for this quick and new way to solve such issues. Thanks again for the info that you provided regarding mask variable.&#x200B;<br><br></div><div style="color:rgb(0,0,0)" class="gmail_default">regards, saurabh<br></div></div><div class="gmail_extra"><br><div class="gmail_quote">On Wed, Apr 18, 2018 at 2:35 AM, Ansley C. Manke <span dir="ltr">&lt;<a rel="nofollow" href="mailto:ansley.b.manke@xxxxxxxx">ansley.b.manke@xxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
  
  
  
@@ -62,7 +62,7 @@ You&#39;ll see that the dimensions of vo are vo(time, dep, lat, lon),
 listing &quot;dep&quot; as the z dimension, but the coordinate variable
 containing the z depths is named &quot;depth&quot;<br>
 </p>
-<p><tt><b>&gt; ncdump -h <a rel="nofollow" href="http://vo_oras4_1m_2017_grid_1x1.nc" target="_blank">vo_oras4_1m_2017_grid_1x1.nc</a> </b></tt><tt><b><br>
+<p><tt><b>&gt; ncdump -h <a rel="nofollow" href="http://vo_oras4_1m_2017_grid_1x1.nc">vo_oras4_1m_2017_grid_1x1.nc</a> </b></tt><tt><b><br>
 </b></tt><tt><b>netcdf vo_oras4_1m_2017_grid_1x1 {</b></tt><tt><b><br>
 </b></tt><tt><b>dimensions:</b></tt><tt><b><br>
 </b></tt><tt><b>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; time = UNLIMITED ; // (12 currently)</b></tt><tt><b><br>
@@ -113,9 +113,9 @@ rename name the dimension to depth or the coordinate variable to
 dep. For example, rename the dimension:<br>
 <br>
 <tt><br>
-</tt><tt><b>&gt; ncrename -d dep,depth <a rel="nofollow" href="http://vo_oras4_1m_2017_grid_1x1.nc" target="_blank">vo_oras4_1m_2017_grid_1x1.nc</a></b></tt><tt><b><br>
+</tt><tt><b>&gt; ncrename -d dep,depth <a rel="nofollow" href="http://vo_oras4_1m_2017_grid_1x1.nc">vo_oras4_1m_2017_grid_1x1.nc</a></b></tt><tt><b><br>
 </b></tt><tt><b><br>
-</b></tt><tt><b>&gt; ncdump -h <a rel="nofollow" href="http://vo_oras4_1m_2017_grid_1x1.nc" target="_blank">vo_oras4_1m_2017_grid_1x1.nc</a></b></tt><tt><b><br>
+</b></tt><tt><b>&gt; ncdump -h <a rel="nofollow" href="http://vo_oras4_1m_2017_grid_1x1.nc">vo_oras4_1m_2017_grid_1x1.nc</a></b></tt><tt><b><br>
 </b></tt><tt><b>netcdf vo_oras4_1m_2017_grid_1x1 {</b></tt><tt><b><br>
 </b></tt><tt><b>dimensions:</b></tt><tt><b><br>
 </b></tt><tt><b>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; time = UNLIMITED ; // (12 currently)</b></tt><tt><b><br>
@@ -144,10 +144,10 @@ average and spatial interpolation&quot; ;</b></tt><tt><b><br>
 </b></tt><tt><b><br>
 </b></tt><b><tt>&gt; </tt><tt>ferret</tt><tt><br>
 </tt><tt>...</tt><tt><br>
-</tt><tt>yes? use <a rel="nofollow" href="http://vo_oras4_1m_2017_grid_1x1.nc" target="_blank">vo_oras4_1m_2017_grid_1x1.nc</a><br>
+</tt><tt>yes? use <a rel="nofollow" href="http://vo_oras4_1m_2017_grid_1x1.nc">vo_oras4_1m_2017_grid_1x1.nc</a><br>
 yes? show data<br>
 currently SET data sets:<br>
-&#xA0;&#xA0;&#xA0; 1&gt; ./<a rel="nofollow" href="http://vo_oras4_1m_2017_grid_1x1.nc" target="_blank">vo_oras4_1m_2017_grid_1x1.nc</a><wbr>&#xA0; (default)<br>
+&#xA0;&#xA0;&#xA0; 1&gt; ./<a rel="nofollow" href="http://vo_oras4_1m_2017_grid_1x1.nc">vo_oras4_1m_2017_grid_1x1.nc</a><wbr>&#xA0; (default)<br>
 &#xA0;name&#xA0;&#xA0;&#xA0;&#xA0; title&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;<wbr>&#xA0;&#xA0;&#xA0; I&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; J&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
 K&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; L<br>
 &#xA0;VO&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Meridional Current&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:360&#xA0;&#xA0;&#xA0;&#xA0; 1:180&#xA0;&#xA0;&#xA0;&#xA0;
@@ -171,7 +171,7 @@ start&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#x
 </tt><tt>yes? list/l=3/x=150/y=-10 vo</tt><tt><br>
 </tt><tt>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; VARIABLE : Meridional Current (m s**-1)</tt><tt><br>
 </tt><tt>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; DATA SET : ORAS4 ocean reanalysis</tt><tt><br>
-</tt><tt>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; FILENAME : <a rel="nofollow" href="http://vo_oras4_1m_2017_grid_1x1.nc" target="_blank">vo_oras4_1m_2017_grid_1x1.nc</a></tt><tt><br>
+</tt><tt>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; FILENAME : <a rel="nofollow" href="http://vo_oras4_1m_2017_grid_1x1.nc">vo_oras4_1m_2017_grid_1x1.nc</a></tt><tt><br>
 </tt><tt>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; SUBSET&#xA0;&#xA0; : 42 points (DEPTH (m))</tt><tt><br>
 </tt><tt>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; LONGITUDE: 149.5E</tt><tt><br>
 </tt><tt>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; LATITUDE : 10.5S</tt><tt><br>
@@ -215,7 +215,7 @@ variable.<br>
 <div class="gmail_default" style="color:rgb(0,0,0)">I am
 attaching a sample file for this testing.<br>
 &#x200B;
-<div class="gmail_chip gmail_drive_chip" style="width:396px;height:18px;max-height:18px;background-color:rgb(245,245,245);padding:5px;color:rgb(34,34,34);font-family:arial;font-style:normal;font-weight:bold;font-size:13px;border:1px solid rgb(221,221,221);line-height:1"><a rel="nofollow" href="https://drive.google.com/file/d/1mlBPqvqSZ84wb7Wrd71ICi3llUeIR0o3/view?usp=drive_web" style="display:inline-block;max-width:366px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-decoration:none;padding:1px 0;border:none" target="_blank"><img style="vertical-align:bottom;border:none" src="">&#xA0;<span dir="ltr" style="color:rgb(17,85,204);text-decoration:none;vertical-align:bottom">vo_oras4_1m_2017_grid_1x1.nc</span></a><img src="" style="opacity:0.55;float:right;display:none"></div>
+<div class="gmail_chip gmail_drive_chip" style="width:396px;height:18px;max-height:18px;background-color:rgb(245,245,245);padding:5px;color:rgb(34,34,34);font-family:arial;font-style:normal;font-weight:bold;font-size:13px;border:1px solid rgb(221,221,221);line-height:1"><a rel="nofollow" href="https://drive.google.com/file/d/1mlBPqvqSZ84wb7Wrd71ICi3llUeIR0o3/view?usp=drive_web" style="display:inline-block;max-width:366px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-decoration:none;padding:1px 0;border:none"><img style="vertical-align:bottom;border:none" src="">&#xA0;<span dir="ltr" style="color:rgb(17,85,204);text-decoration:none;vertical-align:bottom">vo_oras4_1m_2017_grid_1x1.nc</span></a><img src="" style="opacity:0.55;float:right;display:none"></div>
 &#x200B;<br clear="all">
 </div>
 <div style="color:rgb(0,0,0)" class="gmail_default">&#x200B;I believe

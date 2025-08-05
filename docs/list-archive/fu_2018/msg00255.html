@@ -92,9 +92,9 @@ script below, and name the file histens.agg:</p>
 !! </tt></tt>histens.agg script defining the ensemble of
 models</tt><tt><br>
 </tt><tt><br>
-</tt><tt>use <a rel="nofollow" href="http://model1.nc" target="_blank" rel="noreferrer">model1.nc</a></tt><tt><br>
-</tt><tt>use <a rel="nofollow" href="http://model2.nc" target="_blank" rel="noreferrer">model2.nc</a></tt><tt><br>
-</tt><tt>use <a rel="nofollow" href="http://model3.nc" target="_blank" rel="noreferrer">model3.nc</a></tt><tt><br>
+</tt><tt>use <a rel="nofollow" href="http://model1.nc" rel="noreferrer">model1.nc</a></tt><tt><br>
+</tt><tt>use <a rel="nofollow" href="http://model2.nc" rel="noreferrer">model2.nc</a></tt><tt><br>
+</tt><tt>use <a rel="nofollow" href="http://model3.nc" rel="noreferrer">model3.nc</a></tt><tt><br>
 </tt><tt><br>
 </tt><tt>! change the variable name for ensembling them </tt><tt><br>
 </tt><tt><br>
@@ -158,8 +158,8 @@ suppose you have 11 models !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!<br>
 !!!!!!!!!!!!!!!!!<br>
 <br>
 <br>
-use <a rel="nofollow" href="http://model1.nc" target="_blank" rel="noreferrer">model1.nc</a><br>
-use <a rel="nofollow" href="http://model2.nc" target="_blank" rel="noreferrer">model2.nc</a><br>
+use <a rel="nofollow" href="http://model1.nc" rel="noreferrer">model1.nc</a><br>
+use <a rel="nofollow" href="http://model2.nc" rel="noreferrer">model2.nc</a><br>
 use &quot;<br>
 use &quot;<br>
 use &quot;<br>
@@ -264,7 +264,7 @@ list/xchunk=360/ychunk=126/zchunk=9/tchunk=12/echunk=1/deflate=1/shuffle/ncforma
 <br>
 <br>
 <br>
-save/i=1/j=1/k=1/l=1/m=1/ilimits=1:360/jlimits=1:126/klimits=1:36/llimits=1:312/mlimits=1:11/file=<a rel="nofollow" href="http://hist_russ.nc/clob" target="_blank" rel="noreferrer">hist_russ.nc/clob</a>
+save/i=1/j=1/k=1/l=1/m=1/ilimits=1:360/jlimits=1:126/klimits=1:36/llimits=1:312/mlimits=1:11/file=<a rel="nofollow" href="http://hist_russ.nc/clob" rel="noreferrer">hist_russ.nc/clob</a>
 histzd<br>
 <br>
 <br>
@@ -275,7 +275,7 @@ loop !!!!!!!!!!!!!!!!!!!!!!!!!!<br>
 <br>
 <br>
 repeat/range=1:312:12/name=ll (repeat/range=1:11/name=mm
-(repeat/range=1:36:9/name=kk save/append/file=<a rel="nofollow" href="http://hist_russ.nc/l=%60ll%60:%60ll+11%60/m=%60mm%60/k=%60kk%60:%60kk+8%60" target="_blank" rel="noreferrer">hist_russ.nc/l=`ll`:`ll+11`/m=`mm`/k=`kk`:`kk+8`</a>
+(repeat/range=1:36:9/name=kk save/append/file=<a rel="nofollow" href="http://hist_russ.nc/l=%60ll%60:%60ll+11%60/m=%60mm%60/k=%60kk%60:%60kk+8%60" rel="noreferrer">hist_russ.nc/l=`ll`:`ll+11`/m=`mm`/k=`kk`:`kk+8`</a>
 histzd;set mem/size=5000);set mem/size=9000)<br>
 <br>
 <br>
@@ -297,7 +297,7 @@ Saurabh<br>
 </div>
 <div class="gmail_extra"><br>
 <div class="gmail_quote">On Tue, Jul 24, 2018 at 3:41 AM, Ansley
-C. Manke <span dir="ltr">&lt;<a rel="nofollow" href="mailto:ansley.b.manke@xxxxxxxx" target="_blank" rel="noreferrer">ansley.b.manke@xxxxxxxx</a>&gt;</span>
+C. Manke <span dir="ltr">&lt;<a rel="nofollow" href="mailto:ansley.b.manke@xxxxxxxx" rel="noreferrer">ansley.b.manke@xxxxxxxx</a>&gt;</span>
 wrote:<br>
 <blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
 <div text="#000000" bgcolor="#FFFFFF">
@@ -315,8 +315,8 @@ K&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; L&#xA0;&#xA0;&#xA0;&#xA0;&#xA0
 <tt>&#xA0;SST&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; SST&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:10&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:9&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
 ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:12&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:4&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...</tt><br>
 <tt>&#xA0;</tt><br>
-<tt>yes? save/elimits=1:4/L=1:4/file=<a rel="nofollow" href="http://test.nc" target="_blank" rel="noreferrer">test.nc</a> sst</tt><br>
-<tt>&#xA0;LISTing to file <a rel="nofollow" href="http://test.nc" target="_blank" rel="noreferrer">test.nc</a></tt><br>
+<tt>yes? save/elimits=1:4/L=1:4/file=<a rel="nofollow" href="http://test.nc" rel="noreferrer">test.nc</a> sst</tt><br>
+<tt>&#xA0;LISTing to file <a rel="nofollow" href="http://test.nc" rel="noreferrer">test.nc</a></tt><br>
 <b><tt>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <font size="+1">*** NOTE: Saving E
 or F axis with time axis uses /RIGID in time</font></tt></b><br>
 </p>
@@ -359,7 +359,7 @@ Saurabh<br>
 </div>
 <div class="gmail_extra"><br>
 <div class="gmail_quote">On Mon, Jul 23, 2018 at
-4:30 PM, Satyesh Ghetiya <span dir="ltr">&lt;<a rel="nofollow" href="mailto:satyeshghetiya@xxxxxxxxx" target="_blank" rel="noreferrer">satyeshghetiya@xxxxxxxxx</a>&gt;</span>
+4:30 PM, Satyesh Ghetiya <span dir="ltr">&lt;<a rel="nofollow" href="mailto:satyeshghetiya@xxxxxxxxx" rel="noreferrer">satyeshghetiya@xxxxxxxxx</a>&gt;</span>
 wrote:<br>
 <blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
 <div dir="ltr">
@@ -374,7 +374,7 @@ data set limits</span><span><br style="color:rgb(0,0,0);font-size:12.8px;backgro
 Expected: HISTZD[L=&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 2
 :&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 2 ] Found:
 HISTZD[L=&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1 :&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1 ]</span><br style="color:rgb(0,0,0);font-size:12.8px;background-color:rgb(255,255,255);text-decoration-style:initial;text-decoration-color:initial">
-</span><span style="color:rgb(0,0,0);font-size:12.8px;background-color:rgb(255,255,255);text-decoration-style:initial;text-decoration-color:initial;float:none;display:inline">LIST/FORMAT=CDF/append/file=</span><a rel="nofollow" href="http://hist_russ.nc/m=1/k=1:4" style="color:rgb(17,85,204);font-size:12.8px;background-color:rgb(255,255,255)" target="_blank" rel="noreferrer">hist_russ.nc/m=1/k=1:4</a><span style="color:rgb(0,0,0);font-size:12.8px;background-color:rgb(255,255,255);text-decoration-style:initial;text-decoration-color:initial;float:none;display:inline"><span>&#xA0;</span>histzd)&#xA0;
+</span><span style="color:rgb(0,0,0);font-size:12.8px;background-color:rgb(255,255,255);text-decoration-style:initial;text-decoration-color:initial;float:none;display:inline">LIST/FORMAT=CDF/append/file=</span><a rel="nofollow" href="http://hist_russ.nc/m=1/k=1:4" style="color:rgb(17,85,204);font-size:12.8px;background-color:rgb(255,255,255)" rel="noreferrer">hist_russ.nc/m=1/k=1:4</a><span style="color:rgb(0,0,0);font-size:12.8px;background-color:rgb(255,255,255);text-decoration-style:initial;text-decoration-color:initial;float:none;display:inline"><span>&#xA0;</span>histzd)&#xA0;
 &#xA0; &#xA0;</span>)&#xA0; &#xA0;while working with listing
 data. That time I was using nested double
 loop. Then I did try and error to finally
@@ -389,7 +389,7 @@ single loop is working fine.&#xA0;</div>
 <div class="m_5657101631332277967m_224911341336333609h5"><br>
 <div class="gmail_quote">On Mon, Jul
 23, 2018 at 11:40 AM, saurabh
-rathore <span dir="ltr">&lt;<a rel="nofollow" href="mailto:rohitsrb2020@xxxxxxxxx" target="_blank" rel="noreferrer">rohitsrb2020@xxxxxxxxx</a>&gt;</span>
+rathore <span dir="ltr">&lt;<a rel="nofollow" href="mailto:rohitsrb2020@xxxxxxxxx" rel="noreferrer">rohitsrb2020@xxxxxxxxx</a>&gt;</span>
 wrote:<br>
 <blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
 <div dir="ltr">
@@ -407,13 +407,13 @@ instructions. <br>
 <div style="color:rgb(0,0,0)">set
 list/xchunk=360/ychunk=126/zchunk=9/tchunk=6/echunk=1/deflate=1/shuffle/ncformat=4<br>
 <br>
-(save/i=1/j=1/k=1/l=1/m=1/ilimits=1:360/jlimits=1:126/klimits=1:36/mlimits=1:11/llimits=1:312/file=<a rel="nofollow" href="http://hist_russ2.nc/clob" target="_blank" rel="noreferrer">hist_russ2.nc/clob</a>
+(save/i=1/j=1/k=1/l=1/m=1/ilimits=1:360/jlimits=1:126/klimits=1:36/mlimits=1:11/llimits=1:312/file=<a rel="nofollow" href="http://hist_russ2.nc/clob" rel="noreferrer">hist_russ2.nc/clob</a>
 histzd;set mem/size=9000)<br>
 <br>
 repeat/range=1:312:6/name=ll
 (repeat/range=1:11/name=mm
 (repeat/range=1:36:9/name=kk
-save/append/file=<a rel="nofollow" href="http://hist_russ2.nc/l=ll:ll+51/m=mm/k=kk:kk+3" target="_blank" rel="noreferrer">hist_russ2.nc/l=`ll`:`ll+51`/m=`mm`/k=`kk`:`kk+3`</a>
+save/append/file=<a rel="nofollow" href="http://hist_russ2.nc/l=ll:ll+51/m=mm/k=kk:kk+3" rel="noreferrer">hist_russ2.nc/l=`ll`:`ll+51`/m=`mm`/k=`kk`:`kk+3`</a>
 histzd;set mem/size=9000);set
 mem/size=9000)</div>
 <div style="color:rgb(0,0,0)"><br>
@@ -432,7 +432,7 @@ in time chuncking ?</div>
 <div class="gmail_extra"><br>
 <div class="gmail_quote">On
 Mon, Jul 23, 2018 at 4:05
-PM, Russ Fiedler <span dir="ltr">&lt;<a rel="nofollow" href="mailto:russell.fiedler@xxxxxxxx" target="_blank" rel="noreferrer">russell.fiedler@xxxxxxxx</a>&gt;</span>
+PM, Russ Fiedler <span dir="ltr">&lt;<a rel="nofollow" href="mailto:russell.fiedler@xxxxxxxx" rel="noreferrer">russell.fiedler@xxxxxxxx</a>&gt;</span>
 wrote:<br>
 <blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
 <div text="#000000" bgcolor="#FFFFFF">
@@ -485,7 +485,7 @@ calender
 Mon, Jul 23,
 2018 at 3:47
 PM, saurabh
-rathore <span dir="ltr">&lt;<a rel="nofollow" href="mailto:rohitsrb2020@xxxxxxxxx" target="_blank" rel="noreferrer">rohitsrb2020@xxxxxxxxx</a>&gt;</span>
+rathore <span dir="ltr">&lt;<a rel="nofollow" href="mailto:rohitsrb2020@xxxxxxxxx" rel="noreferrer">rohitsrb2020@xxxxxxxxx</a>&gt;</span>
 wrote:<br>
 <blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
 <div dir="ltr">
@@ -504,7 +504,7 @@ ncdump -h.&#x200B;</div>
 Mon, Jul 23,
 2018 at 3:40
 PM, Russ
-Fiedler <span dir="ltr">&lt;<a rel="nofollow" href="mailto:russell.fiedler@xxxxxxxx" target="_blank" rel="noreferrer">russell.fiedler@xxxxxxxx</a>&gt;</span>
+Fiedler <span dir="ltr">&lt;<a rel="nofollow" href="mailto:russell.fiedler@xxxxxxxx" rel="noreferrer">russell.fiedler@xxxxxxxx</a>&gt;</span>
 wrote:<br>
 <blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
 <div text="#000000" bgcolor="#FFFFFF">
@@ -544,7 +544,7 @@ that?<br>
 Could you
 confirm from
 an &quot;ncdump -h
-<a rel="nofollow" href="http://single_member.nc" target="_blank" rel="noreferrer">single_member.nc</a>&quot; that the
+<a rel="nofollow" href="http://single_member.nc" rel="noreferrer">single_member.nc</a>&quot; that the
 ensemble is on
 a fixed time
 axis?<br>
@@ -589,10 +589,10 @@ MM:1<br>
 !-&gt; REPEAT:
 KK:1<br>
 &#xA0;!-&gt;
-LIST/FORMAT=CDF/append/file=<a rel="nofollow" href="http://hist_russ.nc/m=1/k=1:4" target="_blank" rel="noreferrer">hist_russ.nc/m=1/k=1:4</a>
+LIST/FORMAT=CDF/append/file=<a rel="nofollow" href="http://hist_russ.nc/m=1/k=1:4" rel="noreferrer">hist_russ.nc/m=1/k=1:4</a>
 histzd<br>
 &#xA0;LISTing to
-file <a rel="nofollow" href="http://hist_russ.nc" target="_blank" rel="noreferrer">hist_russ.nc</a><br>
+file <a rel="nofollow" href="http://hist_russ.nc" rel="noreferrer">hist_russ.nc</a><br>
 &#xA0;**TMAP ERR:
 Requested data
 range is
@@ -607,7 +607,7 @@ HISTZD[L=&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
 HISTZD[L=&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
 1 :&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
 1 ]<br>
-LIST/FORMAT=CDF/append/file=<a rel="nofollow" href="http://hist_russ.nc/m=1/k=1:4" target="_blank" rel="noreferrer">hist_russ.nc/m=1/k=1:4</a> histzd<br>
+LIST/FORMAT=CDF/append/file=<a rel="nofollow" href="http://hist_russ.nc/m=1/k=1:4" rel="noreferrer">hist_russ.nc/m=1/k=1:4</a> histzd<br>
 Command file,
 command group,
 or REPEAT
@@ -622,7 +622,7 @@ in this
 command</div>
 <div style="color:rgb(0,0,0)"><br>
 </div>
-<div style="color:rgb(0,0,0)">save/i=1/j=1/k=1/l=1/m=1/ilimits=1:1:360/jlimits=1:126/klimits=1:36/mlimits=1:11/llimits=1:312/file=<a rel="nofollow" href="http://myfile.nc/clob" target="_blank" rel="noreferrer">myfile.nc/clob</a>
+<div style="color:rgb(0,0,0)">save/i=1/j=1/k=1/l=1/m=1/ilimits=1:1:360/jlimits=1:126/klimits=1:36/mlimits=1:11/llimits=1:312/file=<a rel="nofollow" href="http://myfile.nc/clob" rel="noreferrer">myfile.nc/clob</a>
 myvar</div>
 <div style="color:rgb(0,0,0)"><br>
 </div>
@@ -648,7 +648,7 @@ saurabh<br>
 Mon, Jul 23,
 2018 at 1:59
 PM, Russ
-Fiedler <span dir="ltr">&lt;<a rel="nofollow" href="mailto:russell.fiedler@xxxxxxxx" target="_blank" rel="noreferrer">russell.fiedler@xxxxxxxx</a>&gt;</span>
+Fiedler <span dir="ltr">&lt;<a rel="nofollow" href="mailto:russell.fiedler@xxxxxxxx" rel="noreferrer">russell.fiedler@xxxxxxxx</a>&gt;</span>
 wrote:<br>
 <blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
 <div text="#000000" bgcolor="#FFFFFF">
@@ -669,10 +669,10 @@ LLIMITS save
 by level to
 reduce memory.<br>
 <br>
-save/i=1/j=1/k=1/l=1/m=1/ilimits=1:1:360/jlimits=1:126/klimits=1:36/mlimits=1:11/file=<a rel="nofollow" href="http://myfile.nc/clob" target="_blank" rel="noreferrer">myfile.nc/clob</a>
+save/i=1/j=1/k=1/l=1/m=1/ilimits=1:1:360/jlimits=1:126/klimits=1:36/mlimits=1:11/file=<a rel="nofollow" href="http://myfile.nc/clob" rel="noreferrer">myfile.nc/clob</a>
 myvar<br>
 repeat/l=1:312
-(repeat/range=1:11/name=mm (repeat/range=1:36/name=kk save/app/file=<a rel="nofollow" href="http://myfile.nc/m=mm/k=kk" target="_blank" rel="noreferrer">myfile.nc/m=`mm`/k=`kk`</a>
+(repeat/range=1:11/name=mm (repeat/range=1:36/name=kk save/app/file=<a rel="nofollow" href="http://myfile.nc/m=mm/k=kk" rel="noreferrer">myfile.nc/m=`mm`/k=`kk`</a>
 myvar))<br>
 <br>
 <br>
@@ -718,7 +718,7 @@ ZCHUNK=9<br>
 ! Save blocks
 of 9 levels<br>
 repeat/l=1:312
-(repeat/range=1:11/name=mm (repeat/range=1:36:9/name=kk save/app/file=<a rel="nofollow" href="http://myfile.nc/m=mm/k=kk:kk+8" target="_blank" rel="noreferrer">myfile.nc/m=`mm`/k=`kk`:`kk+8`</a>
+(repeat/range=1:11/name=mm (repeat/range=1:36:9/name=kk save/app/file=<a rel="nofollow" href="http://myfile.nc/m=mm/k=kk:kk+8" rel="noreferrer">myfile.nc/m=`mm`/k=`kk`:`kk+8`</a>
 myvar))<br>
 <br>
 <br>
@@ -749,7 +749,7 @@ more like <br>
 <div style="color:rgb(0,0,0)"><br>
 </div>
 <div style="color:rgb(0,0,0)">repeat/l=1:312:1
-(save/append/file=<a rel="nofollow" href="http://ensemble_mean.nc" target="_blank" rel="noreferrer">ensemble_mean.nc</a>
+(save/append/file=<a rel="nofollow" href="http://ensemble_mean.nc" rel="noreferrer">ensemble_mean.nc</a>
 var;set
 mem/size=xxxx)</div>
 <div style="color:rgb(0,0,0)"><br>
@@ -834,7 +834,7 @@ saurabh<br>
 Thu, Jul 19,
 2018 at 10:29
 AM, saurabh
-rathore <span dir="ltr">&lt;<a rel="nofollow" href="mailto:rohitsrb2020@xxxxxxxxx" target="_blank" rel="noreferrer">rohitsrb2020@xxxxxxxxx</a>&gt;</span>
+rathore <span dir="ltr">&lt;<a rel="nofollow" href="mailto:rohitsrb2020@xxxxxxxxx" rel="noreferrer">rohitsrb2020@xxxxxxxxx</a>&gt;</span>
 wrote:<br>
 <blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
 <div dir="ltr">
@@ -861,7 +861,7 @@ saurabh</div>
 Tue, Jul 17,
 2018 at 9:31
 PM, Satyesh
-Ghetiya <span dir="ltr">&lt;<a rel="nofollow" href="mailto:satyeshghetiya@xxxxxxxxx" target="_blank" rel="noreferrer">satyeshghetiya@xxxxxxxxx</a>&gt;</span>
+Ghetiya <span dir="ltr">&lt;<a rel="nofollow" href="mailto:satyeshghetiya@xxxxxxxxx" rel="noreferrer">satyeshghetiya@xxxxxxxxx</a>&gt;</span>
 wrote:<br>
 <blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
 <div dir="ltr">Hi
@@ -922,7 +922,7 @@ helps you.</div>
 Tue, Jul 17,
 2018 at 1:38
 PM, saurabh
-rathore <span dir="ltr">&lt;<a rel="nofollow" href="mailto:rohitsrb2020@xxxxxxxxx" target="_blank" rel="noreferrer">rohitsrb2020@xxxxxxxxx</a>&gt;</span>
+rathore <span dir="ltr">&lt;<a rel="nofollow" href="mailto:rohitsrb2020@xxxxxxxxx" rel="noreferrer">rohitsrb2020@xxxxxxxxx</a>&gt;</span>
 wrote:<br>
 <blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
 <div dir="ltr">

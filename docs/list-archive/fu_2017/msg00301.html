@@ -53,7 +53,7 @@
 <hr>
 <!--X-Head-Body-Sep-End-->
 <!--X-Body-of-Message-->
-<div dir="ltr"><div><div><div><div>Jorg, <br><br></div><div>One possibility is PyFerret which uses Python graphics libraries and not X.<br><br></div>Other than that I don&#39;t really have much to suggest. The issue you report with <br><br></div><div>&gt; ferret -batch gifname.gif<br><br></div><div>does not have to do with Xwindows.&#xA0; That is a separate path through the code which just writes graphics output to the file, and does not use the&#xA0; X library at all. So I am mystified about what&#39;s happening there. Try some very simple script without any FRAME command.&#xA0; Something like<br><br></div><div>&gt; ferret -batch test.gif<br><br></div><div>&#xA0;&#xA0; yes? go basemap<br></div><div>&#xA0;&#xA0; yes? exit<br><br></div><div>Does that produce a plot?&#xA0; If your script draws the plot and then perhaps does something that&#39;s triggering a new plot to be started, you could be left with a blank plot as this method saves only the last plot drawn to the gif file.<br><br></div><div>-Ansley<br></div><div><br><br></div></div></div></div><div class="gmail_extra"><br><div class="gmail_quote">On Tue, Apr 25, 2017 at 9:28 AM, Kaduk, Jorg D. (Dr.) <span dir="ltr">&lt;<a rel="nofollow" href="mailto:jk61@xxxxxxxxxxxxxxx" target="_blank">jk61@xxxxxxxxxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
+<div dir="ltr"><div><div><div><div>Jorg, <br><br></div><div>One possibility is PyFerret which uses Python graphics libraries and not X.<br><br></div>Other than that I don&#39;t really have much to suggest. The issue you report with <br><br></div><div>&gt; ferret -batch gifname.gif<br><br></div><div>does not have to do with Xwindows.&#xA0; That is a separate path through the code which just writes graphics output to the file, and does not use the&#xA0; X library at all. So I am mystified about what&#39;s happening there. Try some very simple script without any FRAME command.&#xA0; Something like<br><br></div><div>&gt; ferret -batch test.gif<br><br></div><div>&#xA0;&#xA0; yes? go basemap<br></div><div>&#xA0;&#xA0; yes? exit<br><br></div><div>Does that produce a plot?&#xA0; If your script draws the plot and then perhaps does something that&#39;s triggering a new plot to be started, you could be left with a blank plot as this method saves only the last plot drawn to the gif file.<br><br></div><div>-Ansley<br></div><div><br><br></div></div></div></div><div class="gmail_extra"><br><div class="gmail_quote">On Tue, Apr 25, 2017 at 9:28 AM, Kaduk, Jorg D. (Dr.) <span dir="ltr">&lt;<a rel="nofollow" href="mailto:jk61@xxxxxxxxxxxxxxx">jk61@xxxxxxxxxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
 
 
 
@@ -111,29 +111,29 @@
 <div>
 <p class="MsoNormal"><span style="color:#1f497d">J&#xF6;rg Kaduk<u></u><u></u></span></p>
 <p class="MsoNormal"><span style="color:#1f497d">Associate Professor<u></u><u></u></span></p>
-<p class="MsoNormal"><span style="color:#1f497d"><a rel="nofollow" href="http://www.geog.le.ac.uk/staff/jk61/" target="_blank"><span style="color:#0563c1">http://www.geog.le.ac.uk/<wbr>staff/jk61/</span></a><u></u><u></u></span></p>
+<p class="MsoNormal"><span style="color:#1f497d"><a rel="nofollow" href="http://www.geog.le.ac.uk/staff/jk61/"><span style="color:#0563c1">http://www.geog.le.ac.uk/<wbr>staff/jk61/</span></a><u></u><u></u></span></p>
 <p class="MsoNormal"><span style="font-size:11.5pt;font-family:&quot;Gill Sans W02&quot;;color:#494a4c" lang="EN">ORCID:
-<a rel="nofollow" href="http://orcid.org/0000-0003-4051-3081" target="_blank"><span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:#0563c1">http://orcid.org/0000-0003-<wbr>4051-3081</span></a></span><span style="color:#1f497d" lang="EN">
+<a rel="nofollow" href="http://orcid.org/0000-0003-4051-3081"><span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:#0563c1">http://orcid.org/0000-0003-<wbr>4051-3081</span></a></span><span style="color:#1f497d" lang="EN">
 </span><span style="color:#494a4c" lang="EN"><u></u><u></u></span></p>
-<p class="MsoNormal"><b><span style="color:#c00000">e:</span></b><span style="color:#1f497d"> <a rel="nofollow" href="mailto:jk61@xxxxxxxx" target="_blank">jk61@xxxxxxxx</a><u></u><u></u></span></p>
-<p class="MsoNormal"><b><span style="color:#c00000">t:</span></b><span style="color:#1f497d"> <a rel="nofollow" href="tel:+44%20116%20252%203848" value="+441162523848" target="_blank">+44 (0)116 252 3848</a><u></u><u></u></span></p>
+<p class="MsoNormal"><b><span style="color:#c00000">e:</span></b><span style="color:#1f497d"> <a rel="nofollow" href="mailto:jk61@xxxxxxxx">jk61@xxxxxxxx</a><u></u><u></u></span></p>
+<p class="MsoNormal"><b><span style="color:#c00000">t:</span></b><span style="color:#1f497d"> <a rel="nofollow" href="tel:+44%20116%20252%203848" value="+441162523848">+44 (0)116 252 3848</a><u></u><u></u></span></p>
 <p class="MsoNormal"><span style="color:#1f497d">Department of Geography, University of Leicester, University Road, Leicester LE1 7RH, UK<u></u><u></u></span></p>
 <p class="MsoNormal"><b><span style="color:#1f497d"><img id="m_-4402040514060982467_x0000_i1029" src="pngIfbI7Pzo9q.png" alt="cid:image001.png@01D0FA11.54D38240" height="72" border="0" width="264"></span></b><span style="color:#1f497d"><img id="m_-4402040514060982467_x0000_i1028" src="jpgXnxbgTERC7.jpg" height="95" border="0" width="415"></span><span style="color:#1f497d" lang="EN"><u></u><u></u></span></p>
 <p class="MsoNormal" style="text-align:center" align="center"><b><span style="color:#1f497d" lang="EN"><u></u>&#xA0;<u></u></span></b></p>
 <p class="MsoNormal"><b><span style="color:#1f497d" lang="EN">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Elite Without Being Elitist<u></u><u></u></span></b></p>
 <p class="MsoNormal"><span style="color:#1f497d">Follow us on
-</span><span style="color:#1f497d"><a rel="nofollow" href="https://twitter.com/uniofleicester" target="_blank"><span style="color:#0563c1">Twitter</span></a></span><span style="color:#1f497d"> or visit our
-</span><span style="color:#1f497d"><a rel="nofollow" href="http://www.facebook.com/uniofleicester" target="_blank"><span style="color:#0563c1">Facebook</span></a></span><span style="color:#1f497d"> page and the Departmental
-</span><span style="color:#1f497d"><a rel="nofollow" href="https://twitter.com/LeicesterGeog" target="_blank"><span style="color:#0563c1">Twitter</span></a></span><span style="color:#1f497d"> and
-</span><span style="color:#1f497d"><a rel="nofollow" href="https://www.facebook.com/UoLGeography" target="_blank"><span style="color:#0563c1">Facebook</span></a></span><span style="color:#1f497d"> page<u></u><u></u></span></p>
+</span><span style="color:#1f497d"><a rel="nofollow" href="https://twitter.com/uniofleicester"><span style="color:#0563c1">Twitter</span></a></span><span style="color:#1f497d"> or visit our
+</span><span style="color:#1f497d"><a rel="nofollow" href="http://www.facebook.com/uniofleicester"><span style="color:#0563c1">Facebook</span></a></span><span style="color:#1f497d"> page and the Departmental
+</span><span style="color:#1f497d"><a rel="nofollow" href="https://twitter.com/LeicesterGeog"><span style="color:#0563c1">Twitter</span></a></span><span style="color:#1f497d"> and
+</span><span style="color:#1f497d"><a rel="nofollow" href="https://www.facebook.com/UoLGeography"><span style="color:#0563c1">Facebook</span></a></span><span style="color:#1f497d"> page<u></u><u></u></span></p>
 </div>
 <p class="MsoNormal"><span style="color:#1f497d"><u></u>&#xA0;<u></u></span></p>
 <div>
 <div style="border:none;border-top:solid #e1e1e1 1.0pt;padding:3.0pt 0cm 0cm 0cm">
-<p class="MsoNormal"><b><span style="color:windowtext" lang="EN-US">From:</span></b><span style="color:windowtext" lang="EN-US"> <a rel="nofollow" href="mailto:owner-ferret_users@xxxxxxxx" target="_blank">owner-ferret_users@xxxxxxxx</a> [mailto:<a rel="nofollow" href="mailto:owner-ferret_users@xxxxxxxx" target="_blank">owner-ferret_users@<wbr>noaa.gov</a>]
+<p class="MsoNormal"><b><span style="color:windowtext" lang="EN-US">From:</span></b><span style="color:windowtext" lang="EN-US"> <a rel="nofollow" href="mailto:owner-ferret_users@xxxxxxxx">owner-ferret_users@xxxxxxxx</a> [mailto:<a rel="nofollow" href="mailto:owner-ferret_users@xxxxxxxx">owner-ferret_users@<wbr>noaa.gov</a>]
 <b>On Behalf Of </b>Ansley C. Manke<br>
 <b>Sent:</b> 10 April 2017 19:21<br>
-<b>To:</b> <a rel="nofollow" href="mailto:ferret_users@xxxxxxxx" target="_blank">ferret_users@xxxxxxxx</a><br>
+<b>To:</b> <a rel="nofollow" href="mailto:ferret_users@xxxxxxxx">ferret_users@xxxxxxxx</a><br>
 <b>Subject:</b> Re: [ferret_users] problem with X-Windows<u></u><u></u></span></p>
 </div>
 </div>
@@ -190,20 +190,20 @@
 <p class="MsoNormal">&#xA0;<u></u><u></u></p>
 <p class="MsoNormal"><span>J&#xF6;rg Kaduk</span><u></u><u></u></p>
 <p class="MsoNormal"><span>Associate Professor</span><u></u><u></u></p>
-<p class="MsoNormal"><span><a rel="nofollow" href="http://www.geog.le.ac.uk/staff/jk61/" target="_blank">http://www.geog.le.ac.uk/<wbr>staff/jk61/</a></span><u></u><u></u></p>
-<p class="MsoNormal"><span style="font-size:11.5pt" lang="EN">ORCID: <a rel="nofollow" href="http://orcid.org/0000-0003-4051-3081" target="_blank">
+<p class="MsoNormal"><span><a rel="nofollow" href="http://www.geog.le.ac.uk/staff/jk61/">http://www.geog.le.ac.uk/<wbr>staff/jk61/</a></span><u></u><u></u></p>
+<p class="MsoNormal"><span style="font-size:11.5pt" lang="EN">ORCID: <a rel="nofollow" href="http://orcid.org/0000-0003-4051-3081">
 <span style="font-size:11.0pt">http://orcid.org/0000-0003-<wbr>4051-3081</span></a></span><span lang="EN">
 </span><u></u><u></u></p>
 <p class="MsoNormal"><b><span style="color:#c00000">e:</span></b><span>
-<a rel="nofollow" href="mailto:jk61@xxxxxxxx" target="_blank">jk61@xxxxxxxx</a></span><u></u><u></u></p>
-<p class="MsoNormal"><b><span style="color:#c00000">t:</span></b><span> <a rel="nofollow" href="tel:+44%20116%20252%203848" value="+441162523848" target="_blank">+44 (0)116 252 3848</a></span><u></u><u></u></p>
+<a rel="nofollow" href="mailto:jk61@xxxxxxxx">jk61@xxxxxxxx</a></span><u></u><u></u></p>
+<p class="MsoNormal"><b><span style="color:#c00000">t:</span></b><span> <a rel="nofollow" href="tel:+44%20116%20252%203848" value="+441162523848">+44 (0)116 252 3848</a></span><u></u><u></u></p>
 <p class="MsoNormal"><span>Department of Geography, University of Leicester, University Road, Leicester LE1 7RH, UK</span><u></u><u></u></p>
 <p class="MsoNormal"><b><span style="color:#1f497d"><img id="m_-4402040514060982467_x0000_i1025" src="pngIfbI7Pzo9q.png" alt="cid:image001.png@01D0FA11.54D38240" height="72" border="0" width="264"></span></b><span><img id="m_-4402040514060982467Picture_x0020_1" src="jpgXnxbgTERC7.jpg" height="95" border="0" width="415"></span><u></u><u></u></p>
 <p class="MsoNormal" style="text-align:center" align="center"><b><span lang="EN">&#xA0;</span></b><u></u><u></u></p>
 <p class="MsoNormal"><b><span lang="EN">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Elite Without Being Elitist</span></b><u></u><u></u></p>
-<p class="MsoNormal"><span>Follow us on <a rel="nofollow" href="https://twitter.com/uniofleicester" target="_blank">
-Twitter</a> or visit our <a rel="nofollow" href="http://www.facebook.com/uniofleicester" target="_blank">Facebook</a> page and the Departmental
-<a rel="nofollow" href="https://twitter.com/LeicesterGeog" target="_blank">Twitter</a> and <a rel="nofollow" href="https://www.facebook.com/UoLGeography" target="_blank">
+<p class="MsoNormal"><span>Follow us on <a rel="nofollow" href="https://twitter.com/uniofleicester">
+Twitter</a> or visit our <a rel="nofollow" href="http://www.facebook.com/uniofleicester">Facebook</a> page and the Departmental
+<a rel="nofollow" href="https://twitter.com/LeicesterGeog">Twitter</a> and <a rel="nofollow" href="https://www.facebook.com/UoLGeography">
 Facebook</a> page</span><u></u><u></u></p>
 <p class="MsoNormal">&#xA0;<u></u><u></u></p>
 </blockquote>
@@ -212,7 +212,7 @@ Facebook</a> page</span><u></u><u></u></p>
 <hr style="color:#a0a0a0" size="1" noshade align="center" width="100%">
 </span></div>
 <p class="MsoNormal"><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,serif">No virus found in this message.<br>
-Checked by AVG - <a rel="nofollow" href="http://www.avg.com/email-signature" target="_blank">www.avg.com</a><br>
+Checked by AVG - <a rel="nofollow" href="http://www.avg.com/email-signature">www.avg.com</a><br>
 Version: 2016.0.8012 / Virus Database: 4769/14290 - Release Date: 04/11/17<u></u><u></u></span></p>
 </div>
 </div>

@@ -59,10 +59,10 @@
 If you only have 7 of these then the symbols can be defined manually:<br>
 <br>
 def sym root &quot;/home/xbai1/Tracmip/family1/&quot;<br>
-def sym f1 &quot;<a rel="nofollow" href="http://whatever_your_first_filename_is.nc" rel="noreferrer" target="_blank">whatever_your_first_filename_is.nc</a>&quot;<br>
-def sym f2 &quot;<a rel="nofollow" href="http://whatever_your_second_filename_is.nc" rel="noreferrer" target="_blank">whatever_your_second_filename_is.nc</a>&quot;<br>
+def sym f1 &quot;<a rel="nofollow" href="http://whatever_your_first_filename_is.nc" rel="noreferrer">whatever_your_first_filename_is.nc</a>&quot;<br>
+def sym f2 &quot;<a rel="nofollow" href="http://whatever_your_second_filename_is.nc" rel="noreferrer">whatever_your_second_filename_is.nc</a>&quot;<br>
 ...<br>
-def sym f7 &quot;<a rel="nofollow" href="http://whatever_your_last_filename_is.nc" rel="noreferrer" target="_blank">whatever_your_last_filename_is.nc</a>&quot;<br>
+def sym f7 &quot;<a rel="nofollow" href="http://whatever_your_last_filename_is.nc" rel="noreferrer">whatever_your_last_filename_is.nc</a>&quot;<br>
 <br>
 repeat/range=1:7:1/name=fnum (let dummy=`fnum`; def sym sfnum `dummy`; use &quot;($root)($f($sfnum))&quot;; ... )<br>
 <br>
@@ -71,18 +71,18 @@ I&#39;m not sure why, but this kind of syntax inside a repeat loop requires defi
 Billy<br>
 <br>
 <br>
-&gt; On Oct 10, 2018, at 9:36 AM, Xiaoyu Bai &lt;<a rel="nofollow" href="mailto:xbai1@xxxxxxxx" target="_blank">xbai1@xxxxxxxx</a>&gt; wrote:<br>
+&gt; On Oct 10, 2018, at 9:36 AM, Xiaoyu Bai &lt;<a rel="nofollow" href="mailto:xbai1@xxxxxxxx">xbai1@xxxxxxxx</a>&gt; wrote:<br>
 &gt; <br>
 &gt; repeat/range=1:7/name=aa (use file_name_`aa`.nc) is a good idea. I have a handicap that I use let files_CNRM=spawn(&quot;ls -1 /home/xbai1/Tracmip/family1/*CNRM*.nc&quot;) to identify my files before I read them in. Ferret doesn&#39;t let me to use syntax `spawn(&quot;ls -1 /home/xbai1/Tracmip/family1/*CNRM*.nc&quot;)` because grave accent has the highest priority. &#x1F639; <br>
 &gt; <br>
 &gt; Thanks a lot. <br>
 &gt; Xiaoyu<br>
 &gt; <br>
-&gt; On Wed, Oct 10, 2018 at 11:52 AM Satyesh Ghetiya &lt;<a rel="nofollow" href="mailto:satyeshghetiya@xxxxxxxxx" target="_blank">satyeshghetiya@xxxxxxxxx</a>&gt; wrote:<br>
+&gt; On Wed, Oct 10, 2018 at 11:52 AM Satyesh Ghetiya &lt;<a rel="nofollow" href="mailto:satyeshghetiya@xxxxxxxxx">satyeshghetiya@xxxxxxxxx</a>&gt; wrote:<br>
 &gt; Hi,<br>
 &gt; <br>
 &gt; <br>
-&gt; On Wed, Oct 10, 2018 at 9:05 PM Xiaoyu Bai &lt;<a rel="nofollow" href="mailto:xbai1@xxxxxxxx" target="_blank">xbai1@xxxxxxxx</a>&gt; wrote:<br>
+&gt; On Wed, Oct 10, 2018 at 9:05 PM Xiaoyu Bai &lt;<a rel="nofollow" href="mailto:xbai1@xxxxxxxx">xbai1@xxxxxxxx</a>&gt; wrote:<br>
 &gt; Hi Ghetiya,<br>
 &gt; <br>
 &gt; Yes, I wan to read all the files in through the repeat loop. When you say nested loop, do you mean let datset=0; repeat/range=1:8 (let datset=`datset+1`; use `files_CNRM[X=datset]`)? It didn&#39;t work.<br>
@@ -97,12 +97,12 @@ Billy<br>
 &gt; <br>
 &gt; Welcome. <br>
 &gt; <br>
-&gt; On Wed, Oct 10, 2018 at 12:53 AM Satyesh Ghetiya &lt;<a rel="nofollow" href="mailto:satyeshghetiya@xxxxxxxxx" target="_blank">satyeshghetiya@xxxxxxxxx</a>&gt; wrote:s<br>
+&gt; On Wed, Oct 10, 2018 at 12:53 AM Satyesh Ghetiya &lt;<a rel="nofollow" href="mailto:satyeshghetiya@xxxxxxxxx">satyeshghetiya@xxxxxxxxx</a>&gt; wrote:s<br>
 &gt; Hi,<br>
 &gt; I also faced similar problem, but every time I am by passing using two grave accent by using some other repeat loop (nested) or by using some other variable.<br>
 &gt; Are you wanting to use, in loop, 7 data sets ?&#xA0; <br>
 &gt; <br>
-&gt; On Wed, Oct 10, 2018 at 1:53 AM Xiaoyu Bai &lt;<a rel="nofollow" href="mailto:xbai1@xxxxxxxx" target="_blank">xbai1@xxxxxxxx</a>&gt; wrote:<br>
+&gt; On Wed, Oct 10, 2018 at 1:53 AM Xiaoyu Bai &lt;<a rel="nofollow" href="mailto:xbai1@xxxxxxxx">xbai1@xxxxxxxx</a>&gt; wrote:<br>
 &gt; Dear ferreters,<br>
 &gt; <br>
 &gt; I have a syntax that&#39;s like repeat/range=1:7/name=datset use `files_CNRM[x=`datset`]`. However, ferret reads it like&#xA0; `files_CNRM[x=` and `]`. So I am wondering how to make this syntax work.<br>

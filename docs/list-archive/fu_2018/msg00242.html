@@ -55,7 +55,7 @@
 <hr>
 <!--X-Head-Body-Sep-End-->
 <!--X-Body-of-Message-->
-<div dir="ltr"><div style="color:rgb(0,0,0)" class="gmail_default">&#x200B;Hello Russ,</div><div style="color:rgb(0,0,0)" class="gmail_default"><br></div><div style="color:rgb(0,0,0)" class="gmail_default">This is single model ncdump -h.&#x200B;</div></div><div class="gmail_extra"><br><div class="gmail_quote">On Mon, Jul 23, 2018 at 3:40 PM, Russ Fiedler <span dir="ltr">&lt;<a rel="nofollow" href="mailto:russell.fiedler@xxxxxxxx" target="_blank">russell.fiedler@xxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
+<div dir="ltr"><div style="color:rgb(0,0,0)" class="gmail_default">&#x200B;Hello Russ,</div><div style="color:rgb(0,0,0)" class="gmail_default"><br></div><div style="color:rgb(0,0,0)" class="gmail_default">This is single model ncdump -h.&#x200B;</div></div><div class="gmail_extra"><br><div class="gmail_quote">On Mon, Jul 23, 2018 at 3:40 PM, Russ Fiedler <span dir="ltr">&lt;<a rel="nofollow" href="mailto:russell.fiedler@xxxxxxxx">russell.fiedler@xxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
  
  
  
@@ -70,7 +70,7 @@ this is working as expected. If it is an unlimited or record
 dimension I would say that this behaviour is incorrect. Ansley,
 could you confirm that?<br>
 <br>
-Could you confirm from an &quot;ncdump -h <a rel="nofollow" href="http://single_member.nc" target="_blank">single_member.nc</a>&quot; that the
+Could you confirm from an &quot;ncdump -h <a rel="nofollow" href="http://single_member.nc">single_member.nc</a>&quot; that the
 ensemble is on a fixed time axis?<br>
 <br>
 Cheers,<br>
@@ -96,14 +96,14 @@ it is showing following error.<br>
 REPEAT: L=2<br>
 !-&gt; REPEAT: MM:1<br>
 !-&gt; REPEAT: KK:1<br>
-&#xA0;!-&gt; LIST/FORMAT=CDF/append/file=<a rel="nofollow" href="http://hist_russ.nc/m=1/k=1:4" target="_blank">hi<wbr>st_russ.nc/m=1/k=1:4</a>
+&#xA0;!-&gt; LIST/FORMAT=CDF/append/file=<a rel="nofollow" href="http://hist_russ.nc/m=1/k=1:4">hi<wbr>st_russ.nc/m=1/k=1:4</a>
 histzd<br>
-&#xA0;LISTing to file <a rel="nofollow" href="http://hist_russ.nc" target="_blank">hist_russ.nc</a><br>
+&#xA0;LISTing to file <a rel="nofollow" href="http://hist_russ.nc">hist_russ.nc</a><br>
 &#xA0;**TMAP ERR: Requested data range is outside of data set
 limits<br>
 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Expected: HISTZD[L=&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 2 :&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 2 ]
 Found: HISTZD[L=&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1 :&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1 ]<br>
-LIST/FORMAT=CDF/append/file=<a rel="nofollow" href="http://hist_russ.nc/m=1/k=1:4" target="_blank">hi<wbr>st_russ.nc/m=1/k=1:4</a>
+LIST/FORMAT=CDF/append/file=<a rel="nofollow" href="http://hist_russ.nc/m=1/k=1:4">hi<wbr>st_russ.nc/m=1/k=1:4</a>
 histzd<br>
 Command file, command group, or REPEAT execution aborted</div>
 <div class="gmail_default" style="color:rgb(0,0,0)"><br>
@@ -112,7 +112,7 @@ Command file, command group, or REPEAT execution aborted</div>
 llimits also in this command</div>
 <div class="gmail_default" style="color:rgb(0,0,0)"><br>
 </div>
-<div class="gmail_default" style="color:rgb(0,0,0)">save/i=1/j=1/k=1/l=1/m=1/ilimi<wbr>ts=1:1:360/jlimits=1:126/klimi<wbr>ts=1:36/mlimits=1:11/llimits=<wbr>1:312/file=<a rel="nofollow" href="http://myfile.nc/clob" target="_blank">myfile.nc/clob</a> myvar</div>
+<div class="gmail_default" style="color:rgb(0,0,0)">save/i=1/j=1/k=1/l=1/m=1/ilimi<wbr>ts=1:1:360/jlimits=1:126/klimi<wbr>ts=1:36/mlimits=1:11/llimits=<wbr>1:312/file=<a rel="nofollow" href="http://myfile.nc/clob">myfile.nc/clob</a> myvar</div>
 <div class="gmail_default" style="color:rgb(0,0,0)"><br>
 </div>
 <div class="gmail_default" style="color:rgb(0,0,0)">then my code
@@ -126,7 +126,7 @@ saurabh<br>
 </div>
 <div class="gmail_extra"><br>
 <div class="gmail_quote">On Mon, Jul 23, 2018 at 1:59 PM, Russ
-Fiedler <span dir="ltr">&lt;<a rel="nofollow" href="mailto:russell.fiedler@xxxxxxxx" target="_blank">russell.fiedler@xxxxxxxx</a>&gt;</span>
+Fiedler <span dir="ltr">&lt;<a rel="nofollow" href="mailto:russell.fiedler@xxxxxxxx">russell.fiedler@xxxxxxxx</a>&gt;</span>
 wrote:<br>
 <blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
 <div text="#000000" bgcolor="#FFFFFF">
@@ -139,9 +139,9 @@ multiple loops<br>
 ! assume L is unlimited so we do not need to specify
 LLIMITS save by level to reduce memory.<br>
 <br>
-save/i=1/j=1/k=1/l=1/m=1/ilimi<wbr>ts=1:1:360/jlimits=1:126/klimi<wbr>ts=1:36/mlimits=1:11/file=<a rel="nofollow" href="http://myfile.nc/clob" target="_blank">myfi<wbr>le.nc/clob</a> myvar<br>
+save/i=1/j=1/k=1/l=1/m=1/ilimi<wbr>ts=1:1:360/jlimits=1:126/klimi<wbr>ts=1:36/mlimits=1:11/file=<a rel="nofollow" href="http://myfile.nc/clob">myfi<wbr>le.nc/clob</a> myvar<br>
 repeat/l=1:312 (repeat/range=1:11/name=mm
-(repeat/range=1:36/name=kk save/app/file=<a rel="nofollow" href="http://myfile.nc/m=mm/k=kk" target="_blank">myfile.nc/m=`mm`<wbr>/k=`kk`</a>
+(repeat/range=1:36/name=kk save/app/file=<a rel="nofollow" href="http://myfile.nc/m=mm/k=kk">myfile.nc/m=`mm`<wbr>/k=`kk`</a>
 myvar))<br>
 <br>
 <br>
@@ -164,7 +164,7 @@ e.g. if ZCHUNK=9<br>
 <br>
 ! Save blocks of 9 levels<br>
 repeat/l=1:312 (repeat/range=1:11/name=mm
-(repeat/range=1:36:9/name=kk save/app/file=<a rel="nofollow" href="http://myfile.nc/m=mm/k=kk:kk+8" target="_blank">myfile.nc/m=`mm`<wbr>/k=`kk`:`kk+8`</a>
+(repeat/range=1:36:9/name=kk save/app/file=<a rel="nofollow" href="http://myfile.nc/m=mm/k=kk:kk+8">myfile.nc/m=`mm`<wbr>/k=`kk`:`kk+8`</a>
 myvar))<br>
 <br>
 <br>
@@ -190,7 +190,7 @@ mentioned is more like <br>
 <div class="gmail_default" style="color:rgb(0,0,0)"><br>
 </div>
 <div class="gmail_default" style="color:rgb(0,0,0)">repeat/l=1:312:1
-(save/append/file=<a rel="nofollow" href="http://ensemble_mean.nc" target="_blank">ensemble_mea<wbr>n.nc</a>
+(save/append/file=<a rel="nofollow" href="http://ensemble_mean.nc">ensemble_mea<wbr>n.nc</a>
 var;set mem/size=xxxx)</div>
 <div class="gmail_default" style="color:rgb(0,0,0)"><br>
 </div>
@@ -241,7 +241,7 @@ massive amount of data ?</div>
 </div>
 <div class="gmail_extra"><br>
 <div class="gmail_quote">On Thu, Jul 19, 2018 at
-10:29 AM, saurabh rathore <span dir="ltr">&lt;<a rel="nofollow" href="mailto:rohitsrb2020@xxxxxxxxx" target="_blank">rohitsrb2020@xxxxxxxxx</a>&gt;</span>
+10:29 AM, saurabh rathore <span dir="ltr">&lt;<a rel="nofollow" href="mailto:rohitsrb2020@xxxxxxxxx">rohitsrb2020@xxxxxxxxx</a>&gt;</span>
 wrote:<br>
 <blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
 <div dir="ltr">
@@ -259,7 +259,7 @@ this method.&#xA0;</div>
 <div class="m_-5810789816022451212m_4304773386501407679h5">
 <div class="gmail_extra"><br>
 <div class="gmail_quote">On Tue, Jul 17,
-2018 at 9:31 PM, Satyesh Ghetiya <span dir="ltr">&lt;<a rel="nofollow" href="mailto:satyeshghetiya@xxxxxxxxx" target="_blank">satyeshghetiya@xxxxxxxxx</a>&gt;</span>
+2018 at 9:31 PM, Satyesh Ghetiya <span dir="ltr">&lt;<a rel="nofollow" href="mailto:satyeshghetiya@xxxxxxxxx">satyeshghetiya@xxxxxxxxx</a>&gt;</span>
 wrote:<br>
 <blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
 <div dir="ltr">Hi Saurabh,
@@ -298,7 +298,7 @@ helps you.</div>
 <div class="m_-5810789816022451212m_4304773386501407679m_1329261042872057991h5"><br>
 <div class="gmail_quote">On
 Tue, Jul 17, 2018 at 1:38
-PM, saurabh rathore <span dir="ltr">&lt;<a rel="nofollow" href="mailto:rohitsrb2020@xxxxxxxxx" target="_blank">rohitsrb2020@xxxxxxxxx</a>&gt;</span>
+PM, saurabh rathore <span dir="ltr">&lt;<a rel="nofollow" href="mailto:rohitsrb2020@xxxxxxxxx">rohitsrb2020@xxxxxxxxx</a>&gt;</span>
 wrote:<br>
 <blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
 <div dir="ltr">
