@@ -54,7 +54,7 @@
 <!--X-Body-of-Message-->
 <div dir="ltr">Hi all,<div><br><div class="gmail_extra"><div class="gmail_quote"><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
 ! Loop over list of filenames and make plot (changing &#39;.nc&#39; to &#39;.png&#39;)<span class=""><br>
-&#xA0; repeat/range=1:`numfiles`/name<wbr>=in (let filename = filenames[i=`in`] ; \<br>
+&#xA0; repeat/range=1:`numfiles`/name=in (let filename = filenames[i=`in`] ; \<br>
 &#xA0; &#xA0; &#xA0; &#xA0; def sym filen basinmasks/`filename` ; \<br>
 &#xA0; &#xA0; &#xA0; &#xA0; use ($filen)&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; ; \<br></span>
 &#xA0; &#xA0; &#xA0; &#xA0; let filepng = {spawn:&quot;echo ($filen) | sed s:.nc:.png:&quot;} ; \<br>

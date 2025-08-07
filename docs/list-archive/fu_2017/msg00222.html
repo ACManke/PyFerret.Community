@@ -83,14 +83,14 @@
       let numgood=`v2d[l=1,i=@ngd]`<br>
       <br>
       <br>
-      let vcomp=compressi(v2d[i=1:`NX*<wbr>NY`])<br>
-      let xcomp=compressi(x2d[i=1:`NX*<wbr>NY`])<br>
-      let ycomp=compressi(y2d[i=1:`NX*<wbr>NY`])<br>
+      let vcomp=compressi(v2d[i=1:`NX*NY`])<br>
+      let xcomp=compressi(x2d[i=1:`NX*NY`])<br>
+      let ycomp=compressi(y2d[i=1:`NX*NY`])<br>
       <br>
       ! First numgood values are good . only list those.<br>
       <br>
-      list/clobber/file=&quot;test.dat&quot;/n<wbr>ohead/norowlab/i=1:`numgood`
-      xcomp,ycomp,vcomp,TAX_DATESTRI<wbr>NG(t[g=vcomp],vcomp,&quot;&quot;)<br>
+      list/clobber/file=&quot;test.dat&quot;/nohead/norowlab/i=1:`numgood`
+      xcomp,ycomp,vcomp,TAX_DATESTRING(t[g=vcomp],vcomp,&quot;&quot;)<br>
       <br>
       &#xA0;<br>
       This is untested but should be pretty close to what you want.<span class="HOEnZb"><font color="#888888"><br>
@@ -154,9 +154,9 @@
                           yes? use coads_climatology<br>
                           yes? sh d<br>
                           &#xA0;&#xA0;&#xA0;&#xA0; currently SET data sets:<br>
-                          &#xA0;&#xA0;&#xA0; 1&gt; /usr/local/ferret/fer_dsets/da<wbr>ta/coads_climatology.cdf&#xA0;
+                          &#xA0;&#xA0;&#xA0; 1&gt; /usr/local/ferret/fer_dsets/data/coads_climatology.cdf&#xA0;
                           (default)<br>
-                          &#xA0;name&#xA0;&#xA0;&#xA0;&#xA0; title&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;<wbr>&#xA0;&#xA0;&#xA0;
+                          &#xA0;name&#xA0;&#xA0;&#xA0;&#xA0; title&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
                           I&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; J&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; K&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; L&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
                           M&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; N<br>
                           &#xA0;SST&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; SEA SURFACE TEMPERATURE&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
@@ -181,8 +181,8 @@
                           1:180&#xA0;&#xA0;&#xA0;&#xA0; 1:90&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:12&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
                           ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...<br>
                           &#xA0;<br>
-                          yes?&#xA0; list/clobber/file=&quot;test.dat&quot;/n<wbr>ohead/norowlab
-                          x[g=sst],y[g=sst],TAX_DATESTRI<wbr>NG(t[g=sst],sst,&quot;&quot;),sst,airt,s<wbr>peh<br>
+                          yes?&#xA0; list/clobber/file=&quot;test.dat&quot;/nohead/norowlab
+                          x[g=sst],y[g=sst],TAX_DATESTRING(t[g=sst],sst,&quot;&quot;),sst,airt,speh<br>
                           &#xA0;LISTing to file test.dat<br>
                           yes? spawn sed -i &#39;/^ ----/d&#39; test.dat<br>
                           <br>
@@ -197,7 +197,7 @@
                                 Information,<br>
                               </div>
                               CSIR-NIO<br>
-                              <a rel="nofollow" href="https://about.me/akshay.k.hegde">https://about.me/akshay.k.hegd<wbr>e</a></font></span>
+                              <a rel="nofollow" href="https://about.me/akshay.k.hegde">https://about.me/akshay.k.hegde</a></font></span>
                           <div>
                             <div class="m_-6560119232615737714m_4224253399920651234h5"><br>
                               <br>

@@ -97,14 +97,14 @@ These variables were defined by the following commands:
 yes? let/tit=&quot;original time series&quot; var=eky[y=7.5s,x=148e:82w]
 yes? let/tit=&quot;annual cycle of original&quot; var_cl=var[gt=month_irreg@mod]
 yes? let/tit=&quot;x-integral of original&quot; var_int=var[x=@din]
-yes? let/tit=&quot;annual cycle of x-integral&quot; var_intcl=var_int[gt=month_<wbr>irreg@mod]
+yes? let/tit=&quot;annual cycle of x-integral&quot; var_intcl=var_int[gt=month_irreg@mod]
 yes? let/tit=&quot;x-integral of annual cycle&quot; var_clint=var_cl[x=@din]
-yes? save/outtype=float/file=check_<wbr>order_of_operations.cdf var,var_cl,var_int,var_intcl,<wbr>var_clint
+yes? save/outtype=float/file=check_order_of_operations.cdf var,var_cl,var_int,var_intcl,var_clint
 
 yes? plot/line/sym=27 var_intcl,var_clint
 
 This is Ferret v6.94 (Mac)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~<wbr>~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 William S. Kessler
 NOAA / Pacific Marine Environmental Laboratory
 7600 Sand Point Way NE

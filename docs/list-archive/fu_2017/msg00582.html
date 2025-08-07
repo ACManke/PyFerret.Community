@@ -215,7 +215,7 @@ depth:positive = &quot;down&quot; ;<br>
 </div><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir="ltr"> Then which way I should follow?.</div></blockquote><div><br>
 </div></span><div>Both ways will give you wrong results.</div><div><br>
 </div><div>The &quot;correct&quot; way is to fix your vertical axis, if it&#39;s not properly set.</div><div><br>
-</div><div>  yes? define axis/z/depth/units=meters/<wbr>from_data/edges zax =</div><div>    {0, 10, 20, 300, . . . . , 6000}</div><div>  yes? let v_fixed = v[gz=zax@ASN]</div><div><br>
+</div><div>  yes? define axis/z/depth/units=meters/from_data/edges zax =</div><div>    {0, 10, 20, 300, . . . . , 6000}</div><div>  yes? let v_fixed = v[gz=zax@ASN]</div><div><br>
 </div><div>where {0, 10, 20, . . . , 6000} are the edges of the vertical grid cells. Don&#39;t use these numbers; I&#39;ve just made them up. When there are N cells in the vertical, there are N+1 edges. The above DEFINE AXIS command constructs a vertical axis that consists of N points which are midpoints between the edges and adds the positions of the edges as a piece of auxiliary information to the axis. Note the EDGES qualifier.</div><div><br>
 </div><div>By the way, if your goal is an integration, you don&#39;t need to compute v * xbox * zbox as an intermediate variable. The operator @DIN uses the xbox and zbox information correctly. But, a caveat is that you need to use the correct upper and lower bounds for the integration: In</div><div><br>
 </div><div> yes? v_din = v[z=0:6000@DIN] ! if the total depth is 6000m.</div><div> yes? v_box = v * zbox</div><div> yes? v_box_sum = v_box[k=1:N@SUM]</div><div><br>

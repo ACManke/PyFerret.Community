@@ -56,10 +56,10 @@
 <blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir="ltr">Hi Martin,<div><br>
 </div><div>Thank you for the report. PyFerret users should wait to upgrade PyFerret until I complete a new release; there will be another update to Ferret and PyFerret later this week. I am not sure at this point if it will make any difference for Ferret user&#39;s experience.</div><div><br>
 </div><div>Details:</div><div>When (attempting to) compile and run the Mac version of PyFerret I ran into a number of issues, including an issue similar to that you show. It was at this time I realized there was still a mix of C-allocated memory and Python-allocated memory (although I though Python.h had aliases so the C memory management statements would actually use Python memory management). Once I got everything moved to Python memory management everything worked fine. (I just ran your test and it was successful.) I had not seen any issue on RedHat systems, but since Mac is now a Unix-type system, it does not surprise me you are seeing this on other Linux systems.</div><div><br>
-</div><div>Since you are building your own PyFerret, I have checked in updates on GitHub</div><div>  <a rel="nofollow" href="https://github.com/NOAA-PMEL/PyFerret">https://github.com/NOAA-PMEL/<wbr>PyFerret</a></div><div>If you are so inclined, you might try rebuilding from that code and seeing if you still have the problem. I have been working (through the weekend) on revising code in Ferret (and PyFerret) so: (1) hopefully more C memory management statements will not appear in the future in PyFerret, and (2) we can do a thorough check of memory management to ensure everything appears as expected. So there will be further updates, but hopefully it will be insignificant for the end-user&#39;s experience.</div><div><br>
+</div><div>Since you are building your own PyFerret, I have checked in updates on GitHub</div><div>  <a rel="nofollow" href="https://github.com/NOAA-PMEL/PyFerret">https://github.com/NOAA-PMEL/PyFerret</a></div><div>If you are so inclined, you might try rebuilding from that code and seeing if you still have the problem. I have been working (through the weekend) on revising code in Ferret (and PyFerret) so: (1) hopefully more C memory management statements will not appear in the future in PyFerret, and (2) we can do a thorough check of memory management to ensure everything appears as expected. So there will be further updates, but hopefully it will be insignificant for the end-user&#39;s experience.</div><div><br>
 </div><div>Best,</div><div>Karl</div><div><br>
 </div></div><div class="gmail_extra"><div><div class="h5"><br>
-<div class="gmail_quote">On Mon, Jul 17, 2017 at 1:56 AM, Martin Schmidt <span dir="ltr">&lt;<a rel="nofollow" href="mailto:martin.schmidt@xxxxxxxxxxxxxxxxx">martin.schmidt@io-<wbr>warnemuende.de</a>&gt;</span> wrote:<br>
+<div class="gmail_quote">On Mon, Jul 17, 2017 at 1:56 AM, Martin Schmidt <span dir="ltr">&lt;<a rel="nofollow" href="mailto:martin.schmidt@xxxxxxxxxxxxxxxxx">martin.schmidt@io-warnemuende.de</a>&gt;</span> wrote:<br>
 <blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">Hi,<br>
  
 <br>
@@ -102,13 +102,13 @@ Linux 3.16.7-53-default - 07/15/17<br>
  
 <br>
  
-yes? use <a rel="nofollow" href="http://tds.hycom.org/thredds/dodsC/GLBu0.08/expt_91.2/ts3z" rel="noreferrer">http://tds.hycom.org/thredds/d<wbr>odsC/GLBu0.08/expt_91.2/ts3z</a><br>
+yes? use <a rel="nofollow" href="http://tds.hycom.org/thredds/dodsC/GLBu0.08/expt_91.2/ts3z" rel="noreferrer">http://tds.hycom.org/thredds/dodsC/GLBu0.08/expt_91.2/ts3z</a><br>
  
 yes? sh data<br>
  
 currently SET data sets:<br>
  
-1&gt; <a rel="nofollow" href="http://tds.hycom.org/thredds/dodsC/GLBu0.08/expt_91.2/ts3z" rel="noreferrer">http://tds.hycom.org/thredds/d<wbr>odsC/GLBu0.08/expt_91.2/ts3z</a> (default)<br>
+1&gt; <a rel="nofollow" href="http://tds.hycom.org/thredds/dodsC/GLBu0.08/expt_91.2/ts3z" rel="noreferrer">http://tds.hycom.org/thredds/dodsC/GLBu0.08/expt_91.2/ts3z</a> (default)<br>
  
 name  title              I    J K    L<br>
  
@@ -130,11 +130,11 @@ Traceback (most recent call last):<br>
  
 File &quot;&lt;string&gt;&quot;, line 1, in &lt;module&gt;<br>
  
-File &quot;/sw/viz/ferret/py_ferret_v720<wbr>_os132_py_27/lib/python2.7/sit<wbr>e-packages/pyferret/__init__.<wbr>py&quot;, line 538, in init<br>
+File &quot;/sw/viz/ferret/py_ferret_v720_os132_py_27/lib/python2.7/site-packages/pyferret/__init__.py&quot;, line 538, in init<br>
  
 result = run()<br>
  
-File &quot;/sw/viz/ferret/py_ferret_v720<wbr>_os132_py_27/lib/python2.7/sit<wbr>e-packages/pyferret/__init__.<wbr>py&quot;, line 710, in run<br>
+File &quot;/sw/viz/ferret/py_ferret_v720_os132_py_27/lib/python2.7/site-packages/pyferret/__init__.py&quot;, line 710, in run<br>
  
 retval = libpyferret._run(str_command)<br>
  

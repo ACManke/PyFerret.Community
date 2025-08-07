@@ -54,7 +54,7 @@
 <div dir="ltr">Hi all,<div><br>
 <div class="gmail_extra"><div class="gmail_quote"><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir="auto"><div dir="auto">As Ryo suggested there are easier way to calculate volume transport through a wall.</div><div dir="auto"><br>
 </div><div dir="auto">I.e. if you want to calculate volume transport across 10N, between 60:90E and 0:300 m, then it may be represented as below:</div><div dir="auto"><br>
-</div><div dir="auto">Vol_tr=v[x=60:90@din,y=10,z=0:<wbr>300@din]</div></div></blockquote><div><br>
+</div><div dir="auto">Vol_tr=v[x=60:90@din,y=10,z=0:300@din]</div></div></blockquote><div><br>
 </div><div>Thank you. I had something like that in mind.</div><div><br>
 </div><div>It really depends on your purpose and the accuracy you pursue, but I just put some random thoughts/caveats here:</div><div><br>
 </div><div>- When your grid is non-uniform, @DIN will result in some error, if the axis isn&#39;t &quot;properly&quot; set. List the XBOX, YBOX, or ZBOX variable to check. (If we are dealing with a netCDF file, I&#39;m referring to the &quot;_bnds&quot; information.)</div><div><br>

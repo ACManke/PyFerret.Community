@@ -1,0 +1,695 @@
+sed 's|documentation/release-notes/all-release-notes|documentation/all-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/all-release-notes|documentation/all-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/coards-netcdf-conventions|documentation/coards-netcdf-conventions.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/coop_cdf_profile|documentation/coop_cdf_profile.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/external-functions|documentation/external-functions.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/ferret-documentation|documentation/ferret-documentation.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/ferret-publications|documentation/ferret-publications.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/ferret-tutorials|documentation/ferret-tutorials.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/pyferret-support|documentation/pyferret-support.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/version-75-release-notes|documentation/version-75-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/version-76-release-notes|documentation/version-76-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/version-763-release-notes|documentation/version-763-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/demos/ccbar_demo|documentation/demos/ccbar_demo.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/demos/coads-tour|documentation/demos/coads-tour.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/demos/dsg-files-discrete-sampling-geometries-demo|documentation/demos/dsg-files-discrete-sampling-geometries-demo.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/demos/ferret-binary-read-demo|documentation/demos/ferret-binary-read-demo.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/demos/ferret-constant-array-demo|documentation/demos/ferret-constant-array-demo.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/demos/ferret-eof-demo|documentation/demos/ferret-eof-demo.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/demos/ferret-graticules-demo|documentation/demos/ferret-graticules-demo.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/demos/ferret-land_detail-demo|documentation/demos/ferret-land_detail-demo.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/demos/ferret-map-projections-demo|documentation/demos/ferret-map-projections-demo.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/demos/ferret-objective-analysis|documentation/demos/ferret-objective-analysis.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/demos/ferret-palette-demo|documentation/demos/ferret-palette-demo.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/demos/ferret-polygon-vector-demo|documentation/demos/ferret-polygon-vector-demo.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/demos/ferret-polymark-demo|documentation/demos/ferret-polymark-demo.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/demos/ferret-polytube-demo|documentation/demos/ferret-polytube-demo.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/demos/ferret-sorting-demo|documentation/demos/ferret-sorting-demo.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/demos/ferret-tutorial-script|documentation/demos/ferret-tutorial-script.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/demos/grid-indices-in-ferret|documentation/demos/grid-indices-in-ferret.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/demos/how-to-use-ferret-and-opendap-to-access-and-analyze-remote-data-1|documentation/demos/how-to-use-ferret-and-opendap-to-access-and-analyze-remote-data-1.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/demos/how-to-use-ferret-external-functions-for-computing-ffts|documentation/demos/how-to-use-ferret-external-functions-for-computing-ffts.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/demos/levitus-tour|documentation/demos/levitus-tour.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/opendap/opendap-usage-in-ferretdocumentation/demos|documentation/opendap/opendap-usage-in-ferretdocumentation/demos.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/pyferret/build-install|documentation/pyferret/build-install.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/pyferret/data-dictionaries|documentation/pyferret/data-dictionaries.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/pyferret/downloads|documentation/pyferret/downloads.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/pyferret/example-sessions-ferret|documentation/pyferret/example-sessions-ferret.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/pyferret/example-sessions-python|documentation/pyferret/example-sessions-python.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/pyferret/ferret-functionality|documentation/pyferret/ferret-functionality.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/pyferret/fortranefs|documentation/pyferret/fortranefs.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/pyferret/graphics|documentation/pyferret/graphics.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/pyferret/known-issues|documentation/pyferret/known-issues.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/pyferret/pyefs|documentation/pyferret/pyefs.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/pyferret/pyferret-python-objects|documentation/pyferret/pyferret-python-objects.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/pyferret/pyferret-quick-start-notes|documentation/pyferret/pyferret-quick-start-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/pyferret/python-functions|documentation/pyferret/python-functions.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/pyferret/requirements|documentation/pyferret/requirements.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/pyferret/what-is-pyferret|documentation/pyferret/what-is-pyferret.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/pyferret/why-use-pyferret|documentation/pyferret/why-use-pyferret.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/v-6-6-2-release-notes|documentation/release-notes/v-6-6-2-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/v6-08-release-notes|documentation/release-notes/v6-08-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/v6-1-release-notes|documentation/release-notes/v6-1-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/v6-2-release-notes|documentation/release-notes/v6-2-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/v6-3-release-notes|documentation/release-notes/v6-3-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/v6-4-release-notes|documentation/release-notes/v6-4-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/v6-5-release-notes|documentation/release-notes/v6-5-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/v6-6-release-notes|documentation/release-notes/v6-6-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/version-4-9-release-notes|documentation/release-notes/version-4-9-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/version-5-6-release-notes|documentation/release-notes/version-5-6-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/version-6-6-1-release-notes|documentation/release-notes/version-6-6-1-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/version-6-6-4-release-notes|documentation/release-notes/version-6-6-4-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/version-6-6-5-release-notes|documentation/release-notes/version-6-6-5-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/version-6-6-7-release-notes|documentation/release-notes/version-6-6-7-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/version-6-7-1-release-notes|documentation/release-notes/version-6-7-1-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/version-6-7-release-notes|documentation/release-notes/version-6-7-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/version-6-72-release-notes|documentation/release-notes/version-6-72-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/version-6-8-2-release-notes|documentation/release-notes/version-6-8-2-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/version-6-8-4-release-notes|documentation/release-notes/version-6-8-4-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/version-6-8-release-notes|documentation/release-notes/version-6-8-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/version-6-842-release-notes|documentation/release-notes/version-6-842-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/version-6-85-release-notes|documentation/release-notes/version-6-85-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/version-6-9-release-notes|documentation/release-notes/version-6-9-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/version-6-93-release-notes|documentation/release-notes/version-6-93-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/version-6-95-release-notes|documentation/release-notes/version-6-95-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/version-6-96-release-notes|documentation/release-notes/version-6-96-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/version-7-0-release-notes|documentation/release-notes/version-7-0-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/version-7-1-release-notes|documentation/release-notes/version-7-1-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/version-7-2-release-notes|documentation/release-notes/version-7-2-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/version-7-3-release-notes|documentation/release-notes/version-7-3-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/version-7-4-release-notes|documentation/release-notes/version-7-4-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/version-742-release-notes|documentation/release-notes/version-742-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/version-743-release-notes|documentation/release-notes/version-743-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/index|documentation/users-guide/index.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+
+
+sed 's|documentation/release-notes/v-6-6-2-release-notes|documentation/release-notes/v-6-6-2-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/v6-08-release-notes|documentation/release-notes/v6-08-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/v6-1-release-notes|documentation/release-notes/v6-1-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/v6-2-release-notes|documentation/release-notes/v6-2-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/v6-3-release-notes|documentation/release-notes/v6-3-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/v6-4-release-notes|documentation/release-notes/v6-4-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/v6-5-release-notes|documentation/release-notes/v6-5-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/v6-6-release-notes|documentation/release-notes/v6-6-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/version-4-9-release-notes|documentation/release-notes/version-4-9-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/version-5-6-release-notes|documentation/release-notes/version-5-6-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/version-6-6-1-release-notes|documentation/release-notes/version-6-6-1-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/version-6-6-4-release-notes|documentation/release-notes/version-6-6-4-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/version-6-6-5-release-notes|documentation/release-notes/version-6-6-5-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/version-6-6-7-release-notes|documentation/release-notes/version-6-6-7-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/version-6-7-1-release-notes|documentation/release-notes/version-6-7-1-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/version-6-7-release-notes|documentation/release-notes/version-6-7-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/version-6-72-release-notes|documentation/release-notes/version-6-72-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/version-6-8-2-release-notes|documentation/release-notes/version-6-8-2-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/version-6-8-4-release-notes|documentation/release-notes/version-6-8-4-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/version-6-8-release-notes|documentation/release-notes/version-6-8-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/version-6-842-release-notes|documentation/release-notes/version-6-842-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/version-6-85-release-notes|documentation/release-notes/version-6-85-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/version-6-9-release-notes|documentation/release-notes/version-6-9-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/version-6-93-release-notes|documentation/release-notes/version-6-93-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/version-6-95-release-notes|documentation/release-notes/version-6-95-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/version-6-96-release-notes|documentation/release-notes/version-6-96-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/version-7-0-release-notes|documentation/release-notes/version-7-0-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/version-7-1-release-notes|documentation/release-notes/version-7-1-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/version-7-2-release-notes|documentation/release-notes/version-7-2-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/version-7-3-release-notes|documentation/release-notes/version-7-3-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/version-7-4-release-notes|documentation/release-notes/version-7-4-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/version-742-release-notes|documentation/release-notes/version-742-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/release-notes/version-743-release-notes|documentation/release-notes/version-743-release-notes.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+
+sed 's|documentation/users-guide/users-guide|documentation/users-guide/users-guide.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/Grids-Regions/FERRET-PROGRAM-LIMITS|documentation/users-guide/Grids-Regions/FERRET-PROGRAM-LIMITS.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/Grids-Regions/GRIDS|documentation/users-guide/Grids-Regions/GRIDS.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/Grids-Regions/Grids-Regions|documentation/users-guide/Grids-Regions/Grids-Regions.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/Grids-Regions/OVERVIEW|documentation/users-guide/Grids-Regions/OVERVIEW.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/Grids-Regions/REGIONS|documentation/users-guide/Grids-Regions/REGIONS.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/animations-gif-images/ADVANCED-MOVIE-MAKING|documentation/users-guide/animations-gif-images/ADVANCED-MOVIE-MAKING.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/animations-gif-images/CREATING-AN-HDF-MOVIE|documentation/users-guide/animations-gif-images/CREATING-AN-HDF-MOVIE.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/animations-gif-images/CREATING-GIF-IMAGES|documentation/users-guide/animations-gif-images/CREATING-GIF-IMAGES.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/animations-gif-images/DISPLAYING-AN-HDF-MOVIE|documentation/users-guide/animations-gif-images/DISPLAYING-AN-HDF-MOVIE.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/animations-gif-images/OVERVIEW|documentation/users-guide/animations-gif-images/OVERVIEW.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/animations-gif-images/animations-gif-images|documentation/users-guide/animations-gif-images/animations-gif-images.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/BIN_INDEX_WT|documentation/users-guide/appendix-a-external-functions/BIN_INDEX_WT.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/COMPRESSI-BY|documentation/users-guide/appendix-a-external-functions/COMPRESSI-BY.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/COMPRESSI|documentation/users-guide/appendix-a-external-functions/COMPRESSI.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/CONVOLVEI|documentation/users-guide/appendix-a-external-functions/CONVOLVEI.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/CURV-TO-RECT-MAP|documentation/users-guide/appendix-a-external-functions/CURV-TO-RECT-MAP.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/CURV-TO-RECT|documentation/users-guide/appendix-a-external-functions/CURV-TO-RECT.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/DATE1900|documentation/users-guide/appendix-a-external-functions/DATE1900.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/DAYS1900TOYMDHMS|documentation/users-guide/appendix-a-external-functions/DAYS1900TOYMDHMS.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/DOT|documentation/users-guide/appendix-a-external-functions/DOT.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/ELEMENT-INDEX-STRING|documentation/users-guide/appendix-a-external-functions/ELEMENT-INDEX-STRING.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/ELEMENT-INDEX|documentation/users-guide/appendix-a-external-functions/ELEMENT-INDEX.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/EOF-SPACE|documentation/users-guide/appendix-a-external-functions/EOF-SPACE.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/EOF-STAT|documentation/users-guide/appendix-a-external-functions/EOF-STAT.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/EOF-TFUNC|documentation/users-guide/appendix-a-external-functions/EOF-TFUNC.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/FFT-IM|documentation/users-guide/appendix-a-external-functions/FFT-IM.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/FFT-INVERSE|documentation/users-guide/appendix-a-external-functions/FFT-INVERSE.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/FFT-RE|documentation/users-guide/appendix-a-external-functions/FFT-RE.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/FINDHI|documentation/users-guide/appendix-a-external-functions/FINDHI.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/FINDLO|documentation/users-guide/appendix-a-external-functions/FINDLO.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/IS-ELEMENT-OF|documentation/users-guide/appendix-a-external-functions/IS-ELEMENT-OF.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/LANCZOS|documentation/users-guide/appendix-a-external-functions/LANCZOS.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/LSL-LOWPASS|documentation/users-guide/appendix-a-external-functions/LSL-LOWPASS.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/MINUTES24|documentation/users-guide/appendix-a-external-functions/MINUTES24.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/NCO|documentation/users-guide/appendix-a-external-functions/NCO.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/NCO_ATTR|documentation/users-guide/appendix-a-external-functions/NCO_ATTR.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/RECT-TO-CURV|documentation/users-guide/appendix-a-external-functions/RECT-TO-CURV.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/TCAT|documentation/users-guide/appendix-a-external-functions/TCAT.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/TRANSPOSE|documentation/users-guide/appendix-a-external-functions/TRANSPOSE.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/WRITEV5D|documentation/users-guide/appendix-a-external-functions/WRITEV5D.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/XCAT|documentation/users-guide/appendix-a-external-functions/XCAT.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/YCAT|documentation/users-guide/appendix-a-external-functions/YCAT.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/ZAXREPLACE-AVG|documentation/users-guide/appendix-a-external-functions/ZAXREPLACE-AVG.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/ZAXREPLACE-BIN|documentation/users-guide/appendix-a-external-functions/ZAXREPLACE-BIN.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/ZCAT|documentation/users-guide/appendix-a-external-functions/ZCAT.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/appendix-a-external-functions|documentation/users-guide/appendix-a-external-functions/appendix-a-external-functions.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/dates|documentation/users-guide/appendix-a-external-functions/dates.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/ecat|documentation/users-guide/appendix-a-external-functions/ecat.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/expnd_by_len|documentation/users-guide/appendix-a-external-functions/expnd_by_len.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/expndi_by|documentation/users-guide/appendix-a-external-functions/expndi_by.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/expndi_by_m_counts|documentation/users-guide/appendix-a-external-functions/expndi_by_m_counts.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/expndi_by_t|documentation/users-guide/appendix-a-external-functions/expndi_by_t.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/expndi_by_z|documentation/users-guide/appendix-a-external-functions/expndi_by_z.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/expndi_by_z_counts-and-expndi_id_by_z_counts|documentation/users-guide/appendix-a-external-functions/expndi_by_z_counts-and-expndi_id_by_z_counts.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/expndi_id_by_z_counts|documentation/users-guide/appendix-a-external-functions/expndi_id_by_z_counts.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/fc_isubset|documentation/users-guide/appendix-a-external-functions/fc_isubset.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/fcat|documentation/users-guide/appendix-a-external-functions/fcat.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/fill_xy|documentation/users-guide/appendix-a-external-functions/fill_xy.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/lon_lat_time_string|documentation/users-guide/appendix-a-external-functions/lon_lat_time_string.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/pt_in_poly|documentation/users-guide/appendix-a-external-functions/pt_in_poly.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/sampleimulti-and-j-k-l-m-n|documentation/users-guide/appendix-a-external-functions/sampleimulti-and-j-k-l-m-n.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/samplexy_curv_avg|documentation/users-guide/appendix-a-external-functions/samplexy_curv_avg.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/samplexy_curv_nrst|documentation/users-guide/appendix-a-external-functions/samplexy_curv_nrst.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/samplexyt|documentation/users-guide/appendix-a-external-functions/samplexyt.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/samplexyz|documentation/users-guide/appendix-a-external-functions/samplexyz.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/samplexyzt|documentation/users-guide/appendix-a-external-functions/samplexyzt.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/samplexz|documentation/users-guide/appendix-a-external-functions/samplexz.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/sampleyz|documentation/users-guide/appendix-a-external-functions/sampleyz.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/scat2grid_bin_xy|documentation/users-guide/appendix-a-external-functions/scat2grid_bin_xy.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/scat2grid_nobs_xy|documentation/users-guide/appendix-a-external-functions/scat2grid_nobs_xy.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/scatgrid_nbin_xyt|documentation/users-guide/appendix-a-external-functions/scatgrid_nbin_xyt.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/separate|documentation/users-guide/appendix-a-external-functions/separate.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/studenttcutoff-function|documentation/users-guide/appendix-a-external-functions/studenttcutoff-function.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/tax_datestring|documentation/users-guide/appendix-a-external-functions/tax_datestring.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-a-external-functions/test_opendap|documentation/users-guide/appendix-a-external-functions/test_opendap.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-b-pplus-guide/BEGINNERS-GUIDE|documentation/users-guide/appendix-b-pplus-guide/BEGINNERS-GUIDE.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-b-pplus-guide/COMMAND-DESCRIPTION|documentation/users-guide/appendix-b-pplus-guide/COMMAND-DESCRIPTION.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-b-pplus-guide/COMMAND-FORMAT|documentation/users-guide/appendix-b-pplus-guide/COMMAND-FORMAT.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-b-pplus-guide/COMMAND-SYNOPSIS|documentation/users-guide/appendix-b-pplus-guide/COMMAND-SYNOPSIS.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-b-pplus-guide/GETTING-STARTED|documentation/users-guide/appendix-b-pplus-guide/GETTING-STARTED.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-b-pplus-guide/INTRODUCTION|documentation/users-guide/appendix-b-pplus-guide/INTRODUCTION.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-b-pplus-guide/PLOT5-PPLUS-DIFFERENCES|documentation/users-guide/appendix-b-pplus-guide/PLOT5-PPLUS-DIFFERENCES.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-b-pplus-guide/PPLUS-COMMAND-FILES|documentation/users-guide/appendix-b-pplus-guide/PPLUS-COMMAND-FILES.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-b-pplus-guide/ROUTING-PLOT-FILES|documentation/users-guide/appendix-b-pplus-guide/ROUTING-PLOT-FILES.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-b-pplus-guide/appendix-b-pplus-guide|documentation/users-guide/appendix-b-pplus-guide/appendix-b-pplus-guide.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-c-ferret-specific-pplus-enhancements/ENHANCED-COMMANDS-DESCRIPTION|documentation/users-guide/appendix-c-ferret-specific-pplus-enhancements/ENHANCED-COMMANDS-DESCRIPTION.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-c-ferret-specific-pplus-enhancements/GKS-LINE-BUNDLES|documentation/users-guide/appendix-c-ferret-specific-pplus-enhancements/GKS-LINE-BUNDLES.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-c-ferret-specific-pplus-enhancements/HARD-COPY|documentation/users-guide/appendix-c-ferret-specific-pplus-enhancements/HARD-COPY.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-c-ferret-specific-pplus-enhancements/PLOTPLUS-HISTORY-EVOLUTION|documentation/users-guide/appendix-c-ferret-specific-pplus-enhancements/PLOTPLUS-HISTORY-EVOLUTION.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/appendix-c-ferret-specific-pplus-enhancements/appendix-c-ferret-specific-pplus-enhancements|documentation/users-guide/appendix-c-ferret-specific-pplus-enhancements/appendix-c-ferret-specific-pplus-enhancements.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/commands-reference/ALIAS|documentation/users-guide/commands-reference/ALIAS.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/commands-reference/CANCEL|documentation/users-guide/commands-reference/CANCEL.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/commands-reference/CONTOUR|documentation/users-guide/commands-reference/CONTOUR.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/commands-reference/DEFINE|documentation/users-guide/commands-reference/DEFINE.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/commands-reference/ELIF|documentation/users-guide/commands-reference/ELIF.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/commands-reference/ELSE|documentation/users-guide/commands-reference/ELSE.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/commands-reference/ENDIF|documentation/users-guide/commands-reference/ENDIF.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/commands-reference/EXIT|documentation/users-guide/commands-reference/EXIT.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/commands-reference/FILE|documentation/users-guide/commands-reference/FILE.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/commands-reference/FILL|documentation/users-guide/commands-reference/FILL.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/commands-reference/FRAME|documentation/users-guide/commands-reference/FRAME.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/commands-reference/GO|documentation/users-guide/commands-reference/GO.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/commands-reference/HELP|documentation/users-guide/commands-reference/HELP.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/commands-reference/IF|documentation/users-guide/commands-reference/IF.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/commands-reference/LABEL|documentation/users-guide/commands-reference/LABEL.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/commands-reference/LET|documentation/users-guide/commands-reference/LET.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/commands-reference/LIST|documentation/users-guide/commands-reference/LIST.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/commands-reference/LOAD|documentation/users-guide/commands-reference/LOAD.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/commands-reference/MESSAGE|documentation/users-guide/commands-reference/MESSAGE.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/commands-reference/PALETTE|documentation/users-guide/commands-reference/PALETTE.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/commands-reference/PATTERN|documentation/users-guide/commands-reference/PATTERN.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/commands-reference/PAUSE|documentation/users-guide/commands-reference/PAUSE.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/commands-reference/PLOT|documentation/users-guide/commands-reference/PLOT.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/commands-reference/POLYGON|documentation/users-guide/commands-reference/POLYGON.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/commands-reference/PPLUS|documentation/users-guide/commands-reference/PPLUS.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/commands-reference/QUERY|documentation/users-guide/commands-reference/QUERY.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/commands-reference/QUIT|documentation/users-guide/commands-reference/QUIT.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/commands-reference/REPEAT|documentation/users-guide/commands-reference/REPEAT.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/commands-reference/SAVE|documentation/users-guide/commands-reference/SAVE.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/commands-reference/SAY|documentation/users-guide/commands-reference/SAY.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/commands-reference/SET|documentation/users-guide/commands-reference/SET.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/commands-reference/SHADE|documentation/users-guide/commands-reference/SHADE.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/commands-reference/SHOW|documentation/users-guide/commands-reference/SHOW.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/commands-reference/SPAWN|documentation/users-guide/commands-reference/SPAWN.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/commands-reference/STATISTICS|documentation/users-guide/commands-reference/STATISTICS.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/commands-reference/UNALIAS|documentation/users-guide/commands-reference/UNALIAS.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/commands-reference/USE|documentation/users-guide/commands-reference/USE.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/commands-reference/USER|documentation/users-guide/commands-reference/USER.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/commands-reference/VECTOR|documentation/users-guide/commands-reference/VECTOR.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/commands-reference/WHERE|documentation/users-guide/commands-reference/WHERE.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/commands-reference/WI|documentation/users-guide/commands-reference/WI.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/commands-reference/annotate|documentation/users-guide/commands-reference/annotate.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/commands-reference/commands-reference|documentation/users-guide/commands-reference/commands-reference.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/computing-environment/FILES-AND-ENVIRONMENT-VARIABLES-USED-BY-FERRET|documentation/users-guide/computing-environment/FILES-AND-ENVIRONMENT-VARIABLES-USED-BY-FERRET.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/computing-environment/HARD-COPY-AND-METAFILE-TRANSLATION|documentation/users-guide/computing-environment/HARD-COPY-AND-METAFILE-TRANSLATION.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/computing-environment/INPUT-FILE-NAMING|documentation/users-guide/computing-environment/INPUT-FILE-NAMING.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/computing-environment/MEMORY-USE|documentation/users-guide/computing-environment/MEMORY-USE.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/computing-environment/OUTPUT-FILE-NAMING|documentation/users-guide/computing-environment/OUTPUT-FILE-NAMING.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/computing-environment/SETTING-UP-TO-RUN-FERRET|documentation/users-guide/computing-environment/SETTING-UP-TO-RUN-FERRET.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/computing-environment/computing-environment|documentation/users-guide/computing-environment/computing-environment.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/computing-environment/my_ferret_paths_template|documentation/users-guide/computing-environment/my_ferret_paths_template.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/converting-to-netcdf/CREATING-A-MULTI-FILE-NETCDF-DATA-SET|documentation/users-guide/converting-to-netcdf/CREATING-A-MULTI-FILE-NETCDF-DATA-SET.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/converting-to-netcdf/OVERVIEW|documentation/users-guide/converting-to-netcdf/OVERVIEW.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/converting-to-netcdf/SIMPLE-CONVERSIONS-USING-FERRET|documentation/users-guide/converting-to-netcdf/SIMPLE-CONVERSIONS-USING-FERRET.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/converting-to-netcdf/WRITING-A-CONVERSION-PROGRAM|documentation/users-guide/converting-to-netcdf/WRITING-A-CONVERSION-PROGRAM.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/converting-to-netcdf/converting-to-netcdf|documentation/users-guide/converting-to-netcdf/converting-to-netcdf.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/converting-to-netcdf|documentation/users-guide/converting-to-netcdf.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/customizing-plots/AXES|documentation/users-guide/customizing-plots/AXES.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/customizing-plots/COLOR|documentation/users-guide/customizing-plots/COLOR.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/customizing-plots/CONTOURING|documentation/users-guide/customizing-plots/CONTOURING.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/customizing-plots/FONTS|documentation/users-guide/customizing-plots/FONTS.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/customizing-plots/GRAPHICAL-OUTPUT|documentation/users-guide/customizing-plots/GRAPHICAL-OUTPUT.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/customizing-plots/LABELS|documentation/users-guide/customizing-plots/LABELS.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/customizing-plots/MAP-PROJECTIONS-AND-CURVILINEAR-COORDINATES|documentation/users-guide/customizing-plots/MAP-PROJECTIONS-AND-CURVILINEAR-COORDINATES.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/customizing-plots/OVERVIEW|documentation/users-guide/customizing-plots/OVERVIEW.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/customizing-plots/PLOT-LAYOUT|documentation/users-guide/customizing-plots/PLOT-LAYOUT.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/customizing-plots/SPECIAL-SYMBOLS|documentation/users-guide/customizing-plots/SPECIAL-SYMBOLS.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/customizing-plots/customizing-plots|documentation/users-guide/customizing-plots/customizing-plots.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/data-set-basics/ACCESS-TO-REMOTE-DATA-SETS-WITH-DODS|documentation/users-guide/data-set-basics/ACCESS-TO-REMOTE-DATA-SETS-WITH-DODS.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/data-set-basics/ASCII-DATA|documentation/users-guide/data-set-basics/ASCII-DATA.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/data-set-basics/BINARY-DATA|documentation/users-guide/data-set-basics/BINARY-DATA.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/data-set-basics/NETCDF-DATA|documentation/users-guide/data-set-basics/NETCDF-DATA.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/data-set-basics/OVERVIEW|documentation/users-guide/data-set-basics/OVERVIEW.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/data-set-basics/TMAP-FORMATTED-DATA|documentation/users-guide/data-set-basics/TMAP-FORMATTED-DATA.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/data-set-basics/TRICKS-TO-READING-BINARY-AND-ASCII-FILES|documentation/users-guide/data-set-basics/TRICKS-TO-READING-BINARY-AND-ASCII-FILES.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/data-set-basics/data-set-basics|documentation/users-guide/data-set-basics/data-set-basics.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/ferret-fonts/list-of-ferret-character-fonts|documentation/users-guide/ferret-fonts/list-of-ferret-character-fonts.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/ferret-fonts/list-of-ferret-fonts|documentation/users-guide/ferret-fonts/list-of-ferret-fonts.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/full-index/index|documentation/users-guide/full-index/index.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/glossary/glossary|documentation/users-guide/glossary/glossary.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/handling-string-data-symbols/AUTOMATICALLY-GENERATED-SYMBOLS|documentation/users-guide/handling-string-data-symbols/AUTOMATICALLY-GENERATED-SYMBOLS.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/handling-string-data-symbols/CUSTOMIZING-THE-POSITION-AND-STYLE-OF-PLOT-LABELS|documentation/users-guide/handling-string-data-symbols/CUSTOMIZING-THE-POSITION-AND-STYLE-OF-PLOT-LABELS.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/handling-string-data-symbols/ORDER-OF-STRING-SUBSTITUTIONS|documentation/users-guide/handling-string-data-symbols/ORDER-OF-STRING-SUBSTITUTIONS.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/handling-string-data-symbols/PLOT-STRING-EDITING-TOOLS|documentation/users-guide/handling-string-data-symbols/PLOT-STRING-EDITING-TOOLS.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/handling-string-data-symbols/SPECIAL-SYMBOLS|documentation/users-guide/handling-string-data-symbols/SPECIAL-SYMBOLS.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/handling-string-data-symbols/STRING-FUNCTIONS|documentation/users-guide/handling-string-data-symbols/STRING-FUNCTIONS.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/handling-string-data-symbols/STRING-VARIABLES|documentation/users-guide/handling-string-data-symbols/STRING-VARIABLES.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/handling-string-data-symbols/SYMBOL-COMMANDS|documentation/users-guide/handling-string-data-symbols/SYMBOL-COMMANDS.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/handling-string-data-symbols/SYMBOL-EDITING|documentation/users-guide/handling-string-data-symbols/SYMBOL-EDITING.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/handling-string-data-symbols/USE-WITH-EMBEDDED-EXPRESSIONS|documentation/users-guide/handling-string-data-symbols/USE-WITH-EMBEDDED-EXPRESSIONS.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/handling-string-data-symbols/USING-SYMBOLS-IN-COMMAND-FILES|documentation/users-guide/handling-string-data-symbols/USING-SYMBOLS-IN-COMMAND-FILES.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/handling-string-data-symbols/handling-string-data-symbols|documentation/users-guide/handling-string-data-symbols/handling-string-data-symbols.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+
+
+sed 's|documentation/users-guide/handing-string-data-symbols/AUTOMATICALLY-GENERATED-SYMBOLS|documentation/users-guide/handling-string-data-symbols/AUTOMATICALLY-GENERATED-SYMBOLS.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/handing-string-data-symbols/CUSTOMIZING-THE-POSITION-AND-STYLE-OF-PLOT-LABELS|documentation/users-guide/handling-string-data-symbols/CUSTOMIZING-THE-POSITION-AND-STYLE-OF-PLOT-LABELS.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/handing-string-data-symbols/ORDER-OF-STRING-SUBSTITUTIONS|documentation/users-guide/handling-string-data-symbols/ORDER-OF-STRING-SUBSTITUTIONS.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/handing-string-data-symbols/PLOT-STRING-EDITING-TOOLS|documentation/users-guide/handling-string-data-symbols/PLOT-STRING-EDITING-TOOLS.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/handing-string-data-symbols/SPECIAL-SYMBOLS|documentation/users-guide/handling-string-data-symbols/SPECIAL-SYMBOLS.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/handing-string-data-symbols/STRING-FUNCTIONS|documentation/users-guide/handling-string-data-symbols/STRING-FUNCTIONS.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/handing-string-data-symbols/STRING-VARIABLES|documentation/users-guide/handling-string-data-symbols/STRING-VARIABLES.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/handing-string-data-symbols/SYMBOL-COMMANDS|documentation/users-guide/handling-string-data-symbols/SYMBOL-COMMANDS.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/handing-string-data-symbols/SYMBOL-EDITING|documentation/users-guide/handling-string-data-symbols/SYMBOL-EDITING.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/handing-string-data-symbols/USE-WITH-EMBEDDED-EXPRESSIONS|documentation/users-guide/handling-string-data-symbols/USE-WITH-EMBEDDED-EXPRESSIONS.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/handing-string-data-symbols/USING-SYMBOLS-IN-COMMAND-FILES|documentation/users-guide/handling-string-data-symbols/USING-SYMBOLS-IN-COMMAND-FILES.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/handing-string-data-symbols/handling-string-data-symbols|documentation/users-guide/handling-string-data-symbols/handling-string-data-symbols.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+
+
+sed 's|documentation/users-guide/introduction/COMMAND-SYNTAX|documentation/users-guide/introduction/COMMAND-SYNTAX.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/introduction/COMMON-COMMANDS|documentation/users-guide/introduction/COMMON-COMMANDS.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/introduction/GETTING-STARTED|documentation/users-guide/introduction/GETTING-STARTED.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/introduction/GO-FILES|documentation/users-guide/introduction/GO-FILES.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/introduction/HELP|documentation/users-guide/introduction/HELP.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/introduction/OVERVIEW|documentation/users-guide/introduction/OVERVIEW.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/introduction/SAMPLE-DATA-SETS|documentation/users-guide/introduction/SAMPLE-DATA-SETS.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/introduction/UNIX-TOOLS|documentation/users-guide/introduction/UNIX-TOOLS.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/introduction/introduction|documentation/users-guide/introduction/introduction.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/variables-xpressions/DEBUGGING-COMPLEX-HIERARCHIES-OF-XPRESSIONS|documentation/users-guide/variables-xpressions/DEBUGGING-COMPLEX-HIERARCHIES-OF-XPRESSIONS.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/variables-xpressions/DEFINING-NEW-VARIABLES|documentation/users-guide/variables-xpressions/DEFINING-NEW-VARIABLES.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/variables-xpressions/EMBEDDED-XPRESSIONS|documentation/users-guide/variables-xpressions/EMBEDDED-XPRESSIONS.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/variables-xpressions/VARIABLES|documentation/users-guide/variables-xpressions/VARIABLES.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/variables-xpressions/XPRESSIONS|documentation/users-guide/variables-xpressions/XPRESSIONS.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/variables-xpressions/variables-xpressions|documentation/users-guide/variables-xpressions/variables-xpressions.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/working-with-special-data-sets/COLLECTIONS-OF-2-DIMENSIONAL-GRIDS|documentation/users-guide/working-with-special-data-sets/COLLECTIONS-OF-2-DIMENSIONAL-GRIDS.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/working-with-special-data-sets/COLLECTIONS-OF-TIME-SERIES|documentation/users-guide/working-with-special-data-sets/COLLECTIONS-OF-TIME-SERIES.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/working-with-special-data-sets/CURVILINEAR-COORDINATE-DATA|documentation/users-guide/working-with-special-data-sets/CURVILINEAR-COORDINATE-DATA.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/working-with-special-data-sets/DSG_datasets|documentation/users-guide/working-with-special-data-sets/DSG_datasets.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/working-with-special-data-sets/LAGRANGIAN-DATA|documentation/users-guide/working-with-special-data-sets/LAGRANGIAN-DATA.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/working-with-special-data-sets/POINT-DATA|documentation/users-guide/working-with-special-data-sets/POINT-DATA.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/working-with-special-data-sets/POLYGONAL-DATA|documentation/users-guide/working-with-special-data-sets/POLYGONAL-DATA.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/working-with-special-data-sets/SIGMA-COORDINATE-DATA|documentation/users-guide/working-with-special-data-sets/SIGMA-COORDINATE-DATA.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/working-with-special-data-sets/VERTICAL-PROFILES|documentation/users-guide/working-with-special-data-sets/VERTICAL-PROFILES.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/working-with-special-data-sets/WHAT-IS-NON-GRIDDED-DATA|documentation/users-guide/working-with-special-data-sets/WHAT-IS-NON-GRIDDED-DATA.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/working-with-special-data-sets/working-with-special-data-sets|documentation/users-guide/working-with-special-data-sets/working-with-special-data-sets.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/writing-external-functions/ANATOMY-OF-AN-EXTERNAL-FUNCTION|documentation/users-guide/writing-external-functions/ANATOMY-OF-AN-EXTERNAL-FUNCTION.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/writing-external-functions/GETTING-STARTED|documentation/users-guide/writing-external-functions/GETTING-STARTED.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/writing-external-functions/NOTES-AND-SUGGESTIONS|documentation/users-guide/writing-external-functions/NOTES-AND-SUGGESTIONS.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/writing-external-functions/OVERVIEW|documentation/users-guide/writing-external-functions/OVERVIEW.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/writing-external-functions/QUICK-START-EXAMPLE|documentation/users-guide/writing-external-functions/QUICK-START-EXAMPLE.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/writing-external-functions/UTILITY-FUNCTIONS|documentation/users-guide/writing-external-functions/UTILITY-FUNCTIONS.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html
+sed 's|documentation/users-guide/writing-external-functions/writing-external-functions|documentation/users-guide/writing-external-functions/writing-external-functions.html|' msgfile.html > msgfile.html.new.html
+mv -f msgfile.html.new.html msgfile.html

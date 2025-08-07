@@ -53,7 +53,7 @@
 <div dir="ltr">Hi James,<div><br>
 <div class="gmail_extra"><div class="gmail_quote"><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir="ltr"><div>As you suggested I tried to rectify the following script.</div><div><br>
 </div><div>use &quot;Data/Test.nc&quot;<br>
-LIST/precision=6 ZBOXLO[GZ=v],ZBOXHI[GZ=v],Z[<wbr>GZ=v],ZBOX[GZ=v]<br>
+LIST/precision=6 ZBOXLO[GZ=v],ZBOXHI[GZ=v],Z[GZ=v],ZBOX[GZ=v]<br>
 LET NEW_EDGES=ZCAT ({0}, zboxhi[gz=v])<br>
 </div></div></blockquote><div><br>
 </div><div>I don&#39;t think this works. Because ZBOXHI is provided by Ferret, which cannot know the positions of the correct edges! Ferret makes some assumptions and computes ZBOXHI and ZBOXLO, which are usually wrong.</div><div><br>

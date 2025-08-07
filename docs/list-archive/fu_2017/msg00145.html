@@ -123,9 +123,9 @@ cite=""
             let indices=L[L=1:`12*nyears+1`]&#xA0; &#xA0; &#xA0; &#xA0; &#xA0;! can add months if
             not even years<br>
             let month=mod(indices-1,12)+1<br>
-            let year=start_year+int((indices-<wbr>1)/12)<br>
-            define axis/units=days/t0="1-jan-<wbr>1993:00:00"/edges
-            truemonth=days1900(year,month,<wbr>day)-days1900(1993,1,1)<br>
+            let year=start_year+int((indices-1)/12)<br>
+            define axis/units=days/t0="1-jan-1993:00:00"/edges
+            truemonth=days1900(year,month,day)-days1900(1993,1,1)<br>
             let ufmon = uf[gt=truemonth@ave]&#xA0; &#xA0;! make a true monthly
             average from the original 5-day data<br>
             <br>
@@ -145,13 +145,13 @@ cite=""
                 2016, I want to<br>
                 &gt; create monthly mean from it. I did the following<br>
                 &gt;<br>
-                &gt; define axis/t=1:8766:1/t0="01-jan-<wbr>1993:00:00"/unit=day
+                &gt; define axis/t=1:8766:1/t0="01-jan-1993:00:00"/unit=day
                 tday ! from 5day to daily<br>
                 &gt; let ufl = uf[gt=tday] ! interpolate (linearly by
                 default)<br>
                 &gt; let uflsm = uf[l=@spz:31] ! a filter with
                 half-power point of about 37 days<br>
-                &gt; define axis/t=15-jan-1993:15-dec-<wbr>2016:1/t0="15-jan-1993"/
+                &gt; define axis/t=15-jan-1993:15-dec-2016:1/t0="15-jan-1993"/
                 unit=month tmon<br>
                 &gt; let ufmon=uflsm[gt=tmon] ! subsample to monthly<br>
                 &gt;<br>

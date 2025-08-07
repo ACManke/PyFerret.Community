@@ -60,10 +60,10 @@
 <div class="gmail_quote">On Thu, Jun 8, 2017 at 7:26 AM, afwande juliet <span dir="ltr">&lt;<a rel="nofollow" href="mailto:afwandej965@xxxxxxxxx">afwandej965@xxxxxxxxx</a>&gt;</span> wrote:<br>
 <blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir="ltr">Try this command and try playing with numbers to get it where you want it<span class=""><br>
 <br>
-plot/nolab/color=blue/thick/I=<wbr>1/TITLE=&quot;time function 1&quot;/VLIMITS=-4.0:4.0:0.5 eoftime<br>
+plot/nolab/color=blue/thick/I=1/TITLE=&quot;time function 1&quot;/VLIMITS=-4.0:4.0:0.5 eoftime<br>
 </span>let xpts = {1000,1950}<br>
 let ypts = {0,0}<br>
-plot/vs/over/line/color=black/<wbr>nolab xpts,ypts<br>
+plot/vs/over/line/color=black/nolab xpts,ypts<br>
 </div><div class="HOEnZb"><div class="h5"><div class="gmail_extra"><br>
 <div class="gmail_quote">On Wed, Jun 7, 2017 at 11:33 PM, Molulaqhooa Maoyi <span dir="ltr">&lt;<a rel="nofollow" href="mailto:molulaqhooa.maoyi@xxxxxxxxx">molulaqhooa.maoyi@xxxxxxxxx</a>&gt;</span> wrote:<br>
 <blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir="ltr">Hi Ferreters<div><br>
@@ -71,11 +71,11 @@ plot/vs/over/line/color=black/<wbr>nolab xpts,ypts<br>
 </div><div>Below is my script that generates a time series.</div><div><br>
 </div><div><div>USE JFM_NCEP.nc</div><div>USE JFM_20th.nc</div><div>USE JFM_ERAINT.nc</div><div><br>
 </div><div>! Compute and save the spatial EOF functions. These have the same units</div><div>! as the data.</div><div><br>
-</div><div>LET eoftime = EOFSVD_TFUNC(hgt[X=10E:43E,Y=0<wbr>:33S,k=12,d=1])*-1</div><div>LET eoftime2 = EOFSVD_TFUNC(hgt[X=10E:43E,Y=0<wbr>:33S,k=14,d=2])*-1</div><div>LET eoftime3 = EOFSVD_TFUNC(hgt[X=10E:43E,Y=0<wbr>:33S,d=3])*-1</div><div><br>
+</div><div>LET eoftime = EOFSVD_TFUNC(hgt[X=10E:43E,Y=0:33S,k=12,d=1])*-1</div><div>LET eoftime2 = EOFSVD_TFUNC(hgt[X=10E:43E,Y=0:33S,k=14,d=2])*-1</div><div>LET eoftime3 = EOFSVD_TFUNC(hgt[X=10E:43E,Y=0:33S,d=3])*-1</div><div><br>
 </div><div><br>
 </div><div><br>
-</div><div>!go multi_view  [rows],[columns],[xsize],[xsta<wbr>rt],[xgap],[ysize],[ystart],[<wbr>ygap],[PRefix]</div><div> go multi_view  3,   1,    0.5,  0.1,  0.15,  0.25,  0.1,  0.07 </div><div>SET WINDOW/ASPECT = .5</div><div><br>
-</div><div>set view V11</div><div>   PPL SHASET RESET</div><div>   plot/nolab/color=blue/thick/I=<wbr>1/TITLE=&quot;time function 1&quot;/VLIMITS=-4.0:4.0:0.5 eoftime</div><span class="m_-6392733853774832395HOEnZb"><font color="#888888"><div><br>
+</div><div>!go multi_view  [rows],[columns],[xsize],[xstart],[xgap],[ysize],[ystart],[ygap],[PRefix]</div><div> go multi_view  3,   1,    0.5,  0.1,  0.15,  0.25,  0.1,  0.07 </div><div>SET WINDOW/ASPECT = .5</div><div><br>
+</div><div>set view V11</div><div>   PPL SHASET RESET</div><div>   plot/nolab/color=blue/thick/I=1/TITLE=&quot;time function 1&quot;/VLIMITS=-4.0:4.0:0.5 eoftime</div><span class="m_-6392733853774832395HOEnZb"><font color="#888888"><div><br>
 </div><div><br>
 </div><div><br>
 </div><div><br>

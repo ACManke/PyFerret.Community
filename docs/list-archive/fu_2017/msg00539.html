@@ -70,12 +70,12 @@
 </div><div style="color:rgb(0,0,0)">I tried like this <br>
 <br>
 let mask_mar2=if var[x=0E:80E,y=33N:63N] eq var[x=0E:80E,y=33N:63N] then (0/0)<br>
-let var_mask=var*mask_mar2[gxy=var<wbr>]<br>
+let var_mask=var*mask_mar2[gxy=var]<br>
 <br>
 </div><div style="color:rgb(0,0,0)">or I tried like this way also<br>
 <br>
 let mask_mar2=if var[x=0E:80E,y=33N:63N] ne var[x=0E:80E,y=33N:63N] then 1<br>
-let var_mask=var*mask_mar2[gxy=var<wbr>]<br>
+let var_mask=var*mask_mar2[gxy=var]<br>
 <br>
 </div><div style="color:rgb(0,0,0)">but in both the cases I am not successful to mask out this box. Please Help.<br>
 <br>

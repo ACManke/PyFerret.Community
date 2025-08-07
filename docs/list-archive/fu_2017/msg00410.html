@@ -51,7 +51,7 @@
 <!--X-Body-of-Message-->
 <div dir="ltr"><div class="gmail_default" style="color:rgb(0,0,0)">Hi Maoyi,</div><div class="gmail_default" style="color:rgb(0,0,0)"><br>
 </div><div class="gmail_default" style="color:rgb(0,0,0)">To get the horizontal line on this plot you have to issue the commands in this fashion.</div><div class="gmail_default" style="color:rgb(0,0,0)"><br>
-</div><div class="gmail_default" style="color:rgb(0,0,0)"><div style="color:rgb(34,34,34);font-size:12.8px">set view V11</div><div style="color:rgb(34,34,34);font-size:12.8px">   PPL SHASET RESET</div><div style="color:rgb(34,34,34);font-size:12.8px">   plot/nolab/color=blue/thick/I=<wbr>1/TITLE=&quot;time function 1&quot;/VLIMITS=-4.0:4.0:0.5 eoftime</div><div style="color:rgb(34,34,34);font-size:12.8px">  <span style="font-size:12.8px">plot/ov/nolab</span><span style="font-size:12.8px">(eoftime*0)</span></div><div style="color:rgb(34,34,34);font-size:12.8px"><span style="font-size:12.8px"><br>
+</div><div class="gmail_default" style="color:rgb(0,0,0)"><div style="color:rgb(34,34,34);font-size:12.8px">set view V11</div><div style="color:rgb(34,34,34);font-size:12.8px">   PPL SHASET RESET</div><div style="color:rgb(34,34,34);font-size:12.8px">   plot/nolab/color=blue/thick/I=1/TITLE=&quot;time function 1&quot;/VLIMITS=-4.0:4.0:0.5 eoftime</div><div style="color:rgb(34,34,34);font-size:12.8px">  <span style="font-size:12.8px">plot/ov/nolab</span><span style="font-size:12.8px">(eoftime*0)</span></div><div style="color:rgb(34,34,34);font-size:12.8px"><span style="font-size:12.8px"><br>
 </span></div><div style="color:rgb(34,34,34);font-size:12.8px"><span style="font-size:12.8px">Hope this helps you.</span></div><div style="color:rgb(34,34,34);font-size:12.8px"><span style="font-size:12.8px"><br>
 </span></div><div style="color:rgb(34,34,34);font-size:12.8px"><span style="font-size:12.8px">cheers</span></div></div></div><div class="gmail_extra"><br>
 <div class="gmail_quote">On Thu, Jun 8, 2017 at 6:33 AM, Molulaqhooa Maoyi <span dir="ltr">&lt;<a rel="nofollow" href="mailto:molulaqhooa.maoyi@xxxxxxxxx">molulaqhooa.maoyi@xxxxxxxxx</a>&gt;</span> wrote:<br>
@@ -60,11 +60,11 @@
 </div><div>Below is my script that generates a time series.</div><div><br>
 </div><div><div>USE JFM_NCEP.nc</div><div>USE JFM_20th.nc</div><div>USE JFM_ERAINT.nc</div><div><br>
 </div><div>! Compute and save the spatial EOF functions. These have the same units</div><div>! as the data.</div><div><br>
-</div><div>LET eoftime = EOFSVD_TFUNC(hgt[X=10E:43E,Y=<wbr>0:33S,k=12,d=1])*-1</div><div>LET eoftime2 = EOFSVD_TFUNC(hgt[X=10E:43E,Y=<wbr>0:33S,k=14,d=2])*-1</div><div>LET eoftime3 = EOFSVD_TFUNC(hgt[X=10E:43E,Y=<wbr>0:33S,d=3])*-1</div><div><br>
+</div><div>LET eoftime = EOFSVD_TFUNC(hgt[X=10E:43E,Y=0:33S,k=12,d=1])*-1</div><div>LET eoftime2 = EOFSVD_TFUNC(hgt[X=10E:43E,Y=0:33S,k=14,d=2])*-1</div><div>LET eoftime3 = EOFSVD_TFUNC(hgt[X=10E:43E,Y=0:33S,d=3])*-1</div><div><br>
 </div><div><br>
 </div><div><br>
-</div><div>!go multi_view  [rows],[columns],[xsize],[<wbr>xstart],[xgap],[ysize],[<wbr>ystart],[ygap],[PRefix]</div><div> go multi_view  3,   1,    0.5,  0.1,  0.15,  0.25,  0.1,  0.07 </div><div>SET WINDOW/ASPECT = .5</div><div><br>
-</div><div>set view V11</div><div>   PPL SHASET RESET</div><div>   plot/nolab/color=blue/thick/I=<wbr>1/TITLE=&quot;time function 1&quot;/VLIMITS=-4.0:4.0:0.5 eoftime</div><span class="HOEnZb"><font color="#888888"><div><br>
+</div><div>!go multi_view  [rows],[columns],[xsize],[xstart],[xgap],[ysize],[ystart],[ygap],[PRefix]</div><div> go multi_view  3,   1,    0.5,  0.1,  0.15,  0.25,  0.1,  0.07 </div><div>SET WINDOW/ASPECT = .5</div><div><br>
+</div><div>set view V11</div><div>   PPL SHASET RESET</div><div>   plot/nolab/color=blue/thick/I=1/TITLE=&quot;time function 1&quot;/VLIMITS=-4.0:4.0:0.5 eoftime</div><span class="HOEnZb"><font color="#888888"><div><br>
 </div><div><br>
 </div><div><br>
 </div><div><br>

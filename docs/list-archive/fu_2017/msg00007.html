@@ -80,20 +80,20 @@
       to yours.<br>
     </p>
     <blockquote>
-      <p><tt>let/title=&quot;xpts&quot;/units=<wbr>degrees_east xpts = {\</tt><tt><br>
-        </tt><tt>151.0,153.0,155.0,157.0,159.0,<wbr>161.0,163.0,165.0,167.0,169.0,<wbr>171.0,173.0,175.0,\</tt><tt><br>
-        </tt><tt>177.0,179.0,181.0,183.0,185.0,<wbr>187.0,189.0}</tt></p>
-      <p><tt>let/title=&quot;ypts&quot;/units=&quot;<wbr>degrees_north&quot; ypts = {\</tt><tt><br>
-        </tt><tt>29.42,29.43,29.33,29.19,29.22,<wbr>29.12,29.36,29.22,29.04,28.92,<wbr>29.00,28.59,28.31,\</tt><tt><br>
-        </tt><tt>28.69,28.20,28.86,27.98,27.80,<wbr>28.29,27.94}</tt></p>
+      <p><tt>let/title=&quot;xpts&quot;/units=degrees_east xpts = {\</tt><tt><br>
+        </tt><tt>151.0,153.0,155.0,157.0,159.0,161.0,163.0,165.0,167.0,169.0,171.0,173.0,175.0,\</tt><tt><br>
+        </tt><tt>177.0,179.0,181.0,183.0,185.0,187.0,189.0}</tt></p>
+      <p><tt>let/title=&quot;ypts&quot;/units=&quot;degrees_north&quot; ypts = {\</tt><tt><br>
+        </tt><tt>29.42,29.43,29.33,29.19,29.22,29.12,29.36,29.22,29.04,28.92,29.00,28.59,28.31,\</tt><tt><br>
+        </tt><tt>28.69,28.20,28.86,27.98,27.80,28.29,27.94}</tt></p>
       <p><tt>let/title=&quot;VAR&quot; var =&#xA0; {\<br>
-14.16,14.31,13.34,11.90,12.19,<wbr>11.20,13.57,12.25,9.3,11.12,4.<wbr>95, 5.91, \<br>
+14.16,14.31,13.34,11.90,12.19,11.20,13.57,12.25,9.3,11.12,4.95, 5.91, \<br>
           3.13, 6.88, 2.02, -8.63,-0.23,-1.97, 7.94,9.65}</tt></p>
       <p><tt>let mask = if var gt 0 then 1<br>
           let var2 = mask*var</tt></p>
       <p><tt></tt><tt>go basemap x=120e:150w/y=20:50</tt><br>
       </p>
-      <tt>plot/vs/over/ribbon/missing=<wbr>blank&#xA0; xpts,ypts,var2</tt><span class="HOEnZb"><font color="#888888"><br>
+      <tt>plot/vs/over/ribbon/missing=blank&#xA0; xpts,ypts,var2</tt><span class="HOEnZb"><font color="#888888"><br>
     </font></span></blockquote><span class="HOEnZb"><font color="#888888">
     <p><br>
     </p>
@@ -116,7 +116,7 @@
         </div>
         <div>let winter=if month gt6 and month lt 10 then 1</div>
         <div>let wintermonth=month*winter</div>
-        <div>plot/vs/over/ribbon/missing=<wbr>blank longitude, latitude,
+        <div>plot/vs/over/ribbon/missing=blank longitude, latitude,
           wintermonth</div>
         <div><img src="gif0KOCuY11ni.gif" class="m_-465387498497311150CToWUd m_-465387498497311150a6T" height="217" width="541"></div>
         <div><br>

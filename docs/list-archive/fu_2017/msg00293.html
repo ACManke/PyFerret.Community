@@ -64,7 +64,7 @@
       and I missed a slash in the following.<br>
       <br>
       def sym savecom
-      &quot;save/($chunking)/NCFORMAT=4/<wbr>deflate=1/shuffle/file=<a rel="nofollow" href="http://ssh_detrend.nc">ssh_<wbr>detrend.nc</a>&quot;<span class="HOEnZb"><font color="#888888"><br>
+      &quot;save/($chunking)/NCFORMAT=4/deflate=1/shuffle/file=<a rel="nofollow" href="http://ssh_detrend.nc">ssh_detrend.nc</a>&quot;<span class="HOEnZb"><font color="#888888"><br>
       <br>
       <br>
       Russ</font></span><div><div class="h5"><br>
@@ -100,15 +100,15 @@
         <br>
         ! Save all values<br>
         <br>
-save/i=1/j=1/l=1/clob/ilimits=<wbr>1:3600/jlimits=1:2700/file=<a rel="nofollow" href="http://ssh_detrend.nc">ssh<wbr>_detrend.nc</a>
+save/i=1/j=1/l=1/clob/ilimits=1:3600/jlimits=1:2700/file=<a rel="nofollow" href="http://ssh_detrend.nc">ssh_detrend.nc</a>
         ssh_detrended<br>
         repeat/j=1:2700 save/app/file=<a rel="nofollow" href="http://ssh_detrend.nc">ssh_detrend.nc</a>
-        ssh_detrended&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;<wbr>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ! See note below
+        ssh_detrended&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ! See note below
         on chunking&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <br>
         <br>
         ! Save just the slope and intercept<br>
         <br>
-save/i=1/j=1/clob/file=<a rel="nofollow" href="http://slope_int.nc/ilimits=1:3600/jlimits=1:2700">slope_<wbr>int.nc/ilimits=1:3600/jlimits=<wbr>1:2700</a>
+save/i=1/j=1/clob/file=<a rel="nofollow" href="http://slope_int.nc/ilimits=1:3600/jlimits=1:2700">slope_int.nc/ilimits=1:3600/jlimits=1:2700</a>
         slope,intercept<br>
         repeat/j=1:2700 save/app/file=<a rel="nofollow" href="http://slope_int.nc">slope_int.nc</a> slope,intercept<br>
         <br>
@@ -126,16 +126,16 @@ save/i=1/j=1/clob/file=<a rel="nofollow" href="http://slope_int.nc/ilimits=1:360
         def sym YC 30<br>
         def sym TC 100<br>
         <br>
-        def sym chunking &quot;XCHUNK=($XC)/YCHUNK=($YC)/<wbr>TCHUNK=($TC)&quot;<br>
-        def sym savecom &quot;save/($chunking)/NCFORMAT=4/<wbr>deflate=1/shuffle
+        def sym chunking &quot;XCHUNK=($XC)/YCHUNK=($YC)/TCHUNK=($TC)&quot;<br>
+        def sym savecom &quot;save/($chunking)/NCFORMAT=4/deflate=1/shuffle
         file=<a rel="nofollow" href="http://ssh_detrend.nc">ssh_detrend.nc</a>&quot;<br>
         &#xA0;<br>
-        ($savecome)/i=1/j=1/l=1/clob/<wbr>ilimits=1:3600/jlimits=1:2700
+        ($savecome)/i=1/j=1/l=1/clob/ilimits=1:3600/jlimits=1:2700
         ssh_detrended<br>
         <br>
-        repeat/range=1:2700:($YC)/<wbr>name=jb (
-        repeat/range=1:3600:($XC)/<wbr>name=ib
-        ($savecome)/app/i=`ib+($XC)-1`<wbr>/j=`jb+($YC)-1` ssh_detrended)<br>
+        repeat/range=1:2700:($YC)/name=jb (
+        repeat/range=1:3600:($XC)/name=ib
+        ($savecome)/app/i=`ib+($XC)-1`/j=`jb+($YC)-1` ssh_detrended)<br>
         <br>
         Play with XC,YC and TC as you wish.<br>
         <br>
@@ -178,26 +178,26 @@ save/i=1/j=1/clob/file=<a rel="nofollow" href="http://slope_int.nc/ilimits=1:360
           can var/all<br>
           can win/all<br>
           <br>
-          use &quot;./<a rel="nofollow" href="http://CM2.6_Control_SSH_01810101-02001231.nc">CM2.6_Control_SSH_01810101-<wbr>02001231.nc</a>&quot;<br>
+          use &quot;./<a rel="nofollow" href="http://CM2.6_Control_SSH_01810101-02001231.nc">CM2.6_Control_SSH_01810101-02001231.nc</a>&quot;<br>
           <br>
           set memory/size=99999<br>
           <br>
           let P&#xA0; = T[GT=SSH,l=1:7305]<br>
-          let Q = SSH[i=1:3600,j=1:2700,l=1:<wbr>7305]<br>
+          let Q = SSH[i=1:3600,j=1:2700,l=1:7305]<br>
           SET GRID Q<br>
           GO regresst<br>
           <br>
-          let SSH_Detrended = SSH[i=1:3600,j=1:2700,l=1:<wbr>7305] -
-          qhat[i=1:3600,j=1:2700,l=1:<wbr>7305]<br>
+          let SSH_Detrended = SSH[i=1:3600,j=1:2700,l=1:7305] -
+          qhat[i=1:3600,j=1:2700,l=1:7305]<br>
           <br>
           !Control save<br>
           save/clobber/file =
-          &quot;/archive/Paul.Goddard/CM2.6/<wbr>Storm_Surge_Project/<a rel="nofollow" href="http://CM2.6_Control_SSH_DETRENDED_01810101-02001231.nc">CM2.6_<wbr>Control_SSH_DETRENDED_<wbr>01810101-02001231.nc</a>&quot;
+          &quot;/archive/Paul.Goddard/CM2.6/Storm_Surge_Project/<a rel="nofollow" href="http://CM2.6_Control_SSH_DETRENDED_01810101-02001231.nc">CM2.6_Control_SSH_DETRENDED_01810101-02001231.nc</a>&quot;
           SSH_DETRENDED[l=1]<br>
           <br>
           repeat/l=2:7305 (\<br>
           save/append/file =
-          &quot;/archive/Paul.Goddard/CM2.6/<wbr>Storm_Surge_Project/<a rel="nofollow" href="http://CM2.6_Control_SSH_DETRENDED_01810101-02001231.nc">CM2.6_<wbr>Control_SSH_DETRENDED_<wbr>01810101-02001231.nc</a>&quot;
+          &quot;/archive/Paul.Goddard/CM2.6/Storm_Surge_Project/<a rel="nofollow" href="http://CM2.6_Control_SSH_DETRENDED_01810101-02001231.nc">CM2.6_Control_SSH_DETRENDED_01810101-02001231.nc</a>&quot;
           SSH_DETRENDED[l=`l`])<br>
           <br>
         </div>

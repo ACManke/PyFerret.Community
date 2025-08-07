@@ -98,9 +98,9 @@ The following example illustrates the problem. Averaging and integrating a bigge
  
 <br>
  
-use <a rel="nofollow" href="http://phy-50.io-warnemuende.de:8080/thredds/dodsC/genus/genus_run_88_5day_ocean.nc" rel="noreferrer">http://phy-50.io-warnemuende.d<wbr>e:8080/thredds/dodsC/genus/gen<wbr>us_run_88_5day_ocean.nc</a><br>
+use <a rel="nofollow" href="http://phy-50.io-warnemuende.de:8080/thredds/dodsC/genus/genus_run_88_5day_ocean.nc" rel="noreferrer">http://phy-50.io-warnemuende.de:8080/thredds/dodsC/genus/genus_run_88_5day_ocean.nc</a><br>
  
-set region/t=1-jan-2010:31-dec-201<wbr>0/x=13.5:14.7/y=-23.5:-22.5<br>
+set region/t=1-jan-2010:31-dec-2010/x=13.5:14.7/y=-23.5:-22.5<br>
  
 <br>
  
@@ -116,11 +116,11 @@ let n2_prod = (n2_prod_anamm + n2_prod_denit + n2_prod_h2s + n2_prod_sul)<br>
  
 <br>
  
-list n2_prod[x=@din,y=@din,k=@sum,t<wbr>=@sum]<br>
+list n2_prod[x=@din,y=@din,k=@sum,t=@sum]<br>
  
 <br>
  
-yes? list n2_prod[x=@din,y=@din,k=@sum,t<wbr>=@sum]<br>
+yes? list n2_prod[x=@din,y=@din,k=@sum,t=@sum]<br>
  
 VARIABLE : (N2_PROD_ANAMM + N2_PROD_DENIT + N2_PROD_H2S + N2_PROD_SUL)<br>
  
@@ -128,7 +128,7 @@ DATA SET : MOM4 Baltic Sea 3 n.m.<br>
  
 FILENAME : <a rel="nofollow" href="http://genus_run_88_5day_ocean.nc" rel="noreferrer">genus_run_88_5day_ocean.nc</a><br>
  
-FILEPATH : <a rel="nofollow" href="http://phy-50.io-warnemuende.de:8080/thredds/dodsC/genus/" rel="noreferrer">http://phy-50.io-warnemuende.d<wbr>e:8080/thredds/dodsC/genus/</a><br>
+FILEPATH : <a rel="nofollow" href="http://phy-50.io-warnemuende.de:8080/thredds/dodsC/genus/" rel="noreferrer">http://phy-50.io-warnemuende.de:8080/thredds/dodsC/genus/</a><br>
  
 LONGITUDE: 13.5E to 14.7E (XY integ.)<br>
  
@@ -146,15 +146,15 @@ Now increase the region, the result should be growing significantly<br>
  
 <br>
  
-set region/t=1-jan-2010:31-dec-201<wbr>0/x=13.5:14.7/y=-28:-22.5 ! Note y!<br>
+set region/t=1-jan-2010:31-dec-2010/x=13.5:14.7/y=-28:-22.5 ! Note y!<br>
  
 <br>
  
-list n2_prod[x=@din,y=@din,k=@sum,t<wbr>=@sum]<br>
+list n2_prod[x=@din,y=@din,k=@sum,t=@sum]<br>
  
 <br>
  
-yes? list n2_prod[x=@din,y=@din,k=@sum,t<wbr>=@sum]<br>
+yes? list n2_prod[x=@din,y=@din,k=@sum,t=@sum]<br>
  
 VARIABLE : (N2_PROD_ANAMM + N2_PROD_DENIT + N2_PROD_H2S + N2_PROD_SUL)<br>
  
@@ -162,7 +162,7 @@ DATA SET : MOM4 Baltic Sea 3 n.m.<br>
  
 FILENAME : <a rel="nofollow" href="http://genus_run_88_5day_ocean.nc" rel="noreferrer">genus_run_88_5day_ocean.nc</a><br>
  
-FILEPATH : <a rel="nofollow" href="http://phy-50.io-warnemuende.de:8080/thredds/dodsC/genus/" rel="noreferrer">http://phy-50.io-warnemuende.d<wbr>e:8080/thredds/dodsC/genus/</a><br>
+FILEPATH : <a rel="nofollow" href="http://phy-50.io-warnemuende.de:8080/thredds/dodsC/genus/" rel="noreferrer">http://phy-50.io-warnemuende.de:8080/thredds/dodsC/genus/</a><br>
  
 LONGITUDE: 13.5E to 14.7E (XY integ.)<br>
  
@@ -240,7 +240,7 @@ Cached data cleared from memory<br>
  
 SET MODE VERIFY<br>
  
-yes? list n2_prod[x=@din,y=@din,k=@sum,t<wbr>=@sum]<br>
+yes? list n2_prod[x=@din,y=@din,k=@sum,t=@sum]<br>
  
 VARIABLE : (N2_PROD_ANAMM + N2_PROD_DENIT + N2_PROD_H2S + N2_PROD_SUL)<br>
  
@@ -248,7 +248,7 @@ DATA SET : MOM4 Baltic Sea 3 n.m.<br>
  
 FILENAME : <a rel="nofollow" href="http://genus_run_88_5day_ocean.nc" rel="noreferrer">genus_run_88_5day_ocean.nc</a><br>
  
-FILEPATH : <a rel="nofollow" href="http://phy-50.io-warnemuende.de:8080/thredds/dodsC/genus/" rel="noreferrer">http://phy-50.io-warnemuende.d<wbr>e:8080/thredds/dodsC/genus/</a><br>
+FILEPATH : <a rel="nofollow" href="http://phy-50.io-warnemuende.de:8080/thredds/dodsC/genus/" rel="noreferrer">http://phy-50.io-warnemuende.de:8080/thredds/dodsC/genus/</a><br>
  
 LONGITUDE: 13.5E to 14.7E (XY integ.)<br>
  
@@ -266,15 +266,15 @@ Similar, but not the same as before! Make the region bigger now.<br>
  
 <br>
  
-set region/t=1-jan-2010:31-dec-201<wbr>0/x=13.5:14.7/y=-28:-22.5<br>
+set region/t=1-jan-2010:31-dec-2010/x=13.5:14.7/y=-28:-22.5<br>
  
 <br>
  
-list n2_prod[x=@din,y=@din,k=@sum,t<wbr>=@sum]<br>
+list n2_prod[x=@din,y=@din,k=@sum,t=@sum]<br>
  
 <br>
  
-yes? list n2_prod[x=@din,y=@din,k=@sum,t<wbr>=@sum]<br>
+yes? list n2_prod[x=@din,y=@din,k=@sum,t=@sum]<br>
  
 VARIABLE : (N2_PROD_ANAMM + N2_PROD_DENIT + N2_PROD_H2S + N2_PROD_SUL)<br>
  
@@ -282,7 +282,7 @@ DATA SET : MOM4 Baltic Sea 3 n.m.<br>
  
 FILENAME : <a rel="nofollow" href="http://genus_run_88_5day_ocean.nc" rel="noreferrer">genus_run_88_5day_ocean.nc</a><br>
  
-FILEPATH : <a rel="nofollow" href="http://phy-50.io-warnemuende.de:8080/thredds/dodsC/genus/" rel="noreferrer">http://phy-50.io-warnemuende.d<wbr>e:8080/thredds/dodsC/genus/</a><br>
+FILEPATH : <a rel="nofollow" href="http://phy-50.io-warnemuende.de:8080/thredds/dodsC/genus/" rel="noreferrer">http://phy-50.io-warnemuende.de:8080/thredds/dodsC/genus/</a><br>
  
 LONGITUDE: 13.5E to 14.7E (XY integ.)<br>
  
@@ -326,13 +326,13 @@ SET MODE VERIFY<br>
  
 <br>
  
-use &quot;<a rel="nofollow" href="http://phy-50.io-warnemuende.de:8080/thredds/dodsC/genus/genus_run_88_5day_ocean.nc" rel="noreferrer">http://phy-50.io-warnemuende.<wbr>de:8080/thredds/dodsC/genus/ge<wbr>nus_run_88_5day_ocean.nc</a>&quot;<br>
+use &quot;<a rel="nofollow" href="http://phy-50.io-warnemuende.de:8080/thredds/dodsC/genus/genus_run_88_5day_ocean.nc" rel="noreferrer">http://phy-50.io-warnemuende.de:8080/thredds/dodsC/genus/genus_run_88_5day_ocean.nc</a>&quot;<br>
  
 ....<br>
  
 <br>
  
-list n2_prod[x=@din,y=@din,k=@sum,t<wbr>=@sum]<br>
+list n2_prod[x=@din,y=@din,k=@sum,t=@sum]<br>
  
 VARIABLE : (N2_PROD_ANAMM + N2_PROD_DENIT + N2_PROD_H2S + N2_PROD_SUL)<br>
  
@@ -340,7 +340,7 @@ DATA SET : MOM4 Baltic Sea 3 n.m.<br>
  
 FILENAME : <a rel="nofollow" href="http://genus_run_88_5day_ocean.nc" rel="noreferrer">genus_run_88_5day_ocean.nc</a><br>
  
-FILEPATH : <a rel="nofollow" href="http://phy-50.io-warnemuende.de:8080/thredds/dodsC/genus/" rel="noreferrer">http://phy-50.io-warnemuende.d<wbr>e:8080/thredds/dodsC/genus/</a><br>
+FILEPATH : <a rel="nofollow" href="http://phy-50.io-warnemuende.de:8080/thredds/dodsC/genus/" rel="noreferrer">http://phy-50.io-warnemuende.de:8080/thredds/dodsC/genus/</a><br>
  
 LONGITUDE: 13.5E to 14.7E (XY integ.)<br>
  
@@ -358,11 +358,11 @@ TIME : 01-JAN-2010 00:00 to 31-DEC-2010 00:00 (ZT summed) JULIAN<br>
  
 <br>
  
-set region/t=1-jan-2010:31-dec-201<wbr>0/x=13.5:14.7/y=-28:-22.5<br>
+set region/t=1-jan-2010:31-dec-2010/x=13.5:14.7/y=-28:-22.5<br>
  
 <br>
  
-yes? list n2_prod[x=@din,y=@din,k=@sum,t<wbr>=@sum]<br>
+yes? list n2_prod[x=@din,y=@din,k=@sum,t=@sum]<br>
  
 VARIABLE : (N2_PROD_ANAMM + N2_PROD_DENIT + N2_PROD_H2S + N2_PROD_SUL)<br>
  
@@ -370,7 +370,7 @@ DATA SET : MOM4 Baltic Sea 3 n.m.<br>
  
 FILENAME : <a rel="nofollow" href="http://genus_run_88_5day_ocean.nc" rel="noreferrer">genus_run_88_5day_ocean.nc</a><br>
  
-FILEPATH : <a rel="nofollow" href="http://phy-50.io-warnemuende.de:8080/thredds/dodsC/genus/" rel="noreferrer">http://phy-50.io-warnemuende.d<wbr>e:8080/thredds/dodsC/genus/</a><br>
+FILEPATH : <a rel="nofollow" href="http://phy-50.io-warnemuende.de:8080/thredds/dodsC/genus/" rel="noreferrer">http://phy-50.io-warnemuende.de:8080/thredds/dodsC/genus/</a><br>
  
 LONGITUDE: 13.5E to 14.7E (XY integ.)<br>
  

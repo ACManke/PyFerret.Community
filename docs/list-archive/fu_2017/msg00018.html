@@ -95,17 +95,17 @@
             <br>
             use <a rel="nofollow" href="http://all_anm.nc">all_anm.nc</a><br>
             <br>
-            let ohcg_g1=ohcg1_anm_all[d=1,x=@a<wbr>ve,y=@ave]/10^21&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;<wbr>&#xA0;
+            let ohcg_g1=ohcg1_anm_all[d=1,x=@ave,y=@ave]/10^21&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
             !! mean of variable in the basin <br>
             <br>
-            let ohcg_g1_std=((ohcg1_anm_all[d=<wbr>1,x=@ave,y=@ave,l=@var])^0.5)&#xA0;<wbr>&#xA0;&#xA0;
+            let ohcg_g1_std=((ohcg1_anm_all[d=1,x=@ave,y=@ave,l=@var])^0.5)&#xA0;&#xA0;&#xA0;
             !! standard deviation<br>
             <br>
-            plot/thick/axes/set/nolab/noke<wbr>y/vlimits=-1.5:1.5:0.3
+            plot/thick/axes/set/nolab/nokey/vlimits=-1.5:1.5:0.3
             ohcg1&#xA0;&#xA0;&#xA0;&#xA0; <br>
-            go plot_swath poly/ov/pal=grey_light/nolab/n<wbr>okey
+            go plot_swath poly/ov/pal=grey_light/nolab/nokey
             ohcg1-ohcg_g1_std, ohcg1+ohcg_g1_std<br>
-            plot/thick/col=black/noaxes/no<wbr>lab/nokey/ov ohcg1<br>
+            plot/thick/col=black/noaxes/nolab/nokey/ov ohcg1<br>
             <br>
           </div>
           <div class="gmail_default" style="color:rgb(0,0,0)">please
@@ -141,17 +141,17 @@
                 <br>
                 use <a rel="nofollow" href="http://all_anm.nc">all_anm.nc</a><br>
                 <br>
-                let ohcg_g1=ohcg1_anm_all[d=1,x=@a<wbr>ve,y=@ave]/10^21&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;<wbr>&#xA0;
+                let ohcg_g1=ohcg1_anm_all[d=1,x=@ave,y=@ave]/10^21&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
                 !! mean of variable in the basin <br>
                 <br>
-                let ohcg_g1_std=((ohcg1_anm_all[d=<wbr>1,x=@ave,y=@ave,l=@var])^0.5)&#xA0;<wbr>&#xA0;&#xA0;
+                let ohcg_g1_std=((ohcg1_anm_all[d=1,x=@ave,y=@ave,l=@var])^0.5)&#xA0;&#xA0;&#xA0;
                 !! standard deviation<br>
                 <br>
-                plot/thick/axes/set/nolab/noke<wbr>y/vlimits=-1.5:1.5:0.3
+                plot/thick/axes/set/nolab/nokey/vlimits=-1.5:1.5:0.3
                 ohcg1&#xA0;&#xA0;&#xA0;&#xA0; <br>
-                go plot_swath poly/ov/pal=grey_light/nolab/n<wbr>okey
+                go plot_swath poly/ov/pal=grey_light/nolab/nokey
                 ohcg1-ohcg_g1_std, ohcg1+ohcg_g1_std<br>
-                plot/thick/col=black/noaxes/no<wbr>lab/nokey/ov ohcg1<br>
+                plot/thick/col=black/noaxes/nolab/nokey/ov ohcg1<br>
                 <br>
               </div>
               <div class="gmail_default" style="color:rgb(0,0,0)">please
@@ -252,7 +252,7 @@
                                   the value gst.&#xA0; <br>
                                   <span> <tt>&#xA0;<br>
                                     </tt><tt>&#xA0;&#xA0;&#xA0; let
-                                      gst=(sla_new[x=@ave,y=@ave,l=@<wbr>var,d=1])^0.5&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
+                                      gst=(sla_new[x=@ave,y=@ave,l=@var,d=1])^0.5&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
                                       !!&#xA0; one standard deviation of the
                                       time series <br>
                                       <br>
@@ -268,7 +268,7 @@
                                     point</tt><br>
                                   <tt><br>
                                   </tt><tt>&#xA0;&#xA0;&#xA0; </tt><tt>go error_bars
-                                    polygon/</tt><tt>col=black/nolab/nokey/<wbr>ov
+                                    polygon/</tt><tt>col=black/nolab/nokey/ov
                                     gm_10 `gst`+0*gm_10&#xA0; !! error bars
                                     of 1 standard deviation</tt><span class="m_-1903805154848165949m_2227499039856713980m_-8474373320815626401HOEnZb"><font color="#888888"><br>
                                       <br>
@@ -310,25 +310,25 @@
                                             error bars of this time
                                             series. <br>
                                             <br>
-                                            use <a rel="nofollow" href="http://sla_new11.nc">sla_new11.nc</a>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;<wbr>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;<wbr>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
+                                            use <a rel="nofollow" href="http://sla_new11.nc">sla_new11.nc</a>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
                                             !! input file<br>
                                             &#xA0;<br>
                                             let
-                                            gm=sla_new[x=@ave,y=@ave,d=1]&#xA0;<wbr>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
+                                            gm=sla_new[x=@ave,y=@ave,d=1]&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
                                             !! mean of variable in basin
                                             <br>
                                             let
-                                            gst=(sla_new[x=@ave,y=@ave,l=@<wbr>var,d=1])^0.5&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
+                                            gst=(sla_new[x=@ave,y=@ave,l=@var,d=1])^0.5&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
                                             !!&#xA0; one standard deviation
                                             of the time series &#xA0;&#xA0; <br>
                                             <br>
                                             set viewport a11<br>
-plot/thick/axes/set/nolab/noke<wbr>y/vlimits=0:.1:.01
-                                            sla_new[x=@ave,y=@ave,l=@spz:1<wbr>1,d=1]&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
+plot/thick/axes/set/nolab/nokey/vlimits=0:.1:.01
+                                            sla_new[x=@ave,y=@ave,l=@spz:11,d=1]&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
                                             !! time series<br>
                                             <br>
                                             go error_bars
-                                            polygon/col=black/nolab/nokey/<wbr>ov
+                                            polygon/col=black/nolab/nokey/ov
                                             gm
                                             gst&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
                                             !! error bars of 1 standard
@@ -360,7 +360,7 @@ plot/thick/axes/set/nolab/noke<wbr>y/vlimits=0:.1:.01
                                                     go/help error_bars</tt><tt><br>
                                                   </tt><tt>&#xA0;Full path
                                                     name:
-                                                    /home/users/tmap/ferret/rhel6-<wbr>x86_64-linux/go/error_bars.jnl</tt><tt><br>
+                                                    /home/users/tmap/ferret/rhel6-x86_64-linux/go/error_bars.jnl</tt><tt><br>
                                                   </tt><tt>\cancel mode
                                                     verify</tt><tt><br>
                                                   </tt><tt>!
@@ -435,7 +435,7 @@ plot/thick/axes/set/nolab/noke<wbr>y/vlimits=0:.1:.01
                                                   </tt><tt><br>
                                                   </tt><tt>yes? let
                                                     sst_erb =
-                                                    sst[x=0:360@ave,y=-60:60@ave,L<wbr>=1:12:2]</tt><tt><br>
+                                                    sst[x=0:360@ave,y=-60:60@ave,L=1:12:2]</tt><tt><br>
                                                   </tt><tt>yes? let
                                                     errup = 0.1 +
                                                     0*sst_erb</tt><tt><br>
@@ -485,7 +485,7 @@ plot/thick/axes/set/nolab/noke<wbr>y/vlimits=0:.1:.01
                                                           let
                                                           gm=sla_new[x=@ave,y=@ave,d=1]<br>
                                                           let
-                                                          gst=(sla_new[x=@ave,y=@ave,l=@<wbr>var,d=1])^0.5<br>
+                                                          gst=(sla_new[x=@ave,y=@ave,l=@var,d=1])^0.5<br>
                                                           go error_bars
 polygon/col=black/nolab/nokey gm gst<br clear="all">
                                                         </div>

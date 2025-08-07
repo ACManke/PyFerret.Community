@@ -63,8 +63,8 @@ yes? list/file=&quot;`station`.dat&quot; ...<br>
 <br>
 We don&#39;t have all the flexibility in writing string variables to ascii text files that one might want.&#xA0; But because you want to write the same string to all the records in this LIST command, we can set it up using the LIST/FORMAT= , doing something like this<br>
 <br>
-yes? list/file=`filename`/format=(F<wbr>8.4, &quot; `station`&quot;)<br>
-&#xA0;!-&gt; list/file=Acapulco.dat/format=<wbr>(f8.4, &quot; Acapulco&quot;) ssh<br>
+yes? list/file=`filename`/format=(F8.4, &quot; `station`&quot;)<br>
+&#xA0;!-&gt; list/file=Acapulco.dat/format=(f8.4, &quot; Acapulco&quot;) ssh<br>
 <br>
 and the file will have<br>
 <br>
@@ -75,7 +75,7 @@ and the file will have<br>
 <br>
 Another option would be to use /precision=&#xA0; instead of /format= . This will be needed if station is a string variable that&#39;s changing along with the numeric variables you&#39;re writing; but gives less control over the exact format.<br>
 <br>
-&#xA0; &#xA0;list/file=`filename`/norow/pr<wbr>ecision=6 ssh, station<br>
+&#xA0; &#xA0;list/file=`filename`/norow/precision=6 ssh, station<br>
 <br>
 which gives you,<br>
 <br>

@@ -54,7 +54,7 @@
 <br>
 </div>What I would do in your case (if you just want to use Ferret), is to first record in a new file the output of your spatial average and vertical integration. As it may be to large to write at once, you can loop through the time index, something like: <br>
 <br>
-use <a rel="nofollow" href="http://CM6012.1-pi-ttop-02_23200101_30091231_1M_transpir.nc">CM6012.1-pi-ttop-02_23200101_<wbr>30091231_1M_transpir.nc</a><br>
+use <a rel="nofollow" href="http://CM6012.1-pi-ttop-02_23200101_30091231_1M_transpir.nc">CM6012.1-pi-ttop-02_23200101_30091231_1M_transpir.nc</a><br>
 let vardata=TRANSPIR[k=@sum, x=@ave, y=@ave]<br>
 </div>repeat/range=1:1200/name=idloop (save/append/file=TMPfile.nc vardata[l=&#39;idloop&#39;] )<br>
 <br>

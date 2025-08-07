@@ -52,14 +52,14 @@
 <!--X-Body-of-Message-->
 <div dir="ltr"><div>Dear Abhishek,<br><br></div>Thanks for your reply.<br><div><div><span class="mt-tool-email-notification-false"></span><span class="mt-tool-email-tracking-true"></span><br><br><br></div></div><img class="mailtrack-img" src="" height="0" width="0"></div><div class="gmail_extra"><br clear="all"><div><div class="gmail_signature" data-smartmail="gmail_signature"><div dir="ltr"><div><div dir="ltr"><div><div dir="ltr"><div dir="ltr"><div dir="ltr"><div dir="ltr"><div dir="ltr"><div>--</div>Regards,<div>Nitin Patil</div><div><br></div><div><span style="font-size:12.8px">Sent</span><span style="font-size:12.8px">&#xA0;from&#xA0;</span><span style="font-size:12.8px">my</span><span style="font-size:12.8px">&#xA0;</span><span style="font-size:12.8px">iPhone</span><br></div></div></div></div></div></div></div></div></div></div></div></div>
 <br><div class="gmail_quote">On Sat, Feb 11, 2017 at 7:07 PM, Abhishek Savita <span dir="ltr">&lt;<a rel="nofollow" href="mailto:abhisheknagar2@xxxxxxxxx">abhisheknagar2@xxxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir="ltr"><div><br>Dear Patil<br></div>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; In this script, you can mask the data for the JJAS and MAM. You have to change your time and variable name according to your data.<br><div><div><div><br>use &quot;<a rel="nofollow" href="http://test.nc">test.nc</a>&quot;
-<br>define axis/t/units=months/edges/t=&quot;<wbr>15-jan-2000&quot;:&quot;15-dec-2010&quot;:1/<wbr>calendar=360_days tmonthly
-<br><br>let var_anm=var_data[gt=tmonthly@<wbr>asn]&#xA0;&#xA0;&#xA0; ! variable anomaly is the new variable name <br>let month=mod(l[gt=var_anm],12)
+<br>define axis/t/units=months/edges/t=&quot;15-jan-2000&quot;:&quot;15-dec-2010&quot;:1/calendar=360_days tmonthly
+<br><br>let var_anm=var_data[gt=tmonthly@asn]&#xA0;&#xA0;&#xA0; ! variable anomaly is the new variable name <br>let month=mod(l[gt=var_anm],12)
 <br>let mask1 = if month ge 3 and month le 5 then 1
 <br>let mask2 = if month ge 6 and month le 9 then 1
-<br>!&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;<wbr>masking for&#xA0; mam &amp; jjas&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;<wbr>&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;!
+<br>!&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;masking for&#xA0; mam &amp; jjas&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;!
 <br>let var_mam = var_anm*mask1
 <br>let var_jjas = var_anm*mask2
-<br>define axis/t/units=years/edges/t=&quot;<wbr>15-jan-2000&quot;:&quot;15-dec-2010&quot;:1/<wbr>calendar=360_days tyearly
+<br>define axis/t/units=years/edges/t=&quot;15-jan-2000&quot;:&quot;15-dec-2010&quot;:1/calendar=360_days tyearly
 <br>let var_mam_yearly = var_mam[gt=tyearly@ave]
 <br>let var_jjas_yearly = var_jjas[gt=tyearly@ave]
 <br><br>list var_mam_yearly <br>list var_jjas_yearly<br><br>&#xA0;</div></div></div><div class="gmail_extra"><div><div class="h5"><br><div class="gmail_quote">On Sat, Feb 11, 2017 at 4:27 PM, Nitin Patil <span dir="ltr">&lt;<a rel="nofollow" href="mailto:nitinpatil85@xxxxxxxxx">nitinpatil85@xxxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">Dear all,<br>
