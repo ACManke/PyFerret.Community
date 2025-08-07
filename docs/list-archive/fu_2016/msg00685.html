@@ -61,7 +61,7 @@
     at the start of the script,<br>
     <blockquote><tt>yes? go/help error_bars</tt><tt><br>
       </tt><tt>&#xA0;Full path name:
-        /home/users/tmap/ferret/rhel6-<wbr>x86_64-linux/go/error_bars.jnl</tt><tt><br>
+        /home/users/tmap/ferret/rhel6-x86_64-linux/go/error_bars.jnl</tt><tt><br>
       </tt><tt>\cancel mode verify</tt><tt><br>
       </tt><tt>! error_bars.jnl</tt><tt><br>
       </tt><tt>! 6/99 *sh*</tt><tt><br>
@@ -98,7 +98,7 @@
       </tt><tt>yes? let sst_ave = sst[x=0:360@ave,y=-60:60@ave]</tt><tt><br>
       </tt><tt>yes? plot sst_ave</tt><tt><br>
       </tt><tt><br>
-      </tt><tt>yes? let sst_erb = sst[x=0:360@ave,y=-60:60@ave,<wbr>L=1:12:2]</tt><tt><br>
+      </tt><tt>yes? let sst_erb = sst[x=0:360@ave,y=-60:60@ave,L=1:12:2]</tt><tt><br>
       </tt><tt>yes? let errup = 0.1 + 0*sst_erb</tt><tt><br>
       </tt><tt>yes? let errdn = 0.2 + 0*sst_erb</tt><tt><br>
       </tt><tt><br>
@@ -123,7 +123,7 @@
           and their positions.<br>
           <br>
           let gm=sla_new[x=@ave,y=@ave,d=1]<br>
-          let gst=(sla_new[x=@ave,y=@ave,l=@<wbr>var,d=1])^0.5<br>
+          let gst=(sla_new[x=@ave,y=@ave,l=@var,d=1])^0.5<br>
           go error_bars polygon/col=black/nolab/nokey gm gst<br clear="all">
         </div>
         <br>

@@ -55,11 +55,11 @@
 <br>
 Specifying an interval of 20 on VLIMITS gets a tick at the southern end:<br>
 <br>
-yes? fill/vlimits=-20:5:20/hli=5:<wbr>20:5/l=1/k=1 temp&#xA0; &#xA0;! blank plot but whatever<br></blockquote><div><br></div><div>Not on my screen, I&#39;m afraid.&#xA0; What am I doing differently from you? &#xA0;(I tested this on FERRET v6.82 and v6.94).&#xA0; Just in case, this is what I did:</div><div><br></div><div>yes? set data levitus_climatology</div><div>yes? fill/vlimits=-20:5:20/hli=5:20:5/l=1/k=1 temp</div><div>&#xA0;<br></div><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left-width:1px;border-left-color:rgb(204,204,204);border-left-style:solid;padding-left:1ex">
+yes? fill/vlimits=-20:5:20/hli=5:20:5/l=1/k=1 temp&#xA0; &#xA0;! blank plot but whatever<br></blockquote><div><br></div><div>Not on my screen, I&#39;m afraid.&#xA0; What am I doing differently from you? &#xA0;(I tested this on FERRET v6.82 and v6.94).&#xA0; Just in case, this is what I did:</div><div><br></div><div>yes? set data levitus_climatology</div><div>yes? fill/vlimits=-20:5:20/hli=5:20:5/l=1/k=1 temp</div><div>&#xA0;<br></div><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left-width:1px;border-left-color:rgb(204,204,204);border-left-style:solid;padding-left:1ex">
 <br>
 Then it is a simple matter to draw a tick on the northern end:<br>
 <br>
-yes? ppl window,off;plot/vs/over/nolab/<wbr>line=1 {5,4.8},{5,5}<br>
+yes? ppl window,off;plot/vs/over/nolab/line=1 {5,4.8},{5,5}<br>
 <br>
 Seems like it takes a lot less time to do that than to try to come up with a workaround.<br>
 <br>
