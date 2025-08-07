@@ -61,7 +61,7 @@ I try exactly this: to prepare the datasets to become an ensemble by giving them
 Best wishes,<br>
 Hella<br>
 <br>
-______________________________<wbr>__________<br>
+________________________________________<br>
 From: Karl Smith - NOAA Affiliate &lt;<a rel="nofollow" href="mailto:karl.smith@xxxxxxxx">karl.smith@xxxxxxxx</a>&gt;<br>
 Sent: Thursday, April 27, 2017 3:30:13 AM<br>
 To: Riede, Hella<br>
@@ -74,22 +74,22 @@ The cryptic error message is showing the (last) line in the &#39;pyferret&#39; s
 <br>
 As for aggregating your datasets, have you tried the define data /aggregate command?<br>
 <br>
-<a rel="nofollow" href="../../documentation/users-guide/commands-reference/DEFINE.html#_define_data" rel="noreferrer">http://ferret.pmel.noaa.gov/<wbr>Ferret/documentation/users-<wbr>guide/commands-reference/<wbr>DEFINE#_define_data</a><br>
+<a rel="nofollow" href="../../documentation/users-guide/commands-reference/DEFINE.html#_define_data" rel="noreferrer">http://../../documentation/users-guide/commands-reference/DEFINE#_define_data</a><br>
 <br>
 I must admit I did not look closely enough at what you had to see if one of the options would work.<br>
 <br>
 Karl<br>
 <br>
 <br>
-On Wed, Apr 26, 2017 at 8:25 PM, Riede, Hella &lt;<a rel="nofollow" href="mailto:hella.riede@xxxxxxx">hella.riede@xxxxxxx</a>&lt;mailto:<a rel="nofollow" href="mailto:hella.riede@xxxxxxx">he<wbr>lla.riede@xxxxxxx</a>&gt;&gt; wrote:<br>
+On Wed, Apr 26, 2017 at 8:25 PM, Riede, Hella &lt;<a rel="nofollow" href="mailto:hella.riede@xxxxxxx">hella.riede@xxxxxxx</a>&lt;mailto:<a rel="nofollow" href="mailto:hella.riede@xxxxxxx">hella.riede@xxxxxxx</a>&gt;&gt; wrote:<br>
 Hello ferreters,<br>
 <br>
 I am storing a large dataset, looping over variables. The main line for that is<br>
-save/quiet/file=($out)/<wbr>NCFORMAT=4/DEFLATE=4/append ($var);\<br>
+save/quiet/file=($out)/NCFORMAT=4/DEFLATE=4/append ($var);\<br>
 <br>
 After the file has grown to 713 MB, the script crashes with the following error message:<br>
 <br>
-/afs/ipp/.cs/python_modules/<wbr>amd64_generic/pyferret/<wbr>anaconda/2/4.1.1/bin/ferret: line 17: 40827 Killed&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; python ${python_flags} -c &quot;import sys; import pyferret; (errval, errmsg) = pyferret.init(sys.argv[1:], True)&quot; &quot;$@&quot;<br>
+/afs/ipp/.cs/python_modules/amd64_generic/pyferret/anaconda/2/4.1.1/bin/ferret: line 17: 40827 Killed&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; python ${python_flags} -c &quot;import sys; import pyferret; (errval, errmsg) = pyferret.init(sys.argv[1:], True)&quot; &quot;$@&quot;<br>
 <br>
 Same happens when using DEFLATE=1 instead as recommended.<br>
 <br>

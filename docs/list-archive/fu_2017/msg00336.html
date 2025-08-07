@@ -57,7 +57,7 @@
 <div class="gmail_quote">On Thu, May 11, 2017 at 9:53 PM, Ansley Manke - NOAA Federal <span dir="ltr">&lt;<a rel="nofollow" href="mailto:ansley.b.manke@xxxxxxxx">ansley.b.manke@xxxxxxxx</a>&gt;</span> wrote:<br>
 <blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div dir="ltr">Hi Akshay,<div><br>
 </div><div>This sounds like a good topic for an FAQ.</div><div><br>
-<div>The IS_ELEMENT_OF functions can help you here. </div><div><a rel="nofollow" href="../../documentation/users-guide/appendix-a-external-functions/IS-ELEMENT-OF.html-STR">http://ferret.pmel.noaa.gov/<wbr>Ferret/documentation/users-<wbr>guide/appendix-a-external-<wbr>functions/IS-ELEMENT-OF-STR</a><br>
+<div>The IS_ELEMENT_OF functions can help you here. </div><div><a rel="nofollow" href="../../documentation/users-guide/appendix-a-external-functions/IS-ELEMENT-OF.html-STR">http://../../documentation/users-guide/appendix-a-external-functions/IS-ELEMENT-OF-STR</a><br>
 </div><div><blockquote style="margin:0px 0px 0px 40px;border-width:medium;border-style:none;border-color:currentcolor;padding:0px"><div><font face="monospace, monospace"><br>
 </font></div><div><font face="monospace, monospace">yes? let attnames = var.attnames</font></div><div><font face="monospace, monospace">yes? let gattnames = ..attanmes</font></div><div><font face="monospace, monospace"><br>
 </font></div><div><font face="monospace, monospace">yes? if `IS_ELEMENT_OF_STR(attnames, &quot;the_att&quot;) NE 0` THEN</font></div><div><font face="monospace, monospace"><br>
@@ -78,8 +78,8 @@ As you can see below attribute <span style="background-color:rgb(255,242,204)"><
 <span style="background-color:rgb(255,242,204)">yes? use coads_climatology;<br>
 yes? show d<br>
 currently SET data sets:<br>
-1&gt; /usr/local/ferret/fer_dsets/da<wbr>ta/coads_climatology.cdf (default)<br>
-name title<wbr> I J K L M N<br>
+1&gt; /usr/local/ferret/fer_dsets/data/coads_climatology.cdf (default)<br>
+name title I J K L M N<br>
 SST SEA SURFACE TEMPERATURE 1:180 1:90 ... 1:12 ... ...<br>
 AIRT AIR TEMPERATURE 1:180 1:90 ... 1:12 ... ...<br>
 SPEH SPECIFIC HUMIDITY 1:180 1:90 ... 1:12 ... ...<br>
@@ -89,12 +89,12 @@ VWND MERIDIONAL WIND 1:180 1:90 ... 1:12 ... ...<br>
 SLP SEA LEVEL PRESSURE 1:180 1:90 ... 1:12 ... ...<br>
 <br>
 yes? show att/all .<br>
-attributes for dataset: /usr/local/ferret/fer_dsets/da<wbr>ta/coads_climatology.cdf<br>
+attributes for dataset: /usr/local/ferret/fer_dsets/data/coads_climatology.cdf<br>
 ..history = FERRET V4.45 (GUI) 22-May-97 <br>
 yes? list ..history<br>
 VARIABLE : ..HISTORY<br>
 FILENAME : coads_climatology.cdf<br>
-FILEPATH : /usr/local/ferret/fer_dsets/da<wbr>ta/<br>
+FILEPATH : /usr/local/ferret/fer_dsets/data/<br>
 X : 1<br>
 &quot;FERRET V4.45 (GUI) 22-May-97&quot;<br>
 yes? list ..someother_attr<br>
@@ -104,10 +104,10 @@ attribute SOMEOTHER_ATTR not found for dataset<br>
 <br>
 </div><b>I can check from outside using spawn like below<br>
 <br>
-</b><span style="background-color:rgb(255,242,204)">[akshay@localhost tmp]$ ncdump -h /usr/local/ferret/fer_dsets/da<wbr>ta/coads_climatology.cdf | grep -q &#39;:something&#39; &amp;&amp; echo &#39;exists&#39; || echo &#39;does not exist&#39;; <br>
+</b><span style="background-color:rgb(255,242,204)">[akshay@localhost tmp]$ ncdump -h /usr/local/ferret/fer_dsets/data/coads_climatology.cdf | grep -q &#39;:something&#39; &amp;&amp; echo &#39;exists&#39; || echo &#39;does not exist&#39;; <br>
 <b>does not exist</b></span><br>
 <br>
-<span style="background-color:rgb(255,242,204)">[akshay@localhost tmp]$ ncdump -h /usr/local/ferret/fer_dsets/da<wbr>ta/coads_climatology.cdf | grep -q &#39;:history&#39; &amp;&amp; echo &#39;exists&#39; || echo &#39;does not exist&#39;; <br>
+<span style="background-color:rgb(255,242,204)">[akshay@localhost tmp]$ ncdump -h /usr/local/ferret/fer_dsets/data/coads_climatology.cdf | grep -q &#39;:history&#39; &amp;&amp; echo &#39;exists&#39; || echo &#39;does not exist&#39;; <br>
 <b><span style="color:rgb(0,0,0)">exists</span></b></span><br>
 <br>
 </div>Thank you.<br>
@@ -116,7 +116,7 @@ attribute SOMEOTHER_ATTR not found for dataset<br>
 </div><div class="gmail_extra">Akshay Hegde,<br>
 </div><div class="gmail_extra">Data and Information,<br>
 </div><div class="gmail_extra">CSIR-NIO<br>
-<a rel="nofollow" href="https://about.me/akshay.k.hegde">https://about.me/akshay.k.hegd<wbr>e</a><br>
+<a rel="nofollow" href="https://about.me/akshay.k.hegde">https://about.me/akshay.k.hegde</a><br>
 </div></span></div></div></div>
 </blockquote></div><br>
 </div>

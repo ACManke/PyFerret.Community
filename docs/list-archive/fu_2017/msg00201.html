@@ -70,7 +70,7 @@ Peter Szabo<br>
 use TMAX7100mon_14_CCLIM.nc<br>
 use NATER_mask.nc !THIS CONSISTS OF 1 TIME DIMENSION AND 1s WHERE THE<br>
 MASK IS VALID<br>
-let maszkHU=mask[d=2,gx=longitude,<wbr>gy=latitude,l=1]<br>
+let maszkHU=mask[d=2,gx=longitude,gy=latitude,l=1]<br>
 let txHU=maszkHU*tx[d=1]<br>
 save/.. txHU<br>
 <br>
@@ -82,9 +82,9 @@ save/.. txHU<br>
 &gt; temperature, and associate it to the first step to record it)<br>
 &gt;<br>
 &gt;<br>
-&gt; define axis/calendar=julian/t=01-jan-<wbr>1979:31-dec-1995:3/units=hours tmodel<br>
+&gt; define axis/calendar=julian/t=01-jan-1979:31-dec-1995:3/units=hours tmodel<br>
 &gt; repeat/range=1:49672:8/name=it (&#xA0; let<br>
-&gt; tmin=temp[l=`it`]*0+tmin[l=`<wbr>it`:`it+7`@min] ; save/append/file=Output.nc<br>
+&gt; tmin=temp[l=`it`]*0+tmin[l=`it`:`it+7`@min] ; save/append/file=Output.nc<br>
 &gt; Tmin[l=`it`,gt=tmodel@asn] )<br>
 &gt;<br>
 &gt; The problem is my output file is much bigger than it should. I got the<br>
@@ -99,11 +99,11 @@ save/.. txHU<br>
 &gt;<br>
 &gt;<br>
 &gt;<br>
-&gt; ------------------------------<wbr>----------------------<br>
+&gt; ----------------------------------------------------<br>
 &gt; Nicolas Freychet<br>
 &gt; PDRA, School of Geosciences<br>
 &gt; University of Edinburgh<br>
-&gt; ------------------------------<wbr>----------------------<br>
+&gt; ----------------------------------------------------<br>
 &gt;<br>
 </blockquote></div><br></div></div>
 
