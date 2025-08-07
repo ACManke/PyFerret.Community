@@ -51,7 +51,7 @@
 <hr>
 <!--X-Head-Body-Sep-End-->
 <!--X-Body-of-Message-->
-<div dir="ltr"><div><div>Thank you so much for your reply<br><br></div>But in my data set I didn&#39;t had pressure data, and if calculate pressure by<br>p = p0 + rho*g*h ; if I calculate rho by ferret function rho_un(sal,temp,ref_pressure) again temperature is potential temperature<br>in this situation how should I proceed.<br><br></div>please advice me.<br><br>Thanks in advance<div class="gmail-yj6qo gmail-ajU"><div tabindex="0" class="gmail-ajR" id="gmail-:1cm">shivashankar<img src="" class="gmail-ajT"></div></div></div><div class="gmail_extra"><br><div class="gmail_quote">On Mon, Oct 31, 2016 at 12:49 PM, Russ Fiedler <span dir="ltr">&lt;<a rel="nofollow" href="mailto:russell.fiedler@xxxxxxxx" target="_blank">russell.fiedler@xxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><br>
+<div dir="ltr"><div><div>Thank you so much for your reply<br><br></div>But in my data set I didn&#39;t had pressure data, and if calculate pressure by<br>p = p0 + rho*g*h ; if I calculate rho by ferret function rho_un(sal,temp,ref_pressure) again temperature is potential temperature<br>in this situation how should I proceed.<br><br></div>please advice me.<br><br>Thanks in advance<div class="gmail-yj6qo gmail-ajU"><div tabindex="0" class="gmail-ajR" id="gmail-:1cm">shivashankar<img src="" class="gmail-ajT"></div></div></div><div class="gmail_extra"><br><div class="gmail_quote">On Mon, Oct 31, 2016 at 12:49 PM, Russ Fiedler <span dir="ltr">&lt;<a rel="nofollow" href="mailto:russell.fiedler@xxxxxxxx">russell.fiedler@xxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><br>
 Arrgghh. I got this backwards.<br>
 <br>
 you want the forward calculation.<br>
@@ -75,7 +75,7 @@ Hi,<br>
 <br>
 You need the function THETA_FO with the reversed pressure arguments.<br>
 <br>
-<a rel="nofollow" href="http://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/variables-xpressions/XPRESSIONS#_VPID_113" rel="noreferrer" target="_blank">http://ferret.pmel.noaa.gov/Fe<wbr>rret/documentation/users-guide<wbr>/variables-xpressions/XPRESSIO<wbr>NS#_VPID_113</a> <br>
+<a rel="nofollow" href="../../documentation/users-guide/variables-xpressions/XPRESSIONS.html#_VPID_113" rel="noreferrer">../../documentation/users-guide/variables-xpressions/XPRESSIONS#_VPID_113</a> <br>
 <br>
 <br>
 let temp_insitu = theta_fo( salt, temp_pot , p_ref , p )<br>

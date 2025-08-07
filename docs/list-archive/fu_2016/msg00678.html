@@ -105,7 +105,7 @@ cite=""
       <div class="gmail_extra"><br>
         <div class="gmail_quote">On Sat, Dec 17, 2016 at 5:05 AM, Ansley
           C. Manke <span dir="ltr">&lt;<a rel="nofollow" moz-do-not-send="true"
-              href="mailto:ansley.b.manke@xxxxxxxx" target="_blank">ansley.b.manke@xxxxxxxx</a>&gt;</span>
+              href="mailto:ansley.b.manke@xxxxxxxx">ansley.b.manke@xxxxxxxx</a>&gt;</span>
           wrote:<br>
           <blockquote class="gmail_quote" style="margin:0 0 0
             .8ex;border-left:1px #ccc solid;padding-left:1ex">
@@ -147,8 +147,8 @@ cite=""
               something like this, so that the transformations are done
               over a defined region. <tt><br>
               </tt>
-              <blockquote><tt>let ohcg_g1s=ohcg1_anm_all[d=1,x=<wbr>0:360@din,y=</tt><tt><tt>63S:63N</tt>@iin]/10^20</tt><br>
-                <tt>let ohcg_pa1s=ohcg1_pac[d=3,x=</tt><tt>120E<wbr>:65W@din,y=63S:63N@iin]/10^20</tt><br>
+              <blockquote><tt>let ohcg_g1s=ohcg1_anm_all[d=1,x=0:360@din,y=</tt><tt><tt>63S:63N</tt>@iin]/10^20</tt><br>
+                <tt>let ohcg_pa1s=ohcg1_pac[d=3,x=</tt><tt>120E:65W@din,y=63S:63N@iin]/10^20</tt><br>
               </blockquote>
               <br>
               Topics to look at here in the documentation are "Context"
@@ -311,33 +311,33 @@ cite=""
                         cancle data/all<br>
                         <br>
                         use <a rel="nofollow" moz-do-not-send="true"
-                          href="http://all_anm.nc" target="_blank">all_anm.nc</a><br>
+                          href="http://all_anm.nc">all_anm.nc</a><br>
                         use <a rel="nofollow" moz-do-not-send="true"
-                          href="http://pac_anm.nc" target="_blank">pac_anm.nc</a><br>
+                          href="http://pac_anm.nc">pac_anm.nc</a><br>
                         <br>
-                        let ohcg_g1s=ohcg1_anm_all[d=1,x=@<wbr>din,y=@iin]/10^20<br>
-                        let ohcg_pa1s=ohcg1_pac[d=3,x=@<wbr>din,y=@iin]/10^20<br>
-                        <br>
-                        define
-                        axis/edges/t/units=months/t0=<wbr>15-dec-2004/t=15-jan-2005:15-<wbr>nov-2016:1/calendar=360_days
-                        tmonthly<br>
-                        let ohcc_sog=ohcg_g1s[gt=tmonthly@<wbr>asn]<br>
-                        <br>
-                        define axis/edges/t/units=years/t=15-<wbr>jan-2005:15-oct-2016:1/<wbr>calendar=360_days
-                        t_yearly<br>
-                        let ohcc_g2s=ohcc_sog[gt=t_yearly@<wbr>ave]<br>
+                        let ohcg_g1s=ohcg1_anm_all[d=1,x=@din,y=@iin]/10^20<br>
+                        let ohcg_pa1s=ohcg1_pac[d=3,x=@din,y=@iin]/10^20<br>
                         <br>
                         define
-                        axis/edges/t/units=months/t0=<wbr>15-dec-2004/t=15-jan-2005:15-<wbr>nov-2016:1/calendar=360_days
+                        axis/edges/t/units=months/t0=15-dec-2004/t=15-jan-2005:15-nov-2016:1/calendar=360_days
                         tmonthly<br>
-                        let ohcc_sop=ohcg_pa1s[gt=<wbr>tmonthly@asn]<br>
+                        let ohcc_sog=ohcg_g1s[gt=tmonthly@asn]<br>
                         <br>
-                        define axis/edges/t/units=years/t=15-<wbr>jan-2005:15-oct-2016:1/<wbr>calendar=360_days
+                        define axis/edges/t/units=years/t=15-jan-2005:15-oct-2016:1/calendar=360_days
                         t_yearly<br>
-                        let ohcc_pa2s=ohcc_sop[gt=t_<wbr>yearly@ave]<br>
+                        let ohcc_g2s=ohcc_sog[gt=t_yearly@ave]<br>
                         <br>
-                        let ohcc_ggs=ohcc_g2s[l=12]-ohcc_<wbr>g2s[l=1]<br>
-                        let ohcc_pps=ohcc_pa2s[l=12]-ohcc_<wbr>pa2s[l=1]<br>
+                        define
+                        axis/edges/t/units=months/t0=15-dec-2004/t=15-jan-2005:15-nov-2016:1/calendar=360_days
+                        tmonthly<br>
+                        let ohcc_sop=ohcg_pa1s[gt=tmonthly@asn]<br>
+                        <br>
+                        define axis/edges/t/units=years/t=15-jan-2005:15-oct-2016:1/calendar=360_days
+                        t_yearly<br>
+                        let ohcc_pa2s=ohcc_sop[gt=t_yearly@ave]<br>
+                        <br>
+                        let ohcc_ggs=ohcc_g2s[l=12]-ohcc_g2s[l=1]<br>
+                        let ohcc_pps=ohcc_pa2s[l=12]-ohcc_pa2s[l=1]<br>
                         <br>
                         list ohcc_pps/ohcc_ggs<br>
                         <br>
@@ -495,7 +495,7 @@ cite=""
                         8:24 AM, Ansley C. Manke <span dir="ltr">&lt;<a rel="nofollow"
                             moz-do-not-send="true"
                             href="mailto:ansley.b.manke@xxxxxxxx"
-                            target="_blank">ansley.b.manke@xxxxxxxx</a>&gt;</span>
+                           >ansley.b.manke@xxxxxxxx</a>&gt;</span>
                         wrote:<br>
                         <blockquote class="gmail_quote" style="margin:0
                           0 0 .8ex;border-left:1px #ccc
@@ -510,8 +510,8 @@ cite=""
                               the Information about Transformations: <a rel="nofollow"
                                 moz-do-not-send="true"
                                 class="m_8592047873508412501m_2382635952017571254moz-txt-link-freetext"
-href="http://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/variables-xpressions/XPRESSIONS#_GeneralInfo"
-                                target="_blank">http://ferret.pmel.noaa.gov/Fe<wbr>rret/documentation/users-guide<wbr>/variables-xpressions/XPRESSIO<wbr>NS#_GeneralInfo</a>).
+href="../../documentation/users-guide/variables-xpressions/XPRESSIONS.html#_GeneralInfo"
+                               >../../documentation/users-guide/variables-xpressions/XPRESSIONS.html#_GeneralInfo</a>).
                               When the grid is in known units on the
                               surface of the earth, the results of the
                               integral are returned in data * square
@@ -553,16 +553,16 @@ href="http://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/variables-xpr
                                       my script is looking like this<br>
                                       <br>
                                     </div>
-                                    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!<wbr>!!!!!!!!
+                                    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                                     anomaly files
                                     !!!!!!!!!!!!!!!!!!!!!!!!!!!!<br>
                                     <div>use <a rel="nofollow" moz-do-not-send="true"
                                         href="http://all_anm.nc"
-                                        target="_blank">all_anm.nc</a>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
+                                       >all_anm.nc</a>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
                                       !global (x=0E:0W,y=62.5S:62.5N)<br>
                                       use <a rel="nofollow" moz-do-not-send="true"
                                         href="http://indi_anm.nc"
-                                        target="_blank">indi_anm.nc</a>&#xA0;&#xA0;&#xA0;
+                                       >indi_anm.nc</a>&#xA0;&#xA0;&#xA0;
                                       !indian ocean (20E:120E,
                                       62.5S:30N)<br>
                                       <br>
@@ -571,7 +571,7 @@ href="http://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/variables-xpr
                                         &#xA0;&#xA0;&#xA0; 1&gt; ./<a rel="nofollow"
                                           moz-do-not-send="true"
                                           href="http://all_anm.nc"
-                                          target="_blank">all_anm.nc</a><br>
+                                         >all_anm.nc</a><br>
                                         &#xA0;name&#xA0;&#xA0;&#xA0;&#xA0; title&#xA0;&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;
                                         &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;&#xA0;
                                         &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
@@ -579,14 +579,14 @@ href="http://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/variables-xpr
                                         L&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; M&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; N<br>
                                         &#xA0; OHCG5_ANM_ALL<br>
                                         &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
-                                        OHCG5-OHCG5_CLI[GT=OHCG5@ASN]&#xA0;<wbr>&#xA0;&#xA0;
+                                        OHCG5-OHCG5_CLI[GT=OHCG5@ASN]&#xA0;&#xA0;&#xA0;
                                         1:360&#xA0;&#xA0;&#xA0;&#xA0; 1:126&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
                                         1:142&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...<br>
                                         &#xA0;<br>
                                         &#xA0;&#xA0;&#xA0; 2&gt; ./<a rel="nofollow"
                                           moz-do-not-send="true"
                                           href="http://indi_anm.nc"
-                                          target="_blank">indi_anm.nc</a><br>
+                                         >indi_anm.nc</a><br>
                                         &#xA0;name&#xA0;&#xA0;&#xA0;&#xA0; title&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; &#xA0; &#xA0; &#xA0;
                                         &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;
                                         &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; I&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
@@ -594,7 +594,7 @@ href="http://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/variables-xpr
                                         M&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; N<br>
                                         &#xA0; OHCG5_ANM_IN<br>
                                         &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
-                                        OHCG5-OHCG5_CLI[GT=OHCG5@ASN]&#xA0;<wbr>&#xA0;&#xA0;
+                                        OHCG5-OHCG5_CLI[GT=OHCG5@ASN]&#xA0;&#xA0;&#xA0;
                                         1:100&#xA0;&#xA0;&#xA0;&#xA0; 1:93&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
                                         1:142&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...<br>
                                         <br>
@@ -635,54 +635,54 @@ href="http://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/variables-xpr
                                         &#xA0;normal&#xA0;&#xA0;&#xA0; E<br>
                                         &#xA0;normal&#xA0;&#xA0;&#xA0; F<br>
                                       </font></div>
-                                    <div><font size="1"><font size="2">!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!<wbr>!!!!!!!!!!!!!
+                                    <div><font size="1"><font size="2">!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                                           zonal integration and running
                                           sum
-                                          !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!<wbr>!!!!<br>
+                                          !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!<br>
                                           <br>
                                         </font></font></div>
                                     <div>let
-                                      ohcg_g5s=ohcg5_anm_all[d=1,x=@<wbr>din,y=@rsum]&#xA0;&#xA0;&#xA0;&#xA0;
+                                      ohcg_g5s=ohcg5_anm_all[d=1,x=@din,y=@rsum]&#xA0;&#xA0;&#xA0;&#xA0;
                                       ((!! value will come in 10^15 ))<br>
-                                      let ohcg_in5s=ohcg5_anm_in[d=2,x=@<wbr>din,y=@rsum]<br>
+                                      let ohcg_in5s=ohcg5_anm_in[d=2,x=@din,y=@rsum]<br>
                                       <br>
                                     </div>
-                                    <div>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!<wbr>!!!!!!!!!!
+                                    <div>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                                       yearly average
-                                      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!<wbr>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!<wbr>!!!!<br>
+                                      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!<br>
                                     </div>
                                     <div>define
-                                      axis/edges/t/units=months/t0=1<wbr>5-dec-2004/t=15-jan-2005:15-no<wbr>v-2016:1/calendar=360_days
+                                      axis/edges/t/units=months/t0=15-dec-2004/t=15-jan-2005:15-nov-2016:1/calendar=360_days
                                       tmonthly<br>
-                                      let ohcc_gd=ohcg_g5s[gt=tmonthly@a<wbr>sn]<br>
+                                      let ohcc_gd=ohcg_g5s[gt=tmonthly@asn]<br>
                                       <br>
                                       define
-                                      axis/edges/t/units=years/t=15-<wbr>jan-2005:15-oct-2016:1/calenda<wbr>r=360_days
+                                      axis/edges/t/units=years/t=15-jan-2005:15-oct-2016:1/calendar=360_days
                                       t_yearly<br>
-                                      let ohcc_g5=ohcc_gd[gt=t_yearly@av<wbr>e]<br>
+                                      let ohcc_g5=ohcc_gd[gt=t_yearly@ave]<br>
                                       <br>
                                       define
-                                      axis/edges/t/units=months/t0=1<wbr>5-dec-2004/t=15-jan-2005:15-no<wbr>v-2016:1/calendar=360_days
+                                      axis/edges/t/units=months/t0=15-dec-2004/t=15-jan-2005:15-nov-2016:1/calendar=360_days
                                       tmonthly<br>
-                                      let ohcc_ind=ohcg_in5s[gt=tmonthly<wbr>@asn]<br>
+                                      let ohcc_ind=ohcg_in5s[gt=tmonthly@asn]<br>
                                       <br>
                                       define
-                                      axis/edges/t/units=years/t=15-<wbr>jan-2005:15-oct-2016:1/calenda<wbr>r=360_days
+                                      axis/edges/t/units=years/t=15-jan-2005:15-oct-2016:1/calendar=360_days
                                       t_yearly<br>
-                                      let ohcc_in5=ohcc_ind[gt=t_yearly@<wbr>ave]<br>
+                                      let ohcc_in5=ohcc_ind[gt=t_yearly@ave]<br>
                                       <br>
                                     </div>
-                                    <div>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!<wbr>!!!!!
+                                    <div>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                                       difference of two years
-                                      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!<wbr>!!!!!!!!!!!!!!!!!<br>
+                                      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!<br>
                                       <br>
-                                      let ohcc_gg5s=ohcc_g5[l=12]-ohcc_g<wbr>5[l=1]<br>
-                                      let ohcc_ii5s=ohcc_in5[l=12]-ohcc_<wbr>in5[l=1]<br>
+                                      let ohcc_gg5s=ohcc_g5[l=12]-ohcc_g5[l=1]<br>
+                                      let ohcc_ii5s=ohcc_in5[l=12]-ohcc_in5[l=1]<br>
                                       <br>
                                     </div>
-                                    <div>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!<wbr>!
+                                    <div>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                                       normalisation by global value
-                                      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!<wbr>!!!!!!!!!!!<br>
+                                      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!<br>
                                       <br>
                                       let ohcc_noi=ohcc_ii5s/ohcc_gg5s<br>
                                       <br>
@@ -692,7 +692,7 @@ href="http://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/variables-xpr
                                       <br>
                                     </div>
                                     <div>if i try like this way such as<br>
-                                      let ohcc_noi=ohcc_ii5s[y=62.5S:30N<wbr>,x=20E:120E]/ohcc_gg5s[y=62.5S<wbr>:30N,x=20E:120E]<br>
+                                      let ohcc_noi=ohcc_ii5s[y=62.5S:30N,x=20E:120E]/ohcc_gg5s[y=62.5S:30N,x=20E:120E]<br>
                                       <br>
                                     </div>
                                     <div>then also the same thing

@@ -90,7 +90,7 @@
 <div class="gmail_default" style="color:rgb(0,0,0)">Paulo is correct but use can add few more thing in this command like time step size and memory size.
 <br>
 <br>
-repeat/l=2191:4380:1 ( save/append/file=<a rel="nofollow" href="http://normal.nc" target="_blank">normal.nc</a> sossheig; set mem/size = 1000 )<br>
+repeat/l=2191:4380:1 ( save/append/file=<a rel="nofollow" href="http://normal.nc">normal.nc</a> sossheig; set mem/size = 1000 )<br>
 <br>
 </div>
 <div class="gmail_default" style="color:rgb(0,0,0)">l=2191:4380:1 (here one is the time step size) and&nbsp; 1000 is the memory size (adjustable)<br>
@@ -110,17 +110,17 @@ repeat/l=2191:4380:1 ( save/append/file=<a rel="nofollow" href="http://normal.nc
 </div>
 <div class="gmail_extra"><br>
 <div class="gmail_quote">On Tue, Dec 13, 2016 at 5:05 AM, Paulo B. Oliveira <span dir="ltr">
-&lt;<a rel="nofollow" href="mailto:pboliveira@xxxxxxx" target="_blank">pboliveira@xxxxxxx</a>&gt;</span> wrote:<br>
+&lt;<a rel="nofollow" href="mailto:pboliveira@xxxxxxx">pboliveira@xxxxxxx</a>&gt;</span> wrote:<br>
 <blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
 <u></u>
 <div>Estanislao,<br>
 <br>
 Use a repeat loop and save/append... eg:<br>
-repeat/l=2191:4380 ( save/append/file=<a rel="nofollow" href="http://normal.nc" target="_blank">normal.nc</a> sossheig )<br>
+repeat/l=2191:4380 ( save/append/file=<a rel="nofollow" href="http://normal.nc">normal.nc</a> sossheig )<br>
 <br>
 You also might want to control if the data is to be saved in single or double precision (
-<a rel="nofollow" href="http://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/SET#_VPINDEXENTRY_setlist_outtype" target="_blank">
-http://ferret.pmel.noaa.gov/<wbr>Ferret/documentation/users-<wbr>guide/commands-reference/SET#_<wbr>VPINDEXENTRY_setlist_outtype</a> )<br>
+<a rel="nofollow" href="../../documentation/users-guide/commands-reference/SET.html#_VPINDEXENTRY_setlist_outtype">
+../../documentation/users-guide/commands-reference/SET.html#_VPINDEXENTRY_setlist_outtype</a> )<br>
 <br>
 Cheers,<br>
 Paulo<br>
@@ -133,7 +133,7 @@ On Mon, 2016-12-12 at 17:20 &#43;0000, Estanislao Gavilan Pascual-Ahuir (PGR) wr
 <br>
 I have I heavy nc file (5.3 GB)&nbsp;where I want to select an interval and save in a new nc file in order to make it lighter.&nbsp;But It excess the memory setting. I have tried to adjust the memory but it is never enough. I am&nbsp;using this command.<br>
 <br>
-&nbsp;SAVE/FILE=<a rel="nofollow" href="http://normal.nc/L=2191:4380" target="_blank">normal.nc/L=2191:<wbr>4380</a> sossheig<br>
+&nbsp;SAVE/FILE=<a rel="nofollow" href="http://normal.nc/L=2191:4380">normal.nc/L=2191:4380</a> sossheig<br>
 <br>
 <br>
 <br>

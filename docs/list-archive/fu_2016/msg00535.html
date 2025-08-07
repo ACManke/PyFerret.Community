@@ -54,7 +54,7 @@
 <hr>
 <!--X-Head-Body-Sep-End-->
 <!--X-Body-of-Message-->
-<div dir="ltr"><div><div><div><div><div><div><div>Dear kessler<br><br></div>I tried eof with monthly averaged values of my daily sea level data then the error is coming like this<br><br>**ERROR in external function: Segmentation Violation<br>&#xA0;**ERROR: error in external function<br><br></div>but when I am trying with daily data with 1degree grid it is running fine, but the percentage contribution of each<br></div>mode seems wrong.<br><br></div>looking forward for your suggestions.<br><br></div>Thanks in advance<br><br><br></div>Thanks and regards<br></div>shiva shankar<br></div><div class="gmail_extra"><br><div class="gmail_quote">On Fri, Oct 7, 2016 at 7:06 AM, Manche Shivashankar <span dir="ltr">&lt;<a rel="nofollow" href="mailto:mancheshivashankar@xxxxxxxxx" target="_blank">mancheshivashankar@xxxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir="ltr"><div>Thank you so much for your valuable suggestions,<br></div>I will try to implement them.<br></div><div class="HOEnZb"><div class="h5"><div class="gmail_extra"><br><div class="gmail_quote">On Thu, Oct 6, 2016 at 7:25 PM, William S. Kessler <span dir="ltr">&lt;<a rel="nofollow" href="mailto:william.s.kessler@xxxxxxxx" target="_blank">william.s.kessler@xxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">Consider that an EOF calculation is usually used to _simplify_ an interpretation. Namely, you expect the result to represent the variability in a very few functions, often only 1 or 2.<br>
+<div dir="ltr"><div><div><div><div><div><div><div>Dear kessler<br><br></div>I tried eof with monthly averaged values of my daily sea level data then the error is coming like this<br><br>**ERROR in external function: Segmentation Violation<br>&#xA0;**ERROR: error in external function<br><br></div>but when I am trying with daily data with 1degree grid it is running fine, but the percentage contribution of each<br></div>mode seems wrong.<br><br></div>looking forward for your suggestions.<br><br></div>Thanks in advance<br><br><br></div>Thanks and regards<br></div>shiva shankar<br></div><div class="gmail_extra"><br><div class="gmail_quote">On Fri, Oct 7, 2016 at 7:06 AM, Manche Shivashankar <span dir="ltr">&lt;<a rel="nofollow" href="mailto:mancheshivashankar@xxxxxxxxx">mancheshivashankar@xxxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir="ltr"><div>Thank you so much for your valuable suggestions,<br></div>I will try to implement them.<br></div><div class="HOEnZb"><div class="h5"><div class="gmail_extra"><br><div class="gmail_quote">On Thu, Oct 6, 2016 at 7:25 PM, William S. Kessler <span dir="ltr">&lt;<a rel="nofollow" href="mailto:william.s.kessler@xxxxxxxx">william.s.kessler@xxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">Consider that an EOF calculation is usually used to _simplify_ an interpretation. Namely, you expect the result to represent the variability in a very few functions, often only 1 or 2.<br>
 <br>
 Thus the small details in any dimension are unlikely to be important, and subsampling suggested by Russ is very appropriate. Subsampled fields should give a very good result, in addition to being much easier to work with.<br>
 <br>
@@ -84,8 +84,8 @@ Billy K<br>
 &gt;&gt; it is daily ssh data covering north Indian ocean having dimensions 320 by 240 by 4866 latitude longitude and time respectively.<br>
 &gt;&gt; and the script I am using as follows<br>
 &gt;&gt;<br>
-&gt;&gt; yes? use <a rel="nofollow" href="http://sla.nc" rel="noreferrer" target="_blank">sla.nc</a><br>
-&gt;&gt; yes? let Eof_Grid = sla[x=30:110,y=-30:30,l=1:4886<wbr>]<br>
+&gt;&gt; yes? use <a rel="nofollow" href="http://sla.nc" rel="noreferrer">sla.nc</a><br>
+&gt;&gt; yes? let Eof_Grid = sla[x=30:110,y=-30:30,l=1:4886]<br>
 &gt;&gt; yes? let Eof_Stat = eofsvd_stat(Eof_Grid)<br>
 &gt;&gt; then ferret is asking for memory size to increase after increasing the memory by<br>
 &gt;&gt; set memory/size= command the error is coming like this<br>
@@ -108,7 +108,7 @@ Billy K<br>
 &gt;&gt;<br>
 &gt;&gt; From the documentation<br>
 &gt;&gt;<br>
-&gt;&gt; <a rel="nofollow" href="http://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/appendix-a-external-functions/EOF-STAT?searchterm=eof" rel="noreferrer" target="_blank">http://ferret.pmel.noaa.gov/Fe<wbr>rret/documentation/users-guide<wbr>/appendix-a-external-functions<wbr>/EOF-STAT?searchterm=eof</a><br>
+&gt;&gt; <a rel="nofollow" href="../../documentation/users-guide/appendix-a-external-functions/EOF-STAT.html?searchterm=eof" rel="noreferrer">../../documentation/users-guide/appendix-a-external-functions/EOF-STAT?searchterm=eof</a><br>
 &gt;&gt;<br>
 &gt;&gt; &quot;The EOFSVD analysis solves a matrix problem where the matrix is dimensioned (NX*NY*NZ) by NT, which can quickly become quite large. The EOFSVD functions use other workspace as well which demands even more memory, and often memory must be increased with the SET MEMORY command. Regridding to a coarser grid or restricting the region may be necessary.&quot;<br>
 &gt;&gt;<br>
@@ -139,16 +139,16 @@ Billy K<br>
 &gt;&gt;<br>
 &gt;<br>
 <br>
-</div></div>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~<wbr>~~~~~~~~~~~~~~~<br>
+</div></div>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~<br>
 William S. Kessler<br>
 NOAA / Pacific Marine Environmental Laboratory<br>
 7600 Sand Point Way NE<br>
 Seattle WA 98115 USA<br>
 <br>
-<a rel="nofollow" href="mailto:william.s.kessler@xxxxxxxx" target="_blank">william.s.kessler@xxxxxxxx</a><br>
+<a rel="nofollow" href="mailto:william.s.kessler@xxxxxxxx">william.s.kessler@xxxxxxxx</a><br>
 Tel: +1 206-526-6221<br>
 Fax: +1 206-526-6744<br>
-Web: <a rel="nofollow" href="http://faculty.washington.edu/kessler/" rel="noreferrer" target="_blank">http://faculty.washington.edu/<wbr>kessler/</a><br>
+Web: <a rel="nofollow" href="http://faculty.washington.edu/kessler/" rel="noreferrer">http://faculty.washington.edu/kessler/</a><br>
 <br>
 <br>
 </blockquote></div><br></div>

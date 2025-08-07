@@ -60,7 +60,7 @@
 <hr>
 <!--X-Head-Body-Sep-End-->
 <!--X-Body-of-Message-->
-<div dir="ltr"><div><div><div><div><div><div><div><div><div>Hi Thanks Ansley and All<br></div>I tried to plot my three data using instructions in script above. But these <br>plot/nolabel/color=purple/thick pr1<br>&#xA0;plot/nolabel/color=green/thick pr2<br>&#xA0;plot/nolabel/color=red/thick pr3&#xA0;&#xA0; <br><br></div>plots only one line<br></div>However when Do like <br>plot/nolabel/color=purple/thick pr1<br>&#xA0;plot/nolabel/over/color=green/thick pr2<br>&#xA0;plot/nolabel/over/color=red/thick pr3<br><br></div>All the pr1,pr2 and pr3 are plotted well but there is no label, no legend on vertical axis and horizontal axis read 2009 but I want it to read Months<br><br></div>My pr1 GME data begins at 31 Jan-31-Dec 2009<br></div>&#xA0;&#xA0;&#xA0;&#xA0; pr2&#xA0;&#xA0; CRU begins at 16 Jan 2009 -16 Dec 2009<br></div>&#xA0;&#xA0;&#xA0;&#xA0; pr3&#xA0;&#xA0; GPCC begins at 01 Jan 2009-01 Dec 2009 <br><br></div>I get this complains **ERROR: variable unknown or not in data set: TT[T=&quot;31-DEC-2009&quot;@ITP]<br>plot/over/vs/nolabel/line/color=purple/thick {`t0`,`t1`},{`y1`,`y1`}<br>Command file, command group, or REPEAT execution aborted<br><br><br></div>How Do I set these so that plotting is labbelled <br><div><br>LET t0&#xA0;&#xA0; = tt[T=&quot;31-DEC-2009&quot;@itp]<br>&#xA0;LET t1&#xA0;&#xA0; = tt[T=&quot;16-DEC-2009&quot;@itp]<br>&#xA0;LET t2&#xA0;&#xA0; = tt[T=&quot;01-DEC-2009&quot;@itp]<br><br></div><div>i have done a screen shot of the plot that appears and my data just incase something is wrong with how I am defining the grids<br></div><div><br><div><div><div><div><div><div><br></div></div></div></div></div></div></div></div><div class="gmail_extra"><br><div class="gmail_quote">On Thu, Jun 30, 2016 at 10:59 PM, Ansley C. Manke <span dir="ltr">&lt;<a rel="nofollow" href="mailto:ansley.b.manke@xxxxxxxx" target="_blank">ansley.b.manke@xxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
+<div dir="ltr"><div><div><div><div><div><div><div><div><div>Hi Thanks Ansley and All<br></div>I tried to plot my three data using instructions in script above. But these <br>plot/nolabel/color=purple/thick pr1<br>&#xA0;plot/nolabel/color=green/thick pr2<br>&#xA0;plot/nolabel/color=red/thick pr3&#xA0;&#xA0; <br><br></div>plots only one line<br></div>However when Do like <br>plot/nolabel/color=purple/thick pr1<br>&#xA0;plot/nolabel/over/color=green/thick pr2<br>&#xA0;plot/nolabel/over/color=red/thick pr3<br><br></div>All the pr1,pr2 and pr3 are plotted well but there is no label, no legend on vertical axis and horizontal axis read 2009 but I want it to read Months<br><br></div>My pr1 GME data begins at 31 Jan-31-Dec 2009<br></div>&#xA0;&#xA0;&#xA0;&#xA0; pr2&#xA0;&#xA0; CRU begins at 16 Jan 2009 -16 Dec 2009<br></div>&#xA0;&#xA0;&#xA0;&#xA0; pr3&#xA0;&#xA0; GPCC begins at 01 Jan 2009-01 Dec 2009 <br><br></div>I get this complains **ERROR: variable unknown or not in data set: TT[T=&quot;31-DEC-2009&quot;@ITP]<br>plot/over/vs/nolabel/line/color=purple/thick {`t0`,`t1`},{`y1`,`y1`}<br>Command file, command group, or REPEAT execution aborted<br><br><br></div>How Do I set these so that plotting is labbelled <br><div><br>LET t0&#xA0;&#xA0; = tt[T=&quot;31-DEC-2009&quot;@itp]<br>&#xA0;LET t1&#xA0;&#xA0; = tt[T=&quot;16-DEC-2009&quot;@itp]<br>&#xA0;LET t2&#xA0;&#xA0; = tt[T=&quot;01-DEC-2009&quot;@itp]<br><br></div><div>i have done a screen shot of the plot that appears and my data just incase something is wrong with how I am defining the grids<br></div><div><br><div><div><div><div><div><div><br></div></div></div></div></div></div></div></div><div class="gmail_extra"><br><div class="gmail_quote">On Thu, Jun 30, 2016 at 10:59 PM, Ansley C. Manke <span dir="ltr">&lt;<a rel="nofollow" href="mailto:ansley.b.manke@xxxxxxxx">ansley.b.manke@xxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
   
     
   
@@ -166,7 +166,7 @@
         viewport.&#xA0; Run the script &quot;go test_legend&quot; which demonstrates
         it.</p>
       <p>There is also an FAQ which shows an example,
-        <a rel="nofollow" href="../../faq/working-with-the-legend-on-a-line-plot" target="_blank">../../faq/working-with-the-legend-on-a-line-plot</a><br>
+        <a rel="nofollow" href="../../faq/working-with-the-legend-on-a-line-plot">../../faq/working-with-the-legend-on-a-line-plot</a><br>
       </p>
       <br>
       <div>On 6/30/2016 8:05 AM, afwande juliet
@@ -211,7 +211,7 @@
         </div>
         <div class="gmail_extra"><br>
           <div class="gmail_quote">On Tue, Jun 28, 2016 at 7:49 PM,
-            Ansley C. Manke <span dir="ltr">&lt;<a rel="nofollow" href="mailto:ansley.b.manke@xxxxxxxx" target="_blank"></a><a rel="nofollow" href="mailto:ansley.b.manke@xxxxxxxx" target="_blank">ansley.b.manke@xxxxxxxx</a>&gt;</span>
+            Ansley C. Manke <span dir="ltr">&lt;<a rel="nofollow" href="mailto:ansley.b.manke@xxxxxxxx"></a><a rel="nofollow" href="mailto:ansley.b.manke@xxxxxxxx">ansley.b.manke@xxxxxxxx</a>&gt;</span>
             wrote:<br>
             <blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
               <div bgcolor="#FFFFFF" text="#000000">
@@ -220,7 +220,7 @@
                   &quot;modulo regridding&quot; operations, and our terminology
                   for this is &quot;climatologies&quot;. Here is an FAQ about
                   that,</p>
-                <p><a rel="nofollow" href="../../faq/how-do-i-calculate-climatologies-and-climatological-anomalies" target="_blank">../../faq/how-do-i-calculate-climatologies-and-climatological-anomalies</a><br>
+                <p><a rel="nofollow" href="../../faq/how-do-i-calculate-climatologies-and-climatological-anomalies">../../faq/how-do-i-calculate-climatologies-and-climatological-anomalies</a><br>
                 </p>
                 As a general suggestion, when writing a script, it&#39;s a
                 good idea to plot things separately, and with default
@@ -250,7 +250,7 @@
                 (By the way, the /LEVEL qualifier is for setting color
                 levels on a color fill plot.&#xA0; It can be used on a 1-D
                 &quot;plot&quot; command, but only when you are coloring the line
-                according to some second quantity.&#xA0; See RIBBON plots, <a rel="nofollow" href="http://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/PLOT#_PLOT_RIBBON" target="_blank"></a><a rel="nofollow" href="http://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/PLOT#_PLOT_RIBBON" target="_blank">http://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/PLOT#_PLOT_RIBBON</a>)<span><font color="#888888"><br>
+                according to some second quantity.&#xA0; See RIBBON plots, <a rel="nofollow" href="../../documentation/users-guide/commands-reference/PLOT.html#_PLOT_RIBBON"></a><a rel="nofollow" href="../../documentation/users-guide/commands-reference/PLOT#_PLOT_RIBBON">../../documentation/users-guide/commands-reference/PLOT#_PLOT_RIBBON</a>)<span><font color="#888888"><br>
                     <br>
                     Ansley</font></span>
                 <div>
@@ -266,7 +266,7 @@
                         below. These ones are examples are copied from
                         some online sources. I am using this script
                         attached but only getting empty space figure
-                        also attached. I have used this <a rel="nofollow" href="http://www.precisrcm.com/GRACE/KL_worksheets/worksheet_KL_2a.html" target="_blank"></a><a rel="nofollow" href="http://www.precisrcm.com/GRACE/KL_worksheets/worksheet_KL_2a.html" target="_blank">http://www.precisrcm.com/GRACE/KL_worksheets/worksheet_KL_2a.html</a>
+                        also attached. I have used this <a rel="nofollow" href="http://www.precisrcm.com/GRACE/KL_worksheets/worksheet_KL_2a.html"></a><a rel="nofollow" href="http://www.precisrcm.com/GRACE/KL_worksheets/worksheet_KL_2a.html">http://www.precisrcm.com/GRACE/KL_worksheets/worksheet_KL_2a.html</a>
                         to calculate annual cycel before plotting in
                         ferret but gets empty space. Could someone show
                         me how to go about this. The data am using is

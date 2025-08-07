@@ -137,8 +137,8 @@ cite=""
                     resolution of the image. Here's an example. Similar
                     logic could be used to define a stride and use the <a rel="nofollow"
                       moz-do-not-send="true"
-href="http://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/data-set-basics/NETCDF-DATA#_VPINDEXENTRY_168"
-                      target="_blank">SET AXIS/STRIDE command</a>, or to
+href="../../documentation/users-guide/data-set-basics/NETCDF-DATA.html#_VPINDEXENTRY_168"
+                     >SET AXIS/STRIDE command</a>, or to
                     define strides on a sub-region of the grid.<br>
                   </p>
                   <blockquote><tt>yes? let xres = 600</tt><br>
@@ -152,7 +152,7 @@ href="http://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/data-set-basi
                       + 0.5))</tt><br>
                     <br>
                     <tt>yes? define symbol region_spec =
-                      [i=1:`nx`:`istride`,j=1:`ny`:`<wbr>jstride`]</tt><br>
+                      [i=1:`nx`:`istride`,j=1:`ny`:`jstride`]</tt><br>
                     <tt> yes? shade var($region_spec),
                       lon2D($region_spec), lat2D($region_spec)</tt><span
                       class="HOEnZb"><font color="#888888"><br>

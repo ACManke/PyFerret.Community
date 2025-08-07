@@ -57,7 +57,7 @@
       units of a @DIN definite integral and the @RSUM running sum, but
       there is a big difference in how those transformations are
       computed. (See the Information about Transformations:
-<a rel="nofollow" class="moz-txt-link-freetext" href="http://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/variables-xpressions/XPRESSIONS#_GeneralInfo">http://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/variables-xpressions/XPRESSIONS#_GeneralInfo</a>).
+<a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/users-guide/variables-xpressions/XPRESSIONS.html#_GeneralInfo">../../documentation/users-guide/variables-xpressions/XPRESSIONS#_GeneralInfo</a>).
       When the grid is in known units on the surface of the earth, the
       results of the integral are returned in data * square meters.&#xA0;&#xA0;
       The running sum is returned as an unweighted sum of the data in
@@ -89,33 +89,33 @@ cite=""
           my script is looking like this<br>
           <br>
         </div>
-        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!<wbr>!!!!!!!! anomaly files
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! anomaly files
         !!!!!!!!!!!!!!!!!!!!!!!!!!!!<br>
-        <div>use <a rel="nofollow" moz-do-not-send="true" target="_blank"
+        <div>use <a rel="nofollow" moz-do-not-send="true"
             href="http://all_anm.nc">all_anm.nc</a>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; !global
           (x=0E:0W,y=62.5S:62.5N)<br>
-          use <a rel="nofollow" moz-do-not-send="true" target="_blank"
+          use <a rel="nofollow" moz-do-not-send="true"
             href="http://indi_anm.nc">indi_anm.nc</a>&#xA0;&#xA0;&#xA0; !indian ocean
           (20E:120E, 62.5S:30N)<br>
           <br>
           <font size="1">sh da<br>
             &#xA0;&#xA0;&#xA0;&#xA0; currently SET data sets:<br>
-            &#xA0;&#xA0;&#xA0; 1&gt; ./<a rel="nofollow" moz-do-not-send="true" target="_blank"
+            &#xA0;&#xA0;&#xA0; 1&gt; ./<a rel="nofollow" moz-do-not-send="true"
               href="http://all_anm.nc">all_anm.nc</a><br>
             &#xA0;name&#xA0;&#xA0;&#xA0;&#xA0; title&#xA0;&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;&#xA0;
             &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; I&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; J&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; K&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
             L&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; M&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; N<br>
             &#xA0; OHCG5_ANM_ALL<br>
-            &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; OHCG5-OHCG5_CLI[GT=OHCG5@ASN]&#xA0;<wbr>&#xA0;&#xA0; 1:360&#xA0;&#xA0;&#xA0;&#xA0;
+            &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; OHCG5-OHCG5_CLI[GT=OHCG5@ASN]&#xA0;&#xA0;&#xA0; 1:360&#xA0;&#xA0;&#xA0;&#xA0;
             1:126&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:142&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...<br>
             &#xA0;<br>
-            &#xA0;&#xA0;&#xA0; 2&gt; ./<a rel="nofollow" moz-do-not-send="true" target="_blank"
+            &#xA0;&#xA0;&#xA0; 2&gt; ./<a rel="nofollow" moz-do-not-send="true"
               href="http://indi_anm.nc">indi_anm.nc</a><br>
             &#xA0;name&#xA0;&#xA0;&#xA0;&#xA0; title&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;
             &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; I&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; J&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; K&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; L&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
             M&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; N<br>
             &#xA0; OHCG5_ANM_IN<br>
-            &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; OHCG5-OHCG5_CLI[GT=OHCG5@ASN]&#xA0;<wbr>&#xA0;&#xA0; 1:100&#xA0;&#xA0;&#xA0;&#xA0;
+            &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; OHCG5-OHCG5_CLI[GT=OHCG5@ASN]&#xA0;&#xA0;&#xA0; 1:100&#xA0;&#xA0;&#xA0;&#xA0;
             1:93&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:142&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...<br>
             <br>
             sh gr ohcg5_anm_all[d=1]<br>
@@ -145,45 +145,45 @@ cite=""
             &#xA0;normal&#xA0;&#xA0;&#xA0; E<br>
             &#xA0;normal&#xA0;&#xA0;&#xA0; F<br>
           </font></div>
-        <div><font size="1"><font size="2">!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!<wbr>!!!!!!!!!!!!!
+        <div><font size="1"><font size="2">!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
               zonal integration and running sum
-              !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!<wbr>!!!!<br>
+              !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!<br>
               <br>
             </font></font></div>
-        <div>let ohcg_g5s=ohcg5_anm_all[d=1,x=@<wbr>din,y=@rsum]&#xA0;&#xA0;&#xA0;&#xA0;
+        <div>let ohcg_g5s=ohcg5_anm_all[d=1,x=@din,y=@rsum]&#xA0;&#xA0;&#xA0;&#xA0;
           ((!! value will come in 10^15 ))<br>
-          let ohcg_in5s=ohcg5_anm_in[d=2,x=@<wbr>din,y=@rsum]<br>
+          let ohcg_in5s=ohcg5_anm_in[d=2,x=@din,y=@rsum]<br>
           <br>
         </div>
-        <div>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!<wbr>!!!!!!!!!! yearly
-          average !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!<wbr>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!<wbr>!!!!<br>
+        <div>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! yearly
+          average !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!<br>
         </div>
-        <div>define axis/edges/t/units=months/t0=<wbr>15-dec-2004/t=15-jan-2005:15-<wbr>nov-2016:1/calendar=360_days
+        <div>define axis/edges/t/units=months/t0=15-dec-2004/t=15-jan-2005:15-nov-2016:1/calendar=360_days
           tmonthly<br>
-          let ohcc_gd=ohcg_g5s[gt=tmonthly@<wbr>asn]<br>
+          let ohcc_gd=ohcg_g5s[gt=tmonthly@asn]<br>
           <br>
-          define axis/edges/t/units=years/t=15-<wbr>jan-2005:15-oct-2016:1/<wbr>calendar=360_days
+          define axis/edges/t/units=years/t=15-jan-2005:15-oct-2016:1/calendar=360_days
           t_yearly<br>
-          let ohcc_g5=ohcc_gd[gt=t_yearly@<wbr>ave]<br>
+          let ohcc_g5=ohcc_gd[gt=t_yearly@ave]<br>
           <br>
-          define axis/edges/t/units=months/t0=<wbr>15-dec-2004/t=15-jan-2005:15-<wbr>nov-2016:1/calendar=360_days
+          define axis/edges/t/units=months/t0=15-dec-2004/t=15-jan-2005:15-nov-2016:1/calendar=360_days
           tmonthly<br>
-          let ohcc_ind=ohcg_in5s[gt=<wbr>tmonthly@asn]<br>
+          let ohcc_ind=ohcg_in5s[gt=tmonthly@asn]<br>
           <br>
-          define axis/edges/t/units=years/t=15-<wbr>jan-2005:15-oct-2016:1/<wbr>calendar=360_days
+          define axis/edges/t/units=years/t=15-jan-2005:15-oct-2016:1/calendar=360_days
           t_yearly<br>
-          let ohcc_in5=ohcc_ind[gt=t_yearly@<wbr>ave]<br>
+          let ohcc_in5=ohcc_ind[gt=t_yearly@ave]<br>
           <br>
         </div>
-        <div>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!<wbr>!!!!! difference of two
-          years !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!<wbr>!!!!!!!!!!!!!!!!!<br>
+        <div>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! difference of two
+          years !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!<br>
           <br>
-          let ohcc_gg5s=ohcc_g5[l=12]-ohcc_<wbr>g5[l=1]<br>
-          let ohcc_ii5s=ohcc_in5[l=12]-ohcc_<wbr>in5[l=1]<br>
+          let ohcc_gg5s=ohcc_g5[l=12]-ohcc_g5[l=1]<br>
+          let ohcc_ii5s=ohcc_in5[l=12]-ohcc_in5[l=1]<br>
           <br>
         </div>
-        <div>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!<wbr>! normalisation by
-          global value !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!<wbr>!!!!!!!!!!!<br>
+        <div>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! normalisation by
+          global value !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!<br>
           <br>
           let ohcc_noi=ohcc_ii5s/ohcc_gg5s<br>
           <br>
@@ -192,7 +192,7 @@ cite=""
           <br>
         </div>
         <div>if i try like this way such as<br>
-          let ohcc_noi=ohcc_ii5s[y=62.5S:<wbr>30N,x=20E:120E]/ohcc_gg5s[y=<wbr>62.5S:30N,x=20E:120E]<br>
+          let ohcc_noi=ohcc_ii5s[y=62.5S:30N,x=20E:120E]/ohcc_gg5s[y=62.5S:30N,x=20E:120E]<br>
           <br>
         </div>
         <div>then also the same thing happens and i got a straight line

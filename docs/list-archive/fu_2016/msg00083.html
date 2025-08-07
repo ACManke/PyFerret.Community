@@ -58,10 +58,10 @@
     The best method to treat a set of separate files as one time series
     is to create a descriptor file, which lets you treat the files as a
     virtual single dataset without rewriting the data. <br>
-<a rel="nofollow" class="moz-txt-link-freetext" href="http://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/converting-to-netcdf/CREATING-A-MULTI-FILE-NETCDF-DATA-SET">http://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/converting-to-netcdf/CREATING-A-MULTI-FILE-NETCDF-DATA-SET</a><br>
+<a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/users-guide/converting-to-netcdf.html/CREATING-A-MULTI-FILE-NETCDF-DATA-SET.html">../../documentation/users-guide/converting-to-netcdf/CREATING-A-MULTI-FILE-NETCDF-DATA-SET</a><br>
     <br>
     There are a couple of tools for creating descriptor files:<br>
-<a rel="nofollow" class="moz-txt-link-freetext" href="http://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/converting-to-netcdf/CREATING-A-MULTI-FILE-NETCDF-DATA-SET#_VPINDEXENTRY_1144">http://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/converting-to-netcdf/CREATING-A-MULTI-FILE-NETCDF-DATA-SET#_VPINDEXENTRY_1144</a><br>
+<a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/users-guide/converting-to-netcdf.html/CREATING-A-MULTI-FILE-NETCDF-DATA-SET.html#_VPINDEXENTRY_1144">../../documentation/users-guide/converting-to-netcdf/CREATING-A-MULTI-FILE-NETCDF-DATA-SET#_VPINDEXENTRY_1144</a><br>
     <br>
     There sometimes good reasons to to write a single file however. To
     append all of this data, first use Ferret to open the first timestep
@@ -108,7 +108,7 @@ cite=""
           <div class="gmail_quote">On Tue, Feb 9, 2016 at 2:38 AM,
             Ansley C. Manke <span dir="ltr">&lt;<a rel="nofollow"
                 moz-do-not-send="true"
-                href="mailto:ansley.b.manke@xxxxxxxx" target="_blank"><a rel="nofollow" class="moz-txt-link-abbreviated" href="mailto:ansley.b.manke@xxxxxxxx">ansley.b.manke@xxxxxxxx</a></a>&gt;</span>
+                href="mailto:ansley.b.manke@xxxxxxxx"><a rel="nofollow" class="moz-txt-link-abbreviated" href="mailto:ansley.b.manke@xxxxxxxx">ansley.b.manke@xxxxxxxx</a></a>&gt;</span>
             wrote:<br>
             <blockquote class="gmail_quote" style="margin:0 0 0
               .8ex;border-left:1px #ccc solid;padding-left:1ex">
@@ -121,10 +121,10 @@ cite=""
                   </tt>
                   <blockquote><tt>yes? save/file=<a rel="nofollow"
                         moz-do-not-send="true"
-                        href="http://test.nc/append" target="_blank">test.nc/append</a>
+                        href="http://test.nc/append">test.nc/append</a>
                       SEA_SURFACE_TEMPERATURE<br>
                       &#xA0;LISTing to file <a rel="nofollow" moz-do-not-send="true"
-                        href="http://test.nc" target="_blank">test.nc</a><br>
+                        href="http://test.nc">test.nc</a><br>
                       NetCDF: Not a valid data type or _FillValue type
                       mismatch (OPeNDAP/netCDF Error code -45)<br>
                       &#xA0;Failed creating coord variable TIME<br>
@@ -133,12 +133,12 @@ cite=""
                 </span> This is saying that there is a
                 SEA_SURFACE_TEMPERATURE variable in the file <a rel="nofollow"
                   moz-do-not-send="true" href="http://test.nc"
-                  target="_blank">test.nc</a>, and that file already has
+                 >test.nc</a>, and that file already has
                 a TIME axis.&#xA0; It is fine to append to a file in the T
                 direction, but Ferret/PyFerret writes coordinate data
                 using double precision and apparently your existing <a rel="nofollow"
                   moz-do-not-send="true" href="http://test.nc"
-                  target="_blank">test.nc</a> has its TIME axis written
+                 >test.nc</a> has its TIME axis written
                 with another data type.<br>
                 <br>
                 Did you intend to append to the file?&#xA0; If not then use
@@ -187,12 +187,12 @@ cite=""
                           </div>
                           <div>yes? use <a rel="nofollow" moz-do-not-send="true"
 href="http://20130101000000-JAXA-L3C_GHRSST-SSTsubskin-AMSR2-v1a_A-v02.0-fv01.0.nc"
-                              target="_blank">20130101000000-JAXA-L3C_GHRSST-SSTsubskin-AMSR2-v1a_A-v02.0-fv01.0.nc</a></div>
+                             >20130101000000-JAXA-L3C_GHRSST-SSTsubskin-AMSR2-v1a_A-v02.0-fv01.0.nc</a></div>
                           <div>yes? sh da/f</div>
                           <div>&#xA0; &#xA0; &#xA0;currently SET data sets:</div>
                           <div>&#xA0; &#xA0; 1&gt; ./<a rel="nofollow" moz-do-not-send="true"
 href="http://20130101000000-JAXA-L3C_GHRSST-SSTsubskin-AMSR2-v1a_A-v02.0-fv01.0.nc"
-                              target="_blank">20130101000000-JAXA-L3C_GHRSST-SSTsubskin-AMSR2-v1a_A-v02.0-fv01.0.nc</a>
+                             >20130101000000-JAXA-L3C_GHRSST-SSTsubskin-AMSR2-v1a_A-v02.0-fv01.0.nc</a>
                             &#xA0;(default)</div>
                           <div>&#xA0; &#xA0; &#xA0;Sea Surface Temperature from AMSR2
                             onboard GCOM-W</div>
@@ -316,11 +316,11 @@ href="http://20130101000000-JAXA-L3C_GHRSST-SSTsubskin-AMSR2-v1a_A-v02.0-fv01.0.
                           <div>&#xA0;</div>
                           <div>yes? save/file=<a rel="nofollow" moz-do-not-send="true"
                               href="http://test.nc/append"
-                              target="_blank">test.nc/append</a>
+                             >test.nc/append</a>
                             SEA_SURFACE_TEMPERATURE</div>
                           <div>&#xA0;LISTing to file <a rel="nofollow"
                               moz-do-not-send="true"
-                              href="http://test.nc" target="_blank">test.nc</a></div>
+                              href="http://test.nc">test.nc</a></div>
                           <div>NetCDF: Not a valid data type or
                             _FillValue type mismatch (OPeNDAP/netCDF
                             Error code -45)</div>

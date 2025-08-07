@@ -53,7 +53,7 @@
 <hr>
 <!--X-Head-Body-Sep-End-->
 <!--X-Body-of-Message-->
-<div dir="ltr"><div><div><div><div>Thanks for this help<br></div>when I plot the data it is plotted but I cant be labelled<br><br></div>this how it complains<br><br>lot /over/vs/nolabel/line=12 {`t0`,`t1`},{2.35,2.35}; label `t2`, 2.35,-1,0,0.14 @AS GME<br>&#xA0;!-&gt; plot /over/vs/nolabel/line=12 {262968,262608},{2.35,2.35}<br>&#xA0;!-&gt; PPL %LABEL 100000, 2.35,-1,0,0.14 @AS GME<br>plot /over/vs/nolabel/line=15{`t0`,`t1`},{2.05,2.05}; label `t2`, 2.05,-1,0,0.14 @AS CRU<br>&#xA0;!-&gt; plot /over/vs/nolabel/line=15{262968,262608},{2.05,2.05}<br>&#xA0;**ERROR: invalid command: no data specified<br>plot /over/vs/nolabel/line=15{262968,262608},{2.05,2.05}<br>Command file, command group, or REPEAT execution aborted<br><br><br></div>Attached is my script <br><br></div>I have also attached sample data for your help <br><div><div><br></div></div></div><div class="gmail_extra"><br><div class="gmail_quote">On Tue, Jun 28, 2016 at 7:49 PM, Ansley C. Manke <span dir="ltr">&lt;<a rel="nofollow" href="mailto:ansley.b.manke@xxxxxxxx" target="_blank">ansley.b.manke@xxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
+<div dir="ltr"><div><div><div><div>Thanks for this help<br></div>when I plot the data it is plotted but I cant be labelled<br><br></div>this how it complains<br><br>lot /over/vs/nolabel/line=12 {`t0`,`t1`},{2.35,2.35}; label `t2`, 2.35,-1,0,0.14 @AS GME<br>&#xA0;!-&gt; plot /over/vs/nolabel/line=12 {262968,262608},{2.35,2.35}<br>&#xA0;!-&gt; PPL %LABEL 100000, 2.35,-1,0,0.14 @AS GME<br>plot /over/vs/nolabel/line=15{`t0`,`t1`},{2.05,2.05}; label `t2`, 2.05,-1,0,0.14 @AS CRU<br>&#xA0;!-&gt; plot /over/vs/nolabel/line=15{262968,262608},{2.05,2.05}<br>&#xA0;**ERROR: invalid command: no data specified<br>plot /over/vs/nolabel/line=15{262968,262608},{2.05,2.05}<br>Command file, command group, or REPEAT execution aborted<br><br><br></div>Attached is my script <br><br></div>I have also attached sample data for your help <br><div><div><br></div></div></div><div class="gmail_extra"><br><div class="gmail_quote">On Tue, Jun 28, 2016 at 7:49 PM, Ansley C. Manke <span dir="ltr">&lt;<a rel="nofollow" href="mailto:ansley.b.manke@xxxxxxxx">ansley.b.manke@xxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
   
     
   
@@ -62,7 +62,7 @@
     <p>Computation of an annual cycle is done in Ferret with &quot;modulo
       regridding&quot; operations, and our terminology for this is
       &quot;climatologies&quot;. Here is an FAQ about that,</p>
-    <p><a rel="nofollow" href="../../faq/how-do-i-calculate-climatologies-and-climatological-anomalies" target="_blank">../../faq/how-do-i-calculate-climatologies-and-climatological-anomalies</a><br>
+    <p><a rel="nofollow" href="../../faq/how-do-i-calculate-climatologies-and-climatological-anomalies">../../faq/how-do-i-calculate-climatologies-and-climatological-anomalies</a><br>
     </p>
     As a general suggestion, when writing a script, it&#39;s a good idea to
     plot things separately, and with default settings, before putting
@@ -93,7 +93,7 @@
     color fill plot.&#xA0; It can be used on a 1-D &quot;plot&quot; command, but only
     when you are coloring the line according to some second quantity.&#xA0;
     See RIBBON plots,
-<a rel="nofollow" href="http://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/PLOT#_PLOT_RIBBON" target="_blank">http://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/PLOT#_PLOT_RIBBON</a>)<span class="HOEnZb"><font color="#888888"><br>
+<a rel="nofollow" href="../../documentation/users-guide/commands-reference/PLOT.html#_PLOT_RIBBON">../../documentation/users-guide/commands-reference/PLOT#_PLOT_RIBBON</a>)<span class="HOEnZb"><font color="#888888"><br>
     <br>
     Ansley</font></span><div><div class="h5"><br>
     <br>
@@ -107,7 +107,7 @@
         I want to plot annual cycles like the ones below. These ones are
         examples are copied from some online sources. I am using this
         script attached but only getting empty space figure also
-        attached. I have used this <a rel="nofollow" href="http://www.precisrcm.com/GRACE/KL_worksheets/worksheet_KL_2a.html" target="_blank">http://www.precisrcm.com/GRACE/KL_worksheets/worksheet_KL_2a.html</a>
+        attached. I have used this <a rel="nofollow" href="http://www.precisrcm.com/GRACE/KL_worksheets/worksheet_KL_2a.html">http://www.precisrcm.com/GRACE/KL_worksheets/worksheet_KL_2a.html</a>
         to calculate annual cycel before plotting in ferret but gets
         empty space. Could someone show me how to go about this. The
         data am using is monthly data in kg/m2/s2 <br>

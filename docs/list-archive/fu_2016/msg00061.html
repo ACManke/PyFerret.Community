@@ -52,10 +52,10 @@
 <hr>
 <!--X-Head-Body-Sep-End-->
 <!--X-Body-of-Message-->
-<div dir="ltr"><div><div><div><div><div>Hi Nguyen,<br><br></div>From your screen shot, you have never run pyferret.&#xA0; The &#39;&gt;&#39; that your typed redirected output to a file called &#39;pyferret&#39; (and since there was no command before it, there is probably an empty file called pyferret in that directory.<br><br></div>In the example you were looking at, the &#39;&gt; &#39; represents the shell command prompt.&#xA0; SInce you are under bash, your shell command prompt is everything before and including the &#39;$ &#39;<br><br></div><div>I am assuming you have run the bin/Finstall script under the PyFerret installation directory, which will create the ferret_paths.sh script and the pyferret script.&#xA0; If not, that is the first thing you need to do to finish the installation of PyFerret.<br><br></div><div>The following is close to what the session should look like to you.<br>I am going to assume your installation directory of /usr/local/PyFerret/ and you installed the ferret_paths.sh script in /usr/local/PyFerret/bin/&#xA0; You will need to adjust for your actual location of where you put the ferret_paths.sh script.&#xA0; In the following, the boldface is what you are typing, the rest are prompts and messages.&#xA0; The &quot;yes? &quot; is the prompt for Ferret and Ferret commands in PyFerret<br><br></div>NguyenTuyet$<b> . /usr/local/PyFerret/bin/ferret_paths.sh</b><br>NguyenTuyet$<b> pyferret</b><br>&#xA0;&#xA0;&#xA0;&#xA0; NOAA/PMEL TMAP<br>&#xA0;&#xA0;&#xA0;&#xA0; FERRET v6.96 (PyFerret 1.2)<br>&#xA0;&#xA0;&#xA0;&#xA0; Linux 2.6.32-573.8.1.el6.x86_64 - 12/22/15<br>&#xA0;&#xA0;&#xA0;&#xA0; &#xA0;2-Feb-16 10:00&#xA0;&#xA0;&#xA0;&#xA0; <br><br>yes? <b>set text /font=arial</b><br>yes? <b>plot /i=1:10 1/i</b><br>yes? <b>quit<br></b>NguyenTuyet$<br><br></div>Regards,<br></div>Karl<br><br><div><div><div><b> </b></div></div></div></div><div class="gmail_extra"><br><div class="gmail_quote">On Tue, Feb 2, 2016 at 8:21 AM, Bier, Andreas <span dir="ltr">&lt;<a rel="nofollow" href="mailto:Andreas.Bier@xxxxxx" target="_blank">Andreas.Bier@xxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">Hello Tuyet,<br>
+<div dir="ltr"><div><div><div><div><div>Hi Nguyen,<br><br></div>From your screen shot, you have never run pyferret.&#xA0; The &#39;&gt;&#39; that your typed redirected output to a file called &#39;pyferret&#39; (and since there was no command before it, there is probably an empty file called pyferret in that directory.<br><br></div>In the example you were looking at, the &#39;&gt; &#39; represents the shell command prompt.&#xA0; SInce you are under bash, your shell command prompt is everything before and including the &#39;$ &#39;<br><br></div><div>I am assuming you have run the bin/Finstall script under the PyFerret installation directory, which will create the ferret_paths.sh script and the pyferret script.&#xA0; If not, that is the first thing you need to do to finish the installation of PyFerret.<br><br></div><div>The following is close to what the session should look like to you.<br>I am going to assume your installation directory of /usr/local/PyFerret/ and you installed the ferret_paths.sh script in /usr/local/PyFerret/bin/&#xA0; You will need to adjust for your actual location of where you put the ferret_paths.sh script.&#xA0; In the following, the boldface is what you are typing, the rest are prompts and messages.&#xA0; The &quot;yes? &quot; is the prompt for Ferret and Ferret commands in PyFerret<br><br></div>NguyenTuyet$<b> . /usr/local/PyFerret/bin/ferret_paths.sh</b><br>NguyenTuyet$<b> pyferret</b><br>&#xA0;&#xA0;&#xA0;&#xA0; NOAA/PMEL TMAP<br>&#xA0;&#xA0;&#xA0;&#xA0; FERRET v6.96 (PyFerret 1.2)<br>&#xA0;&#xA0;&#xA0;&#xA0; Linux 2.6.32-573.8.1.el6.x86_64 - 12/22/15<br>&#xA0;&#xA0;&#xA0;&#xA0; &#xA0;2-Feb-16 10:00&#xA0;&#xA0;&#xA0;&#xA0; <br><br>yes? <b>set text /font=arial</b><br>yes? <b>plot /i=1:10 1/i</b><br>yes? <b>quit<br></b>NguyenTuyet$<br><br></div>Regards,<br></div>Karl<br><br><div><div><div><b> </b></div></div></div></div><div class="gmail_extra"><br><div class="gmail_quote">On Tue, Feb 2, 2016 at 8:21 AM, Bier, Andreas <span dir="ltr">&lt;<a rel="nofollow" href="mailto:Andreas.Bier@xxxxxx">Andreas.Bier@xxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">Hello Tuyet,<br>
 <br>
 as seen from your screen shot, your are using Pyferret instead of Ferret. Honestly, I am not really familiar with PyFerret since I am working with the classic Ferret program. I&#39;ve found in<br>
-<a rel="nofollow" href="http://ferret.pmel.noaa.gov/Ferret/documentation/pyferret/known-issues/" rel="noreferrer" target="_blank">http://ferret.pmel.noaa.gov/Ferret/documentation/pyferret/known-issues/</a><br>
+<a rel="nofollow" href="../../documentation/pyferret/known-issues.html/" rel="noreferrer">../../documentation/pyferret/known-issues/</a><br>
 that &quot;PLOT+pattern files are not yet supported by the new graphics engines&quot;. However, the shade command should work. For example:<br>
 <br>
 set region/i=1:10/j=1:5<br>
@@ -63,7 +63,7 @@ shade i/j<br>
 <br>
 Some more information about graphics in Pyferret you also can find here:<br>
 <br>
-<a rel="nofollow" href="http://ferret.pmel.noaa.gov/Ferret/documentation/pyferret/graphics/" rel="noreferrer" target="_blank">http://ferret.pmel.noaa.gov/Ferret/documentation/pyferret/graphics/</a><span class=""><br>
+<a rel="nofollow" href="../../documentation/pyferret/graphics.html/" rel="noreferrer">../../documentation/pyferret/graphics/</a><span class=""><br>
 <br>
 Best regards,<br>
 Andreas<br>
@@ -83,8 +83,8 @@ yes? plot 1/i<br>
 <br>
 but it doesn&#x2019;t work<br>
 </span><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><span class="">
-On Feb 2, 2016, at 6:42 PM, Bier, Andreas &lt;<a rel="nofollow" href="mailto:Andreas.Bier@xxxxxx" target="_blank">Andreas.Bier@xxxxxx</a><br></span><span class="">
-&lt;mailto:<a rel="nofollow" href="mailto:Andreas.Bier@xxxxxx" target="_blank">Andreas.Bier@xxxxxx</a>&gt;&gt; wrote:<br>
+On Feb 2, 2016, at 6:42 PM, Bier, Andreas &lt;<a rel="nofollow" href="mailto:Andreas.Bier@xxxxxx">Andreas.Bier@xxxxxx</a><br></span><span class="">
+&lt;mailto:<a rel="nofollow" href="mailto:Andreas.Bier@xxxxxx">Andreas.Bier@xxxxxx</a>&gt;&gt; wrote:<br>
 <br>
 Hello Tuyet,<br>
 <br>
@@ -105,7 +105,7 @@ Nguyen Tuyet wrote:<br>
 Hi all,<br>
 <br>
 Iam quite new to ferret. When I try to run Ferret tour, follow commands<br>
-there in <a rel="nofollow" href="http://ferret.pmel.noaa.gov/Ferret/documentation/ferret-tutorial" rel="noreferrer" target="_blank">http://ferret.pmel.noaa.gov/Ferret/documentation/ferret-tutorial</a><br>
+there in <a rel="nofollow" href="../../documentation/ferret-tutorial" rel="noreferrer">../../documentation/ferret-tutorial</a><br>
 <br>
 With command PLOT/i=1:10 1/i, it opens No such file or directory.<br>
 <br>
@@ -124,9 +124,9 @@ Institut fuer Physik der Atmosphaere | Muenchner Strasse 20 |<br>
 Oberpfaffenhofen | 82234 Wessling | Germany<br>
 <br>
 Andreas Bier<br>
-Telefon <a rel="nofollow" href="tel:%2B49%208153%2028-2519" value="+498153282519" target="_blank">+49 8153 28-2519</a> | Telefax <a rel="nofollow" href="tel:%2B49%208153%2028-1841" value="+498153281841" target="_blank">+49 8153 28-1841</a> |<br>
-</span><a rel="nofollow" href="mailto:Andreas.Bier@xxxxxx" target="_blank">Andreas.Bier@xxxxxx</a> &lt;mailto:<a rel="nofollow" href="mailto:Andreas.Bier@xxxxxx" target="_blank">Andreas.Bier@xxxxxx</a>&gt;<br>
-<a rel="nofollow" href="http://www.dlr.de/ipa" rel="noreferrer" target="_blank">www.dlr.de/ipa</a> &lt;<a rel="nofollow" href="http://www.dlr.de/ipa" rel="noreferrer" target="_blank">http://www.dlr.de/ipa</a>&gt;<br>
+Telefon <a rel="nofollow" href="tel:%2B49%208153%2028-2519" value="+498153282519">+49 8153 28-2519</a> | Telefax <a rel="nofollow" href="tel:%2B49%208153%2028-1841" value="+498153281841">+49 8153 28-1841</a> |<br>
+</span><a rel="nofollow" href="mailto:Andreas.Bier@xxxxxx">Andreas.Bier@xxxxxx</a> &lt;mailto:<a rel="nofollow" href="mailto:Andreas.Bier@xxxxxx">Andreas.Bier@xxxxxx</a>&gt;<br>
+<a rel="nofollow" href="http://www.dlr.de/ipa" rel="noreferrer">www.dlr.de/ipa</a> &lt;<a rel="nofollow" href="http://www.dlr.de/ipa" rel="noreferrer">http://www.dlr.de/ipa</a>&gt;<br>
 <br>
 <br>
 </blockquote>
@@ -140,8 +140,8 @@ Deutsches Zentrum fuer Luft- und Raumfahrt e.V. (DLR)<br>
 Institut fuer Physik der Atmosphaere | Muenchner Strasse 20 | Oberpfaffenhofen | 82234 Wessling | Germany<br>
 <br>
 Andreas Bier<br>
-Telefon <a rel="nofollow" href="tel:%2B49%208153%2028-2519" value="+498153282519" target="_blank">+49 8153 28-2519</a> | Telefax <a rel="nofollow" href="tel:%2B49%208153%2028-1841" value="+498153281841" target="_blank">+49 8153 28-1841</a> | <a rel="nofollow" href="mailto:Andreas.Bier@xxxxxx" target="_blank">Andreas.Bier@xxxxxx</a><br>
-<a rel="nofollow" href="http://www.dlr.de/ipa" rel="noreferrer" target="_blank">www.dlr.de/ipa</a><br>
+Telefon <a rel="nofollow" href="tel:%2B49%208153%2028-2519" value="+498153282519">+49 8153 28-2519</a> | Telefax <a rel="nofollow" href="tel:%2B49%208153%2028-1841" value="+498153281841">+49 8153 28-1841</a> | <a rel="nofollow" href="mailto:Andreas.Bier@xxxxxx">Andreas.Bier@xxxxxx</a><br>
+<a rel="nofollow" href="http://www.dlr.de/ipa" rel="noreferrer">www.dlr.de/ipa</a><br>
 <br>
 <br>
 </div></div></blockquote></div><br><br clear="all"><br>-- <br><div class="gmail_signature"><div dir="ltr">Karl M. Smith, Ph.D.<br>JISAO Univ. Wash. and PMEL NOAA<br>&quot;The contents of this message are mine personally and do<br>not necessarily reflect any position of the Government<br>or the National Oceanic and Atmospheric Administration.&quot;<br></div></div>

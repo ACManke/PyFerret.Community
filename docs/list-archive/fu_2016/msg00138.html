@@ -62,7 +62,7 @@
     <br>
     However you asked about the arguments to FILL_XY.&#xA0; Here is the
     documentation for the function.&#xA0; <br>
-<a rel="nofollow" class="moz-txt-link-freetext" href="http://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/appendix-a-external-functions/fill_xy">http://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/appendix-a-external-functions/fill_xy</a><br>
+<a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/users-guide/appendix-a-external-functions/fill_xy.html">../../documentation/users-guide/appendix-a-external-functions/fill_xy</a><br>
     <br>
     &#xA0;Often you can "ask Ferret" what it's doing - Make a set of plots to
     show you the result of changing the argument.<br>
@@ -112,7 +112,7 @@ cite=""
         <div class="gmail_quote">On Wed, Feb 17, 2016 at 2:43 AM, Martin
           Schmidt <span dir="ltr">&lt;<a rel="nofollow" moz-do-not-send="true"
               href="mailto:martin.schmidt@xxxxxxxxxxxxxxxxx"
-              target="_blank">martin.schmidt@xxxxxxxxxxxxxxxxx</a>&gt;</span>
+             >martin.schmidt@xxxxxxxxxxxxxxxxx</a>&gt;</span>
           wrote:<br>
           <blockquote class="gmail_quote" style="margin:0 0 0
             .8ex;border-left:1px #ccc solid;padding-left:1ex">
@@ -133,24 +133,24 @@ cite=""
                 <br>
                 use <a rel="nofollow" moz-do-not-send="true"
                   href="http://your_file.nc" rel="noreferrer"
-                  target="_blank">your_file.nc</a><br>
+                 >your_file.nc</a><br>
                 <br>
                 let wx = missing(windx,0)<br>
                 let wy = missing(windy,0)<br>
                 <br>
                 save/file=<a rel="nofollow" moz-do-not-send="true"
                   href="http://your_new_file.nc/clobber"
-                  rel="noreferrer" target="_blank">your_new_file.nc/clobber</a>
+                  rel="noreferrer">your_new_file.nc/clobber</a>
                 wx, wy<br>
                 <br>
                 I expect the data set is large.&#xA0; So you may want to save
                 time step by time step or allocate more memory:<br>
                 sp rm <a rel="nofollow" moz-do-not-send="true"
                   href="http://your_new_file.nc" rel="noreferrer"
-                  target="_blank">your_new_file.nc</a><br>
+                 >your_new_file.nc</a><br>
                 repeat/l=1:some_large_number&#xA0; save/append/file=<a rel="nofollow"
                   moz-do-not-send="true" href="http://your_new_file.nc"
-                  rel="noreferrer" target="_blank">your_new_file.nc</a>
+                  rel="noreferrer">your_new_file.nc</a>
                 wx, wy<br>
                 <br>
                 This shows the principle. Getting the number of time
@@ -164,7 +164,7 @@ cite=""
                 <br>
                 save/file=<a rel="nofollow" moz-do-not-send="true"
                   href="http://your_new_file.nc/clobber/outtype=float"
-                  rel="noreferrer" target="_blank">your_new_file.nc/clobber/outtype=float</a>
+                  rel="noreferrer">your_new_file.nc/clobber/outtype=float</a>
                 wx, wy<br>
                 <br>
                 This may solve your problem. But I guess, your input

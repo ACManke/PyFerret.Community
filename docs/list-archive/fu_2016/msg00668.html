@@ -57,7 +57,7 @@
  its not mandatory but if you are facing problem in plotting as sometime
  our machines getting bit slow or hangs so you can use set mem/size 
 command before you start plotting. it will relax your ram for further 
-plotting/calculation. <br><br></div><div class="gmail_default" style="color:rgb(0,0,0)">regarding multiplot animation you can use the link where i put all the details and necessary steps for doing this task.<br>&#xA0;<br><a rel="nofollow" href="../fu_2016/msg00594.html">../fu_2016/msg00594.html</a><br></div><div class="gmail_default" style="color:rgb(0,0,0)"><br></div><div class="gmail_default" style="color:rgb(0,0,0)">happy to help you.<br></div>regards, saurabh<div class="gmail-yj6qo gmail-ajU"><div id="gmail-:1pq" class="gmail-ajR" tabindex="0"><img class="gmail-ajT" src=""></div></div></div></div><div class="gmail_extra"><br><div class="gmail_quote">On Tue, Dec 13, 2016 at 11:17 PM, Estanislao Gavilan Pascual-Ahuir (PGR) <span dir="ltr">&lt;<a rel="nofollow" href="mailto:E.Gavilan-Pascual-Ahuir1@xxxxxxxxxxxxxxx" target="_blank">E.Gavilan-Pascual-Ahuir1@xxxxxxxxxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
+plotting/calculation. <br><br></div><div class="gmail_default" style="color:rgb(0,0,0)">regarding multiplot animation you can use the link where i put all the details and necessary steps for doing this task.<br>&#xA0;<br><a rel="nofollow" href="../fu_2016/msg00594.html">../fu_2016/msg00594.html</a><br></div><div class="gmail_default" style="color:rgb(0,0,0)"><br></div><div class="gmail_default" style="color:rgb(0,0,0)">happy to help you.<br></div>regards, saurabh<div class="gmail-yj6qo gmail-ajU"><div id="gmail-:1pq" class="gmail-ajR" tabindex="0"><img class="gmail-ajT" src=""></div></div></div></div><div class="gmail_extra"><br><div class="gmail_quote">On Tue, Dec 13, 2016 at 11:17 PM, Estanislao Gavilan Pascual-Ahuir (PGR) <span dir="ltr">&lt;<a rel="nofollow" href="mailto:E.Gavilan-Pascual-Ahuir1@xxxxxxxxxxxxxxx">E.Gavilan-Pascual-Ahuir1@xxxxxxxxxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
 
 
 
@@ -77,7 +77,7 @@ plotting/calculation. <br><br></div><div class="gmail_default" style="color:rgb(
 </p>
 </div>
 <hr style="display:inline-block;width:98%">
-<div id="m_471055074816337612divRplyFwdMsg" dir="ltr"><font style="font-size:11pt" color="#000000" face="Calibri, sans-serif"><b>From:</b> saurabh rathore &lt;<a rel="nofollow" href="mailto:rohitsrb2020@xxxxxxxxx" target="_blank">rohitsrb2020@xxxxxxxxx</a>&gt;<br>
+<div id="m_471055074816337612divRplyFwdMsg" dir="ltr"><font style="font-size:11pt" color="#000000" face="Calibri, sans-serif"><b>From:</b> saurabh rathore &lt;<a rel="nofollow" href="mailto:rohitsrb2020@xxxxxxxxx">rohitsrb2020@xxxxxxxxx</a>&gt;<br>
 <b>Sent:</b> 12 December 2016 21:57:26<br>
 <b>To:</b> Paulo B. Oliveira<br>
 <b>Cc:</b> Estanislao Gavilan Pascual-Ahuir (PGR); Ferret pmel<br>
@@ -92,7 +92,7 @@ plotting/calculation. <br><br></div><div class="gmail_default" style="color:rgb(
 <div class="gmail_default" style="color:rgb(0,0,0)">Paulo is correct but use can add few more thing in this command like time step size and memory size.
 <br>
 <br>
-repeat/l=2191:4380:1 ( save/append/file=<a rel="nofollow" href="http://normal.nc" target="_blank">normal.nc</a> sossheig; set mem/size = 1000 )<br>
+repeat/l=2191:4380:1 ( save/append/file=<a rel="nofollow" href="http://normal.nc">normal.nc</a> sossheig; set mem/size = 1000 )<br>
 <br>
 </div>
 <div class="gmail_default" style="color:rgb(0,0,0)">l=2191:4380:1 (here one is the time step size) and&#xA0; 1000 is the memory size (adjustable)<br>
@@ -112,17 +112,17 @@ repeat/l=2191:4380:1 ( save/append/file=<a rel="nofollow" href="http://normal.nc
 </div>
 <div class="gmail_extra"><br>
 <div class="gmail_quote">On Tue, Dec 13, 2016 at 5:05 AM, Paulo B. Oliveira <span dir="ltr">
-&lt;<a rel="nofollow" href="mailto:pboliveira@xxxxxxx" target="_blank">pboliveira@xxxxxxx</a>&gt;</span> wrote:<br>
+&lt;<a rel="nofollow" href="mailto:pboliveira@xxxxxxx">pboliveira@xxxxxxx</a>&gt;</span> wrote:<br>
 <blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
 <u></u>
 <div>Estanislao,<br>
 <br>
 Use a repeat loop and save/append... eg:<br>
-repeat/l=2191:4380 ( save/append/file=<a rel="nofollow" href="http://normal.nc" target="_blank">normal.nc</a> sossheig )<br>
+repeat/l=2191:4380 ( save/append/file=<a rel="nofollow" href="http://normal.nc">normal.nc</a> sossheig )<br>
 <br>
 You also might want to control if the data is to be saved in single or double precision (
-<a rel="nofollow" href="http://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/SET#_VPINDEXENTRY_setlist_outtype" target="_blank">
-http://ferret.pmel.noaa.gov/Fe<wbr>rret/documentation/users-guide<wbr>/commands-reference/SET#_VPIND<wbr>EXENTRY_setlist_outtype</a> )<br>
+<a rel="nofollow" href="../../documentation/users-guide/commands-reference/SET.html#_VPINDEXENTRY_setlist_outtype">
+../../documentation/users-guide/commands-reference/SET.html#_VPINDEXENTRY_setlist_outtype</a> )<br>
 <br>
 Cheers,<br>
 Paulo<br>
@@ -135,7 +135,7 @@ On Mon, 2016-12-12 at 17:20 +0000, Estanislao Gavilan Pascual-Ahuir (PGR) wrote:
 <br>
 I have I heavy nc file (5.3 GB)&#xA0;where I want to select an interval and save in a new nc file in order to make it lighter.&#xA0;But It excess the memory setting. I have tried to adjust the memory but it is never enough. I am&#xA0;using this command.<br>
 <br>
-&#xA0;SAVE/FILE=<a rel="nofollow" href="http://normal.nc/L=2191:4380" target="_blank">normal.nc/L=2191:43<wbr>80</a> sossheig<br>
+&#xA0;SAVE/FILE=<a rel="nofollow" href="http://normal.nc/L=2191:4380">normal.nc/L=2191:4380</a> sossheig<br>
 <br>
 <br>
 <br>

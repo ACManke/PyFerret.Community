@@ -62,7 +62,7 @@
     <p>Certainly a script can set up the striding according to the size
       of the grid and the output resolution of the image. Here&#39;s an
       example. Similar logic could be used to define a stride and use
-      the <a rel="nofollow" href="http://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/data-set-basics/NETCDF-DATA#_VPINDEXENTRY_168" target="_blank">SET
+      the <a rel="nofollow" href="../../documentation/users-guide/data-set-basics/NETCDF-DATA.html#_VPINDEXENTRY_168">SET
         AXIS/STRIDE command</a>, or to define strides on a sub-region of
       the grid.<br>
     </p>
@@ -76,7 +76,7 @@
       <tt>yes? let istride = MAX(1,INT(nx/xres + 0.5)</tt><tt>)</tt><br>
       <tt>yes? let jstride = </tt><tt><tt>MAX(1,</tt>INT(ny/yres + 0.5))</tt><br>
       <br>
-      <tt>yes? define symbol region_spec = [i=1:`nx`:`istride`,j=1:`ny`:`<wbr>jstride`]</tt><br>
+      <tt>yes? define symbol region_spec = [i=1:`nx`:`istride`,j=1:`ny`:`jstride`]</tt><br>
       <tt>
         yes? shade var($region_spec), lon2D($region_spec),
         lat2D($region_spec)</tt><span class="HOEnZb"><font color="#888888"><br>

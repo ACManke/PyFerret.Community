@@ -53,7 +53,7 @@
 <div dir="ltr"><div class="gmail_default" style="color:rgb(0,0,0)">Dear Ansley<br><br></div><div class="gmail_default" style="color:rgb(0,0,0)">Thank you for your email i understood that ferret use to do weighted averages and neglect the no data grid such as land point in some ocean data. But i also asked that how to get the ocean basin area for the multiplication with the ocean variable.<br><br></div><div class="gmail_default" style="color:rgb(0,0,0)">as is put an example of Total Ocean Heat Content<br><div class="gmail_default" style="color:rgb(0,0,0)">let OHC=heat[z=0:700@ave]&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; !! units are j/m^2<br></div><div class="gmail_default" style="color:rgb(0,0,0)">let TOHC=OHC*( ocean basin area )&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; !! units are j, TOHC=total OHC<br clear="all"></div><br>suppose for global ocean area is the complete box (i.e. x=360*110*1000, 
 y=180*110*1000) if it is so then this is covering land region also for the area calculation along
  with ocean region but our variable is defined over ocean only not on 
-land. is there a way such that we can get the ocean area over which the ocean variable is defined so that we can multiple only the area of valid cell rather than the whole box?<br>&#xA0;<br></div><div class="gmail_default" style="color:rgb(0,0,0)">regards, saurabh<br></div></div><div class="gmail_extra"><br><div class="gmail_quote">On Tue, Nov 29, 2016 at 5:09 AM, Ansley C. Manke <span dir="ltr">&lt;<a rel="nofollow" href="mailto:ansley.b.manke@xxxxxxxx" target="_blank">ansley.b.manke@xxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
+land. is there a way such that we can get the ocean area over which the ocean variable is defined so that we can multiple only the area of valid cell rather than the whole box?<br>&#xA0;<br></div><div class="gmail_default" style="color:rgb(0,0,0)">regards, saurabh<br></div></div><div class="gmail_extra"><br><div class="gmail_quote">On Tue, Nov 29, 2016 at 5:09 AM, Ansley C. Manke <span dir="ltr">&lt;<a rel="nofollow" href="mailto:ansley.b.manke@xxxxxxxx">ansley.b.manke@xxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
   
     
   
@@ -64,7 +64,7 @@ land. is there a way such that we can get the ocean area over which the ocean va
       and latitude, the average (and integrals) use correct area on the
       surface of the earth.&#xA0; Here is the documentation about how
       transformations are done:</p>
-    <p><a rel="nofollow" class="m_1343877204918633059moz-txt-link-freetext" href="http://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/variables-xpressions/XPRESSIONS#GeneralInfo" target="_blank">http://ferret.pmel.noaa.gov/<wbr>Ferret/documentation/users-<wbr>guide/variables-xpressions/<wbr>XPRESSIONS#GeneralInfo</a>&#xA0;
+    <p><a rel="nofollow" class="m_1343877204918633059moz-txt-link-freetext" href="../../documentation/users-guide/variables-xpressions/XPRESSIONS.html#GeneralInfo">../../documentation/users-guide/variables-xpressions/XPRESSIONS#GeneralInfo</a>&#xA0;
       Scroll down in that section to see the specific defintion of @AVE.<br>
     </p>
     <p>A general technique for understanding how Ferret makes, is to set
@@ -73,7 +73,7 @@ land. is there a way such that we can get the ocean area over which the ocean va
       variable, perhaps on a very coarse grid so you can more easily
       study the values.&#xA0; There&#39;s an example of that sort of thing, using
       a time average operation, in this FAQ, <b><a rel="nofollow" title="Regridding a
-          Time Series with @AVE" href="../../faq/regridding-a-time-series-with-ave" target="_blank">How
+          Time Series with @AVE" href="../../faq/regridding-a-time-series-with-ave">How
           can I determine the averaging weights when regridding with
           @AVE?</a></b></p><span class="HOEnZb"><font color="#888888">
     <p>Ansley<br>
@@ -107,7 +107,7 @@ land. is there a way such that we can get the ocean area over which the ocean va
           plot) so how to get the global ocean area only such that<br>
         </div>
         <div class="gmail_default" style="color:rgb(0,0,0)">let
-          OHC=heat[z=0:700@ave,x=@ave,y=<wbr>@ave]&#xA0; !! units are j/m^2<br>
+          OHC=heat[z=0:700@ave,x=@ave,y=@ave]&#xA0; !! units are j/m^2<br>
         </div>
         <div class="gmail_default" style="color:rgb(0,0,0)">let
           TOHC=OHC*(global ocean area)&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; !! units are j,
