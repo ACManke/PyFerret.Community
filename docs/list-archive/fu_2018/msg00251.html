@@ -139,7 +139,7 @@ style="color:rgb(0,0,0);font-size:12.8px;background-color:rgb(255,255,255);text-
 style="color:rgb(0,0,0);font-size:12.8px;background-color:rgb(255,255,255);text-decoration-style:initial;text-decoration-color:initial;float:none;display:inline">LIST/FORMAT=CDF/append/file=</span><a rel="nofollow"
 href="http://hist_russ.nc/m=1/k=1:4"
 style="color:rgb(17,85,204);font-size:12.8px;background-color:rgb(255,255,255)"
-target="_blank" moz-do-not-send="true">hi<wbr>st_russ.nc/m=1/k=1:4</a><span
+target="_blank" moz-do-not-send="true">hist_russ.nc/m=1/k=1:4</a><span
 style="color:rgb(0,0,0);font-size:12.8px;background-color:rgb(255,255,255);text-decoration-style:initial;text-decoration-color:initial;float:none;display:inline"><span>&#xA0;</span>histzd)&#xA0;
 &#xA0; &#xA0;</span>)&#xA0; &#xA0;while working with listing data. That
 time I was using nested double loop. Then I did try and
@@ -169,9 +169,9 @@ odd. I used these sets of instructions. <br>
 <div style="color:rgb(0,0,0)"><br>
 </div>
 <div style="color:rgb(0,0,0)">set
-list/xchunk=360/ychunk=126/zch<wbr>unk=9/tchunk=6/echunk=1/deflat<wbr>e=1/shuffle/ncformat=4<br>
+list/xchunk=360/ychunk=126/zchunk=9/tchunk=6/echunk=1/deflate=1/shuffle/ncformat=4<br>
 <br>
-(save/i=1/j=1/k=1/l=1/m=1/ilim<wbr>its=1:360/jlimits=1:126/klimit<wbr>s=1:36/mlimits=1:11/llimits=1:<wbr>312/file=<a rel="nofollow"
+(save/i=1/j=1/k=1/l=1/m=1/ilimits=1:360/jlimits=1:126/klimits=1:36/mlimits=1:11/llimits=1:312/file=<a rel="nofollow"
 href="http://hist_russ2.nc/clob"
 target="_blank" moz-do-not-send="true">hist_russ2.nc/clob</a>
 histzd;set mem/size=9000)<br>
@@ -181,7 +181,7 @@ repeat/range=1:312:6/name=ll
 (repeat/range=1:36:9/name=kk
 save/append/file=<a rel="nofollow"
 href="http://hist_russ2.nc/l=ll:ll+51/m=mm/k=kk:kk+3"
-target="_blank" moz-do-not-send="true">hist_russ2.nc<wbr>/l=`ll`:`ll+51`/m=`mm`/k=`kk`:<wbr>`kk+3`</a>
+target="_blank" moz-do-not-send="true">hist_russ2.nc/l=`ll`:`ll+51`/m=`mm`/k=`kk`:`kk+3`</a>
 histzd;set mem/size=9000);set mem/size=9000)</div>
 <div style="color:rgb(0,0,0)"><br>
 </div>
@@ -383,7 +383,7 @@ KK:1<br>
 &#xA0;!-&gt;
 LIST/FORMAT=CDF/append/file=<a rel="nofollow"
 href="http://hist_russ.nc/m=1/k=1:4"
-moz-do-not-send="true">hi<wbr>st_russ.nc/m=1/k=1:4</a>
+moz-do-not-send="true">hist_russ.nc/m=1/k=1:4</a>
 histzd<br>
 &#xA0;LISTing to
 file <a rel="nofollow"
@@ -405,7 +405,7 @@ HISTZD[L=&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
 1 ]<br>
 LIST/FORMAT=CDF/append/file=<a rel="nofollow" href="http://hist_russ.nc/m=1/k=1:4"
 target="_blank"
-moz-do-not-send="true">hi<wbr>st_russ.nc/m=1/k=1:4</a> histzd<br>
+moz-do-not-send="true">hist_russ.nc/m=1/k=1:4</a> histzd<br>
 Command file,
 command group,
 or REPEAT
@@ -424,7 +424,7 @@ command</div>
 style="color:rgb(0,0,0)"><br>
 </div>
 <div
-style="color:rgb(0,0,0)">save/i=1/j=1/k=1/l=1/m=1/ilimi<wbr>ts=1:1:360/jlimits=1:126/klimi<wbr>ts=1:36/mlimits=1:11/llimits=1<wbr>:312/file=<a rel="nofollow"
+style="color:rgb(0,0,0)">save/i=1/j=1/k=1/l=1/m=1/ilimits=1:1:360/jlimits=1:126/klimits=1:36/mlimits=1:11/llimits=1:312/file=<a rel="nofollow"
 href="http://myfile.nc/clob" moz-do-not-send="true">myfile.nc/clob</a>
 myvar</div>
 <div
@@ -486,13 +486,13 @@ LLIMITS save
 by level to
 reduce memory.<br>
 <br>
-save/i=1/j=1/k=1/l=1/m=1/ilimi<wbr>ts=1:1:360/jlimits=1:126/klimi<wbr>ts=1:36/mlimits=1:11/file=<a rel="nofollow"
-href="http://myfile.nc/clob" moz-do-not-send="true">myfi<wbr>le.nc/clob</a>
+save/i=1/j=1/k=1/l=1/m=1/ilimits=1:1:360/jlimits=1:126/klimits=1:36/mlimits=1:11/file=<a rel="nofollow"
+href="http://myfile.nc/clob" moz-do-not-send="true">myfile.nc/clob</a>
 myvar<br>
 repeat/l=1:312
 (repeat/range=1:11/name=mm (repeat/range=1:36/name=kk save/app/file=<a rel="nofollow"
 href="http://myfile.nc/m=mm/k=kk"
-target="_blank" moz-do-not-send="true">myfile.nc/m=`mm`<wbr>/k=`kk`</a>
+target="_blank" moz-do-not-send="true">myfile.nc/m=`mm`/k=`kk`</a>
 myvar))<br>
 <br>
 <br>
@@ -520,7 +520,7 @@ lossless
 compression<br>
 <br>
 SET
-LIST/XCHUNK=360/YCHUNK=126/ZCH<wbr>UNK=1/TCHUNK=1/ECHUNK=1/DEFLAT<wbr>E=1/SHUFFLE/NCFORMAT=4<br>
+LIST/XCHUNK=360/YCHUNK=126/ZCHUNK=1/TCHUNK=1/ECHUNK=1/DEFLATE=1/SHUFFLE/NCFORMAT=4<br>
 <br>
 If you want to
 change the
@@ -540,7 +540,7 @@ of 9 levels<br>
 repeat/l=1:312
 (repeat/range=1:11/name=mm (repeat/range=1:36:9/name=kk save/app/file=<a rel="nofollow"
 href="http://myfile.nc/m=mm/k=kk:kk+8"
-moz-do-not-send="true">myfile.nc/m=`mm`<wbr>/k=`kk`:`kk+8`</a>
+moz-do-not-send="true">myfile.nc/m=`mm`/k=`kk`:`kk+8`</a>
 myvar))<br>
 <br>
 <br>
@@ -580,7 +580,7 @@ style="color:rgb(0,0,0)"><br>
 <div
 style="color:rgb(0,0,0)">repeat/l=1:312:1
 (save/append/file=<a rel="nofollow" href="http://ensemble_mean.nc"
-moz-do-not-send="true">ensemble_mea<wbr>n.nc</a>
+moz-do-not-send="true">ensemble_mean.nc</a>
 var;set
 mem/size=xxxx)</div>
 <div
@@ -615,7 +615,7 @@ gr histzd<br>
 Ensemble
 Aggregetion
 Grid<br>
-&#xA0;name&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;<wbr>&#xA0; axis&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; #
+&#xA0;name&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; axis&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; #
 pts&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
 start&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; &#xA0; &#xA0; &#xA0;&#xA0; end&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; subset<br>
 &#xA0;LON&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; &#xA0; &#xA0;
@@ -762,7 +762,7 @@ look what
 does)&#xA0; :</div>
 <div><br>
 </div>
-<div>save/file=Yourfile.nc/ilimits=<wbr>1:144/i=1
+<div>save/file=Yourfile.nc/ilimits=1:144/i=1
 var[d=1];</div>
 <div>repeat/range=2:144/name=aa
 (save/file=<span
@@ -813,7 +813,7 @@ I made an
 ensemble
 variable of
 dimension
-lat,lon,depth,time,ensemble_me<wbr>mber i.e. 360,180,36,312,11. which is
+lat,lon,depth,time,ensemble_member i.e. 360,180,36,312,11. which is
 360 longitudes
 point, 180
 latitudes

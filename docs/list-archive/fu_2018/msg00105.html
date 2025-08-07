@@ -56,7 +56,7 @@ This may with the original grid of the variable xin, and what the RESHAPE is doi
 Also if xin has a z grid, then the global setting SET REGION/Z=4:5 applies to its original grid as well.&#xA0; You probably want to do the reshape on whatever the original grid is, and then only use the result for z=4:5.&#xA0; So, remove the SET REGION, and use<br>
 <br>
 <br>
-list/clob/file=&quot;Test1_4and5.tx<wbr>t&quot; xnew[z=4:5]<div class="HOEnZb"><div class="h5"><br>
+list/clob/file=&quot;Test1_4and5.txt&quot; xnew[z=4:5]<div class="HOEnZb"><div class="h5"><br>
 <br>
 <br>
 On 4/5/2018 12:12 PM, Muyin Wang - NOAA Affiliate wrote:<br>
@@ -67,14 +67,14 @@ I used the following commands to regrid the data like<br>
 <br>
 def axis/z=1:12:1 zmon<br>
 def axis/t=1980:2005:1 tyr<br>
-let outgrd = x[gx=xin]+y[gy=xin]+T[gt=tyr]+<wbr>Z[gz=zmon]<br>
+let outgrd = x[gx=xin]+y[gy=xin]+T[gt=tyr]+Z[gz=zmon]<br>
 <br>
 let xnew = reshape(xin,outgrd)<br>
 <br>
 Then I try to list the data out in ASCII format as<br>
 <br>
 set region/z=4:5<br>
-list/clob/file=&quot;Test1_4and5.tx<wbr>t&quot; xnew<br>
+list/clob/file=&quot;Test1_4and5.txt&quot; xnew<br>
 <br>
 But when I checked the file Test1_4and5.txt the output data include ALL months, not only April and May as I requested.<br>
 <br>

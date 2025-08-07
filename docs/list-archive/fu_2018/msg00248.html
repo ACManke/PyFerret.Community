@@ -150,7 +150,7 @@ following error.<br>
 REPEAT: L=2<br>
 !-&gt; REPEAT: MM:1<br>
 !-&gt; REPEAT: KK:1<br>
-&#xA0;!-&gt; LIST/FORMAT=CDF/append/file=<a rel="nofollow" href="http://hist_russ.nc/m=1/k=1:4">hi<wbr>st_russ.nc/m=1/k=1:4</a>
+&#xA0;!-&gt; LIST/FORMAT=CDF/append/file=<a rel="nofollow" href="http://hist_russ.nc/m=1/k=1:4">hist_russ.nc/m=1/k=1:4</a>
 histzd<br>
 &#xA0;LISTing to file <a rel="nofollow" href="http://hist_russ.nc">hist_russ.nc</a><br>
 &#xA0;**TMAP ERR: Requested data range is
@@ -159,7 +159,7 @@ outside of data set limits<br>
 HISTZD[L=&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 2 :&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 2 ]
 Found: HISTZD[L=&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1
 :&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1 ]<br>
-LIST/FORMAT=CDF/append/file=<a rel="nofollow" href="http://hist_russ.nc/m=1/k=1:4">hi<wbr>st_russ.nc/m=1/k=1:4</a>
+LIST/FORMAT=CDF/append/file=<a rel="nofollow" href="http://hist_russ.nc/m=1/k=1:4">hist_russ.nc/m=1/k=1:4</a>
 histzd<br>
 Command file, command group, or REPEAT
 execution aborted</div>
@@ -169,7 +169,7 @@ execution aborted</div>
 llimits also in this command</div>
 <div style="color:rgb(0,0,0)"><br>
 </div>
-<div style="color:rgb(0,0,0)">save/i=1/j=1/k=1/l=1/m=1/ilimi<wbr>ts=1:1:360/jlimits=1:126/klimi<wbr>ts=1:36/mlimits=1:11/llimits=1<wbr>:312/file=<a rel="nofollow" href="http://myfile.nc/clob">myfile.nc/clob</a>
+<div style="color:rgb(0,0,0)">save/i=1/j=1/k=1/l=1/m=1/ilimits=1:1:360/jlimits=1:126/klimits=1:36/mlimits=1:11/llimits=1:312/file=<a rel="nofollow" href="http://myfile.nc/clob">myfile.nc/clob</a>
 myvar</div>
 <div style="color:rgb(0,0,0)"><br>
 </div>
@@ -200,12 +200,12 @@ loops<br>
 not need to specify LLIMITS save
 by level to reduce memory.<br>
 <br>
-save/i=1/j=1/k=1/l=1/m=1/ilimi<wbr>ts=1:1:360/jlimits=1:126/klimi<wbr>ts=1:36/mlimits=1:11/file=<a rel="nofollow" href="http://myfile.nc/clob">myfi<wbr>le.nc/clob</a>
+save/i=1/j=1/k=1/l=1/m=1/ilimits=1:1:360/jlimits=1:126/klimits=1:36/mlimits=1:11/file=<a rel="nofollow" href="http://myfile.nc/clob">myfile.nc/clob</a>
 myvar<br>
 repeat/l=1:312
 (repeat/range=1:11/name=mm
 (repeat/range=1:36/name=kk
-save/app/file=<a rel="nofollow" href="http://myfile.nc/m=mm/k=kk">myfile.nc/m=`mm`<wbr>/k=`kk`</a>
+save/app/file=<a rel="nofollow" href="http://myfile.nc/m=mm/k=kk">myfile.nc/m=`mm`/k=`kk`</a>
 myvar))<br>
 <br>
 <br>
@@ -221,7 +221,7 @@ using deflation and chunking for
 lossless compression<br>
 <br>
 SET
-LIST/XCHUNK=360/YCHUNK=126/ZCH<wbr>UNK=1/TCHUNK=1/ECHUNK=1/DEFLAT<wbr>E=1/SHUFFLE/NCFORMAT=4<br>
+LIST/XCHUNK=360/YCHUNK=126/ZCHUNK=1/TCHUNK=1/ECHUNK=1/DEFLATE=1/SHUFFLE/NCFORMAT=4<br>
 <br>
 If you want to change the
 chunking for the X,Y,Z and E
@@ -235,7 +235,7 @@ e.g. if ZCHUNK=9<br>
 repeat/l=1:312
 (repeat/range=1:11/name=mm
 (repeat/range=1:36:9/name=kk
-save/app/file=<a rel="nofollow" href="http://myfile.nc/m=mm/k=kk:kk+8">myfile.nc/m=`mm`<wbr>/k=`kk`:`kk+8`</a>
+save/app/file=<a rel="nofollow" href="http://myfile.nc/m=mm/k=kk:kk+8">myfile.nc/m=`mm`/k=`kk`:`kk+8`</a>
 myvar))<br>
 <br>
 <br>
@@ -264,7 +264,7 @@ is more like <br>
 <div style="color:rgb(0,0,0)"><br>
 </div>
 <div style="color:rgb(0,0,0)">repeat/l=1:312:1
-(save/append/file=<a rel="nofollow" href="http://ensemble_mean.nc">ensemble_mea<wbr>n.nc</a>
+(save/append/file=<a rel="nofollow" href="http://ensemble_mean.nc">ensemble_mean.nc</a>
 var;set mem/size=xxxx)</div>
 <div style="color:rgb(0,0,0)"><br>
 </div>
@@ -285,7 +285,7 @@ gr histzd<br>
 &#xA0;&#xA0;&#xA0; GRID (G013)&#xA0;
 Ensemble Aggregetion
 Grid<br>
-&#xA0;name&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;<wbr>&#xA0; axis&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; #
+&#xA0;name&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; axis&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; #
 pts&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
 start&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; &#xA0; &#xA0;
 &#xA0;&#xA0;
@@ -397,7 +397,7 @@ look what
 does)&#xA0; :</div>
 <div><br>
 </div>
-<div>save/file=Yourfile.nc/ilimits=<wbr>1:144/i=1
+<div>save/file=Yourfile.nc/ilimits=1:144/i=1
 var[d=1];</div>
 <div>repeat/range=2:144/name=aa
 (save/file=<span style="font-size:small;background-color:rgb(255,255,255);text-decoration-style:initial;text-decoration-color:initial;float:none;display:inline">Yourfile.nc</span>/append
@@ -432,7 +432,7 @@ I made an
 ensemble
 variable of
 dimension
-lat,lon,depth,time,ensemble_me<wbr>mber i.e. 360,180,36,312,11. which is
+lat,lon,depth,time,ensemble_member i.e. 360,180,36,312,11. which is
 360 longitudes
 point, 180
 latitudes

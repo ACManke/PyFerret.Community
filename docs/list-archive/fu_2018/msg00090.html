@@ -57,9 +57,9 @@ example, change it to an implied range of averaging in X,<br></p><p>
 <span></span></p>
 <div><span><tt><br>
 </tt><tt>&#xA0; yes? set data levitus_climatology</tt><tt><br>
-</tt><tt>&#xA0; yes? let mt = temp[x=@AVE,y=90S:90N@AVE,z=0:<wbr>6000@AVE]</tt><span class="gmail-"><tt><br>
+</tt><tt>&#xA0; yes? let mt = temp[x=@AVE,y=90S:90N@AVE,z=0:6000@AVE]</tt><span class="gmail-"><tt><br>
 </tt><tt>&#xA0; yes? let a = {0, 0, 1, 1}</tt><tt><br>
-</tt><tt>&#xA0; yes? plot/line/symbol/vlimits=-1:4/<wbr>hlimits=0:5 a*mt</tt><tt><br>
+</tt><tt>&#xA0; yes? plot/line/symbol/vlimits=-1:4/hlimits=0:5 a*mt</tt><tt><br>
 </tt></span><tt>&#xA0;&#xA0; **ERROR: inconsistent sizes of data regions: can&#39;t
 label X axis of MT</tt><tt><br>
 </tt><br>

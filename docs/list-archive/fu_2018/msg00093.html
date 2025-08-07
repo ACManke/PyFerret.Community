@@ -94,7 +94,7 @@ file name. How do I convert:</p>
  
  
  
-<br></div><div class="gmail_extra"><br><div class="gmail_quote">On Tue, Jan 31, 2017 at 2:57 AM, William Kessler <span dir="ltr">&lt;<a rel="nofollow" href="mailto:william.s.kessler@xxxxxxxx">william.s.kessler@xxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">RSS has released a new version (v2) of the CCMP wind product, consistently analyzed from Jul 1987 through May 2016 (<a rel="nofollow" href="http://www.remss.com/measurements/ccmp" rel="noreferrer">http://www.remss.com/<wbr>measurements/ccmp</a>). As far as I can tell, this is only available from them, and only by ftp-ing the individual daily files.<br>
+<br></div><div class="gmail_extra"><br><div class="gmail_quote">On Tue, Jan 31, 2017 at 2:57 AM, William Kessler <span dir="ltr">&lt;<a rel="nofollow" href="mailto:william.s.kessler@xxxxxxxx">william.s.kessler@xxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">RSS has released a new version (v2) of the CCMP wind product, consistently analyzed from Jul 1987 through May 2016 (<a rel="nofollow" href="http://www.remss.com/measurements/ccmp" rel="noreferrer">http://www.remss.com/measurements/ccmp</a>). As far as I can tell, this is only available from them, and only by ftp-ing the individual daily files.<br>
 <br>
 The whole global, 28-year fields are more than 285Gb. I want to write a script that will loop through the 10563 days, make daily averages from the four 6-hr values in each file, select my region of interest, and append that to a much smaller file (then delete the ftp-ed file).<br>
 <br>
@@ -102,7 +102,7 @@ The whole global, 28-year fields are more than 285Gb. I want to write a script t
 <br>
 My problem is to generate the filenames, which look like the example below:<br>
 <br>
-<a rel="nofollow" href="http://CCMP_Wind_Analysis_19910825_V02.0_L3.0_RSS.nc" rel="noreferrer">CCMP_Wind_Analysis_19910825_<wbr>V02.0_L3.0_RSS.nc</a><br>
+<a rel="nofollow" href="http://CCMP_Wind_Analysis_19910825_V02.0_L3.0_RSS.nc" rel="noreferrer">CCMP_Wind_Analysis_19910825_V02.0_L3.0_RSS.nc</a><br>
 <br>
 It&#39;s pretty straightforward to define a daily time axis spanning the CCMP dates, REPEAT-loop on the days, and come up with the year/month/day number needed for the filename (e.g. DAYS1900TOYMDHMS). But can anyone sugest a simple way to construct the filename given the need to have leading zeroes for months before October and days of the month less than 10?<br>
 <br>

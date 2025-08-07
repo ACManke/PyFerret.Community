@@ -52,7 +52,7 @@
 <hr>
 <!--X-Head-Body-Sep-End-->
 <!--X-Body-of-Message-->
-<div dir="ltr"><div class="gmail_default" style="color:rgb(0,0,0)">Dear Russ</div><div class="gmail_default" style="color:rgb(0,0,0)"><br></div><div class="gmail_default" style="color:rgb(0,0,0)">Following steps working correctly but just for L=1 when it goes to L=2 it is showing following error.<br></div><div class="gmail_default" style="color:rgb(0,0,0)"><br></div><div class="gmail_default" style="color:rgb(0,0,0)">!-&gt; REPEAT: L=2<br>!-&gt; REPEAT: MM:1<br>!-&gt; REPEAT: KK:1<br>&#xA0;!-&gt; LIST/FORMAT=CDF/append/file=<a rel="nofollow" href="http://hist_russ.nc/m=1/k=1:4">hist_russ.nc/m=1/k=1:4</a> histzd<br>&#xA0;LISTing to file <a rel="nofollow" href="http://hist_russ.nc">hist_russ.nc</a><br>&#xA0;**TMAP ERR: Requested data range is outside of data set limits<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Expected: HISTZD[L=&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 2 :&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 2 ] Found: HISTZD[L=&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1 :&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1 ]<br>LIST/FORMAT=CDF/append/file=<a rel="nofollow" href="http://hist_russ.nc/m=1/k=1:4">hist_russ.nc/m=1/k=1:4</a> histzd<br>Command file, command group, or REPEAT execution aborted</div><div class="gmail_default" style="color:rgb(0,0,0)"><br></div><div class="gmail_default" style="color:rgb(0,0,0)">But if I put llimits also in this command</div><div class="gmail_default" style="color:rgb(0,0,0)"><br></div><div class="gmail_default" style="color:rgb(0,0,0)">save/i=1/j=1/k=1/l=1/m=1/<wbr>ilimits=1:1:360/jlimits=1:126/<wbr>klimits=1:36/mlimits=1:11/llimits=1:312/<wbr>file=<a rel="nofollow" href="http://myfile.nc/clob">myfile.nc/clob</a>
+<div dir="ltr"><div class="gmail_default" style="color:rgb(0,0,0)">Dear Russ</div><div class="gmail_default" style="color:rgb(0,0,0)"><br></div><div class="gmail_default" style="color:rgb(0,0,0)">Following steps working correctly but just for L=1 when it goes to L=2 it is showing following error.<br></div><div class="gmail_default" style="color:rgb(0,0,0)"><br></div><div class="gmail_default" style="color:rgb(0,0,0)">!-&gt; REPEAT: L=2<br>!-&gt; REPEAT: MM:1<br>!-&gt; REPEAT: KK:1<br>&#xA0;!-&gt; LIST/FORMAT=CDF/append/file=<a rel="nofollow" href="http://hist_russ.nc/m=1/k=1:4">hist_russ.nc/m=1/k=1:4</a> histzd<br>&#xA0;LISTing to file <a rel="nofollow" href="http://hist_russ.nc">hist_russ.nc</a><br>&#xA0;**TMAP ERR: Requested data range is outside of data set limits<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Expected: HISTZD[L=&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 2 :&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 2 ] Found: HISTZD[L=&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1 :&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1 ]<br>LIST/FORMAT=CDF/append/file=<a rel="nofollow" href="http://hist_russ.nc/m=1/k=1:4">hist_russ.nc/m=1/k=1:4</a> histzd<br>Command file, command group, or REPEAT execution aborted</div><div class="gmail_default" style="color:rgb(0,0,0)"><br></div><div class="gmail_default" style="color:rgb(0,0,0)">But if I put llimits also in this command</div><div class="gmail_default" style="color:rgb(0,0,0)"><br></div><div class="gmail_default" style="color:rgb(0,0,0)">save/i=1/j=1/k=1/l=1/m=1/ilimits=1:1:360/jlimits=1:126/klimits=1:36/mlimits=1:11/llimits=1:312/file=<a rel="nofollow" href="http://myfile.nc/clob">myfile.nc/clob</a>
 myvar</div><div class="gmail_default" style="color:rgb(0,0,0)"><br></div><div class="gmail_default" style="color:rgb(0,0,0)">then my code is running without any error. So is it saving the correct data ? for all the models and for all time steps ?</div><div class="gmail_default" style="color:rgb(0,0,0)"><br></div><div class="gmail_default" style="color:rgb(0,0,0)">regards, saurabh<br></div></div><div class="gmail_extra"><br><div class="gmail_quote">On Mon, Jul 23, 2018 at 1:59 PM, Russ Fiedler <span dir="ltr">&lt;<a rel="nofollow" href="mailto:russell.fiedler@xxxxxxxx">russell.fiedler@xxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
  
  
@@ -66,10 +66,10 @@ If you really need to save it then you you can use multiple loops<br>
 ! assume L is unlimited so we do not need to specify LLIMITS save
 by level to reduce memory.<br>
 <br>
-save/i=1/j=1/k=1/l=1/m=1/<wbr>ilimits=1:1:360/jlimits=1:126/<wbr>klimits=1:36/mlimits=1:11/<wbr>file=<a rel="nofollow" href="http://myfile.nc/clob">myfile.nc/clob</a>
+save/i=1/j=1/k=1/l=1/m=1/ilimits=1:1:360/jlimits=1:126/klimits=1:36/mlimits=1:11/file=<a rel="nofollow" href="http://myfile.nc/clob">myfile.nc/clob</a>
 myvar<br>
 repeat/l=1:312 (repeat/range=1:11/name=mm
-(repeat/range=1:36/name=kk save/app/file=<a rel="nofollow" href="http://myfile.nc/m=mm/k=kk">myfile.nc/m=`mm`<wbr>/k=`kk`</a>
+(repeat/range=1:36/name=kk save/app/file=<a rel="nofollow" href="http://myfile.nc/m=mm/k=kk">myfile.nc/m=`mm`/k=`kk`</a>
 myvar))<br>
 <br>
 <br>
@@ -82,7 +82,7 @@ Also I&#39;d strongly recommend using deflation and chunking for
 lossless compression<br>
 <br>
 SET
-LIST/XCHUNK=360/YCHUNK=126/<wbr>ZCHUNK=1/TCHUNK=1/ECHUNK=1/<wbr>DEFLATE=1/SHUFFLE/NCFORMAT=4<br>
+LIST/XCHUNK=360/YCHUNK=126/ZCHUNK=1/TCHUNK=1/ECHUNK=1/DEFLATE=1/SHUFFLE/NCFORMAT=4<br>
 <br>
 If you want to change the chunking for the X,Y,Z and E dimensions&#xA0;
 then you should change the looping above to match<br>
@@ -92,7 +92,7 @@ e.g. if ZCHUNK=9<br>
 ! Save blocks of 9 levels<br>
 repeat/l=1:312 (repeat/range=1:11/name=mm
 (repeat/range=1:36:9/name=kk
-save/app/file=<a rel="nofollow" href="http://myfile.nc/m=mm/k=kk:kk+8">myfile.nc/m=`mm`<wbr>/k=`kk`:`kk+8`</a> myvar))<br>
+save/app/file=<a rel="nofollow" href="http://myfile.nc/m=mm/k=kk:kk+8">myfile.nc/m=`mm`/k=`kk`:`kk+8`</a> myvar))<br>
 <br>
 <br>
 Cheers,<br>
@@ -113,7 +113,7 @@ you mentioned is more like <br>
 <div class="gmail_default" style="color:rgb(0,0,0)"><br>
 </div>
 <div class="gmail_default" style="color:rgb(0,0,0)">repeat/l=1:312:1
-(save/append/file=<a rel="nofollow" href="http://ensemble_mean.nc">ensemble_<wbr>mean.nc</a> var;set
+(save/append/file=<a rel="nofollow" href="http://ensemble_mean.nc">ensemble_mean.nc</a> var;set
 mem/size=xxxx)</div>
 <div class="gmail_default" style="color:rgb(0,0,0)"><br>
 </div>
@@ -126,7 +126,7 @@ are the 11 models</div>
 </div>
 <div class="gmail_default" style="color:rgb(0,0,0)">sh gr histzd<br>
 &#xA0;&#xA0;&#xA0; GRID (G013)&#xA0; Ensemble Aggregetion Grid<br>
-&#xA0;name&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;<wbr>&#xA0; axis&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; #
+&#xA0;name&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; axis&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; #
 pts&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; start&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; &#xA0; &#xA0; &#xA0;&#xA0;
 end&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; subset<br>
 &#xA0;LON&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; LONGITUDE&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 360mr&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;
@@ -197,7 +197,7 @@ can further look what &#39;ilimits&#39; and &#39;klimits&#39;
 etc. does)&#xA0; :</div>
 <div><br>
 </div>
-<div>save/file=Yourfile.nc/ilimits=<wbr>1:144/i=1
+<div>save/file=Yourfile.nc/ilimits=1:144/i=1
 var[d=1];</div>
 <div>repeat/range=2:144/name=aa (save/file=<span style="font-size:small;background-color:rgb(255,255,255);text-decoration-style:initial;text-decoration-color:initial;float:none;display:inline">Yourfile.nc</span>/append
 var[d=1,i=`aa`;])<br>
@@ -224,7 +224,7 @@ Ferreters,</div>
 CMIP models data in
 lat,lon,time,depth. I made an
 ensemble variable of dimension
-lat,lon,depth,time,ensemble_me<wbr>mber
+lat,lon,depth,time,ensemble_member
 i.e. 360,180,36,312,11. which is 360
 longitudes point, 180 latitudes
 points, 36 depth levels, 312 time
