@@ -56,19 +56,19 @@
 &#xA0;normal&#xA0;&#xA0;&#xA0; Z<br>&#xA0;normal&#xA0;&#xA0;&#xA0; T<br><br>&#xA0;list/I=30:35/J=20:25 temp<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; VARIABLE : TEMP<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; FILENAME : temp.dat<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; SUBSET&#xA0;&#xA0; : 6 by 6 points (LONGITUDE-LATITUDE)<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 88.416E88.458E88.5E&#xA0; 88.541E88.583E88.625E<br>
 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 30&#xA0;&#xA0;&#xA0;&#xA0; 31&#xA0;&#xA0;&#xA0;&#xA0; 32&#xA0;&#xA0;&#xA0;&#xA0; 33&#xA0;&#xA0;&#xA0;&#xA0; 34&#xA0;&#xA0;&#xA0;&#xA0; 35<br>&#xA0; / 25:&#xA0; 0.792&#xA0; 0.391 -0.475 -0.475 -0.866 -1.139<br>&#xA0; / 24: -0.561 -0.471 -0.313 -0.244 -0.342 -1.130<br>&#xA0; / 23: -0.367 -0.341 -0.518 -0.998 -1.088 -1.197<br>&#xA0; / 22: -0.716 -0.729 -0.587 -0.088 -0.527 -1.140<br>
 &#xA0; / 21:&#xA0; 0.619 -0.095 -0.314 -1.212 -1.259 -1.259<br>&#xA0; / 20: -0.393 -0.173 -0.404 -0.080 -1.269 -1.776<br><br>shade temp<br>&#xA0;**ERROR: illegal limits: TEMP is not in the range Y=20N:20N<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Axis extremes are Y=20N:20N<br>
-<br><br><br></div></div><div class="gmail_extra"><br><br><div class="gmail_quote">On 2 May 2013 14:46, Akshay Hegde <span dir="ltr">&lt;<a rel="nofollow" href="mailto:akshay.k.hegde@xxxxxxxxx" target="_blank">akshay.k.hegde@xxxxxxxxx</a>&gt;</span> wrote:<br>
+<br><br><br></div></div><div class="gmail_extra"><br><br><div class="gmail_quote">On 2 May 2013 14:46, Akshay Hegde <span dir="ltr">&lt;<a rel="nofollow" href="mailto:akshay.k.hegde@xxxxxxxxx">akshay.k.hegde@xxxxxxxxx</a>&gt;</span> wrote:<br>
 <blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir="ltr"><div><div>Dear Mishra<br><br></div>try this<br><br>file/var=&quot;xpoints,ypoints&quot; temp.dat <br><div class="im">
 let xdif = xpoints[I=@DDF]<br></div><div class="im">let xcross = xdif[I=@EVNT:0.0415]<br></div>list/i=1:5&#xA0; xpoints,xdif,xcross<div class="im"><br><br>
 LET npts = `xcross[I=@LOC:1]`<br><br></div><div class="im">DEFINE AXIS/X/UNITS=degrees_east&#xA0; xaxis = xpoints[I=1:`npts`]<br><br></div>LET total = `ypoints,RETURN=isize`<br><br>DEFINE AXIS/Y/UNITS=degrees_south/npoints=`npts` yaxis=ypoints[I=1:`total`]<br>
 
 &#xA0;<br><br>sh axis y/yaxis <br><br>! Works try this<br><br>def grid/x=xaxis/y=yaxis mygrid<br><br>sh g mygrid<span class="HOEnZb"><font color="#888888"><br><br></font></span></div><span class="HOEnZb"><font color="#888888">- Akshay Hegde<br>
 <div><br><br></div></font></span></div><div class="HOEnZb"><div class="h5"><div class="gmail_extra"><br><br><div class="gmail_quote">
-On Thu, May 2, 2013 at 1:38 PM, surja kanta Mishra <span dir="ltr">&lt;<a rel="nofollow" href="mailto:surmat84@xxxxxxxxx" target="_blank">surmat84@xxxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
+On Thu, May 2, 2013 at 1:38 PM, surja kanta Mishra <span dir="ltr">&lt;<a rel="nofollow" href="mailto:surmat84@xxxxxxxxx">surmat84@xxxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
 
 <div dir="ltr">Dear all,<br>&#xA0;<br><div>&#xA0;while I am trying to convert an ASCII file to 
 Netcdf file&#xA0; for contour plot of temperature.&#xA0; I have tried as an 
 example is in the following link :<br>
-&#xA0;<a rel="nofollow" href="../../faq/reading-ascii-data-representing-a-grid" target="_blank">../../faq/reading-ascii-data-representing-a-grid</a><br><br>The error is coming as<br>
+&#xA0;<a rel="nofollow" href="../../faq/reading-ascii-data-representing-a-grid">../../faq/reading-ascii-data-representing-a-grid</a><br><br>The error is coming as<br>
 
 
 <br>
@@ -97,12 +97,12 @@ yes? LET total = `ypoints,RETURN=isize`<br>&#xA0;!-&gt; DEFINE VARIABLE total = 
 Junior Research Fellow <i>(CSIR-NET, Funded by UGC)</i></div><div>School of Oceanographic Studies</div><div>Jadavpur University</div><div>Kolkata - 700032</div><div>India.</div><div><br></div><div>Contacts: +91 9681091928</div>
 
 
-<div>Alternate E-mail: <a rel="nofollow" href="mailto:sur_km@xxxxxxxxxxx" target="_blank">sur_km@xxxxxxxxxxx</a>&#xA0;</div>
+<div>Alternate E-mail: <a rel="nofollow" href="mailto:sur_km@xxxxxxxxxxx">sur_km@xxxxxxxxxxx</a>&#xA0;</div>
 </div></font></span></div>
 </blockquote></div><br></div>
 </div></div></blockquote></div><br><br clear="all"><br>-- <br><div><b>Surja...</b></div><div><b><div style="display:inline!important"><b>...........................................................................................</b></div>
 </b></div><b>Surja Kanta Mishra</b><div>Junior Research Fellow <i>(CSIR-NET, Funded by UGC)</i></div><div>School of Oceanographic Studies</div><div>Jadavpur University</div><div>Kolkata - 700032</div><div>India.</div><div>
-<br></div><div>Contacts: +91 9681091928</div><div>Alternate E-mail: <a rel="nofollow" href="mailto:sur_km@xxxxxxxxxxx" target="_blank">sur_km@xxxxxxxxxxx</a>&#xA0;</div>
+<br></div><div>Contacts: +91 9681091928</div><div>Alternate E-mail: <a rel="nofollow" href="mailto:sur_km@xxxxxxxxxxx">sur_km@xxxxxxxxxxx</a>&#xA0;</div>
 </div>
 
 <!--X-Body-of-Message-End-->

@@ -61,7 +61,7 @@
     timestep 1, the data in file 2 at timestep 2, etc.&nbsp; In Ferret we
     call this adding a "timestamp".<br>
     <br>
-<a rel="nofollow" class="moz-txt-link-freetext" href="http://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/SAVE#timestamp">http://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/SAVE#timestamp</a><br>
+<a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/users-guide/commands-reference/SAVE.html#timestamp">../../documentation/users-guide/commands-reference/SAVE#timestamp</a><br>
     <br>
     You've defined a time axis; what is needed is <br>
     <blockquote>
@@ -75,7 +75,7 @@
       <tt>let lat1 = lat1_value + </tt><tt>timestamp;\</tt><br>
       <tt>list/app/file=</tt><tt><a rel="nofollow" moz-do-not-send="true"
           href="http://daytime8_ma20.nc/format=cdf/clob/l=yy"
-          target="_blank">daytime8_ma20.nc/format=cdf/clob/l=`yy`</a></tt><tt>
+         >daytime8_ma20.nc/format=cdf/clob/l=`yy`</a></tt><tt>
         lat1,...</tt><br>
     </blockquote>
     <br>
@@ -131,19 +131,19 @@ cite=""
                 if `yy eq 1` then ;\<br>
                 list/file=<a rel="nofollow" moz-do-not-send="true"
                   href="http://daytime8_ma20.nc/format=cdf/clob/l=yy/llimits=1:23"
-                  target="_blank">daytime8_ma20.nc/format=cdf/clob/l=`yy`/llimits=1:23</a>
+                 >daytime8_ma20.nc/format=cdf/clob/l=`yy`/llimits=1:23</a>
                 lat1,lat2,lon1,lon2,month,day,lct,edmax;\<br>
                 else ;\<br>
                 list/app/file=<a rel="nofollow" moz-do-not-send="true"
                   href="http://daytime8_ma20.nc/format=cdf/clob/l=yy"
-                  target="_blank">daytime8_ma20.nc/format=cdf/clob/l=`yy`</a>
+                 >daytime8_ma20.nc/format=cdf/clob/l=`yy`</a>
                 lat1,lat2,lon1,lon2,month,day,lct,edmax;\<br>
                 endif ;\<br>
                 can da/all ;\<br>
                 )<br>
               </div>
               data file <a rel="nofollow" moz-do-not-send="true"
-                href="http://daytime8_ma20.nc" target="_blank">daytime8_ma20.nc</a>
+                href="http://daytime8_ma20.nc">daytime8_ma20.nc</a>
               created but with the parameters of 23(i.e. last data file)
               data file. But in a .dat the parameters of all 23 data
               file are created saved(if I remove the 'format=cdf"
@@ -173,12 +173,12 @@ cite=""
               if `glat1 le 27 and glon1 le 93` then ;\<br>
               list/file=<a rel="nofollow" moz-do-not-send="true"
                 href="http://nighttime8_ma19.nc/format=cdf/clob/l=yy/llimits=1:23"
-                target="_blank">nighttime8_ma19.nc/format=cdf/clob/l=`yy`/llimits=1:23</a>
+               >nighttime8_ma19.nc/format=cdf/clob/l=`yy`/llimits=1:23</a>
               glat1,glon1,glat2,glon2,month,day,lct,edmax;\<br>
               elif `glat2 le 27 and glon2 le 93` then;\<br>
               list/app/file=<a rel="nofollow" moz-do-not-send="true"
                 href="http://nighttime8_ma19.nc/format=cdf/clob/l=yy"
-                target="_blank">nighttime8_ma19.nc/format=cdf/clob/l=`yy`</a>
+               >nighttime8_ma19.nc/format=cdf/clob/l=`yy`</a>
               glat1,glon1,glat2,glon2,month,day,lct,edmax;\<br>
               else ;\<br>
               list/file=nighttime8_ma20.dat/head/clob/l=`yy`

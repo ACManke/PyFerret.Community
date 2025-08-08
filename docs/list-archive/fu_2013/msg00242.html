@@ -57,7 +57,7 @@
 let npts = `wnd10,RETURN=lsize`;\<br>def axis/t=&quot;01-jan-`yr`&quot;:&quot;31-dec-`yr`&quot;/npoint=`npts`/units=days t_day;\<br>def grid/t=t_day gg;\&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <br>let var1_with_T = t[g=gg]*0 + wnd10;\<br>let var2_with_T = t[g=gg]*0 + err;\<br>
 LET/units=&quot;`wnd10,RETURN=units`&quot;/TITLE=&quot;Daily mean neutral wind speed at 10m&quot; Wind_Speed = var1_with_T;\<br>LET/units=&quot;`err,RETURN=units`&quot;/TITLE=&quot;Estimated error of analysed neutral wind speed at 10m&quot; Error = var2_with_T;\<br>
 save/append/file=<a rel="nofollow" href="http://output_filename.nc/format=cdf">output_filename.nc/format=cdf</a> Wind_Speed[l=1:`npts`],error[l=1:`npts`];\<br>canc data 1)<br><br><br><br></div><div>Akshay Hegde,<br></div><div>National Institute of Oceanography,<br>
-</div><div>Goa, India.<br></div><div><br></div><div><br></div></div></div><div class="gmail_extra"><br><br><div class="gmail_quote">On Wed, Apr 3, 2013 at 4:49 PM, Don DNA <span dir="ltr">&lt;<a rel="nofollow" href="mailto:don_vbe@xxxxxxxxx" target="_blank">don_vbe@xxxxxxxxx</a>&gt;</span> wrote:<br>
+</div><div>Goa, India.<br></div><div><br></div><div><br></div></div></div><div class="gmail_extra"><br><br><div class="gmail_quote">On Wed, Apr 3, 2013 at 4:49 PM, Don DNA <span dir="ltr">&lt;<a rel="nofollow" href="mailto:don_vbe@xxxxxxxxx">don_vbe@xxxxxxxxx</a>&gt;</span> wrote:<br>
 <blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">I don&#39;t want to do either averaging or daily to monthly or monthly to yearly<br>
 <br>
 see first daily file has l length is 365(days), second may contains 366 days,<br>
@@ -106,7 +106,7 @@ what do you want to do with the overlapping period?<br>
 As I said, please read up on the &quot;define axis&quot; command in the manual.<br>
 You can find it here:<br>
 <br>
-<a rel="nofollow" href="http://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/DEFINE" target="_blank">http://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/DEFINE</a><br>
+<a rel="nofollow" href="../../documentation/users-guide/commands-reference/DEFINE.html">../../documentation/users-guide/commands-reference/DEFINE</a><br>
 <br>
 You&#39;ll need to decide if you want all data on a daily axis, or all<br>
 data on a monthly axis.&#xA0; Once you decide that,<br>
@@ -138,7 +138,7 @@ BMT ARGOSS<br>
 Tel:&#xA0; &#xA0; &#xA0; &#xA0; +31 (0)527-242299<br>
 Fax:&#xA0; &#xA0; &#xA0; &#xA0; +31 (0)527-242016<br>
 E-mail:&#xA0; &#xA0; <a rel="nofollow" href="mailto:hein.zelle@xxxxxxxxxxxxx">hein.zelle@xxxxxxxxxxxxx</a><br>
-Website:&#xA0; &#xA0; <a rel="nofollow" href="http://www.bmtargoss.com" target="_blank">www.bmtargoss.com</a><br>
+Website:&#xA0; &#xA0; <a rel="nofollow" href="http://www.bmtargoss.com">www.bmtargoss.com</a><br>
 &#xA0;&#xA0;&#xA0; &#xA0; &#xA0;<br>
 BMT ARGOSS b.v.<br>
 Voorsterweg 28, 8316 PT Marknesse, the Netherlands<br>
