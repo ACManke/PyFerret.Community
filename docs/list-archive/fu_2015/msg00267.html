@@ -54,7 +54,7 @@
 <hr>
 <!--X-Head-Body-Sep-End-->
 <!--X-Body-of-Message-->
-<div dir="ltr"><div><div>Dear Russ,<br></div>Just now I really understood what you meant and it works perfectly! Thanks a lot!<br></div><div><br>In case anyone has the same doubt now or in the future, below is the script I used to generate the lon_c and lat_c containing the cell corners.<br>and plot the model grid on top of it.<br><br></div><div>Cheers<br></div><div>Andre Rodrigues<br></div><div><br><br><div style="margin-left:40px">!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!<br><br>def symb inumber 150&#xA0;&#xA0;&#xA0; ! Number of cells in the X direction<br>def symb jnumber 300&#xA0;&#xA0;&#xA0; ! Number of cells in the Y direction<br><br>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!<br><br>def symb inumber2 `($inumber)+1`<br>def symb jnumber2 `($jnumber)+1`<br><br>def ax/x=0:($inumber):1 xaxc<br>def ax/y=0:($jnumber):1 yaxc<br><br>let lon_c1 = lon_rho[gx=xaxc,gy=yaxc]<br>let lon_c2 = ((lon_c1[i=@shf:0,j=@shf:0]+lon_c1[i=@shf:1,j=@shf:0]+lon_c1[i=@shf:0,j=@shf:1]+lon_c1[i=@shf:1,j=@shf:1])/4)<br>let lon_c3 = if i eq 1 then lon_c2[i=2]-(lon_c2[i=2@ddf]) else lon_c2<br>let lon_c4 = if i eq `($inumber2)` then lon_c3[i=`($inumber)`]+(lon_c3[i=`($inumber)`@ddb]) else lon_c3<br>let lon_c5 = if j eq 1 then lon_c4[j=2]-(lon_c4[j=2@ddf]) else lon_c4<br>let lon_c = if j eq `($jnumber2)` then lon_c5[j=`($jnumber)`]+(lon_c5[j=`($jnumber)`@ddb]) else lon_c5<br><br>let lat_c1 = lat_rho[gx=xaxc,gy=yaxc]<br>let lat_c2 = ((lat_c1[i=@shf:0,j=@shf:0]+lat_c1[i=@shf:1,j=@shf:0]+lat_c1[i=@shf:0,j=@shf:1]+lat_c1[i=@shf:1,j=@shf:1])/4)<br>let lat_c3 = if i eq 1 then lat_c2[i=2]-(lat_c2[i=2@ddf]) else lat_c2<br>let lat_c4 = if i eq `($inumber2)` then lat_c3[i=150]+(lat_c3[i=150@ddb]) else lat_c3<br>let lat_c5 = if j eq 1 then lat_c4[j=2]-(lat_c4[j=2@ddf]) else lat_c4<br>let lat_c = if j eq `($jnumber2)` then lat_c5[j=300]+(lat_c5[j=300@ddb]) else lat_c5<br><br>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!<br></div><br><br></div></div><div class="gmail_extra"><br><div class="gmail_quote">On 13 September 2015 at 23:49, Russ Fiedler <span dir="ltr">&lt;<a rel="nofollow" href="mailto:russell.fiedler@xxxxxxxx" target="_blank">russell.fiedler@xxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
+<div dir="ltr"><div><div>Dear Russ,<br></div>Just now I really understood what you meant and it works perfectly! Thanks a lot!<br></div><div><br>In case anyone has the same doubt now or in the future, below is the script I used to generate the lon_c and lat_c containing the cell corners.<br>and plot the model grid on top of it.<br><br></div><div>Cheers<br></div><div>Andre Rodrigues<br></div><div><br><br><div style="margin-left:40px">!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!<br><br>def symb inumber 150&#xA0;&#xA0;&#xA0; ! Number of cells in the X direction<br>def symb jnumber 300&#xA0;&#xA0;&#xA0; ! Number of cells in the Y direction<br><br>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!<br><br>def symb inumber2 `($inumber)+1`<br>def symb jnumber2 `($jnumber)+1`<br><br>def ax/x=0:($inumber):1 xaxc<br>def ax/y=0:($jnumber):1 yaxc<br><br>let lon_c1 = lon_rho[gx=xaxc,gy=yaxc]<br>let lon_c2 = ((lon_c1[i=@shf:0,j=@shf:0]+lon_c1[i=@shf:1,j=@shf:0]+lon_c1[i=@shf:0,j=@shf:1]+lon_c1[i=@shf:1,j=@shf:1])/4)<br>let lon_c3 = if i eq 1 then lon_c2[i=2]-(lon_c2[i=2@ddf]) else lon_c2<br>let lon_c4 = if i eq `($inumber2)` then lon_c3[i=`($inumber)`]+(lon_c3[i=`($inumber)`@ddb]) else lon_c3<br>let lon_c5 = if j eq 1 then lon_c4[j=2]-(lon_c4[j=2@ddf]) else lon_c4<br>let lon_c = if j eq `($jnumber2)` then lon_c5[j=`($jnumber)`]+(lon_c5[j=`($jnumber)`@ddb]) else lon_c5<br><br>let lat_c1 = lat_rho[gx=xaxc,gy=yaxc]<br>let lat_c2 = ((lat_c1[i=@shf:0,j=@shf:0]+lat_c1[i=@shf:1,j=@shf:0]+lat_c1[i=@shf:0,j=@shf:1]+lat_c1[i=@shf:1,j=@shf:1])/4)<br>let lat_c3 = if i eq 1 then lat_c2[i=2]-(lat_c2[i=2@ddf]) else lat_c2<br>let lat_c4 = if i eq `($inumber2)` then lat_c3[i=150]+(lat_c3[i=150@ddb]) else lat_c3<br>let lat_c5 = if j eq 1 then lat_c4[j=2]-(lat_c4[j=2@ddf]) else lat_c4<br>let lat_c = if j eq `($jnumber2)` then lat_c5[j=300]+(lat_c5[j=300@ddb]) else lat_c5<br><br>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!<br></div><br><br></div></div><div class="gmail_extra"><br><div class="gmail_quote">On 13 September 2015 at 23:49, Russ Fiedler <span dir="ltr">&lt;<a rel="nofollow" href="mailto:russell.fiedler@xxxxxxxx">russell.fiedler@xxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
   
     
   
@@ -123,7 +123,7 @@
               <br>
               <br>
               <div style="margin-left:40px">!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!<br>
-                use <a rel="nofollow" href="http://grids_example.nc" target="_blank">grids_example.nc</a><br>
+                use <a rel="nofollow" href="http://grids_example.nc">grids_example.nc</a><br>
                 <br>
                 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!<br>
                 <br>
@@ -213,7 +213,7 @@
       </div>
       <div class="gmail_extra"><br>
         <div class="gmail_quote">On 10 September 2015 at 21:23, Russ
-          Fiedler <span dir="ltr">&lt;<a rel="nofollow" href="mailto:russell.fiedler@xxxxxxxx" target="_blank">russell.fiedler@xxxxxxxx</a>&gt;</span>
+          Fiedler <span dir="ltr">&lt;<a rel="nofollow" href="mailto:russell.fiedler@xxxxxxxx">russell.fiedler@xxxxxxxx</a>&gt;</span>
           wrote:<br>
           <blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
             <div text="#000000" bgcolor="#FFFFFF">
@@ -294,7 +294,7 @@
                         The /dash in here is just because this is not my
                         main grid. What I&#39;m trying to accomplish here is
                         to just show the differences between these two
-                        grids (one from the HYCOM available at <a rel="nofollow" href="http://hycom.org" target="_blank">hycom.org</a>, and the other
+                        grids (one from the HYCOM available at <a rel="nofollow" href="http://hycom.org">hycom.org</a>, and the other
                         one is my grid) at my boundaries and in my area
                         of interest. <br>
                         <br>
@@ -367,7 +367,7 @@ lon_rho+lat_rho,lon_rho[i=1:151,j=0:300],lat_rho[i=1:151,j=0:300]<br>
                     </div>
                     <div class="gmail_extra"><br>
                       <div class="gmail_quote">On 9 September 2015 at
-                        22:44, Russ Fiedler <span dir="ltr">&lt;<a rel="nofollow" href="mailto:russell.fiedler@xxxxxxxx" target="_blank">russell.fiedler@xxxxxxxx</a>&gt;</span>
+                        22:44, Russ Fiedler <span dir="ltr">&lt;<a rel="nofollow" href="mailto:russell.fiedler@xxxxxxxx">russell.fiedler@xxxxxxxx</a>&gt;</span>
                         wrote:<br>
                         <blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
                           <div text="#000000" bgcolor="#FFFFFF">
@@ -409,7 +409,7 @@ lon_rho+lat_rho,lon_rho[i=1:151,j=0:300],lat_rho[i=1:151,j=0:300]<br>
                               boundary specified version of the 3
                               argument shade plot if possible.<br>
                               <br>
-                              <a rel="nofollow" href="../../faq/cell-edges-for-3-argument-shade-plots.html" target="_blank">../../faq/cell-edges-for-3-argument-shade-plots.html</a><br>
+                              <a rel="nofollow" href="../../faq/cell-edges-for-3-argument-shade-plots.html">../../faq/cell-edges-for-3-argument-shade-plots.html</a><br>
                               <br>
                               i.e. specify the cell boundaries for your
                               shade plot command. You can then overlay
@@ -431,7 +431,7 @@ lon_rho+lat_rho,lon_rho[i=1:151,j=0:300],lat_rho[i=1:151,j=0:300]<br>
                                   could try fiddling with adding
                                   arguments to the /DASH qualifier,
                                   making shorter &quot;down&quot; segments:<br>
-                                  <a rel="nofollow" href="http://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/PLOT#_VPINDEXENTRY_1475" target="_blank">http://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/commands-reference/PLOT#_VPINDEXENTRY_1475</a>&#xA0;
+                                  <a rel="nofollow" href="../../documentation/users-guide/commands-reference/PLOT.html#_VPINDEXENTRY_1475">../../documentation/users-guide/commands-reference/PLOT#_VPINDEXENTRY_1475</a>&#xA0;
                                   <br>
                                   <br>
                                   Another alternative for showing the
