@@ -49,10 +49,10 @@
 <!--X-Head-Body-Sep-End-->
 <!--X-Body-of-Message-->
 <div dir="ltr"><div><div>Hi Vincent,<br></div>For strings, the FILE/FORMAT=DELIMITED can be used. When the strings represent time, it will translate several different time formats into time coordinates. <br></div><br>-Ansley<br>
-</div><div class="gmail_extra"><br><br><div class="gmail_quote">On Wed, Jun 25, 2014 at 7:07 AM, vincent le fouest <span dir="ltr">&lt;<a rel="nofollow" href="mailto:mymails.ferret@xxxxxxxxx" target="_blank">mymails.ferret@xxxxxxxxx</a>&gt;</span> wrote:<br>
+</div><div class="gmail_extra"><br><br><div class="gmail_quote">On Wed, Jun 25, 2014 at 7:07 AM, vincent le fouest <span dir="ltr">&lt;<a rel="nofollow" href="mailto:mymails.ferret@xxxxxxxxx">mymails.ferret@xxxxxxxxx</a>&gt;</span> wrote:<br>
 <blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir="ltr"><div><div>Dear users,<br><br></div><div>In a script I read lat, lon and time from ascii files and list corresponding values of my_var but I obtain this error message:<br>
 </div><br>**TMAP ERR: Inappropriate ioctl for device<br>
-&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Last or next-to-last record read:<br>25-feb-1998<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Data set: ./time.csv<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Data file: ./time.csv<br><br><br></div>Here is my original code:<br><div><br>use <a rel="nofollow" href="http://my_var.nc" target="_blank">my_var.nc</a><br>
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Last or next-to-last record read:<br>25-feb-1998<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Data set: ./time.csv<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Data file: ./time.csv<br><br><br></div>Here is my original code:<br><div><br>use <a rel="nofollow" href="http://my_var.nc">my_var.nc</a><br>
 
 <br>file/var=&quot;lat&quot;/columns=1 lat.csv<br>file/var=&quot;lon&quot;/columns=1 lon.csv<br>file/var=&quot;lid&quot;/columns=1 time.csv<br><br>repeat/i=1:2:1 list/format=(f11.1)/file=toto.dat/nohead/clobber/append my_var[d=1,x=`lon[d=3]`,y=`lat[d=2]`,t=`lid[d=4]`]<br>
 

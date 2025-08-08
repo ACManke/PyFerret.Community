@@ -49,15 +49,15 @@
 <!--X-Head-Body-Sep-End-->
 <!--X-Body-of-Message-->
 <div dir="ltr">Check the arguments to the scat2gridgauss_xy function. The first two are reversed. They should be <br><br>&#xA0;SCAT2GRIDGAUSS_XY (LON, LAT, SWHCOR, X[GX=XLON], Y[GY=YLAT], ...</div><div class="gmail_extra"><br><br>
-<div class="gmail_quote">On Wed, Feb 5, 2014 at 8:17 PM, Selvam G. <span dir="ltr">&lt;<a rel="nofollow" href="mailto:gselvam@xxxxxxx" target="_blank">gselvam@xxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
+<div class="gmail_quote">On Wed, Feb 5, 2014 at 8:17 PM, Selvam G. <span dir="ltr">&lt;<a rel="nofollow" href="mailto:gselvam@xxxxxxx">gselvam@xxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
 <div><div style="font-size:12pt;font-family:times new roman,new york,times,serif">Dear Prof,<div><br><div>I did&#39;n understand to the exact, I used the following command to Interpolate, It gives the result Interpolated but I did&#39;n see any difference and Interpolated maps based on this value. I attaching you the code which I used... Please give Instructions..</div>
-<div class=""><div><span style="font-size:12pt">&#xA0;</span></div><div>yes? use <a rel="nofollow" href="http://wm_20110101.nc" target="_blank">wm_20110101.nc</a></div><div>yes? DEFINE AXIS/X=15E:120:10/UNIT=DEGREES xlon</div></div><div>yes? DEFINE AXIS/Y=-60:30N:10/UNIT=DEGREES ylat</div>
+<div class=""><div><span style="font-size:12pt">&#xA0;</span></div><div>yes? use <a rel="nofollow" href="http://wm_20110101.nc">wm_20110101.nc</a></div><div>yes? DEFINE AXIS/X=15E:120:10/UNIT=DEGREES xlon</div></div><div>yes? DEFINE AXIS/Y=-60:30N:10/UNIT=DEGREES ylat</div>
 <div>Replacing definition of axis YLAT</div><div>yes? DEFINE AXIS/Y=-60:30N:10/UNIT=DEGREES YLAT</div><div>yes? let swhcorgrid = scat2gridgauss_xy (lat, lon, swhcor, x[gx=xlon], y[gy=YLAT], 4,2,4,2)</div><div class=""><div>
 yes? stat swhcorgrid</div><div>&#xA0;</div><div>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;SCAT2GRIDGAUSS_XY (LAT, LON, SWHCOR, X[GX=XLON], Y[GY=YLAT], 4,2,4,2)</div><div>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;LONGITUDE: 10E to 130E</div><div>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;LATITUDE: 65S to 35N</div>
-<div>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;Z: &#xA0;N/A</div><div>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;T: &#xA0;N/A</div><div>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;E: &#xA0;N/A</div><div>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;F: &#xA0;N/A</div><div>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;DATA SET: ./<a rel="nofollow" href="http://wm_20110101.nc" target="_blank">wm_20110101.nc</a></div>
+<div>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;Z: &#xA0;N/A</div><div>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;T: &#xA0;N/A</div><div>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;E: &#xA0;N/A</div><div>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;F: &#xA0;N/A</div><div>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;DATA SET: ./<a rel="nofollow" href="http://wm_20110101.nc">wm_20110101.nc</a></div>
 <div>&#xA0;</div><div>&#xA0;Total # of data points: 120 (12*10*1*1*1*1)</div><div>&#xA0;# flagged as bad &#xA0;data: 40</div><div>&#xA0;Minimum value: 0.62119</div><div>&#xA0;Maximum value: 5.3594</div><div>&#xA0;Mean &#xA0; &#xA0;value: 2.6417 (unweighted average)</div>
 <div>&#xA0;Standard deviation: 1.1658</div></div><div>yes? SET MODE INTERPOLATE</div><div>yes? LIST/L=1/X=15E:120E/Y=-60S:30N SWHCOR</div><div>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;VARIABLE : sea_surface_wave_significant_height_corrected (m)</div><div>
-&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;FILENAME : <a rel="nofollow" href="http://wm_20110101.nc" target="_blank">wm_20110101.nc</a></div><div>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;SUBSET &#xA0; : 106 points (X)</div><div>&#xA0;15 &#xA0; &#xA0;/ &#xA0;15: &#xA0;3.140</div><div>&#xA0;16 &#xA0; &#xA0;/ &#xA0;16: &#xA0;1.540</div><div>&#xA0;17 &#xA0; &#xA0;/ &#xA0;17: &#xA0;3.380</div>
+&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;FILENAME : <a rel="nofollow" href="http://wm_20110101.nc">wm_20110101.nc</a></div><div>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;SUBSET &#xA0; : 106 points (X)</div><div>&#xA0;15 &#xA0; &#xA0;/ &#xA0;15: &#xA0;3.140</div><div>&#xA0;16 &#xA0; &#xA0;/ &#xA0;16: &#xA0;1.540</div><div>&#xA0;17 &#xA0; &#xA0;/ &#xA0;17: &#xA0;3.380</div>
 <div>&#xA0;18 &#xA0; &#xA0;/ &#xA0;18: &#xA0;1.740</div><div>&#xA0;19 &#xA0; &#xA0;/ &#xA0;19: &#xA0;3.160</div><div>&#xA0;20 &#xA0; &#xA0;/ &#xA0;20: &#xA0;1.520</div><div>&#xA0;21 &#xA0; &#xA0;/ &#xA0;21: &#xA0;3.590</div><div>&#xA0;22 &#xA0; &#xA0;/ &#xA0;22: &#xA0;1.600</div><div>&#xA0;23 &#xA0; &#xA0;/ &#xA0;23: &#xA0;3.150</div><div>&#xA0;24 &#xA0; &#xA0;/ &#xA0;24: &#xA0;1.560</div><div>
 &#xA0;25 &#xA0; &#xA0;/ &#xA0;25: &#xA0;3.460</div><div>&#xA0;26 &#xA0; &#xA0;/ &#xA0;26: &#xA0;1.370</div><div>&#xA0;27 &#xA0; &#xA0;/ &#xA0;27: &#xA0;3.400</div><div>&#xA0;28 &#xA0; &#xA0;/ &#xA0;28: &#xA0;1.360</div><div>&#xA0;29 &#xA0; &#xA0;/ &#xA0;29: &#xA0;3.210</div><div>&#xA0;30 &#xA0; &#xA0;/ &#xA0;30: &#xA0;1.640</div><div>&#xA0;31 &#xA0; &#xA0;/ &#xA0;31: &#xA0;3.420</div><div>&#xA0;32 &#xA0; &#xA0;/ &#xA0;32: &#xA0;1.560</div>
 <div>&#xA0;33 &#xA0; &#xA0;/ &#xA0;33: &#xA0;3.420</div><div>&#xA0;34 &#xA0; &#xA0;/ &#xA0;34: &#xA0;1.450</div><div>&#xA0;35 &#xA0; &#xA0;/ &#xA0;35: &#xA0;1.420</div><div>&#xA0;36 &#xA0; &#xA0;/ &#xA0;36: &#xA0;3.440</div><div>&#xA0;37 &#xA0; &#xA0;/ &#xA0;37: &#xA0;1.520</div><div>&#xA0;38 &#xA0; &#xA0;/ &#xA0;38: &#xA0;3.540</div><div>&#xA0;39 &#xA0; &#xA0;/ &#xA0;39: &#xA0;1.480</div><div>
@@ -72,9 +72,9 @@ yes? stat swhcorgrid</div><div>&#xA0;</div><div>&#xA0; &#xA0; &#xA0; &#xA0; &#xA
 &#xA0;100 &#xA0; / 100: &#xA0;1.470</div><div>&#xA0;101 &#xA0; / 101: &#xA0;4.320</div><div>&#xA0;102 &#xA0; / 102: &#xA0;1.580</div><div>&#xA0;103 &#xA0; / 103: &#xA0;1.670</div><div>&#xA0;104 &#xA0; / 104: &#xA0;3.860</div><div>&#xA0;105 &#xA0; / 105: &#xA0;1.730</div><div>&#xA0;106 &#xA0; / 106: &#xA0;3.760</div><div>&#xA0;107 &#xA0; / 107: &#xA0;1.600</div>
 <div>&#xA0;108 &#xA0; / 108: &#xA0;3.770</div><div>&#xA0;109 &#xA0; / 109: &#xA0;1.340</div><div>&#xA0;110 &#xA0; / 110: &#xA0;3.940</div><div>&#xA0;111 &#xA0; / 111: &#xA0;1.660</div><div>&#xA0;112 &#xA0; / 112: &#xA0;3.860</div><div>&#xA0;113 &#xA0; / 113: &#xA0;1.550</div><div>&#xA0;114 &#xA0; / 114: &#xA0;3.770</div><div>
 &#xA0;115 &#xA0; / 115: &#xA0;1.740</div><div>&#xA0;116 &#xA0; / 116: &#xA0;3.260</div><div>&#xA0;117 &#xA0; / 117: &#xA0;1.490</div><div>&#xA0;118 &#xA0; / 118: &#xA0;4.190</div><div>&#xA0;119 &#xA0; / 119: &#xA0;1.500</div><div>&#xA0;120 &#xA0; / 120: &#xA0;4.160</div><div>yes? LIST/L=1/Y=-60S:30N SWHCOR[X=15E:120E@ITP]</div>
-<div>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;VARIABLE : sea_surface_wave_significant_height_corrected (m)</div><div>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;FILENAME : <a rel="nofollow" href="http://wm_20110101.nc" target="_blank">wm_20110101.nc</a></div><div>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;X &#xA0; &#xA0; &#xA0; &#xA0;: 15 to 120 (interpolated)</div>
+<div>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;VARIABLE : sea_surface_wave_significant_height_corrected (m)</div><div>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;FILENAME : <a rel="nofollow" href="http://wm_20110101.nc">wm_20110101.nc</a></div><div>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;X &#xA0; &#xA0; &#xA0; &#xA0;: 15 to 120 (interpolated)</div>
 <div>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; 3.140</div><div>yes?&#xA0;</div><div>yes?&#xA0;</div><div>yes?&#xA0;</div><div><span style="font-size:12pt">yes?&#xA0;</span>&#xA0;<br><div><br><hr><div style="font-size:12pt;font-style:normal;font-family:Helvetica,Arial,sans-serif;text-decoration:none;font-weight:normal">
-<div class=""><b>From: </b>&quot;Ansley Manke&quot; &lt;<a rel="nofollow" href="mailto:ansley.b.manke@xxxxxxxx" target="_blank">ansley.b.manke@xxxxxxxx</a>&gt;<br><b>To: </b>&quot;Selvam G.&quot; &lt;<a rel="nofollow" href="mailto:gselvam@xxxxxxx" target="_blank">gselvam@xxxxxxx</a>&gt;<br>
+<div class=""><b>From: </b>&quot;Ansley Manke&quot; &lt;<a rel="nofollow" href="mailto:ansley.b.manke@xxxxxxxx">ansley.b.manke@xxxxxxxx</a>&gt;<br><b>To: </b>&quot;Selvam G.&quot; &lt;<a rel="nofollow" href="mailto:gselvam@xxxxxxx">gselvam@xxxxxxx</a>&gt;<br>
 </div><b>Sent: </b>Wednesday, February 5, 2014 11:48:03 PM<div><div class="h5"><br><b>Subject: </b>Re: [ferret_users] Spatial Trend<br><br>
   
     
@@ -107,14 +107,14 @@ yes? stat swhcorgrid</div><div>&#xA0;</div><div>&#xA0; &#xA0; &#xA0; &#xA0; &#xA
     <br>
     Now, about scat2gridgauss_xy. The script you sent earlier needs one
     change.&#xA0; You had this:<br>
-    <blockquote><tt>yes? use <a rel="nofollow" href="http://wm_20110101.nc" target="_blank">wm_20110101.nc</a></tt><tt><br>
+    <blockquote><tt>yes? use <a rel="nofollow" href="http://wm_20110101.nc">wm_20110101.nc</a></tt><tt><br>
       </tt><tt>yes? DEFINE AXIS/X=15E:120:10/UNIT=DEGREES xlon</tt><tt><br>
       </tt><tt>yes? DEFINE AXIS/Y=-60S:30N:10/UNIT=DEGREES ylat</tt><tt><br>
       </tt><tt>yes? DEFINE GRID/X=xlon/Y=ylat gsnoopy2d</tt><tt><br>
       </tt></blockquote>
     The Y axis definition should not have -60S, but either 60S or -60,
     without the S.<br>
-    <blockquote><tt>yes? use <a rel="nofollow" href="http://wm_20110101.nc" target="_blank">wm_20110101.nc</a></tt><br>
+    <blockquote><tt>yes? use <a rel="nofollow" href="http://wm_20110101.nc">wm_20110101.nc</a></tt><br>
       <tt> </tt><tt>yes? DEFINE AXIS/X=15E:120:10/UNIT=DEGREES xlon</tt><br>
       <tt>yes? DEFINE AXIS/<b>Y=60S</b>:30N:10/UNIT=DEGREES ylat</tt><br>
       <br>
@@ -130,7 +130,7 @@ yes? stat swhcorgrid</div><div>&#xA0;</div><div>&#xA0; &#xA0; &#xA0; &#xA0; &#xA
       <tt>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; T:&#xA0; N/A</tt><br>
       <tt>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; E:&#xA0; N/A</tt><br>
       <tt>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; F:&#xA0; N/A</tt><br>
-      <tt>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; DATA SET: ./<a rel="nofollow" href="http://wm_20110101.nc" target="_blank">wm_20110101.nc</a></tt><br>
+      <tt>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; DATA SET: ./<a rel="nofollow" href="http://wm_20110101.nc">wm_20110101.nc</a></tt><br>
       <tt>&#xA0;</tt><br>
       <tt>&#xA0;Total # of data points: 120 (12*10*1*1*1*1)</tt><br>
       <tt>&#xA0;# flagged as bad&#xA0; data: 40</tt><br>
@@ -167,7 +167,7 @@ yes? stat swhcorgrid</div><div>&#xA0;</div><div>&#xA0; &#xA0; &#xA0; &#xA0; &#xA
             <div>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;T: &#xA0;N/A</div>
             <div>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;E: &#xA0;N/A</div>
             <div>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;F: &#xA0;N/A</div>
-            <div>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;DATA SET: ./<a rel="nofollow" href="http://wm_20110101.nc" target="_blank">wm_20110101.nc</a></div>
+            <div>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;DATA SET: ./<a rel="nofollow" href="http://wm_20110101.nc">wm_20110101.nc</a></div>
             <div>&#xA0;</div>
             <div>&#xA0;Total # of data points: 48 (12*4*1*1*1*1)</div>
             <div>&#xA0;# flagged as bad &#xA0;data: 17</div>
@@ -190,9 +190,9 @@ yes? stat swhcorgrid</div><div>&#xA0;</div><div>&#xA0; &#xA0; &#xA0; &#xA0; &#xA
             <br>
             <hr>
             <div style="font-size:12pt;font-style:normal;font-family:Helvetica,Arial,sans-serif;text-decoration:none;font-weight:normal"><b>From:
-              </b>&quot;Ansley Manke&quot; <a rel="nofollow" href="mailto:ansley.b.manke@xxxxxxxx" target="_blank">&lt;ansley.b.manke@xxxxxxxx&gt;</a><br>
-              <b>To: </b>&quot;Selvam G.&quot; <a rel="nofollow" href="mailto:gselvam@xxxxxxx" target="_blank">&lt;gselvam@xxxxxxx&gt;</a><br>
-              <b>Cc: </b>&quot;ferret users&quot; <a rel="nofollow" href="mailto:ferret_users@xxxxxxxx" target="_blank">&lt;ferret_users@xxxxxxxx&gt;</a><br>
+              </b>&quot;Ansley Manke&quot; <a rel="nofollow" href="mailto:ansley.b.manke@xxxxxxxx">&lt;ansley.b.manke@xxxxxxxx&gt;</a><br>
+              <b>To: </b>&quot;Selvam G.&quot; <a rel="nofollow" href="mailto:gselvam@xxxxxxx">&lt;gselvam@xxxxxxx&gt;</a><br>
+              <b>Cc: </b>&quot;ferret users&quot; <a rel="nofollow" href="mailto:ferret_users@xxxxxxxx">&lt;ferret_users@xxxxxxxx&gt;</a><br>
               <b>Sent: </b>Tuesday, February 4, 2014 11:18:17 PM<br>
               <b>Subject: </b>Re: [ferret_users] Spatial Trend<br>
               <br>
@@ -232,8 +232,8 @@ Thanks &amp; regards
 Selvam G.
 
 ----- Original Message -----
-From: &quot;Russ Fiedler&quot; <a rel="nofollow" href="mailto:russell.fiedler@xxxxxxxx" target="_blank">&lt;russell.fiedler@xxxxxxxx&gt;</a>
-To: &quot;ferret users&quot; <a rel="nofollow" href="mailto:ferret_users@xxxxxxxx" target="_blank">&lt;ferret_users@xxxxxxxx&gt;</a>
+From: &quot;Russ Fiedler&quot; <a rel="nofollow" href="mailto:russell.fiedler@xxxxxxxx">&lt;russell.fiedler@xxxxxxxx&gt;</a>
+To: &quot;ferret users&quot; <a rel="nofollow" href="mailto:ferret_users@xxxxxxxx">&lt;ferret_users@xxxxxxxx&gt;</a>
 Sent: Tuesday, February 4, 2014 3:16:38 AM
 Subject: Re: [ferret_users] Spatial Trend
 
@@ -244,7 +244,7 @@ get the trend in terms of years.
 
 Russ
 
-On 03/02/14 23:45, <a rel="nofollow" href="mailto:iwlod@xxxxxxxxxxxxxxxxxxx" target="_blank">iwlod@xxxxxxxxxxxxxxxxxxx</a> wrote:
+On 03/02/14 23:45, <a rel="nofollow" href="mailto:iwlod@xxxxxxxxxxxxxxxxxxx">iwlod@xxxxxxxxxxxxxxxxxxx</a> wrote:
 </pre>
                 <blockquote>
                   <pre>I dont think it is that simple - units on slope are way to small
@@ -260,7 +260,7 @@ Sent from my iPhone
 
 </pre>
                     <blockquote>
-                      <pre>On Jan 31, 2014, at 4:17 AM, <a rel="nofollow" href="mailto:iwlod@xxxxxxxxxxxxxxxxxxx" target="_blank">iwlod@xxxxxxxxxxxxxxxxxxx</a> wrote:
+                      <pre>On Jan 31, 2014, at 4:17 AM, <a rel="nofollow" href="mailto:iwlod@xxxxxxxxxxxxxxxxxxx">iwlod@xxxxxxxxxxxxxxxxxxx</a> wrote:
 
 
 Collective Ferret Wisdom :-)

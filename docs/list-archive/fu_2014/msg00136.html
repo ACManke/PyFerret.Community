@@ -59,7 +59,7 @@
 
 <div><br></div><div><br></div><div>If the above answers did not solve your problem, here are some more details about how PyFerret is built. &#xA0;</div><div>The first compiling steps are building all the usual Ferret libraries using the Makefiles. &#xA0;Then for building the python modules, including this last linking step, the numpy.distutils python package is used. &#xA0;(The numpy.distutils package is used instead of the plain distutils package because the numpy version knows how to work with Fortran.) &#xA0;In the main Makefile, these steps are executed by &quot;$(PYTHON_EXE) setup.py build&quot;. &#xA0;So you will need to investigate options for numpy.distutils, and possibly modify values in setup.py, to change the linking behavior. &#xA0;Hopefully this will not be necessary.</div>
 
-<div><br></div><div><br></div><div>Hope this helps,</div><div>Karl</div><div><br></div><div class="gmail_extra"><br><br><div class="gmail_quote">On Thu, Apr 10, 2014 at 3:21 AM, Martin Schmidt <span dir="ltr">&lt;<a rel="nofollow" href="mailto:martin.schmidt@xxxxxxxxxxxxxxxxx" target="_blank">martin.schmidt@xxxxxxxxxxxxxxxxx</a>&gt;</span> wrote:<br>
+<div><br></div><div><br></div><div>Hope this helps,</div><div>Karl</div><div><br></div><div class="gmail_extra"><br><br><div class="gmail_quote">On Thu, Apr 10, 2014 at 3:21 AM, Martin Schmidt <span dir="ltr">&lt;<a rel="nofollow" href="mailto:martin.schmidt@xxxxxxxxxxxxxxxxx">martin.schmidt@xxxxxxxxxxxxxxxxx</a>&gt;</span> wrote:<br>
 
 <blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">Good morning,<br>
 <br>
@@ -72,7 +72,7 @@ The compiler is gcc/gfortran 4.81., phython is version 2.7.6, 3.3.3 is also avai
 <br>
 I choose the compiler and python version loading modules. (This is not the tricky CRAY programming environment.)<br>
 <br>
-After adjusting <a rel="nofollow" href="http://site_specific.mk" target="_blank">site_specific.mk</a> to find JAVA, netcdf ....<br>
+After adjusting <a rel="nofollow" href="http://site_specific.mk">site_specific.mk</a> to find JAVA, netcdf ....<br>
 BUILDTYPE &#xA0; &#xA0;= x86_64-linux<br>
 PYTHON_EXE &#xA0; &#xA0;= python2.7<br>
 <br>

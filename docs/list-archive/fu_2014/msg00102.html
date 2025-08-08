@@ -54,7 +54,7 @@
 <div dir="ltr">You can use following command to search linker(ld) path as well<br><br>[akshay@aix ]$<b> ldconfig -v 2&gt;/dev/null | grep -v ^$&#39;\t&#39;</b><br>/usr/lib64/mysql:<br>/usr/lib64/qt-3.3/lib:<br>/usr/lib64/xulrunner-2:<br>
 /lib:<br>/lib64:<br>/usr/lib:<br>/usr/lib64:<br>/lib/i686: (hwcap: 0x0008000000000000)<br>/lib64/tls: (hwcap: 0x8000000000000000)<br>/usr/lib64/tls: (hwcap: 0x8000000000000000)<br>/usr/lib64/sse2: (hwcap: 0x0000000004000000)<br>
 /lib/i686/nosegneg: (hwcap: 0x0028000000000000)<br><br><br>Thank you,<br><br>Regards,<br>Akshay Hegde,<br>Moderator,<br>The Unix and Linux Forum Users.<br><br><br></div><div class="gmail_extra"><br><br><div class="gmail_quote">
-On Thu, Mar 13, 2014 at 11:49 AM, Akshay Hegde <span dir="ltr">&lt;<a rel="nofollow" href="mailto:akshay.k.hegde@xxxxxxxxx" target="_blank">akshay.k.hegde@xxxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
+On Thu, Mar 13, 2014 at 11:49 AM, Akshay Hegde <span dir="ltr">&lt;<a rel="nofollow" href="mailto:akshay.k.hegde@xxxxxxxxx">akshay.k.hegde@xxxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
 <div dir="ltr"><div>Ferret looks for shared object you have to create <b><font>Symbolic Link</font></b> like this here is example<br><b><br></b></div><div><b># Search for object</b> <b>available</b><br></div><div>[akshay@aix ]$ ldconfig -v | grep libreadline<b>*</b><br>
 
 
@@ -64,7 +64,7 @@ On Thu, Mar 13, 2014 at 11:49 AM, Akshay Hegde <span dir="ltr">&lt;<a rel="nofol
 <b># Create Symbolic Link</b><br><div>[root@aix ]$ ln -s /lib64/libreadline.so.<b>6</b>&#xA0; /usr/lib/libreadline.so.6<br><br><div>You might have higher version of shared object, doesn&#39;t matter <b>symbolic link</b> is important<br>
 
 <br>Thank you,<br><br>Regards,<br>Akshay Hegde,<br>Moderator,<br>The Unix and Linux Forum Users.<br>
-</div><div><br><br></div></div></div><div class="HOEnZb"><div class="h5"><div class="gmail_extra"><br><br><div class="gmail_quote">On Thu, Mar 13, 2014 at 11:08 AM, dessyberlianty <span dir="ltr">&lt;<a rel="nofollow" href="mailto:dessyberlianty@xxxxxxxxx" target="_blank">dessyberlianty@xxxxxxxxx</a>&gt;</span> wrote:<br>
+</div><div><br><br></div></div></div><div class="HOEnZb"><div class="h5"><div class="gmail_extra"><br><br><div class="gmail_quote">On Thu, Mar 13, 2014 at 11:08 AM, dessyberlianty <span dir="ltr">&lt;<a rel="nofollow" href="mailto:dessyberlianty@xxxxxxxxx">dessyberlianty@xxxxxxxxx</a>&gt;</span> wrote:<br>
 
 <blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
   
