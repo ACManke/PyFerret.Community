@@ -49,7 +49,7 @@
 <hr>
 <!--X-Head-Body-Sep-End-->
 <!--X-Body-of-Message-->
-<div dir="ltr"><div><div>Hello,<br><br>Yes sorry I was only using the &quot;list&quot; command when I was trying to understand the computation problem. The problem comes from the `ns-(ns/100),prec=0` part, not the LIST command. And indeed I was trying to compute the 99 percentile from a serie of precipitation.<br><br></div>I think the version install on my server is 6.3. I should change it to see if it solves the problem. <br><br></div>But it is still strange to get a &quot;*&quot; as a result of `ns-(ns/100),prec=0` when ns=10. May be a bug from the 6.3 version. <br><br><div><div><br></div></div></div><div class="gmail_extra"><br><div class="gmail_quote">2015-09-30 15:34 GMT+08:00 Marco van Hulten <span dir="ltr">&lt;<a rel="nofollow" href="mailto:marco.van-hulten@xxxxxxxxxxxx" target="_blank">marco.van-hulten@xxxxxxxxxxxx</a>&gt;</span>:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><span class="">Le 2015-09-30 Nicolas a &#xE9;crit:<br>
+<div dir="ltr"><div><div>Hello,<br><br>Yes sorry I was only using the &quot;list&quot; command when I was trying to understand the computation problem. The problem comes from the `ns-(ns/100),prec=0` part, not the LIST command. And indeed I was trying to compute the 99 percentile from a serie of precipitation.<br><br></div>I think the version install on my server is 6.3. I should change it to see if it solves the problem. <br><br></div>But it is still strange to get a &quot;*&quot; as a result of `ns-(ns/100),prec=0` when ns=10. May be a bug from the 6.3 version. <br><br><div><div><br></div></div></div><div class="gmail_extra"><br><div class="gmail_quote">2015-09-30 15:34 GMT+08:00 Marco van Hulten <span dir="ltr">&lt;<a rel="nofollow" href="mailto:marco.van-hulten@xxxxxxxxxxxx" >marco.van-hulten@xxxxxxxxxxxx</a>&gt;</span>:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><span class="">Le 2015-09-30 Nicolas a &#xE9;crit:<br>
 &gt; Here is a problem I got when using the &quot;list&quot; command.<br>
 <br>
 </span>You are not using the LIST command in your example.<br>
@@ -70,13 +70,13 @@
 I cannot reproduce your problem:<br>
 <br>
 yes? let aa = {0,10,20,,40,50,60,70,80,90,100}<br>
-yes? save/file=<a rel="nofollow" href="http://test.nc/clobber" rel="noreferrer" target="_blank">test.nc/clobber</a> aa<br>
-&#xA0;LISTing to file <a rel="nofollow" href="http://test.nc" rel="noreferrer" target="_blank">test.nc</a><br>
+yes? save/file=<a rel="nofollow" href="http://test.nc/clobber" rel="noreferrer" >test.nc/clobber</a> aa<br>
+&#xA0;LISTing to file <a rel="nofollow" href="http://test.nc" rel="noreferrer" >test.nc</a><br>
 yes? can var/all<br>
-yes? use <a rel="nofollow" href="http://test.nc" rel="noreferrer" target="_blank">test.nc</a><br>
+yes? use <a rel="nofollow" href="http://test.nc" rel="noreferrer" >test.nc</a><br>
 yes? sh data<br>
 &#xA0; &#xA0; &#xA0;currently SET data sets:<br>
-&#xA0; &#xA0; 1&gt; ./<a rel="nofollow" href="http://test.nc" rel="noreferrer" target="_blank">test.nc</a>&#xA0; (default)<br>
+&#xA0; &#xA0; 1&gt; ./<a rel="nofollow" href="http://test.nc" rel="noreferrer" >test.nc</a>&#xA0; (default)<br>
 &#xA0;name&#xA0; &#xA0; &#xA0;title&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;I&#xA0; &#xA0; &#xA0; &#xA0; &#xA0;J&#xA0; &#xA0; &#xA0; &#xA0; &#xA0;K&#xA0; &#xA0; &#xA0; &#xA0; &#xA0;L&#xA0; &#xA0; &#xA0; &#xA0; &#xA0;M&#xA0; &#xA0; &#xA0; &#xA0; &#xA0;N<br>
 &#xA0;AA&#xA0; &#xA0; &#xA0; &#xA0;{0,10,20,,40,50,60,70,80,90,100&#xA0; 1:11&#xA0; &#xA0; &#xA0; ...&#xA0; &#xA0; &#xA0; &#xA0;...&#xA0; &#xA0; &#xA0; &#xA0;...&#xA0; &#xA0; &#xA0; &#xA0;...&#xA0; &#xA0; &#xA0; &#xA0;...<br>
 <br>
@@ -94,9 +94,9 @@ Marco<br>
 --<br>
 Laboratoire des Sciences du Climat et l&#39;Environnement (LSCE)<br>
 Tel: <a rel="nofollow" href="tel:%2B33%201%206908%203876" value="+33169083876">+33 1 6908 3876</a><br>
-Www: <a rel="nofollow" href="http://www.lsce.ipsl.fr/Pisp/marco.van-hulten/" rel="noreferrer" target="_blank">http://www.lsce.ipsl.fr/Pisp/marco.van-hulten/</a><br>
+Www: <a rel="nofollow" href="http://www.lsce.ipsl.fr/Pisp/marco.van-hulten/" rel="noreferrer" >http://www.lsce.ipsl.fr/Pisp/marco.van-hulten/</a><br>
 <br>
-Consider liberating your papers and data -- <a rel="nofollow" href="https://creativecommons.org/" rel="noreferrer" target="_blank">https://creativecommons.org/</a><br>
+Consider liberating your papers and data -- <a rel="nofollow" href="https://creativecommons.org/" rel="noreferrer" >https://creativecommons.org/</a><br>
 </font></span></blockquote></div><br><br clear="all"><br>-- <br><div class="gmail_signature"><div dir="ltr">----------------------------------------------------<br><div>Nicolas Freychet<br></div>Postdoc Reseach Fellow at RCEC<br>Academia Sinica<br>----------------------------------------------------</div></div>
 </div>
 

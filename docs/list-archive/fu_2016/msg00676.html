@@ -56,7 +56,7 @@
 <hr>
 <!--X-Head-Body-Sep-End-->
 <!--X-Body-of-Message-->
-<div dir="ltr"><div class="gmail_default" style="color:rgb(0,0,0)">Thanks a lot William, i followed your suggestion and it works.<br>&#xA0;<br></div><div class="gmail_default" style="color:rgb(0,0,0)">1) The temperature is the insitu temperature rather than potential temperature and the density is also from the insitu temperature and salinity. its not the potential density. <br><br></div><div class="gmail_default" style="color:rgb(0,0,0)">2) units are also fine in the go dynamic_height script units are in dyn-cm so divide by 100 to get in dyn-m.<br><br></div><div class="gmail_default" style="color:rgb(0,0,0)">i am also attaching my script to calculate the dynamic height from the formula. i think both the plots are in agreement. please comment !<br><br></div><div class="gmail_default" style="color:rgb(0,0,0)">regards, saurabh<br></div></div><div class="gmail_extra"><br><div class="gmail_quote">On Sat, Dec 17, 2016 at 2:31 AM, William Kessler <span dir="ltr">&lt;<a rel="nofollow" href="mailto:william.s.kessler@xxxxxxxx" target="_blank">william.s.kessler@xxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">Sorry for confusion. My original discussion of the unit conversion below was wrong. The corrected discussion is here:<br>
+<div dir="ltr"><div class="gmail_default" style="color:rgb(0,0,0)">Thanks a lot William, i followed your suggestion and it works.<br>&#xA0;<br></div><div class="gmail_default" style="color:rgb(0,0,0)">1) The temperature is the insitu temperature rather than potential temperature and the density is also from the insitu temperature and salinity. its not the potential density. <br><br></div><div class="gmail_default" style="color:rgb(0,0,0)">2) units are also fine in the go dynamic_height script units are in dyn-cm so divide by 100 to get in dyn-m.<br><br></div><div class="gmail_default" style="color:rgb(0,0,0)">i am also attaching my script to calculate the dynamic height from the formula. i think both the plots are in agreement. please comment !<br><br></div><div class="gmail_default" style="color:rgb(0,0,0)">regards, saurabh<br></div></div><div class="gmail_extra"><br><div class="gmail_quote">On Sat, Dec 17, 2016 at 2:31 AM, William Kessler <span dir="ltr">&lt;<a rel="nofollow" href="mailto:william.s.kessler@xxxxxxxx" >william.s.kessler@xxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">Sorry for confusion. My original discussion of the unit conversion below was wrong. The corrected discussion is here:<br>
 <br>
 The 1E5 in the second command contains the unit conversions:<br>
 - multiplying by 1e4 converts depth in m to pressure in Pa via the hydrostatic eqn: P=rho*g*z<br>
@@ -134,8 +134,8 @@ BK<br>
 &gt;&gt;<br>
 &gt;&gt; these are the commands i issued in the calculation.<br>
 &gt;&gt;<br>
-&gt;&gt; use <a rel="nofollow" href="http://ptemp_argo.nc" rel="noreferrer" target="_blank">ptemp_argo.nc</a>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; ! potential temp<br>
-&gt;&gt; use &quot;/media/<a rel="nofollow" href="http://salt_argo.nc" rel="noreferrer" target="_blank">salt_argo.nc</a>&quot;&#xA0; &#xA0; &#xA0; &#xA0; ! salinity<br>
+&gt;&gt; use <a rel="nofollow" href="http://ptemp_argo.nc" rel="noreferrer" >ptemp_argo.nc</a>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; ! potential temp<br>
+&gt;&gt; use &quot;/media/<a rel="nofollow" href="http://salt_argo.nc" rel="noreferrer" >salt_argo.nc</a>&quot;&#xA0; &#xA0; &#xA0; &#xA0; ! salinity<br>
 &gt;&gt;<br>
 &gt;&gt; let dyn_S=salt[d=2]<br>
 &gt;&gt; let dyn_T=ptemp[d=1]<br>
@@ -153,8 +153,8 @@ BK<br>
 &gt;&gt;<br>
 &gt;&gt; 3) but if i do my own calculation for this computation but using the following steps<br>
 &gt;&gt;<br>
-&gt;&gt; use <a rel="nofollow" href="http://ptemp_argo.nc" rel="noreferrer" target="_blank">ptemp_argo.nc</a><br>
-&gt;&gt; use &quot;/media/<a rel="nofollow" href="http://salt_argo.nc" rel="noreferrer" target="_blank">salt_argo.nc</a>&quot;<br>
+&gt;&gt; use <a rel="nofollow" href="http://ptemp_argo.nc" rel="noreferrer" >ptemp_argo.nc</a><br>
+&gt;&gt; use &quot;/media/<a rel="nofollow" href="http://salt_argo.nc" rel="noreferrer" >salt_argo.nc</a>&quot;<br>
 &gt;&gt;<br>
 &gt;&gt; let tm=ptemp[d=1]<br>
 &gt;&gt; let sa=salt[d=2]<br>

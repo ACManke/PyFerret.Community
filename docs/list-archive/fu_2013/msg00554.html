@@ -48,9 +48,9 @@
 <!--X-Head-Body-Sep-End-->
 <!--X-Body-of-Message-->
 <div dir="ltr"><div><div>Hi All,<br><br></div>I figured out the reason. It is because I have t step filled with missing values. While this is not any problem with the old version ferret with eof_*, it is with newer version ferret with eofsvd_*. I guess this should be reported as a bug. Currently the only solution for me may be to move the time steps and remove the missing value t steps from the data.<br>
-<br></div>Tony<br></div><div class="gmail_extra"><br><br><div class="gmail_quote">On Mon, Sep 23, 2013 at 5:52 PM, Jian Ma <span dir="ltr">&lt;<a rel="nofollow" href="mailto:jianma@xxxxxxxxxx" target="_blank">jianma@xxxxxxxxxx</a>&gt;</span> wrote:<br>
+<br></div>Tony<br></div><div class="gmail_extra"><br><br><div class="gmail_quote">On Mon, Sep 23, 2013 at 5:52 PM, Jian Ma <span dir="ltr">&lt;<a rel="nofollow" href="mailto:jianma@xxxxxxxxxx" >jianma@xxxxxxxxxx</a>&gt;</span> wrote:<br>
 <blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir="ltr">Hi All,<div><br></div><div>I met a strange problem with eofsvd for the attached data file. It turns out to be &quot;No valid data&quot;. Here is my commands:</div>
-<div><br></div><div><div>yes? set d <a rel="nofollow" href="http://sstappcf_ma.nc" target="_blank">sstappcf_ma.nc</a>&#xA0;</div>
+<div><br></div><div><div>yes? set d <a rel="nofollow" href="http://sstappcf_ma.nc" >sstappcf_ma.nc</a>&#xA0;</div>
 <div>yes? fill/l=1 sstappcf_ma</div><div>yes? let exyt=eofsvd_space(sstappcf_ma)</div><div>yes? fill/l=1 exyt</div><div><br></div><div>However I got good results with a data file with time coordinate dd-mm-yyyy. This file has only 1:22 in t coordinate without actual dd-mm-yyyy. Is this the reason for the problem?</div>
 
 <div><br></div><div>Many thanks for any hint,</div><div>Tony</div></div><div><br></div></div>

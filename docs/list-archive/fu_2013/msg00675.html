@@ -52,9 +52,9 @@
 <div dir="ltr"><div><div>Not sure exactly,<br><br></div>I tested like this<br><br><br>[akshay@aix ~]$ f<br>&#xA0;&#xA0;&#xA0;&#xA0; NOAA/PMEL TMAP<br>&#xA0;&#xA0;&#xA0;&#xA0; FERRET v6.85&#xA0; <br>&#xA0;&#xA0;&#xA0;&#xA0; Linux 2.6.18-371.1.2.el5 64-bit - 11/12/13<br>&#xA0;&#xA0;&#xA0;&#xA0; 11-Dec-13 09:34&#xA0;&#xA0;&#xA0;&#xA0; <br>
 <br>yes? let&#xA0; ifhf = 0.5000<br>yes? let hd = 36.75<br>yes? ! assume that hdhf is 55<br>yes? let hdhf = 55<br>yes? let hdf= IF ifhf eq 1 then hdhf else hd<br>yes? list ifhf,hd,hdhf,hdf<br>&#xA0;Column&#xA0; 1: IFHF is 0.5000<br>&#xA0;Column&#xA0; 2: HD is 36.75<br>
 &#xA0;Column&#xA0; 3: HDHF is 55<br>&#xA0;Column&#xA0; 4: HDF is IF IFHF EQ 1 THEN HDHF ELSE HD<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; IFHF&#xA0;&#xA0;&#xA0; HD&#xA0;&#xA0;&#xA0; HDHF&#xA0;&#xA0;&#xA0; HDF<br>I / *:&#xA0;&#xA0;&#xA0;&#xA0; 0.5000&#xA0; 36.75&#xA0; 55.00&#xA0; 36.75<br><br><br></div>Akshay<br><div><br><br></div></div><div class="gmail_extra">
-<br><br><div class="gmail_quote">On Wed, Dec 11, 2013 at 9:38 AM, Akshay Hegde <span dir="ltr">&lt;<a rel="nofollow" href="mailto:akshay.k.hegde@xxxxxxxxx" target="_blank">akshay.k.hegde@xxxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
+<br><br><div class="gmail_quote">On Wed, Dec 11, 2013 at 9:38 AM, Akshay Hegde <span dir="ltr">&lt;<a rel="nofollow" href="mailto:akshay.k.hegde@xxxxxxxxx" >akshay.k.hegde@xxxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
 <div dir="ltr"><div>What&#39;s hdhf ?<span class="HOEnZb"><font color="#888888"><br><br></font></span></div><span class="HOEnZb"><font color="#888888">-Akshay<br></font></span></div><div class="HOEnZb"><div class="h5"><div class="gmail_extra">
-<br><br><div class="gmail_quote">On Wed, Dec 11, 2013 at 9:05 AM, Lev Tarasov <span dir="ltr">&lt;<a rel="nofollow" href="mailto:lev@xxxxxx" target="_blank">lev@xxxxxx</a>&gt;</span> wrote:<br>
+<br><br><div class="gmail_quote">On Wed, Dec 11, 2013 at 9:05 AM, Lev Tarasov <span dir="ltr">&lt;<a rel="nofollow" href="mailto:lev@xxxxxx" >lev@xxxxxx</a>&gt;</span> wrote:<br>
 <blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">Why does the IF condition not work in the<br>
 masking below and how do I fix this:<br>
 (ie CONDITION should be false, but hdf doesn&#39;t take on<br>
@@ -94,8 +94,8 @@ lev<br>
 <br>
 Lev Tarasov - &#xA0; Dept of Physics and Physical Oceanography,<br>
 &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; Memorial University of Newfoundland.<br>
-&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; email: <a rel="nofollow" href="mailto:lev@xxxxxx" target="_blank">lev@xxxxxx</a><br>
-&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; <a rel="nofollow" href="http://www.physics.mun.ca/~lev/" target="_blank">http://www.physics.mun.ca/~<u></u>lev/</a><br>
+&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; email: <a rel="nofollow" href="mailto:lev@xxxxxx" >lev@xxxxxx</a><br>
+&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; <a rel="nofollow" href="http://www.physics.mun.ca/~lev/" >http://www.physics.mun.ca/~<u></u>lev/</a><br>
 &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; Currently at Antarctic Research Centre,<br>
 &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; Victoria University of Wellington<br>
 <br>

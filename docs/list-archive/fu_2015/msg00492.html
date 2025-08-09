@@ -52,7 +52,7 @@
 <hr>
 <!--X-Head-Body-Sep-End-->
 <!--X-Body-of-Message-->
-<div dir="ltr"><div>ok Ryo</div><div>thanks for your answer </div><div>what I mean is wrf model output has about 38variables. But because of space I only want to have varibales that will be useful for me thus the term &quot;extract&quot;. For example out of the 38variables, I only need rainfall, Temp, winds etc</div><div><br></div><div>How Do I handle memory issue; Even when I set&#xA0; Mwords&gt;256</div><div>save/APPEND/file=<a rel="nofollow" href="http://outputfile.nc">outputfile.nc</a>&#xA0; t2, rainc, v10, hgt<br>&#xA0;**ERROR: request exceeds memory setting: 18 Mwords were requested.<br>&#xA0;*** NOTE: You can use SET MEMORY/SIZE=xxx to increase memory.<br>&#xA0;*** NOTE: The &quot;Memory use&quot; section of the FERRET Users Guide has further tips.</div></div><div class="gmail_extra"><br><div class="gmail_quote">On Sun, Dec 6, 2015 at 10:47 PM, Ryo Furue <span dir="ltr">&lt;<a rel="nofollow" href="mailto:furue@xxxxxxxxxx" target="_blank">furue@xxxxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><span>&gt; For example an output file like this wrfout_d01_1982-02-01_00:00:00 has<br>
+<div dir="ltr"><div>ok Ryo</div><div>thanks for your answer </div><div>what I mean is wrf model output has about 38variables. But because of space I only want to have varibales that will be useful for me thus the term &quot;extract&quot;. For example out of the 38variables, I only need rainfall, Temp, winds etc</div><div><br></div><div>How Do I handle memory issue; Even when I set&#xA0; Mwords&gt;256</div><div>save/APPEND/file=<a rel="nofollow" href="http://outputfile.nc">outputfile.nc</a>&#xA0; t2, rainc, v10, hgt<br>&#xA0;**ERROR: request exceeds memory setting: 18 Mwords were requested.<br>&#xA0;*** NOTE: You can use SET MEMORY/SIZE=xxx to increase memory.<br>&#xA0;*** NOTE: The &quot;Memory use&quot; section of the FERRET Users Guide has further tips.</div></div><div class="gmail_extra"><br><div class="gmail_quote">On Sun, Dec 6, 2015 at 10:47 PM, Ryo Furue <span dir="ltr">&lt;<a rel="nofollow" href="mailto:furue@xxxxxxxxxx" >furue@xxxxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><span>&gt; For example an output file like this wrfout_d01_1982-02-01_00:00:00 has<br>
 &gt; timestep from 1982-02-01 to 1982-05-15-00.<br>
 &gt; That means the file contain feb, march, april and may data for 38variables.<br>
 &gt; Now what I want is extract only 6 varibales for timestep march, april, may.<br>
@@ -61,13 +61,13 @@
 </span>It&#39;s not clear what you mean by &quot;extract&quot;, but is this what you want<br>
 to accomplish?<br>
 <br>
-&#xA0; &#xA0;set data <a rel="nofollow" href="http://somefile.nc" target="_blank" rel="noreferrer">somefile.nc</a>&#xA0; !-&gt; contains 38 variables.<br>
-&#xA0; &#xA0;save/APPEND/file=<a rel="nofollow" href="http://outputfile.nc" target="_blank" rel="noreferrer">outputfile.nc</a>&#xA0; var1, var2, var3, var4, var5, var6<br>
+&#xA0; &#xA0;set data <a rel="nofollow" href="http://somefile.nc"  rel="noreferrer">somefile.nc</a>&#xA0; !-&gt; contains 38 variables.<br>
+&#xA0; &#xA0;save/APPEND/file=<a rel="nofollow" href="http://outputfile.nc"  rel="noreferrer">outputfile.nc</a>&#xA0; var1, var2, var3, var4, var5, var6<br>
 <br>
 &#xA0; &#xA0;. . . do the same for another file . . .<br>
 <br>
 The above saves six variables var1, var2, . . . , var6 contained in<br>
-&quot;<a rel="nofollow" href="http://somefile.nc" target="_blank" rel="noreferrer">somefile.nc</a>&quot; into a new file &quot;<a rel="nofollow" href="http://outputfile.nc" target="_blank" rel="noreferrer">outputfile.nc</a>&quot; .<br>
+&quot;<a rel="nofollow" href="http://somefile.nc"  rel="noreferrer">somefile.nc</a>&quot; into a new file &quot;<a rel="nofollow" href="http://outputfile.nc"  rel="noreferrer">outputfile.nc</a>&quot; .<br>
 <span class="HOEnZb"><font color="#888888"><br>
 Ryo<br>
 </font></span></blockquote></div><br></div>

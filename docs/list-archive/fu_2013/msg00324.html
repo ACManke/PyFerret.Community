@@ -56,7 +56,7 @@
 <br>
 </div><div>use<b> canc data1</b> before the end of loop<br><br></div><div>Hope it will work<br><br></div>-Akshay Hegde<br>
 National Institute of Oceanography<br>
-Dona Paula, Goa<br><br><br><br><div class="gmail_quote">On Wed, May 8, 2013 at 2:04 PM, Gopal Mondal <span dir="ltr">&lt;<a rel="nofollow" href="mailto:gopalmondal18@xxxxxxxxx" target="_blank">gopalmondal18@xxxxxxxxx</a>&gt;</span> wrote:<br>
+Dona Paula, Goa<br><br><br><br><div class="gmail_quote">On Wed, May 8, 2013 at 2:04 PM, Gopal Mondal <span dir="ltr">&lt;<a rel="nofollow" href="mailto:gopalmondal18@xxxxxxxxx" >gopalmondal18@xxxxxxxxx</a>&gt;</span> wrote:<br>
 
 <blockquote class="gmail_quote" style="margin:0pt 0pt 0pt 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div dir="ltr"><div><div><div><br></div>In ferret repeat command how I can use more than 100 data file at a time.<br>
 </div>
@@ -70,28 +70,28 @@ let ed_140=if elec_dens[x=180:700] lt 0 then 0 else elec_dens[x=180:700];\<br>le
 else ;\<br>list/app/file=ed140_ma16.dat/head/l=`yy` glat,glon,edmax;\<br>endif ;\<br>)<br><br><div>the result is as follows. Even taking 100 data file named test140.101 to test140.200,it is not running. <br></div><div><br>
 
 
-!-&gt; REPEAT: YY:100<br>&#xA0;!-&gt; SET DAT/FORM=CDF <a rel="nofollow" href="http://test140.100.nc" target="_blank">test140.100.nc</a><br>&#xA0;!-&gt; if 0 then<br>&#xA0;!-&gt; list/app/file=ed140_ma16.dat/head/l=100 glat,glon,edmax<br>&#xA0;LISTing to file ed140_ma16.dat<br>
+!-&gt; REPEAT: YY:100<br>&#xA0;!-&gt; SET DAT/FORM=CDF <a rel="nofollow" href="http://test140.100.nc" >test140.100.nc</a><br>&#xA0;!-&gt; if 0 then<br>&#xA0;!-&gt; list/app/file=ed140_ma16.dat/head/l=100 glat,glon,edmax<br>&#xA0;LISTing to file ed140_ma16.dat<br>
 
 
-!-&gt; REPEAT: YY:101<br>&#xA0;!-&gt; SET DAT/FORM=CDF <a rel="nofollow" href="http://test140.101.nc" target="_blank">test140.101.nc</a><br>&#xA0;**TMAP ERR: limit on number of data sets has been reached<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; MAX=&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 100<br>SET DAT/FORM=CDF <a rel="nofollow" href="http://test140.101.nc" target="_blank">test140.101.nc</a><br>
+!-&gt; REPEAT: YY:101<br>&#xA0;!-&gt; SET DAT/FORM=CDF <a rel="nofollow" href="http://test140.101.nc" >test140.101.nc</a><br>&#xA0;**TMAP ERR: limit on number of data sets has been reached<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; MAX=&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 100<br>SET DAT/FORM=CDF <a rel="nofollow" href="http://test140.101.nc" >test140.101.nc</a><br>
 
 
-Command file, command group, or REPEAT execution aborted<br><br></div><div>*** next when taking 100 data file named <a rel="nofollow" href="http://test140.1.nc" target="_blank">test140.1.nc</a> to <a rel="nofollow" href="http://test140.100.nc" target="_blank">test140.100.nc</a> we run the following .jnl file:<br>
+Command file, command group, or REPEAT execution aborted<br><br></div><div>*** next when taking 100 data file named <a rel="nofollow" href="http://test140.1.nc" >test140.1.nc</a> to <a rel="nofollow" href="http://test140.100.nc" >test140.100.nc</a> we run the following .jnl file:<br>
 
 
 def symb start=1<br>def symb end=100<br>def axis/t0=15-May-2009/t=1:100:1/unit=hours tax<br>repeat/range=($start):($end)/name=yy (;\<br>use test140.`yy`.nc;\<br>let glat=if geo_lat[x=340] lt 0 then 0 else geo_lat[x=340];\<br>
 
 
-let glon=if geo_lon[x=340] lt 0 then 0 else geo_lon[x=340];\<br>let ed_140=if elec_dens[x=180:700] lt 0 then 0 else elec_dens[x=180:700];\<br>let edmax = ed_140[x=@max]+0*t[gt=tax];\<br>if `yy eq 1` then ;\<br>list/file=<a rel="nofollow" href="http://ed140_ma16.nc/format=cdf/clob/l=yy/llimits=1:100" target="_blank">ed140_ma16.nc/format=cdf/clob/l=`yy`/llimits=1:100</a> glat,glon,edmax;\<br>
+let glon=if geo_lon[x=340] lt 0 then 0 else geo_lon[x=340];\<br>let ed_140=if elec_dens[x=180:700] lt 0 then 0 else elec_dens[x=180:700];\<br>let edmax = ed_140[x=@max]+0*t[gt=tax];\<br>if `yy eq 1` then ;\<br>list/file=<a rel="nofollow" href="http://ed140_ma16.nc/format=cdf/clob/l=yy/llimits=1:100" >ed140_ma16.nc/format=cdf/clob/l=`yy`/llimits=1:100</a> glat,glon,edmax;\<br>
 
 
-else ;\<br>list/app/file=<a rel="nofollow" href="http://ed140_ma16.nc/format=cdf/l=yy" target="_blank">ed140_ma16.nc/format=cdf/l=`yy`</a> glat,glon,edmax;\<br>endif ;\<br>) <br><br></div><div>the output is as follows:<br>!-&gt; REPEAT: YY:1<br>
+else ;\<br>list/app/file=<a rel="nofollow" href="http://ed140_ma16.nc/format=cdf/l=yy" >ed140_ma16.nc/format=cdf/l=`yy`</a> glat,glon,edmax;\<br>endif ;\<br>) <br><br></div><div>the output is as follows:<br>!-&gt; REPEAT: YY:1<br>
 
-&#xA0;!-&gt; SET DAT/FORM=CDF <a rel="nofollow" href="http://test140.1.nc" target="_blank">test140.1.nc</a><br>
-&#xA0;!-&gt; if 1 then<br>&#xA0;!-&gt; list/file=<a rel="nofollow" href="http://ed140_ma16.nc/format=cdf/clob/l=1/llimits=1:100" target="_blank">ed140_ma16.nc/format=cdf/clob/l=1/llimits=1:100</a> glat,glon,edmax<br>&#xA0;LISTing to file <a rel="nofollow" href="http://ed140_ma16.nc" target="_blank">ed140_ma16.nc</a><br>
+&#xA0;!-&gt; SET DAT/FORM=CDF <a rel="nofollow" href="http://test140.1.nc" >test140.1.nc</a><br>
+&#xA0;!-&gt; if 1 then<br>&#xA0;!-&gt; list/file=<a rel="nofollow" href="http://ed140_ma16.nc/format=cdf/clob/l=1/llimits=1:100" >ed140_ma16.nc/format=cdf/clob/l=1/llimits=1:100</a> glat,glon,edmax<br>&#xA0;LISTing to file <a rel="nofollow" href="http://ed140_ma16.nc" >ed140_ma16.nc</a><br>
 
 
-NetCDF: Not a valid data type or _FillValue type mismatch (OPeNDAP/netCDF Error code -45)<br>&#xA0;could not change CDF mode<br>list/file=<a rel="nofollow" href="http://ed140_ma16.nc/format=cdf/clob/l=1/llimits=1:100" target="_blank">ed140_ma16.nc/format=cdf/clob/l=1/llimits=1:100</a> glat,glon,edmax<br>
+NetCDF: Not a valid data type or _FillValue type mismatch (OPeNDAP/netCDF Error code -45)<br>&#xA0;could not change CDF mode<br>list/file=<a rel="nofollow" href="http://ed140_ma16.nc/format=cdf/clob/l=1/llimits=1:100" >ed140_ma16.nc/format=cdf/clob/l=1/llimits=1:100</a> glat,glon,edmax<br>
 
 
 Command file, command group, or REPEAT execution aborted<br>ncclose: ncid 131072: NetCDF: Not a valid data type or _FillValue type mismatch<br><br><br></div><div>ples. help anybody.Because I have to use more than 100 data file at a time in repeat command.also I want to list in a .nc data file. with regards<span><font color="#888888"><br>

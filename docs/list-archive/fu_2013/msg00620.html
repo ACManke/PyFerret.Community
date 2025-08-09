@@ -49,10 +49,10 @@
 <!--X-Head-Body-Sep-End-->
 <!--X-Body-of-Message-->
 <div dir="ltr">Hi Ulrich,<div><br></div><div>Ferret does not output PostScript. &#xA0;It can create a GKS metafile that can then be converted into PostScript using the gksm2ps program supplied with Ferret.<div><br></div><div>What you wrote can be done with PyFerret. &#xA0;But in PyFerret it is better to just use FRAME /FILE=... Ferret commands (in your example FRAME /FILE=&quot;<a rel="nofollow" href="http://tasmax.2021-2050_1970-2000.ps">http://tasmax.2021-2050_1970-2000.ps</a>&quot;) and forget about the -batch command line option. &#xA0;This would also allow you to create multiple PostScript (or PDF) image in one session, which appears might be the case in what you sent.</div>
-<div><br></div><div><br></div><div>Karl</div><div><br></div></div></div><div class="gmail_extra"><br><br><div class="gmail_quote">On Fri, Nov 15, 2013 at 3:41 PM, Ulrich Jacques Diasso <span dir="ltr">&lt;<a rel="nofollow" href="mailto:udiasso@xxxxxxxxx" target="_blank">udiasso@xxxxxxxxx</a>&gt;</span> wrote:<br>
+<div><br></div><div><br></div><div>Karl</div><div><br></div></div></div><div class="gmail_extra"><br><br><div class="gmail_quote">On Fri, Nov 15, 2013 at 3:41 PM, Ulrich Jacques Diasso <span dir="ltr">&lt;<a rel="nofollow" href="mailto:udiasso@xxxxxxxxx" >udiasso@xxxxxxxxx</a>&gt;</span> wrote:<br>
 <blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir="ltr"><div><div>Dear ferreters,<br></div>Trying to save .ps figures, I got a complain from ubuntu 13.10 after typing:<br>
-</div><b>ferret -batch <a rel="nofollow" href="http://figure_name.ps" target="_blank">figure_name.ps</a> -script my_Script.jnl</b><br>
-<div><br>&#xA0;Cached data cleared from memory<br>**ERROR: ../../Figures/<a rel="nofollow" href="http://PR.2021-2050_1970-2000.ps" target="_blank">PR.2021-2050_1970-2000.ps</a>: Key has been revoked<br>&#xA0;*** NOTE: Cannot cancel window when in batch mode<br>
+</div><b>ferret -batch <a rel="nofollow" href="http://figure_name.ps" >figure_name.ps</a> -script my_Script.jnl</b><br>
+<div><br>&#xA0;Cached data cleared from memory<br>**ERROR: ../../Figures/<a rel="nofollow" href="http://PR.2021-2050_1970-2000.ps" >PR.2021-2050_1970-2000.ps</a>: Key has been revoked<br>&#xA0;*** NOTE: Cannot cancel window when in batch mode<br>
 &#xA0;*** NOTE: Cannot create new windows when batch mode set<br>
 gdeactivatews()&#xA0;&#xA0;&#xA0; 3 GKS not in proper state: GKS shall be in the state WSAC<br>gactivatews()&#xA0;&#xA0;&#xA0; 6 GKS not in proper state: GKS shall be either in the state WSOP or in the state WSAC<br>ginqwsconntype()&#xA0;&#xA0;&#xA0; 7 GKS not in proper state: GKS shall be in one of the states WSOP, WSAC or SGOP<br>
 
@@ -60,7 +60,7 @@ gsetwswindow()&#xA0;&#xA0;&#xA0; 7 GKS not in proper state: GKS shall be in one 
 
 &#xA0;**ERROR: required program command has not been given: graphical output device isnt ready<br>CONTOUR/FILL /pal=brown_blue/nolabel/nokey/lev=(-Inf)(-22,22,4)(Inf) var9<br>Command file, command group, or REPEAT execution aborted<br>
 
-STOP -script mode, ERROR RUNNING SCRIPT statement executed<br>&#xA0;Cached data cleared from memory<br>**ERROR: ../../Figures/<a rel="nofollow" href="http://TAS.2021-2050_1970-2000.ps" target="_blank">TAS.2021-2050_1970-2000.ps</a>: Key has been revoked<br>
+STOP -script mode, ERROR RUNNING SCRIPT statement executed<br>&#xA0;Cached data cleared from memory<br>**ERROR: ../../Figures/<a rel="nofollow" href="http://TAS.2021-2050_1970-2000.ps" >TAS.2021-2050_1970-2000.ps</a>: Key has been revoked<br>
 
 &#xA0;*** NOTE: Cannot cancel window when in batch mode<br>&#xA0;*** NOTE: Cannot create new windows when batch mode set<br>gdeactivatews()&#xA0;&#xA0;&#xA0; 3 GKS not in proper state: GKS shall be in the state WSAC<br>gactivatews()&#xA0;&#xA0;&#xA0; 6 GKS not in proper state: GKS shall be either in the state WSOP or in the state WSAC<br>
 
@@ -68,7 +68,7 @@ ginqwsconntype()&#xA0;&#xA0;&#xA0; 7 GKS not in proper state: GKS shall be in on
 
 gupdatews()&#xA0;&#xA0;&#xA0; 7 GKS not in proper state: GKS shall be in one of the states WSOP, WSAC or SGOP<br>&#xA0;**ERROR: required program command has not been given: graphical output device isnt ready<br>CONTOUR/FILL /pal=orange_red/nolabel/nokey/lev=(-Inf)(0,2,0.2)(Inf) var9<br>
 
-Command file, command group, or REPEAT execution aborted<br>STOP -script mode, ERROR RUNNING SCRIPT statement executed<br>&#xA0;Cached data cleared from memory<br>**ERROR: ../../Figures/<a rel="nofollow" href="http://TASMIN.2021-2050_1970-2000.ps" target="_blank">TASMIN.2021-2050_1970-2000.ps</a>: Key has been revoked<br>
+Command file, command group, or REPEAT execution aborted<br>STOP -script mode, ERROR RUNNING SCRIPT statement executed<br>&#xA0;Cached data cleared from memory<br>**ERROR: ../../Figures/<a rel="nofollow" href="http://TASMIN.2021-2050_1970-2000.ps" >TASMIN.2021-2050_1970-2000.ps</a>: Key has been revoked<br>
 
 &#xA0;*** NOTE: Cannot cancel window when in batch mode<br>&#xA0;*** NOTE: Cannot create new windows when batch mode set<br>gdeactivatews()&#xA0;&#xA0;&#xA0; 3 GKS not in proper state: GKS shall be in the state WSAC<br>gactivatews()&#xA0;&#xA0;&#xA0; 6 GKS not in proper state: GKS shall be either in the state WSOP or in the state WSAC<br>
 
@@ -76,7 +76,7 @@ ginqwsconntype()&#xA0;&#xA0;&#xA0; 7 GKS not in proper state: GKS shall be in on
 
 gupdatews()&#xA0;&#xA0;&#xA0; 7 GKS not in proper state: GKS shall be in one of the states WSOP, WSAC or SGOP<br>&#xA0;**ERROR: required program command has not been given: graphical output device isnt ready<br>CONTOUR/FILL /pal=orange_red/nolabel/nokey/lev=(-Inf)(0,2,0.2)(Inf) var9<br>
 
-Command file, command group, or REPEAT execution aborted<br>STOP -script mode, ERROR RUNNING SCRIPT statement executed<br>&#xA0;Cached data cleared from memory<br>**ERROR: ../../Figures/<a rel="nofollow" href="http://TASMAX.2021-2050_1970-2000.ps" target="_blank">TASMAX.2021-2050_1970-2000.ps</a>: Key has been revoked<br>
+Command file, command group, or REPEAT execution aborted<br>STOP -script mode, ERROR RUNNING SCRIPT statement executed<br>&#xA0;Cached data cleared from memory<br>**ERROR: ../../Figures/<a rel="nofollow" href="http://TASMAX.2021-2050_1970-2000.ps" >TASMAX.2021-2050_1970-2000.ps</a>: Key has been revoked<br>
 
 &#xA0;*** NOTE: Cannot cancel window when in batch mode<br>&#xA0;*** NOTE: Cannot create new windows when batch mode set<br>gdeactivatews()&#xA0;&#xA0;&#xA0; 3 GKS not in proper state: GKS shall be in the state WSAC<br>gactivatews()&#xA0;&#xA0;&#xA0; 6 GKS not in proper state: GKS shall be either in the state WSOP or in the state WSAC<br>
 

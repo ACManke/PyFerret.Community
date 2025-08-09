@@ -47,7 +47,7 @@
 <!--X-Body-of-Message-->
 <div dir="ltr"><div><div><div>Dear ferret users,<br><br></div><div>My question is quite basic. I&#39;m producing area average time series of a monthly data, but there is a shit in a time axis in the plot of each month. My question is how can I produce data points of a time series parallel to the major ticks. <br>
 
-<br></div><div>&#xA0;Here is the example: <br></div><div>&#xA0;Use <a rel="nofollow" href="http://monthly_data.nc" target="_blank">monthly_data.nc</a> ! 20 yrs of monthly data<br></div><div>&#xA0;let jan_var=var[l=1:240:12]&#xA0;&#xA0; !select jan <br></div><div>
+<br></div><div>&#xA0;Here is the example: <br></div><div>&#xA0;Use <a rel="nofollow" href="http://monthly_data.nc" >monthly_data.nc</a> ! 20 yrs of monthly data<br></div><div>&#xA0;let jan_var=var[l=1:240:12]&#xA0;&#xA0; !select jan <br></div><div>
 &#xA0;let aug_var=var[l=8:240:12] &#xA0; !select Aug
 </div><div><br></div><div>&#xA0;plot jan_var&#xA0; <br></div><div>&#xA0;plot/over/line=8 aug_var <br></div><br></div>For January, the time series starts at beginning of the of the year (on major ticks), but for August it starts in the middle.<br>
 <br></div><div>What I need is: to plot the data points parallel to the tick (for all months), and also to put the years in the time axis of the plot parallel with the ticks of the time axis (not between the ticks).<br><br>

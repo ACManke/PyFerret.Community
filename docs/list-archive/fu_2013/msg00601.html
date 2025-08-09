@@ -53,10 +53,10 @@
 <!--X-Body-of-Message-->
 <div dir="ltr">Did you try with default dataset which comes with ferret ? whether following commands are working ?<br><br>&#xA0;&#xA0;&#xA0; yes? SET DATA monthly_navy_winds<br>&#xA0;&#xA0;&#xA0; yes? GO gmt_power uwnd[x=180,y=0] uwnd x180y0 64<br>&#xA0;&#xA0;&#xA0; yes? PLOT x180y0_power<br>
 &#xA0;&#xA0;&#xA0; yes? GO overlay_bars x180y0_power&#xA0; x180y0_error red<br><br><br><pre><font size="4"><b><span style="font-family:&quot;Courier New&quot;">Thanks and Regards,<br>Akshay Hegde <br>CSIR-National Institute of Oceanography,
-Dona Paula, Panjim, Goa -403004</span></b></font></pre><br><br></div><div class="gmail_extra"><br><br><div class="gmail_quote">On Mon, Nov 11, 2013 at 11:55 AM, chinnu sachi <span dir="ltr">&lt;<a rel="nofollow" href="mailto:chinnu.sachi7@xxxxxxxxx" target="_blank">chinnu.sachi7@xxxxxxxxx</a>&gt;</span> wrote:<br>
+Dona Paula, Panjim, Goa -403004</span></b></font></pre><br><br></div><div class="gmail_extra"><br><br><div class="gmail_quote">On Mon, Nov 11, 2013 at 11:55 AM, chinnu sachi <span dir="ltr">&lt;<a rel="nofollow" href="mailto:chinnu.sachi7@xxxxxxxxx" >chinnu.sachi7@xxxxxxxxx</a>&gt;</span> wrote:<br>
 <blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir="ltr">My time axis is ok,I list it below. even I removed clobber ,still same error is coming.<br><div>&#xA0;I can open spectrum1d with man spectrum1d<br>
 </div><div>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; VARIABLE : L<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; axis TIME<br>
-&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; FILENAME : <a rel="nofollow" href="http://v_test.nc" target="_blank">v_test.nc</a><br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; SUBSET&#xA0;&#xA0; : 600 points (TIME)<br>&#xA0;15-JAN-1958 00 /&#xA0;&#xA0; 1:&#xA0;&#xA0;&#xA0; 1.0<br>&#xA0;15-FEB-1958 00 /&#xA0;&#xA0; 2:&#xA0;&#xA0;&#xA0; 2.0<br>&#xA0;15-MAR-1958 00 /&#xA0;&#xA0; 3:&#xA0;&#xA0;&#xA0; 3.0<br>
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; FILENAME : <a rel="nofollow" href="http://v_test.nc" >v_test.nc</a><br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; SUBSET&#xA0;&#xA0; : 600 points (TIME)<br>&#xA0;15-JAN-1958 00 /&#xA0;&#xA0; 1:&#xA0;&#xA0;&#xA0; 1.0<br>&#xA0;15-FEB-1958 00 /&#xA0;&#xA0; 2:&#xA0;&#xA0;&#xA0; 2.0<br>&#xA0;15-MAR-1958 00 /&#xA0;&#xA0; 3:&#xA0;&#xA0;&#xA0; 3.0<br>
 &#xA0;15-APR-1958 00 /&#xA0;&#xA0; 4:&#xA0;&#xA0;&#xA0; 4.0<br>
 &#xA0;15-MAY-1958 00 /&#xA0;&#xA0; 5:&#xA0;&#xA0;&#xA0; 5.0<br>&#xA0;15-JUN-1958 00 /&#xA0;&#xA0; 6:&#xA0;&#xA0;&#xA0; 6.0<br>&#xA0;15-JUL-1958 00 /&#xA0;&#xA0; 7:&#xA0;&#xA0;&#xA0; 7.0<br>&#xA0;15-AUG-1958 00 /&#xA0;&#xA0; 8:&#xA0;&#xA0;&#xA0; 8.0<br>&#xA0;15-SEP-1958 00 /&#xA0;&#xA0; 9:&#xA0;&#xA0;&#xA0; 9.0<br>&#xA0;15-OCT-1958 00 /&#xA0; 10:&#xA0;&#xA0; 10.0<br>&#xA0;15-NOV-1958 00 /&#xA0; 11:&#xA0;&#xA0; 11.0<br>
 
@@ -64,13 +64,13 @@ Dona Paula, Panjim, Goa -403004</span></b></font></pre><br><br></div><div class=
 
 &#xA0;15-JUL-1959 00 /&#xA0; 19:&#xA0;&#xA0; 19.0<br>&#xA0;15-AUG-1959 00 /&#xA0; 20:&#xA0;&#xA0; 20.0<br>&#xA0;15-SEP-1959 00 /&#xA0; 21:&#xA0;&#xA0; 21.0<br>&#xA0;15-OCT-1959 00 /&#xA0; 22:&#xA0;&#xA0; 22.0<br>&#xA0;15-NOV-1959 00 /&#xA0; 23:&#xA0;&#xA0; 23.0<br>&#xA0;15-DEC-1959 00 /&#xA0; 24:&#xA0;&#xA0; 24.0<br></div></div><div class="HOEnZb">
 <div class="h5"><div class="gmail_extra">
-<br><br><div class="gmail_quote">On Mon, Nov 11, 2013 at 11:48 AM, Akshay Hegde <span dir="ltr">&lt;<a rel="nofollow" href="mailto:akshay.k.hegde@xxxxxxxxx" target="_blank">akshay.k.hegde@xxxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
+<br><br><div class="gmail_quote">On Mon, Nov 11, 2013 at 11:48 AM, Akshay Hegde <span dir="ltr">&lt;<a rel="nofollow" href="mailto:akshay.k.hegde@xxxxxxxxx" >akshay.k.hegde@xxxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
 
 <div dir="ltr">Sorry I forgot to mention make sure that you can open man page using following command since you are getting this error <b>&quot;sh: 1: spectrum1d: not found&quot;</b><br><b><br><span style="color:rgb(255,0,0)">man spectrum1d</span></b><div>
 
 <br>
 <br><pre><font size="4"><b><span style="font-family:&quot;Courier New&quot;">Thanks and Regards,<br>Akshay Hegde <br>CSIR-National Institute of Oceanography,
-Dona Paula, Panjim, Goa -403004</span></b></font></pre><br></div></div><div><div><div class="gmail_extra"><br><br><div class="gmail_quote">On Mon, Nov 11, 2013 at 11:40 AM, Akshay Hegde <span dir="ltr">&lt;<a rel="nofollow" href="mailto:akshay.k.hegde@xxxxxxxxx" target="_blank">akshay.k.hegde@xxxxxxxxx</a>&gt;</span> wrote:<br>
+Dona Paula, Panjim, Goa -403004</span></b></font></pre><br></div></div><div><div><div class="gmail_extra"><br><br><div class="gmail_quote">On Mon, Nov 11, 2013 at 11:40 AM, Akshay Hegde <span dir="ltr">&lt;<a rel="nofollow" href="mailto:akshay.k.hegde@xxxxxxxxx" >akshay.k.hegde@xxxxxxxxx</a>&gt;</span> wrote:<br>
 
 
 <blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir="ltr">Try something like this<br><br><pre><font size="4"><b>GO gmt_power variable[x=180,y=0] grid output seg_len</b><br>
@@ -86,7 +86,7 @@ Dona Paula, Panjim, Goa -403004</span></b></font></pre><br></div></div><div><div
 
 
 
-Dona Paula, Panjim, Goa -403004<br></span></b><br></font></pre><br></div><div><div><div class="gmail_extra"><br><br><div class="gmail_quote">On Mon, Nov 11, 2013 at 10:32 AM, chinnu sachi <span dir="ltr">&lt;<a rel="nofollow" href="mailto:chinnu.sachi7@xxxxxxxxx" target="_blank">chinnu.sachi7@xxxxxxxxx</a>&gt;</span> wrote:<br>
+Dona Paula, Panjim, Goa -403004<br></span></b><br></font></pre><br></div><div><div><div class="gmail_extra"><br><br><div class="gmail_quote">On Mon, Nov 11, 2013 at 10:32 AM, chinnu sachi <span dir="ltr">&lt;<a rel="nofollow" href="mailto:chinnu.sachi7@xxxxxxxxx" >chinnu.sachi7@xxxxxxxxx</a>&gt;</span> wrote:<br>
 
 
 
@@ -95,7 +95,7 @@ Dona Paula, Panjim, Goa -403004<br></span></b><br></font></pre><br></div><div><d
 
 
 
-<br><b>yes? go power.jnl <br>set mem/size = 650<br>&#xA0;Cached data cleared from memory<br>use <a rel="nofollow" href="http://v_test.nc" target="_blank">v_test.nc</a><br>&#xA0;repeat/k=1:`20` ( go gmt_power V_NEW GHA1 gmt 256; list/file=test/clobber/append gmt_power;plot gmt_power)<br>
+<br><b>yes? go power.jnl <br>set mem/size = 650<br>&#xA0;Cached data cleared from memory<br>use <a rel="nofollow" href="http://v_test.nc" >v_test.nc</a><br>&#xA0;repeat/k=1:`20` ( go gmt_power V_NEW GHA1 gmt 256; list/file=test/clobber/append gmt_power;plot gmt_power)<br>
 
 
 
@@ -116,12 +116,12 @@ sh: 1: spectrum1d: not found<br>&#xA0;**TMAP ERR: non-existent or not on line<br
 
 
 <br></div><div>Thanks in advance<span><font color="#888888"><br></font></span></div><span><font color="#888888"><br><div><div><div><div>-- <br><b>Regards,<br>Chinnu Sachidanandan<br>Physical Oceanography Division<br>
-National Institute of Oceanography<br><a rel="nofollow" href="mailto:csachidanandan@xxxxxxx" target="_blank">csachidanandan@xxxxxxx</a></b><br>
+National Institute of Oceanography<br><a rel="nofollow" href="mailto:csachidanandan@xxxxxxx" >csachidanandan@xxxxxxx</a></b><br>
 
 </div></div></div></div></font></span></div>
 </blockquote></div><br></div>
 </div></div></blockquote></div><br></div>
-</div></div></blockquote></div><br><br clear="all"><br>-- <br><b>Regards,<br>Chinnu Sachidanandan<br>Physical Oceanography Division<br>National Institute of Oceanography<br><a rel="nofollow" href="mailto:csachidanandan@xxxxxxx" target="_blank">csachidanandan@xxxxxxx</a></b><br>
+</div></div></blockquote></div><br><br clear="all"><br>-- <br><b>Regards,<br>Chinnu Sachidanandan<br>Physical Oceanography Division<br>National Institute of Oceanography<br><a rel="nofollow" href="mailto:csachidanandan@xxxxxxx" >csachidanandan@xxxxxxx</a></b><br>
 
 
 </div>

@@ -57,7 +57,7 @@ Hi there!<br><br><br>I &#39;m experiencing such an issue genereting graphics.<br
 
 <br>The command that I use.<br><br>gs -q -dNOPAUSE -dBATCH -sDEVICE=pnmraw -r150x150 -dTextAlphaBits=2 -dGraphicsAlphaBits=2 -sOutputFile=- <a rel="nofollow" href="http://file_name.ps">file_name.ps</a> | pnmflip -r90 | convert -antialias - file_name.png<br>
 
-<br><br>All the best,<br>Szymon Rozieski<br><br><br><div class="gmail_quote">On 29 August 2012 22:59, Ryo Furue <span dir="ltr">&lt;<a rel="nofollow" href="mailto:furue@xxxxxxxxxx" target="_blank">furue@xxxxxxxxxx</a>&gt;</span> wrote:<br>
+<br><br>All the best,<br>Szymon Rozieski<br><br><br><div class="gmail_quote">On 29 August 2012 22:59, Ryo Furue <span dir="ltr">&lt;<a rel="nofollow" href="mailto:furue@xxxxxxxxxx" >furue@xxxxxxxxxx</a>&gt;</span> wrote:<br>
 
 <blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">Hi Szymon,<br>
 <div class="im"><br>
@@ -106,7 +106,7 @@ Therefore, they are treat as (and they actually are) line graphics.<br>
 &gt;&gt; Dear Szymon,<br>
 &gt;&gt;<br>
 &gt;&gt; &gt; *gs -q -dNOPAUSE -dBATCH -sDEVICE=pnmraw -r150x150 -dTextAlphaBits=4<br>
-&gt;&gt; &gt; -dGraphicsAlphaBits=4 -sOutputFile=- <a rel="nofollow" href="http://polycstline.ps" target="_blank">polycstline.ps</a> | pnmflip -r90 |<br>
+&gt;&gt; &gt; -dGraphicsAlphaBits=4 -sOutputFile=- <a rel="nofollow" href="http://polycstline.ps" >polycstline.ps</a> | pnmflip -r90 |<br>
 &gt;&gt; &gt; convert +antialias - polycstline.png*<br>
 &gt;&gt; &gt;<br>
 &gt;&gt; &gt; I changed line thickness and now I am quite happy about this wthat I<br>
@@ -129,7 +129,7 @@ Therefore, they are treat as (and they actually are) line graphics.<br>
 &gt;&gt; Better still, the &quot;convert&quot; command can manipulate your image in a<br>
 &gt;&gt; lot of ways and you may not need to use &quot;gs&quot; in the first place:<br>
 &gt;&gt;<br>
-&gt;&gt; &#xA0;convert -density 150 -rotate 90 +antialias <a rel="nofollow" href="http://polycstline.ps" target="_blank">polycstline.ps</a> polycstline.png<br>
+&gt;&gt; &#xA0;convert -density 150 -rotate 90 +antialias <a rel="nofollow" href="http://polycstline.ps" >polycstline.ps</a> polycstline.png<br>
 &gt;&gt;<br>
 &gt;&gt; or something along the lines.<br>
 &gt;&gt;<br>

@@ -54,7 +54,7 @@
 <hr>
 <!--X-Head-Body-Sep-End-->
 <!--X-Body-of-Message-->
-<div dir="ltr"><div><div><div>Please, do not just copy the tips and complain it doesn&#39;t work. The solution the people give to you are juste example, you need to adapt to your case (and for that, you need to think about what you are doing). <br></div><br>You just said &quot;i don&#39;t know why this is taking up the Temperature from the second data set&quot;. Well, it is because you specify Temperature should be in data 2 (let q = temperature[y=35,<b><u><span style="color:rgb(255,0,0)">d=2</span></u></b>]&#xA0; ) So please, before sending a question, try to think a little by yourself why it&#39;s not working (I know sometimes it&#39;s difficult, but it actually help a lot to think on the problem before asking for help, you will learn a lot more this way). <br><br></div>Best,<br></div>Nicolas<br><div><div><br></div></div></div><div class="gmail_extra"><br><div class="gmail_quote">2015-05-28 15:02 GMT+08:00 Satyam Srivastava <span dir="ltr">&lt;<a rel="nofollow" href="mailto:satyam.srivastava.au@xxxxxxxxx" target="_blank">satyam.srivastava.au@xxxxxxxxx</a>&gt;</span>:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir="ltr"><div><div><div><div><div>Hi all thanks for your kind reply, i have been using the same data set for all kind of dummy computation but in this case i don&#39;t know why this is taking up the Temperature from the second data set the files are as follows ::<br><br>yes? set mode metafile<br>yes? set data <a rel="nofollow" href="http://pottm2008.nc" target="_blank">pottm2008.nc</a> <br>yes? set data <a rel="nofollow" href="http://pottmp.2008.nc" target="_blank">pottmp.2008.nc</a> <br>yes? let p = pottmp[y=35,d=1]<br>yes? let q = temperature[y=35,d=2]<br>yes? go variance<br>... Variance and Covariance: Instructions:<br>Use the LET/QUIET command to define the variable(s) P (and Q) as<br>your variable(s) of interest (e.g. yes? LET/QUIET P = u[x=180,y=0])<br>The variance of P will be variable P_VAR&#xA0; (Q --&gt; Q_VAR)<br>The covariance will be COVAR The correlation will be CORREL.<br>Type GO VAR_N to obtain n/n+1 statistical correction factor<br>...<br>yes? go var_n<br>CANCEL MODE VERIFY<br>&#xA0;**ERROR: variable unknown or not in data set: TEMPERATURE[Y=35,D=2]<br>IF `nm1 eq 0` then exit/script<br>Command file, command group, or REPEAT execution aborted<br>yes? use <a rel="nofollow" href="http://pottmp.2008.nc" target="_blank">pottmp.2008.nc</a> <br>yes? sh d<br>&#xA0;&#xA0;&#xA0;&#xA0; currently SET data sets:<br>&#xA0;&#xA0;&#xA0; 1&gt; ./<a rel="nofollow" href="http://pottm2008.nc" target="_blank">pottm2008.nc</a><br>&#xA0;name&#xA0;&#xA0;&#xA0;&#xA0; title&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; I&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; J&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; K&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; L&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; M&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; N<br>&#xA0;TEMPERATURE<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; potential temperature (degc)&#xA0;&#xA0;&#xA0;&#xA0; 1:2001&#xA0;&#xA0;&#xA0; 1:1093&#xA0;&#xA0;&#xA0; 1:10&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:32&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...<br>&#xA0;<br>&#xA0;&#xA0;&#xA0; 2&gt; ./<a rel="nofollow" href="http://pottmp.2008.nc" target="_blank">pottmp.2008.nc</a>&#xA0; (default)<br>&#xA0;name&#xA0;&#xA0;&#xA0;&#xA0; title&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; I&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; J&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; K&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; L&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; M&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; N<br>&#xA0;DATE&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:12&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...<br>&#xA0;TIMEPLOT&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:12&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...<br>&#xA0;POTTMP&#xA0;&#xA0; Potential temperature&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:360&#xA0;&#xA0;&#xA0;&#xA0; 1:418&#xA0;&#xA0;&#xA0;&#xA0; 1:40&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:12&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...<br>&#xA0;<br>yes? use <a rel="nofollow" href="http://pottm2008.nc" target="_blank">pottm2008.nc</a> <br>yes? sh d<br>&#xA0;&#xA0;&#xA0;&#xA0; currently SET data sets:<br>&#xA0;&#xA0;&#xA0; 1&gt; ./<a rel="nofollow" href="http://pottm2008.nc" target="_blank">pottm2008.nc</a>&#xA0; (default)<br>&#xA0;name&#xA0;&#xA0;&#xA0;&#xA0; title&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; I&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; J&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; K&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; L&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; M&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; N<br>&#xA0;TEMPERATURE<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; potential temperature (degc)&#xA0;&#xA0;&#xA0;&#xA0; 1:2001&#xA0;&#xA0;&#xA0; 1:1093&#xA0;&#xA0;&#xA0; 1:10&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:32&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...<br>&#xA0;<br></div>&#xA0;the terms are present in the file but it is unable to be read,<br><br></div>please have a look to the data set and please suggest me any solution if it possible.<br><br></div>Thanks in advance<br><br></div>Regards,<br></div>Satyam srivastava.<br></div><div class="gmail_extra"><br><div class="gmail_quote">On Wed, May 27, 2015 at 10:16 PM, Ansley Manke <span dir="ltr">&lt;<a rel="nofollow" href="mailto:ansley.b.manke@xxxxxxxx" target="_blank">ansley.b.manke@xxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
+<div dir="ltr"><div><div><div>Please, do not just copy the tips and complain it doesn&#39;t work. The solution the people give to you are juste example, you need to adapt to your case (and for that, you need to think about what you are doing). <br></div><br>You just said &quot;i don&#39;t know why this is taking up the Temperature from the second data set&quot;. Well, it is because you specify Temperature should be in data 2 (let q = temperature[y=35,<b><u><span style="color:rgb(255,0,0)">d=2</span></u></b>]&#xA0; ) So please, before sending a question, try to think a little by yourself why it&#39;s not working (I know sometimes it&#39;s difficult, but it actually help a lot to think on the problem before asking for help, you will learn a lot more this way). <br><br></div>Best,<br></div>Nicolas<br><div><div><br></div></div></div><div class="gmail_extra"><br><div class="gmail_quote">2015-05-28 15:02 GMT+08:00 Satyam Srivastava <span dir="ltr">&lt;<a rel="nofollow" href="mailto:satyam.srivastava.au@xxxxxxxxx" >satyam.srivastava.au@xxxxxxxxx</a>&gt;</span>:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir="ltr"><div><div><div><div><div>Hi all thanks for your kind reply, i have been using the same data set for all kind of dummy computation but in this case i don&#39;t know why this is taking up the Temperature from the second data set the files are as follows ::<br><br>yes? set mode metafile<br>yes? set data <a rel="nofollow" href="http://pottm2008.nc" >pottm2008.nc</a> <br>yes? set data <a rel="nofollow" href="http://pottmp.2008.nc" >pottmp.2008.nc</a> <br>yes? let p = pottmp[y=35,d=1]<br>yes? let q = temperature[y=35,d=2]<br>yes? go variance<br>... Variance and Covariance: Instructions:<br>Use the LET/QUIET command to define the variable(s) P (and Q) as<br>your variable(s) of interest (e.g. yes? LET/QUIET P = u[x=180,y=0])<br>The variance of P will be variable P_VAR&#xA0; (Q --&gt; Q_VAR)<br>The covariance will be COVAR The correlation will be CORREL.<br>Type GO VAR_N to obtain n/n+1 statistical correction factor<br>...<br>yes? go var_n<br>CANCEL MODE VERIFY<br>&#xA0;**ERROR: variable unknown or not in data set: TEMPERATURE[Y=35,D=2]<br>IF `nm1 eq 0` then exit/script<br>Command file, command group, or REPEAT execution aborted<br>yes? use <a rel="nofollow" href="http://pottmp.2008.nc" >pottmp.2008.nc</a> <br>yes? sh d<br>&#xA0;&#xA0;&#xA0;&#xA0; currently SET data sets:<br>&#xA0;&#xA0;&#xA0; 1&gt; ./<a rel="nofollow" href="http://pottm2008.nc" >pottm2008.nc</a><br>&#xA0;name&#xA0;&#xA0;&#xA0;&#xA0; title&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; I&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; J&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; K&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; L&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; M&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; N<br>&#xA0;TEMPERATURE<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; potential temperature (degc)&#xA0;&#xA0;&#xA0;&#xA0; 1:2001&#xA0;&#xA0;&#xA0; 1:1093&#xA0;&#xA0;&#xA0; 1:10&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:32&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...<br>&#xA0;<br>&#xA0;&#xA0;&#xA0; 2&gt; ./<a rel="nofollow" href="http://pottmp.2008.nc" >pottmp.2008.nc</a>&#xA0; (default)<br>&#xA0;name&#xA0;&#xA0;&#xA0;&#xA0; title&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; I&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; J&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; K&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; L&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; M&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; N<br>&#xA0;DATE&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:12&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...<br>&#xA0;TIMEPLOT&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:12&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...<br>&#xA0;POTTMP&#xA0;&#xA0; Potential temperature&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:360&#xA0;&#xA0;&#xA0;&#xA0; 1:418&#xA0;&#xA0;&#xA0;&#xA0; 1:40&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:12&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...<br>&#xA0;<br>yes? use <a rel="nofollow" href="http://pottm2008.nc" >pottm2008.nc</a> <br>yes? sh d<br>&#xA0;&#xA0;&#xA0;&#xA0; currently SET data sets:<br>&#xA0;&#xA0;&#xA0; 1&gt; ./<a rel="nofollow" href="http://pottm2008.nc" >pottm2008.nc</a>&#xA0; (default)<br>&#xA0;name&#xA0;&#xA0;&#xA0;&#xA0; title&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; I&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; J&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; K&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; L&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; M&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; N<br>&#xA0;TEMPERATURE<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; potential temperature (degc)&#xA0;&#xA0;&#xA0;&#xA0; 1:2001&#xA0;&#xA0;&#xA0; 1:1093&#xA0;&#xA0;&#xA0; 1:10&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:32&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...<br>&#xA0;<br></div>&#xA0;the terms are present in the file but it is unable to be read,<br><br></div>please have a look to the data set and please suggest me any solution if it possible.<br><br></div>Thanks in advance<br><br></div>Regards,<br></div>Satyam srivastava.<br></div><div class="gmail_extra"><br><div class="gmail_quote">On Wed, May 27, 2015 at 10:16 PM, Ansley Manke <span dir="ltr">&lt;<a rel="nofollow" href="mailto:ansley.b.manke@xxxxxxxx" >ansley.b.manke@xxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
   
     
   
@@ -78,8 +78,8 @@
             <br>
             <br>
             yes? set mode metafile<br>
-            yes? set data <a rel="nofollow" href="http://pottm2008.nc" target="_blank">pottm2008.nc</a> <br>
-            yes? set data <a rel="nofollow" href="http://pottmp.2008.nc" target="_blank">pottmp.2008.nc</a> <br>
+            yes? set data <a rel="nofollow" href="http://pottm2008.nc" >pottm2008.nc</a> <br>
+            yes? set data <a rel="nofollow" href="http://pottmp.2008.nc" >pottmp.2008.nc</a> <br>
             yes? let p = pottmp[y=35,d=1]<br>
             yes? let q = temperature[y=35,d=2]<br>
             yes? go variance<br>
@@ -107,7 +107,7 @@
       </div>
       <div class="gmail_extra"><br>
         <div class="gmail_quote">On Wed, May 27, 2015 at 3:33 PM,
-          Nicolas Freychet <span dir="ltr">&lt;<a rel="nofollow" href="mailto:nicolas.freychet@xxxxxxxxx" target="_blank">nicolas.freychet@xxxxxxxxx</a>&gt;</span>
+          Nicolas Freychet <span dir="ltr">&lt;<a rel="nofollow" href="mailto:nicolas.freychet@xxxxxxxxx" >nicolas.freychet@xxxxxxxxx</a>&gt;</span>
           wrote:<br>
           <blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
             <div dir="ltr">
@@ -125,15 +125,15 @@
               <div>
                 <div><br>
                   <div class="gmail_quote">2015-05-27 17:23 GMT+08:00
-                    Satyam Srivastava <span dir="ltr">&lt;<a rel="nofollow" href="mailto:satyam.srivastava.au@xxxxxxxxx" target="_blank">satyam.srivastava.au@xxxxxxxxx</a>&gt;</span>:<br>
+                    Satyam Srivastava <span dir="ltr">&lt;<a rel="nofollow" href="mailto:satyam.srivastava.au@xxxxxxxxx" >satyam.srivastava.au@xxxxxxxxx</a>&gt;</span>:<br>
                     <blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
                       <div dir="ltr">Thanks Samir for your kind reply
                         but i have already tried that as well..<br>
                         <br>
                         yes? set mode metafile<br>
-                        yes? set data <a rel="nofollow" href="http://pottm2008.nc" target="_blank">pottm2008.nc</a>
+                        yes? set data <a rel="nofollow" href="http://pottm2008.nc" >pottm2008.nc</a>
                         <br>
-                        yes? set data <a rel="nofollow" href="http://pottmp.2008.nc" target="_blank">pottmp.2008.nc</a>
+                        yes? set data <a rel="nofollow" href="http://pottmp.2008.nc" >pottmp.2008.nc</a>
                         <br>
                         yes? let p = pottmp[y=35]<br>
                         yes? let q = temperature[y=35]<br>
@@ -161,7 +161,7 @@
                       </div>
                       <div class="gmail_extra"><br>
                         <div class="gmail_quote">On Wed, May 27, 2015 at
-                          12:01 PM, samir pokhrel <span dir="ltr">&lt;<a rel="nofollow" href="mailto:pokhrelsamir@xxxxxxxxx" target="_blank">pokhrelsamir@xxxxxxxxx</a>&gt;</span>
+                          12:01 PM, samir pokhrel <span dir="ltr">&lt;<a rel="nofollow" href="mailto:pokhrelsamir@xxxxxxxxx" >pokhrelsamir@xxxxxxxxx</a>&gt;</span>
                           wrote:<br>
                           <blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
                             <div dir="ltr">
@@ -186,7 +186,7 @@
                                 <div><br>
                                   <div class="gmail_quote">On Wed, May
                                     27, 2015 at 11:39 AM, Satyam
-                                    Srivastava <span dir="ltr">&lt;<a rel="nofollow" href="mailto:satyam.srivastava.au@xxxxxxxxx" target="_blank">satyam.srivastava.au@xxxxxxxxx</a>&gt;</span>
+                                    Srivastava <span dir="ltr">&lt;<a rel="nofollow" href="mailto:satyam.srivastava.au@xxxxxxxxx" >satyam.srivastava.au@xxxxxxxxx</a>&gt;</span>
                                     wrote:<br>
                                     <blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
                                       <div dir="ltr">
@@ -213,9 +213,9 @@
                                           <br>
                                         </div>
                                         yes? set mode metafile<br>
-                                        yes? use <a rel="nofollow" href="http://pottm2008.nc" target="_blank">pottm2008.nc</a>
+                                        yes? use <a rel="nofollow" href="http://pottm2008.nc" >pottm2008.nc</a>
                                         <br>
-                                        yes? use <a rel="nofollow" href="http://pottmp.2008.nc" target="_blank">pottmp.2008.nc</a>
+                                        yes? use <a rel="nofollow" href="http://pottmp.2008.nc" >pottmp.2008.nc</a>
                                         <br>
                                         yes? let
                                         p=temperature[x=0:30,y=0:35]<br>
@@ -252,7 +252,7 @@
                                                     Allahabad,<br>
                                                   </b></div>
                                                 <b>Allahabad.<br>
-                                                  <a rel="nofollow" href="tel:%2B918756123444" value="+918756123444" target="_blank">+918756123444</a></b><br>
+                                                  <a rel="nofollow" href="tel:%2B918756123444" value="+918756123444" >+918756123444</a></b><br>
                                               </div>
                                             </div>
                                           </font></span></div>
@@ -298,7 +298,7 @@
                                   <b>University of Allahabad,<br>
                                   </b></div>
                                 <b>Allahabad.<br>
-                                  <a rel="nofollow" href="tel:%2B918756123444" value="+918756123444" target="_blank">+918756123444</a></b><br>
+                                  <a rel="nofollow" href="tel:%2B918756123444" value="+918756123444" >+918756123444</a></b><br>
                               </div>
                             </div>
                           </font></span></div>
@@ -342,7 +342,7 @@
               <b>University of Allahabad,<br>
               </b></div>
             <b>Allahabad.<br>
-              <a rel="nofollow" href="tel:%2B918756123444" value="+918756123444" target="_blank">+918756123444</a></b><br>
+              <a rel="nofollow" href="tel:%2B918756123444" value="+918756123444" >+918756123444</a></b><br>
           </div>
         </div>
       </font></span></div><span class="HOEnZb"><font color="#888888">
@@ -350,7 +350,7 @@
     <br>
   </font></span></div></div></div><span class="HOEnZb"><font color="#888888">
 
-</font></span></blockquote></div><span class="HOEnZb"><font color="#888888"><br><br clear="all"><br>-- <br><div><div dir="ltr"><div><div><div><div><b>Regards,<br><br></b></div><b>Satyam Srivastava,<br></b></div><b>J.R.F,<br></b></div><div><b>K. Banerjee Centre of Ocean Sciences,&#xA0; <br></b></div><b>University of Allahabad,<br></b></div><b>Allahabad.<br><a rel="nofollow" href="tel:%2B918756123444" value="+918756123444" target="_blank">+918756123444</a></b><br></div></div>
+</font></span></blockquote></div><span class="HOEnZb"><font color="#888888"><br><br clear="all"><br>-- <br><div><div dir="ltr"><div><div><div><div><b>Regards,<br><br></b></div><b>Satyam Srivastava,<br></b></div><b>J.R.F,<br></b></div><div><b>K. Banerjee Centre of Ocean Sciences,&#xA0; <br></b></div><b>University of Allahabad,<br></b></div><b>Allahabad.<br><a rel="nofollow" href="tel:%2B918756123444" value="+918756123444" >+918756123444</a></b><br></div></div>
 </font></span></div>
 </blockquote></div><br><br clear="all"><br>-- <br><div class="gmail_signature"><div dir="ltr">----------------------------------------------------<br><div>Nicolas Freychet<br></div>Postdoc Reseach Fellow at RCEC<br>Academia Sinica<br>----------------------------------------------------</div></div>
 </div>

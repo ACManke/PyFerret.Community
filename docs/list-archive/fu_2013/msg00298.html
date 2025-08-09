@@ -52,11 +52,11 @@
 <div dir="ltr"><div><div>Dear Mishra<br><br></div>try this<br><br>file/var=&quot;xpoints,ypoints&quot; temp.dat <br>let xdif = xpoints[I=@DDF]<br>let xcross = xdif[I=@EVNT:0.0415]<br>list/i=1:5&#xA0; xpoints,xdif,xcross<br><br>
 LET npts = `xcross[I=@LOC:1]`<br><br>DEFINE AXIS/X/UNITS=degrees_east&#xA0; xaxis = xpoints[I=1:`npts`]<br><br>LET total = `ypoints,RETURN=isize`<br><br>DEFINE AXIS/Y/UNITS=degrees_south/npoints=`npts` yaxis=ypoints[I=1:`total`]<br>
 &#xA0;<br><br>sh axis y/yaxis <br><br>! Works try this<br><br>def grid/x=xaxis/y=yaxis mygrid<br><br>sh g mygrid<br><br></div>- Akshay Hegde<br><div><br><br></div></div><div class="gmail_extra"><br><br><div class="gmail_quote">
-On Thu, May 2, 2013 at 1:38 PM, surja kanta Mishra <span dir="ltr">&lt;<a rel="nofollow" href="mailto:surmat84@xxxxxxxxx" target="_blank">surmat84@xxxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
+On Thu, May 2, 2013 at 1:38 PM, surja kanta Mishra <span dir="ltr">&lt;<a rel="nofollow" href="mailto:surmat84@xxxxxxxxx" >surmat84@xxxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
 <div dir="ltr">Dear all,<br>&#xA0;<br><div>&#xA0;while I am trying to convert an ASCII file to 
 Netcdf file&#xA0; for contour plot of temperature.&#xA0; I have tried as an 
 example is in the following link :<br>
-&#xA0;<a rel="nofollow" href="../../faq/reading-ascii-data-representing-a-grid" target="_blank">../../faq/reading-ascii-data-representing-a-grid</a><br><br>The error is coming as<br>
+&#xA0;<a rel="nofollow" href="../../faq/reading-ascii-data-representing-a-grid" >../../faq/reading-ascii-data-representing-a-grid</a><br><br>The error is coming as<br>
 
 <br>
 <div>&#xA0;yes?&#xA0; file/var=&quot;xpoints,ypoints&quot; temp.dat&#xA0; <br>&#xA0;yes? let xdif = xpoints[I=@DDF]<br>&#xA0;yes? let xcross = xdif[I=@EVNT:0.0415]<br>&#xA0;yes? list/i=1:5&#xA0; xpoints,xdif,xcross<br><br>Column&#xA0; 1: XPOINTS<br>&#xA0;Column&#xA0; 2: XDIF is XPOINTS[I=@DDF]<br>
@@ -77,7 +77,7 @@ yes? LET total = `ypoints,RETURN=isize`<br>&#xA0;!-&gt; DEFINE VARIABLE total = 
 
 Junior Research Fellow <i>(CSIR-NET, Funded by UGC)</i></div><div>School of Oceanographic Studies</div><div>Jadavpur University</div><div>Kolkata - 700032</div><div>India.</div><div><br></div><div>Contacts: +91 9681091928</div>
 
-<div>Alternate E-mail: <a rel="nofollow" href="mailto:sur_km@xxxxxxxxxxx" target="_blank">sur_km@xxxxxxxxxxx</a>&#xA0;</div>
+<div>Alternate E-mail: <a rel="nofollow" href="mailto:sur_km@xxxxxxxxxxx" >sur_km@xxxxxxxxxxx</a>&#xA0;</div>
 </div></font></span></div>
 </blockquote></div><br></div>
 

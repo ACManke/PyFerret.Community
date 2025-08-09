@@ -51,27 +51,27 @@
 <hr>
 <!--X-Head-Body-Sep-End-->
 <!--X-Body-of-Message-->
-<div dir="ltr"><div>Hi Martin,<br></div>Thanks for your detailed reply. I am trying to use the COADS monthly climatology data for forcing my model and you are absolutely right that model needs reasonable values over the land preferably the values extrapolated from ocean. I will try with your tips and inform you. I have one more doubt that, the third argument of the fill_xy function, how can I decide the proper value for it? <br></div><div class="gmail_extra"><br><div class="gmail_quote">On Wed, Feb 17, 2016 at 2:43 AM, Martin Schmidt <span dir="ltr">&lt;<a rel="nofollow" href="mailto:martin.schmidt@xxxxxxxxxxxxxxxxx" target="_blank">martin.schmidt@xxxxxxxxxxxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div class="HOEnZb"><div class="h5">Sangeeth,<br>
+<div dir="ltr"><div>Hi Martin,<br></div>Thanks for your detailed reply. I am trying to use the COADS monthly climatology data for forcing my model and you are absolutely right that model needs reasonable values over the land preferably the values extrapolated from ocean. I will try with your tips and inform you. I have one more doubt that, the third argument of the fill_xy function, how can I decide the proper value for it? <br></div><div class="gmail_extra"><br><div class="gmail_quote">On Wed, Feb 17, 2016 at 2:43 AM, Martin Schmidt <span dir="ltr">&lt;<a rel="nofollow" href="mailto:martin.schmidt@xxxxxxxxxxxxxxxxx" >martin.schmidt@xxxxxxxxxxxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div class="HOEnZb"><div class="h5">Sangeeth,<br>
 which data are you using? If they are defined on a regular grid there are also grid points over land. I guess, the data are set to &quot;missing&quot; there. This may confuse your ocean model, since the &quot;missing&quot; may be interpreted as some valid number, say some really high wind speed. This could crash the model. If you interpolate such data onto your model grid the missing values have to be considered carefully.<br>
 <br>
 So you may want to replace the missing values by some reaonable number, say 0, before you interpolate or read the data into your model. This is simple.<br>
 <br>
-use <a rel="nofollow" href="http://your_file.nc" rel="noreferrer" target="_blank">your_file.nc</a><br>
+use <a rel="nofollow" href="http://your_file.nc" rel="noreferrer" >your_file.nc</a><br>
 <br>
 let wx = missing(windx,0)<br>
 let wy = missing(windy,0)<br>
 <br>
-save/file=<a rel="nofollow" href="http://your_new_file.nc/clobber" rel="noreferrer" target="_blank">your_new_file.nc/clobber</a> wx, wy<br>
+save/file=<a rel="nofollow" href="http://your_new_file.nc/clobber" rel="noreferrer" >your_new_file.nc/clobber</a> wx, wy<br>
 <br>
 I expect the data set is large.&#xA0; So you may want to save time step by time step or allocate more memory:<br>
-sp rm <a rel="nofollow" href="http://your_new_file.nc" rel="noreferrer" target="_blank">your_new_file.nc</a><br>
-repeat/l=1:some_large_number&#xA0; save/append/file=<a rel="nofollow" href="http://your_new_file.nc" rel="noreferrer" target="_blank">your_new_file.nc</a> wx, wy<br>
+sp rm <a rel="nofollow" href="http://your_new_file.nc" rel="noreferrer" >your_new_file.nc</a><br>
+repeat/l=1:some_large_number&#xA0; save/append/file=<a rel="nofollow" href="http://your_new_file.nc" rel="noreferrer" >your_new_file.nc</a> wx, wy<br>
 <br>
 This shows the principle. Getting the number of time steps is easy, just issue &quot;show data&quot;. You may also read the maximum number of time steps from the data set, but I recommend to read through the manual and the tutorial anyway.<br>
 <br>
 Recent versions of ferret write real*8 output. To save disk space you may specify<br>
 <br>
-save/file=<a rel="nofollow" href="http://your_new_file.nc/clobber/outtype=float" rel="noreferrer" target="_blank">your_new_file.nc/clobber/outtype=float</a> wx, wy<br>
+save/file=<a rel="nofollow" href="http://your_new_file.nc/clobber/outtype=float" rel="noreferrer" >your_new_file.nc/clobber/outtype=float</a> wx, wy<br>
 <br>
 This may solve your problem. But I guess, your input data need interpolation to the model grid. Having zeros there, leads to reduced winds near the coast with a lot of consequences for near-shore currents.<br>
 <br>

@@ -55,7 +55,7 @@
 <br></div><div>! write index 1,3, and 5 of i to new file<br></div><div>yes? let my_index_to_write = {1,3,5}<br><br>yes? list my_index_to_write<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; VARIABLE : {1,3,5}<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; SUBSET&#xA0;&#xA0; : 3 points (X)<br>
 &#xA0;1&#xA0;&#xA0; / 1:&#xA0; 1.000<br>&#xA0;2&#xA0;&#xA0; / 2:&#xA0; 3.000<br>&#xA0;3&#xA0;&#xA0; / 3:&#xA0; 5.000<br><br>yes? repeat/i=1:`temp,return=iend` (<br></div><div><br>! check whether i is available in&#xA0; my_index_to_write<br></div><div>! if i is available ? write to new file and append<br>
 </div><div>.........<br>)<br><br></div><div>so finally I expect output axis should contain 1:3 i index , with x 1,4, I really don&#39;t want to use nco to change variable name <br></div><div><br><br>Akshay<br></div><div><br>
-<br><br><br><br><div><br><br></div></div></div><div class="gmail_extra"><br><br><div class="gmail_quote">On Sat, Dec 7, 2013 at 12:47 AM, Ansley Manke <span dir="ltr">&lt;<a rel="nofollow" href="mailto:ansley.b.manke@xxxxxxxx" target="_blank">ansley.b.manke@xxxxxxxx</a>&gt;</span> wrote:<br>
+<br><br><br><br><div><br><br></div></div></div><div class="gmail_extra"><br><br><div class="gmail_quote">On Sat, Dec 7, 2013 at 12:47 AM, Ansley Manke <span dir="ltr">&lt;<a rel="nofollow" href="mailto:ansley.b.manke@xxxxxxxx" >ansley.b.manke@xxxxxxxx</a>&gt;</span> wrote:<br>
 <blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
   
     
@@ -83,12 +83,12 @@
             &#xA0;&#xA0;&#xA0; &#xA0;Linux 2.6.18-371.1.2.el5 64-bit - 11/12/13<br>
             &#xA0;&#xA0;&#xA0; &#xA0; 6-Dec-13 16:49&#xA0;&#xA0;&#xA0;&#xA0; <br>
             <br>
-            yes? use <a rel="nofollow" href="http://test_1.nc" target="_blank">test_1.nc</a>
+            yes? use <a rel="nofollow" href="http://test_1.nc" >test_1.nc</a>
             <br>
             <br>
             yes? sh d<br>
             &#xA0;&#xA0;&#xA0;&#xA0; currently SET data sets:<br>
-            &#xA0;&#xA0;&#xA0; 1&gt; ./<a rel="nofollow" href="http://test_1.nc" target="_blank">test_1.nc</a>&#xA0; (default)<br>
+            &#xA0;&#xA0;&#xA0; 1&gt; ./<a rel="nofollow" href="http://test_1.nc" >test_1.nc</a>&#xA0; (default)<br>
             &#xA0;name&#xA0;&#xA0;&#xA0;&#xA0; title&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; I&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
             J&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; K&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; L&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; M&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; N<br>
             &#xA0;TEMP&#xA0;&#xA0;&#xA0;&#xA0; Temperature&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:5&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
@@ -119,7 +119,7 @@
         </div>
       </div>
     </blockquote>
-    In <a rel="nofollow" href="http://test_1.nc" target="_blank">test_1.nc</a>, both the index values and the coordinate values run
+    In <a rel="nofollow" href="http://test_1.nc" >test_1.nc</a>, both the index values and the coordinate values run
     from 1 through 5. The coordinate values happen to match the indices.
     So i=5 is the index value for coordinate x=5.<br>
     <br>
@@ -166,15 +166,15 @@
       <div dir="ltr">
         <div>
           <div><br>
-            yes? list/file=<a rel="nofollow" href="http://test_2.nc/format=cdf/clobber/keep_axisname" target="_blank">test_2.nc/format=cdf/clobber/keep_axisname</a>
+            yes? list/file=<a rel="nofollow" href="http://test_2.nc/format=cdf/clobber/keep_axisname" >test_2.nc/format=cdf/clobber/keep_axisname</a>
             <b>temp[i=5]</b><br>
-            &#xA0;LISTing to file <a rel="nofollow" href="http://test_2.nc" target="_blank">test_2.nc</a><br>
+            &#xA0;LISTing to file <a rel="nofollow" href="http://test_2.nc" >test_2.nc</a><br>
             <br>
-            yes? use <a rel="nofollow" href="http://test_2.nc" target="_blank">test_2.nc</a>
+            yes? use <a rel="nofollow" href="http://test_2.nc" >test_2.nc</a>
             <br>
             yes? sh d 2<br>
             &#xA0;&#xA0;&#xA0;&#xA0; currently SET data sets:<br>
-            &#xA0;&#xA0;&#xA0; 2&gt; ./<a rel="nofollow" href="http://test_2.nc" target="_blank">test_2.nc</a>&#xA0; (default)<br>
+            &#xA0;&#xA0;&#xA0; 2&gt; ./<a rel="nofollow" href="http://test_2.nc" >test_2.nc</a>&#xA0; (default)<br>
             &#xA0;name&#xA0;&#xA0;&#xA0;&#xA0; title&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; I&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
             J&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; K&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; L&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; M&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; N<br>
             &#xA0;TEMP&#xA0;&#xA0;&#xA0;&#xA0; Temperature&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:1&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
@@ -204,7 +204,7 @@
       </div>
     </blockquote>
     <br></div>
-    In <a rel="nofollow" href="http://test_2.nc" target="_blank">test_2.nc</a>, there is one coordinate value in the X axis, X=5.
+    In <a rel="nofollow" href="http://test_2.nc" >test_2.nc</a>, there is one coordinate value in the X axis, X=5.
     istart and iend give the index values (as seen in the SHOW DATA
     output); SHOW GRID lists the coordinate values in the file. To
     return the coordinates:<br>
@@ -222,40 +222,40 @@
           </div>
           and then merging<br>
           <br>
-          yes? use <a rel="nofollow" href="http://test_1.nc" target="_blank">test_1.nc</a>
+          yes? use <a rel="nofollow" href="http://test_1.nc" >test_1.nc</a>
           <br>
           yes? sh d<br>
           &#xA0;&#xA0;&#xA0;&#xA0; currently SET data sets:<br>
-          &#xA0;&#xA0;&#xA0; 1&gt; ./<a rel="nofollow" href="http://test_1.nc" target="_blank">test_1.nc</a>&#xA0;
+          &#xA0;&#xA0;&#xA0; 1&gt; ./<a rel="nofollow" href="http://test_1.nc" >test_1.nc</a>&#xA0;
           (default)<br>
           &#xA0;name&#xA0;&#xA0;&#xA0;&#xA0; title&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; I&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
           J&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; K&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; L&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; M&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; N<br>
           &#xA0;TEMP&#xA0;&#xA0;&#xA0;&#xA0; Temperature&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:5&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
           1:2026&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...<br>
           &#xA0;<br>
-          yes? list/file=<a rel="nofollow" href="http://merge1.nc/format=cdf/clobber/keep_axisname" target="_blank">merge1.nc/format=cdf/clobber/keep_axisname</a>
+          yes? list/file=<a rel="nofollow" href="http://merge1.nc/format=cdf/clobber/keep_axisname" >merge1.nc/format=cdf/clobber/keep_axisname</a>
           <b>temp[i=3]</b><br>
-          &#xA0;LISTing to file <a rel="nofollow" href="http://merge1.nc" target="_blank">merge1.nc</a><br>
+          &#xA0;LISTing to file <a rel="nofollow" href="http://merge1.nc" >merge1.nc</a><br>
           <br>
-          yes? list/file=<a rel="nofollow" href="http://merge2.nc/format=cdf/clobber/keep_axisname" target="_blank">merge2.nc/format=cdf/clobber/keep_axisname</a><b>
+          yes? list/file=<a rel="nofollow" href="http://merge2.nc/format=cdf/clobber/keep_axisname" >merge2.nc/format=cdf/clobber/keep_axisname</a><b>
             temp[i=5]</b><br>
-          &#xA0;LISTing to file <a rel="nofollow" href="http://merge2.nc" target="_blank">merge2.nc</a><br>
+          &#xA0;LISTing to file <a rel="nofollow" href="http://merge2.nc" >merge2.nc</a><br>
           <br>
           yes? canc data/all<br>
           <br>
-          yes? use <a rel="nofollow" href="http://merge1.nc" target="_blank">merge1.nc</a>
-          ; use <a rel="nofollow" href="http://merge2.nc" target="_blank">merge2.nc</a>
+          yes? use <a rel="nofollow" href="http://merge1.nc" >merge1.nc</a>
+          ; use <a rel="nofollow" href="http://merge2.nc" >merge2.nc</a>
           <br>
           <br>
           yes? sh d<br>
           &#xA0;&#xA0;&#xA0;&#xA0; currently SET data sets:<br>
-          &#xA0;&#xA0;&#xA0; 1&gt; ./<a rel="nofollow" href="http://merge1.nc" target="_blank">merge1.nc</a><br>
+          &#xA0;&#xA0;&#xA0; 1&gt; ./<a rel="nofollow" href="http://merge1.nc" >merge1.nc</a><br>
           &#xA0;name&#xA0;&#xA0;&#xA0;&#xA0; title&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; I&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
           J&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; K&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; L&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; M&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; N<br>
           &#xA0;TEMP&#xA0;&#xA0;&#xA0;&#xA0; Temperature&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:1&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
           1:2026&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...<br>
           &#xA0;<br>
-          &#xA0;&#xA0;&#xA0; 2&gt; ./<a rel="nofollow" href="http://merge2.nc" target="_blank">merge2.nc</a>&#xA0;
+          &#xA0;&#xA0;&#xA0; 2&gt; ./<a rel="nofollow" href="http://merge2.nc" >merge2.nc</a>&#xA0;
           (default)<br>
           &#xA0;name&#xA0;&#xA0;&#xA0;&#xA0; title&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; I&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
           J&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; K&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; L&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; M&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; N<br>
@@ -284,13 +284,13 @@
           &#xA0;normal&#xA0;&#xA0;&#xA0; E<br>
           &#xA0;normal&#xA0;&#xA0;&#xA0; F<br>
           <br>
-          yes? list/file=<a rel="nofollow" href="http://merged_file.nc/format=cdf/clobber" target="_blank">merged_file.nc/format=cdf/clobber</a>
+          yes? list/file=<a rel="nofollow" href="http://merged_file.nc/format=cdf/clobber" >merged_file.nc/format=cdf/clobber</a>
           temp[d=1]<br>
-          &#xA0;LISTing to file <a rel="nofollow" href="http://merged_file.nc" target="_blank">merged_file.nc</a><br>
+          &#xA0;LISTing to file <a rel="nofollow" href="http://merged_file.nc" >merged_file.nc</a><br>
           <br>
-          yes? list/file=<a rel="nofollow" href="http://merged_file.nc/format=cdf/append" target="_blank">merged_file.nc/format=cdf/append</a>
+          yes? list/file=<a rel="nofollow" href="http://merged_file.nc/format=cdf/append" >merged_file.nc/format=cdf/append</a>
           temp[d=2]<br>
-          &#xA0;<b>LISTing to file <a rel="nofollow" href="http://merged_file.nc" target="_blank">merged_file.nc</a><br>
+          &#xA0;<b>LISTing to file <a rel="nofollow" href="http://merged_file.nc" >merged_file.nc</a><br>
             &#xA0;**TMAP ERR: error in line definition<br>
             &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; file coords dont match variable coords on axis
             PROFILE<br>
@@ -316,13 +316,13 @@
       </tt><tt>yes? define axis/x=1:3:2 out_axis</tt><tt><br>
         <br>
       </tt><tt>yes? let out_temp = temp[d=1,gx=out_axis]</tt><tt><br>
-      </tt><tt>yes? save/file=<a rel="nofollow" href="http://merged_file.nc/clobber" target="_blank">merged_file.nc/clobber</a><font color="#ff0000"><b>/ilimits=1:2/i=1</b></font> </tt><tt>out_temp</tt><tt><br>
-      </tt><tt>&#xA0;LISTing to file <a rel="nofollow" href="http://merged_file.nc" target="_blank">merged_file.nc</a></tt><tt><br>
+      </tt><tt>yes? save/file=<a rel="nofollow" href="http://merged_file.nc/clobber" >merged_file.nc/clobber</a><font color="#ff0000"><b>/ilimits=1:2/i=1</b></font> </tt><tt>out_temp</tt><tt><br>
+      </tt><tt>&#xA0;LISTing to file <a rel="nofollow" href="http://merged_file.nc" >merged_file.nc</a></tt><tt><br>
       </tt><tt><br>
       </tt><tt>yes? let </tt><tt><tt>out_temp</tt> =
         temp[d=2,gx=out_axis]</tt><tt><br>
-      </tt><tt>yes? save/file=<a rel="nofollow" href="http://merged_file.nc/append" target="_blank">merged_file.nc/append</a><font color="#ff0000"><b>/i=2</b></font></tt><tt>out_temp</tt><tt><br>
-      </tt><tt>&#xA0;LISTing to file <a rel="nofollow" href="http://merged_file.nc" target="_blank">merged_file.nc</a></tt><tt><br>
+      </tt><tt>yes? save/file=<a rel="nofollow" href="http://merged_file.nc/append" >merged_file.nc/append</a><font color="#ff0000"><b>/i=2</b></font></tt><tt>out_temp</tt><tt><br>
+      </tt><tt>&#xA0;LISTing to file <a rel="nofollow" href="http://merged_file.nc" >merged_file.nc</a></tt><tt><br>
       </tt></blockquote>
     <br>
     When you open up that output file, see how the output axis has 2
@@ -338,11 +338,11 @@
           &#xA0;&#xA0;&#xA0;&#xA0; Linux 2.6.18-371.1.2.el5 64-bit - 11/12/13<br>
           &#xA0;&#xA0;&#xA0;&#xA0; &#xA0;6-Dec-13 16:55&#xA0;&#xA0;&#xA0;&#xA0; <br>
           <br>
-          yes? use <a rel="nofollow" href="http://merge1.nc" target="_blank">merge1.nc</a>
+          yes? use <a rel="nofollow" href="http://merge1.nc" >merge1.nc</a>
           <br>
           yes? sh d<br>
           &#xA0;&#xA0;&#xA0;&#xA0; currently SET data sets:<br>
-          &#xA0;&#xA0;&#xA0; 1&gt; ./<a rel="nofollow" href="http://merge1.nc" target="_blank">merge1.nc</a>&#xA0;
+          &#xA0;&#xA0;&#xA0; 1&gt; ./<a rel="nofollow" href="http://merge1.nc" >merge1.nc</a>&#xA0;
           (default)<br>
           &#xA0;name&#xA0;&#xA0;&#xA0;&#xA0; title&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; I&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
           J&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; K&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; L&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; M&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; N<br>
@@ -367,11 +367,11 @@
           &#xA0;&#xA0;&#xA0;&#xA0; Linux 2.6.18-371.1.2.el5 64-bit - 11/12/13<br>
           &#xA0;&#xA0;&#xA0;&#xA0; &#xA0;6-Dec-13 16:55&#xA0;&#xA0;&#xA0;&#xA0; <br>
           <br>
-          yes? use <a rel="nofollow" href="http://merge2.nc" target="_blank">merge2.nc</a>
+          yes? use <a rel="nofollow" href="http://merge2.nc" >merge2.nc</a>
           <br>
           yes? sh d<br>
           &#xA0;&#xA0;&#xA0;&#xA0; currently SET data sets:<br>
-          &#xA0;&#xA0;&#xA0; 1&gt; ./<a rel="nofollow" href="http://merge2.nc" target="_blank">merge2.nc</a>&#xA0;
+          &#xA0;&#xA0;&#xA0; 1&gt; ./<a rel="nofollow" href="http://merge2.nc" >merge2.nc</a>&#xA0;
           (default)<br>
           &#xA0;name&#xA0;&#xA0;&#xA0;&#xA0; title&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; I&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
           J&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; K&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; L&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; M&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; N<br>

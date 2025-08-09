@@ -49,8 +49,8 @@
 <hr>
 <!--X-Head-Body-Sep-End-->
 <!--X-Body-of-Message-->
-<div dir="ltr">Thanks Edward, It worked.</div><div class="gmail_extra"><br clear="all"><div><div class="gmail_signature"><div dir="ltr"><div><div dir="ltr"><div><div dir="ltr"><div>--</div>Regards,<div>Nitin Patil</div><div><br></div><div>Webpage:&#xA0;<a rel="nofollow" href="https://sites.google.com/site/nitinpatil85/" target="_blank">https://sites.google.com/site/nitinpatil85/</a><br></div></div></div></div></div></div></div></div>
-<br><div class="gmail_quote">On Tue, Feb 17, 2015 at 11:10 PM, Edward Cokelet - NOAA Federal <span dir="ltr">&lt;<a rel="nofollow" href="mailto:edward.d.cokelet@xxxxxxxx" target="_blank">edward.d.cokelet@xxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">Nitin, I have not looked at your .jnl file, but here is some code that works for me.&#xA0; The order seems to be important, e.g. close the plot buffers, make the postscript file, then make the gif.<br>
+<div dir="ltr">Thanks Edward, It worked.</div><div class="gmail_extra"><br clear="all"><div><div class="gmail_signature"><div dir="ltr"><div><div dir="ltr"><div><div dir="ltr"><div>--</div>Regards,<div>Nitin Patil</div><div><br></div><div>Webpage:&#xA0;<a rel="nofollow" href="https://sites.google.com/site/nitinpatil85/" >https://sites.google.com/site/nitinpatil85/</a><br></div></div></div></div></div></div></div></div>
+<br><div class="gmail_quote">On Tue, Feb 17, 2015 at 11:10 PM, Edward Cokelet - NOAA Federal <span dir="ltr">&lt;<a rel="nofollow" href="mailto:edward.d.cokelet@xxxxxxxx" >edward.d.cokelet@xxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">Nitin, I have not looked at your .jnl file, but here is some code that works for me.&#xA0; The order seems to be important, e.g. close the plot buffers, make the postscript file, then make the gif.<br>
 <br>
 Here&#x2019;s some pseudocode:<br>
 <br>
@@ -68,7 +68,7 @@ set mode metafile my_plot.plt&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;! Assigns 
 shade my_2d_var&#xA0; &#xA0; ! or whatever plotting commands you wish to execute<br>
 <br>
 ppl clsplt&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; ! Close out the plotting buffers<br>
-sp Fprint -R -l cps -p portrait -o <a rel="nofollow" href="http://my_plot.ps" target="_blank">my_plot.ps</a> my_plot.plt&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;! This runs Fprint external to ferret to turn your .plt file into a .ps file<br>
+sp Fprint -R -l cps -p portrait -o <a rel="nofollow" href="http://my_plot.ps" >my_plot.ps</a> my_plot.plt&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;! This runs Fprint external to ferret to turn your .plt file into a .ps file<br>
 frame/format=gif/file=my_plot.gif&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;! This stores a screen shot of the plot in the currently open window as a .gif file<br>
 <br>
 ------------------------------------------------------------------------------------------<br>

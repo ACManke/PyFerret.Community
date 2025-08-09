@@ -54,7 +54,7 @@
       You can now (at least of v4.2.1.1) specify the precision of output
       in ncdump with the &quot;-p float_digits[,double_digits]&quot; option.<br>
       <br>
-      ncdump -h -p 9,17 <a rel="nofollow" href="http://file.nc" target="_blank">file.nc</a><br>
+      ncdump -h -p 9,17 <a rel="nofollow" href="http://file.nc" >file.nc</a><br>
       <br>
       should get you full precision.</div></div></blockquote><div><br></div><div>Thanks!&#xA0; That suggests that ncdump should default to -p 9,17.&#xA0; Remember gfortran displays 17 digits?&#xA0; That decision by the implementers of gfortran was made (I guess) not to lose a single bit when writing to ascii and reading it again. &#xA0;ncdump and ncgen are conceptual counterparts of ascii WRITE and READ of Fortran. &#xA0;(I already wrote such a message as this to unidata.)</div><div><br></div><div>Regards,</div><div><br></div><div>Ryo</div></div></div></div></div>
 

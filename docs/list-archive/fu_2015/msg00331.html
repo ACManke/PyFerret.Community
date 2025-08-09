@@ -49,18 +49,18 @@
 <hr>
 <!--X-Head-Body-Sep-End-->
 <!--X-Body-of-Message-->
-<div dir="ltr">Thanks Marco,<div>I&#39;m off-line and can&#39;t try this today, but having an example script and dataset will let me tell whether this is correct &#xA0;in the current Ferret release.</div><div><br></div><div>Another option for determining whether a variable is in a dataset is to use the netCDF attribute handling syntax to get a list of the variable names in the current dataset:</div><div><br></div><div>yes? use <a rel="nofollow" href="http://b.nc">b.nc</a></div><div>yes? let varnames = ..varnames</div><div>yes? let has_var = IS_ELEMENT_OF_STR (varnames, &quot;aa&quot;)</div><div><br>There is also a non-case-sensitive version, IS_ELEMENT_OF_STR_N</div><div><br><div class="gmail_extra"><br><div class="gmail_quote">On Fri, Oct 2, 2015 at 3:13 AM, Marco van Hulten <span dir="ltr">&lt;<a rel="nofollow" href="mailto:marco.van-hulten@xxxxxxxxxxxx" target="_blank">marco.van-hulten@xxxxxxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left-width:1px;border-left-color:rgb(204,204,204);border-left-style:solid;padding-left:1ex">This is the most minimal example I can think of in which I can<br>
+<div dir="ltr">Thanks Marco,<div>I&#39;m off-line and can&#39;t try this today, but having an example script and dataset will let me tell whether this is correct &#xA0;in the current Ferret release.</div><div><br></div><div>Another option for determining whether a variable is in a dataset is to use the netCDF attribute handling syntax to get a list of the variable names in the current dataset:</div><div><br></div><div>yes? use <a rel="nofollow" href="http://b.nc">b.nc</a></div><div>yes? let varnames = ..varnames</div><div>yes? let has_var = IS_ELEMENT_OF_STR (varnames, &quot;aa&quot;)</div><div><br>There is also a non-case-sensitive version, IS_ELEMENT_OF_STR_N</div><div><br><div class="gmail_extra"><br><div class="gmail_quote">On Fri, Oct 2, 2015 at 3:13 AM, Marco van Hulten <span dir="ltr">&lt;<a rel="nofollow" href="mailto:marco.van-hulten@xxxxxxxxxxxx" >marco.van-hulten@xxxxxxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left-width:1px;border-left-color:rgb(204,204,204);border-left-style:solid;padding-left:1ex">This is the most minimal example I can think of in which I can<br>
 reproduce the error:<br>
 <br>
-yes? let isFile = spawn( &quot;test -e <a rel="nofollow" href="http://a.nc" rel="noreferrer" target="_blank">a.nc</a>; echo $?&quot; )<br>
-yes? use <a rel="nofollow" href="http://b.nc" rel="noreferrer" target="_blank">b.nc</a><br>
-yes? say `aa[d=<a rel="nofollow" href="http://b.nc" rel="noreferrer" target="_blank">b.nc</a>],return=isReady`<br>
+yes? let isFile = spawn( &quot;test -e <a rel="nofollow" href="http://a.nc" rel="noreferrer" >a.nc</a>; echo $?&quot; )<br>
+yes? use <a rel="nofollow" href="http://b.nc" rel="noreferrer" >b.nc</a><br>
+yes? say `aa[d=<a rel="nofollow" href="http://b.nc" rel="noreferrer" >b.nc</a>],return=isReady`<br>
 At line 89 of file depend_stat_var_sub.F<br>
 Fortran runtime error: Array reference out of bounds for array &#39;uvar_text&#39;, lower bound of dimension 1 exceeded (0 &lt; 1)<br>
 <br>
 So I invoke bash here: same problem as with the test_opendap() function.<br>
 <br>
-If I use <a rel="nofollow" href="http://b.nc" rel="noreferrer" target="_blank">b.nc</a> also in the first line, there is no error.<br>
+If I use <a rel="nofollow" href="http://b.nc" rel="noreferrer" >b.nc</a> also in the first line, there is no error.<br>
 <br>
 The goal I have in the end is to add a variable (e.g. with ncks) from<br>
 one file to another file, if the first file exists and if the variable<br>

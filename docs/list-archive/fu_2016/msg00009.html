@@ -50,18 +50,18 @@
 <hr>
 <!--X-Head-Body-Sep-End-->
 <!--X-Body-of-Message-->
-<div dir="ltr"><div><div><div><div><div><div><div><div><div>Hello Sir,<br></div>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Check the time axis.And specify the time axis while assiagning P and Q. <br></div><div>Here your data is daily,so according to the time axis there will be 504 points.Also you didn&#39;t mention the location,so lets just say current at 90E and sla at the equatorial indian ocean.After specifying the all axis then it will look like the following,then go for the correlation. <br><br></div>use <a rel="nofollow" href="http://daily-current.nc" rel="noreferrer" target="_blank">daily-current.nc</a><br>
-use <a rel="nofollow" href="http://daily-ssh.nc" rel="noreferrer" target="_blank">daily-ssh.nc</a><br>set mem/size=600<br><br></div></div>let p = u[d=1,l=1:504,x=90E,y=0]<br></div>let q = sla[d=2,l=1:504,x=40E:120E,y=10s:10n] <br></div>go variance<br></div>shade correl<br><br></div>can data/a<br>
+<div dir="ltr"><div><div><div><div><div><div><div><div><div>Hello Sir,<br></div>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Check the time axis.And specify the time axis while assiagning P and Q. <br></div><div>Here your data is daily,so according to the time axis there will be 504 points.Also you didn&#39;t mention the location,so lets just say current at 90E and sla at the equatorial indian ocean.After specifying the all axis then it will look like the following,then go for the correlation. <br><br></div>use <a rel="nofollow" href="http://daily-current.nc" rel="noreferrer" >daily-current.nc</a><br>
+use <a rel="nofollow" href="http://daily-ssh.nc" rel="noreferrer" >daily-ssh.nc</a><br>set mem/size=600<br><br></div></div>let p = u[d=1,l=1:504,x=90E,y=0]<br></div>let q = sla[d=2,l=1:504,x=40E:120E,y=10s:10n] <br></div>go variance<br></div>shade correl<br><br></div>can data/a<br>
 can var/a<br>
-can mem<br><br></div>Hope it will solve your error.<br><br>-- <br><b>Regards,<br>Chinnu Sachidanandan<br>Physical Oceanography Division<br>National Institute of Oceanography<br><a rel="nofollow" href="mailto:csachidanandan@xxxxxxx" target="_blank">csachidanandan@xxxxxxx</a></b><br><div><br><div class="gmail_extra"><br><div class="gmail_quote">On Fri, Jan 15, 2016 at 12:37 PM, &#39;Iskhaq Iskandar&#39; via _OAR PMEL Ferret Users <span dir="ltr">&lt;<a rel="nofollow" href="mailto:ferret_users@xxxxxxxx" target="_blank">ferret_users@xxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex">Dear Ferret users,<br>
+can mem<br><br></div>Hope it will solve your error.<br><br>-- <br><b>Regards,<br>Chinnu Sachidanandan<br>Physical Oceanography Division<br>National Institute of Oceanography<br><a rel="nofollow" href="mailto:csachidanandan@xxxxxxx" >csachidanandan@xxxxxxx</a></b><br><div><br><div class="gmail_extra"><br><div class="gmail_quote">On Fri, Jan 15, 2016 at 12:37 PM, &#39;Iskhaq Iskandar&#39; via _OAR PMEL Ferret Users <span dir="ltr">&lt;<a rel="nofollow" href="mailto:ferret_users@xxxxxxxx" >ferret_users@xxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex">Dear Ferret users,<br>
 <br>
 I am trying to compute a correlation between an observed current at one location (1D data: varies in time only) with SSH of a basin-wide region (2D data in x,y and time).<br>
 <br>
 What I did is something like this:<br>
 <br>
 -------------------<br>
-use <a rel="nofollow" href="http://daily-ssh.nc" rel="noreferrer" target="_blank">daily-ssh.nc</a><br>
-use <a rel="nofollow" href="http://daily-current.nc" rel="noreferrer" target="_blank">daily-current.nc</a><br>
+use <a rel="nofollow" href="http://daily-ssh.nc" rel="noreferrer" >daily-ssh.nc</a><br>
+use <a rel="nofollow" href="http://daily-current.nc" rel="noreferrer" >daily-current.nc</a><br>
 set mem/size=600<br>
 <br>
 def axis/t=1-jan-2009:19-May-2010:1/unit=days tday<br>
@@ -109,7 +109,7 @@ Iskhaq<br>
 <br>
 <br>
 <br>
----------------------------------------------------------------- Dr. Iskhaq Iskandar Jurusan Fisika, Fakultas MIPA Universitas Sriwijaya Kampus Inderalaya, Ogan Ilir (OI) Sumatra Selatan, 30662 INDONESIA Phone: +62 (711) 580743 Fax: +62 (711) 580268 E-mail: <a rel="nofollow" href="mailto:iskhaq.iskandar@xxxxxxxxx">iskhaq.iskandar@xxxxxxxxx</a> <a rel="nofollow" href="http://iskhaq.wordpress.com/" rel="noreferrer" target="_blank">http://iskhaq.wordpress.com/</a> ----------------------------------------------------------------<br>
+---------------------------------------------------------------- Dr. Iskhaq Iskandar Jurusan Fisika, Fakultas MIPA Universitas Sriwijaya Kampus Inderalaya, Ogan Ilir (OI) Sumatra Selatan, 30662 INDONESIA Phone: +62 (711) 580743 Fax: +62 (711) 580268 E-mail: <a rel="nofollow" href="mailto:iskhaq.iskandar@xxxxxxxxx">iskhaq.iskandar@xxxxxxxxx</a> <a rel="nofollow" href="http://iskhaq.wordpress.com/" rel="noreferrer" >http://iskhaq.wordpress.com/</a> ----------------------------------------------------------------<br>
 </blockquote></div><br><br clear="all"><br><br></div></div></div>
 
 <!--X-Body-of-Message-End-->

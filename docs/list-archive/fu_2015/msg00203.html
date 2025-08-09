@@ -56,7 +56,7 @@
 <!--X-Head-Body-Sep-End-->
 <!--X-Body-of-Message-->
 <div dir="ltr"><div><div><div><div>Yes actually, this is why I specified in the previous answer <i>&quot;(or switch d=1 and d=2, and don&#39;t know which
-                            of your data contains the variables)&quot;</i> (and do not just copy the solution). <br></div><br></div>d=1 or d=2 indicate which data you want to associate with your variable. Thus, if Temperature is in data 1, you need to indicate &quot;d=1&quot;. Or, as Russ said, you can also use the explicite name of the data &quot;d=pottm2008&quot;.<br><br></div>Best,<br></div>Nicolas<br><div><div><br></div></div></div><div class="gmail_extra"><br><div class="gmail_quote">2015-05-28 15:56 GMT+08:00 Russ Fiedler <span dir="ltr">&lt;<a rel="nofollow" href="mailto:russell.fiedler@xxxxxxxx" target="_blank">russell.fiedler@xxxxxxxx</a>&gt;</span>:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
+                            of your data contains the variables)&quot;</i> (and do not just copy the solution). <br></div><br></div>d=1 or d=2 indicate which data you want to associate with your variable. Thus, if Temperature is in data 1, you need to indicate &quot;d=1&quot;. Or, as Russ said, you can also use the explicite name of the data &quot;d=pottm2008&quot;.<br><br></div>Best,<br></div>Nicolas<br><div><div><br></div></div></div><div class="gmail_extra"><br><div class="gmail_quote">2015-05-28 15:56 GMT+08:00 Russ Fiedler <span dir="ltr">&lt;<a rel="nofollow" href="mailto:russell.fiedler@xxxxxxxx" >russell.fiedler@xxxxxxxx</a>&gt;</span>:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
   
     
   
@@ -87,17 +87,17 @@
       let q = temperature[y=35,d=pottm2008]<br>
       <br>
       Furthermore I&#39;d probably make a symbolic link with a better name
-      to the file <a rel="nofollow" href="http://pottm2008.nc" target="_blank">pottm2008.nc</a> to reduce confusion.<br>
+      to the file <a rel="nofollow" href="http://pottm2008.nc" >pottm2008.nc</a> to reduce confusion.<br>
       <br>
       eg<br>
       <br>
-      ln -s <a rel="nofollow" href="http://pottm2008.nc" target="_blank">pottm2008.nc</a> <a rel="nofollow" href="http://temp_2008.nc" target="_blank">temp_2008.nc</a><br>
+      ln -s <a rel="nofollow" href="http://pottm2008.nc" >pottm2008.nc</a> <a rel="nofollow" href="http://temp_2008.nc" >temp_2008.nc</a><br>
       <br>
       and therefore<br>
       <br>
-      use <a rel="nofollow" href="http://temp_2008.nc" target="_blank">temp_2008.nc</a><br>
+      use <a rel="nofollow" href="http://temp_2008.nc" >temp_2008.nc</a><br>
       ...<br>
-      let q = temperature[y=35,d=<a rel="nofollow" href="http://temp_2008.nc" target="_blank">temp_2008.nc</a>]<span class="HOEnZb"><font color="#888888"><br>
+      let q = temperature[y=35,d=<a rel="nofollow" href="http://temp_2008.nc" >temp_2008.nc</a>]<span class="HOEnZb"><font color="#888888"><br>
       <br>
       Russ</font></span><div><div class="h5"><br>
       <br>
@@ -119,9 +119,9 @@
                   files are as follows ::<br>
                   <br>
                   yes? set mode metafile<br>
-                  yes? set data <a rel="nofollow" href="http://pottm2008.nc" target="_blank">pottm2008.nc</a>
+                  yes? set data <a rel="nofollow" href="http://pottm2008.nc" >pottm2008.nc</a>
                   <br>
-                  yes? set data <a rel="nofollow" href="http://pottmp.2008.nc" target="_blank">pottmp.2008.nc</a>
+                  yes? set data <a rel="nofollow" href="http://pottmp.2008.nc" >pottmp.2008.nc</a>
                   <br>
                   yes? let p = pottmp[y=35,d=1]<br>
                   yes? let q = temperature[y=35,d=2]<br>
@@ -145,18 +145,18 @@
                   IF `nm1 eq 0` then exit/script<br>
                   Command file, command group, or REPEAT execution
                   aborted<br>
-                  yes? use <a rel="nofollow" href="http://pottmp.2008.nc" target="_blank">pottmp.2008.nc</a>
+                  yes? use <a rel="nofollow" href="http://pottmp.2008.nc" >pottmp.2008.nc</a>
                   <br>
                   yes? sh d<br>
                   &#xA0;&#xA0;&#xA0;&#xA0; currently SET data sets:<br>
-                  &#xA0;&#xA0;&#xA0; 1&gt; ./<a rel="nofollow" href="http://pottm2008.nc" target="_blank">pottm2008.nc</a><br>
+                  &#xA0;&#xA0;&#xA0; 1&gt; ./<a rel="nofollow" href="http://pottm2008.nc" >pottm2008.nc</a><br>
                   &#xA0;name&#xA0;&#xA0;&#xA0;&#xA0; title&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; I&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
                   J&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; K&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; L&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; M&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; N<br>
                   &#xA0;TEMPERATURE<br>
                   &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; potential temperature (degc)&#xA0;&#xA0;&#xA0;&#xA0; 1:2001&#xA0;&#xA0;&#xA0;
                   1:1093&#xA0;&#xA0;&#xA0; 1:10&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:32&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...<br>
                   &#xA0;<br>
-                  &#xA0;&#xA0;&#xA0; 2&gt; ./<a rel="nofollow" href="http://pottmp.2008.nc" target="_blank">pottmp.2008.nc</a>&#xA0;
+                  &#xA0;&#xA0;&#xA0; 2&gt; ./<a rel="nofollow" href="http://pottmp.2008.nc" >pottmp.2008.nc</a>&#xA0;
                   (default)<br>
                   &#xA0;name&#xA0;&#xA0;&#xA0;&#xA0; title&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; I&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
                   J&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; K&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; L&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; M&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; N<br>
@@ -167,11 +167,11 @@
                   &#xA0;POTTMP&#xA0;&#xA0; Potential temperature&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:360&#xA0;&#xA0;&#xA0;&#xA0;
                   1:418&#xA0;&#xA0;&#xA0;&#xA0; 1:40&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:12&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...<br>
                   &#xA0;<br>
-                  yes? use <a rel="nofollow" href="http://pottm2008.nc" target="_blank">pottm2008.nc</a>
+                  yes? use <a rel="nofollow" href="http://pottm2008.nc" >pottm2008.nc</a>
                   <br>
                   yes? sh d<br>
                   &#xA0;&#xA0;&#xA0;&#xA0; currently SET data sets:<br>
-                  &#xA0;&#xA0;&#xA0; 1&gt; ./<a rel="nofollow" href="http://pottm2008.nc" target="_blank">pottm2008.nc</a>&#xA0;
+                  &#xA0;&#xA0;&#xA0; 1&gt; ./<a rel="nofollow" href="http://pottm2008.nc" >pottm2008.nc</a>&#xA0;
                   (default)<br>
                   &#xA0;name&#xA0;&#xA0;&#xA0;&#xA0; title&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; I&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
                   J&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; K&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; L&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; M&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; N<br>
@@ -197,7 +197,7 @@
       </div>
       <div class="gmail_extra"><br>
         <div class="gmail_quote">On Wed, May 27, 2015 at 10:16 PM,
-          Ansley Manke <span dir="ltr">&lt;<a rel="nofollow" href="mailto:ansley.b.manke@xxxxxxxx" target="_blank">ansley.b.manke@xxxxxxxx</a>&gt;</span>
+          Ansley Manke <span dir="ltr">&lt;<a rel="nofollow" href="mailto:ansley.b.manke@xxxxxxxx" >ansley.b.manke@xxxxxxxx</a>&gt;</span>
           wrote:<br>
           <blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
             <div bgcolor="#FFFFFF" text="#000000"> Hi,<br>
@@ -220,9 +220,9 @@
                           <br>
                           <br>
                           yes? set mode metafile<br>
-                          yes? set data <a rel="nofollow" href="http://pottm2008.nc" target="_blank">pottm2008.nc</a>
+                          yes? set data <a rel="nofollow" href="http://pottm2008.nc" >pottm2008.nc</a>
                           <br>
-                          yes? set data <a rel="nofollow" href="http://pottmp.2008.nc" target="_blank">pottmp.2008.nc</a>
+                          yes? set data <a rel="nofollow" href="http://pottmp.2008.nc" >pottmp.2008.nc</a>
                           <br>
                           yes? let p = pottmp[y=35,d=1]<br>
                           yes? let q = temperature[y=35,d=2]<br>
@@ -255,7 +255,7 @@
                     </div>
                     <div class="gmail_extra"><br>
                       <div class="gmail_quote">On Wed, May 27, 2015 at
-                        3:33 PM, Nicolas Freychet <span dir="ltr">&lt;<a rel="nofollow" href="mailto:nicolas.freychet@xxxxxxxxx" target="_blank">nicolas.freychet@xxxxxxxxx</a>&gt;</span>
+                        3:33 PM, Nicolas Freychet <span dir="ltr">&lt;<a rel="nofollow" href="mailto:nicolas.freychet@xxxxxxxxx" >nicolas.freychet@xxxxxxxxx</a>&gt;</span>
                         wrote:<br>
                         <blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
                           <div dir="ltr">
@@ -274,16 +274,16 @@
                             <div>
                               <div><br>
                                 <div class="gmail_quote">2015-05-27
-                                  17:23 GMT+08:00 Satyam Srivastava <span dir="ltr">&lt;<a rel="nofollow" href="mailto:satyam.srivastava.au@xxxxxxxxx" target="_blank">satyam.srivastava.au@xxxxxxxxx</a>&gt;</span>:<br>
+                                  17:23 GMT+08:00 Satyam Srivastava <span dir="ltr">&lt;<a rel="nofollow" href="mailto:satyam.srivastava.au@xxxxxxxxx" >satyam.srivastava.au@xxxxxxxxx</a>&gt;</span>:<br>
                                   <blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
                                     <div dir="ltr">Thanks Samir for your
                                       kind reply but i have already
                                       tried that as well..<br>
                                       <br>
                                       yes? set mode metafile<br>
-                                      yes? set data <a rel="nofollow" href="http://pottm2008.nc" target="_blank">pottm2008.nc</a>
+                                      yes? set data <a rel="nofollow" href="http://pottm2008.nc" >pottm2008.nc</a>
                                       <br>
-                                      yes? set data <a rel="nofollow" href="http://pottmp.2008.nc" target="_blank">pottmp.2008.nc</a>
+                                      yes? set data <a rel="nofollow" href="http://pottmp.2008.nc" >pottmp.2008.nc</a>
                                       <br>
                                       yes? let p = pottmp[y=35]<br>
                                       yes? let q = temperature[y=35]<br>
@@ -314,7 +314,7 @@
                                     <div class="gmail_extra"><br>
                                       <div class="gmail_quote">On Wed,
                                         May 27, 2015 at 12:01 PM, samir
-                                        pokhrel <span dir="ltr">&lt;<a rel="nofollow" href="mailto:pokhrelsamir@xxxxxxxxx" target="_blank">pokhrelsamir@xxxxxxxxx</a>&gt;</span>
+                                        pokhrel <span dir="ltr">&lt;<a rel="nofollow" href="mailto:pokhrelsamir@xxxxxxxxx" >pokhrelsamir@xxxxxxxxx</a>&gt;</span>
                                         wrote:<br>
                                         <blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
                                           <div dir="ltr">
@@ -343,7 +343,7 @@
                                                 <div class="gmail_quote">On
                                                   Wed, May 27, 2015 at
                                                   11:39 AM, Satyam
-                                                  Srivastava <span dir="ltr">&lt;<a rel="nofollow" href="mailto:satyam.srivastava.au@xxxxxxxxx" target="_blank">satyam.srivastava.au@xxxxxxxxx</a>&gt;</span>
+                                                  Srivastava <span dir="ltr">&lt;<a rel="nofollow" href="mailto:satyam.srivastava.au@xxxxxxxxx" >satyam.srivastava.au@xxxxxxxxx</a>&gt;</span>
                                                   wrote:<br>
                                                   <blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
                                                     <div dir="ltr">
@@ -384,8 +384,8 @@
                                                       </div>
                                                       yes? set mode
                                                       metafile<br>
-                                                      yes? use <a rel="nofollow" href="http://pottm2008.nc" target="_blank">pottm2008.nc</a> <br>
-                                                      yes? use <a rel="nofollow" href="http://pottmp.2008.nc" target="_blank">pottmp.2008.nc</a> <br>
+                                                      yes? use <a rel="nofollow" href="http://pottm2008.nc" >pottm2008.nc</a> <br>
+                                                      yes? use <a rel="nofollow" href="http://pottmp.2008.nc" >pottmp.2008.nc</a> <br>
                                                       yes? let
                                                       p=temperature[x=0:30,y=0:35]<br>
                                                       yes? let
@@ -428,7 +428,7 @@
                                                           of Allahabad,<br>
                                                           </b></div>
                                                           <b>Allahabad.<br>
-                                                          <a rel="nofollow" href="tel:%2B918756123444" value="+918756123444" target="_blank">+918756123444</a></b><br>
+                                                          <a rel="nofollow" href="tel:%2B918756123444" value="+918756123444" >+918756123444</a></b><br>
                                                           </div>
                                                           </div>
                                                         </font></span></div>
@@ -477,7 +477,7 @@
                                                   Allahabad,<br>
                                                 </b></div>
                                               <b>Allahabad.<br>
-                                                <a rel="nofollow" href="tel:%2B918756123444" value="+918756123444" target="_blank">+918756123444</a></b><br>
+                                                <a rel="nofollow" href="tel:%2B918756123444" value="+918756123444" >+918756123444</a></b><br>
                                             </div>
                                           </div>
                                         </font></span></div>
@@ -522,7 +522,7 @@
                             <b>University of Allahabad,<br>
                             </b></div>
                           <b>Allahabad.<br>
-                            <a rel="nofollow" href="tel:%2B918756123444" value="+918756123444" target="_blank">+918756123444</a></b><br>
+                            <a rel="nofollow" href="tel:%2B918756123444" value="+918756123444" >+918756123444</a></b><br>
                         </div>
                       </div>
                     </div>
@@ -554,7 +554,7 @@
               <b>University of Allahabad,<br>
               </b></div>
             <b>Allahabad.<br>
-              <a rel="nofollow" href="tel:%2B918756123444" value="+918756123444" target="_blank">+918756123444</a></b><br>
+              <a rel="nofollow" href="tel:%2B918756123444" value="+918756123444" >+918756123444</a></b><br>
           </div>
         </div>
       </div>

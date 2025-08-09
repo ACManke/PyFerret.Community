@@ -50,14 +50,14 @@
 <hr>
 <!--X-Head-Body-Sep-End-->
 <!--X-Body-of-Message-->
-<div dir="ltr"><div><div><div><div><div><div>HI Iskandar,<br></div>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; When you do it in ferret you are doing it against time unit (days in your case, but your data is of monthly interval) . Where as when you do it in excel you might be doing it against index numbers (which is 1-240, which is essentially equivalent of time unit in months) , this means you are getting rate of change of sla in units of months in second case and in first case you will be calculating it as in units of days. <br></div><br>To cross check you can reconstruct <br>regression as <br><br></div>reg_line=p*slope+intercep<br><br></div>and check by plotting over original sla<br></div><br>With best regards,<br></div>Sudheer<br><div><div><div><div><div><br></div></div></div></div></div></div><div class="gmail_extra"><br clear="all"><div><div class="gmail_signature"><div dir="ltr">with best regards<br><br>Sudheer<br><br>**********************************************************************************<br>Dr. Sudheer Joseph &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; <br>Scientist, &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; <br>INCOIS, MoES, Govt. of India.<br>&quot;OCEAN VALLEY&quot; , Pragathi Nagar (BO), Nizampet SO,&#xA0; Telangana, India. PIN- 500 090.<br>Tel:+91-9440832534(Mobile) Tel:+91-40-23886047(O),Fax:+91-40-23892910(O)<br>E-mail: <a rel="nofollow" href="mailto:sjo.India@xxxxxxxxx" target="_blank">sjo.India@xxxxxxxxx</a>;&#xA0; <a rel="nofollow" href="mailto:sjo@xxxxxxxxxxxxx" target="_blank">sjo@xxxxxxxxxxxxx</a>.<br>-------------------* --------------------<br>&quot;The ultimate measure of a man is not where he stands in moments of<br>comfort and convenience, but where he stands at times of challenge and controversy.&quot;<br>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; Martin Luther King, Jr.<br>***********************************************************************************<br></div></div></div>
-<br><div class="gmail_quote">On Tue, Jan 19, 2016 at 9:04 AM, &#39;Iskhaq Iskandar&#39; via _OAR PMEL Ferret Users <span dir="ltr">&lt;<a rel="nofollow" href="mailto:ferret_users@xxxxxxxx" target="_blank">ferret_users@xxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">Dear Ferret users,<br>
+<div dir="ltr"><div><div><div><div><div><div>HI Iskandar,<br></div>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; When you do it in ferret you are doing it against time unit (days in your case, but your data is of monthly interval) . Where as when you do it in excel you might be doing it against index numbers (which is 1-240, which is essentially equivalent of time unit in months) , this means you are getting rate of change of sla in units of months in second case and in first case you will be calculating it as in units of days. <br></div><br>To cross check you can reconstruct <br>regression as <br><br></div>reg_line=p*slope+intercep<br><br></div>and check by plotting over original sla<br></div><br>With best regards,<br></div>Sudheer<br><div><div><div><div><div><br></div></div></div></div></div></div><div class="gmail_extra"><br clear="all"><div><div class="gmail_signature"><div dir="ltr">with best regards<br><br>Sudheer<br><br>**********************************************************************************<br>Dr. Sudheer Joseph &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; <br>Scientist, &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; <br>INCOIS, MoES, Govt. of India.<br>&quot;OCEAN VALLEY&quot; , Pragathi Nagar (BO), Nizampet SO,&#xA0; Telangana, India. PIN- 500 090.<br>Tel:+91-9440832534(Mobile) Tel:+91-40-23886047(O),Fax:+91-40-23892910(O)<br>E-mail: <a rel="nofollow" href="mailto:sjo.India@xxxxxxxxx" >sjo.India@xxxxxxxxx</a>;&#xA0; <a rel="nofollow" href="mailto:sjo@xxxxxxxxxxxxx" >sjo@xxxxxxxxxxxxx</a>.<br>-------------------* --------------------<br>&quot;The ultimate measure of a man is not where he stands in moments of<br>comfort and convenience, but where he stands at times of challenge and controversy.&quot;<br>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; Martin Luther King, Jr.<br>***********************************************************************************<br></div></div></div>
+<br><div class="gmail_quote">On Tue, Jan 19, 2016 at 9:04 AM, &#39;Iskhaq Iskandar&#39; via _OAR PMEL Ferret Users <span dir="ltr">&lt;<a rel="nofollow" href="mailto:ferret_users@xxxxxxxx" >ferret_users@xxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">Dear Ferret users,<br>
 <br>
 I did a simple experiment to see a linear trend of 1-D time series.<br>
 The data is attached here.<br>
 What I did is something like this:<br>
 <br>
-&#39;use <a rel="nofollow" href="http://ssh.nc" rel="noreferrer" target="_blank">ssh.nc</a>&#39;<br>
+&#39;use <a rel="nofollow" href="http://ssh.nc" rel="noreferrer" >ssh.nc</a>&#39;<br>
 &#39;let p = t[gt=sla]&#39;<br>
 &#39;let q = sla&#39;<br>
 &#39;go regress&#39;<br>
@@ -68,19 +68,19 @@ However, when I check the value of &quot;slope&quot;, I think it is not correct.
 <br>
 &#39;list slope&#39;<br>
 &#xA0;VARIABLE : PQVAR / PVAR<br>
-&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;FILENAME : <a rel="nofollow" href="http://ssh.nc" rel="noreferrer" target="_blank">ssh.nc</a><br>
+&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;FILENAME : <a rel="nofollow" href="http://ssh.nc" rel="noreferrer" >ssh.nc</a><br>
 &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;TIME&#xA0; &#xA0; &#xA0;: 16-DEC-1992 12:00 to 16-DEC-2012 00:00<br>
 &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; 0.001568<br>
 <br>
 &#39;list intercep&#39;<br>
 &#xA0; VARIABLE : QAVE - SLOPE*PAVE<br>
-&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;FILENAME : <a rel="nofollow" href="http://ssh.nc" rel="noreferrer" target="_blank">ssh.nc</a><br>
+&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;FILENAME : <a rel="nofollow" href="http://ssh.nc" rel="noreferrer" >ssh.nc</a><br>
 &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;TIME&#xA0; &#xA0; &#xA0;: 16-DEC-1992 12:00 to 16-DEC-2012 00:00<br>
 &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;-41.19<br>
 <br>
 &#39;list rsquare&#39;<br>
 &#xA0;VARIABLE : (PQVAR*PQVAR) / (PVAR*QVAR)<br>
-&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;FILENAME : <a rel="nofollow" href="http://ssh.nc" rel="noreferrer" target="_blank">ssh.nc</a><br>
+&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;FILENAME : <a rel="nofollow" href="http://ssh.nc" rel="noreferrer" >ssh.nc</a><br>
 &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;TIME&#xA0; &#xA0; &#xA0;: 16-DEC-1992 12:00 to 16-DEC-2012 00:00<br>
 &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; 0.4646<br>
 <br>
@@ -98,7 +98,7 @@ Thanks.<br>
 <br>
 Iskhaq<br>
 <br>
----------------------------------------------------------------- Dr. Iskhaq Iskandar Jurusan Fisika, Fakultas MIPA Universitas Sriwijaya Kampus Inderalaya, Ogan Ilir (OI) Sumatra Selatan, 30662 INDONESIA Phone: +62 (711) 580743 Fax: +62 (711) 580268 E-mail: <a rel="nofollow" href="mailto:iskhaq.iskandar@xxxxxxxxx">iskhaq.iskandar@xxxxxxxxx</a> <a rel="nofollow" href="http://iskhaq.wordpress.com/" rel="noreferrer" target="_blank">http://iskhaq.wordpress.com/</a> ----------------------------------------------------------------</blockquote></div><br></div>
+---------------------------------------------------------------- Dr. Iskhaq Iskandar Jurusan Fisika, Fakultas MIPA Universitas Sriwijaya Kampus Inderalaya, Ogan Ilir (OI) Sumatra Selatan, 30662 INDONESIA Phone: +62 (711) 580743 Fax: +62 (711) 580268 E-mail: <a rel="nofollow" href="mailto:iskhaq.iskandar@xxxxxxxxx">iskhaq.iskandar@xxxxxxxxx</a> <a rel="nofollow" href="http://iskhaq.wordpress.com/" rel="noreferrer" >http://iskhaq.wordpress.com/</a> ----------------------------------------------------------------</blockquote></div><br></div>
 
 <!--X-Body-of-Message-End-->
 <!--X-MsgBody-End-->

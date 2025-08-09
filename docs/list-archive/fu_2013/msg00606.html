@@ -55,17 +55,17 @@
 <hr>
 <!--X-Head-Body-Sep-End-->
 <!--X-Body-of-Message-->
-<div dir="ltr">Thank you very much for a fast reply. I set path like as you mentioned, in bashrc and now go gmt_power is working fine.<br></div><div class="gmail_extra"><br><br><div class="gmail_quote">On Mon, Nov 11, 2013 at 12:25 PM, Akshay Hegde <span dir="ltr">&lt;<a rel="nofollow" href="mailto:akshay.k.hegde@xxxxxxxxx" target="_blank">akshay.k.hegde@xxxxxxxxx</a>&gt;</span> wrote:<br>
+<div dir="ltr">Thank you very much for a fast reply. I set path like as you mentioned, in bashrc and now go gmt_power is working fine.<br></div><div class="gmail_extra"><br><br><div class="gmail_quote">On Mon, Nov 11, 2013 at 12:25 PM, Akshay Hegde <span dir="ltr">&lt;<a rel="nofollow" href="mailto:akshay.k.hegde@xxxxxxxxx" >akshay.k.hegde@xxxxxxxxx</a>&gt;</span> wrote:<br>
 <blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir="ltr"><div>Reinstallation won&#39;t help. After installation you need to set path for GMT executables.<br><br>
 </div>if you are Ubuntu user and installed through either <b>sudo apt-get install gmt</b> or through <b>Ubuntu Software Center</b> or through <b>Synaptic Package Manager </b>then default path would be&#xA0; <b>/usr/lib/gmt/bin </b>set this in your <b>.bashrc</b> or in <b>profile</b> otherwise if you installed manually by downloading tar or zip then set respective path of GMT.<div class="im">
 <br>
 <br><br><pre><font size="4"><b><span style="font-family:&quot;Courier New&quot;">Thanks and Regards,<br>Akshay Hegde <br>CSIR-National Institute of Oceanography,
-Dona Paula, Panjim, Goa -403004</span></b></font></pre><br><br>&#xA0;</div></div><div class="HOEnZb"><div class="h5"><div class="gmail_extra"><br><br><div class="gmail_quote">On Mon, Nov 11, 2013 at 12:19 PM, chinnu sachi <span dir="ltr">&lt;<a rel="nofollow" href="mailto:chinnu.sachi7@xxxxxxxxx" target="_blank">chinnu.sachi7@xxxxxxxxx</a>&gt;</span> wrote:<br>
+Dona Paula, Panjim, Goa -403004</span></b></font></pre><br><br>&#xA0;</div></div><div class="HOEnZb"><div class="h5"><div class="gmail_extra"><br><br><div class="gmail_quote">On Mon, Nov 11, 2013 at 12:19 PM, chinnu sachi <span dir="ltr">&lt;<a rel="nofollow" href="mailto:chinnu.sachi7@xxxxxxxxx" >chinnu.sachi7@xxxxxxxxx</a>&gt;</span> wrote:<br>
 
 <blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir="ltr"><div>Yes, Iam getting an error when i tried the command <span style="color:rgb(0,0,255)">spawn spectrum1d.<br>
 
 </span></div><span style="color:rgb(0,0,255)"><font color="#000000">So as u said,the problem is with the GMT environment, I reinstalled GMT now, still it is showing same error.</font><br>
-</span></div><div><div><div class="gmail_extra"><br><br><div class="gmail_quote">On Mon, Nov 11, 2013 at 12:13 PM, Akshay Hegde <span dir="ltr">&lt;<a rel="nofollow" href="mailto:akshay.k.hegde@xxxxxxxxx" target="_blank">akshay.k.hegde@xxxxxxxxx</a>&gt;</span> wrote:<br>
+</span></div><div><div><div class="gmail_extra"><br><br><div class="gmail_quote">On Mon, Nov 11, 2013 at 12:13 PM, Akshay Hegde <span dir="ltr">&lt;<a rel="nofollow" href="mailto:akshay.k.hegde@xxxxxxxxx" >akshay.k.hegde@xxxxxxxxx</a>&gt;</span> wrote:<br>
 
 
 <blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir="ltr"><div><div>look at the difference here... I suspect there might be some problem with your GMT Environment Settings (path/bash profile etc) if its not working even with default ferret datasets.<br>
@@ -87,7 +87,7 @@ spectrum1d 4.5.6 - Compute auto- [and cross- ] spectra from one [or two] timeser
 
 
 CSIR-National Institute of Oceanography,
-Dona Paula, Panjim, Goa -403004</span></b></font></pre><br><br><br><br></div></div></div></div></div><div class="gmail_extra"><br><br><div class="gmail_quote"><div>On Mon, Nov 11, 2013 at 12:02 PM, Akshay Hegde <span dir="ltr">&lt;<a rel="nofollow" href="mailto:akshay.k.hegde@xxxxxxxxx" target="_blank">akshay.k.hegde@xxxxxxxxx</a>&gt;</span> wrote:<br>
+Dona Paula, Panjim, Goa -403004</span></b></font></pre><br><br><br><br></div></div></div></div></div><div class="gmail_extra"><br><br><div class="gmail_quote"><div>On Mon, Nov 11, 2013 at 12:02 PM, Akshay Hegde <span dir="ltr">&lt;<a rel="nofollow" href="mailto:akshay.k.hegde@xxxxxxxxx" >akshay.k.hegde@xxxxxxxxx</a>&gt;</span> wrote:<br>
 
 
 
@@ -97,7 +97,7 @@ Dona Paula, Panjim, Goa -403004</span></b></font></pre><br><br><br><br></div></d
 <br>
 &#xA0;&#xA0;&#xA0; yes? SET DATA monthly_navy_winds<br>&#xA0;&#xA0;&#xA0; yes? GO gmt_power uwnd[x=180,y=0] uwnd x180y0 64<br>&#xA0;&#xA0;&#xA0; yes? PLOT x180y0_power<br>
 &#xA0;&#xA0;&#xA0; yes? GO overlay_bars x180y0_power&#xA0; x180y0_error red<div><br><br><br><pre><font size="4"><b><span style="font-family:&quot;Courier New&quot;">Thanks and Regards,<br>Akshay Hegde <br>CSIR-National Institute of Oceanography,
-Dona Paula, Panjim, Goa -403004</span></b></font></pre><br><br></div></div><div><div><div class="gmail_extra"><br><br><div class="gmail_quote">On Mon, Nov 11, 2013 at 11:55 AM, chinnu sachi <span dir="ltr">&lt;<a rel="nofollow" href="mailto:chinnu.sachi7@xxxxxxxxx" target="_blank">chinnu.sachi7@xxxxxxxxx</a>&gt;</span> wrote:<br>
+Dona Paula, Panjim, Goa -403004</span></b></font></pre><br><br></div></div><div><div><div class="gmail_extra"><br><br><div class="gmail_quote">On Mon, Nov 11, 2013 at 11:55 AM, chinnu sachi <span dir="ltr">&lt;<a rel="nofollow" href="mailto:chinnu.sachi7@xxxxxxxxx" >chinnu.sachi7@xxxxxxxxx</a>&gt;</span> wrote:<br>
 
 
 
@@ -108,7 +108,7 @@ Dona Paula, Panjim, Goa -403004</span></b></font></pre><br><br></div></div><div>
 
 
 </div><div>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; VARIABLE : L<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; axis TIME<br>
-&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; FILENAME : <a rel="nofollow" href="http://v_test.nc" target="_blank">v_test.nc</a><br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; SUBSET&#xA0;&#xA0; : 600 points (TIME)<br>&#xA0;15-JAN-1958 00 /&#xA0;&#xA0; 1:&#xA0;&#xA0;&#xA0; 1.0<br>&#xA0;15-FEB-1958 00 /&#xA0;&#xA0; 2:&#xA0;&#xA0;&#xA0; 2.0<br>&#xA0;15-MAR-1958 00 /&#xA0;&#xA0; 3:&#xA0;&#xA0;&#xA0; 3.0<br>
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; FILENAME : <a rel="nofollow" href="http://v_test.nc" >v_test.nc</a><br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; SUBSET&#xA0;&#xA0; : 600 points (TIME)<br>&#xA0;15-JAN-1958 00 /&#xA0;&#xA0; 1:&#xA0;&#xA0;&#xA0; 1.0<br>&#xA0;15-FEB-1958 00 /&#xA0;&#xA0; 2:&#xA0;&#xA0;&#xA0; 2.0<br>&#xA0;15-MAR-1958 00 /&#xA0;&#xA0; 3:&#xA0;&#xA0;&#xA0; 3.0<br>
 
 
 
@@ -128,7 +128,7 @@ Dona Paula, Panjim, Goa -403004</span></b></font></pre><br><br></div></div><div>
 
 &#xA0;15-JUL-1959 00 /&#xA0; 19:&#xA0;&#xA0; 19.0<br>&#xA0;15-AUG-1959 00 /&#xA0; 20:&#xA0;&#xA0; 20.0<br>&#xA0;15-SEP-1959 00 /&#xA0; 21:&#xA0;&#xA0; 21.0<br>&#xA0;15-OCT-1959 00 /&#xA0; 22:&#xA0;&#xA0; 22.0<br>&#xA0;15-NOV-1959 00 /&#xA0; 23:&#xA0;&#xA0; 23.0<br>&#xA0;15-DEC-1959 00 /&#xA0; 24:&#xA0;&#xA0; 24.0<br></div></div><div>
 <div><div class="gmail_extra">
-<br><br><div class="gmail_quote">On Mon, Nov 11, 2013 at 11:48 AM, Akshay Hegde <span dir="ltr">&lt;<a rel="nofollow" href="mailto:akshay.k.hegde@xxxxxxxxx" target="_blank">akshay.k.hegde@xxxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
+<br><br><div class="gmail_quote">On Mon, Nov 11, 2013 at 11:48 AM, Akshay Hegde <span dir="ltr">&lt;<a rel="nofollow" href="mailto:akshay.k.hegde@xxxxxxxxx" >akshay.k.hegde@xxxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
 
 
 
@@ -142,7 +142,7 @@ Dona Paula, Panjim, Goa -403004</span></b></font></pre><br><br></div></div><div>
 
 <br>
 <br><pre><font size="4"><b><span style="font-family:&quot;Courier New&quot;">Thanks and Regards,<br>Akshay Hegde <br>CSIR-National Institute of Oceanography,
-Dona Paula, Panjim, Goa -403004</span></b></font></pre><br></div></div><div><div><div class="gmail_extra"><br><br><div class="gmail_quote">On Mon, Nov 11, 2013 at 11:40 AM, Akshay Hegde <span dir="ltr">&lt;<a rel="nofollow" href="mailto:akshay.k.hegde@xxxxxxxxx" target="_blank">akshay.k.hegde@xxxxxxxxx</a>&gt;</span> wrote:<br>
+Dona Paula, Panjim, Goa -403004</span></b></font></pre><br></div></div><div><div><div class="gmail_extra"><br><br><div class="gmail_quote">On Mon, Nov 11, 2013 at 11:40 AM, Akshay Hegde <span dir="ltr">&lt;<a rel="nofollow" href="mailto:akshay.k.hegde@xxxxxxxxx" >akshay.k.hegde@xxxxxxxxx</a>&gt;</span> wrote:<br>
 
 
 
@@ -174,7 +174,7 @@ Dona Paula, Panjim, Goa -403004</span></b></font></pre><br></div></div><div><div
 
 
 
-Dona Paula, Panjim, Goa -403004<br></span></b><br></font></pre><br></div><div><div><div class="gmail_extra"><br><br><div class="gmail_quote">On Mon, Nov 11, 2013 at 10:32 AM, chinnu sachi <span dir="ltr">&lt;<a rel="nofollow" href="mailto:chinnu.sachi7@xxxxxxxxx" target="_blank">chinnu.sachi7@xxxxxxxxx</a>&gt;</span> wrote:<br>
+Dona Paula, Panjim, Goa -403004<br></span></b><br></font></pre><br></div><div><div><div class="gmail_extra"><br><br><div class="gmail_quote">On Mon, Nov 11, 2013 at 10:32 AM, chinnu sachi <span dir="ltr">&lt;<a rel="nofollow" href="mailto:chinnu.sachi7@xxxxxxxxx" >chinnu.sachi7@xxxxxxxxx</a>&gt;</span> wrote:<br>
 
 
 
@@ -191,7 +191,7 @@ Dona Paula, Panjim, Goa -403004<br></span></b><br></font></pre><br></div><div><d
 
 
 
-<br><b>yes? go power.jnl <br>set mem/size = 650<br>&#xA0;Cached data cleared from memory<br>use <a rel="nofollow" href="http://v_test.nc" target="_blank">v_test.nc</a><br>&#xA0;repeat/k=1:`20` ( go gmt_power V_NEW GHA1 gmt 256; list/file=test/clobber/append gmt_power;plot gmt_power)<br>
+<br><b>yes? go power.jnl <br>set mem/size = 650<br>&#xA0;Cached data cleared from memory<br>use <a rel="nofollow" href="http://v_test.nc" >v_test.nc</a><br>&#xA0;repeat/k=1:`20` ( go gmt_power V_NEW GHA1 gmt 256; list/file=test/clobber/append gmt_power;plot gmt_power)<br>
 
 
 
@@ -228,12 +228,12 @@ sh: 1: spectrum1d: not found<br>&#xA0;**TMAP ERR: non-existent or not on line<br
 
 
 <br></div><div>Thanks in advance<span><font color="#888888"><br></font></span></div><span><font color="#888888"><br><div><div><div><div>-- <br><b>Regards,<br>Chinnu Sachidanandan<br>Physical Oceanography Division<br>
-National Institute of Oceanography<br><a rel="nofollow" href="mailto:csachidanandan@xxxxxxx" target="_blank">csachidanandan@xxxxxxx</a></b><br>
+National Institute of Oceanography<br><a rel="nofollow" href="mailto:csachidanandan@xxxxxxx" >csachidanandan@xxxxxxx</a></b><br>
 
 </div></div></div></div></font></span></div>
 </blockquote></div><br></div>
 </div></div></blockquote></div><br></div>
-</div></div></blockquote></div><br><br clear="all"><br>-- <br><b>Regards,<br>Chinnu Sachidanandan<br>Physical Oceanography Division<br>National Institute of Oceanography<br><a rel="nofollow" href="mailto:csachidanandan@xxxxxxx" target="_blank">csachidanandan@xxxxxxx</a></b><br>
+</div></div></blockquote></div><br><br clear="all"><br>-- <br><b>Regards,<br>Chinnu Sachidanandan<br>Physical Oceanography Division<br>National Institute of Oceanography<br><a rel="nofollow" href="mailto:csachidanandan@xxxxxxx" >csachidanandan@xxxxxxx</a></b><br>
 
 
 
@@ -243,13 +243,13 @@ National Institute of Oceanography<br><a rel="nofollow" href="mailto:csachidanan
 </div>
 </div></div></blockquote></div><br></div>
 </div></div></blockquote></div></div></div><br></div>
-</blockquote></div><br><br clear="all"><br>-- <br><b>Regards,<br>Chinnu Sachidanandan<br>Physical Oceanography Division<br>National Institute of Oceanography<br><a rel="nofollow" href="mailto:csachidanandan@xxxxxxx" target="_blank">csachidanandan@xxxxxxx</a></b><br>
+</blockquote></div><br><br clear="all"><br>-- <br><b>Regards,<br>Chinnu Sachidanandan<br>Physical Oceanography Division<br>National Institute of Oceanography<br><a rel="nofollow" href="mailto:csachidanandan@xxxxxxx" >csachidanandan@xxxxxxx</a></b><br>
 
 
 
 </div>
 </div></div></blockquote></div><br></div>
-</div></div></blockquote></div><br><br clear="all"><br>-- <br><b>Regards,<br>Chinnu Sachidanandan<br>Physical Oceanography Division<br>National Institute of Oceanography<br><a rel="nofollow" href="mailto:csachidanandan@xxxxxxx" target="_blank">csachidanandan@xxxxxxx</a></b><br>
+</div></div></blockquote></div><br><br clear="all"><br>-- <br><b>Regards,<br>Chinnu Sachidanandan<br>Physical Oceanography Division<br>National Institute of Oceanography<br><a rel="nofollow" href="mailto:csachidanandan@xxxxxxx" >csachidanandan@xxxxxxx</a></b><br>
 
 </div>
 

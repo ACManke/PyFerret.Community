@@ -58,14 +58,14 @@
 <!--X-Head-Body-Sep-End-->
 <!--X-Body-of-Message-->
 <div dir="ltr"><div>Dear all,<br></div>There was a mistake in the <b><span style="color:rgb(0,0,255)">go file name</span>:</b> I am sending again.<br><p style="margin-bottom:0in;line-height:100%">!1. repeat.jnl</p>
-<p style="margin-bottom:0in;line-height:100%">use <a rel="nofollow" href="http://rfclim.nc" target="_blank">rfclim.nc</a> 
+<p style="margin-bottom:0in;line-height:100%">use <a rel="nofollow" href="http://rfclim.nc" >rfclim.nc</a> 
 </p><span class="im">
 <p style="margin-bottom:0in;line-height:100%">set
 region/x=66.4E:100.1E/y=6.4N:38.6N/t=01-JAN 12:00 to 31-DEC 17:48
 </p>
 </span><p style="margin-bottom:0in;line-height:100%">
 rep/range=1:36/name=m
-(rep/range=1:32/name=n go plot.jnl)</p><br><br></div><div class="gmail_extra"><br><div class="gmail_quote">On Mon, Sep 21, 2015 at 8:39 PM, simon EK <span dir="ltr">&lt;<a rel="nofollow" href="mailto:simonambat@xxxxxxxxx" target="_blank">simonambat@xxxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir="ltr"><div><div><div><div>Dear Andre/Ansley/Andrew/Russ/Ferreters,<br><br></div>Thank you so much for all the help and contributions. <br>I wanted to draw graphs of daily&#xA0; rainfall climatology&#xA0;&#xA0; from a .25x.25 grid dataset <br>I wanted to plot it for all grid points from 8N to 15N/73E to 82N and save in respective grid file names.<br><br>Finally the issue is solved -&#xA0; Thanks to  Andre/Ansley/Andrew/Russ.<br>The code is as follows:<br>===========================================================================<br>
+(rep/range=1:32/name=n go plot.jnl)</p><br><br></div><div class="gmail_extra"><br><div class="gmail_quote">On Mon, Sep 21, 2015 at 8:39 PM, simon EK <span dir="ltr">&lt;<a rel="nofollow" href="mailto:simonambat@xxxxxxxxx" >simonambat@xxxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir="ltr"><div><div><div><div>Dear Andre/Ansley/Andrew/Russ/Ferreters,<br><br></div>Thank you so much for all the help and contributions. <br>I wanted to draw graphs of daily&#xA0; rainfall climatology&#xA0;&#xA0; from a .25x.25 grid dataset <br>I wanted to plot it for all grid points from 8N to 15N/73E to 82N and save in respective grid file names.<br><br>Finally the issue is solved -&#xA0; Thanks to  Andre/Ansley/Andrew/Russ.<br>The code is as follows:<br>===========================================================================<br>
 
 
 	
@@ -75,7 +75,7 @@ rep/range=1:36/name=m
 
 
 <p style="margin-bottom:0in;line-height:100%">!1. repeat.jnl</p>
-<p style="margin-bottom:0in;line-height:100%">use <a rel="nofollow" href="http://rfclim.nc" target="_blank">rfclim.nc</a> 
+<p style="margin-bottom:0in;line-height:100%">use <a rel="nofollow" href="http://rfclim.nc" >rfclim.nc</a> 
 </p><span class="">
 <p style="margin-bottom:0in;line-height:100%">set
 region/x=66.4E:100.1E/y=6.4N:38.6N/t=01-JAN 12:00 to 31-DEC 17:48
@@ -108,7 +108,7 @@ rep/range=1:36/name=m
 frame/format=gif/file=&quot;rfclim-`floatstr(($yy),&quot;(f5.2)&quot;)`-`floatstr(($xx),&quot;(f5.2)&quot;)`.gif&quot;
 </p>
 
-=========================================================<br><br></div>Thanking you all so much,<br><br></div>Regards<span class="HOEnZb"><font color="#888888"><br></font></span></div><span class="HOEnZb"><font color="#888888">Simon<br></font></span></div><div class="HOEnZb"><div class="h5"><div class="gmail_extra"><br><div class="gmail_quote">On Mon, Sep 21, 2015 at 7:22 AM, Andrew Wittenberg - NOAA Federal <span dir="ltr">&lt;<a rel="nofollow" href="mailto:andrew.wittenberg@xxxxxxxx" target="_blank">andrew.wittenberg@xxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">&#xA0; NOAA/PMEL TMAP<br>
+=========================================================<br><br></div>Thanking you all so much,<br><br></div>Regards<span class="HOEnZb"><font color="#888888"><br></font></span></div><span class="HOEnZb"><font color="#888888">Simon<br></font></span></div><div class="HOEnZb"><div class="h5"><div class="gmail_extra"><br><div class="gmail_quote">On Mon, Sep 21, 2015 at 7:22 AM, Andrew Wittenberg - NOAA Federal <span dir="ltr">&lt;<a rel="nofollow" href="mailto:andrew.wittenberg@xxxxxxxx" >andrew.wittenberg@xxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">&#xA0; NOAA/PMEL TMAP<br>
 &#xA0; FERRET v6.95 (rc3)<br>
 &#xA0; Linux 2.6.32-573.3.1.el6.x86_64 64-bit - 09/15/15<br>
 &#xA0; 20-Sep-15 21:49<br>
@@ -197,7 +197,7 @@ On Sun, Sep 20, 2015 at 9:07 PM, Russ Fiedler &lt;russell.fiedler@xxxxxxxx&gt; w
 &gt; Simon<br>
 &gt;<br>
 &gt;<br>
-&gt; On Sat, Sep 19, 2015 at 1:06 PM, simon EK &lt;<a rel="nofollow" href="mailto:simonambat@xxxxxxxxx" target="_blank">simonambat@xxxxxxxxx</a>&gt; wrote:<br>
+&gt; On Sat, Sep 19, 2015 at 1:06 PM, simon EK &lt;<a rel="nofollow" href="mailto:simonambat@xxxxxxxxx" >simonambat@xxxxxxxxx</a>&gt; wrote:<br>
 &gt;&gt;<br>
 &gt;&gt; Dear Andre,<br>
 &gt;&gt;<br>
@@ -207,7 +207,7 @@ On Sun, Sep 20, 2015 at 9:07 PM, Russ Fiedler &lt;russell.fiedler@xxxxxxxx&gt; w
 &gt;&gt; Regards<br>
 &gt;&gt; Simon<br>
 &gt;&gt;<br>
-&gt;&gt; On Sat, Sep 19, 2015 at 12:54 PM, simon EK &lt;<a rel="nofollow" href="mailto:simonambat@xxxxxxxxx" target="_blank">simonambat@xxxxxxxxx</a>&gt; wrote:<br>
+&gt;&gt; On Sat, Sep 19, 2015 at 12:54 PM, simon EK &lt;<a rel="nofollow" href="mailto:simonambat@xxxxxxxxx" >simonambat@xxxxxxxxx</a>&gt; wrote:<br>
 &gt;&gt;&gt;<br>
 &gt;&gt;&gt; Dear Andre,<br>
 &gt;&gt;&gt; Really great! It works perfectly well.<br>
@@ -235,7 +235,7 @@ On Sun, Sep 20, 2015 at 9:07 PM, Russ Fiedler &lt;russell.fiedler@xxxxxxxx&gt; w
 &gt;&gt;&gt; ============================================================<br>
 &gt;&gt;&gt;<br>
 &gt;&gt;&gt;<br>
-&gt;&gt;&gt; On Fri, Sep 18, 2015 at 9:20 PM, Andre Paim &lt;<a rel="nofollow" href="mailto:paim.oceano@xxxxxxxxx" target="_blank">paim.oceano@xxxxxxxxx</a>&gt;<br>
+&gt;&gt;&gt; On Fri, Sep 18, 2015 at 9:20 PM, Andre Paim &lt;<a rel="nofollow" href="mailto:paim.oceano@xxxxxxxxx" >paim.oceano@xxxxxxxxx</a>&gt;<br>
 &gt;&gt;&gt; wrote:<br>
 &gt;&gt;&gt;&gt;<br>
 &gt;&gt;&gt;&gt; There is one way around it that might help you (I&#39;ve tried this to save<br>
@@ -244,7 +244,7 @@ On Sun, Sep 20, 2015 at 9:07 PM, Russ Fiedler &lt;russell.fiedler@xxxxxxxx&gt; w
 &gt;&gt;&gt;&gt;<br>
 &gt;&gt;&gt;&gt; 1. repeat.jnl<br>
 &gt;&gt;&gt;&gt; ===================================================<br>
-&gt;&gt;&gt;&gt; use <a rel="nofollow" href="http://rfclim_1901_2013.nc" rel="noreferrer" target="_blank">rfclim_1901_2013.nc</a><br>
+&gt;&gt;&gt;&gt; use <a rel="nofollow" href="http://rfclim_1901_2013.nc" rel="noreferrer" >rfclim_1901_2013.nc</a><br>
 &gt;&gt;&gt;&gt; set region/x=66.4E:100.1E/y=6.4N:38.6N/t=01-JAN 12:00 to 31-DEC 17:48<br>
 &gt;&gt;&gt;&gt;&#xA0; &#xA0; &#xA0; &#xA0; &#xA0;! Repeat on 10.5deg Latitude<br>
 &gt;&gt;&gt;&gt; rep/range=1:18/name=m (go test.jnl)<br>
@@ -260,7 +260,7 @@ On Sun, Sep 20, 2015 at 9:07 PM, Russ Fiedler &lt;russell.fiedler@xxxxxxxx&gt; w
 &gt;&gt;&gt;&gt;<br>
 &gt;&gt;&gt;&gt;<br>
 &gt;&gt;&gt;&gt;<br>
-&gt;&gt;&gt;&gt; On 17 September 2015 at 23:10, simon EK &lt;<a rel="nofollow" href="mailto:simonambat@xxxxxxxxx" target="_blank">simonambat@xxxxxxxxx</a>&gt; wrote:<br>
+&gt;&gt;&gt;&gt; On 17 September 2015 at 23:10, simon EK &lt;<a rel="nofollow" href="mailto:simonambat@xxxxxxxxx" >simonambat@xxxxxxxxx</a>&gt; wrote:<br>
 &gt;&gt;&gt;&gt;&gt;<br>
 &gt;&gt;&gt;&gt;&gt; Dear Andre, Ansley,<br>
 &gt;&gt;&gt;&gt;&gt;<br>
@@ -270,7 +270,7 @@ On Sun, Sep 20, 2015 at 9:07 PM, Russ Fiedler &lt;russell.fiedler@xxxxxxxx&gt; w
 &gt;&gt;&gt;&gt;&gt; The code I used is:<br>
 &gt;&gt;&gt;&gt;&gt; 1. repeat.jnl<br>
 &gt;&gt;&gt;&gt;&gt; ===================================================<br>
-&gt;&gt;&gt;&gt;&gt; use <a rel="nofollow" href="http://rfclim_1901_2013.nc" rel="noreferrer" target="_blank">rfclim_1901_2013.nc</a><br>
+&gt;&gt;&gt;&gt;&gt; use <a rel="nofollow" href="http://rfclim_1901_2013.nc" rel="noreferrer" >rfclim_1901_2013.nc</a><br>
 &gt;&gt;&gt;&gt;&gt; set region/x=66.4E:100.1E/y=6.4N:38.6N/t=01-JAN 12:00 to 31-DEC 17:48<br>
 &gt;&gt;&gt;&gt;&gt;&#xA0; &#xA0; &#xA0; &#xA0; &#xA0;! Repeat on 10.5deg Latitude<br>
 &gt;&gt;&gt;&gt;&gt; repeat/x=76.25:79.75:.25 (go test.jnl)<br>
@@ -298,7 +298,7 @@ On Sun, Sep 20, 2015 at 9:07 PM, Russ Fiedler &lt;russell.fiedler@xxxxxxxx&gt; w
 &gt;&gt;&gt;&gt;&gt;<br>
 &gt;&gt;&gt;&gt;&gt; How to resolve this, any idea?<br>
 &gt;&gt;&gt;&gt;&gt;<br>
-&gt;&gt;&gt;&gt;&gt; On Fri, Sep 18, 2015 at 1:50 AM, Andre Paim &lt;<a rel="nofollow" href="mailto:paim.oceano@xxxxxxxxx" target="_blank">paim.oceano@xxxxxxxxx</a>&gt;<br>
+&gt;&gt;&gt;&gt;&gt; On Fri, Sep 18, 2015 at 1:50 AM, Andre Paim &lt;<a rel="nofollow" href="mailto:paim.oceano@xxxxxxxxx" >paim.oceano@xxxxxxxxx</a>&gt;<br>
 &gt;&gt;&gt;&gt;&gt; wrote:<br>
 &gt;&gt;&gt;&gt;&gt;&gt;<br>
 &gt;&gt;&gt;&gt;&gt;&gt; Dear Simon,<br>
@@ -320,7 +320,7 @@ On Sun, Sep 20, 2015 at 9:07 PM, Russ Fiedler &lt;russell.fiedler@xxxxxxxx&gt; w
 &gt;&gt;&gt;&gt;&gt;&gt;<br>
 &gt;&gt;&gt;&gt;&gt;&gt;<br>
 &gt;&gt;&gt;&gt;&gt;&gt;<br>
-&gt;&gt;&gt;&gt;&gt;&gt; On 17 September 2015 at 13:50, simon EK &lt;<a rel="nofollow" href="mailto:simonambat@xxxxxxxxx" target="_blank">simonambat@xxxxxxxxx</a>&gt; wrote:<br>
+&gt;&gt;&gt;&gt;&gt;&gt; On 17 September 2015 at 13:50, simon EK &lt;<a rel="nofollow" href="mailto:simonambat@xxxxxxxxx" >simonambat@xxxxxxxxx</a>&gt; wrote:<br>
 &gt;&gt;&gt;&gt;&gt;&gt;&gt;<br>
 &gt;&gt;&gt;&gt;&gt;&gt;&gt; hi all,<br>
 &gt;&gt;&gt;&gt;&gt;&gt;&gt;<br>
@@ -332,7 +332,7 @@ On Sun, Sep 20, 2015 at 9:07 PM, Russ Fiedler &lt;russell.fiedler@xxxxxxxx&gt; w
 &gt;&gt;&gt;&gt;&gt;&gt;&gt;<br>
 &gt;&gt;&gt;&gt;&gt;&gt;&gt; 1. repeat.jnl<br>
 &gt;&gt;&gt;&gt;&gt;&gt;&gt; ===============================================<br>
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; use <a rel="nofollow" href="http://rfclim_1901_2013.nc" rel="noreferrer" target="_blank">rfclim_1901_2013.nc</a><br>
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; use <a rel="nofollow" href="http://rfclim_1901_2013.nc" rel="noreferrer" >rfclim_1901_2013.nc</a><br>
 &gt;&gt;&gt;&gt;&gt;&gt;&gt; set region/x=66.4E:100.1E/y=6.4N:38.6N/t=01-JAN 12:00 to 31-DEC 17:48<br>
 &gt;&gt;&gt;&gt;&gt;&gt;&gt; ! Repeat on 77.5deg Longitude<br>
 &gt;&gt;&gt;&gt;&gt;&gt;&gt; repeat/name=a/range=8:30:.25 (go test.jnl)<br>
@@ -347,7 +347,7 @@ On Sun, Sep 20, 2015 at 9:07 PM, Russ Fiedler &lt;russell.fiedler@xxxxxxxx&gt; w
 &gt;&gt;&gt;&gt;&gt;&gt;&gt;<br>
 &gt;&gt;&gt;&gt;&gt;&gt;&gt; While running, I get the following error:<br>
 &gt;&gt;&gt;&gt;&gt;&gt;&gt; yes? go repeat-plot-long.jnl<br>
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; use <a rel="nofollow" href="http://rfclim_1901_2013.nc" rel="noreferrer" target="_blank">rfclim_1901_2013.nc</a><br>
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; use <a rel="nofollow" href="http://rfclim_1901_2013.nc" rel="noreferrer" >rfclim_1901_2013.nc</a><br>
 &gt;&gt;&gt;&gt;&gt;&gt;&gt; set region/x=66.4E:100.1E/y=6.4N:38.6N/t=01-JAN 12:00 to 31-DEC 17:48<br>
 &gt;&gt;&gt;&gt;&gt;&gt;&gt; ! Repeat on 77.5deg Longitude<br>
 &gt;&gt;&gt;&gt;&gt;&gt;&gt; repeat/name=a/range=8:30:.25 (go test.jnl)<br>

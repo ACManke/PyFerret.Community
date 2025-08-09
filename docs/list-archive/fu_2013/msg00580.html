@@ -51,13 +51,13 @@
 <div dir="ltr"><div>As I remember me and Ansley told you in your earlier post about <b>clobber and append.<br><br></b></div><div>append ---&gt;<b> </b>If file exists then appen<span class="">d</span>, otherwise create an<span class="">d</span> write to it<br>
 </div><div>clobber ---&gt; If the file exists then overwrite it, otherwise create an<span class="">d</span> write to it<br><br></div><div>in first glance I could find some errors here..<br></div><div><b><br></b></div><div>
 <b><span style="font-family:&quot;Courier New&quot;">if `yy eq 1` then ;\<br>
-list/file=<a rel="nofollow" href="http://daytime8_ma21.nc/format=cdf/clob/l=yy/llimits=1:2398lat11,lat12,lon11,lon12,alt,month1,day1,lct1,edmax1" target="_blank">daytime8_ma21.nc/format=cdf/clob/l=`yy`/llimits=1:2398
+list/file=<a rel="nofollow" href="http://daytime8_ma21.nc/format=cdf/clob/l=yy/llimits=1:2398lat11,lat12,lon11,lon12,alt,month1,day1,lct1,edmax1" >daytime8_ma21.nc/format=cdf/clob/l=`yy`/llimits=1:2398
 lat11,lat12,lon11,lon12,alt,month1,day1,lct1,edmax1</a>;\<br>
 else ;\<br>
-list/app/file=<a rel="nofollow" href="http://daytime8_ma21.nc/format=cdf/clob/l=yylat11,lat12,lon11,lon12,alt,month1,day1,lct1,edmax1" target="_blank">daytime8_ma21.nc/format=cdf/clob/l=`yy`
+list/app/file=<a rel="nofollow" href="http://daytime8_ma21.nc/format=cdf/clob/l=yylat11,lat12,lon11,lon12,alt,month1,day1,lct1,edmax1" >daytime8_ma21.nc/format=cdf/clob/l=`yy`
 lat11,lat12,lon11,lon12,alt,month1,day1,lct1,edmax1</a>;\<br>
 endif ;\<br><br><br></span></b><br><b><span style="font-family:&quot;Courier New&quot;">Thanks and Regards,<br>Akshay Hegde <br>CSIR-National Institute of Oceanography,<br>Dona Paula, Panjim, Goa -403004<br><br><br></span></b></div>
-</div><div class="gmail_extra"><br><br><div class="gmail_quote">On Sun, Oct 27, 2013 at 3:31 PM, Gopal Mondal <span dir="ltr">&lt;<a rel="nofollow" href="mailto:gopalmondal18@xxxxxxxxx" target="_blank">gopalmondal18@xxxxxxxxx</a>&gt;</span> wrote:<br>
+</div><div class="gmail_extra"><br><br><div class="gmail_quote">On Sun, Oct 27, 2013 at 3:31 PM, Gopal Mondal <span dir="ltr">&lt;<a rel="nofollow" href="mailto:gopalmondal18@xxxxxxxxx" >gopalmondal18@xxxxxxxxx</a>&gt;</span> wrote:<br>
 <blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir="ltr"><div><div><div><div>I have almost 2400 data file.I want to create a data file of one parameter edmax(lat,lon,alt,time).I have&#xA0; writen a .jnl script as follows.With this script <span style="font-family:&quot;Courier New&quot;">lat11,lat12,lon11,lon12,alt,month1,day1,lct1,edmax1</span> parameters are in 1D with 1:2400 index in t-axis only.But I want to create it like above i.e. edmax(lat,lon,alt,time).Please help any one...<br>
 
 <br>*******************<br>
@@ -86,10 +86,10 @@ let edmax1=edmax+0*t[gt=tax];\<br>
 let lct1=lct+0*t[gt=tax];\<br>
 let day1=day+0*t[gt=tax];\<br>
 if `yy eq 1` then ;\<br>
-list/file=<a rel="nofollow" href="http://daytime8_ma21.nc/format=cdf/clob/l=yy/llimits=1:2398lat11,lat12,lon11,lon12,alt,month1,day1,lct1,edmax1" target="_blank">daytime8_ma21.nc/format=cdf/clob/l=`yy`/llimits=1:2398
+list/file=<a rel="nofollow" href="http://daytime8_ma21.nc/format=cdf/clob/l=yy/llimits=1:2398lat11,lat12,lon11,lon12,alt,month1,day1,lct1,edmax1" >daytime8_ma21.nc/format=cdf/clob/l=`yy`/llimits=1:2398
 lat11,lat12,lon11,lon12,alt,month1,day1,lct1,edmax1</a>;\<br>
 else ;\<br>
-list/app/file=<a rel="nofollow" href="http://daytime8_ma21.nc/format=cdf/clob/l=yylat11,lat12,lon11,lon12,alt,month1,day1,lct1,edmax1" target="_blank">daytime8_ma21.nc/format=cdf/clob/l=`yy`
+list/app/file=<a rel="nofollow" href="http://daytime8_ma21.nc/format=cdf/clob/l=yylat11,lat12,lon11,lon12,alt,month1,day1,lct1,edmax1" >daytime8_ma21.nc/format=cdf/clob/l=`yy`
 lat11,lat12,lon11,lon12,alt,month1,day1,lct1,edmax1</a>;\<br>
 endif ;\<br>
 can da/all ;\<br>

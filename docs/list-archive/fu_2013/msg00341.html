@@ -57,10 +57,10 @@ list/file=test_($yy).nc/clobber your variable</p>
 
 def axis/t0=15-May-2009/t=1:23:1/unit=hours tax<br>repeat/range=($start):($end)/name=yy (;\<br>use daytime8.`yy`.nc;\<br>let lat1=..botlat;\<br>let lat2=..edmaxlat;\<br>let lon1=..botlon;\<br>let lon2=..edmaxlon;\<br>let month=..month;\<br>
 
-let edmax=..edmax;\<br>let lct=..botlct;\<br>let day=..day;\<br>if `yy eq 1` then ;\<br>list/file=<a rel="nofollow" href="http://daytime8_ma20.nc/format=cdf/clob/l=yy/llimits=1:23" target="_blank">daytime8_ma20.nc/format=cdf/clob/l=`yy`/llimits=1:23</a> lat1,lat2,lon1,lon2,month,day,lct,edmax;\<br>
+let edmax=..edmax;\<br>let lct=..botlct;\<br>let day=..day;\<br>if `yy eq 1` then ;\<br>list/file=<a rel="nofollow" href="http://daytime8_ma20.nc/format=cdf/clob/l=yy/llimits=1:23" >daytime8_ma20.nc/format=cdf/clob/l=`yy`/llimits=1:23</a> lat1,lat2,lon1,lon2,month,day,lct,edmax;\<br>
 
-else ;\<br>list/app/file=<a rel="nofollow" href="http://daytime8_ma20.nc/format=cdf/clob/l=yy" target="_blank">daytime8_ma20.nc/format=cdf/clob/l=`yy`</a> lat1,lat2,lon1,lon2,month,day,lct,edmax;\<br>endif ;\<br>can da/all ;\<br>)<br></div>
-data file <a rel="nofollow" href="http://daytime8_ma20.nc" target="_blank">daytime8_ma20.nc</a> created but with the parameters of 23(i.e. last data file) data file. But in a .dat the parameters of all 23 data file are created saved(if I remove the &#39;format=cdf&quot; command). <br>
+else ;\<br>list/app/file=<a rel="nofollow" href="http://daytime8_ma20.nc/format=cdf/clob/l=yy" >daytime8_ma20.nc/format=cdf/clob/l=`yy`</a> lat1,lat2,lon1,lon2,month,day,lct,edmax;\<br>endif ;\<br>can da/all ;\<br>)<br></div>
+data file <a rel="nofollow" href="http://daytime8_ma20.nc" >daytime8_ma20.nc</a> created but with the parameters of 23(i.e. last data file) data file. But in a .dat the parameters of all 23 data file are created saved(if I remove the &#39;format=cdf&quot; command). <br>
 
 <br>Also I want to make a nc file with minlat&lt;lat1,lat2&lt;maxlat and minlon&lt;lon1,lon2&lt;maxlon with these 23 data file with a .jnl file as bellow:<br>def symb start=1<br>def symb end=2240<br>def axis/t0=1-Jan-2008/t=1:23:1/unit=hours tax<br>
 
@@ -68,9 +68,9 @@ repeat/range=($start):($end)/name=yy (;\<br>use nighttime8.`yy`.nc;\<br>let lat1
 
 let day=..day;\<br>let glat1=if lat1 lt 17 then 0 else lat1 ;\<br>let glon1=if lon1 lt 83 then 0 else lon1 ;\<br>let glat2=if lat2 lt 17 then 0 else lat2 ;\<br>let glon2=if lon2 lt 83 then 0 else lon2 ;\<br>if `glat1 le 27 and glon1 le 93` then ;\<br>
 
-list/file=<a rel="nofollow" href="http://nighttime8_ma19.nc/format=cdf/clob/l=yy/llimits=1:23" target="_blank">nighttime8_ma19.nc/format=cdf/clob/l=`yy`/llimits=1:23</a> glat1,glon1,glat2,glon2,month,day,lct,edmax;\<br>elif `glat2 le 27 and glon2 le 93` then;\<br>
+list/file=<a rel="nofollow" href="http://nighttime8_ma19.nc/format=cdf/clob/l=yy/llimits=1:23" >nighttime8_ma19.nc/format=cdf/clob/l=`yy`/llimits=1:23</a> glat1,glon1,glat2,glon2,month,day,lct,edmax;\<br>elif `glat2 le 27 and glon2 le 93` then;\<br>
 
-list/app/file=<a rel="nofollow" href="http://nighttime8_ma19.nc/format=cdf/clob/l=yy" target="_blank">nighttime8_ma19.nc/format=cdf/clob/l=`yy`</a> glat1,glon1,glat2,glon2,month,day,lct,edmax;\<br>else ;\<br>list/file=nighttime8_ma20.dat/head/clob/l=`yy` glat1,glon1,glat2,glon2,month,day,lct,edmax;\<br>
+list/app/file=<a rel="nofollow" href="http://nighttime8_ma19.nc/format=cdf/clob/l=yy" >nighttime8_ma19.nc/format=cdf/clob/l=`yy`</a> glat1,glon1,glat2,glon2,month,day,lct,edmax;\<br>else ;\<br>list/file=nighttime8_ma20.dat/head/clob/l=`yy` glat1,glon1,glat2,glon2,month,day,lct,edmax;\<br>
 
 endif ;\<br>can da/all ;\<br>) <br><br></div>I think in last .jnl scripts the if -then else have some problem. Ples.any one help me.<br></div>
 </blockquote></div>
