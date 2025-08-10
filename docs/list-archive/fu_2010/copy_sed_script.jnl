@@ -1,0 +1,55 @@
+
+
+! Create a directory, e.g. ed_2019/ 
+! In the ed_* directory edit files 
+!  1) Remove <wbr> 
+!  2) Replace ../../documentation/ with the relative directory ../../documentation/
+!  3) Remove target="_blank" so links don't open in new tab
+! 
+!
+! Copy the script replacing.scr from list-archive to ed_2019
+! This script will edit that, putting in the individual msg*.html file names
+! The result is a shell script that will run all the copy commands and
+! write msg00055.html.scr
+
+! Argument is the html file in ed_2019
+
+define symbol fname = $1
+define symbol sedcommand = sed 's|msgfile.html|($fname)|g' replacing.scr > ($fname).new.scr
+say/append/outfile=create_sed.scr ($sedcommand)
+
+
+
+
+exit/program
+
+! Here are the shell commands to run this, from the ed_2019 directory,
+! making sure that replacing.scr is in this subdirectory.
+! --------------
+
+rm -f create_sed.scr
+
+set flist = `ls msg*.html`
+foreach fname ($flist)
+  pyferret -script  copy_sed_script.jnl $fname
+  ls $fname
+end
+
+! Now actually do the editing to make the sed scripts: run create_sed.scr
+
+source create_sed.scr
+
+
+! Then, run the sed scripts msg00222.new.scr etc
+
+set flist = `ls *.new.scr`
+foreach fname ($flist)
+  source $fname
+  echo $fname
+end
+
+cleanup: check for 
+ 1) pyferret.html/example-sessions-ferret etc which should be pyferret/example-sessions-ferret.html
+ 2) index.html/index or index.html/ which comes from index-1 in the old docs
+ 3) .html
+
