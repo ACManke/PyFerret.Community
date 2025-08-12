@@ -67,17 +67,17 @@ Jaison Kurian wrote:
 <blockquote cite="" type="cite">
   <pre>Hi Ansley,<br>            A minor correction to the suggested solution :<br><br>On Wed, 18 Apr 2007, Ansley Manke wrote:<br><br>  </pre>
   <blockquote type="cite">
-    <pre>Hi David,<br>You can use the SPAWN command, see &quot;spawn, string variables&quot; in the <br>Users Guide index.<br><br>    *yes? LET a = {&quot;dummy&quot;, SPAWN:&quot;ls <a rel="nofollow" href="http://myfile.nc" target="_blank" >
-myfile.nc</a>&quot;}<br>    yes? LET nfiles = `a,RETURN=IEND`<br>**    yes? IF `nfiles EQ 2` THEN SET DATA <a rel="nofollow" href="http://myfile.nc" target="_blank" >myfile.nc</a> *<br>
+    <pre>Hi David,<br>You can use the SPAWN command, see &quot;spawn, string variables&quot; in the <br>Users Guide index.<br><br>    *yes? LET a = {&quot;dummy&quot;, SPAWN:&quot;ls <a rel="nofollow" href="http://myfile.nc" >
+myfile.nc</a>&quot;}<br>    yes? LET nfiles = `a,RETURN=IEND`<br>**    yes? IF `nfiles EQ 2` THEN SET DATA <a rel="nofollow" href="http://myfile.nc" >myfile.nc</a> *<br>
 <br>If the file exists then nfiles will be 2, otherwise it&#39;ll be 1.<br><br>    </pre>
   </blockquote>
   <pre>  Unfortunately, none of the Ferret versions (5.53,5.7,5.8 &amp; 6.0) on<br>  my Linux PC gives the intended result (nfiles=2 or 1):<br><br>  The above example will give nfiles a value, which is always 2000 <br>  plus the number of dummy filenames used in the definition of &quot;a&quot;,
-<br>  irrespective of whether &quot;<a rel="nofollow" href="http://myfile.nc" target="_blank" >myfile.nc</a>&quot; exists in pwd or not. <br>  This means that, in the presence of SPAWN command, Ferret have a
-<br>  bug/difficulty in extracting the number of entries using RETURN <br>  command. <br><br>  This is the reason why i suggested to use XSEQUENCE to get the<br>  number of files, in my earlier reply:<br>  (<a rel="nofollow" href="../fu_2007/msg00225.html" target="_blank" >
-../fu_2007/msg00225.html</a>)<br><br>  However, if the file &quot;<a rel="nofollow" href="http://myfile.nc" target="_blank" >myfile.nc</a>
+<br>  irrespective of whether &quot;<a rel="nofollow" href="http://myfile.nc" >myfile.nc</a>&quot; exists in pwd or not. <br>  This means that, in the presence of SPAWN command, Ferret have a
+<br>  bug/difficulty in extracting the number of entries using RETURN <br>  command. <br><br>  This is the reason why i suggested to use XSEQUENCE to get the<br>  number of files, in my earlier reply:<br>  (<a rel="nofollow" href="../fu_2007/msg00225.html" >
+../fu_2007/msg00225.html</a>)<br><br>  However, if the file &quot;<a rel="nofollow" href="http://myfile.nc" >myfile.nc</a>
 &quot; does not exist in pwd, then the <br>  RETURN=IEND command will yield &quot;1&quot; instead of &quot;0&quot;, irrespective of<br>  whether we have used XSEQUENCE or not. See this example :<br><br>      yes? let a = {spawn:&quot;ls 
-<a rel="nofollow" href="http://nonexistent.nc" target="_blank" >nonexistent.nc</a>&quot;}<br>      yes? list a<br>           ls: <a rel="nofollow" href="http://nonexistent.nc" target="_blank" >
-nonexistent.nc</a>: No such file or directory<br>                VARIABLE : {SPAWN:&quot;ls <a rel="nofollow" href="http://nonexistent.nc" target="_blank" >nonexistent.nc</a>&quot;}<br>
+<a rel="nofollow" href="http://nonexistent.nc" >nonexistent.nc</a>&quot;}<br>      yes? list a<br>           ls: <a rel="nofollow" href="http://nonexistent.nc" >
+nonexistent.nc</a>: No such file or directory<br>                VARIABLE : {SPAWN:&quot;ls <a rel="nofollow" href="http://nonexistent.nc" >nonexistent.nc</a>&quot;}<br>
                 X        : 1<br>             &quot;&quot;<br>      yes?<br><br>  Though the string &quot;a&quot; is blank, it does have a X-size of 1. So the<br>  RETURN=IEND will give &quot;1&quot; in this case, but we expected &quot;0&quot;.
 <br><br>  SUMMARY<br>  =======<br>  The foolproof method for checking the existence of a file is to use <br>  the &quot;string length&quot; of the variable. Here is an example :<br><br>       let fex = {spawn:&quot;ls *.nc&quot;}
 <br>       IF `STRLEN(fex[i=1]) GT 0` THEN<br>           let files  = XSEQUENCE(fex)<br>           let nfiles = `files,r=isize`<br>           say &quot;  `nfiles` File/s exist in pwd/cwd.&quot;<br>       ELSE<br>           let nfiles = 0
@@ -85,7 +85,7 @@ nonexistent.nc</a>: No such file or directory<br>                VARIABLE : {SPA
              do something<br>       ELSE<br>             do something else<br>       ENDIF<br><br><br><br>Thanks and Regards,<br><br>Jaison <br><br><br>  </pre>
   <blockquote type="cite">
     <pre>Another possibility if you don&#39;t mind creating an error condition <br>intentionally, is to SET MODE IGNORE_ERROR, try to open the file, and <br>then check for the existence of the symbol RET_LAST_ERROR; this is 
-<br>described in the Version 6.0 release notes,<br><a rel="nofollow" href="http://ferret.pmel.noaa.gov/Ferret/Documentation/Release_Notes/v600.html#fer_last_error" target="_blank" >http://ferret.pmel.noaa.gov/Ferret/Documentation/Release_Notes/v600.html#fer_last_error
+<br>described in the Version 6.0 release notes,<br><a rel="nofollow" href="../../documentation/Release_Notes/v600.html#fer_last_error" >../../documentation/Release_Notes/v600.html#fer_last_error
 </a>
 
 Ansley
@@ -100,7 +100,7 @@ David Wang wrote:
   </blockquote>
 </blockquote>
 <br>
-</span></div><span class="q"><pre cols="75">-- <br><br>~&gt;   ~&gt;   ~&gt;   ~&gt;   ~&gt;   ~&gt;   ~&gt;   ~&gt;   ~&gt;   ~&gt;   ~&gt; <br><br>Ansley Manke, NOAA/PMEL   <a rel="nofollow" href="mailto:ansley.b.manke@xxxxxxxx" target="_blank" >
+</span></div><span class="q"><pre cols="75">-- <br><br>~&gt;   ~&gt;   ~&gt;   ~&gt;   ~&gt;   ~&gt;   ~&gt;   ~&gt;   ~&gt;   ~&gt;   ~&gt; <br><br>Ansley Manke, NOAA/PMEL   <a rel="nofollow" href="mailto:ansley.b.manke@xxxxxxxx" >
 ansley.b.manke@xxxxxxxx</a>
 7600 Sand Point Way NE, Seattle WA
 Phone 206-526-6246,  FAX 206-526-6744
