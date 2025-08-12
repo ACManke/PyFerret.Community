@@ -93,11 +93,11 @@ Hi Antonio,<br>
 What version of Ferret are you running?&#xA0; This sounds like a bug that
 was in version 6.2 of Ferret but has been fixed in version 6.3.&#xA0; Please
 try upgrading to version 6.3, following the directions on the downloads
-pages, <a rel="nofollow" href="http://ferret.pmel.noaa.gov/Ferret/downloads" target="_blank">http://ferret.pmel.noaa.gov/Ferret/downloads</a><br>
+pages, <a rel="nofollow" href="http://ferret.pmel.noaa.gov/Ferret/downloads" >http://ferret.pmel.noaa.gov/Ferret/downloads</a><br>
   <br>
 Here is a thread of the Users List with some discussion of this.<br>
   <br>
-  <a rel="nofollow" href="../fu_2009/msg00587.html" target="_blank">../fu_2009/msg00587.html</a><br>
+  <a rel="nofollow" href="../fu_2009/msg00587.html" >../fu_2009/msg00587.html</a><br>
   <br>
 Ansley<br>
   <br>
@@ -106,11 +106,11 @@ Antonio Rodr&#xED;guez wrote:
     <br>
 Trying to make a mask from my file, I get:<br>
     <br>
-use <a rel="nofollow" href="http://dec.nc" target="_blank">dec.nc</a> <br>
+use <a rel="nofollow" href="http://dec.nc" >dec.nc</a> <br>
 let mask=if l3m_data lt 65535 then 0 else 1<br>
-save/file=<a rel="nofollow" href="http://mask.nc" target="_blank">mask.nc</a>
+save/file=<a rel="nofollow" href="http://mask.nc" >mask.nc</a>
 mask<br>
-LISTing to file <a rel="nofollow" href="http://mask.nc" target="_blank">mask.nc</a><br>
+LISTing to file <a rel="nofollow" href="http://mask.nc" >mask.nc</a><br>
 &#xA0;** netCDF error: <br>
 &#xA0;Failed creating coord variable %%<br>
     <br>
@@ -121,9 +121,9 @@ Thanks!<br>
     <br>
 Antonio<br>
     <br>
-Bellow you could find the result from ncdumping my <a rel="nofollow" href="http://dec.nc" target="_blank">dec.nc</a> file:<br>
+Bellow you could find the result from ncdumping my <a rel="nofollow" href="http://dec.nc" >dec.nc</a> file:<br>
     <br>
-ncdump -h <a rel="nofollow" href="http://dec.nc" target="_blank">dec.nc</a> <br>
+ncdump -h <a rel="nofollow" href="http://dec.nc" >dec.nc</a> <br>
 netcdf dec {<br>
 dimensions:<br>
 &#xA0;&#xA0;&#xA0; G3fakeDim0 = 205 ;<br>
@@ -169,9 +169,9 @@ Parameter value&quot; ;<br>
     <br>
 // global attributes:<br>
 &#xA0;&#xA0;&#xA0; &#xA0;&#xA0;&#xA0; :Conventions = &quot;CF-1.0&quot; ;<br>
-&#xA0;&#xA0;&#xA0; &#xA0;&#xA0;&#xA0; :history = &quot;Mon Oct&#xA0; 5 19:51:52 2009: ncecat -u time <a rel="nofollow" href="http://dec.nc" target="_blank">dec.nc</a> <a rel="nofollow" href="http://dec.nc" target="_blank">dec.nc</a>\n&quot;,<br>
-&#xA0;&#xA0;&#xA0; &#xA0;&#xA0;&#xA0; &#xA0;&#xA0;&#xA0; &quot;Mon Oct&#xA0; 5 19:51:47 2009: ncecat -u depth <a rel="nofollow" href="http://modisterra-dec2001.nc" target="_blank">modisterra-dec2001.nc</a>
-    <a rel="nofollow" href="http://dec.nc" target="_blank">dec.nc</a>&quot; ;<br>
+&#xA0;&#xA0;&#xA0; &#xA0;&#xA0;&#xA0; :history = &quot;Mon Oct&#xA0; 5 19:51:52 2009: ncecat -u time <a rel="nofollow" href="http://dec.nc" >dec.nc</a> <a rel="nofollow" href="http://dec.nc" >dec.nc</a>\n&quot;,<br>
+&#xA0;&#xA0;&#xA0; &#xA0;&#xA0;&#xA0; &#xA0;&#xA0;&#xA0; &quot;Mon Oct&#xA0; 5 19:51:47 2009: ncecat -u depth <a rel="nofollow" href="http://modisterra-dec2001.nc" >modisterra-dec2001.nc</a>
+    <a rel="nofollow" href="http://dec.nc" >dec.nc</a>&quot; ;<br>
 &#xA0;&#xA0;&#xA0; &#xA0;&#xA0;&#xA0; :nco_openmp_thread_number = 1 ;<br>
     <br>
     <br>

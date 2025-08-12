@@ -53,8 +53,8 @@ Hi Paul,<div><br></div><div>Thanks for your fast reply.</div><div><br></div><div
 <br>
 You need to re-grid the data to a common time axis. The simplest way is to re-grid the data from year 2 onto the year 1 time axis. I&#39;ll illustrate with a hypothetical ferret session:<br>
 <br>
-use &quot;<a rel="nofollow" href="http://model_output_year_1.nc" target="_blank">model_output_year_1.nc</a>&quot;<br>
-use &quot;<a rel="nofollow" href="http://model_output_year_2.nc" target="_blank">model_output_year_2.nc</a>&quot;<br>
+use &quot;<a rel="nofollow" href="http://model_output_year_1.nc" >model_output_year_1.nc</a>&quot;<br>
+use &quot;<a rel="nofollow" href="http://model_output_year_2.nc" >model_output_year_2.nc</a>&quot;<br>
 <br>
 let var_yr1 = var[d=1]<br>
 let var_yr2 = var[d=2]<br>
@@ -66,7 +66,7 @@ fill/z=1000/l=1 var_yr1 - var_yr2_new_t<br>
 ----<br>
 Take a look at the ferret documentation on re-gridding - ferret makes it quite straightforward for all kinds of re-gridding operations.<br>
 <br>
-<a rel="nofollow" href="http://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/Grids-Regions/GRIDS#_VPID_197" target="_blank">http://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/Grids-Regions/GRIDS#_VPID_197</a><br>
+<a rel="nofollow" href="../../documentation/users-guide/Grids-Regions/GRIDS.html#_VPID_197" >../../documentation/users-guide/Grids-Regions/GRIDS#_VPID_197</a><br>
 <br>
 Cheers,<br><font color="#888888">
 <br>

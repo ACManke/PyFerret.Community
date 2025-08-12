@@ -59,14 +59,14 @@ Each suggestion is enough. I prefered to define a &quot;generic year&quot; time 
 
 <div><font class="Apple-style-span" face="-webkit-monospace" size="4"><span class="Apple-style-span" style="font-size: 16px; white-space: pre-wrap; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px;">Paulo Santiago<br>
 
-</span></font><br><div class="gmail_quote">2009/8/11 Paul Young <span dir="ltr">&lt;<a rel="nofollow" href="mailto:Paul.J.Young@xxxxxxxx" target="_blank">Paul.J.Young@xxxxxxxx</a>&gt;</span><br>
+</span></font><br><div class="gmail_quote">2009/8/11 Paul Young <span dir="ltr">&lt;<a rel="nofollow" href="mailto:Paul.J.Young@xxxxxxxx" >Paul.J.Young@xxxxxxxx</a>&gt;</span><br>
 <blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div style="word-wrap:break-word">Hi Paulo,<div><br></div><div>I see I missed out a bit in my example. Note, my method does not require you to define a new time axis - I simply re-grid var_yr2 onto the time axis of var_yr1. This works fine so long as the time axis is of the same number of points in both.&#xA0;<br>
 
 
-<div><br></div><div>Corrected example - using the @asn regridding:</div><div><br></div><div><blockquote type="cite"><div><div class="gmail_quote"></div></div></blockquote></div><div><div>use &quot;<a rel="nofollow" href="http://model_output_year_1.nc" target="_blank">model_output_year_1.nc</a>&quot;<br>
+<div><br></div><div>Corrected example - using the @asn regridding:</div><div><br></div><div><blockquote type="cite"><div><div class="gmail_quote"></div></div></blockquote></div><div><div>use &quot;<a rel="nofollow" href="http://model_output_year_1.nc" >model_output_year_1.nc</a>&quot;<br>
 
 
-use &quot;<a rel="nofollow" href="http://model_output_year_2.nc" target="_blank">model_output_year_2.nc</a>&quot;<br><br>let var_yr1 = var[d=1]<br>let var_yr2 = var[d=2]<br></div>let var_yr2_new_t = var_yr[gt=var_yr1@asn] &#xA0; &#xA0; &#xA0;!&quot;blindy&quot; associate yr1&#39;s time axis with y2 data<div>
+use &quot;<a rel="nofollow" href="http://model_output_year_2.nc" >model_output_year_2.nc</a>&quot;<br><br>let var_yr1 = var[d=1]<br>let var_yr2 = var[d=2]<br></div>let var_yr2_new_t = var_yr[gt=var_yr1@asn] &#xA0; &#xA0; &#xA0;!&quot;blindy&quot; associate yr1&#39;s time axis with y2 data<div>
 
 
 <br><br>!Plot differences<br>fill/z=1000/l=1 var_yr1 - var_yr2_new_t</div></div><div><br></div><div><br><div><div><div>On Aug 11, 2009, at 2:50 PM, Paulo Santiago wrote:</div><br>Hi Paul,<div><br></div><div>Thanks for your fast reply.</div>
@@ -75,7 +75,7 @@ use &quot;<a rel="nofollow" href="http://model_output_year_2.nc" target="_blank"
 <div><br></div><div>I defined a new time axis and assigned to my variables.&#xA0;</div><div><br></div><div>define axis/t=&quot;15-JAN&quot;:&quot;15-DEC&quot;:1/units=months mytax</div> <div><br></div><div>I was wondering if I could solve it without defining a new axis.</div>
 
 
-<div><br></div><div>Cheers,</div></div><div>Paulo<br><br><div class="gmail_quote"><div>2009/8/11 Paul Young <span dir="ltr">&lt;<a rel="nofollow" href="mailto:Paul.J.Young@xxxxxxxx" target="_blank">Paul.J.Young@xxxxxxxx</a>&gt;</span><br>
+<div><br></div><div>Cheers,</div></div><div>Paulo<br><br><div class="gmail_quote"><div>2009/8/11 Paul Young <span dir="ltr">&lt;<a rel="nofollow" href="mailto:Paul.J.Young@xxxxxxxx" >Paul.J.Young@xxxxxxxx</a>&gt;</span><br>
 
 
  </div><blockquote class="gmail_quote" style="margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0.8ex;border-left-width:1px;border-left-color:rgb(204, 204, 204);border-left-style:solid;padding-left:1ex"><div>
@@ -84,10 +84,10 @@ use &quot;<a rel="nofollow" href="http://model_output_year_2.nc" target="_blank"
 Hi Paulo,<br> <br> You need to re-grid the data to a common time axis. The simplest way is to re-grid the data from year 2 onto the year 1 time axis. I&#39;ll illustrate with a hypothetical ferret session:<br> <br> use &quot;<a rel="nofollow">model_output_year_1.nc</a>&quot;<br>
 
 
- use &quot;<a rel="nofollow" href="http://model_output_year_2.nc" target="_blank">model_output_year_2.nc</a>&quot;<br> <br> let var_yr1 = var[d=1]<br> let var_yr2 = var[d=2]<br> let var_yr2_new_t = var_yr[gt=var_yr1]<br> <br> !Plot differences<br>
+ use &quot;<a rel="nofollow" href="http://model_output_year_2.nc" >model_output_year_2.nc</a>&quot;<br> <br> let var_yr1 = var[d=1]<br> let var_yr2 = var[d=2]<br> let var_yr2_new_t = var_yr[gt=var_yr1]<br> <br> !Plot differences<br>
 
 
- fill/z=1000/l=1 var_yr1 - var_yr2_new_t<br> <br> ----<br> Take a look at the ferret documentation on re-gridding - ferret makes it quite straightforward for all kinds of re-gridding operations.<br> <br> <a rel="nofollow" href="http://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/Grids-Regions/GRIDS#_VPID_197" target="_blank">http://ferret.pmel.noaa.gov/Ferret/documentation/users-guide/Grids-Regions/GRIDS#_VPID_197</a><br>
+ fill/z=1000/l=1 var_yr1 - var_yr2_new_t<br> <br> ----<br> Take a look at the ferret documentation on re-gridding - ferret makes it quite straightforward for all kinds of re-gridding operations.<br> <br> <a rel="nofollow" href="../../documentation/users-guide/Grids-Regions/GRIDS.html#_VPID_197" >../../documentation/users-guide/Grids-Regions/GRIDS#_VPID_197</a><br>
 
 
  <br> Cheers,<br><font color="#888888"> <br> Paul</font></div><div><div></div><div><div><br> <br> <br> <br> On Aug 11, 2009, at 1:11 PM, Paulo Santiago wrote:<br> <br> </div><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
@@ -119,10 +119,10 @@ differences between data with different time axis.<div><br> <br> The data are re
 
 
 <div><font face="&#39;Courier New&#39;">Boulder&#xA0;CO 80305-3328</font></div><div><font face="&#39;Courier New&#39;">USA</font></div><div><font face="&#39;Courier New&#39;"><br></font></div><div><font face="
-; +1 303-497-4711&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font class=">Fax: &#xA0; +1 303-497-5686</font></div><div><font face="&#39;Courier New&#39;">Email: <a rel="nofollow" href="mailto:paul.j.young@xxxxxxxx" target="_blank">paul.j.young@xxxxxxxx</a></font></div>
+; +1 303-497-4711&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font class=">Fax: &#xA0; +1 303-497-5686</font></div><div><font face="&#39;Courier New&#39;">Email: <a rel="nofollow" href="mailto:paul.j.young@xxxxxxxx" >paul.j.young@xxxxxxxx</a></font></div>
 
 
-<div><font face="&#39;Courier New&#39;">Web: &#xA0; <a rel="nofollow" href="http://www.esrl.noaa.gov/csd/" target="_blank">http://www.esrl.noaa.gov/csd/</a></font></div></span></div></span></div></span></div></span></div></span></span></div>
+<div><font face="&#39;Courier New&#39;">Web: &#xA0; <a rel="nofollow" href="http://www.esrl.noaa.gov/csd/" >http://www.esrl.noaa.gov/csd/</a></font></div></span></div></span></div></span></div></span></div></span></span></div>
 
 
  </div><br></div></div>

@@ -59,7 +59,7 @@ Now I see that my solution wasnt really for the problem, though i post it.<br><b
 Hi all,<br>
 After an exchange outside the list, here are some ideas for this
 question -- it follows along the lines of the FAQ about making a
-seasonal mask that we referred to before:<b><a rel="nofollow" href="../../faq/seasonal_masking.html" target="_blank">
+seasonal mask that we referred to before:<b><a rel="nofollow" href="../../faq/seasonal_masking.html" >
 How
 can I create a seasonal mask?</a></b><br>
 <br>
@@ -74,7 +74,7 @@ the two masks.<br>
 As in the FAQ, I&#39;ll use reynolds_sst, which you can access as an
 OPeNDAP dataset:<br>
 <blockquote>yes? use
-<a rel="nofollow" href="http://ferret.pmel.noaa.gov/thredds/dodsC/data/PMEL/reynolds_sst_wk.nc" target="_blank">&quot;http://ferret.pmel.noaa.gov/thredds/dodsC/data/PMEL/reynolds_sst_wk.nc&quot;</a><br>
+<a rel="nofollow" href="http://ferret.pmel.noaa.gov/thredds/dodsC/data/PMEL/reynolds_sst_wk.nc" >&quot;http://ferret.pmel.noaa.gov/thredds/dodsC/data/PMEL/reynolds_sst_wk.nc&quot;</a><br>
 yes? let year_days = tax_jday(t[gt=wsst], t[gt=wsst])<br>
   <br>
 &#xA0;&#xA0; ! Define the two parts of the mask.&#xA0; We&#39;re going to add&#xA0; them, so
@@ -103,7 +103,7 @@ tyear<br>
 yes? let/units=&quot;`wssw,return=units`&quot;/title=&quot;DJF seasonal average&quot;
 wsst_djf_year = wsst_djf[gt=tyear@AVE]<br>
   <br>
-yes? save/clobber/file=<a rel="nofollow" href="http://out_file.nc" target="_blank">out_file.nc</a> wsst_djf_year <br>
+yes? save/clobber/file=<a rel="nofollow" href="http://out_file.nc" >out_file.nc</a> wsst_djf_year <br>
 </blockquote><div><div></div><div class="h5">
 <br>
 <br>
