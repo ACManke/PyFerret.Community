@@ -67,84 +67,77 @@ On 10/5/16, afwande juliet &lt;afwandej965@xxxxxxxxx&gt; wrote:
 &gt;
 &gt; On Oct 5, 2016 8:04 AM, &quot;Arijeet Dutta&quot; &lt;arijeet.uoh@xxxxxxxxx&gt; wrote:
 &gt;
-&gt;&gt; Hi, I guess I have confused you!
-&gt;&gt;
-&gt;&gt; let's try this, you said you have data for 1997, 12 months for 1997,
-&gt;&gt; i.e, the time axis shows you 12 points ( l 1:12)
-&gt;&gt;
-&gt;&gt; for MAM
-&gt;&gt;
-&gt;&gt; yes? let p = (obsrved-model)
-&gt;&gt; yes? let q = p^2
-&gt;&gt; yes? let r = q[l=3:5@sum] !for MAM
-&gt;&gt; yes? let s = r/3
-&gt;&gt; yes? let m = s^0.5
-&gt;&gt; yes? plot m
-&gt;&gt;
-&gt;&gt; For OND
-&gt;&gt;
-&gt;&gt; yes? let p = (obsrved-model)
-&gt;&gt; yes? let q = p^2
-&gt;&gt; yes? let r = q[l=10:12@sum] !for OND
-&gt;&gt; yes? let s = r/3
-&gt;&gt; yes? let m = s^0.5
-&gt;&gt; yes? plot m
-&gt;&gt;
-&gt;&gt;
-&gt;&gt; On 10/5/16, afwande juliet &lt;afwandej965@xxxxxxxxx&gt; wrote:
-&gt;&gt; &gt; Thanks will try only that my data is for only 2 seasons MAM and OND
-&gt;&gt; 1997, I
-&gt;&gt; &gt; don't know whether it will accept now that you are talking about
-&gt;&gt; &gt; climatology
-&gt;&gt; &gt;
-&gt;&gt; &gt; On Oct 5, 2016 7:54 AM, &quot;Arijeet Dutta&quot; &lt;arijeet.uoh@xxxxxxxxx&gt; wrote:
-&gt;&gt; &gt;
-&gt;&gt; &gt;&gt; Hi,
-&gt;&gt; &gt;&gt; you can list the output
-&gt;&gt; &gt;&gt; e.g.
-&gt;&gt; &gt;&gt; yes?list/file = name.dat m ! 'm' is the desired rmse following last
-&gt;&gt; &gt;&gt; mail
-&gt;&gt; &gt;&gt;
-&gt;&gt; &gt;&gt; Check
-&gt;&gt; &gt;&gt; <a  rel="nofollow" href="../../documentation/users-">../../documentation/users-</a>
-&gt;&gt; &gt;&gt; guide/commands-reference/LIST
-&gt;&gt; &gt;&gt;
-&gt;&gt; &gt;&gt; Reg
-&gt;&gt; &gt;&gt; Arijeet
-&gt;&gt; &gt;&gt;
-&gt;&gt; &gt;&gt; On 10/5/16, afwande juliet &lt;afwandej965@xxxxxxxxx&gt; wrote:
-&gt;&gt; &gt;&gt; &gt; Thanks But my aim is to get the values in kind of table or something
-&gt;&gt; &gt;&gt; &gt;
-&gt;&gt; &gt;&gt; &gt; On Oct 5, 2016 7:00 AM, &quot;Arijeet Dutta&quot; &lt;arijeet.uoh@xxxxxxxxx&gt;
-&gt;&gt; wrote:
-&gt;&gt; &gt;&gt; &gt;
-&gt;&gt; &gt;&gt; &gt;&gt; !say you want it for JJAS and you have the climatology
-&gt;&gt; &gt;&gt; &gt;&gt; yes? let p = (obsrved-model)
-&gt;&gt; &gt;&gt; &gt;&gt; yes? let q = p^2
-&gt;&gt; &gt;&gt; &gt;&gt; yes? let r = q[l=6:9@sum] !for JJAS
-&gt;&gt; &gt;&gt; &gt;&gt; yes? let s = r/4
-&gt;&gt; &gt;&gt; &gt;&gt; yes? let m = s^0.5
-&gt;&gt; &gt;&gt; &gt;&gt; yes? plot m
-&gt;&gt; &gt;&gt; &gt;&gt;
-&gt;&gt; &gt;&gt; &gt;&gt; Regards
-&gt;&gt; &gt;&gt; &gt;&gt; Arijeet
-&gt;&gt; &gt;&gt; &gt;&gt;
-&gt;&gt; &gt;&gt; &gt;&gt; On 10/4/16, afwande juliet &lt;afwandej965@xxxxxxxxx&gt; wrote:
-&gt;&gt; &gt;&gt; &gt;&gt; &gt; Dear All
-&gt;&gt; &gt;&gt; &gt;&gt; &gt; I want to calculate temporal root mean square error between the
-&gt;&gt; &gt;&gt; &gt;&gt; &gt; Observed
-&gt;&gt; &gt;&gt; &gt;&gt; &gt; and Model output for different seasons. I have tried to search
-&gt;&gt; &gt;&gt; &gt;&gt; &gt; here
-&gt;&gt; &gt;&gt; but
-&gt;&gt; &gt;&gt; &gt;&gt; &gt; I
-&gt;&gt; &gt;&gt; &gt;&gt; &gt; dont get clear way to do. Kindly if someone has an idea how to .
-&gt;&gt; &gt;&gt; &gt;&gt; &gt;
-&gt;&gt; &gt;&gt; &gt;&gt; &gt;
-&gt;&gt; &gt;&gt; &gt;&gt;
-&gt;&gt; &gt;&gt; &gt;
-&gt;&gt; &gt;&gt;
-&gt;&gt; &gt;
-&gt;&gt;
+ Hi, I guess I have confused you!
+
+ let's try this, you said you have data for 1997, 12 months for 1997,
+ i.e, the time axis shows you 12 points ( l 1:12)
+
+ for MAM
+
+ yes? let p = (obsrved-model)
+ yes? let q = p^2
+ yes? let r = q[l=3:5@sum] !for MAM
+ yes? let s = r/3
+ yes? let m = s^0.5
+ yes? plot m
+
+ For OND
+
+ yes? let p = (obsrved-model)
+ yes? let q = p^2
+ yes? let r = q[l=10:12@sum] !for OND
+ yes? let s = r/3
+ yes? let m = s^0.5
+ yes? plot m
+
+
+ On 10/5/16, afwande juliet &lt;afwandej965@xxxxxxxxx&gt; wrote:
+ &gt; Thanks will try only that my data is for only 2 seasons MAM and OND
+ 1997, I
+ &gt; don't know whether it will accept now that you are talking about
+ &gt; climatology
+ &gt;
+ &gt; On Oct 5, 2016 7:54 AM, &quot;Arijeet Dutta&quot; &lt;arijeet.uoh@xxxxxxxxx&gt; wrote:
+ &gt;
+  Hi,
+  you can list the output
+  e.g.
+  yes?list/file = name.dat m ! 'm' is the desired rmse following last
+  mail
+ 
+  On 10/5/16, afwande juliet &lt;afwandej965@xxxxxxxxx&gt; wrote:
+  &gt; Thanks But my aim is to get the values in kind of table or something
+  &gt;
+  &gt; On Oct 5, 2016 7:00 AM, &quot;Arijeet Dutta&quot; &lt;arijeet.uoh@xxxxxxxxx&gt;
+ wrote:
+  &gt;
+   !say you want it for JJAS and you have the climatology
+   yes? let p = (obsrved-model)
+   yes? let q = p^2
+   yes? let r = q[l=6:9@sum] !for JJAS
+   yes? let s = r/4
+   yes? let m = s^0.5
+   yes? plot m
+  
+   Regards
+   Arijeet
+  
+   On 10/4/16, afwande juliet &lt;afwandej965@xxxxxxxxx&gt; wrote:
+   &gt; Dear All
+   &gt; I want to calculate temporal root mean square error between the
+   &gt; Observed
+   &gt; and Model output for different seasons. I have tried to search
+   &gt; here
+  but
+   &gt; I
+   &gt; dont get clear way to do. Kindly if someone has an idea how to .
+   &gt;
+   &gt;
+  
+  &gt;
+ 
+ &gt;
+
 &gt;
 </pre>
 <!--X-Body-of-Message-End-->

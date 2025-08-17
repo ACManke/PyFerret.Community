@@ -45,7 +45,145 @@
 <hr>
 <!--X-Head-Body-Sep-End-->
 <!--X-Body-of-Message-->
-<div dir="ltr"><div><div><div>Dear All<br><br></div>I want to do spatial and time series correlations for GPCC and CRU<br><br></div>I am trying to follow this post thread <a rel="nofollow" href="../../faq/correlations-and-variances">../../faq/correlations-and-variances</a><br></div>but i get errors highlighted in color.my data are all at same grid and ranges from 1980-2009<br><br>yes? use GPCC_test_r.nc<br>yes? use CRU_test.nc<br>yes? sh d<br>&#xA0;&#xA0;&#xA0;&#xA0; currently SET data sets:<br>&#xA0;&#xA0;&#xA0; 1&gt; ./GPCC_test_r.nc<br>&#xA0;name&#xA0;&#xA0;&#xA0;&#xA0; title&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; I&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; J&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; K&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; L&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; M&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; N<br>&#xA0;PRECIP&#xA0;&#xA0; GPCC Monthly total of precipita&#xA0; 1:125&#xA0;&#xA0;&#xA0;&#xA0; 1:111&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:360&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...<br>&#xA0;<br>&#xA0;&#xA0;&#xA0; 2&gt; ./CRU_test.nc&#xA0; (default)<br>&#xA0;name&#xA0;&#xA0;&#xA0;&#xA0; title&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; I&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; J&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; K&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; L&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; M&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; N<br>&#xA0;PRE&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; precipitation&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:125&#xA0;&#xA0;&#xA0;&#xA0; 1:111&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:360&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...<br>&#xA0;<br>yes? let p =precip[d=1,x=35,y=12]<br>yes? let q =pre[d=2,x=35,y=12]<br>yes? GO variance<br>... Variance and Covariance: Instructions:<br>Use the LET/QUIET command to define the variable(s) P (and Q) as<br>your variable(s) of interest (e.g. yes? LET/QUIET P = u[x=180,y=0])<br>The variance of P will be variable P_VAR&#xA0; (Q --&gt; Q_VAR)<br>The covariance will be COVAR The correlation will be CORREL.<br>Type GO VAR_N to obtain n/n+1 statistical correction factor<br>...<br>yes? SHOW VAR<br>&#xA0;Created by DEFINE VARIABLE:<br>&#xA0;&gt;&gt;&gt; Definitions that replace any file variable of same name:<br>&#xA0;&#xA0;&#xA0;&#xA0; CORREL = COVAR / (P_VAR_MASK*Q_VAR_MASK)^.5<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; &quot;CORRELATION OF P AND Q&quot;<br>&#xA0;&#xA0;&#xA0;&#xA0; COVAR = PQ_DSQ[L=@AVE]<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; &quot;COVARIANCE OF P AND Q&quot;<br>&#xA0;&#xA0;&#xA0;&#xA0; Q_VAR_MASK = Q_DSQ_MASK[L=@AVE]<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; &quot;VARIANCE OF Q WHEN P PRESENT&quot;<br>&#xA0;&#xA0;&#xA0;&#xA0; P_VAR_MASK = P_DSQ_MASK[L=@AVE]<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; &quot;VARIANCE OF P WHEN Q PRESENT&quot;<br>&#xA0;&#xA0;&#xA0;&#xA0; Q_VAR = Q_DSQ[L=@AVE]<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; &quot;VARIANCE OF Q&quot;<br>&#xA0;&#xA0;&#xA0;&#xA0; P_VAR = P_DSQ[L=@AVE]<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; &quot;VARIANCE OF P&quot;<br>&#xA0;&#xA0;&#xA0;&#xA0; PQ_DSQ = P_DEV_MASK * Q_DEV_MASK<br>&#xA0;&#xA0;&#xA0;&#xA0; Q_DSQ_MASK = Q_DEV_MASK*Q_DEV_MASK<br>&#xA0;&#xA0;&#xA0;&#xA0; P_DSQ_MASK = P_DEV_MASK*P_DEV_MASK<br>&#xA0;&#xA0;&#xA0;&#xA0; Q_DEV_MASK = Q_MASK - Q_AVE_MASK<br>&#xA0;&#xA0;&#xA0;&#xA0; P_DEV_MASK = P_MASK - P_AVE_MASK<br>&#xA0;&#xA0;&#xA0;&#xA0; Q_AVE_MASK = Q_MASK[L=@AVE]<br>&#xA0;&#xA0;&#xA0;&#xA0; P_AVE_MASK = P_MASK[L=@AVE]<br>&#xA0;&#xA0;&#xA0;&#xA0; Q_DSQ = Q_DEV * Q_DEV<br>&#xA0;&#xA0;&#xA0;&#xA0; P_DSQ = P_DEV * P_DEV<br>&#xA0;&#xA0;&#xA0;&#xA0; Q_MASK = Q*MASK_PQ<br>&#xA0;&#xA0;&#xA0;&#xA0; P_MASK = P*MASK_PQ<br>&#xA0;&#xA0;&#xA0;&#xA0; MASK_PQ = P*Q-P*Q + 1<br>&#xA0;&#xA0;&#xA0;&#xA0; Q_DEV = Q - Q_AVE<br>&#xA0;&#xA0;&#xA0;&#xA0; P_DEV = P - P_AVE<br>&#xA0;&#xA0;&#xA0;&#xA0; Q_AVE = Q[L=@AVE]<br>&#xA0;&#xA0;&#xA0;&#xA0; P_AVE = P[L=@AVE]<br>&#xA0;&#xA0;&#xA0;&#xA0; Q = PRE[D=2,X=35,Y=12]<br>&#xA0;&#xA0;&#xA0;&#xA0; P = PRECIP[D=1,X=35,Y=12]<br>yes?&#xA0; list p_var, q_var<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; LONGITUDE: 34.8E<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; LATITUDE: 12N<br>&#xA0;Column&#xA0; 1: P_VAR[T=16-DEC-1979 12:00:16-DEC-2009 00:00] is VARIANCE OF P<br>&#xA0;Column&#xA0; 2: Q_VAR[T=01-JAN-1980 00:00:31-DEC-2009 00:00] is VARIANCE OF Q<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; P_VAR&#xA0;&#xA0; Q_VAR<br>I / *:&#xA0;&#xA0;&#xA0;&#xA0; 5225.&#xA0; 6231.<br>yes? LIST correl, covar<br>&#xA0;*** NOTE: Ambiguous coordinates on T axis: P*Q-P*Q + 1<br>&#xA0;*** NOTE: Ambiguous coordinates on T axis: P*Q-P*Q + 1<br>&#xA0;*** NOTE: Ambiguous coordinates on T axis: P*Q-P*Q + 1<br>&#xA0;*** NOTE: Ambiguous coordinates on T axis: Q*MASK_PQ<br>&#xA0;*** NOTE: Ambiguous coordinates on T axis: COVAR / (P<span style="color:rgb(0,255,0)">_VAR_MASK*Q_VAR_MASK)^.5<br>&#xA0;*** NOTE: Ambiguous coordinates on T axis: P_DEV_MASK * Q_DEV_MASK<br>&#xA0;**ERROR: illegal limits: Q is not in the range T=15-DEC-2079 12:00:16-DEC-2109 00:00</span><br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Axis extremes are T=01-JAN-1980 00:00:31-DEC-2009 00:00<br>yes?&#xA0; list p_var, q_var<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; LONGITUDE: 34.8E<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; LATITUDE: 12N<br>&#xA0;Column&#xA0; 1: P_VAR[T=16-DEC-1979 12:00:16-DEC-2009 00:00] is VARIANCE OF P<br>&#xA0;Column&#xA0; 2: Q_VAR[T=01-JAN-1980 00:00:31-DEC-2009 00:00] is VARIANCE OF Q<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; P_VAR&#xA0;&#xA0; Q_VAR<br>I / *:&#xA0;&#xA0;&#xA0;&#xA0; 5225.&#xA0; 6231.<br>yes? SHOW VAR p_var<br>&#xA0;P_VAR = P_DSQ[L=@AVE]<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; &quot;VARIANCE OF P&quot;<br>yes? SHOW VAR correl<br>&#xA0;CORREL = COVAR / (P_VAR_MASK*Q_VAR_MASK)^.5<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; &quot;CORRELATION OF P AND Q&quot;<br>yes? GO var_n<br>CANCEL MODE VERIFY<br>&#xA0;**ERROR: illegal limits: Q is not in the range T=15-DEC-2079 12:00:16-DEC-2109 00:00<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Axis extremes are T=01-JAN-1980 00:00:31-DEC-2009 00:00<br>IF `nm1 eq 0` then exit/script<br>Command file, command group, or REPEAT execution aborted<br>yes? LIST correl<br>&#xA0;**<span style="background-color:rgb(255,0,0)">ERROR: illegal limits: Q is not in the range T=15-DEC-2079 12:00:16-DEC-2109 00:00<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Axis extremes are T=01-JAN-1980 00:00:31-DEC-2009 00:00<br>yes? set data GPCC_test_r.nc</span><br>yes? set data CRU_test.nc<br>yes? sh d<br>&#xA0;&#xA0;&#xA0;&#xA0; currently SET data sets:<br>&#xA0;&#xA0;&#xA0; 1&gt; ./GPCC_test_r.nc<br>&#xA0;name&#xA0;&#xA0;&#xA0;&#xA0; title&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; I&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; J&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; K&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; L&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; M&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; N<br>&#xA0;PRECIP&#xA0;&#xA0; GPCC Monthly total of precipita&#xA0; 1:125&#xA0;&#xA0;&#xA0;&#xA0; 1:111&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:360&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...<br>&#xA0;<br>&#xA0;&#xA0;&#xA0; 2&gt; ./CRU_test.nc&#xA0; (default)<br>&#xA0;name&#xA0;&#xA0;&#xA0;&#xA0; title&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; I&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; J&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; K&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; L&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; M&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; N<br>&#xA0;PRE&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; precipitation&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:125&#xA0;&#xA0;&#xA0;&#xA0; 1:111&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:360&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...<br>&#xA0;<br>yes? LET p = precip[d=1,x=22:54,y=-12:24]<br>yes? LET q = pre[d=2,x=22:54,y=-12:24]<br>yes? go variance<br>... Variance and Covariance: Instructions:<br>Use the LET/QUIET command to define the variable(s) P (and Q) as<br>your variable(s) of interest (e.g. yes? LET/QUIET P = u[x=180,y=0])<br>The variance of P will be variable P_VAR&#xA0; (Q --&gt; Q_VAR)<br>The covariance will be COVAR The correlation will be CORREL.<br>Type GO VAR_N to obtain n/n+1 statistical correction factor<br>...<br>yes? go var_n<br>&#xA0;<span style="background-color:rgb(0,255,0)">*** NOTE: Ambiguous coordinates on T axis: P*Q-P*Q + 1<br>&#xA0;*** NOTE: Ambiguous coordinates on T axis: P*Q-P*Q + 1<br>&#xA0;*** NOTE: Ambiguous coordinates on T axis: P*Q-P*Q + 1<br>&#xA0;**ERROR: illegal limits: Q is not in the range T=15-DEC-2079 12:00:16-DEC-2109 00:00<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Axis extremes are T=01-JAN-1980 00:00:31-DEC-2009 00:00<br>IF `nm1 eq 0` then exit/script<br>Command file, c</span>ommand group, or REPEAT execution aborted<br>yes? STAT correl<br>&#xA0;*** NOTE: Ambiguous coordinates on T axis: Q*MASK_PQ<br>&#xA0;*** NOTE: Ambiguous coordinates on T axis: COVAR / (P_VAR_MASK*Q_VAR_MASK)^.5<br>&#xA0;***<span style="background-color:rgb(255,0,0)"> NOTE: Ambiguous coordinates on T axis: P_DEV_MASK * Q_DEV_MASK<br>&#xA0;**ERROR: illegal limits: Q is not in the range T=15-DEC-2079 12:00:16-DEC-2109 00:00</span><br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Axis extremes are T=01-JAN-1980 00:00:31-DEC-2009 00:00<br>yes? <br><br></div>
+<div dir="ltr"><div><div><div>Dear All<br>
+<br>
+</div>I want to do spatial and time series correlations for GPCC and CRU<br>
+<br>
+</div>I am trying to follow this post thread <a rel="nofollow" href="../../faq/correlations-and-variances.html">../../faq/correlations-and-variances</a><br>
+</div>but i get errors highlighted in color.my data are all at same grid and ranges from 1980-2009<br>
+<br>
+yes? use GPCC_test_r.nc<br>
+yes? use CRU_test.nc<br>
+yes? sh d<br>
+&#xA0;&#xA0;&#xA0;&#xA0; currently SET data sets:<br>
+&#xA0;&#xA0;&#xA0; 1&gt; ./GPCC_test_r.nc<br>
+&#xA0;name&#xA0;&#xA0;&#xA0;&#xA0; title&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; I&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; J&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; K&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; L&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; M&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; N<br>
+&#xA0;PRECIP&#xA0;&#xA0; GPCC Monthly total of precipita&#xA0; 1:125&#xA0;&#xA0;&#xA0;&#xA0; 1:111&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:360&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...<br>
+&#xA0;<br>
+&#xA0;&#xA0;&#xA0; 2&gt; ./CRU_test.nc&#xA0; (default)<br>
+&#xA0;name&#xA0;&#xA0;&#xA0;&#xA0; title&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; I&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; J&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; K&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; L&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; M&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; N<br>
+&#xA0;PRE&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; precipitation&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:125&#xA0;&#xA0;&#xA0;&#xA0; 1:111&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:360&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...<br>
+&#xA0;<br>
+yes? let p =precip[d=1,x=35,y=12]<br>
+yes? let q =pre[d=2,x=35,y=12]<br>
+yes? GO variance<br>
+... Variance and Covariance: Instructions:<br>
+Use the LET/QUIET command to define the variable(s) P (and Q) as<br>
+your variable(s) of interest (e.g. yes? LET/QUIET P = u[x=180,y=0])<br>
+The variance of P will be variable P_VAR&#xA0; (Q --&gt; Q_VAR)<br>
+The covariance will be COVAR The correlation will be CORREL.<br>
+Type GO VAR_N to obtain n/n+1 statistical correction factor<br>
+...<br>
+yes? SHOW VAR<br>
+&#xA0;Created by DEFINE VARIABLE:<br>
+&#xA0;&gt;&gt;&gt; Definitions that replace any file variable of same name:<br>
+&#xA0;&#xA0;&#xA0;&#xA0; CORREL = COVAR / (P_VAR_MASK*Q_VAR_MASK)^.5<br>
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; &quot;CORRELATION OF P AND Q&quot;<br>
+&#xA0;&#xA0;&#xA0;&#xA0; COVAR = PQ_DSQ[L=@AVE]<br>
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; &quot;COVARIANCE OF P AND Q&quot;<br>
+&#xA0;&#xA0;&#xA0;&#xA0; Q_VAR_MASK = Q_DSQ_MASK[L=@AVE]<br>
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; &quot;VARIANCE OF Q WHEN P PRESENT&quot;<br>
+&#xA0;&#xA0;&#xA0;&#xA0; P_VAR_MASK = P_DSQ_MASK[L=@AVE]<br>
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; &quot;VARIANCE OF P WHEN Q PRESENT&quot;<br>
+&#xA0;&#xA0;&#xA0;&#xA0; Q_VAR = Q_DSQ[L=@AVE]<br>
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; &quot;VARIANCE OF Q&quot;<br>
+&#xA0;&#xA0;&#xA0;&#xA0; P_VAR = P_DSQ[L=@AVE]<br>
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; &quot;VARIANCE OF P&quot;<br>
+&#xA0;&#xA0;&#xA0;&#xA0; PQ_DSQ = P_DEV_MASK * Q_DEV_MASK<br>
+&#xA0;&#xA0;&#xA0;&#xA0; Q_DSQ_MASK = Q_DEV_MASK*Q_DEV_MASK<br>
+&#xA0;&#xA0;&#xA0;&#xA0; P_DSQ_MASK = P_DEV_MASK*P_DEV_MASK<br>
+&#xA0;&#xA0;&#xA0;&#xA0; Q_DEV_MASK = Q_MASK - Q_AVE_MASK<br>
+&#xA0;&#xA0;&#xA0;&#xA0; P_DEV_MASK = P_MASK - P_AVE_MASK<br>
+&#xA0;&#xA0;&#xA0;&#xA0; Q_AVE_MASK = Q_MASK[L=@AVE]<br>
+&#xA0;&#xA0;&#xA0;&#xA0; P_AVE_MASK = P_MASK[L=@AVE]<br>
+&#xA0;&#xA0;&#xA0;&#xA0; Q_DSQ = Q_DEV * Q_DEV<br>
+&#xA0;&#xA0;&#xA0;&#xA0; P_DSQ = P_DEV * P_DEV<br>
+&#xA0;&#xA0;&#xA0;&#xA0; Q_MASK = Q*MASK_PQ<br>
+&#xA0;&#xA0;&#xA0;&#xA0; P_MASK = P*MASK_PQ<br>
+&#xA0;&#xA0;&#xA0;&#xA0; MASK_PQ = P*Q-P*Q + 1<br>
+&#xA0;&#xA0;&#xA0;&#xA0; Q_DEV = Q - Q_AVE<br>
+&#xA0;&#xA0;&#xA0;&#xA0; P_DEV = P - P_AVE<br>
+&#xA0;&#xA0;&#xA0;&#xA0; Q_AVE = Q[L=@AVE]<br>
+&#xA0;&#xA0;&#xA0;&#xA0; P_AVE = P[L=@AVE]<br>
+&#xA0;&#xA0;&#xA0;&#xA0; Q = PRE[D=2,X=35,Y=12]<br>
+&#xA0;&#xA0;&#xA0;&#xA0; P = PRECIP[D=1,X=35,Y=12]<br>
+yes?&#xA0; list p_var, q_var<br>
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; LONGITUDE: 34.8E<br>
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; LATITUDE: 12N<br>
+&#xA0;Column&#xA0; 1: P_VAR[T=16-DEC-1979 12:00:16-DEC-2009 00:00] is VARIANCE OF P<br>
+&#xA0;Column&#xA0; 2: Q_VAR[T=01-JAN-1980 00:00:31-DEC-2009 00:00] is VARIANCE OF Q<br>
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; P_VAR&#xA0;&#xA0; Q_VAR<br>
+I / *:&#xA0;&#xA0;&#xA0;&#xA0; 5225.&#xA0; 6231.<br>
+yes? LIST correl, covar<br>
+&#xA0;*** NOTE: Ambiguous coordinates on T axis: P*Q-P*Q + 1<br>
+&#xA0;*** NOTE: Ambiguous coordinates on T axis: P*Q-P*Q + 1<br>
+&#xA0;*** NOTE: Ambiguous coordinates on T axis: P*Q-P*Q + 1<br>
+&#xA0;*** NOTE: Ambiguous coordinates on T axis: Q*MASK_PQ<br>
+&#xA0;*** NOTE: Ambiguous coordinates on T axis: COVAR / (P<span style="color:rgb(0,255,0)">_VAR_MASK*Q_VAR_MASK)^.5<br>
+&#xA0;*** NOTE: Ambiguous coordinates on T axis: P_DEV_MASK * Q_DEV_MASK<br>
+&#xA0;**ERROR: illegal limits: Q is not in the range T=15-DEC-2079 12:00:16-DEC-2109 00:00</span><br>
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Axis extremes are T=01-JAN-1980 00:00:31-DEC-2009 00:00<br>
+yes?&#xA0; list p_var, q_var<br>
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; LONGITUDE: 34.8E<br>
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; LATITUDE: 12N<br>
+&#xA0;Column&#xA0; 1: P_VAR[T=16-DEC-1979 12:00:16-DEC-2009 00:00] is VARIANCE OF P<br>
+&#xA0;Column&#xA0; 2: Q_VAR[T=01-JAN-1980 00:00:31-DEC-2009 00:00] is VARIANCE OF Q<br>
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; P_VAR&#xA0;&#xA0; Q_VAR<br>
+I / *:&#xA0;&#xA0;&#xA0;&#xA0; 5225.&#xA0; 6231.<br>
+yes? SHOW VAR p_var<br>
+&#xA0;P_VAR = P_DSQ[L=@AVE]<br>
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; &quot;VARIANCE OF P&quot;<br>
+yes? SHOW VAR correl<br>
+&#xA0;CORREL = COVAR / (P_VAR_MASK*Q_VAR_MASK)^.5<br>
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; &quot;CORRELATION OF P AND Q&quot;<br>
+yes? GO var_n<br>
+CANCEL MODE VERIFY<br>
+&#xA0;**ERROR: illegal limits: Q is not in the range T=15-DEC-2079 12:00:16-DEC-2109 00:00<br>
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Axis extremes are T=01-JAN-1980 00:00:31-DEC-2009 00:00<br>
+IF `nm1 eq 0` then exit/script<br>
+Command file, command group, or REPEAT execution aborted<br>
+yes? LIST correl<br>
+&#xA0;**<span style="background-color:rgb(255,0,0)">ERROR: illegal limits: Q is not in the range T=15-DEC-2079 12:00:16-DEC-2109 00:00<br>
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Axis extremes are T=01-JAN-1980 00:00:31-DEC-2009 00:00<br>
+yes? set data GPCC_test_r.nc</span><br>
+yes? set data CRU_test.nc<br>
+yes? sh d<br>
+&#xA0;&#xA0;&#xA0;&#xA0; currently SET data sets:<br>
+&#xA0;&#xA0;&#xA0; 1&gt; ./GPCC_test_r.nc<br>
+&#xA0;name&#xA0;&#xA0;&#xA0;&#xA0; title&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; I&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; J&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; K&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; L&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; M&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; N<br>
+&#xA0;PRECIP&#xA0;&#xA0; GPCC Monthly total of precipita&#xA0; 1:125&#xA0;&#xA0;&#xA0;&#xA0; 1:111&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:360&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...<br>
+&#xA0;<br>
+&#xA0;&#xA0;&#xA0; 2&gt; ./CRU_test.nc&#xA0; (default)<br>
+&#xA0;name&#xA0;&#xA0;&#xA0;&#xA0; title&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; I&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; J&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; K&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; L&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; M&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; N<br>
+&#xA0;PRE&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; precipitation&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:125&#xA0;&#xA0;&#xA0;&#xA0; 1:111&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 1:360&#xA0;&#xA0;&#xA0;&#xA0; ...&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; ...<br>
+&#xA0;<br>
+yes? LET p = precip[d=1,x=22:54,y=-12:24]<br>
+yes? LET q = pre[d=2,x=22:54,y=-12:24]<br>
+yes? go variance<br>
+... Variance and Covariance: Instructions:<br>
+Use the LET/QUIET command to define the variable(s) P (and Q) as<br>
+your variable(s) of interest (e.g. yes? LET/QUIET P = u[x=180,y=0])<br>
+The variance of P will be variable P_VAR&#xA0; (Q --&gt; Q_VAR)<br>
+The covariance will be COVAR The correlation will be CORREL.<br>
+Type GO VAR_N to obtain n/n+1 statistical correction factor<br>
+...<br>
+yes? go var_n<br>
+&#xA0;<span style="background-color:rgb(0,255,0)">*** NOTE: Ambiguous coordinates on T axis: P*Q-P*Q + 1<br>
+&#xA0;*** NOTE: Ambiguous coordinates on T axis: P*Q-P*Q + 1<br>
+&#xA0;*** NOTE: Ambiguous coordinates on T axis: P*Q-P*Q + 1<br>
+&#xA0;**ERROR: illegal limits: Q is not in the range T=15-DEC-2079 12:00:16-DEC-2109 00:00<br>
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Axis extremes are T=01-JAN-1980 00:00:31-DEC-2009 00:00<br>
+IF `nm1 eq 0` then exit/script<br>
+Command file, c</span>ommand group, or REPEAT execution aborted<br>
+yes? STAT correl<br>
+&#xA0;*** NOTE: Ambiguous coordinates on T axis: Q*MASK_PQ<br>
+&#xA0;*** NOTE: Ambiguous coordinates on T axis: COVAR / (P_VAR_MASK*Q_VAR_MASK)^.5<br>
+&#xA0;***<span style="background-color:rgb(255,0,0)"> NOTE: Ambiguous coordinates on T axis: P_DEV_MASK * Q_DEV_MASK<br>
+&#xA0;**ERROR: illegal limits: Q is not in the range T=15-DEC-2079 12:00:16-DEC-2109 00:00</span><br>
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Axis extremes are T=01-JAN-1980 00:00:31-DEC-2009 00:00<br>
+yes? <br>
+<br>
+</div>
 
 <!--X-Body-of-Message-End-->
 <!--X-MsgBody-End-->

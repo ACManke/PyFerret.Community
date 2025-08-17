@@ -73,7 +73,8 @@
     range.&#xA0; I am guessing that this is not what you intended.<br>
     <br>
     For finding the locations where the max pressure is greater than 50,
-    you could use IF to define masks and masked variables.&#xA0; See <a rel="nofollow" href="../../documentation/users-guide/variables-xpressions/XPRESSIONS.html#_VPID_181"></a><a rel="nofollow" href="../../documentation/users-guide/variables-xpressions/XPRESSIONS#_VPID_181">../../documentation/users-guide/variables-xpressions/XPRESSIONS#_VPID_181</a>.
+    you could use IF to define masks and masked variables.&#xA0; See <a rel="nofollow"
+href="../../documentation/users-guide/variables-xpressions/XPRESSIONS.html#_VPID_181">../../documentation/users-guide/variables-xpressions/XPRESSIONS#_VPID_181</a>.
     For instance,<br>
     <blockquote><tt>yes? let dep = pres[d=1,z=@max]</tt><tt><br>
       </tt><tt>yes? let deeper_50 = if dep gt 50 then dep</tt><br>
