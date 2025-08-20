@@ -46,7 +46,7 @@
 <hr>
 <!--X-Head-Body-Sep-End-->
 <!--X-Body-of-Message-->
-Hi....<br><br>I tried following from this link.. <a rel="nofollow" href="../../documentation/users-guide/working-with-special-data-sets/VERTICAL-PROFILES.html">../../documentation/users-guide/working-with-special-data-sets/VERTICAL-PROFILES</a><br>
+Hi....<br><br>I tried following from this link.. <a rel="nofollow" href="../../documentation/users-guide/working-with-special-data-sets/working-with-special-data-sets.htmlVERTICAL-PROFILES.html">../../documentation/users-guide/working-with-special-data-sets/working-with-special-data-sets.htmlVERTICAL-PROFILES</a><br>
 <br><br>let order = SORTI(lat)<br>let section = SAMPLEI(tem, order)<br>DEFINE AXIS/Y/UNITS=degrees yax_sect=SAMPLEI(lat, order)<br>LET ysection = RESHAPE(section,Y[gy=yax_sect]+Z[gz=all])<br>CONTOUR section&#xA0; <br>FILL ysection&#xA0;&#xA0;&#xA0; <br>
 PLOT/Y=20S/Z=100:500 ysection <br>PLOT ysection[Z=@loc:20]&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <br><br>I am getting this error&#xA0; <b style="color:rgb(255,0,0)">**ERROR: unknown defining grid: GZ=ALL</b><br><br>if anyone knows, how to solve this problem pls..help..here I attached my datafile also.......<br>
 <br><br>- Akshay<br><br><br><br>
