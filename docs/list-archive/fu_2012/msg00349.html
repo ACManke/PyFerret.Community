@@ -49,13 +49,13 @@
 <!--X-Head-Body-Sep-End-->
 <!--X-Body-of-Message-->
 <div>Dear Jagadish,<br></div><div><br></div><div>Thank you very much for your reply. I tried the way you have suggested. It is working fine.</div><div><br></div><div>Thanks,</div><div>Sudev</div><br><div class="gmail_quote">
-On Thu, Jul 19, 2012 at 2:30 AM, jagadish karmacharya <span dir="ltr">&lt;<a rel="nofollow" href="mailto:j_karmacharya@xxxxxxxxx" target="_blank">j_karmacharya@xxxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
+On Thu, Jul 19, 2012 at 2:30 AM, jagadish karmacharya <span dir="ltr">&lt;<a rel="nofollow" href="mailto:j_karmacharya@xxxxxxxxx" >j_karmacharya@xxxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
 <div><div style="font-size:10pt;font-family:arial,helvetica,sans-serif"><div><span>Hi Sudev,</span></div><div><br></div><div><span>Try this:&#xA0;</span></div><div><br></div><div>vector/overlay/length=0.2/nokey/k=1/l=7/nolab/aspect/set tauu[d=1], tauv[d=2]</div>
 <div>ppl veckey/nou,`0.1*($ppl$xlen)` `1.05*($ppl$ylen)` (f4.1, &quot; m/s &quot;)<br>ppl vector/ov,2,2</div><div><br></div><div>This should give you&#xA0; --&gt; 2.0 m/s at the top left corner of the plot.</div><div><br></div>
-<div>Also,<br></div><div><br></div><div>see: <a rel="nofollow" href="../../documentation/users-guide/appendix-b-pplus-guide/COMMAND-DESCRIPTION.html#AppendixB_veckey" target="_blank">../../documentation/users-guide/appendix-b-pplus-guide/COMMAND-DESCRIPTION#AppendixB_veckey</a><br>
+<div>Also,<br></div><div><br></div><div>see: <a rel="nofollow" href="../../documentation/users-guide/appendix-b-pplus-guide/COMMAND-DESCRIPTION.html#AppendixB_veckey" >../../documentation/users-guide/appendix-b-pplus-guide/COMMAND-DESCRIPTION#AppendixB_veckey</a><br>
 </div><div>&#xA0;<br>And, one probabaly need to add aspect qualifier to &quot;adjusts the direction of the <span>vector</span>s to compensate for differing axis scaling&quot;<br><br></div><div>Jagadish</div><div><br><blockquote style="border-left:2px solid rgb(16,16,255);margin-left:5px;margin-top:5px;padding-left:5px">
-  <div style="font-family:arial,helvetica,sans-serif;font-size:10pt"> <div style="font-family:times new roman,new york,times,serif;font-size:12pt"> <div dir="ltr"> <font face="Arial"> <hr size="1">  <b><span style="font-weight:bold">From:</span></b> Sudev Das M P &lt;<a rel="nofollow" href="mailto:devdas.pnr@xxxxxxxxx" target="_blank">devdas.pnr@xxxxxxxxx</a>&gt;<br>
- <b><span style="font-weight:bold">To:</span></b> ferret_users &lt;<a rel="nofollow" href="mailto:ferret_users@xxxxxxxx" target="_blank">ferret_users@xxxxxxxx</a>&gt; <br> <b><span style="font-weight:bold">Sent:</span></b> Wednesday, July 18, 2012 7:39 PM<br>
+  <div style="font-family:arial,helvetica,sans-serif;font-size:10pt"> <div style="font-family:times new roman,new york,times,serif;font-size:12pt"> <div dir="ltr"> <font face="Arial"> <hr size="1">  <b><span style="font-weight:bold">From:</span></b> Sudev Das M P &lt;<a rel="nofollow" href="mailto:devdas.pnr@xxxxxxxxx" >devdas.pnr@xxxxxxxxx</a>&gt;<br>
+ <b><span style="font-weight:bold">To:</span></b> ferret_users &lt;<a rel="nofollow" href="mailto:ferret_users@xxxxxxxx" >ferret_users@xxxxxxxx</a>&gt; <br> <b><span style="font-weight:bold">Sent:</span></b> Wednesday, July 18, 2012 7:39 PM<br>
  <b><span style="font-weight:bold">Subject:</span></b> [ferret_users] Help needed to draw arrow as a legend in a 2D vector diagram<br> </font> </div><div><div class="h5"> <br>
 <div>Dear ferret users,<br>I have a script meant for plotting 2D vectors drawn over a shaded plot. The script will generate the required figure (please see the attached PDF file). After getting the plot, I would like to give the &quot;arrow legend&quot; to a user-specified place in the figure. I am not sure how to do this.<br>
 
@@ -72,10 +72,10 @@ On Thu, Jul 19, 2012 at 2:30 AM, jagadish karmacharya <span dir="ltr">&lt;<a rel
 cancel window/all !eliminates graphics window from screen.<br>cancel region !cancel the current region.<br>cancel variable/all !delete all user defined variables.<br>cancel data/all !eliminates all data.<br>set mode meta<br>
 
 
-<br>!---------------------------------------------------------------------------------<br>!Load Data<br>!---------------------------------------------------------------------------------<br>use &quot;<a rel="nofollow" rel="nofollow" href="http://tauu.nc/" target="_blank">tauu.nc</a>&quot;<br>
+<br>!---------------------------------------------------------------------------------<br>!Load Data<br>!---------------------------------------------------------------------------------<br>use &quot;<a rel="nofollow" rel="nofollow" href="http://tauu.nc/" >tauu.nc</a>&quot;<br>
 
 
-use &quot;<a rel="nofollow" rel="nofollow" href="http://tauv.nc/" target="_blank">tauv.nc</a>&quot;<br><br>!---------------------------------------------------------------------------------<br>!Set Region<br>!---------------------------------------------------------------------------------<br>
+use &quot;<a rel="nofollow" rel="nofollow" href="http://tauv.nc/" >tauv.nc</a>&quot;<br><br>!---------------------------------------------------------------------------------<br>!Set Region<br>!---------------------------------------------------------------------------------<br>
 
 
 SET REGION/X=75E:100E/Y=5N:25N<br><br>!---------------------------------------------------------------------------------<br>!Set levels for display<br>!---------------------------------------------------------------------------------<br>

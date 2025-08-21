@@ -53,7 +53,7 @@
 <!--X-Body-of-Message-->
 <div>Hi Ansley</div><div><br></div>Thanks for your reply.<div>Due to limitation of model input, I have to use float as time axis type.</div><div>It&#39;s good to know ferret always use double, so I find another way to do it.</div>
 <div>&#xA0;<div>A little tricky, but works.</div><div>Sub-sample from ferret first, then use&#xA0;</div><div><br></div><div><div>ncdump <a rel="nofollow" href="http://infile.nc">infile.nc</a> | sed -e &#39;s/double varname(/float varname(/&#39; &gt; temp.cdl</div>
-<div>ncgen -o <a rel="nofollow" href="http://outfile.nc">outfile.nc</a> temp.cdl</div><div><br></div><div>And I get time axis as float type.</div><div><br></div><div>Regards, dan</div><br><div class="gmail_quote">2012/10/24 Ansley Manke <span dir="ltr">&lt;<a rel="nofollow" href="mailto:ansley.b.manke@xxxxxxxx" target="_blank">ansley.b.manke@xxxxxxxx</a>&gt;</span><br>
+<div>ncgen -o <a rel="nofollow" href="http://outfile.nc">outfile.nc</a> temp.cdl</div><div><br></div><div>And I get time axis as float type.</div><div><br></div><div>Regards, dan</div><br><div class="gmail_quote">2012/10/24 Ansley Manke <span dir="ltr">&lt;<a rel="nofollow" href="mailto:ansley.b.manke@xxxxxxxx" >ansley.b.manke@xxxxxxxx</a>&gt;</span><br>
 <blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
   
     
@@ -108,8 +108,8 @@
       <blockquote type="cite">Dear ferret user<br>
         <br>
         I also notice &quot;set list/outtype=float&quot; seems start to support
-        from <a rel="nofollow" href="http://v6.83" target="_blank">v6.83</a> <br>
-        (at <a rel="nofollow" href="../../documentation/users-guide/commands-reference/SAVE.html#SAVE_OUTPUT_TYPE" target="_blank">../../documentation/users-guide/commands-reference/SAVE#SAVE_OUTPUT_TYPE</a>)<br>
+        from <b>v6.83</b> <br>
+        (at <a rel="nofollow" href="../../documentation/users-guide/commands-reference/SAVE.html#SAVE_OUTPUT_TYPE" >../../documentation/users-guide/commands-reference/SAVE#SAVE_OUTPUT_TYPE</a>)<br>
 
         <br>
         However, the latest version seems is 6.82?<br>
@@ -117,7 +117,7 @@
         <br>
         Regards, dan<br>
         <br>
-        <div class="gmail_quote">2012/10/23 Yu, Hao-Cheng <span dir="ltr">&lt;<a rel="nofollow" href="mailto:danish.url@xxxxxxxxx" target="_blank">danish.url@xxxxxxxxx</a>&gt;</span><br>
+        <div class="gmail_quote">2012/10/23 Yu, Hao-Cheng <span dir="ltr">&lt;<a rel="nofollow" href="mailto:danish.url@xxxxxxxxx" >danish.url@xxxxxxxxx</a>&gt;</span><br>
           <blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">Dear all
             ferret users,<br>
             <br>
@@ -127,10 +127,10 @@
             &quot;float&quot; type.<br>
             I use script like following:<br>
             ----------------------------<br>
-            use <a rel="nofollow" href="http://input.nc" target="_blank">input.nc</a><br>
+            use <a rel="nofollow" href="http://input.nc" >input.nc</a><br>
             CANCEL MODE UPCASE_OUTPUT<br>
             set list/outtype=float<br>
-            list/KEEP_AXISNAMES/i=320:482/j=294:428/form=cdf/file=<a rel="nofollow" href="http://test.nc/clob" target="_blank">test.nc/clob</a> lon,lat,dlwrf,dswrf<br>
+            list/KEEP_AXISNAMES/i=320:482/j=294:428/form=cdf/file=<a rel="nofollow" href="http://test.nc/clob" >test.nc/clob</a> lon,lat,dlwrf,dswrf<br>
             -----------------------------------------------------<br>
             All variable saves with &quot;float&quot; type but not for &quot;time&quot;,
             it&#39;s &quot;double&quot;.<br>

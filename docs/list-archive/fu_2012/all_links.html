@@ -1,0 +1,850 @@
+<html><body>
+ <p>ed_2012/msg00014.html</p><br>
+    <br>
+    There is some discussion of this, here, the index entry is "color,
+    PPLUS shading",<br>
+<a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/users-guide/customizing-plots/COLOR.html#_VPINDEXENTRY_828">../../documentation/users-guide/customizing-plots/COLOR#_VPINDEXENTRY_828</a><br>
+    <br>
+    So, your script could be changed as follows:<br>
+    <br>
+<p>-----</p><br>
+ <p>ed_2012/msg00016.html</p><br>
+    nutshell are the steps to follow for your #2 (monthly extrema):<br>
+    <ol>
+      <li>define a monthly calendar axis using the steps shown at
+        <a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/users-guide/commands-reference/DEFINE.html#_VPINDEXENTRY_1310">../../documentation/users-guide/commands-reference/DEFINE.html#_VPINDEXENTRY_1310</a>
+        <br>
+        Say, you name your newly defined axis "tmonthly"<br>
+      </li>
+      <li>regrid your daily data to this new monthly axis using gt=@min
+        or gt=@max as described at
+<a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/users-guide/Grids-Regions/GRIDS.html#_VPINDEXENTRY_677">../../documentation/users-guide/Grids-Regions/GRIDS#_VPINDEXENTRY_677</a><br>
+        <br>
+        e.g.<br>
+        <tt>yes?&nbsp; LET monthly_max = myrainfall[gt=tmonthly@max] <br>
+<p>-----</p><br>
+ <p>ed_2012/msg00019.html</p><br>
+</tt><tt>message shows how to use the POLYGON command to plot the shape.  Another 
+</tt><tt>option is the function pt_in_poly,
+</tt><pre style="margin: 0em;">
+<a  rel="nofollow" href="../../documentation/users-guide/appendix-a-external-functions/pt_in_poly.html">../../documentation/users-guide/appendix-a-external-functions/pt_in_poly</a>
+
+</pre><tt>which would let you make a mask which is 1 at every grid location inside 
+</tt><tt>the polygon and missing outside it; so you could do calculations or 
+<p>-----</p><br>
+ <p>ed_2012/msg00020.html</p><br>
+<div style="color:#000; background-color:#fff; font-family:arial, helvetica, sans-serif;font-size:10pt"><div><span>Hi Patrick and Ansley,</span></div><div><br><span></span></div><div><span>Thanks a lot but I am a bit confused. My guess is direct application of Patrick's methode would be mask (white out) unwanted regions surrounding Area Of Interest (AOI) that a mask of AOI itself. However, method mentioned by Ansley should make suppliment it and make it possible to creat a mask for AOI upon which averages etc. could also be computed. <br></span></div><div><span><br></span></div><div><span>Well, I followed the steps mentioned by Patrick ( took a while to figure out, plot.jnl is the script he has written in this mail) for NPL_adm0. </span><span>Firstly, </span>margins_set.jnl <span>script is missing in my case, so at first I just disabled that line. This produced the filled map for Nepal with seemed OK. Next I replaced the
+ </span>margins_set.jnl<span> script with margins.jnl; but this time filled map and the boarder outline does not overlay. Does is makes any difference? the resulting nc file seems to overlay correctly (with both plot/vs and polygen) when I tried it over another dataset (as well as match with go land overlay.&nbsp; </span></div><div><span><br></span></div>Furhter,  Patrick, what do you mean by: " .... just do not blindly use polygon command but rather plot/vs. There may be a problem anyway."<br><div><br>My prime interest is to creat a mask for AOI, but I can't find pt_in_poly function (It is not listed when I issue show function command). Can someone send me a copy?<br><br>Thanks in advance.<br><br>Jagadish<br><br></div><div><blockquote style="border-left: 2px solid rgb(16, 16, 255); margin-left: 5px; margin-top: 5px; padding-left: 5px;">  <div style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"> <div style="font-family: times new roman,
+ new york, times, serif; font-size: 12pt;"> <div dir="ltr"> <font face="Arial" size="2"> <hr size="1">  <b><span style="font-weight:bold;">From:</span></b> Ansley Manke &lt;ansley.b.manke@xxxxxxxx&gt;<br> <b><span style="font-weight: bold;">To:</span></b> Brockmann Patrick &lt;Patrick.Brockmann@xxxxxx&gt; <br><b><span style="font-weight: bold;">Cc:</span></b> nitin patil &lt;nitinpatil85@xxxxxxxxx&gt;; ferret_users@xxxxxxxx <br> <b><span style="font-weight: bold;">Sent:</span></b> Tuesday, February 7, 2012 10:43 PM<br> <b><span style="font-weight: bold;">Subject:</span></b> Re: [ferret_users] india boundary<br> </font> </div> <br>
+Hi<br>Thank you for that resource, Patrick.<br><br>Once you have the outline and have verified it using PLOT/VS, Patrick's message shows how to use the POLYGON command to plot the shape.&nbsp; Another option is the function pt_in_poly,<br>../../documentation/users-guide/appendix-a-external-functions/pt_in_poly.html/<br><br>which would let you make a mask which is 1 at every grid location inside the polygon and missing outside it; so you could do calculations or graphics over only the region inside the border.<br><br>Ansley<br><br>On 2/7/2012 11:29 AM, Brockmann Patrick wrote:<br>&gt; nitin patil a &#xE9;crit :<br>&gt;&gt; Dear ferret users,<br>&gt;&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Did any one knows how to give a border to India country if we have to plot only India.<br>&gt;&gt; if possible can we&nbsp; border states also?<br>&gt; <br>&gt; Hi,<br>&gt; <br>&gt; I have
+ done this recently using kml files distributed<br>&gt; by the "Global Administrative Areas" website.<br>&gt; <br>&gt; Please follow the different steps:<br>&gt; <br>&gt; 1) From http://www.gadm.org<br>&gt; Go in the Download section, select the country<br>&gt; and choose "Google Earth .kmz"<br>&gt; <br>&gt; After the download, you can have a look to the kmz file<br>&gt; with googleearth of course.<br>&gt; Unzip the kmz file. You should obtain a kml file.<br>&gt; <br>&gt; 2) Convert the kml file to a text with<br>&gt; 3 columns lon,lat,number (number is the<br>&gt; index representing the area) with the python<br>&gt; script attached.<br>&gt; <br>&gt; 3) Use the ferret plot.jnl script to validate and<br>&gt; save the polygons as a netcdf file.<br>&gt; <br>&gt; Here is an example with India with the first<br>&gt; 2 administratives levels.<br>&gt; <br>&gt; $ unzip IND_adm1.kmz<br>&gt; $ ./convert_kml.py IND_adm1.kml &gt; IND_adm1.dat<br>&gt; $
+ ferret<br>&gt; yes? go plot.jnl IND_adm1.dat <a rel="nofollow"  href="http://IND_adm1.nc">IND_adm1.nc</a><br>&gt; <br>&gt; Note: that when I try to do the same with IND_adm0.dat,<br>&gt; ferret restarts my X11 server !<br>&gt; The problem occurs at line<br>&gt; repeat/name=n/range=1:`numb[i=@max]` ( def sym n=`n` ; let lon1=if numb eq `n` then lon ; let lat1=if numb eq `n` then lat ; polygon/line/fill/o/nolab/lev=(1,200,1)/pal=thirty_by_levels.spk lon1,lat1,`n` ; PPL SHASET RESET )<br>&gt; <br>&gt; But the method is still ok, just do not not blindly<br>&gt; use polygon command but rather plot/vs.<br>&gt; There may be a problem anyway.<br>&gt; <br>&gt; Happy ferreting<br>&gt; <br>&gt; Patrick<br>&gt; <br><br><br> </div> </div> </blockquote></div>   </div>
+<!--X-Body-of-Message-End-->
+<p>-----</p><br>
+ <p>ed_2012/msg00022.html</p><br>
+                PLOT/VS, Patrick's message shows how to use the POLYGON
+                command to plot the shape.&nbsp; Another option is the
+                function pt_in_poly,<br>
+<a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/users-guide/appendix-a-external-functions/pt_in_poly.html">../../documentation/users-guide/appendix-a-external-functions/pt_in_poly</a><br>
+                <br>
+                which would let you make a mask which is 1 at every grid
+                location inside the polygon and missing outside it; so
+<p>-----</p><br>
+ <p>ed_2012/msg00023.html</p><br>
+                PLOT/VS, Patrick's message shows how to use the POLYGON
+                command to plot the shape.&nbsp; Another option is the
+                function pt_in_poly,<br>
+../../documentation/users-guide/appendix-a-external-functions/pt_in_poly.html/<br>
+                <br>
+                which would let you make a mask which is 1 at every grid
+                location inside the polygon and missing outside it; so
+<p>-----</p><br>
+ <p>ed_2012/msg00025.html</p><br>
+<!--X-Body-of-Message-->
+<tt>Yes, it has to do with the changes discussed in the release notes for 
+</tt><tt>version 6.7, item 7 here,
+</tt><tt><a  rel="nofollow" href="../../documentation/release-notes/version-6-7-release-notes.html">../../documentation/release-notes/version-6-7-release-notes</a> 
+</tt><tt>
+</tt><pre style="margin: 0em;">
+
+<p>-----</p><br>
+ <p>ed_2012/msg00041.html</p><br>
+                                message shows how to use the POLYGON
+                                command to plot the shape.&nbsp; Another
+                                option is the function pt_in_poly,<br>
+../../documentation/users-guide/appendix-a-external-functions/pt_in_poly.html/<br>
+                                <br>
+                                which would let you make a mask which is
+                                1 at every grid location inside the
+<p>-----</p><br>
+ <p>ed_2012/msg00042.html</p><br>
+                                                plot the shape.&nbsp; Another
+                                                option is the function
+                                                pt_in_poly,<br>
+<a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/users-guide/appendix-a-external-functions/pt_in_poly.html">../../documentation/users-guide/appendix-a-external-functions/pt_in_poly</a><br>
+                                                <br>
+                                                which would let you make
+                                                a mask which is 1 at
+<p>-----</p><br>
+ <p>ed_2012/msg00046.html</p><br>
+
+have a look at the following link
+
+<a  rel="nofollow" href="../../documentation/demos/ferret-eof-demo.html">../../documentation/demos/ferret-eof-demo.html</a>
+you save your output and take first 4 eof [l=1, l=2,l=3,l=4]
+
+</pre><tt>for more explanation please look the self explanatory demo file on ferret 
+<p>-----</p><br>
+ <p>ed_2012/msg00048.html</p><br>
+
+have a look at the following link
+
+<a  rel="nofollow" href="../../documentation/demos/ferret-eof-demo.html">../../documentation/demos/ferret-eof-demo.html</a>
+you save your output and take first 4 eof [l=1, l=2,l=3,l=4]
+
+</pre><tt>for more explanation please look the self explanatory demo file on 
+<p>-----</p><br>
+ <p>ed_2012/msg00053.html</p><br>
+    you want to do.<br>
+    <br>
+    See the list of topics in the introductory chapter,<br>
+<a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/users-guide/introduction/introduction.html">../../documentation/users-guide/introduction/introduction.html</a><br>
+    <br>
+    Ansley<br>
+    <br>
+<p>-----</p><br>
+ <p>ed_2012/msg00059.html</p><br>
+</pre><tt>I'm trying to write and compile my own external funtions, and thus I 
+</tt><tt>followed the instructions on the web page:
+</tt><pre style="margin: 0em;">
+<a  rel="nofollow" href="../../documentation/external-functions.html">../../documentation/external-functions</a>.
+
+</pre><tt>Unfortunately, &quot;make install&quot; (step 4 of the installation) does not work 
+</tt><tt>since there are no specific code for the mac intel platform.
+<p>-----</p><br>
+ <p>ed_2012/msg00127.html</p><br>
+    third argument there, the :24, that is defining a new axis and
+    making a regridding specification.&nbsp; See "dynamic axes" in the
+    documentation,<br>
+<a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/users-guide/Grids-Regions/GRIDS.html#_VPINDEXENTRY_649">../../documentation/users-guide/Grids-Regions/GRIDS#_VPINDEXENTRY_649</a><br>
+    <br>
+    I don't know off the top of my head what the details for doing that
+    for a time axis would be.&nbsp; I think that the problem you're seeing is
+<p>-----</p><br>
+ <p>ed_2012/msg00151.html</p><br>
+    <br>
+    The other thing I do when I'm looking for details about Ferret is to
+    go the <a rel="nofollow"
+href="../../documentation/users-guide/full-index/index.html">Users'
+      Guide Index</a>, which I have bookmarked, and use my Browser
+    search to look for words in that.<br>
+    <br>
+<p>-----</p><br>
+ <p>ed_2012/msg00170.html</p><br>
+    This is because of the changes we made to adhere more strictly to
+    the CF conventions, described in the Release Notes for Ferret v6.7.&nbsp;
+    See item #7 of:<br>
+<a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/release-notes/version-6-7-release-notes.html">../../documentation/release-notes/version-6-7-release-notes</a><br>
+    <br>
+    Previously Ferret used the names of coordinate axes, such as the
+    "depth" in these files, to determine the direction of axes, and
+<p>-----</p><br>
+ <p>ed_2012/msg00172.html</p><br>
+
+<DIV><FONT size=2 face=Arial>Have a broad read on the documentation, it will 
+give you background for this: <A rel="nofollow" 
+href="../../documentation/users-guide"><FONT 
+title="../../documentation/users-guide
+CTRL + Clique para seguir o link" 
+size=3 
+face="Times New Roman">../../documentation/users-guide</FONT></A></FONT></DIV>
+<DIV><FONT size=2 face=Arial>Essentially, it is a matter of reading the data 
+from ascii, setting grid and attributes,&nbsp;and then just writing the 
+resulting variables via 'save/file=data.nc var1,var2,var3'.</FONT></DIV>
+<DIV><FONT size=2 face=Arial>There is a specific documentation section for this 
+matter on the documentation itself: <A rel="nofollow" 
+href="../../documentation/users-guide/converting-to-netcdf/converting-to-netcdf.html">../../documentation/users-guide/converting-to-netcdf/converting-to-netcdf.html</FONT></A></FONT></DIV>
+<DIV><FONT size=2 face=Arial>Also, section 2.5 and 2.6 here will be very useful: 
+<A rel="nofollow" 
+href="../../documentation/users-guide/data-set-basics/data-set-basics.html"><FONT 
+
+CTRL + Clique para seguir o link" 
+size=3 
+face="Times New Roman">../../documentation/users-guide/data-set-basics</FONT></A></FONT></DIV>
+<DIV><FONT size=2 face=Arial>You may rely on the ferret's documentation, it's 
+very rich and complete, yet simple to find what you need.</FONT></DIV>
+<DIV><FONT size=2 face=Arial></FONT>&nbsp;</DIV>
+<p>-----</p><br>
+ <p>ed_2012/msg00173.html</p><br>
+<!--X-Body-of-Message-->
+Dear R.Sundar,<div><br></div><div>There are lots of information in official doc pages. In particular, there are two sections in Ferret Users Guide you should look carefully.</div><div><br></div><div>Sec. 2.5: ASCII DATA</div>
+
+<div>Some ways to read ASCII data in Ferret. Pick one that apply for your case.</div><div><a rel="nofollow" href="../../documentation/users-guide/data-set-basics/ASCII-DATA.html">../../documentation/users-guide/data-set-basics/ASCII-DATA</a></div>
+
+<div><br></div><div>Sec. 2.2 NETCDF DATA</div><div>How to write your data in netCDF format.&#xA0;</div><div><a rel="nofollow" href="../../documentation/users-guide/data-set-basics/NETCDF-DATA.html">../../documentation/users-guide/data-set-basics/NETCDF-DATA</a><br>
+
+<br>Feel free to come back here in case of remaining doubt.</div><div><br></div><div>Cheers,</div><div>Paulo Santiago</div><div><br><div class="gmail_quote">2012/4/29  <span dir="ltr">&lt;<a rel="nofollow" href="mailto:rsundar@xxxxxxxxxxx" >rsundar@xxxxxxxxxxx</a>&gt;</span><br>
+
+<p>-----</p><br>
+ <p>ed_2012/msg00179.html</p><br>
+    <br>
+    LIST/KEEP_AXISNAMES&nbsp;&nbsp; would use LON and LAT for the subsetted axis
+    names<br>
+<a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/release-notes/v6-2-release-notes.html#keep_ax">../../documentation/release-notes/v6-2-release-notes#keep_ax</a><br>
+    <br>
+    And MODE UPCASE lets you control whether Ferret outputs names in
+    upper-case or their original upper/lowercase spelling.<br>
+<a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/release-notes/v6-2-release-notes.html#upcase_output">../../documentation/release-notes/v6-2-release-notes#upcase_output</a><br>
+    <br>
+    I think these would do what you need.<br>
+    <br>
+<p>-----</p><br>
+ <p>ed_2012/msg00183.html</p><br>
+
+&gt;From the documentation
+
+<a  rel="nofollow" href="../../documentation/users-guide/commands-reference/IF.html">../../documentation/users-guide/commands-reference/IF</a>
+
+&gt;From V6.71 there is a new way of masking which allows zeros to be
+evaluated as true IFV
+
+<a  rel="nofollow" href="../../documentation/users-guide/variables-xpressions/XPRESSIONS.html#_VPID_181">../../documentation/users-guide/variables-xpressions/XPRESSIONS.html#_VPID_181</a>
+
+If you need to use your old version I suppose
+
+<p>-----</p><br>
+ <p>ed_2012/msg00185.html</p><br>
+</tt><tt>v6.71 to distinguish between the two cases, and avoid what you are 
+</tt><tt>seeing. That's described in the documentation, and here,
+</tt><pre style="margin: 0em;">
+<a  rel="nofollow" href="../../documentation/release-notes/version-6-7-1-release-notes.html">../../documentation/release-notes/version-6-7-1-release-notes</a>
+
+</pre><tt>If you can't upgrade to a more recent version of Ferret you could design 
+</tt><tt>a mask that looks specifically for values of zero in your data field.
+<p>-----</p><br>
+ <p>ed_2012/msg00205.html</p><br>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<pre>
+Define your own viewports : <a  rel="nofollow" href="../../documentation/users-guide/commands-reference/DEFINE.html#_VPINDEXENTRY_1361">../../documentation/users-guide/commands-reference/DEFINE.html#_VPINDEXENTRY_1361</a>
+
+Regards,
+
+<p>-----</p><br>
+ <p>ed_2012/msg00209.html</p><br>
+      cite=""
+      type="cite">
+      <pre wrap="">
+Define your own viewports : <a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/users-guide/commands-reference/DEFINE.html#_VPINDEXENTRY_1361">../../documentation/users-guide/commands-reference/DEFINE.html#_VPINDEXENTRY_1361</a>
+
+Regards,
+
+<p>-----</p><br>
+ <p>ed_2012/msg00217.html</p><br>
+there are now documentation and download pages available on the Ferret
+website under the documentation tab:
+
+<a  rel="nofollow" href="../../documentation/pyferret">../../documentation/pyferret</a>
+
+Toward the bottom part of the page is the link for the Downloads page,
+which gives links for pre-built binaries and for source (as gzipped
+<p>-----</p><br>
+ <p>ed_2012/msg00220.html</p><br>
+    applies the latitude correction.&#xA0; This is documented here:<br>
+    <br>
+    <b><a rel="nofollow"
+href="../../documentation/users-guide/Grids-Regions/GRIDS.html#_VPID_198">4.2.4.1
+        Regridding transformations</a>&#xA0; </b>(at<b> </b><a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/users-guide/Grids-Regions/GRIDS.html#_VPID_198">../../documentation/users-guide/Grids-Regions/GRIDS#_VPID_198</a>)<br>
+    <blockquote>@AVE&#x2014;averaging
+      <p align="left">Computes the length-weighted average of all points
+        on the source grid that lie partly or completely within each
+<p>-----</p><br>
+ <p>ed_2012/msg00230.html</p><br>
+    Even if you're not familiar with Python, it's worth taking a look at
+    what's in the PyFerret documentation to see what's there. The URL is
+    <br>
+    <pre wrap=""><a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/pyferret">../../documentation/pyferret</a></pre>
+    If you're intrigued, we encourage you to give it a try and send us
+    your feedback.&nbsp; The more we hear from you the more we can provide
+    what you need.<br>
+<p>-----</p><br>
+ <p>ed_2012/msg00248.html</p><br>
+    Hi-<br>
+    When you have an x-window on the screen and ask to save the command
+    as a gif, the image is saved from your screen. See
+    <a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/users-guide/animations-gif-images/CREATING-GIF-IMAGES.html">../../documentation/users-guide/animations-gif-images/CREATING-GIF-IMAGES</a>
+    for more on how this works.<br>
+    <br>
+    When you save the image, is there another window blocking part of
+<p>-----</p><br>
+ <p>ed_2012/msg00252.html</p><br>
+    Hi-<br>
+    When you have an x-window on the screen and ask to save the command
+    as a gif, the image is saved from your screen. See
+    <a rel="nofollow" class="ecxmoz-txt-link-freetext" href="../../documentation/users-guide/animations-gif-images/CREATING-GIF-IMAGES.html" >../../documentation/users-guide/animations-gif-images/CREATING-GIF-IMAGES</a>
+    for more on how this works.<br>
+    <br>
+    When you save the image, is there another window blocking part of
+<p>-----</p><br>
+ <p>ed_2012/msg00273.html</p><br>
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+Take a look at the &quot;Contouring&quot; section in the Ferret users guide:<br><br><a rel="nofollow" href="../../documentation/users-guide/customizing-plots/CONTOURING.html">../../documentation/users-guide/customizing-plots/CONTOURING</a><br>
+
+<br><br>Adalberto Navarrete<br>University of S&#xE3;o Paulo<br>
+<br><br><div class="gmail_quote">2012/6/15 Nagarjuna Rao <span dir="ltr">&lt;<a rel="nofollow" href="mailto:dnrao.au@xxxxxxxxx" >dnrao.au@xxxxxxxxx</a>&gt;</span><br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
+<p>-----</p><br>
+ <p>ed_2012/msg00300.html</p><br>
+<!--X-Body-of-Message-->
+Dear Sreejith,<div><br></div><div>In Ferret official documentation pages you find the following topic describing a resource known as &quot;Multi-CDF&quot;:</div><div><br></div><div>10.4 CREATING A MULTI-FILE NETCDF DATA SET</div>
+
+<div><a rel="nofollow" href="../../documentation/users-guide/converting-to-netcdf/CREATING-A-MULTI-FILE-NETCDF-DATA-SET.html">../../documentation/users-guide/converting-to-netcdf/CREATING-A-MULTI-FILE-NETCDF-DATA-SET</a>&#xA0;</div>
+
+<div><br></div><div>It allows you to open multiple sequenced netcdf files as a single time series.&#xA0;</div><div><br></div><div>There&#39;s also an old thread about multicdf of SODA dataset:<br><br><a rel="nofollow" href="../fu_2009/msg00536.html">../fu_2009/msg00536.html</a>&#xA0;</div>
+
+<p>-----</p><br>
+ <p>ed_2012/msg00338.html</p><br>
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<table width="100%"><tr><td style="">Ferret has a linear least squares lanczos low pass filter called LSL_LOWPASS whose information can be found here: &nbsp;<a rel="nofollow" href="../../documentation/users-guide/appendix-a-external-functions/LSL-LOWPASS.html">../../documentation/users-guide/appendix-a-external-functions/LSL-LOWPASS</a><div><br></div><div>It low-pass filters in time. &nbsp;If your data are not already on some kind of time axis, you could adapt your data to work with this by defining an equi-spaced time axis which is like your z axis with units of say, hours, instead of km. &nbsp;Define a variable similiar to your dependent variable, but on the new time axis. &nbsp;Run LSL_LOWPASS, get the results, and convert back to your z axis. &nbsp;<br><div>
+<span class="Apple-style-span" style="border-collapse: separate; color: rgb(0, 0, 0); font-family: Helvetica; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; font-size: medium; "><div><span class="Apple-style-span" style="border-collapse: separate; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; color: rgb(0, 0, 0); font-family: Helvetica; font-size: 14px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; -webkit-text-decorations-in-effect: none; text-indent: 0px; -webkit-text-size-adjust: auto; text-transform: none; orphans: 2; white-space: normal; widows: 2; word-spacing: 0px; "><div style="word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space; "><span class="Apple-style-span" style="border-collapse: separate; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; color: rgb(0, 0, 0); font-family: Helvetica; font-size: 14px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; -webkit-text-decorations-in-effect: none; text-indent: 0px; -webkit-text-size-adjust: auto; text-transform: none; orphans: 2; white-space: normal; widows: 2; word-spacing: 0px; "><span class="Apple-style-span" style="border-collapse: separate; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; color: rgb(0, 0, 0); font-family: Helvetica; font-size: 14px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; -webkit-text-decorations-in-effect: none; text-indent: 0px; -webkit-text-size-adjust: auto; text-transform: none; orphans: 2; white-space: normal; widows: 2; word-spacing: 0px; "><span class="Apple-style-span" style="border-collapse: separate; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; color: rgb(0, 0, 0); font-family: Helvetica; font-size: 14px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; -webkit-text-decorations-in-effect: none; text-indent: 0px; -webkit-text-size-adjust: auto; text-transform: none; orphans: 2; white-space: normal; widows: 2; word-spacing: 0px; "><div>------------------------------------------------------------------------------------------</div><div>Edward D. (Ned) Cokelet, Ph.D. Oceanographer</div><div>NOAA/PMEL &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;off:&nbsp;&nbsp;(206) 526-6820</div><div>7600 Sand Point Way NE&nbsp; &nbsp; &nbsp;fax: (206) 526-6485</div><div>Seattle, WA 98115-6349</div><div><br></div><div><a rel="nofollow" href="mailto:Edward.D.Cokelet@xxxxxxxx">Edward.D.Cokelet@xxxxxxxx</a></div><div><br></div><div>The contents&nbsp;of this message are mine personally and do not necessarily reflect any position of the Government or the National Oceanic and Atmospheric Administration.</div><div><br></div></span></span></span></div></span><br class="Apple-interchange-newline"></div></span><span></span></div></div></td></tr></table><table width="100%"><tr><td style=""><div><div><span></span>
+</div>
+<br></div></td></tr></table><pre>BEGIN:VCARD
+<p>-----</p><br>
+ <p>ed_2012/msg00344.html</p><br>
+Ferret also has smoothing operators such as @shn,
+which is a low-pass filter using the Hann window.  See
+
+<a  rel="nofollow" href="../../documentation/users-guide/variables-xpressions/XPRESSIONS.html#_VPINDEXENTRY_460">../../documentation/users-guide/variables-xpressions/XPRESSIONS#_VPINDEXENTRY_460</a>
+
+Regards,
+Ryo
+<p>-----</p><br>
+ <p>ed_2012/msg00345.html</p><br>
+If I understand your situation correctly, I think what you need is NOT
+smoothing but interpolation.   See the &quot;filler&quot; operators such as
+
+<a  rel="nofollow" href="../../documentation/users-guide/variables-xpressions/XPRESSIONS.html#_VPINDEXENTRY_514">../../documentation/users-guide/variables-xpressions/XPRESSIONS#_VPINDEXENTRY_514</a>
+
+I think you obtained the result you did, because a smoother operator
+(of which sbx is one) requires all the n datapoints within the
+<p>-----</p><br>
+ <p>ed_2012/msg00346.html</p><br>
+    call SAMPLEXY_CURV instead of SAMPLEXY.<br>
+    <br>
+    SAMPLEXY_CURV:<br>
+<a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/users-guide/variables-xpressions/XPRESSIONS.html#_SAMPLEXY_CURV">../../documentation/users-guide/variables-xpressions/html#_SAMPLEXY_CURV</a><br>
+    <br>
+    SAMPLEXY:<br>
+<a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/users-guide/variables-xpressions/XPRESSIONS.html#_VPINDEXENTRY_356">../../documentation/users-guide/variables-xpressions/XPRESSIONS#_VPINDEXENTRY_356</a><br>
+    <br>
+    <br>
+    <div class="moz-cite-prefix">On 7/12/2012 8:59 PM,
+<p>-----</p><br>
+ <p>ed_2012/msg00348.html</p><br>
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div style="color:#000; background-color:#fff; font-family:arial, helvetica, sans-serif;font-size:10pt"><div><span>Hi Sudev,</span></div><div><br><span></span></div><div><span>Try this:&nbsp;</span></div><div><br><span></span></div><div>vector/overlay/length=0.2/nokey/k=1/l=7/nolab/aspect/set tauu[d=1], tauv[d=2]</div><div>ppl veckey/nou,`0.1*($ppl$xlen)` `1.05*($ppl$ylen)` (f4.1, " m/s ")<br>ppl vector/ov,2,2</div><div><br></div><div>This should give you&nbsp; --&gt; 2.0 m/s at the top left corner of the plot.</div><div><br></div><div>Also,<br></div><div><br></div><div>see: ../../documentation/users-guide/appendix-b-pplus-guide/COMMAND-DESCRIPTION.html#AppendixB_veckey<br></div><div>&nbsp;<br>And, one probabaly need to add aspect qualifier to "adjusts the direction of the <span class="highlightedSearchTerm">vector</span>s to compensate for differing axis scaling"<br><br></div><div>Jagadish</div><div><br><blockquote
+ style="border-left: 2px solid rgb(16, 16, 255); margin-left: 5px; margin-top: 5px; padding-left: 5px;">  <div style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"> <div style="font-family: times new roman, new york, times, serif; font-size: 12pt;"> <div dir="ltr"> <font face="Arial" size="2"> <hr size="1">  <b><span style="font-weight:bold;">From:</span></b> Sudev Das M P &lt;devdas.pnr@xxxxxxxxx&gt;<br> <b><span style="font-weight: bold;">To:</span></b> ferret_users &lt;ferret_users@xxxxxxxx&gt; <br> <b><span style="font-weight: bold;">Sent:</span></b> Wednesday, July 18, 2012 7:39 PM<br> <b><span style="font-weight: bold;">Subject:</span></b> [ferret_users] Help needed to draw arrow as a legend in a 2D vector diagram<br> </font> </div> <br>
+<div id="yiv299564495">Dear ferret users,<br>I have a script meant for plotting 2D vectors drawn over a shaded plot. The script will generate the required figure (please see the attached PDF file). After getting the plot, I would like to give the "arrow legend" to a user-specified place in the figure. I am not sure how to do this.<br>
+
+<p>-----</p><br>
+ <p>ed_2012/msg00349.html</p><br>
+On Thu, Jul 19, 2012 at 2:30 AM, jagadish karmacharya <span dir="ltr">&lt;<a rel="nofollow" href="mailto:j_karmacharya@xxxxxxxxx" >j_karmacharya@xxxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
+<div><div style="font-size:10pt;font-family:arial,helvetica,sans-serif"><div><span>Hi Sudev,</span></div><div><br></div><div><span>Try this:&#xA0;</span></div><div><br></div><div>vector/overlay/length=0.2/nokey/k=1/l=7/nolab/aspect/set tauu[d=1], tauv[d=2]</div>
+<div>ppl veckey/nou,`0.1*($ppl$xlen)` `1.05*($ppl$ylen)` (f4.1, &quot; m/s &quot;)<br>ppl vector/ov,2,2</div><div><br></div><div>This should give you&#xA0; --&gt; 2.0 m/s at the top left corner of the plot.</div><div><br></div>
+<div>Also,<br></div><div><br></div><div>see: <a rel="nofollow" href="../../documentation/users-guide/appendix-b-pplus-guide/COMMAND-DESCRIPTION.html#AppendixB_veckey" >../../documentation/users-guide/appendix-b-pplus-guide/COMMAND-DESCRIPTION#AppendixB_veckey</a><br>
+</div><div>&#xA0;<br>And, one probabaly need to add aspect qualifier to &quot;adjusts the direction of the <span>vector</span>s to compensate for differing axis scaling&quot;<br><br></div><div>Jagadish</div><div><br><blockquote style="border-left:2px solid rgb(16,16,255);margin-left:5px;margin-top:5px;padding-left:5px">
+  <div style="font-family:arial,helvetica,sans-serif;font-size:10pt"> <div style="font-family:times new roman,new york,times,serif;font-size:12pt"> <div dir="ltr"> <font face="Arial"> <hr size="1">  <b><span style="font-weight:bold">From:</span></b> Sudev Das M P &lt;<a rel="nofollow" href="mailto:devdas.pnr@xxxxxxxxx" >devdas.pnr@xxxxxxxxx</a>&gt;<br>
+ <b><span style="font-weight:bold">To:</span></b> ferret_users &lt;<a rel="nofollow" href="mailto:ferret_users@xxxxxxxx" >ferret_users@xxxxxxxx</a>&gt; <br> <b><span style="font-weight:bold">Sent:</span></b> Wednesday, July 18, 2012 7:39 PM<br>
+<p>-----</p><br>
+ <p>ed_2012/msg00350.html</p><br>
+                    All calculations are done in double precision, and
+                    we have implemented a 6-dimensioned grid.&nbsp; The
+                    release notes are linked to the Documentation pages,
+<a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/release-notes/version-6-8-release-notes.html">../../documentation/release-notes/version-6-8-release-notes</a><br>
+                    <br>
+                    Ferret is backwards compatible, your existing
+                    scripts and datasets will work correctly with this
+<p>-----</p><br>
+ <p>ed_2012/msg00352.html</p><br>
+                      pages,
+                      <a rel="nofollow" moz-do-not-send="true"
+                        class="moz-txt-link-freetext"
+href="../../documentation/release-notes/version-6-8-release-notes.html">../../documentation/release-notes/version-6-8-release-notes</a><br>
+                      <br>
+                      Ferret is backwards compatible, your existing
+                      scripts and datasets will work correctly with this
+<p>-----</p><br>
+ <p>ed_2012/msg00353.html</p><br>
+                      we have implemented a 6-dimensioned grid.&#xA0; The
+                      release notes are linked to the Documentation
+                      pages,
+                      <a rel="nofollow" href="../../documentation/release-notes/version-6-8-release-notes.html" >../../documentation/release-notes/version-6-8-release-notes</a><br>
+
+                      <br>
+                      Ferret is backwards compatible, your existing
+<p>-----</p><br>
+ <p>ed_2012/msg00355.html</p><br>
+                                    grid.&nbsp; The release notes are linked
+                                    to the Documentation pages, <a rel="nofollow"
+                                      moz-do-not-send="true"
+href="../../documentation/release-notes/version-6-8-release-notes.html"
+                                      >../../documentation/release-notes/version-6-8-release-notes</a><br>
+                                    <br>
+                                    Ferret is backwards compatible, your
+                                    existing scripts and datasets will
+<p>-----</p><br>
+ <p>ed_2012/msg00366.html</p><br>
+    <br>
+    the SHOW DATA and SHOW GRID commands will indicate what grids the
+    variables are on.&nbsp; In the Documentation about the SAVE command,
+    <a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/users-guide/commands-reference/SAVE.html">../../documentation/users-guide/commands-reference/SAVE</a>,
+    there is a discussion about adding time information to the grid of a
+    variable. Look for the word "Timestamp" to find that information.<br>
+    <br>
+<p>-----</p><br>
+ <p>ed_2012/msg00381.html</p><br>
+    datasets.&nbsp; The release includes several new Ferret scripts as well.<br>
+    <br>
+    Please see the Release Notes for a full description.<br>
+<a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/release-notes/version-6-8-2-release-notes.html">../../documentation/release-notes/version-6-8-2-release-notes</a><br>
+    <br>
+    <font color="#000000"><font color="#000000"><font color="#000000"><font
+            color="#000000"><font color="#000000"><font color="#000000"><font
+<p>-----</p><br>
+ <p>ed_2012/msg00382.html</p><br>
+    <br>
+    Please see the Release Notes for a full description.<br>
+    <a rel="nofollow" class="moz-txt-link-freetext"
+href="../../documentation/release-notes/version-6-8-2-release-notes.html">../../documentation/release-notes/version-6-8-2-release-notes</a><br>
+    <br>
+    <font color="#000000"><font color="#000000"><font color="#000000"><font
+            color="#000000"><font color="#000000"><font color="#000000"><font
+<p>-----</p><br>
+ <p>ed_2012/msg00384.html</p><br>
+</tt><pre style="margin: 0em;">
+
+Then look at this,
+<a  rel="nofollow" href="../../documentation/users-guide/commands-reference/SAVE.html#timestamp">../../documentation/users-guide/commands-reference/SAVE#timestamp</a>
+
+</pre><tt>Where we'd open each file, define a variable that adds the file variable 
+</tt><tt>to &quot;timestamp&quot;, and save/append/t= where t= specifies the appropriate 
+<p>-----</p><br>
+ <p>ed_2012/msg00385.html</p><br>
+&gt; index).
+&gt; 
+&gt; Then look at this,
+&gt; <a  rel="nofollow" href="../../documentation/users-guide/commands-reference/SAVE.html#timestamp">../../documentation/users-guide/commands-reference/SAVE#timestamp</a>
+&gt; 
+&gt; Where we'd open each file, define a variable that adds the file variable 
+&gt; to &quot;timestamp&quot;, and save/append/t= where t= specifies the appropriate 
+<p>-----</p><br>
+ <p>ed_2012/msg00386.html</p><br>
+&gt; There is one bug fix to Ferret v6.8.2: previous 6-D Ferret had trouble correctly initializing the grids for some NetCDF or OPeNDAP datasets.  The release includes several new Ferret scripts as well.
+&gt; 
+&gt; Please see the Release Notes for a full description.
+&gt; <a  rel="nofollow" href="../../documentation/release-notes/version-6-8-2-release-notes.html">../../documentation/release-notes/version-6-8-2-release-notes</a>
+&gt; 
+&gt; 
+&gt;      Ansley Manke, Steve Hankin, Karl Smith
+<p>-----</p><br>
+ <p>ed_2012/msg00388.html</p><br>
+
+SET VAR/OUTTYPE=
+
+<a  rel="nofollow" href="../../documentation/users-guide/commands-reference/SET.html#_outtype">../../documentation/users-guide/commands-reference/SET#_outtype</a>
+
+</pre><tt>We've had thoughts of a SAVE/OUTTYPE=  qualifier which could be used to 
+</tt><tt>write multiple variables with a type, but haven't yet implemented that.
+<p>-----</p><br>
+ <p>ed_2012/msg00407.html</p><br>
+</tt><tt>like 10, though, not 7000.
+</tt><pre style="margin: 0em;">
+
+<a  rel="nofollow" href="../../documentation/release-notes/version-6-8-release-notes.html#fixes">../../documentation/release-notes/version-6-8-release-notes#fixes</a>
+
+-Ansley
+
+<p>-----</p><br>
+ <p>ed_2012/msg00426.html</p><br>
+
+How might I do this?
+To complicate things, the x axis is a time axis.
+I've tried a few different things, and I think I'm stumped now at the point of defining the straight, constant lines as  'curves' themselves to refer to in the fill_between command.  But I can't find how to define an constant array without typing in all 480 values manually (<a  rel="nofollow" href="../../documentation/demos/ferret-constant-array-demo.html">../../documentation/demos/ferret-constant-array-demo.html</a>), or how to @asn it to a time axis so it will plot with the sst data.
+
+
+here's the monthly data and axis definitions:
+<p>-----</p><br>
+ <p>ed_2012/msg00427.html</p><br>
+ plot_swath poly/ov/nolab/pal=blue t_lo 27</div><div style="color: rgb(0, 0, 0); font-size: 13.3333px; font-family: arial,helvetica,sans-serif; background-color: transparent; font-style: normal;"><br></div><div style="color: rgb(0, 0, 0); font-size: 13.3333px; font-family: arial,helvetica,sans-serif; background-color: transparent; font-style: normal;">Hope this helps.<br></div><div>&nbsp;</div><div>Jagadish</div><div><br><blockquote style="border-left: 2px solid rgb(16, 16, 255); margin-left: 5px; margin-top: 5px; padding-left: 5px;">  <div style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"> <div style="font-family: times new roman, new york, times, serif; font-size: 12pt;"> <div dir="ltr"> <font face="Arial" size="2"> <hr size="1">  <b><span style="font-weight:bold;">From:</span></b> "Jennifer.Abernethy@xxxxxxxx" &lt;Jennifer.Abernethy@xxxxxxxx&gt;<br> <b><span style="font-weight: bold;">To:</span></b> ferret_users@xxxxxxxx <br>
+ <b><span style="font-weight: bold;">Sent:</span></b> Monday, September 3, 2012 6:52 AM<br> <b><span style="font-weight: bold;">Subject:</span></b> [ferret_users] fill_between a curve and a constant line<br> </font> </div> <br>
+Hi,<br><br>New to ferret here. I have 40 years of monthly sst data at a specific lat/lon that moves between 26C and 30C. I want to color in the times it's above 29C red, and the times it's below 27C blue. I don't want anything else colored in.&nbsp; <br><br> I tried the fill_between script, but when used with a curve and a constant value, it colors in the curve above and the 'negative' space below the constant value, which is not what I want at all. (../../faq/fill-between-two-curves).<br><br>How might I do this?<br>To complicate things, the x axis is a time axis.<br>I've tried a few different things, and I think I'm stumped now at the point of defining the straight, constant lines as&nbsp; 'curves' themselves to refer to in the fill_between command.&nbsp; But I can't find how to define an constant array without typing in all 480 values manually
+ (<a href="../../documentation/demos/ferret-constant-array-demo.html">../../documentation/demos/ferret-constant-array-demo.html</a>), or how to @asn it to a time axis so it will plot with the sst data.<br><br><br>here's the monthly data and axis definitions:<br><br>use "enso_indices/stsu.nc"<br>define axis/units=days/t="1-jan-1970":"31-dec-2009":1/edges/cal=gregorian t_daily<br>define axis/edges/units=days/t0=1-jan-1900/cal=gregorian t_mon_historical = days1900(year,month,1)<br>let temp = tsu[x=130,y=-12]&nbsp; &nbsp; !long, lat<br>let temp_daily = temp[gt=t_daily@asn]&nbsp;  <br>let temp_month = temp_daily[gt=t_historical@ave]&nbsp; !monthly averages<br><br>I guess I'd want a variable the same format as temp_month (40yrs of monthly values), but all values are 29 (and another variable where all values are 27)...?<br>Then I could use the fill_between command with the args curve, axis, curve:<br>go fill_between poly/over/nolabel/palette=red temp_month t_historical const_linearray29<br>go
+ fill_between poly/over/nolabel/palette=blue temp_month t_historical const_linearray27<br><br>maybe there's a much better way to do this.....<br>could some wonderful ferret expert please help me fill in the blanks?<br><br>thanks,<br>jenny<br><br><br> </div> </div> </blockquote></div>   </div>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<p>-----</p><br>
+ <p>ed_2012/msg00433.html</p><br>
+                the fill_between command.&nbsp; But I can't find how to
+                define an constant array without typing in all 480
+                values manually
+                (<a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/demos/ferret-constant-array-demo.html">../../documentation/demos/ferret-constant-array-demo.html</a>),
+                or how to @asn it to a time axis so it will plot with
+                the sst data.<br>
+                <br>
+<p>-----</p><br>
+ <p>ed_2012/msg00454.html</p><br>
+<pre>
+Hi,
+
+<a  rel="nofollow" href="../../documentation/users-guide/commands-reference/EXIT.html">../../documentation/users-guide/commands-reference/EXIT</a>
+
+Indicates that we should be able to exit a script to the next higher
+level either via the general command EXIT or with the qualifier
+<p>-----</p><br>
+ <p>ed_2012/msg00463.html</p><br>
+</pre><blockquote style="border-left: #5555EE solid 0.2em; margin: 0em; padding-left: 0.85em"><pre style="margin: 0em;">
+Hi,
+
+<a  rel="nofollow" href="../../documentation/users-guide/commands-reference/EXIT.html">../../documentation/users-guide/commands-reference/EXIT</a>
+
+Indicates that we should be able to exit a script to the next higher
+level either via the general command EXIT or with the qualifier
+<p>-----</p><br>
+ <p>ed_2012/msg00469.html</p><br>
+</pre><blockquote style="border-left: #5555EE solid 0.2em; margin: 0em; padding-left: 0.85em"><pre style="margin: 0em;">
+Hi,
+
+</pre><tt><a  rel="nofollow" href="../../documentation/users-guide/commands-reference/EXIT.html">../../documentation/users-guide/commands-reference/EXIT</a> 
+</tt><tt>
+</tt><pre style="margin: 0em;">
+
+<p>-----</p><br>
+ <p>ed_2012/msg00490.html</p><br>
+
+<div class="im"><font face="courier new, monospace">&#xA0; &#xA0;set viewport `<font color="#ff0000">myvp</font>`; \<br></font></div><font face="courier new, monospace">&#xA0; &#xA0;plot obgc01[l=`m`:200]; \<br>)&#xA0;<br></font><br>Pay attention for the variable &quot;myvp&quot;. I missed this step and gave you the commands without testing. Previously we had &quot;set viewport `vplist[i=m]`&quot;, what&#39;s wrong because Ferret cannot solve the loop counter &quot;m&quot; and the variable varying with it in a single grave accent pair.&#xA0;Test this and let me know if didn&#39;t work.</div>
+
+</div><div><br></div><div><span style="font-family:&#39;courier new&#39;,monospace">{&quot;ul&quot;, &quot;ur&quot;, &quot;ll&quot;, &quot;lr&quot;}</span>&#xA0;are Ferret predefined viewports. You can define custom viewports with &quot;define viewport&quot; command. More details here:&#xA0;<a rel="nofollow" href="../../documentation/users-guide/commands-reference/DEFINE.html#_VPINDEXENTRY_1361">../../documentation/users-guide/commands-reference/DEFINE.html#_VPINDEXENTRY_1361</a>&#xA0;</div>
+
+<div><br></div><div>Once you define your own viewports, giving them sequenced-numbered names, you can simply call them with &quot;set viewport vp`m`&quot; within the loop, where &quot;m&quot; is your loop counter and &quot;vp&quot; is the base of viewport names. However, it won&#39;t work to define Ferret symbols refering to viewports.&#xA0;</div>
+
+<div><br></div><div>In some cases, Ferret symbols has similar purpose of user-defined variables, but always different syntax. To call the value stored in a symbol you must use $(my_symbol) syntax. I don&#39;t think it&#39;s suitable for the case.&#xA0;You find more about Ferret symbols here:&#xA0;&#xA0;
+
+<a rel="nofollow" href="../../documentation/users-guide/commands-reference/DEFINE.html#_VPINDEXENTRY_1346">../../documentation/users-guide/commands-reference/DEFINE.html#_VPINDEXENTRY_1346</a>&#xA0;</div>
+
+<div><br></div><div>Cheers,</div><div>Paulo</div><div>&#xA0;</div><div><br><div class="gmail_quote">  <span dir="ltr">&lt;<a rel="nofollow" href="mailto:Jennifer.Abernethy@xxxxxxxx" >Jennifer.Abernethy@xxxxxxxx</a>&gt;</span><br>
+
+<p>-----</p><br>
+ <p>ed_2012/msg00491.html</p><br>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<table width="100%"><tr><td style="a:link { color: blue } a:visited { color: purple } ">
+<div class=WordSection1><p class=MsoNormal><span style='font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497D'>Dear All,<o:p></o:p></span></p><p class=MsoNormal><span style='font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497D'><o:p>&nbsp;</o:p></span></p><p class=MsoNormal><span style='font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497D'>I was tinkering with the same issue and could not get it to work along the lines Paul suggests, although I also thought it would.<o:p></o:p></span></p><p class=MsoNormal><span style='font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497D'><o:p>&nbsp;</o:p></span></p><p class=MsoNormal><span style='font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497D'>I ended up with mixing in a symbol like so:<o:p></o:p></span></p><p class=MsoNormal><span style='font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497D'><o:p>&nbsp;</o:p></span></p><p class=MsoNormal><span style='font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497D'>let regs={&quot;Almeria&quot;,&quot;Pontevedra&quot;,&quot;Sevilla&quot;,&quot;Leon&quot;,&quot;CiudadReal&quot;}<o:p></o:p></span></p><p class=MsoNormal><span style='font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497D'><o:p>&nbsp;</o:p></span></p><p class=MsoNormal><span style='font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497D'>repeat/range=1:5/name=m ( def sym b=`m`;set region `regs[i=($b)]`;\<o:p></o:p></span></p><p class=MsoNormal><span style='font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497D'>list/clobber/file=`regs[i=($b)]`.txt tmp[l=1069:1308,i=@ave,j=@ave] )<o:p></o:p></span></p><p class=MsoNormal><span style='font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497D'><o:p>&nbsp;</o:p></span></p><p class=MsoNormal><span style='font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497D'>Maybe that works for viewports, too.<o:p></o:p></span></p><p class=MsoNormal><span style='font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497D'><o:p>&nbsp;</o:p></span></p><p class=MsoNormal><span style='font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497D'>Good luck,<o:p></o:p></span></p><p class=MsoNormal><span style='font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497D'>Cheers,<o:p></o:p></span></p><p class=MsoNormal><span style='font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497D'>Joerg<o:p></o:p></span></p><p class=MsoNormal><span style='font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497D'><o:p>&nbsp;</o:p></span></p><p class=MsoNormal><span style='font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497D'><o:p>&nbsp;</o:p></span></p><p class=MsoNormal><span style='font-size:11.0pt;font-family:"Calibri","sans-serif";color:#1F497D'><o:p>&nbsp;</o:p></span></p><p class=MsoNormal><b><span lang=EN-US style='font-size:10.0pt;font-family:"Tahoma","sans-serif"'>From:</span></b><span lang=EN-US style='font-size:10.0pt;font-family:"Tahoma","sans-serif"'> owner-ferret_users@xxxxxxxx [mailto:owner-ferret_users@xxxxxxxx] <b>On Behalf Of </b>Paulo Santiago<br><b>Sent:</b> 18 September 2012 04:19<br><b>To:</b> Jennifer.Abernethy@xxxxxxxx<br><b>Cc:</b> ferret_users@xxxxxxxx<br><b>Subject:</b> Re: [ferret_users] looping through viewports<o:p></o:p></span></p><p class=MsoNormal><o:p>&nbsp;</o:p></p><p class=MsoNormal>Hi Jeniffer,<o:p></o:p></p><div><p class=MsoNormal><o:p>&nbsp;</o:p></p></div><div><div><p class=MsoNormal>I'll insist with the first example. I'm sorry because I gave you wrong commands. Instead, you should try the following:<o:p></o:p></p></div><div><p class=MsoNormal><o:p>&nbsp;</o:p></p></div><div><p class=MsoNormal><span style='font-family:"Courier New"'>let vplist = {&quot;ul&quot;, &quot;ur&quot;, &quot;ll&quot;, &quot;lr&quot;}</span><o:p></o:p></p><div><p class=MsoNormal><span style='font-family:"Courier New"'>repeat/range=1:4/name=m ( \<br>&nbsp; &nbsp;let <span style='color:red'>myvp </span>=&nbsp;vplist[i=`m`]; \ &nbsp;! or&nbsp;let&nbsp;<span style='color:red'>myvp&nbsp;</span>= &quot;vplist[i=`m`]&quot;, &nbsp;I'm not sure</span><o:p></o:p></p></div><div><p class=MsoNormal><span style='font-family:"Courier New"'>&nbsp; &nbsp;set viewport `<span style='color:red'>myvp</span>`; \</span><o:p></o:p></p></div><p class=MsoNormal><span style='font-family:"Courier New"'>&nbsp; &nbsp;plot obgc01[l=`m`:200]; \<br>)&nbsp;<br></span><br>Pay attention for the variable &quot;myvp&quot;. I missed this step and gave you the commands without testing. Previously we had &quot;set viewport `vplist[i=m]`&quot;, what's wrong because Ferret cannot solve the loop counter &quot;m&quot; and the variable varying with it in a single grave accent pair.&nbsp;Test this and let me know if didn't work.<o:p></o:p></p></div></div><div><p class=MsoNormal><o:p>&nbsp;</o:p></p></div><div><p class=MsoNormal><span style='font-family:"Courier New"'>{&quot;ul&quot;, &quot;ur&quot;, &quot;ll&quot;, &quot;lr&quot;}</span>&nbsp;are Ferret predefined viewports. You can define custom viewports with &quot;define viewport&quot; command. More details here:&nbsp;<a rel="nofollow" href="../../documentation/users-guide/commands-reference/DEFINE.html#_VPINDEXENTRY_1361">../../documentation/users-guide/commands-reference/DEFINE.html#_VPINDEXENTRY_1361</a>&nbsp;<o:p></o:p></p></div><div><p class=MsoNormal><o:p>&nbsp;</o:p></p></div><div><p class=MsoNormal>Once you define your own viewports, giving them sequenced-numbered names, you can simply call them with &quot;set viewport vp`m`&quot; within the loop, where &quot;m&quot; is your loop counter and &quot;vp&quot; is the base of viewport names. However, it won't work to define Ferret symbols refering to viewports.&nbsp;<o:p></o:p></p></div><div><p class=MsoNormal><o:p>&nbsp;</o:p></p></div><div><p class=MsoNormal>In some cases, Ferret symbols has similar purpose of user-defined variables, but always different syntax. To call the value stored in a symbol you must use $(my_symbol) syntax. I don't think it's suitable for the case.&nbsp;You find more about Ferret symbols here:&nbsp;&nbsp;<a rel="nofollow" href="../../documentation/users-guide/commands-reference/DEFINE.html#_VPINDEXENTRY_1346">../../documentation/users-guide/commands-reference/DEFINE.html#_VPINDEXENTRY_1346</a>
+
+&nbsp;<o:p></o:p></p></div><div><p class=MsoNormal><o:p>&nbsp;</o:p></p></div><div><p class=MsoNormal>Cheers,<o:p></o:p></p></div><div><p class=MsoNormal>Paulo<o:p></o:p></p></div><div><p class=MsoNormal>&nbsp;<o:p></o:p></p></div><div><p class=MsoNormal><o:p>&nbsp;</o:p></p><div><p class=MsoNormal>2012/9/17 &lt;<a rel="nofollow" href="mailto:Jennifer.Abernethy@xxxxxxxx" >Jennifer.Abernethy@xxxxxxxx</a>&gt;<o:p></o:p></p><p class=MsoNormal>Paulo,<br><br>thanks so much for your help. &nbsp;I've tried both your examples and I see the approach but am having pesky syntax problems:<br><br>!I make viewport names<br>define symbol v1 &quot;ul&quot;<br>define symbol v2 &quot;ur&quot;<br>define symbol v3 &quot;ll&quot;<br>define symbol v4 &quot;lr&quot;<br><br>! a simple trial<br>repeat/range=1:4/name=m ( \<br>set viewport v`m` ; \<br>plot obgc01[l=`m`:200]; \<br>)<br><br>___!-&gt; REPEAT: M:1<br>&nbsp;!-&gt; set viewport v1<br>&nbsp;**ERROR: invalid command: Unknown argument:v1<br>set viewport v1<br>Command file, command group, or REPEAT execution aborted<br><br>Is it $v`m` or $(v`m`) or ($v`m`)....? I can't get any variation to work (except, of course, to hard-code &nbsp;'set viewport &quot;ul&quot;' in the loop).<br><br><br><br><br>I also tried the first example:<br><br>let vplist = {&quot;ul&quot;, &quot;ur&quot;, &quot;ll&quot;, &quot;lr&quot;}<o:p></o:p></p><div><p class=MsoNormal>repeat/range=1:4/name=m ( \<br>set viewport `vplist[i=m]`; \<o:p></o:p></p></div><p class=MsoNormal>plot obgc01[l=`m`:200]; \<br>)<br>!-&gt; REPEAT: M:1<br>&nbsp;**ERROR: command syntax: M<br>set viewport `vplist[i=m]`<br>Command file, command group, or REPEAT execution aborted<br><br><br>I tried all the variations of $ and `` I can think of with this one, too, and none work. Do you see what I'm doing wrong? I'm using version6.72.<br><br><br>thanks so much for helping a poor lost ferreter!<br>jenny<br><br>_____________________________________<br>From: Paulo Santiago [<a rel="nofollow" href="mailto:paulohsm@xxxxxxxxx">paulohsm@xxxxxxxxx</a>]<br>Sent: Monday, September 17, 2012 5:54 PM<br>To: Whelan, Jennifer (CMAR, Aspendale)<br>Cc: <a rel="nofollow" href="mailto:ferret_users@xxxxxxxx">ferret_users@xxxxxxxx</a><br>Subject: Re: [ferret_users] looping through viewports<o:p></o:p></p><div><p class=MsoNormal style='margin-bottom:12.0pt'><br>Dear Jennifer,<br><br>Lets adopt a simpler example to illustrate. Suppose we have a variable with four timesteps (l=4), and we want to plot each timestep in a viewport. We do<br><br>vplist = {&quot;ul&quot;, &quot;ur&quot;, &quot;ll&quot;, &quot;lr&quot;}<br>repeat/range=1:4/name=m ( \<br>set viewport `vplist[i=m]`; \<br>fill variable[l=`m`]; \<br>)<br><br>If you have more than four viewports, you'll have to define those viewports before use it. In this case, you can use numbered-sequenced viewport names, such as vp1, vp2, vp3, ..., vpN. This makes your life easier if you have to use these viewports inside a repeat loop, and you should simply use something like the example below.<br><br>repeat/range=1:N/name=m ( \<br>set viewport vp`m`; \<br>&lt;plot commands&gt;; \<br>)<br><br>Hope it helps.<br><br>Cheers,<br>Paulo Santiago<o:p></o:p></p></div><p class=MsoNormal>2012/9/17 &lt;Jennifer.Abernethy@xxxxxxxx&lt;mailto:<a rel="nofollow" href="mailto:Jennifer.Abernethy@xxxxxxxx">Jennifer.Abernethy@xxxxxxxx</a>&gt;&gt;<o:p></o:p></p><div><div><p class=MsoNormal>Hi,<br><br>i'm trying to write a ferret script that can plot varying-length timeseries in sections, i.e., for 40 years of monthly data make 4 plots, for 100 years of monthly data make 10 plots, etc. I can do most of this in a repeat/range loop, but the one part I can't figure out is how to loop through viewports. I just want to loop through an array, arr[1], arr[2], arr[3] arr[4], arr[1], arr[2], etc etc - at least, that's how I'd do it in other languages. I was wanting 4 plots/page, ul (upper left) ur, ll, lr.<br><br>something like this:<br>let f = {&quot;ul&quot;,&quot;ur&quot;,&quot;ll&quot;,&quot;lr&quot;} &nbsp; !how do I address the elements of this list?<br>let c =1 &nbsp; &nbsp;!montlhly data counter<br>repeat/range=`startyear`:`endyear-10`:10:name=m (let g = `c+120`; !120 months = 10yrs ; set viewport ???? ; plot data[`c`:`g`] ; label/nouser 0,4,-1,0,.15 Title Year `m` to `m+10`; let c=`g`)<br>frame/file=plots.gif<br><br>I was also wondering if after 4+ iterations of this loop that the resulting gif file will have multiple pages, or will the last 4 plots overwrite any previous ones?<br>thanks for any help you can give,<br>jenny<br><br><br><br><br><br><br>--<br>Paulo Santiago<br>Doutorado em Meteorologia<br>Programa de P&#xF3;s-Gradua&#xE7;&#xE3;o em Meteorologia<br>Instituto Nacional de Pesquisas Espaciais<br>Tel.: (12) 3186 8637<o:p></o:p></p></div></div></div><p class=MsoNormal><br><br clear=all><o:p></o:p></p><div><p class=MsoNormal><o:p>&nbsp;</o:p></p></div><p class=MsoNormal>-- <o:p></o:p></p><div><p class=MsoNormal>Paulo Santiago<o:p></o:p></p></div><div><p class=MsoNormal>Doutorado em Meteorologia<o:p></o:p></p></div><div><p class=MsoNormal>Programa de P&#xF3;s-Gradua&#xE7;&#xE3;o em Meteorologia<o:p></o:p></p></div><div><p class=MsoNormal>Instituto Nacional de Pesquisas Espaciais<o:p></o:p></p></div><div><p class=MsoNormal>Tel.: (12) 3186 8637<o:p></o:p></p></div><p class=MsoNormal><o:p>&nbsp;</o:p></p></div></div></td></tr></table>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<p>-----</p><br>
+ <p>ed_2012/msg00493.html</p><br>
+</tt><tt>of the labels.  You can adjust the size of labels in Ferret - see 
+</tt><tt>Chapter 6, Customizing Plots for the details:
+</tt><pre style="margin: 0em;">
+<a  rel="nofollow" href="../../documentation/users-guide/customizing-plots/customizing-plots.html">../../documentation/users-guide/customizing-plots/customizing-plots.html</a>
+
+</pre><tt>Another thing to consider is PyFerret, which is available now for 
+</tt><tt>download, and described here: 
+</tt><tt><a  rel="nofollow" href="../../documentation/pyferret/what-is-pyferret.html">../../documentation/pyferret/what-is-pyferret.html</a>. Pyferret 
+</tt><tt>does its graphics in the same way as classic Ferret, and draws lines in 
+</tt><tt>the same way, but calls a different lowest-level graphics library. It 
+</tt><tt>can save images as .png or .pdf files.  Have a look at the images in the 
+</tt><tt>documentation pages, such as this page,
+</tt><tt><a  rel="nofollow" href="../../documentation/pyferret/example-sessions-ferret.html">../../documentation/pyferret/example-sessions-ferret</a>, 
+</tt><tt>to see if you think that would be a good option for you.
+</tt><pre style="margin: 0em;">
+
+<p>-----</p><br>
+ <p>ed_2012/msg00495.html</p><br>
+<br>
+The labels are drawn using Hershey fonts. These are simply lines drawn to form the letters and numbers, so there are not separate font elements that can be edited. &#xA0;Thickening the lines overall may improve the look of the labels. &#xA0;You can adjust the size of labels in Ferret - see Chapter 6, Customizing Plots for the details:<br>
+
+<a rel="nofollow" href="../../documentation/users-guide/customizing-plots/customizing-plots.html" >../../documentation/users-guide/customizing-plots/customizing-plots.html</a><br>
+<br>
+Another thing to consider is PyFerret, which is available now for download, and described here: <a rel="nofollow" href="../../documentation/pyferret/what-is-pyferret.html" >../../documentation/pyferret/what-is-pyferret.html</a>. Pyferret does its graphics in the same way as classic Ferret, and draws lines in the same way, but calls a different lowest-level graphics library. It can save images as .png or .pdf files. &#xA0;Have a look at the images in the documentation pages, such as this page,<br>
+
+<a rel="nofollow" href="../../documentation/pyferret/example-sessions-ferret.html" >../../documentation/pyferret/what-is-pyferret.htmlexample-sessions-ferret</a>, to see if you think that would be a good option for you.<span class="HOEnZb"><font color="#888888"><br>
+
+<br>
+Ansley</font></span><div class="HOEnZb"><div class="h5"><br>
+<p>-----</p><br>
+ <p>ed_2012/msg00503.html</p><br>
+let pnum = `p,RETURN=LSIZE`
+
+
+<a  rel="nofollow" href="../../documentation/users-guide/variables-xpressions/EMBEDDED-XPRESSIONS.html#_VPID_184">../../documentation/users-guide/variables-xpressions/EMBEDDED-XPRESSIONS#_VPID_184</a>
+
+
+To do housekeeping just make a small script with all the commands you
+<p>-----</p><br>
+ <p>ed_2012/msg00524.html</p><br>
+&quot;cross-gap smoothing&quot; issue was fixed a while ago, in Ferret v5.5.
+For more on this topic, see:
+
+<a  rel="nofollow" href="../../documentation/users-guide/Grids-Regions/REGIONS.html#_VPINDEXENTRY_726">../../documentation/users-guide/Grids-Regions/REGIONS#_VPINDEXENTRY_726</a>
+
+For limited-area data, Ferret now inserts a special &quot;ghost&quot; missing
+cell, spanning the modulo gap.  This way, smoothers will treat the
+<p>-----</p><br>
+ <p>ed_2012/msg00541.html</p><br>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<font face="times new roman,serif"><font size="4">hi Michael!<br><br>There&#39;s a ppl command for this. In every viewport add a command of /nokey - this will remove the colour bar from the sub plots.<br><br>Now in the viewport where you want to place the colourbar, add /set <br>
+then add ppl shakey command followed by ppl fill.<br>here&#39;s the link to how you can customize the shakey command.<br><br><a rel="nofollow" href="../../documentation/users-guide/appendix-c-ferret-specific-pplus-enhancements/ENHANCED-COMMANDS-DESCRIPTION.html%20#_VPINDEXENTRY_2077">../../documentation/users-guide/appendix-c-ferret-specific-pplus-enhancements/ENHANCED-COMMANDS-DESCRIPTION%20#_VPINDEXENTRY_2077</a><br>
+<br>if the hyperlink doesnt work, you can find it on the documentation in shakey section.<br><br>regards,<br>Aditi<br></font><br><br></font><br><div class="gmail_quote">On Wed, Oct 17, 2012 at 12:31 PM, michael hughes <span dir="ltr">&lt;<a rel="nofollow" href="mailto:michael.hughes@xxxxxxxxxxxxxxx" >michael.hughes@xxxxxxxxxxxxxxx</a>&gt;</span> wrote:<br>
+<blockquote class="gmail_quote" style="margin:0pt 0pt 0pt 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex">Dear ferret users<div>I have a multiple viewport figure and I want to remove the colour bar form the side of each of the subplots and place one large one at either the top or bottom of the figure.</div>
+<div><br></div><div>
+<p>-----</p><br>
+ <p>ed_2012/msg00559.html</p><br>
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+Dear ferret user<br><br>I also notice &quot;set list/outtype=float&quot; seems start to support from <a rel="nofollow" href="http://v6.83">v6.83</a> <br>(at <a rel="nofollow" href="../../documentation/users-guide/commands-reference/SAVE.html#SAVE_OUTPUT_TYPE">../../documentation/users-guide/commands-reference/SAVE#SAVE_OUTPUT_TYPE</a>)<br>
+<br>However, the latest version seems is 6.82?<br>Is this means I can&#39;t change type right now? <br><br>Regards, dan<br><br><div class="gmail_quote">2012/10/23 Yu, Hao-Cheng <span dir="ltr">&lt;<a rel="nofollow" href="mailto:danish.url@xxxxxxxxx" >danish.url@xxxxxxxxx</a>&gt;</span><br>
+<blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">Dear all ferret users,<br><br>I have to sub-sample from a netcdf file and keeps its type as original file.<br>The file contains 2 variables with time axis which has &quot;float&quot; type.<br>
+I use script like following:<br>
+<p>-----</p><br>
+ <p>ed_2012/msg00560.html</p><br>
+      I also notice "set list/outtype=float" seems start to support from
+      <b>v6.83</b> <br>
+      (at <a rel="nofollow" moz-do-not-send="true"
+href="../../documentation/users-guide/commands-reference/SAVE.html#SAVE_OUTPUT_TYPE">../../documentation/users-guide/commands-reference/SAVE#SAVE_OUTPUT_TYPE</a>)<br>
+      <br>
+      However, the latest version seems is 6.82?<br>
+      Is this means I can't change type right now? <br>
+<p>-----</p><br>
+ <p>ed_2012/msg00561.html</p><br>
+        I also notice "set list/outtype=float" seems start to support
+        from <b>v6.83</b> <br>
+        (at <a rel="nofollow" moz-do-not-send="true"
+href="../../documentation/users-guide/commands-reference/SAVE.html#SAVE_OUTPUT_TYPE">../../documentation/users-guide/commands-reference/SAVE#SAVE_OUTPUT_TYPE</a>)<br>
+        <br>
+        However, the latest version seems is 6.82?<br>
+        Is this means I can't change type right now? <br>
+<p>-----</p><br>
+ <p>ed_2012/msg00562.html</p><br>
+        <br>
+        I also notice &quot;set list/outtype=float&quot; seems start to support
+        from <b>v6.83</b> <br>
+        (at <a rel="nofollow" href="../../documentation/users-guide/commands-reference/SAVE.html#SAVE_OUTPUT_TYPE" >../../documentation/users-guide/commands-reference/SAVE#SAVE_OUTPUT_TYPE</a>)<br>
+
+        <br>
+        However, the latest version seems is 6.82?<br>
+<p>-----</p><br>
+ <p>ed_2012/msg00590.html</p><br>
+</tt><tt>you're seeing stems from this change between Ferret v6.2 and v6.3,
+</tt><pre style="margin: 0em;">
+
+<a  rel="nofollow" href="../../documentation/release-notes/v6-3-release-notes.html#curvi_contours">../../documentation/release-notes/v6-3-release-notes#curvi_contours</a>
+
+</pre><tt>It's often the case when redefining a variable, we forget to give the 
+</tt><tt>new variable the right units.  Thank you for the reminder.
+<p>-----</p><br>
+ <p>ed_2012/msg00602.html</p><br>
+    There are a couple of little-known functions in Ferret that will
+    help read data like this; EXPNDI_BY_Z&nbsp; or EXPNDI_BY_T.<br>
+    <br>
+<a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/users-guide/appendix-a-external-functions/expndi_by_z.html">../../documentation/users-guide/appendix-a-external-functions/expndi_by_z.html</a><br>
+<a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/users-guide/appendix-a-external-functions/expndi_by_t.html">../../documentation/users-guide/appendix-a-external-functions/expndi_by_t.html</a><br>
+    <br>
+    these let you read data which represents a set of time series OR a
+    set of depth profiles, and organize them in a 2D grid, which is
+<p>-----</p><br>
+ <p>ed_2012/msg00624.html</p><br>
+I guess the method described in Section &quot;2.4 BINARY DATA&quot; of the
+Ferret manual
+
+<a  rel="nofollow" href="../../documentation/users-guide/data-set-basics/BINARY-DATA.html#_VPID_46">../../documentation/users-guide/data-set-basics/BINARY-DATA#_VPID_46</a>
+
+should work.  Basically,
+
+<p>-----</p><br>
+ <p>ed_2012/msg00642.html</p><br>
+    <blockquote>REPEAT/i=1:[noOfStns] LABEL xpos,ypos text<br>
+    </blockquote>
+    (see
+    <a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/users-guide/customizing-plots/LABELS.html#_VPINDEXENTRY_784">../../documentation/users-guidecustomizing-plots/LABELS.html#_VPINDEXENTRY_784</a>
+    for details on controlling the label font, size, etc.)<br>
+    <br>
+    Note that for each of the lat/lon positions of your stations, you
+<p>-----</p><br>
+ <p>ed_2012/msg00643.html</p><br>
+      <blockquote>REPEAT/i=1:[noOfStns] LABEL xpos,ypos text<br>
+      </blockquote>
+      (see <a rel="nofollow" moz-do-not-send="true" class="moz-txt-link-freetext"
+href="../../documentation/users-guide/customizing-plots/LABELS.html#_VPINDEXENTRY_784">../../documentation/users-guidecustomizing-plots/LABELS.html#_VPINDEXENTRY_784</a>
+      for details on controlling the label font, size, etc.)<br>
+      <br>
+      Note that for each of the lat/lon positions of your stations, you
+<p>-----</p><br>
+ <p>ed_2012/msg00644.html</p><br>
+        <blockquote>REPEAT/i=1:[noOfStns] LABEL xpos,ypos text<br>
+        </blockquote>
+        (see <a rel="nofollow" moz-do-not-send="true" class="moz-txt-link-freetext"
+href="../../documentation/users-guide/customizing-plots/LABELS.html#_VPINDEXENTRY_784">../../documentation/users-guidecustomizing-plots/LABELS.html#_VPINDEXENTRY_784</a>
+        for details on controlling the label font, size, etc.)<br>
+        <br>
+        Note that for each of the lat/lon positions of your stations,
+<p>-----</p><br>
+ <p>ed_2012/msg00645.html</p><br>
+          <blockquote>REPEAT/i=1:[noOfStns] LABEL xpos,ypos text<br>
+          </blockquote>
+          (see <a rel="nofollow" moz-do-not-send="true" class="moz-txt-link-freetext"
+href="../../documentation/users-guide/customizing-plots/LABELS.html#_VPINDEXENTRY_784">../../documentation/users-guidecustomizing-plots/LABELS.html#_VPINDEXENTRY_784</a>
+          for details on controlling the label font, size, etc.)<br>
+          <br>
+          Note that for each of the lat/lon positions of your stations,
+<p>-----</p><br>
+ <p>ed_2012/msg00647.html</p><br>
+     <a href="http://github.com/NOAA-PMEL/PyFerret.git">PyFerret </a><br>
+    <br>
+    A link to the instructions is there --
+    <a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/pyferret/build-install.html#BUILDING_PYFERRET">../../documentation/pyferret/build-install#BUILDING_PYFERRET</a>&nbsp;
+
+    Scroll down a bit for the build instructions.<br>
+    <br>
+<p>-----</p><br>
+ <p>ed_2012/msg00673.html</p><br>
+    But to do the job with Ferret, commands, for any variable there are
+    RETURN= commands that give you information about the variable and
+    its grid.
+(<a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/users-guide/variables-xpressions/EMBEDDED-XPRESSIONS.html#_VPINDEXENTRY_576">../../documentation/users-guide/variables-xpressions/EMBEDDED-XPRESSIONS#_VPINDEXENTRY_576</a>)&nbsp;
+    They work like this:<br>
+    <blockquote><tt>load var&nbsp; ! Necessary for a variable in an ascii
+        dataset, not a netcdf dataset<br>
+<p>-----</p><br>
+ <p>ed_2012/msg00681.html</p><br>
+    you can say,<br>
+    <pre>   yes? CANCEL MODE 6D_LAB</pre>
+    (See the release notes here for the details of 6D Ferret:
+<a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/release-notes/version-6-8-release-notes.html">../../documentation/release-notes/version-6-8-release-notes</a>)<br>
+    <br>
+    I don't see anything in your script that would explain the error
+    message you are seeing however.&nbsp; We may need to work outside the
+<p>-----</p><br>
+ <p>ed_2012/msg00691.html</p><br>
+    of time cells that you like on a climatological axis.&nbsp; Have a look
+    at this section of the Users' Guide<br>
+    &nbsp;&nbsp;&nbsp;
+<a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/users-guide/commands-reference/DEFINE.html#_VPINDEXENTRY_1310">../../documentation/users-guide/commands-reference/DEFINE.html#_VPINDEXENTRY_1310</a><br>
+    <br>
+    The second example down shows a (somewhat complicated) example of a
+    climatological axis that divides the climatological year into two
+<p>-----</p><br>
+ <p>ed_2012/msg00695.html</p><br>
+    platforms.&nbsp; This release includes several new features as well as
+    bug fixes.&nbsp; Please see the Release Notes for a full description:<br>
+    <a rel="nofollow" class="moz-txt-link-freetext"
+href="../../documentation/release-notes/version-6-8-2-release-notes.html">../../documentation/release-notes/version-6-8-4-release-notes.html</a><br>
+    <font color="#000000"><font color="#000000"><font color="#000000"><font
+            color="#000000"><font color="#000000"><font color="#000000"><font
+                  color="#000000"><font color="#000000"><br>
+<p>-----</p><br>
+ <p>ed_2012/msg00696.html</p><br>
+    platforms.&nbsp; This release includes several new features as well as
+    bug fixes.&nbsp; Please see the Release Notes for a full description:<br>
+    <a rel="nofollow" class="moz-txt-link-freetext"
+href="../../documentation/release-notes/version-6-8-2-release-notes.html">../../documentation/release-notes/version-6-8-4-release-notes.html</a><br>
+    <font color="#000000"><font color="#000000"><font color="#000000"><font
+            color="#000000"><font color="#000000"><font color="#000000"><font
+                  color="#000000"><font color="#000000"><br>
+<p>-----</p><br>
+ <p>ed_2012/msg00709.html</p><br>
+    runs 1-9 and A-G.&nbsp; Or use the @Cnnn syntax which allows for a
+    3-digit number.&nbsp; Here's the reference:<br>
+    <br>
+<a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/users-guide/appendix-b-pplus-guide/PPLUS-COMMAND-FILES.html#_VPID_639">../../documentation/users-guide/appendix-b-pplus-guide/PPLUS-COMMAND-FILES#_VPID_639</a><tt><br>
+    </tt>
+    <blockquote>
+      <p class="callout" align="left"><tt><b>Pen Selection </b></tt></p>
+<p>-----</p><br>
+ <p>ed_2012/msg00713.html</p><br>
+PhD student<br>
+Johns Hopkins University<br>
+Baltimore, Maryland<br><br>--- On <b>Fri, 1/20/12, Ansley Manke <i>&lt;ansley.b.manke@xxxxxxxx&gt;</i></b> wrote:<br><blockquote style="border-left: 2px solid rgb(16, 16, 255); margin-left: 5px; padding-left: 5px;"><br>From: Ansley Manke &lt;ansley.b.manke@xxxxxxxx&gt;<br>Subject: Re: Your Ferret email pot<br>To: fishcivilmu@xxxxxxxxx<br>Date: Friday, January 20, 2012, 1:46 PM<br><br><div class="plainMail">(the subject line should have been Your Ferret email post!)<br><br>On 1/20/2012 9:40 AM, Ansley Manke wrote:<br>&gt; Hi -<br>&gt; I see that you posted a question to the Ferret Users List.&nbsp; Your email address is not subscribed to the list. To have your question posted there, and to get everyone else's questions and answers sent to you, you need to subscribe.&nbsp; Please follow the directions at the Email Users Group page, to subscribe.&nbsp; Once you have done that and received mail back saying you are subscribed, then you can post messages to the list and everyone will get your question.<br>&gt; <br>&gt; A quick hint in the meantime, is that if you can describe the region with a mask, say 1 where you want data and the bad-flag elsewhere, then you can extract just that data; this is described in a section that's pointed to by the index entry "region, region(irregular)" in the index to the Users Guide:<br>&gt; <br>&gt; <a rel="nofollow" href="../../documentation/users-guide/variables-xpressions/XPRESSIONS.html#_VPINDEXENTRY_425" >../../documentation/users-guide/variables-xpressions/XPRESSIONS#_VPINDEXENTRY_425</a> <br>&gt; <br>&gt; There is also a function pt_in_poly, which you can look up in the Users Guide, and which might help in
+ constructing this mask.<br>&gt; <br>&gt; But do ask on the Users List when you get subscribed.&nbsp; People may have good examples, and if nothing else I'll re-post this answer so the information gets out to the user community.<br>&gt; <br>&gt; Ansley<br>&gt; <br>&gt; <br>&gt; Hello dear Ferreters,<br>&gt; <br>&gt; Can some one help me how to extract NetCDF data by using an irrigular area =<br>&gt; given by an other NetCDF, like extracting average precipitation time series=<br>&gt; =A0 of a country using a NetCDF an administrative boundary of the country i=<br>&gt; n NetCDF?<br>&gt; <br>&gt; Fish,<br>&gt; Thank you,=20<br>&gt; <br>&gt; <br></div></blockquote></td></tr></table>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<p>-----</p><br>
+ <p>ed_2012/msg00714.html</p><br>
+PhD student<br>
+Johns Hopkins University<br>
+Baltimore, Maryland<br>
+<br>
+--- On <b>Fri, 1/20/12, Ansley Manke <i>&lt;ansley.b.manke@xxxxxxxx&gt;</i></b> wrote:<br>
+<blockquote style="border-left:2px solid rgb(16, 16, 255);margin-left:5px;padding-left:5px;"><br>
+From: Ansley Manke &lt;ansley.b.manke@xxxxxxxx&gt;<br>
+Subject: Re: Your Ferret email pot<br>
+To: fishcivilmu@xxxxxxxxx<br>
+Date: Friday, January 20, 2012, 1:46 PM<br>
+<br>
+<div class="yiv300283684plainMail">(the subject line should have been Your Ferret email post!)<br>
+<br>
+On 1/20/2012 9:40 AM, Ansley Manke wrote:<br>
+&gt; Hi -<br>
+&gt; I see that you posted a question to the Ferret Users List.&nbsp; Your email address is not subscribed to the list. To have your question posted there, and to get everyone else's questions and answers sent to you, you need to subscribe. to subscribe.&nbsp; Once you have done that and received mail back saying you are subscribed, then you can post messages to the list and everyone will get your question.<br>
+&gt; <br>
+&gt; A quick hint in the meantime, is that if you can describe the region with a mask, say 1 where you want data and the bad-flag elsewhere, then you can extract just that data; this is described in a section that's pointed to by the index entry "region, region(irregular)" in the index to the Users Guide:<br>
+&gt; <br>
+&gt; <a href="../../documentation/users-guide/variables-xpressions/XPRESSIONS.html#_VPINDEXENTRY_425">../../documentation/users-guide/variables-xpressions/XPRESSIONS.html#_VPINDEXENTRY_425</a> <br>
+&gt; <br>
+&gt; There is also a function pt_in_poly, which you can look up in the Users Guide, and which might help in
+ constructing this mask.<br>
+&gt; <br>
+&gt; But do ask on the Users List when you get subscribed.&nbsp; People may have good examples, and if nothing else I'll re-post this answer so the information gets out to the user community.<br>
+&gt; <br>
+&gt; Ansley<br>
+&gt; <br>
+&gt; <br>
+&gt; Hello dear Ferreters,<br>
+&gt; <br>
+&gt; Can some one help me how to extract NetCDF data by using an irrigular area =<br>
+&gt; given by an other NetCDF, like extracting average precipitation time series=<br>
+&gt; =A0 of a country using a NetCDF an administrative boundary of the country i=<br>
+&gt; n NetCDF?<br>
+&gt; <br>
+&gt; Fish,<br>
+&gt; Thank you,=20<br>
+&gt; <br>
+&gt; <br>
+</div></blockquote></td></tr></tbody></table></div><br>
+<br>
+ </div> </div> </blockquote></div>   </div>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<p>-----</p><br>
+ <p>ed_2012/msg00715.html</p><br>
+PhD student<br>
+Johns Hopkins University<br>
+Baltimore, Maryland<br><br>--- On <b>Fri, 1/20/12, Ansley Manke <i>&lt;ansley.b.manke@xxxxxxxx&gt;</i></b> wrote:<br><blockquote style="border-left:2px solid rgb(16, 16, 255);margin-left:5px;padding-left:5px;"><br>From: Ansley Manke &lt;ansley.b.manke@xxxxxxxx&gt;<br>Subject: Re: Your Ferret email pot<br>To: fishcivilmu@xxxxxxxxx<br>Date: Friday, January 20, 2012, 1:46 PM<br><br><div class="yiv1088093343plainMail">(the subject line should have been Your Ferret email post!)<br><br>On 1/20/2012 9:40 AM, Ansley Manke wrote:<br>&gt; Hi -<br>&gt; I see that you posted a question to the Ferret Users List.&nbsp; Your email address is not subscribed to the list. To have your question posted there, and to get everyone else's questions and answers sent to you, you need to subscribe.&nbsp; Please follow the directions at the Email Users Group page,<a rel="nofollow" rel="nofollow" 
+ href="http://ferret.pmel.noaa.gov/Ferret/email-users-group">http://ferret.pmel.noaa.gov/Ferret/email-users-group</a>&nbsp; to subscribe.&nbsp; Once you have done that and received mail back saying you are subscribed, then you can post messages to the list and everyone will get your question.<br>&gt; <br>&gt; A quick hint in the meantime, is that if you can describe the region with a mask, say 1 where you want data and the bad-flag elsewhere, then you can extract just that data; this is described in a section that's pointed to by the index entry "region, region(irregular)" in the index to the Users Guide:<br>&gt; <br>&gt; <a href="../../documentation/users-guide/variables-xpressions/XPRESSIONS.html#_VPINDEXENTRY_425">../../documentation/users-guide/variables-xpressions/XPRESSIONS.html#_VPINDEXENTRY_425</a> <br>&gt; <br>&gt; There is also a function pt_in_poly, which you can look up in the Users Guide, and which might help in
+ constructing this mask.<br>&gt; <br>&gt; But do ask on the Users List when you get subscribed.&nbsp; People may have good examples, and if nothing else I'll re-post this answer so the information gets out to the user community.<br>&gt; <br>&gt; Ansley<br>&gt; <br>&gt; <br>&gt; Hello dear Ferreters,<br>&gt; <br>&gt; Can some one help me how to extract NetCDF data by using an irrigular area =<br>&gt; given by an other NetCDF, like extracting average precipitation time series=<br>&gt; =A0 of a country using a NetCDF an administrative boundary of the country i=<br>&gt; n NetCDF?<br>&gt; <br>&gt; Fish,<br>&gt; Thank you,=20<br>&gt; <br>&gt; <br></div></blockquote></td></tr></tbody></table></div><br><br> </div> </div> </blockquote></div>   </div></div></div></blockquote></td></tr></table>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<p>-----</p><br>
+ <p>ed_2012/msg00729.html</p><br>
+    when it writes variables to a NetCDF file.&#xA0; The information you need
+    is under the ferret Users Guide index entries under "attributes of
+    variables", in particular the item "<a rel="nofollow" title="Variables"
+href="../../documentation/users-guide/variables-xpressions/VARIABLES.html#_VPINDEXENTRY_290">scale
+      &amp; offset, packing data</a>":<br>
+    <br>
+<a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/users-guide/variables-xpressions/VARIABLES.html#_VPINDEXENTRY_290">../../documentation/users-guide/variables-xpressions/VARIABLES#_VPINDEXENTRY_290</a><br>
+    <br>
+    In addition you can request that all attributes from the input
+    dataset be written out, with<br>
+<p>-----</p><br>
+< /body > < /html >

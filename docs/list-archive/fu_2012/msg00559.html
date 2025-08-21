@@ -48,10 +48,10 @@
 <!--X-Head-Body-Sep-End-->
 <!--X-Body-of-Message-->
 Dear ferret user<br><br>I also notice &quot;set list/outtype=float&quot; seems start to support from <a rel="nofollow" href="http://v6.83">v6.83</a> <br>(at <a rel="nofollow" href="../../documentation/users-guide/commands-reference/SAVE.html#SAVE_OUTPUT_TYPE">../../documentation/users-guide/commands-reference/SAVE#SAVE_OUTPUT_TYPE</a>)<br>
-<br>However, the latest version seems is 6.82?<br>Is this means I can&#39;t change type right now? <br><br>Regards, dan<br><br><div class="gmail_quote">2012/10/23 Yu, Hao-Cheng <span dir="ltr">&lt;<a rel="nofollow" href="mailto:danish.url@xxxxxxxxx" target="_blank">danish.url@xxxxxxxxx</a>&gt;</span><br>
+<br>However, the latest version seems is 6.82?<br>Is this means I can&#39;t change type right now? <br><br>Regards, dan<br><br><div class="gmail_quote">2012/10/23 Yu, Hao-Cheng <span dir="ltr">&lt;<a rel="nofollow" href="mailto:danish.url@xxxxxxxxx" >danish.url@xxxxxxxxx</a>&gt;</span><br>
 <blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">Dear all ferret users,<br><br>I have to sub-sample from a netcdf file and keeps its type as original file.<br>The file contains 2 variables with time axis which has &quot;float&quot; type.<br>
 I use script like following:<br>
-----------------------------<br>use <a rel="nofollow" href="http://input.nc" target="_blank">input.nc</a><br>CANCEL MODE UPCASE_OUTPUT<br>set list/outtype=float<br>list/KEEP_AXISNAMES/i=320:482/j=294:428/form=cdf/file=<a rel="nofollow" href="http://test.nc/clob" target="_blank">test.nc/clob</a> lon,lat,dlwrf,dswrf<br>
+----------------------------<br>use <a rel="nofollow" href="http://input.nc" >input.nc</a><br>CANCEL MODE UPCASE_OUTPUT<br>set list/outtype=float<br>list/KEEP_AXISNAMES/i=320:482/j=294:428/form=cdf/file=<a rel="nofollow" href="http://test.nc/clob" >test.nc/clob</a> lon,lat,dlwrf,dswrf<br>
 
 -----------------------------------------------------<br>All variable saves with &quot;float&quot; type but not for &quot;time&quot;, it&#39;s &quot;double&quot;.<br><br>Any ideas to easily convert this will be appreciated!<br>
 
