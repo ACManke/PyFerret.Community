@@ -161,6 +161,11 @@ xmlns:schema="http://schema.org/">
 &gt; And can I save the calculated time series in a seperate (binary or netcdf)<br />
 &gt; file from Ferret?</p></blockquote>
 <h2>Explanation:</h2>
+
+This classic FAQ describes "descriptor files", a long-standing method of defining a muti-file dataset. However Dataset aggregation is a simpler and more flexible means of handling multi-file datasets, whether the multiple files contain different timesteps of the same variables, or different variables or ensembles of data from model runs. Time aggregation is particularly simple; Ferret/PyFerret will analyze the time information and define the time axis for you.
+<p> See the full documentation here: <a href="../documentation/users-guide/commands-reference/DEFINE.html#_define_data_agg">DEFINE DATA/AGGREGATE</a>
+
+<br><hr><br>
 <p>The answer to this depends on how your existing NetCDF files are arranged. You say that each file has a single time step. Let us suppose there are 3 spatial dimensions for the variables in your NetCDF files. There are two ways that this could be encoded: either as 3D (time-independent) variables or as 4D variables on a single point time axis. "ncdump -h mynetcdf.cdf" will show if the variables have a 1-point time axis.</p>
 <h2>Solution:</h2>
 <p><b>==&gt; If the files have a 1 point time axis there are three solutions:</b></p>
@@ -257,7 +262,7 @@ $END
 </div>
 
 </div>
-
+<br><br>
 <div class="clearfix">
 <nav class="links node-links clearfix"></nav>
 
