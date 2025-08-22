@@ -126,7 +126,7 @@ yes? let lonin = lon_fgco2[d=1]<br>
 yes? let latin = lat_fgco2[d=1]<br>
 yes? &nbsp;let map = curv_to_rect_map ( lonin,latin,lonlatout,0.5)<br>
 yes? save/clobber/file=<a rel="nofollow" moz-do-not-send="true"
- href="http://io_map.nc/" target="_blank">io_map.nc</a> map<br>
+ href="http://io_map.nc/" >io_map.nc</a> map<br>
 &nbsp;**ERROR: variable unknown or not in data set: LAT_FGCO2[D=1]<br>
   <br>
 Thanks,<br>
@@ -151,12 +151,10 @@ it to a rectilinear grid using the CURV_TO_RECT_MAP and CURV_TO_RECT
 functions; or to find the index ranges corresponding to
 longitude/latitude regions, use the methods in this FAQ. <b><a rel="nofollow"
  moz-do-not-send="true"
- href="../../faq/custom_plots/subsetting_curvi_data.html"
- target="_blank"><b>How
+ href="../../faq/plotting-subsets-of-data-on-a-curvilinear-grid.html"
+ ><b>How
 can I plot a subset of my curvilinear data?</b></a> </b><br>
-at<b> </b><a rel="nofollow" moz-do-not-send="true"
- href="../../faq/custom_plots/subsetting_curvi_data.html"
- target="_blank">../../faq/custom_plots/subsetting_curvi_data.html</a><br>
+<br>
     <br>
 Looking back, the curvilinear regridding functions became available in
 Ferret v5.8, so you will have these; however there have been some more
@@ -183,7 +181,7 @@ plot the time series, climatology etc for the dataset in the regular
 grid <br>
       <br>
 use "<a rel="nofollow" moz-do-not-send="true"
- href="http://dods.extra.cea.fr/cgi-bin/nph" target="_blank">http://dods.extra.cea.fr/cgi-bin/nph</a>-
+ href="http://dods.extra.cea.fr/cgi-bin/nph" >http://dods.extra.cea.fr/cgi-bin/nph</a>-
       <br>
 dods/data/p48bopp/CARBOOCEAN/IPSL/HIST_A2/fgCO2/IPSL_HIST_A2_fgCO2_1980_2009_2D.nc"
       <br>
@@ -191,7 +189,7 @@ show data <br>
 fill fgCO2[x=1:182,y=1:149,l=1] <br>
 use "<a rel="nofollow" moz-do-not-send="true"
  href="http://dods.extra.cea.fr/cgi-bin/nph-dods/data/p48bopp/CARBOOCEAN/GRID/IPSL_grid.nc"
- target="_blank">http://dods.extra.cea.fr/cgi-bin/nph-dods/data/p48bopp/CARBOOCEAN/GRID/IPSL_grid.nc</a>"
+ >http://dods.extra.cea.fr/cgi-bin/nph-dods/data/p48bopp/CARBOOCEAN/GRID/IPSL_grid.nc</a>"
       <br>
 let lon2 = if lon gt 360 then (lon-360.) else lon <br>
 shade/key/hlim=40E:100E/vlim=0:30N

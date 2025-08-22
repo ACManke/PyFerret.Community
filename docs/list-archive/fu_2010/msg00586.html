@@ -41,13 +41,13 @@
 <hr>
 <!--X-Head-Body-Sep-End-->
 <!--X-Body-of-Message-->
-Dear all,<br><br>I am trying to concatenate some model outputs but neither option available on the FAQ (<a rel="nofollow" href="../../faq/multi_dataset.html" target="_blank">../../faq/multi_dataset.html</a> ) is working. I forced my new time axis to have the same time of each file but it&#39;s still not working.<br>
+Dear all,<br><br>I am trying to concatenate some model outputs but neither option available on the FAQ (<a rel="nofollow" href="../../faq/using-data-that-spans-multiple-files.html" >../../faq/using-data-that-spans-multiple-files.html</a> ) is working. I forced my new time axis to have the same time of each file but it&#39;s still not working.<br>
 
 Above my sequence of commands and error message. Anyone could help?<br><br>Thanks,<br>Domingos.<br><br>yes? <br>yes? define axis/t=&quot;01-feb-1971 11:40&quot;:&quot;01-jan-2001 11:40&quot;:30/unit=days/calendar=<div id=":2s6">
 360_DAY t30anos<br>
-yes? define grid/t=t30anos gg<br>yes? let temp_T = t[g=gg]*0 + temp<br>yes? set variable/title=&quot;Pot. Temperature&quot;/units=&quot;deg C&quot; temp_T<br>yes? use &quot;../<a rel="nofollow" href="http://197101.nc/" target="_blank">197101.nc</a>&quot;<br>
+yes? define grid/t=t30anos gg<br>yes? let temp_T = t[g=gg]*0 + temp<br>yes? set variable/title=&quot;Pot. Temperature&quot;/units=&quot;deg C&quot; temp_T<br>yes? use &quot;../<a rel="nofollow" href="http://197101.nc/" >197101.nc</a>&quot;<br>
 
-yes? save/file=concat_1971-2000.cdf temp_t[l=1]<br>&#xA0;LISTing to file concat_1971-2000.cdf<br>yes? use &quot;../<a rel="nofollow" href="http://197102.nc/" target="_blank">197102.nc</a>&quot;<br>yes? save/file=concat_1971-2000.cdf/append/clobber temp_t[l=2]<br>
+yes? save/file=concat_1971-2000.cdf temp_t[l=1]<br>&#xA0;LISTing to file concat_1971-2000.cdf<br>yes? use &quot;../<a rel="nofollow" href="http://197102.nc/" >197102.nc</a>&quot;<br>yes? save/file=concat_1971-2000.cdf/append/clobber temp_t[l=2]<br>
 
 &#xA0;*** NOTE: Ambiguous coordinates on T axis: T[G=GG]*0 + TEMP<br>&#xA0;**ERROR: illegal limits: TEMP does not exist at L=2<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Axis extremes are L=1<br>yes? show grid temp[d=1]<br>&#xA0;&#xA0;&#xA0; GRID GBY1<br>&#xA0;name&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; axis&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; # pts&#xA0;&#xA0; start&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; end<br>
 
