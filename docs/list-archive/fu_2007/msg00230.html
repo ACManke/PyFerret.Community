@@ -62,9 +62,13 @@ will be 2, otherwise it'll be 1.<br>
 <br>
 Another possibility if you don't mind creating an error condition
 intentionally, is to SET MODE IGNORE_ERROR, try to open the file,
-and then check for the existence of the symbol RET_LAST_ERROR; this
-is described in the Version 6.0 release notes,<br>
-<a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/Release_Notes/v600.html#fer_last_error">../../documentation/Release_Notes/v600.html#fer_last_error</a><br>
+and then check for the existence of the symbol FER_LAST_ERROR; this
+is new in Ferret v6.0<br>
+
+In Ferret, 
+
+   yes? show symbol FER_LAST_ERROR
+<br>
 <br>
 Ansley<br>
 <br>

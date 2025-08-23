@@ -148,9 +148,13 @@ Jaison
   <blockquote type="cite">
     <pre wrap="">Another possibility if you don't mind creating an error condition 
 intentionally, is to SET MODE IGNORE_ERROR, try to open the file, and 
-then check for the existence of the symbol RET_LAST_ERROR; this is 
-described in the Version 6.0 release notes,
-<a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/Release_Notes/v600.html#fer_last_error">../../documentation/Release_Notes/v600.html#fer_last_error</a>
+then check for the existence of the symbol FER_LAST_ERROR; this is 
+new in Ferret v6.0
+
+In Ferret, 
+ 
+    yes? show symbol FER_LAST_ERROR
+ 
 
 Ansley
 

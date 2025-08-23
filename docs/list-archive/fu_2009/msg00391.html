@@ -61,7 +61,7 @@ Dear All,<br><br>David, you are right: my variable was on a strangely defined ti
 
 <br>yes? let newtemp=temp[gt=truemonthuj@asn] !i defined my var on this new axis<br><br>yes? let section = temp[l=16:18]<br>yes? let mean = section[l=@ave] !what Steve suggested<br><br>The mean and (original) temp with @ave is the same, and i want a weighted average. So i use the newtemp from now on. :)<br>
 <br>yes? list/nohead temp[l=16:18@sum]/3,mean,temp[l=16:18@ave],newtemp[l=16:18@ave] <br>
-I / *:&#xA0;&#xA0;&#xA0;&#xA0; 9.851&#xA0; 9.894&#xA0; 9.894&#xA0;&#xA0; 9.821<br><br>Thanks All, Peter<br><br><div class="gmail_quote">On Mon, Jun 22, 2009 at 6:15 PM, Stephen Guimond <span dir="ltr">&lt;<a rel="nofollow" href="mailto:sguimond@xxxxxxx" target="_blank">sguimond@xxxxxxx</a>&gt;</span> wrote:<br>
+I / *:&#xA0;&#xA0;&#xA0;&#xA0; 9.851&#xA0; 9.894&#xA0; 9.894&#xA0;&#xA0; 9.821<br><br>Thanks All, Peter<br><br><div class="gmail_quote">On Mon, Jun 22, 2009 at 6:15 PM, Stephen Guimond <span dir="ltr">&lt;<a rel="nofollow" href="mailto:sguimond@xxxxxxx">sguimond@xxxxxxx</a>&gt;</span> wrote:<br>
 <blockquote class="gmail_quote" style="border-left: 1px solid rgb(204, 204, 204); margin: 0pt 0pt 0pt 0.8ex; padding-left: 1ex;">
 Also, what I have done to get the unweighted mean is to remove the section of data and then use @ave...<br>
 <br>
@@ -71,17 +71,17 @@ let mean = section[l=@ave]<br>
 Steve<br>
 <div><br>
 ----- Original Message -----<br>
-From: Ansley Manke &lt;<a rel="nofollow" href="mailto:ansley.b.manke@xxxxxxxx" target="_blank">ansley.b.manke@xxxxxxxx</a>&gt;<br>
+From: Ansley Manke &lt;<a rel="nofollow" href="mailto:ansley.b.manke@xxxxxxxx">ansley.b.manke@xxxxxxxx</a>&gt;<br>
 Date: Monday, June 22, 2009 9:59 am<br>
 Subject: Re: [ferret_users] ave vs. sum and ngd<br>
-</div><div>Cc: ferret &lt;<a rel="nofollow" href="mailto:oar.pmel.ferret_users@xxxxxxxx" target="_blank">oar.pmel.ferret_users@xxxxxxxx</a>&gt;<br>
+</div><div>Cc: ferret &lt;<a rel="nofollow" href="mailto:oar.pmel.ferret_users@xxxxxxxx">oar.pmel.ferret_users@xxxxxxxx</a>&gt;<br>
 <br>
 &gt; Hi all,<br>
 &gt; There&#39;s an FAQ related to this discussion, about the averaging<br>
 &gt; weights<br>
 &gt; that Ferret uses. It shows a way to see the weights that are being<br>
 &gt; used.<br>
-&gt; <a rel="nofollow" href="../../faq/regridding_with_ave.html" target="_blank">../../faq/regridding_with_ave.html</a><br>
+&gt; <a rel="nofollow" href="../../faq/regridding-a-time-series-with-ave.html">../../faq/regridding-a-time-series-with-ave.html</a><br>
 &gt;<br>
 &gt; David Wang wrote:<br>
 &gt; &gt; Peter,<br>
@@ -97,8 +97,8 @@ Subject: Re: [ferret_users] ave vs. sum and ngd<br>
 &gt; &gt; David<br>
 &gt; &gt;<br>
 &gt; &gt; On Mon, Jun 22, 2009 at 10:16 AM, Peter Szabo<br>
-&gt; &lt;<a rel="nofollow" href="mailto:szabpet83@xxxxxxxxx" target="_blank">szabpet83@xxxxxxxxx</a><br>
-</div><div>&gt; &gt; &lt;mailto:<a rel="nofollow" href="mailto:szabpet83@xxxxxxxxx" target="_blank">szabpet83@xxxxxxxxx</a>&gt;&gt; wrote:<br>
+&gt; &lt;<a rel="nofollow" href="mailto:szabpet83@xxxxxxxxx">szabpet83@xxxxxxxxx</a><br>
+</div><div>&gt; &gt; &lt;mailto:<a rel="nofollow" href="mailto:szabpet83@xxxxxxxxx">szabpet83@xxxxxxxxx</a>&gt;&gt; wrote:<br>
 &gt; &gt;<br>
 &gt; &gt; &#xA0; &#xA0; Martin,<br>
 &gt; &gt; &#xA0; &#xA0; as i am dealing with climatology, all the months are equally<br>
@@ -106,12 +106,12 @@ Subject: Re: [ferret_users] ave vs. sum and ngd<br>
 &gt; &gt; &#xA0; &#xA0; Thanks, Peter<br>
 &gt; &gt;<br>
 &gt; &gt; &#xA0; &#xA0; ---------- Forwarded message ----------<br>
-&gt; &gt; &#xA0; &#xA0; From: *Martin Schmidt* &lt;<a rel="nofollow" href="mailto:martin.schmidt@xxxxxxxxxxxxxxxxx" target="_blank">martin.schmidt@xxxxxxxxxxxxxxxxx</a><br>
-</div><div>&gt; &gt; &#xA0; &#xA0; &lt;mailto:<a rel="nofollow" href="mailto:martin.schmidt@xxxxxxxxxxxxxxxxx" target="_blank">martin.schmidt@xxxxxxxxxxxxxxxxx</a>&gt;&gt;<br>
+&gt; &gt; &#xA0; &#xA0; From: *Martin Schmidt* &lt;<a rel="nofollow" href="mailto:martin.schmidt@xxxxxxxxxxxxxxxxx">martin.schmidt@xxxxxxxxxxxxxxxxx</a><br>
+</div><div>&gt; &gt; &#xA0; &#xA0; &lt;mailto:<a rel="nofollow" href="mailto:martin.schmidt@xxxxxxxxxxxxxxxxx">martin.schmidt@xxxxxxxxxxxxxxxxx</a>&gt;&gt;<br>
 &gt; &gt; &#xA0; &#xA0; Date: Mon, Jun 22, 2009 at 12:28 PM<br>
 &gt; &gt; &#xA0; &#xA0; Subject: Re: [ferret_users] ave vs. sum and ngd<br>
-&gt; &gt; &#xA0; &#xA0; To: Peter Szabo &lt;<a rel="nofollow" href="mailto:szabpet83@xxxxxxxxx" target="_blank">szabpet83@xxxxxxxxx</a><br>
-</div><div><div></div><div>&gt; &lt;mailto:<a rel="nofollow" href="mailto:szabpet83@xxxxxxxxx" target="_blank">szabpet83@xxxxxxxxx</a>&gt;&gt;&gt;<br>
+&gt; &gt; &#xA0; &#xA0; To: Peter Szabo &lt;<a rel="nofollow" href="mailto:szabpet83@xxxxxxxxx">szabpet83@xxxxxxxxx</a><br>
+</div><div><div></div><div>&gt; &lt;mailto:<a rel="nofollow" href="mailto:szabpet83@xxxxxxxxx">szabpet83@xxxxxxxxx</a>&gt;&gt;&gt;<br>
 &gt; &gt;<br>
 &gt; &gt; &#xA0; &#xA0; Peter, the answer is most probably the following example:<br>
 &gt; &gt;<br>

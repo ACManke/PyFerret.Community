@@ -84,9 +84,8 @@ nonexistent.nc</a>: No such file or directory<br>                VARIABLE : {SPA
 <br>           say &quot;  NO File exist in pwd/cwd.&quot;<br>       ENDIF<br><br>  Now, we can use the above logical construct, or we can make a new<br>  one using &quot;nfiles&quot;<br><br>       IF `nfiles GT 0` THEN<br>
              do something<br>       ELSE<br>             do something else<br>       ENDIF<br><br><br><br>Thanks and Regards,<br><br>Jaison <br><br><br>  </pre>
   <blockquote type="cite">
-    <pre>Another possibility if you don&#39;t mind creating an error condition <br>intentionally, is to SET MODE IGNORE_ERROR, try to open the file, and <br>then check for the existence of the symbol RET_LAST_ERROR; this is 
-<br>described in the Version 6.0 release notes,<br><a rel="nofollow" href="../../documentation/Release_Notes/v600.html#fer_last_error" >../../documentation/Release_Notes/v600.html#fer_last_error
-</a>
+    <pre>Another possibility if you don&#39;t mind creating an error condition <br>intentionally, is to SET MODE IGNORE_ERROR, try to open the file, and <br>then check for the existence of the symbol FER_LAST_ERROR; this is 
+<br>new in Ferret v6.0<br>
 
 Ansley
 
