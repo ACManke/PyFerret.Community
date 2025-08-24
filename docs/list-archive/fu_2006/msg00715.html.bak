@@ -62,7 +62,7 @@ polygon shapes at the locations, with the polygons colored according to
 the value of the trend.  There is an example of this in the demo script 
 polymark_demo.jnl; for this script we have an on-line example:<br>
 <br>
-<a  href="../../documentation/demos/ferret-polymark-demo.html">../../documentation/demos/ferret-polymark-demo.html</a><br>
+<a  href="../../documentation/demos/ferret-polymark-demo.ht">../../documentation/demos/ferret-polymark-demo.ht</a><br>
 <br>
 If your data is in an ascii data file, see &quot;ASCII data, accessing&quot; in 
 the Users guide. If your data is of this form (with the longitude and 
