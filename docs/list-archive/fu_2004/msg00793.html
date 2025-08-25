@@ -1,15 +1,15 @@
 <!-- MHonArc v2.5.13 -->
-<!--X-Subject: Re: Reading from standard input (revisited from 2001) -->
+<!--X-Subject: Re: [ferret_users] derive bathymetry from 3D temperature data -->
 <!--X-From-R13: Oafyrl [naxr <nafyrl.o.znaxrNabnn.tbi> -->
-<!--X-Date: Mon, 8 Nov 2004 12:06:29 &#45;0800 -->
-<!--X-Message-Id: 418FD243.7080802@noaa.gov -->
-<!--X-Content-Type: text/plain -->
-<!--X-Reference: Pine.LNX.4.10.10411081353500.8149&#45;100000@limpet.umeoce.maine.edu -->
+<!--X-Date: Thu, 18 Aug 2005 09:13:01 &#45;0700 -->
+<!--X-Message-Id: 4304B38D.4060301@noaa.gov -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: 4304A76E.3010404@gmail.com -->
 <!--X-Head-End-->
 <!doctype html public "-//W3C//DTD HTML//EN">
 <html>
 <head>
-<title>Re: Reading from standard input (revisited from 2001)</title>
+<title>Re: [ferret_users] derive bathymetry from 3D temperature data</title>
 </head>
 <body>
 <!--X-Body-Begin-->
@@ -17,23 +17,23 @@
 <!--X-User-Header-End-->
 <!--X-TopPNI-->
 <HR>
-<center>[<a href="msg00792.html">Thread Prev</a>][<a href="msg00794.html">Thread Next</a>][<A HREF="threads2004.html#00793">Index</A>]</center>
+<center>[<a href="msg00792.html">Thread Prev</a>][<a href="msg00794.html">Thread Next</a>][<A HREF="threads2005.html#00793">Index</A>]</center>
 
 <!--X-TopPNI-End-->
 <!--X-MsgBody-->
 <!--X-Subject-Header-Begin-->
-<h1>Re: Reading from standard input (revisited from 2001)</h1>
+<h1>Re: [ferret_users] derive bathymetry from 3D temperature data</h1>
 <hr>
 <!--X-Subject-Header-End-->
 <!--X-Head-of-Message-->
 <ul>
-<li><strong>To</strong>: <strong><a href="mailto:cousins@DOMAIN.HIDDEN">cousins@xxxxxxxxxxxxxx</a></strong></li>
-<li><strong>Subject</strong>: <strong>Re: Reading from standard input (revisited from 2001)</strong></li>
+<li><strong>To</strong>: <strong>David Wang &lt;<a href="mailto:climater@DOMAIN.HIDDEN">climater@xxxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] derive bathymetry from 3D temperature data</strong></li>
 <li><strong>From</strong>: <strong>Ansley Manke &lt;<a href="mailto:ansley.b.manke@DOMAIN.HIDDEN">ansley.b.manke@xxxxxxxx</a>&gt;</strong></li>
-<li>Date: Mon, 08 Nov 2004 12:08:35 -0800</li>
+<li>Date: Thu, 18 Aug 2005 09:13:01 -0700</li>
 <li>Cc: <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a></li>
-<li>In-reply-to: &lt;<a href="msg00792.html">Pine.LNX.4.10.10411081353500.8149-100000@limpet.umeoce.maine.edu</a>&gt;</li>
-<li>References: &lt;<a href="msg00792.html">Pine.LNX.4.10.10411081353500.8149-100000@limpet.umeoce.maine.edu</a>&gt;</li>
+<li>In-reply-to: &lt;<a href="msg00792.html">4304A76E.3010404@gmail.com</a>&gt;</li>
+<li>References: &lt;<a href="msg00792.html">4304A76E.3010404@gmail.com</a>&gt;</li>
 <li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxxxxxxx</a></li>
 <li>User-agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.4) Gecko/20030624 Netscape/7.1 (ax)</li>
 </ul>
@@ -42,46 +42,49 @@
 <hr>
 <!--X-Head-Body-Sep-End-->
 <!--X-Body-of-Message-->
-<pre>Hi Steve,
-No, we have not had a chance to find a fix for this.  Note that it's system
-dependent.  It happens under linux but not Solaris.
+<table width="100%"><tr><td bgcolor="#ffffff" style="background-color: #ffffff; color: #000000; "><font color="#000000">
 
-Ansley
 
-Steve Cousins wrote:
 
-</pre>
-<blockquote style="border-left: #0000FF solid 0.1em; margin-left: 0.0em; padding-left: 1.0em">Just a note to say that there still appears to be a bug when trying to get<br>
-ferret to take input from the command line like:<br>
+Hi David,<br>
+There is an FAQ which does something similar to what you're describing<br>
+<b><b><b><a
+ href=""><b>How
+can I show the value of my variable at its deepest depth?</b></a></b></b></b><br>
 <br>
-	ferret -gif &lt; gif.jnl<br>
+You would need to define a variable lowbox = zboxlo[gz=var]&nbsp; and use
+lowbox where the FAQ uses the temperature variable.<br>
 <br>
-when gif.jnl is greater than 512 bytes.  It seems to chop off the first<br>
-512 bytes.<br>
+( a hint on finding FAQ's, which I always use when I have an inkling
+that we have something related to a topic -- go to the FAQ's link from
+the Ferret web page, <a
+ html&nbsp;</a>
+and just use your browswer's search function to look for some likely
+strings.&nbsp; I looked for "deep" and found this one.)<br>
 <br>
-On 20011109 Ansley Manke replied to Andrew Irwins email about this, saying<br>
-that as of Beta v5.33 the bug still existed.  I'm using v5.53. Maybe it<br>
-has been fixed since then but I didn't see anything about it in the<br>
-Release Notes for 5.6 or 5.7.<br>
+Ansley<br>
 <br>
-I'm using the work-around that was suggested (having a short intermediate<br>
-jnl that calls gif.jnl) but thought it would be good to reawaken this bug<br>
-report.<br>
-<br>
-Thanks,<br>
-<br>
-Steve<br>
-______________________________________________________________________<br>
-Steve Cousins, Ocean Modeling Group    Email: cousins@umit.maine.edu<br>
-Marine Sciences, 208 Libby Hall        <a  href="http://rocky.umeoce.maine.edu">http://rocky.umeoce.maine.edu</a><br>
-Univ. of Maine, Orono, ME 04469        Phone: (207) 581-4302<br>
-<br>
- 
-<br>
-</blockquote><pre>
+David Wang wrote:<br>
+<blockquote type="cite" cite="">Hello
+Ferreters,
+  <br>
+  <br>
+I'm going to define a two-dimensional bathymetry field from a
+three-dimensional temperature dataset (say Levitus climatology).
+Basically the value of the bathymetry will be set as ZBOXHI of the last
+grid point of non-missing values downward along the vertical direction.
+Can I do this in ferret?
+  <br>
+  <br>
+Thanks,
+  <br>
+- D.W.
+  <br>
+  <br>
+</blockquote>
 
-</pre>
 
+</font></td></tr></table>
 <!--X-Body-of-Message-End-->
 <!--X-MsgBody-End-->
 <!--X-Follow-Ups-->
@@ -90,21 +93,21 @@ Univ. of Maine, Orono, ME 04469        Phone: (207) 581-4302<br>
 <!--X-References-->
 <ul><li><strong>References</strong>:
 <ul>
-<li><strong><a name="00792" href="msg00792.html">Reading from standard input (revisited from 2001)</a></strong>
-<ul><li><em>From:</em> Steve Cousins</li></ul></li>
+<li><strong><a name="00792" href="msg00792.html">[ferret_users] derive bathymetry from 3D temperature data</a></strong>
+<ul><li><em>From:</em> David Wang</li></ul></li>
 </ul></li></ul>
 <!--X-References-End-->
 <!--X-BotPNI-->
 <UL>
 <li>Previous by thread:
-<strong><a href="msg00792.html">Reading from standard input (revisited from 2001)</a></strong>
+<strong><a href="msg00792.html">[ferret_users] derive bathymetry from 3D temperature data</a></strong>
 </li>
 <li>Next by thread:
-<strong><a href="msg00794.html">Scat2grid</a></strong>
+<strong><a href="msg00794.html">[ferret_users] how to label arrow</a></strong>
 </li>
 
 </UL>
-<center>[<a href="msg00792.html">Thread Prev</a>][<a href="msg00794.html">Thread Next</a>][<A HREF="threads2004.html#00793">Index</A>]</center>
+<center>[<a href="msg00792.html">Thread Prev</a>][<a href="msg00794.html">Thread Next</a>][<A HREF="threads2005.html#00793">Index</A>]</center>
 
 <hr>
 </body>

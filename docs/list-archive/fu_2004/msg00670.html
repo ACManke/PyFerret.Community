@@ -1,15 +1,16 @@
 <!-- MHonArc v2.5.13 -->
-<!--X-Subject: Re: title of variable -->
-<!--X-From-R13: Xnvfba Yhevna <wnvfbaNpnbf.vvfp.rearg.va> -->
-<!--X-Date: Sat, 25 Sep 2004 13:39:58 &#45;0700 -->
-<!--X-Message-Id: Pine.LNX.4.44.0409260209410.25006&#45;100000@caos.iisc.ernet.in -->
-<!--X-Content-Type: text/plain -->
-<!--X-Reference: C60FB424&#45;0EE1&#45;11D9&#45;AB5E&#45;0003935AA05C@mercury.oi.u&#45;tokai.ac.jp -->
+<!--X-Subject: Re: [ferret_users] [Ferret] about Fprint and histogram -->
+<!--X-From-R13: Oafyrl [naxr <nafyrl.o.znaxrNabnn.tbi> -->
+<!--X-Date: Fri, 1 Jul 2005 09:36:39 &#45;0700 -->
+<!--X-Message-Id: 42C57113.2060606@noaa.gov -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: NS6ROowjh3x4ulELERF0000bd2e@ns6.scsio.ac.cn -->
+<!--X-Derived: gif00036.gif -->
 <!--X-Head-End-->
 <!doctype html public "-//W3C//DTD HTML//EN">
 <html>
 <head>
-<title>Re: title of variable</title>
+<title>Re: [ferret_users] [Ferret] about Fprint and histogram</title>
 </head>
 <body>
 <!--X-Body-Begin-->
@@ -17,188 +18,131 @@
 <!--X-User-Header-End-->
 <!--X-TopPNI-->
 <HR>
-<center>[<a href="msg00667.html">Thread Prev</a>][<a href="msg00661.html">Thread Next</a>][<A HREF="threads2004.html#00670">Index</A>]</center>
+<center>[<a href="msg00667.html">Thread Prev</a>][<a href="msg00665.html">Thread Next</a>][<A HREF="threads2005.html#00670">Index</A>]</center>
 
 <!--X-TopPNI-End-->
 <!--X-MsgBody-->
 <!--X-Subject-Header-Begin-->
-<h1>Re: title of variable</h1>
+<h1>Re: [ferret_users] [Ferret] about Fprint and histogram</h1>
 <hr>
 <!--X-Subject-Header-End-->
 <!--X-Head-of-Message-->
 <ul>
-<li><strong>To</strong>: <strong><a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a></strong></li>
-<li><strong>Subject</strong>: <strong>Re: title of variable</strong></li>
-<li><strong>From</strong>: <strong>Jaison Kurian &lt;<a href="mailto:jaison@DOMAIN.HIDDEN">jaison@xxxxxxxxxxxxxxxxxx</a>&gt;</strong></li>
-<li>Date: Sun, 26 Sep 2004 02:12:42 +0530 (IST)</li>
-<li>Cc: Hiroyuki Tomita &lt;<a href="mailto:tomita@DOMAIN.HIDDEN">tomita@xxxxxxxxxxxxxxxxxxxxxxxx</a>&gt;</li>
-<li>In-reply-to: &lt;<a href="msg00667.html">C60FB424-0EE1-11D9-AB5E-0003935AA05C@mercury.oi.u-tokai.ac.jp</a>&gt;</li>
+<li><strong>To</strong>: <strong>Gao Rongzhen &lt;<a href="mailto:gaorz@DOMAIN.HIDDEN">gaorz@xxxxxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] [Ferret] about Fprint and histogram</strong></li>
+<li><strong>From</strong>: <strong>Ansley Manke &lt;<a href="mailto:ansley.b.manke@DOMAIN.HIDDEN">ansley.b.manke@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Fri, 01 Jul 2005 09:36:35 -0700</li>
+<li>Cc: Ferret &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</li>
+<li>In-reply-to: &lt;<a href="msg00667.html">NS6ROowjh3x4ulELERF0000bd2e@ns6.scsio.ac.cn</a>&gt;</li>
+<li>References: &lt;<a href="msg00667.html">NS6ROowjh3x4ulELERF0000bd2e@ns6.scsio.ac.cn</a>&gt;</li>
 <li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxxxxxxx</a></li>
+<li>User-agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.4) Gecko/20030624 Netscape/7.1 (ax)</li>
 </ul>
 <!--X-Head-of-Message-End-->
 <!--X-Head-Body-Sep-Begin-->
 <hr>
 <!--X-Head-Body-Sep-End-->
 <!--X-Body-of-Message-->
-<pre>Hi Hiroyuki Tomita,
-                    Let us &quot;ferretize&quot; things. In your first mail you mensioned
-that you are reading a netCDF file &quot;created in Ferret&quot;. In this case you can get 
-a proper title to the variable if you are assigning one, before writing it to the 
-output file using &quot;SAVE&quot; command. So in that case there is no need to go for other 
-tools or workarounds. I think it will be a good habit to assign a proper title
-and unit to the variable (if it does't have these) when the variable is in its
-final form (to be plotted or written).
-
-Example : 
-
-     set data monthly_navy_winds
-
-     let uwnd_85 = uwnd[X=60,Y=0,T=&quot;02-JAN-1985&quot;:&quot;30-DEC-1985&quot;@SBX:3]
-     set var/title=&quot;Zonal Wind Speed (From navy_winds : 3pts smoothed)&quot;/units=&quot;m/s&quot; uwnd_85
-    
-     plot uwnd_85
-
-     sp rm -f uwnd_85_navy_60E_0N.nc  ! to remove previous version of the file
-     save/file=uwnd_85_navy_60E_0N.nc/append uwnd_85 
-
-
- Hope This Helps
-
- With Regards
-
- Jaison
+<table width="100%"><tr><td bgcolor="#ffffff" style="background-color: #ffffff; color: #000000; "><font color="#000000">
 
 
 
-On Sat, 25 Sep 2004, Hiroyuki Tomita wrote:
-
-&gt; Dear Ferret users,
-&gt; 
-&gt; 
-&gt; 
-&gt; I'm sorry for my late reply and I want to thank you for your helps!
-&gt; My problem was solved.
-&gt; 
-&gt; I summarize the problem and its answers here.
-&gt; 
-&gt; 
-&gt; The additional string &quot;(T=31-DEC-1991 12:00:31-DEC-1992 12:00)&quot; was
-&gt; in my NetCDF file as following
-&gt; 
-&gt; yes? sho data
-&gt;       currently SET data sets:
-&gt;      1&gt; ./NRA1_WND_6HR_DAILY_1992-2000.nc  (default)
-&gt;   name     title                             I         J         K       
-&gt;    L
-&gt;   WND      NRA1 Wind Speed                  1:192     1:94      ...      
-&gt;   1:3288
-&gt;         (T=31-DEC-1991 12:00:31-DEC-1992 12:00)
-&gt; 
-&gt; I want to erase this string.
-&gt; 
-&gt; This comes from that when we &quot;regrid&quot; a data or append some NetCDF 
-&gt; files.
-&gt; 
-&gt; Using command ncdump -h in Unix command line,
-&gt; I confirmed this string is stored in the attribute &quot;long_name_mod&quot;.
-&gt; We can not edit this attribute in Ferret.
-&gt; 
-&gt; To avoid this problem, three methods are suggested by ferret users.
-&gt;    1. Using Ferret
-&gt;    2. Using command ncatted in NCO
-&gt;    3. Using command ncdump and ncgen
-&gt; 
-&gt; 1. Using Ferret
-&gt;    Define new variable with new title
-&gt;   (then &quot;long_name_mod&quot; is not inherited to new variable) as following
-&gt; 
-&gt;    let/title=&quot;NRA1 Wind Speed&quot; new_var = var_with_unconvenient_title
-&gt;    save/file=new_file.nc/clobber new_var
-&gt; 
-&gt; This method is very easy but a changing variable name is required.
-&gt; 
-&gt; 
-&gt;   2. Using command ncatted in NCO
-&gt;    ncatted can edit any attriibute in NetCDF.
-&gt; To erase the strings stored in attribute &quot;long_name_mod&quot;,
-&gt; 
-&gt; ncatted -a long_name_mod,WND,d,c,&quot;&quot; NRA1_WND_6HR_DAILY_1992-2000.nc 
-&gt; test.cdf
-&gt; 
-&gt; This method is very smart.  But we must install NCO in a system.
-&gt; 
-&gt; 
-&gt; 3. Using command ncdump and ncgen
-&gt;    If the file is small (some MB), we can also use ncdump and ncgen
-&gt;    ncdump your_file.nc &gt; your_file.dta
-&gt; 
-&gt; Use a good ASCII-editor (nothing like word) to
-&gt; change the header as you like.
-&gt; 
-&gt; ncgen -b -o your_new_file.nc your_file.dta
-&gt; 
-&gt; 
-&gt; 
-&gt; Thank you.
-&gt; 
-&gt; Sincerely,
-&gt; 
-&gt; 
-&gt; Hiroyuki Tomita
-&gt; 
-&gt; On 2004/09/23, at 13:13, Hiroyuki Tomita wrote:
-&gt; 
-&gt; &gt; Dear Ferret Users,
-&gt; &gt;
-&gt; &gt;
-&gt; &gt; I have a small question for ferret.
-&gt; &gt;
-&gt; &gt; I read a NetCDF file created by ferret
-&gt; &gt; and then the command &quot;show data&quot; gives following result.
-&gt; &gt;
-&gt; &gt; yes? sho data
-&gt; &gt;      currently SET data sets:
-&gt; &gt;     1&gt; ./NRA1_WND_6HR_DAILY_1992-2000.nc  (default)
-&gt; &gt;  name     title                             I         J         K      
-&gt; &gt;    L
-&gt; &gt;  WND      NRA1 Wind Speed                  1:192     1:94      ...     
-&gt; &gt;   1:3288
-&gt; &gt;        (T=31-DEC-1991 12:00:31-DEC-1992 12:00)
-&gt; &gt;
-&gt; &gt; yes?
-&gt; &gt;
-&gt; &gt; I want to erace the string &quot;(T=31-DEC-1991 12:00:31-DEC-1992 12:00)&quot;
-&gt; &gt; because this string does not make sense in my NetCDF file.
-&gt; &gt; How can I do it?
-&gt; &gt;
-&gt; &gt; I guessed this string is title of variable,
-&gt; &gt; so I tried to re-title using follwing command
-&gt; &gt; set var/title=&quot;NRA1 Wind Speed&quot; WND
-&gt; &gt; But the string was not erased.
-&gt; &gt;
-&gt; &gt;
-&gt; &gt; Best,
-&gt; &gt;
-&gt; &gt; Hiroyuki Tomita
-&gt; &gt;
-&gt; &gt;
-&gt; 
-
--- 
-___________________________________________________
-
-    Jaison Kurian                           
-    Centre for Atmospheric and Oceanic Sciences
-    Indian Institute of Science
-    B A N G A L O R E   560 012
-    Ph: +91-80-3942505
-        +91-80-3600450
-    Fax:+91-80-3600865
-___________________________________________________
+Hi Gao,<br>
+Fprint is a Unix script, which calls gksm2ps. If you are running Ferret
+under windows, then you need to run gksm2ps as it is explained in the
+Users Guide, under "gksm2ps" in the index - Chapter9, section 4.2
+Metafile translation. I'll put a note about this in the documentaion.&nbsp;
+Sorry for the confusion. The simplest command is this<br>
+<br>
+&nbsp;&nbsp; gksm2ps -o&nbsp; psfile.ps metafile.plt<br>
+<br>
+In the FAQ, you will want to follow one of the procedures to edit the
+postscript output in your own editor and thicken the lines with changes
+to the line definitions, or use a tool like Adobe Illustrator as Rob
+Scott suggests.<br>
+<br>
+Ansley<br>
+<br>
+Gao Rongzhen wrote:<br>
+<blockquote type="cite"
+ cite="">
+  
+  
+  <div>Hi, Manke</div>
+  <div>&nbsp;</div>
+  <div>I read the following links before, and tried to use&nbsp; "Fprint -R
+-o *.ps&nbsp; *.plt", but it doesn't work for me. </div>
+  <div>&nbsp;</div>
+  <div>I checked and found there is no such program under the TMAP
+directory, just have gksm2ps.exe. Isn't this program installed in
+Ferret?</div>
+  <div>&nbsp;</div>
+  <div>Is Fprint used under batch mode as GKSM2PS?</div>
+  <div>&nbsp;</div>
+  <div>Gao</div>
+  <div>&nbsp;</div>
+  <div>
+  <hr>Hi - <br>
+The "thick lines" question has been talked about, with contributions
+from Billy Kessler among others.&nbsp; Here's a recent message on this<br>
+  <br>
+  <a class="moz-txt-link-freetext"
+ href="">../fu_2005/msg00474.html</a><br>
+  <br>
+There is also an FAQ, <b><b>How
+can I control line thickness when I translate a metafile to a
+postscript file?</b></b><br>
+  <a class="moz-txt-link-freetext"
+ href="../../faq/change_widths.html">../../faq/change_widths.html</a><br>
+  <br>
+Ansley<br>
+  <br>
+Gao Rongzhen wrote:<br>
+  </div>
+  <blockquote cite=""
+ type="cite">
+    <div>Hi, all</div>
+    <div>&nbsp;</div>
+    <div>Here i have two questions.</div>
+    <div>One is about command Fprint. I looked through the email
+archives,&nbsp;but still have no idea to change thin lines in PS files to
+thicker ones. When i use Fprint i am informed no command. I wonder know
+how to use Fprint and under what conditions to use it? The ferret
+version i'm using is 5.53, on windows 98.</div>
+    <div>Are there any other ways to get thick lines output&nbsp;besides
+the&nbsp;above method?</div>
+    <div> </div>
+    <div>The other one is wether ferret can get the following histogram
+plot, and how? I want to plot histogram instead of line.</div>
+    <div>&nbsp;</div>
+    <div><span lang="EN-US"
+ ><V:SHAPETYPE
+ id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+ path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">&nbsp;<img
+ align="bottom" alt="" border="0" hspace="0"
+ src="gif00036.gif"></V:SHAPETYPE></span></div>
+    <div><span lang="EN-US"
+ ><V:SHAPETYPE
+ id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+ path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f"></V:SHAPETYPE></span>&nbsp;</div>
+    <div><span lang="EN-US"
+ ><V:SHAPETYPE
+ id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+ path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f"></V:SHAPETYPE></span>&nbsp;</div>
+    <div><span lang="EN-US"
+ ><V:SHAPETYPE
+ id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+ path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">Thanks</V:SHAPETYPE></span></div>
+    <div><span lang="EN-US"
+ ><V:SHAPETYPE
+ id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+ path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">Gao Rongzhen</V:SHAPETYPE></span></div>
+  </blockquote>
+  <hr>
+</blockquote>
 
 
-</pre>
-
+</font></td></tr></table>
 <!--X-Body-of-Message-End-->
 <!--X-MsgBody-End-->
 <!--X-Follow-Ups-->
@@ -207,21 +151,21 @@ ___________________________________________________
 <!--X-References-->
 <ul><li><strong>References</strong>:
 <ul>
-<li><strong><a name="00667" href="msg00667.html">Re: title of variable</a></strong>
-<ul><li><em>From:</em> Hiroyuki Tomita</li></ul></li>
+<li><strong><a name="00667" href="msg00667.html">Re: Re: [ferret_users] [Ferret] about Fprint and histogram</a></strong>
+<ul><li><em>From:</em> Gao Rongzhen</li></ul></li>
 </ul></li></ul>
 <!--X-References-End-->
 <!--X-BotPNI-->
 <UL>
 <li>Previous by thread:
-<strong><a href="msg00667.html">Re: title of variable</a></strong>
+<strong><a href="msg00667.html">Re: Re: [ferret_users] [Ferret] about Fprint and histogram</a></strong>
 </li>
 <li>Next by thread:
-<strong><a href="msg00661.html">non-standard axes</a></strong>
+<strong><a href="msg00665.html">[ferret_users] Re: Ferret: station data shows no variables</a></strong>
 </li>
 
 </UL>
-<center>[<a href="msg00667.html">Thread Prev</a>][<a href="msg00661.html">Thread Next</a>][<A HREF="threads2004.html#00670">Index</A>]</center>
+<center>[<a href="msg00667.html">Thread Prev</a>][<a href="msg00665.html">Thread Next</a>][<A HREF="threads2005.html#00670">Index</A>]</center>
 
 <hr>
 </body>

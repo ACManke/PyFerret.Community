@@ -1,15 +1,15 @@
 <!-- MHonArc v2.5.13 -->
-<!--X-Subject: Re: how can I increase the font size of  lat lon values -->
-<!--X-From-R13: Iraql Inat <jjnatNrffvp.hzq.rqh> -->
-<!--X-Date: Wed, 26 May 2004 07:24:11 &#45;0700 -->
-<!--X-Message-Id: 6.0.0.22.0.20040526102052.01b17d98@essic.umd.edu -->
+<!--X-Subject: Re: "getting" the coast line -->
+<!--X-From-R13: Oafyrl [naxr <nafyrl.o.znaxrNabnn.tbi> -->
+<!--X-Date: Mon, 9 May 2005 10:45:27 &#45;0700 -->
+<!--X-Message-Id: 427FA1B7.2070405@noaa.gov -->
 <!--X-Content-Type: text/plain -->
-<!--X-Reference: 40B4A58F.2040906@bgc&#45;jena.mpg.de -->
+<!--X-Reference: Pine.GSO.4.33.0505061149300.16064&#45;100000@corona.pmel.noaa.gov -->
 <!--X-Head-End-->
 <!doctype html public "-//W3C//DTD HTML//EN">
 <html>
 <head>
-<title>Re: how can I increase the font size of  lat lon values</title>
+<title>Re: &quot;getting&quot; the coast line</title>
 </head>
 <body>
 <!--X-Body-Begin-->
@@ -17,74 +17,65 @@
 <!--X-User-Header-End-->
 <!--X-TopPNI-->
 <HR>
-<center>[<a href="msg00414.html">Thread Prev</a>][<a href="msg00416.html">Thread Next</a>][<A HREF="threads2004.html#00415">Index</A>]</center>
+<center>[<a href="msg00409.html">Thread Prev</a>][<a href="msg00404.html">Thread Next</a>][<A HREF="threads2005.html#00415">Index</A>]</center>
 
 <!--X-TopPNI-End-->
 <!--X-MsgBody-->
 <!--X-Subject-Header-Begin-->
-<h1>Re: how can I increase the font size of  lat lon values</h1>
+<h1>Re: &quot;getting&quot; the coast line</h1>
 <hr>
 <!--X-Subject-Header-End-->
 <!--X-Head-of-Message-->
 <ul>
-<li><strong>To</strong>: <strong>&quot;Yogesh K. Tiwari&quot; &lt;<a href="mailto:Yogesh.Tiwari@DOMAIN.HIDDEN">Yogesh.Tiwari@xxxxxxxxxxxxxxx</a>&gt;,  <a href="mailto:oar.pmel.ferret_users@DOMAIN.HIDDEN">oar.pmel.ferret_users@xxxxxxxx</a></strong></li>
-<li><strong>Subject</strong>: <strong>Re: how can I increase the font size of  lat lon values </strong></li>
-<li><strong>From</strong>: <strong>Wendy Wang &lt;<a href="mailto:wwang@DOMAIN.HIDDEN">wwang@xxxxxxxxxxxxx</a>&gt;</strong></li>
-<li>Date: Wed, 26 May 2004 10:23:55 -0500</li>
-<li>In-reply-to: &lt;<a href="msg00414.html">40B4A58F.2040906@bgc-jena.mpg.de</a>&gt;</li>
-<li>References: &lt;<a href="msg00414.html">40B4A58F.2040906@bgc-jena.mpg.de</a>&gt;</li>
+<li><strong>To</strong>: <strong><a href="mailto:Jean.C.Newman@DOMAIN.HIDDEN">Jean.C.Newman@xxxxxxxx</a></strong></li>
+<li><strong>Subject</strong>: <strong>Re: &quot;getting&quot; the coast line</strong></li>
+<li><strong>From</strong>: <strong>Ansley Manke &lt;<a href="mailto:ansley.b.manke@DOMAIN.HIDDEN">ansley.b.manke@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Mon, 09 May 2005 10:45:27 -0700</li>
+<li>Cc: <a href="mailto:oar.pmel.ferret_users@DOMAIN.HIDDEN">oar.pmel.ferret_users@xxxxxxxx</a></li>
+<li>In-reply-to: &lt;<a href="msg00409.html">Pine.GSO.4.33.0505061149300.16064-100000@corona.pmel.noaa.gov</a>&gt;</li>
+<li>References: &lt;<a href="msg00409.html">Pine.GSO.4.33.0505061149300.16064-100000@corona.pmel.noaa.gov</a>&gt;</li>
 <li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxxxxxxx</a></li>
+<li>User-agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.4) Gecko/20030624 Netscape/7.1 (ax)</li>
 </ul>
 <!--X-Head-of-Message-End-->
 <!--X-Head-Body-Sep-Begin-->
 <hr>
 <!--X-Head-Body-Sep-End-->
 <!--X-Body-of-Message-->
-<pre>Hi Yogesh,
-
-Try something like:
-
-ppl axlsze 0.17 0.17
-
-Wendy
-
-At 09:11 AM 5/26/2004, Yogesh K. Tiwari wrote:
-</pre>
-<blockquote style="border-left: #0000FF solid 0.1em; margin-left: 0.0em; padding-left: 1.0em"><pre>Hi,
-
-Can we increase the font size of lat lon data values.
-
-For example
-
-ppl shakey ......
-
-command increases font size of the key of the colour plot.
-
-Is there any same ppl command to increase the x-axis and y-axis fonts.
-
-Its too hard to read the lat lon values while making many view ports.
-
-thanks in advance for help,
-
-Yogesh
-
---
-
-===========================================
-Yogesh K. Tiwari,
-Max-Planck Institute for Biogeochemistry,
-Postfach 10 01 64, D-07701 Jena,
-Germany
-
-Office   : +49 3641 576376
-Fax      : +49 3641 577300
-Home     : +49 3641 672232
-Mobile   : +49 1736988789
-e-mail   : yogesh.tiwari@bgc-jena.mpg.de
-===========================================
-</pre>
+Hi Jean,<br>
+The code that Ferret calls to draw contours is deep down in the PlotPlus 
+package.  It's done in page coordinates rather than the original 
+physical coordinates, and is computed as the drawing is done.  It is not 
+saved in memory.  It would of course be possible to put in a hack to 
+write out these values and the scaling that's used, but it's not 
+possible to get this out directly.<br>
+<br>
+Might an answer be to regrid to a very fine grid and see where the 
+result crosses zero, perhaps with the @EVNT transformation?<br>
+<br>
+Another resource is the coastline extractor tool, which is described in 
+this FAQ: &quot;detailed coastlines and borders&quot; at<br>
+<a  href="../../faq/detailed-coastlines-and-borders.html">../../faq/detailed-coastlines-and-borders.html</a><br>
+<br>
+Ansley<br>
+<br>
+Jean.C.Newman@noaa.gov wrote:<br>
+<br>
+<blockquote style="border-left: #0000FF solid 0.1em; margin-left: 0.0em; padding-left: 1.0em">Does anyone have a ferret script that lets you output the location(x,y)<br>
+of a contour line? Say the locations of the 0 contour level of<br>
+bathymetry/topography. Jean<br>
+_____________________________________________________________________<br>
+| Jean Newman                                     Tel: 206-526-6531 |<br>
+| Tsunami Program, NOAA/PMEL/OERD - UW/JISAO      FAX: 206-526-6485 |<br>
+| 7600 Sand Point Way NE, Bldg. 3            jean.c.newman@noaa.gov |<br>
+| Seattle, WA 98115-6349                       jcn@u.washington.edu |<br>
+_________________________.   URL: <a  href="http://www.pmel.noaa.gov/tsunami/">http://www.pmel.noaa.gov/tsunami/</a> |<br>
+                        (____________________________________________<br>
+<br>
+<br>
+ 
+<br>
 </blockquote><pre>
-
 </pre>
 
 <!--X-Body-of-Message-End-->
@@ -95,21 +86,21 @@ e-mail   : yogesh.tiwari@bgc-jena.mpg.de
 <!--X-References-->
 <ul><li><strong>References</strong>:
 <ul>
-<li><strong><a name="00414" href="msg00414.html">how can I increase the font size of  lat lon values</a></strong>
-<ul><li><em>From:</em> Yogesh K. Tiwari</li></ul></li>
+<li><strong><a name="00409" href="msg00409.html">&quot;getting&quot; the coast line</a></strong>
+<ul><li><em>From:</em> Jean.C.Newman</li></ul></li>
 </ul></li></ul>
 <!--X-References-End-->
 <!--X-BotPNI-->
 <UL>
 <li>Previous by thread:
-<strong><a href="msg00414.html">how can I increase the font size of  lat lon values</a></strong>
+<strong><a href="msg00409.html">&quot;getting&quot; the coast line</a></strong>
 </li>
 <li>Next by thread:
-<strong><a href="msg00416.html">Re: how can I increase the font size of  lat lon values</a></strong>
+<strong><a href="msg00404.html">color white</a></strong>
 </li>
 
 </UL>
-<center>[<a href="msg00414.html">Thread Prev</a>][<a href="msg00416.html">Thread Next</a>][<A HREF="threads2004.html#00415">Index</A>]</center>
+<center>[<a href="msg00409.html">Thread Prev</a>][<a href="msg00404.html">Thread Next</a>][<A HREF="threads2005.html#00415">Index</A>]</center>
 
 <hr>
 </body>

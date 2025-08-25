@@ -1,15 +1,15 @@
 <!-- MHonArc v2.5.13 -->
-<!--X-Subject: Re: Redhat Fedora Core 2 Install -->
-<!--X-From-R13: "Oeguhe [. Uerrar" <nzt13Nrneguyvax.arg> -->
-<!--X-Date: Thu, 23 Sep 2004 18:03:24 &#45;0700 -->
-<!--X-Message-Id: 1095987798.2278.21.camel@localhost.localdomain -->
+<!--X-Subject: Re: [ferret_users] [Ferret] about Fprint and histogram -->
+<!--X-From-R13: Oaqerj Ivggraoret <Oaqerj.IvggraoretNabnn.tbi> -->
+<!--X-Date: Thu, 30 Jun 2005 10:27:46 &#45;0700 -->
+<!--X-Message-Id: Pine.LNX.4.44.0506301320210.28666&#45;100000@atw -->
 <!--X-Content-Type: text/plain -->
-<!--X-Reference: Pine.GSO.4.58.0409231555110.24461@nature.Berkeley.EDU -->
+<!--X-Reference: 42C41AD9.9030401@noaa.gov -->
 <!--X-Head-End-->
 <!doctype html public "-//W3C//DTD HTML//EN">
 <html>
 <head>
-<title>Re: Redhat Fedora Core 2 Install</title>
+<title>Re: [ferret_users] [Ferret] about Fprint and histogram</title>
 </head>
 <body>
 <!--X-Body-Begin-->
@@ -17,22 +17,22 @@
 <!--X-User-Header-End-->
 <!--X-TopPNI-->
 <HR>
-<center>[<a href="msg00662.html">Thread Prev</a>][<a href="msg00671.html">Thread Next</a>][<A HREF="threads2004.html#00664">Index</A>]</center>
+<center>[<a href="msg00663.html">Thread Prev</a>][<a href="msg00667.html">Thread Next</a>][<A HREF="threads2005.html#00664">Index</A>]</center>
 
 <!--X-TopPNI-End-->
 <!--X-MsgBody-->
 <!--X-Subject-Header-Begin-->
-<h1>Re: Redhat Fedora Core 2 Install</h1>
+<h1>Re: [ferret_users] [Ferret] about Fprint and histogram</h1>
 <hr>
 <!--X-Subject-Header-End-->
 <!--X-Head-of-Message-->
 <ul>
-<li><strong>To</strong>: <strong>Paul Higgins &lt;<a href="mailto:phiggins@DOMAIN.HIDDEN">phiggins@xxxxxxxxxxxxxxxxxxx</a>&gt;, <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a></strong></li>
-<li><strong>Subject</strong>: <strong>Re: Redhat Fedora Core 2 Install</strong></li>
-<li><strong>From</strong>: <strong>&quot;Arthur M. Greene&quot; &lt;<a href="mailto:amg13@DOMAIN.HIDDEN">amg13@xxxxxxxxxxxxx</a>&gt;</strong></li>
-<li>Date: Thu, 23 Sep 2004 21:03:19 -0400</li>
-<li>In-reply-to: &lt;<a href="msg00662.html">Pine.GSO.4.58.0409231555110.24461@nature.Berkeley.EDU</a>&gt;</li>
-<li>References: &lt;<a href="msg00662.html">Pine.GSO.4.58.0409231555110.24461@nature.Berkeley.EDU</a>&gt;</li>
+<li><strong>To</strong>: <strong>Ansley Manke &lt;<a href="mailto:ansley.b.manke@DOMAIN.HIDDEN">ansley.b.manke@xxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] [Ferret] about Fprint and histogram</strong></li>
+<li><strong>From</strong>: <strong>Andrew Wittenberg &lt;<a href="mailto:Andrew.Wittenberg@DOMAIN.HIDDEN">Andrew.Wittenberg@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Thu, 30 Jun 2005 13:27:45 -0400 (EDT)</li>
+<li>Cc: Ferret &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</li>
+<li>In-reply-to: &lt;<a href="msg00663.html">42C41AD9.9030401@noaa.gov</a>&gt;</li>
 <li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxxxxxxx</a></li>
 </ul>
 <!--X-Head-of-Message-End-->
@@ -40,46 +40,43 @@
 <hr>
 <!--X-Head-Body-Sep-End-->
 <!--X-Body-of-Message-->
-<pre>On Thu, 2004-09-23 at 18:59, Paul Higgins wrote:
-&gt; Hello,
+<pre>On Thu, 30 Jun 2005, Ansley Manke wrote:
+
+&gt; The &quot;thick lines&quot; question has been talked about, with contributions
+&gt; from Billy Kessler among others. Here's a recent message on this
 &gt; 
-&gt; I tried to install Ferret on a i386 (Piv) running Redhat Fedora.
-&gt; Everything seemed to go well with the install but when I try to run Ferret
-&gt; I get the following error.  Can anyone suggest a fix?
+&gt; <a  href="../fu_2005/msg00474.html">../fu_2005/msg00474.html</a>
 &gt; 
-&gt; /usr/local/ferret/bin/./ferret: error while loading shared libraries:
-&gt; libstdc++-libc6.2-2.so.3: cannot open shared object file: No such file or
-&gt; directory
-&gt; 
-&gt; Many thanks,
-&gt; Paul
-&gt; 
+&gt; There is also an FAQ, How can I control line thickness when I translate
+&gt; a metafile to a postscript file?
+&gt; &lt;<a  href="../../faq/change_widths.html">../../faq/change_widths.html</a>&gt;
+&gt; <a  href="../../faq/change_widths.html">../../faq/change_widths.html</a>
 
-1. Why does your path to ferret have a dot in it? Ferret apparently is
-trying to open, so perhaps this doesn't matter, but it's a bit strange
-(to me, anyway) to see such a path. The dot does not appear to serve any
-function here. Anyhow...
+Ansley's right on.  Here's a shell script to thicken the lines in
+PostScript.  To triple all of the line widths, do:
 
-2. First, verify that the missing library isn't anywhere on your system,
-by issuing &quot;locate libstdc++-libc6.2-2.so.3&quot; (don't type the quotes). It
-is part of a package named &quot;compat-libstdc++&quot;, so you can also check if
-this package is installed, by issuing &quot;rpm -q compat-libstdc++&quot;. If it
-is not, you'll have to go find and install it, as well as any packages
-on which it depends. This can be done conveniently using yum (issue &quot;man
-yum&quot; or &quot;info yum&quot; to find out how). On my system (also Fedora Core II)
-it is present, possibly because I included gcc and various extensions to
-it when I installed FC2. It lives in /usr/lib.
+   ps_thicken file.ps 3 &gt; file_thick.ps
 
-3. If it _is_ present on your system, someone else will have to figure
-out why ferret can't find it. Perhaps ferret_paths needs to be sourced
-(and properly configured) -- but /usr/lib does not appear to be
-mentioned in ferret_paths, so /usr/lib is probably one of the standard
-locations where ferret looks for shared objects.
 
-Cheers,
 
-AMG
 
+#!/bin/csh -f
+# Usage: ps_thicken ps_file factor
+# Thickens lines in a PostScript file by changing the linewidth macro,
+# Result goes to standard output.
+
+# get list of all arguments
+set args = ($*)
+
+# if not enough arguments, complain.
+if ($#args &lt; 2) then
+   echo &quot;Usage: ps_thicken ps_file factor&quot;
+   echo &quot;Thickens all lines in a PostScript file by changing the linewidth macro.&quot;
+   echo &quot;Result goes to standard output.&quot;
+   exit 1
+endif
+
+sed -e &quot;s/^\/lw {\(.*\) div setlinewidth/\/lw {$2 mul \1 div setlinewidth/&quot; $1
 
 
 </pre>
@@ -92,21 +89,21 @@ AMG
 <!--X-References-->
 <ul><li><strong>References</strong>:
 <ul>
-<li><strong><a name="00662" href="msg00662.html">Redhat Fedora Core 2 Install</a></strong>
-<ul><li><em>From:</em> Paul Higgins</li></ul></li>
+<li><strong><a name="00663" href="msg00663.html">Re: [ferret_users] [Ferret] about Fprint and histogram</a></strong>
+<ul><li><em>From:</em> Ansley Manke</li></ul></li>
 </ul></li></ul>
 <!--X-References-End-->
 <!--X-BotPNI-->
 <UL>
 <li>Previous by thread:
-<strong><a href="msg00662.html">Redhat Fedora Core 2 Install</a></strong>
+<strong><a href="msg00663.html">Re: [ferret_users] [Ferret] about Fprint and histogram</a></strong>
 </li>
 <li>Next by thread:
-<strong><a href="msg00671.html">Re: Redhat Fedora Core 2 Install</a></strong>
+<strong><a href="msg00667.html">Re: Re: [ferret_users] [Ferret] about Fprint and histogram</a></strong>
 </li>
 
 </UL>
-<center>[<a href="msg00662.html">Thread Prev</a>][<a href="msg00671.html">Thread Next</a>][<A HREF="threads2004.html#00664">Index</A>]</center>
+<center>[<a href="msg00663.html">Thread Prev</a>][<a href="msg00667.html">Thread Next</a>][<A HREF="threads2005.html#00664">Index</A>]</center>
 
 <hr>
 </body>
